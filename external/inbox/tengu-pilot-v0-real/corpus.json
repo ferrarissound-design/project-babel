@@ -1,0 +1,145 @@
+{
+  "language_id": "tengu-pilot-v0-real",
+  "level": "C",
+  "has_word_boundaries": false,
+  "documents": [
+    {
+      "id": "A",
+      "meta": {
+        "source": "https://satoru.net/crypt/tengu/transcription_v0.html",
+        "part": "seal-region",
+        "transcription": "visual-shape proxy, NOT semantic readings",
+        "uncertain_segments_removed": true
+      },
+      "sentences": [
+        "文也名吉去云西果寿画毋若号侮"
+      ]
+    },
+    {
+      "id": "B",
+      "meta": {
+        "source": "https://satoru.net/crypt/tengu/transcription_v0.html",
+        "part": "seal-region",
+        "transcription": "visual-shape proxy, NOT semantic readings",
+        "uncertain_segments_removed": true
+      },
+      "sentences": [
+        "字左曳鬼与石学汐中由予以女才止"
+      ]
+    },
+    {
+      "id": "C",
+      "meta": {
+        "source": "https://satoru.net/crypt/tengu/transcription_v0.html",
+        "part": "seal-region",
+        "transcription": "visual-shape proxy, NOT semantic readings",
+        "uncertain_segments_removed": true
+      },
+      "sentences": [
+        "わ呂區李石式曲汐冶法己以女"
+      ]
+    },
+    {
+      "id": "D",
+      "meta": {
+        "source": "https://satoru.net/crypt/tengu/transcription_v0.html",
+        "part": "seal-region",
+        "transcription": "visual-shape proxy, NOT semantic readings",
+        "uncertain_segments_removed": true
+      },
+      "sentences": [
+        "乏香手舟也安央乙己寒主号多女"
+      ]
+    },
+    {
+      "id": "E",
+      "meta": {
+        "source": "https://satoru.net/crypt/tengu/transcription_v0.html",
+        "part": "seal-region",
+        "transcription": "visual-shape proxy, NOT semantic readings",
+        "uncertain_segments_removed": true
+      },
+      "sentences": [
+        "セ誠得書法歴る伊果"
+      ]
+    },
+    {
+      "id": "F",
+      "meta": {
+        "source": "https://satoru.net/crypt/tengu/transcription_v0.html",
+        "part": "seal-region",
+        "transcription": "visual-shape proxy, NOT semantic readings",
+        "uncertain_segments_removed": true
+      },
+      "sentences": [
+        "の曳以古女安る",
+        "らすくとゝぬに"
+      ]
+    },
+    {
+      "id": "G",
+      "meta": {
+        "source": "https://satoru.net/crypt/tengu/transcription_v0.html",
+        "part": "seal-region",
+        "transcription": "visual-shape proxy, NOT semantic readings",
+        "uncertain_segments_removed": true
+      },
+      "sentences": [
+        "男官亡ち云寺る",
+        "れにのめる",
+        "ち未毛目ゐ"
+      ]
+    },
+    {
+      "id": "H",
+      "meta": {
+        "source": "https://satoru.net/crypt/tengu/transcription_v0.html",
+        "part": "seal-region",
+        "transcription": "visual-shape proxy, NOT semantic readings",
+        "uncertain_segments_removed": true
+      },
+      "sentences": [
+        "の当収由冊命多らたせらそくゝくゑ",
+        "ろ日よそも華"
+      ]
+    },
+    {
+      "id": "S1",
+      "meta": {
+        "source": "https://satoru.net/crypt/tengu/transcription_v0.html",
+        "part": "beginning",
+        "transcription": "visual-shape proxy, NOT semantic readings",
+        "uncertain_segments_removed": true
+      },
+      "sentences": [
+        "寿両示安也函才凡の安"
+      ]
+    },
+    {
+      "id": "S2",
+      "meta": {
+        "source": "https://satoru.net/crypt/tengu/transcription_v0.html",
+        "part": "beginning",
+        "transcription": "visual-shape proxy, NOT semantic readings",
+        "uncertain_segments_removed": true
+      },
+      "sentences": [
+        "甚壬君左天手む石安華安与"
+      ]
+    },
+    {
+      "id": "S3",
+      "meta": {
+        "source": "https://satoru.net/crypt/tengu/transcription_v0.html",
+        "part": "beginning",
+        "transcription": "visual-shape proxy, NOT semantic readings",
+        "uncertain_segments_removed": true
+      },
+      "sentences": [
+        "日主寿寺安"
+      ]
+    }
+  ],
+  "known": [],
+  "parallel": []
+}

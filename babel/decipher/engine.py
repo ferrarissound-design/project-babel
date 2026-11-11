@@ -5,7 +5,7 @@ import math
 import time
 from collections import Counter, defaultdict
 
-from . import classes, nulltest, numerals, segment, semantics
+from . import baselines, classes, nulltest, numerals, segment, semantics
 from .align import Aligner, flatten
 from .morph import Morphology
 from .variants import LACUNA, Normalizer
@@ -19,6 +19,8 @@ DEFAULT_CONFIG = {
     "use_metadata": True,        # 出土地などのメタデータ
     "abstain": True,             # 信頼度が低い主張を保留する
     "claim_threshold": 0.5,
+    "morph_method": "paradigm",  # paradigm / freq / successor（後2つは比較用ベースライン）
+    "align_method": "em",        # em / count / dice（後2つは比較用ベースライン）
 }
 
 
@@ -54,7 +56,10 @@ class Decipherer:
         sents = [[w for w in s if w != LACUNA] for d in self.train_ids for s in self.norm_docs[d]]
         self.sents = [s for s in sents if s]
         self.counts = Counter(w for s in self.sents for w in s)
-        self.morph = Morphology(self.counts, enable=cfg["use_morph"])
+        if cfg["morph_method"] == "paradigm":
+            self.morph = Morphology(self.counts, enable=cfg["use_morph"])
+        else:
+            self.morph = baselines.make_morphology(cfg["morph_method"], self.counts)
         self.infos = {w: self.morph.analyze(w) for w in self.counts}
         self.group_of, self.stem_group = classes.paradigm_groups(self.infos)
         self.stem_pos, self.class_info = classes.label_classes(self.sents, self.infos, self.stem_group)
@@ -140,7 +145,8 @@ class Decipherer:
             concepts, feats, counts = flatten(p["translation"])
             items.append({"units": self._units(sent), "concepts": concepts, "feats": feats, "sent": sent,
                           "counts": counts})
-        self.aligner = al = Aligner(items, use_em=self.cfg["use_em"])
+        mode = self.cfg["align_method"] if self.cfg["use_em"] else "count"
+        self.aligner = al = Aligner(items, mode=mode)
         thr = self.cfg["claim_threshold"]
         slot_votes = defaultdict(Counter)
         for it, link in zip(items, al.links):

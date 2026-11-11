@@ -94,6 +94,10 @@ class Side:
                 continue
             if self.Q[s] > bq:
                 best, bq = k, self.Q[s]
+        if best is not None and self.Q.get(w, -1.0) >= bq:
+            best = None         # 語全体が語幹として、より多くの語尾を説明する（切らない方がよい）
+            self._cache[w] = (w, [])
+            return self._cache[w]
         if best is None:
             res = (w, [])
             if top:     # 1形しか現れない語幹: 信頼できる接辞なら切る。内側は実例のある連鎖だけ許す

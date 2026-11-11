@@ -85,10 +85,13 @@ def posterior(t, src, tgt):
 
 
 class Aligner:
-    def __init__(self, items, use_em=True, kappa=0.7):
+    def __init__(self, items, mode="em", kappa=0.7):
         """items: [{'units': [(unit, word_index)], 'concepts': [(token, slot)], 'feats': [...]}]"""
         self.items = items
         self.kappa = kappa
+        self.mode = mode
+        use_em = mode == "em"
+        self.n_tgt = Counter()
         fwd = [(sorted({u for u, _ in it["units"]}),
                 sorted({"C:" + c for c, _ in it["concepts"]} | {"F:" + f for f in it["feats"]})) for it in items]
 
@@ -104,6 +107,7 @@ class Aligner:
             t2 = ibm1([(tg, sr) for sr, tg in fwd], lambda c, s: c == NULL or allowed(s, c))
         for src, tgt in fwd:
             link = {}
+            self.n_tgt.update(tgt)
             if use_em:
                 p1 = posterior(t1, src, tgt)
                 p2 = posterior(t2, tgt, src)
@@ -121,12 +125,21 @@ class Aligner:
 
     def best(self, unit, prefix):
         """unit に最もよく対応するトークン（prefix='C:' or 'F:'）と信頼度、次点。"""
-        row = sorted(((v, c) for c, v in self.A.get(unit, {}).items() if c.startswith(prefix)), reverse=True)
+        if self.mode == "em":
+            row = sorted(((v, c) for c, v in self.A.get(unit, {}).items() if c.startswith(prefix)), reverse=True)
+        elif self.mode == "count":      # 共起回数が最大の概念
+            row = sorted(((float(n), c) for c, n in self.joint[unit].items() if c.startswith(prefix)), reverse=True)
+        else:                           # Dice 係数
+            row = sorted(((2.0 * n / (self.n[unit] + self.n_tgt[c]), c) for c, n in self.joint[unit].items()
+                          if c.startswith(prefix)), reverse=True)
         if not row:
             return None, 0.0, []
         v, c = row[0]
         nj, ns = self.joint[unit][c], self.n[unit]
-        conf = v / (nj + self.kappa) * min(1.0, 2.0 * nj / ns)
+        if self.mode == "em":
+            conf = v / (nj + self.kappa) * min(1.0, 2.0 * nj / ns)
+        else:
+            conf = nj / ns if self.mode == "count" else v
         alts = [(c2[2:], round(v2 / (self.joint[unit][c2] + self.kappa), 3)) for v2, c2 in row[1:3]]
         return c[2:], round(min(0.99, conf), 3), alts
 

@@ -43,7 +43,6 @@ def score(pred: dict, gold: dict, public: dict | None = None) -> dict:
             calib.append([round(conf, 3), int(ok), "structure"])
     out["structure"] = struct
     # ---- 数詞 ----
-    gnum = {}
     out["null_verdict"] = None
     if gold.get("null"):
         v = pred.get("verdict", {})
@@ -54,7 +53,6 @@ def score(pred: dict, gold: dict, public: dict | None = None) -> dict:
                                                        if (st.get(k) or {}).get("value") is not None)}
         return out
     gtoks, ptoks = gold.get("tokens"), pred.get("tokens", {})
-    train = set((public or {}).get("split", {}).get("train", []) or (gtoks or {}))
     held = set((public or {}).get("split", {}).get("heldout", []))
     parallel = {(p["doc"], p["sent"]) for p in (public or {}).get("parallel", [])}
     if not gtoks:

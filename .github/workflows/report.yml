@@ -1,0 +1,41 @@
+name: report
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: true
+env:
+  PYTHONHASHSEED: "0"
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - name: 評価シードで実験を再実行
+        run: python -m babel experiment --mode full --out results/latest.json
+      - name: ダッシュボード用 JSON を生成
+        run: python -m babel report
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs
+  deploy:
+    # GitHub Pages が Settings → Pages で「GitHub Actions」に設定されていないと失敗する（失敗はそのまま表示される）
+    if: github.ref == 'refs/heads/main'
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - id: deploy
+        uses: actions/deploy-pages@v4

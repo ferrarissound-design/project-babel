@@ -1,0 +1,30 @@
+name: external
+# 初見コーパスが external/inbox に追加されたら予測を保存し、正解が external/answers に追加されたら採点する。
+on:
+  push:
+    paths: ["external/inbox/**", "external/answers/**"]
+  workflow_dispatch:
+permissions:
+  contents: write
+env:
+  PYTHONHASHSEED: "0"
+jobs:
+  external:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - name: 予測（既存の予測は上書きしない）
+        run: python -m babel external predict
+      - name: 採点（正解が追加されたものだけ）
+        run: python -m babel external score
+      - name: 結果をコミット
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add external
+          git diff --cached --quiet || git commit -m "外部コーパスの予測・採点結果を記録 [skip ci]"
+          git push

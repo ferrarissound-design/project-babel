@@ -1,0 +1,51 @@
+name: experiment
+on:
+  push:
+    branches: [main, "claude/**"]
+    paths: ["babel/**", ".github/workflows/experiment.yml"]
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "quick（開発シード3個）/ full（評価シード20個）"
+        default: full
+        type: choice
+        options: [quick, full]
+permissions:
+  contents: read
+env:
+  PYTHONHASHSEED: "0"
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    strategy:
+      fail-fast: false
+      matrix:
+        mode: ${{ github.event_name == 'workflow_dispatch' && fromJSON(format('["{0}"]', inputs.mode)) || fromJSON('["quick","full"]') }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - name: コーパス生成（サンプルを成果物として保存）
+        run: |
+          for f in KES UMB SOT; do python -m babel generate --family $f --seed 0 --level A --out data; done
+      - name: 実験（生成 → 解読 → 採点）
+        run: python -m babel experiment --mode ${{ matrix.mode }} --out results/${{ matrix.mode }}.json | tee experiment.log
+      - name: 実行記録
+        if: always()
+        run: |
+          {
+            echo "### experiment (${{ matrix.mode }})"
+            echo '```'
+            cat experiment.log || true
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: experiment-${{ matrix.mode }}
+          path: |
+            results/
+            data/*/public/
+            experiment.log

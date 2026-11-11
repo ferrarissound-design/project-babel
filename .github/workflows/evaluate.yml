@@ -1,0 +1,41 @@
+name: evaluate
+on:
+  push:
+    branches: [main, "claude/**"]
+    paths: ["babel/**", "research/**", ".github/workflows/evaluate.yml"]
+  workflow_dispatch:
+permissions:
+  contents: read
+env:
+  PYTHONHASHSEED: "0"
+jobs:
+  evaluate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - name: 評価シードで全実験を実行
+        run: python -m babel experiment --mode full --out results/latest.json
+      - name: 採点表とベースライン比較
+        run: |
+          python -m babel report --no-showcase | tee scorecard.log
+          python - <<'PY' | tee -a scorecard.log
+          import json
+          r = json.load(open("results/latest.json"))
+          keys = ["seg_f1", "lexicon_precision", "lexicon_claimed", "gloss_correct", "gloss_wrong", "numeral_accuracy"]
+          print("\n| 条件 | " + " | ".join(keys) + " |\n|---|" + "---|" * len(keys))
+          for c in r["conditions"]:
+              if c["experiment"] in ("E1_main", "E2_baseline", "E8_ablation"):
+                  print(f"| {c['label']} | " + " | ".join(str(c["metrics"][k]["mean"]) for k in keys) + " |")
+          PY
+          cat scorecard.log >> "$GITHUB_STEP_SUMMARY"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: evaluation
+          path: |
+            results/
+            scorecard.log

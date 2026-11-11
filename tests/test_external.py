@@ -59,3 +59,22 @@ def test_text_format_and_answer_leak_guard(tmp_path):
         raise AssertionError("正解入りのコーパスを受理してしまった")
     except ValueError:
         pass
+
+
+def test_editing_corpus_after_prediction_is_detected_and_blocks_scoring(tmp_path):
+    secret = _setup(tmp_path)
+    external.predict(tmp_path)
+    f = tmp_path / "inbox" / "mystery" / "corpus.json"
+    pub = json.loads(f.read_text(encoding="utf-8"))
+    pub["split"]["train"] += pub["split"]["heldout"]
+    pub["split"]["heldout"] = []
+    f.write_text(json.dumps(pub, ensure_ascii=False), encoding="utf-8")
+    assert any("コーパス" in p for p in external.verify(tmp_path))
+    ans = tmp_path / "answers" / "mystery"
+    ans.mkdir(parents=True)
+    (ans / "answer.json").write_text(json.dumps(secret, ensure_ascii=False), encoding="utf-8")
+    try:
+        external.score_all(tmp_path)
+        raise AssertionError("変更されたコーパスで採点してしまった")
+    except RuntimeError:
+        pass

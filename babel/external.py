@@ -113,6 +113,10 @@ def verify(root: Path = ROOT):
         if e["attempt"] != seen.get(e["name"], 0) + 1:
             problems.append(f"試行番号が連続していない: {e['name']} attempt {e['attempt']}")
         seen[e["name"]] = e["attempt"]
+        folder = root / "inbox" / e["name"]
+        src = next((folder / n for n in ("corpus.json", "corpus.txt") if (folder / n).exists()), None)
+        if src is None or _sha(src) != e["corpus_sha256"]:
+            problems.append(f"予測時のコーパスが見つからないか変更されている: {e['name']} attempt {e['attempt']}")
     listed = {e["file"] for e in ledger}
     pred_dir = root / "predictions"
     for f in sorted(pred_dir.rglob("attempt-*.json")) if pred_dir.exists() else []:
@@ -132,7 +136,12 @@ def score_all(root: Path = ROOT):
         pred = json.loads((root / e["file"]).read_text(encoding="utf-8"))
         gold = json.loads(ans.read_text(encoding="utf-8"))
         folder = root / "inbox" / e["name"]
-        public = load_corpus(folder) if folder.exists() else None
+        src = next((folder / n for n in ("corpus.json", "corpus.txt") if (folder / n).exists()), None)
+        if src is None or _sha(src) != e["corpus_sha256"]:
+            # 予測時と違うコーパスで採点すると、過去の試行の結果を黙って書き換えてしまう
+            raise RuntimeError(f"{e['name']} attempt {e['attempt']}: 予測時のコーパス（sha256 {e['corpus_sha256'][:12]}）が"
+                               "見つからないか変更されている。コーパスを変えるなら新しい名前で投入すること")
+        public = load_corpus(folder)
         r = score(pred, gold, public)
         r.pop("calibration", None)
         r["attempt"] = {k: e[k] for k in ("name", "attempt", "sha256", "engine_fingerprint", "commit", "created_utc",

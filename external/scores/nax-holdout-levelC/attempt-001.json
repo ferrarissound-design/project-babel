@@ -55,7 +55,7 @@
  },
  "oov": {
   "claimed_anyway": 0,
-  "heldout_tokens_with_unseen_stem": 75
+  "heldout_tokens_with_unseen_stem": 11
  },
  "overclaim": {
   "meaning_claims": 0,

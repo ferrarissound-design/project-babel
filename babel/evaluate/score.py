@@ -68,7 +68,9 @@ def score(pred: dict, gold: dict, public: dict | None = None) -> dict:
     feat = {"train": [0.0, 0], "heldout": [0.0, 0]}
     var_g, var_p = defaultdict(set), defaultdict(set)
     oov = Counter()
-    train_stems = set()
+    # 未知語の判定には train 全体の語幹が必要なので、先に1巡して集める（文書IDの順序に依存させない）
+    train_stems = {p["stem"] for did in gtoks if did not in held for ps_ in ptoks.get(did, [])
+                   for p in ps_ if not p.get("lacuna")}
     for did in sorted(gtoks):
         part = "heldout" if did in held else "train"
         for si, (gs_, ps_) in enumerate(zip(gtoks[did], ptoks.get(did, []))):
@@ -82,7 +84,6 @@ def score(pred: dict, gold: dict, public: dict | None = None) -> dict:
                 var_g[g["canon"]].add(g["s"])
                 var_p[p["norm"]].add(g["s"])
                 if part == "train":
-                    train_stems.add(p["stem"])
                     if g["s"] not in seen_types:
                         seen_types.add(g["s"])
                         a, b = set(p["cuts"]), set(g["cuts"])

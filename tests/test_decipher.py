@@ -94,3 +94,12 @@ def test_engine_is_deterministic():
     a, b = decipher(public), decipher(public)
     a.pop("timing"), b.pop("timing")
     assert a == b
+
+
+def test_oov_count_does_not_depend_on_document_order():
+    public, secret = build_corpus("KES", 0, "A", n_docs=40)
+    pred = decipher(public)
+    a = score(pred, secret, public)["oov"]
+    rev = dict(secret, tokens=dict(reversed(list(secret["tokens"].items()))))
+    b = score(pred, rev, public)["oov"]
+    assert a == b

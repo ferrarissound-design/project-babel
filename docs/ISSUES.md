@@ -127,3 +127,24 @@
 - 原因: 生成器に第4系統を追加した際、null_corpus が使う import を消した。コマンドを ; でつないでいたため、テスト失敗後もコミットと push が進んだ
 - 対応: 次のコミット c3a851b で修正。以後は検査とテストを && でつなぎ、通った場合だけコミットする
 - 検証: c3a851b 以降の CI が成功
+
+## 19. サイト用データ docs/data が一度もコミットされていなかった（修正済み）
+
+- 発見: Codex の自動レビュー（PR #1）。ブランチ公開を選ぶとサイトが空になると指摘
+- 原因: .gitignore に書いた data/ が、生成コーパス用の data/ だけでなく docs/data/ にも一致していた
+- 対応: /data/ に変更し、docs/data をコミット
+- 検証: git check-ignore で docs/data が追跡対象になったことを確認
+
+## 20. 採点器の未知語カウントが文書IDの並び順に依存していた（修正済み）
+
+- 発見: Codex の自動レビュー（PR #1）
+- 原因: train の語幹集合を、held-out と同じ1回のループの中で作っていた。held-out 文書が先に来ると既知語を未知語と数えた
+- 対応: train の語幹集合を先に別のループで作る
+- 検証: tests/test_decipher.py::test_oov_count_does_not_depend_on_document_order。影響は oov_claimed 指標のみで、採点表の点数には使っていない
+
+## 21. 初見テストで、予測後にコーパスを変えると過去の試行が黙って採点し直された（修正済み）
+
+- 発見: Codex の自動レビュー（PR #1）
+- 原因: 採点時に現在のコーパスを読み、台帳に記録したコーパスのハッシュと照合していなかった
+- 対応: ハッシュが一致しない場合は採点を拒否し、台帳検査（CI）でも問題として報告する
+- 検証: tests/test_external.py::test_editing_corpus_after_prediction_is_detected_and_blocks_scoring

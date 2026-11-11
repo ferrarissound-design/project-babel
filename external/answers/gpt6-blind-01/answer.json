@@ -1,0 +1,192 @@
+{
+  "independent": true,
+  "provenance": "Independently constructed by GPT-6 on 2026-11-12 (not by PROJECT BABEL/Fable creator), rule-based generated test corpus; 100 documents, 434 sentences. Grammar/lexicon withheld until first prediction ledger entry.",
+  "structure": {
+    "verb_position": "final",
+    "affix_position": "suffix",
+    "numeral_base": 8,
+    "so_order": "SO",
+    "adj_noun": "AN",
+    "num_noun": "NumN"
+  },
+  "lexicon": [
+    {
+      "form": "larom",
+      "meaning": "king"
+    },
+    {
+      "form": "vezin",
+      "meaning": "merchant"
+    },
+    {
+      "form": "tomar",
+      "meaning": "guard"
+    },
+    {
+      "form": "kirven",
+      "meaning": "farmer"
+    },
+    {
+      "form": "dalor",
+      "meaning": "scribe"
+    },
+    {
+      "form": "omrek",
+      "meaning": "sailor"
+    },
+    {
+      "form": "hilun",
+      "meaning": "child"
+    },
+    {
+      "form": "peran",
+      "meaning": "elder"
+    },
+    {
+      "form": "sevil",
+      "meaning": "baker"
+    },
+    {
+      "form": "branik",
+      "meaning": "keeper"
+    },
+    {
+      "form": "vosel",
+      "meaning": "grain"
+    },
+    {
+      "form": "detra",
+      "meaning": "salt"
+    },
+    {
+      "form": "nanek",
+      "meaning": "cloth"
+    },
+    {
+      "form": "surin",
+      "meaning": "water"
+    },
+    {
+      "form": "lemar",
+      "meaning": "timber"
+    },
+    {
+      "form": "tepuk",
+      "meaning": "stone"
+    },
+    {
+      "form": "korad",
+      "meaning": "copper"
+    },
+    {
+      "form": "zelan",
+      "meaning": "fish"
+    },
+    {
+      "form": "pivor",
+      "meaning": "oil"
+    },
+    {
+      "form": "mekat",
+      "meaning": "bread"
+    },
+    {
+      "form": "garuf",
+      "meaning": "give"
+    },
+    {
+      "form": "sekar",
+      "meaning": "carry"
+    },
+    {
+      "form": "medun",
+      "meaning": "store"
+    },
+    {
+      "form": "palek",
+      "meaning": "count"
+    },
+    {
+      "form": "redav",
+      "meaning": "trade"
+    },
+    {
+      "form": "lokir",
+      "meaning": "send"
+    },
+    {
+      "form": "vomer",
+      "meaning": "collect"
+    },
+    {
+      "form": "temak",
+      "meaning": "return"
+    },
+    {
+      "form": "divor",
+      "meaning": "sell"
+    },
+    {
+      "form": "sepan",
+      "meaning": "buy"
+    }
+  ],
+  "numerals": [
+    {
+      "form": "sek",
+      "value": 1
+    },
+    {
+      "form": "vor",
+      "value": 2
+    },
+    {
+      "form": "min",
+      "value": 3
+    },
+    {
+      "form": "dal",
+      "value": 4
+    },
+    {
+      "form": "per",
+      "value": 5
+    },
+    {
+      "form": "tuk",
+      "value": 6
+    },
+    {
+      "form": "lin",
+      "value": 7
+    },
+    {
+      "form": "om",
+      "value": 8
+    },
+    {
+      "form": "omsek",
+      "value": 9
+    },
+    {
+      "form": "omvor",
+      "value": 10
+    },
+    {
+      "form": "ommin",
+      "value": 11
+    },
+    {
+      "form": "omdal",
+      "value": 12
+    },
+    {
+      "form": "omper",
+      "value": 13
+    },
+    {
+      "form": "omtuk",
+      "value": 14
+    }
+  ]
+}

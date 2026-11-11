@@ -33,10 +33,10 @@ def load_corpus(folder: Path) -> dict:
     """JSON（内部と同じ public 形式）または UTF-8 テキスト（1行1文、空行で文書区切り）を読む。"""
     js, txt = folder / "corpus.json", folder / "corpus.txt"
     if js.exists():
-        pub = json.loads(js.read_text(encoding="utf-8"))
+        pub = json.loads(js.read_text(encoding="utf-8-sig"))      # スマホのエディタが付ける BOM を除く
     elif txt.exists():
         docs, cur = [], []
-        for line in txt.read_text(encoding="utf-8").splitlines() + [""]:
+        for line in txt.read_text(encoding="utf-8-sig").splitlines() + [""]:
             line = line.strip()
             if line.startswith("#"):
                 continue

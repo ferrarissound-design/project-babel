@@ -94,7 +94,7 @@ def null_corpus(seed: int, kind: str = "random", n_docs: int = 130):
     public, _ = build_corpus("KES", seed, "C", n_docs=n_docs, lacuna=0.0, var_rate=0.0)
     lens = [[len(s.split()) for s in d["sentences"]] for d in public["documents"]]
     if kind == "random":
-        lang = Language("KES", seed + 7919)
+        lang = make_language("KES", seed + 7919)
         vocab = [lang.new_root(rng.choice([1, 2, 2, 3])) for _ in range(600)]
         weights = [1.0 / (i + 1) for i in range(len(vocab))]
         pool = rng.choices(vocab, weights, k=sum(map(sum, lens)))

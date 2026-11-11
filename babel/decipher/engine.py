@@ -10,7 +10,7 @@ from .align import Aligner, flatten
 from .morph import Morphology
 from .variants import LACUNA, Normalizer
 
-VERSION = "1.0.0"
+VERSION = "1.0.1"
 DEFAULT_CONFIG = {
     "use_variants": True,        # 表記揺れの正規化
     "use_morph": True,           # 形態素解析
@@ -24,8 +24,58 @@ DEFAULT_CONFIG = {
 }
 
 
+def sanitize_public(public: dict):
+    """外部から来る public コーパスの不整合を直す。直した内容は warnings として返し、出力に残す。
+
+    解読器は第三者が作ったコーパスを受け取るので、手書きの JSON の小さな誤りで落ちてはいけない。
+    ただし黙って直すと結果の解釈を誤らせるため、何をしたかを必ず記録する。
+    """
+    pub, warnings = dict(public), []
+    docs = []
+    for i, d in enumerate(pub.get("documents") or []):
+        d = dict(d)
+        d.setdefault("id", f"d{i + 1:03d}")
+        if not isinstance(d.get("meta"), dict):
+            if d.get("meta") is not None:
+                warnings.append(f"文書 {d['id']}: meta が辞書でないので無視した")
+            d["meta"] = {}
+        d["sentences"] = [str(x) for x in (d.get("sentences") or [])]
+        docs.append(d)
+    pub["documents"] = docs
+    ids = {d["id"] for d in docs}
+    split = pub.get("split") or {}
+    tr = [x for x in (split.get("train") or []) if x in ids]
+    he = [x for x in (split.get("heldout") or []) if x in ids and x not in set(tr)]
+    dropped = len(split.get("train") or []) + len(split.get("heldout") or []) - len(tr) - len(he)
+    if dropped:
+        warnings.append(f"split にある存在しない（または重複した）文書ID {dropped} 件を無視した")
+    pub["split"] = {"train": tr, "heldout": he} if tr else {}
+    n_sent = {d["id"]: len(d["sentences"]) for d in docs}
+    par = []
+    for p in pub.get("parallel") or []:
+        try:
+            ok = p["doc"] in n_sent and 0 <= int(p["sent"]) < n_sent[p["doc"]] and isinstance(p.get("translation"), dict)
+        except (KeyError, TypeError, ValueError):
+            ok = False
+        if ok:
+            par.append(dict(p, sent=int(p["sent"])))
+        else:
+            warnings.append(f"対訳 {str(p)[:60]} は文書・文番号・訳のどれかが不正なので無視した")
+    pub["parallel"] = par
+    known = []
+    for k in pub.get("known") or []:
+        m = str(k.get("meaning", "")) if isinstance(k, dict) else ""
+        if not (isinstance(k, dict) and k.get("form")) or not m or (m.startswith("#") and not m[1:].isdigit()):
+            warnings.append(f"既知語 {str(k)[:60]} は形式が不正なので無視した（数詞は \"#3\" のように書く）")
+            continue
+        known.append(k)
+    pub["known"] = known
+    return pub, warnings
+
+
 class Decipherer:
     def __init__(self, public: dict, config: dict | None = None):
+        public, self.input_warnings = sanitize_public(public)
         self.pub = public
         self.cfg = dict(DEFAULT_CONFIG, **(config or {}))
         self.level = public.get("level", "C")
@@ -404,6 +454,7 @@ class Decipherer:
         claims = [x for x in lex if x["status"] == "claimed"]
         return {
             "engine": {"name": "babel-decipher", "version": VERSION, "config": self.cfg},
+            "input_warnings": self.input_warnings,
             "language_id": self.pub.get("language_id"), "level": self.level,
             "verdict": self._verdict(),
             "frequency": {"tokens": n_tok, "types": len(self.counts), "word_entropy_bits": round(ent, 3),

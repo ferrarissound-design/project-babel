@@ -6,6 +6,10 @@ on:
   workflow_dispatch:
 permissions:
   contents: write
+# 同じブランチでの実行を直列化する。並行すると、正解を見た予測が「最初の試行」として残りうる
+concurrency:
+  group: external-${{ github.ref }}
+  cancel-in-progress: false
 env:
   PYTHONHASHSEED: "0"
 jobs:
@@ -14,6 +18,8 @@ jobs:
     timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref }}    # push されたコミットではなく、実行開始時点のブランチ先頭（直前の実行の予測を含む）
       - uses: actions/setup-python@v5
         with:
           python-version: "3.13"

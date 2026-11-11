@@ -148,3 +148,24 @@
 - 原因: 採点時に現在のコーパスを読み、台帳に記録したコーパスのハッシュと照合していなかった
 - 対応: ハッシュが一致しない場合は採点を拒否し、台帳検査（CI）でも問題として報告する
 - 検証: tests/test_external.py::test_editing_corpus_after_prediction_is_detected_and_blocks_scoring
+
+## 22. 不正な外部コーパスで解読器が落ちた（修正済み）
+
+- 発見: 自分で行った極端な入力の試験（21通り）。壊れた既知数詞・範囲外の対訳・存在しない文書を指す split・meta が null の4通りで例外
+- 原因: 解読器が、生成器の作る整った入力しか想定していなかった
+- 対応: 解読器の入口で入力を検査し、不正な項目は無視して input_warnings として出力に記録する（黙って直さない）
+- 検証: tests/test_robustness.py。正しい入力24条件で予測が修正前と完全一致することも確認
+
+## 23. BOM付きのテキストで最初の語が別の語になった（修正済み）
+
+- 発見: 自分で行った極端な入力の試験。エラーが出ず、ka が \ufeffka として扱われた
+- 原因: UTF-8 で読んでいたため、先頭の BOM が語の一部になった
+- 対応: utf-8-sig で読む
+- 検証: tests/test_robustness.py::test_bom_is_stripped_from_text_and_json
+
+## 24. コーパスと正解を続けて push すると、正解を見た予測が最初の試行になりうる（修正済み）
+
+- 発見: external.yml の読解
+- 原因: ワークフローが push されたコミットそのものを取り出し、同時実行の制御もなかった。2回目の実行は1回目の予測を知らずに、正解が見える状態で予測をやり直す
+- 対応: 同じブランチでの実行を直列化し、実行開始時点のブランチ先頭を取り出す
+- 検証: tests/test_robustness.py::test_external_workflow_is_serialised_and_uses_branch_head（設定の検査のみ。並行実行そのものは GitHub 上でしか再現できない）

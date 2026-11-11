@@ -3,7 +3,7 @@ from __future__ import annotations
 
 import random
 
-from .languages import STRUCTURE, Language, apply_rules
+from .languages import STRUCTURE, apply_rules, make_language
 from .world import GENRES, World, translate
 
 LACUNA = "[…]"
@@ -23,7 +23,7 @@ def build_corpus(family: str, seed: int, level: str = "A", n_docs: int = 130, pa
                  dropout: float = 0.3, var_rate: float = 0.45, lacuna: float = 0.02, boundaries: bool = True,
                  split: str = "random", n_known: int = 6):
     """(public, secret) を返す。level は A / B / C。"""
-    lang = Language(family, seed)
+    lang = make_language(family, seed)
     rng = random.Random(f"corpus-{family}-{seed}")
     world = World(rng)
     scribes = [[r for r in lang.scribe_rules if rng.random() < var_rate] for _ in range(N_SCRIBES)]

@@ -43,6 +43,7 @@ STRUCTURE = {
                 adj_noun="AN", num_noun="NumN"),
 }
 FAMILIES = ["KES", "UMB", "SOT"]
+HOLDOUT_CLASSES: dict = {}     # 凍結後に追加する準初見用の系統（babel/generator/holdout.py）
 
 
 def apply_rules(morphs, rules):
@@ -59,7 +60,7 @@ def apply_rules(morphs, rules):
 
 class Language:
     def __init__(self, family: str, seed: int):
-        assert family in FAMILIES
+        assert family in PHON, family
         self.family, self.seed = family, seed
         self.rng = r = random.Random(f"lang-{family}-{seed}")
         self.C, self.V = PHON[family]["C"], PHON[family]["V"]
@@ -362,3 +363,9 @@ class Language:
                 "late_replacements": sorted(self.late), "sound_changes": self.sound,
                 "scribe_rules": self.scribe_rules, "irregular_verbs": sorted(self.irr),
                 "agentive_verbs": AGENTIVE}
+
+
+def make_language(family: str, seed: int) -> Language:
+    if family not in FAMILIES:
+        from . import holdout  # noqa: F401  （登録のための import）
+    return HOLDOUT_CLASSES.get(family, Language)(family, seed)

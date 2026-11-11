@@ -1,0 +1,167 @@
+{
+  "language_id": "tengu-pilot-v0-shuffled-control",
+  "level": "C",
+  "has_word_boundaries": false,
+  "documents": [
+    {
+      "id": "A",
+      "meta": {
+        "source": "https://satoru.net/crypt/tengu/transcription_v0.html",
+        "part": "seal-region",
+        "transcription": "visual-shape proxy, NOT semantic readings",
+        "uncertain_segments_removed": true,
+        "shuffled_within_sentences": true,
+        "control_seed": 20261112
+      },
+      "sentences": [
+        "文也侮吉号毋若果名寿去画云西"
+      ]
+    },
+    {
+      "id": "B",
+      "meta": {
+        "source": "https://satoru.net/crypt/tengu/transcription_v0.html",
+        "part": "seal-region",
+        "transcription": "visual-shape proxy, NOT semantic readings",
+        "uncertain_segments_removed": true,
+        "shuffled_within_sentences": true,
+        "control_seed": 20261112
+      },
+      "sentences": [
+        "才汐由左鬼女以中曳予止与字学石"
+      ]
+    },
+    {
+      "id": "C",
+      "meta": {
+        "source": "https://satoru.net/crypt/tengu/transcription_v0.html",
+        "part": "seal-region",
+        "transcription": "visual-shape proxy, NOT semantic readings",
+        "uncertain_segments_removed": true,
+        "shuffled_within_sentences": true,
+        "control_seed": 20261112
+      },
+      "sentences": [
+        "汐李曲女區己以呂石わ冶式法"
+      ]
+    },
+    {
+      "id": "D",
+      "meta": {
+        "source": "https://satoru.net/crypt/tengu/transcription_v0.html",
+        "part": "seal-region",
+        "transcription": "visual-shape proxy, NOT semantic readings",
+        "uncertain_segments_removed": true,
+        "shuffled_within_sentences": true,
+        "control_seed": 20261112
+      },
+      "sentences": [
+        "女号己也安多乙手乏央寒主香舟"
+      ]
+    },
+    {
+      "id": "E",
+      "meta": {
+        "source": "https://satoru.net/crypt/tengu/transcription_v0.html",
+        "part": "seal-region",
+        "transcription": "visual-shape proxy, NOT semantic readings",
+        "uncertain_segments_removed": true,
+        "shuffled_within_sentences": true,
+        "control_seed": 20261112
+      },
+      "sentences": [
+        "誠セ歴得法書る伊果"
+      ]
+    },
+    {
+      "id": "F",
+      "meta": {
+        "source": "https://satoru.net/crypt/tengu/transcription_v0.html",
+        "part": "seal-region",
+        "transcription": "visual-shape proxy, NOT semantic readings",
+        "uncertain_segments_removed": true,
+        "shuffled_within_sentences": true,
+        "control_seed": 20261112
+      },
+      "sentences": [
+        "女曳るの以安古",
+        "すゝくらぬにと"
+      ]
+    },
+    {
+      "id": "G",
+      "meta": {
+        "source": "https://satoru.net/crypt/tengu/transcription_v0.html",
+        "part": "seal-region",
+        "transcription": "visual-shape proxy, NOT semantic readings",
+        "uncertain_segments_removed": true,
+        "shuffled_within_sentences": true,
+        "control_seed": 20261112
+      },
+      "sentences": [
+        "官男ち云る亡寺",
+        "れるにのめ",
+        "ゐち目未毛"
+      ]
+    },
+    {
+      "id": "H",
+      "meta": {
+        "source": "https://satoru.net/crypt/tengu/transcription_v0.html",
+        "part": "seal-region",
+        "transcription": "visual-shape proxy, NOT semantic readings",
+        "uncertain_segments_removed": true,
+        "shuffled_within_sentences": true,
+        "control_seed": 20261112
+      },
+      "sentences": [
+        "由収当命のくくらゝ多せ冊たそゑら",
+        "ろよ日華そも"
+      ]
+    },
+    {
+      "id": "S1",
+      "meta": {
+        "source": "https://satoru.net/crypt/tengu/transcription_v0.html",
+        "part": "beginning",
+        "transcription": "visual-shape proxy, NOT semantic readings",
+        "uncertain_segments_removed": true,
+        "shuffled_within_sentences": true,
+        "control_seed": 20261112
+      },
+      "sentences": [
+        "の才示安寿凡函両也安"
+      ]
+    },
+    {
+      "id": "S2",
+      "meta": {
+        "source": "https://satoru.net/crypt/tengu/transcription_v0.html",
+        "part": "beginning",
+        "transcription": "visual-shape proxy, NOT semantic readings",
+        "uncertain_segments_removed": true,
+        "shuffled_within_sentences": true,
+        "control_seed": 20261112
+      },
+      "sentences": [
+        "君天華手石安む左安甚壬与"
+      ]
+    },
+    {
+      "id": "S3",
+      "meta": {
+        "source": "https://satoru.net/crypt/tengu/transcription_v0.html",
+        "part": "beginning",
+        "transcription": "visual-shape proxy, NOT semantic readings",
+        "uncertain_segments_removed": true,
+        "shuffled_within_sentences": true,
+        "control_seed": 20261112
+      },
+      "sentences": [
+        "寿主日寺安"
+      ]
+    }
+  ],
+  "known": [],
+  "parallel": []
+}

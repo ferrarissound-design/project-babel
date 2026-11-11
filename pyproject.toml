@@ -5,7 +5,7 @@ description = "未知言語解読の研究システム（生成器・解読器�
 requires-python = ">=3.11"
 
 [tool.ruff]
-line-length = 140
+line-length = 160
 target-version = "py311"
 
 [tool.ruff.lint]

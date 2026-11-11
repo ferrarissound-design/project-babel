@@ -1,0 +1,17 @@
+[project]
+name = "project-babel"
+version = "1.0.0"
+description = "未知言語解読の研究システム（生成器・解読器・採点器を分離）"
+requires-python = ">=3.11"
+
+[tool.ruff]
+line-length = 160
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B"]
+ignore = ["B007", "B023", "B905", "E741"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

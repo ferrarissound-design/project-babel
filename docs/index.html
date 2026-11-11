@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>PROJECT BABEL 研究ダッシュボード</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <p class="eyebrow">PROJECT BABEL</p>
+  <h1>未知言語解読の研究記録</h1>
+  <p id="meta" class="muted">読み込み中…</p>
+</header>
+<nav id="tabs" aria-label="セクション"></nav>
+<div class="picker" id="picker" hidden>
+  <label>言語系統 <select id="fam"></select></label>
+  <label>解読条件 <select id="lev"></select></label>
+</div>
+<main id="main"></main>
+<footer>
+  <p>数値はすべて Python が生成した JSON（<code>docs/data/</code>）を表示している。未実施の項目は「未評価」と表示する。</p>
+  <p>生成器と解読器を同じAIが設計した内部テストは、完全な未知言語への一般化を証明しない。</p>
+</footer>
+<script src="app.js"></script>
+</body>
+</html>

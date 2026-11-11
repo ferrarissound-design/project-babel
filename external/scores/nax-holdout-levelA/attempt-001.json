@@ -1,0 +1,103 @@
+{
+ "affix_inventory": {
+  "f1": 0.597,
+  "precision": 0.7143,
+  "recall": 0.5128
+ },
+ "attempt": {
+  "answer_already_public": false,
+  "attempt": 1,
+  "commit": "2eb1f6edef074c2992e4190a2b1ec12ae5ead285",
+  "created_utc": "2026-11-11T12:24:22+00:00",
+  "engine_fingerprint": "1b18f44f2b89587e",
+  "first_attempt": true,
+  "name": "nax-holdout-levelA",
+  "sha256": "03bcf3c58a0265261ff3daa5b8b3512c617b0cc0cd281a3c0a5979a8c31644cb"
+ },
+ "blind": true,
+ "errors": [
+  {
+   "cause": "証拠が1例のみ",
+   "confidence": 0.581,
+   "gold": "grain+house",
+   "predicted": "people",
+   "stem": "suhawuni"
+  }
+ ],
+ "gloss_heldout": {
+  "abstain": 0.9186,
+  "correct": 0.0814,
+  "feature_jaccard": 0.1554,
+  "numeral_correct": 0.9767,
+  "tokens": 762,
+  "wrong": 0.0
+ },
+ "gloss_train": {
+  "abstain": 0.9103,
+  "correct": 0.0893,
+  "feature_jaccard": 0.1562,
+  "numeral_correct": 0.9755,
+  "tokens": 2822,
+  "wrong": 0.0004
+ },
+ "independent": false,
+ "language_id": "NAX-7001",
+ "level": "A",
+ "lexicon": {
+  "abstain": 214,
+  "abstain_rate_without_evidence": 1.0,
+  "claimed": 10,
+  "correct": 9,
+  "coverage": 0.0446,
+  "precision": 0.9,
+  "wrong": 1
+ },
+ "null_verdict": null,
+ "numerals": {
+  "abstain": 1,
+  "accuracy": 0.8824,
+  "correct": 15,
+  "false_numeral": 0,
+  "relative": false,
+  "wrong": 1
+ },
+ "oov": {
+  "claimed_anyway": 0,
+  "heldout_tokens_with_unseen_stem": 11
+ },
+ "overclaim": {
+  "meaning_claims": 14,
+  "overclaims": 0,
+  "semantic_evidence_available": true
+ },
+ "pos": {
+  "accuracy": 0.8092,
+  "accuracy_when_labelled": 0.8931,
+  "labelled": 0.906
+ },
+ "provenance": "解読器と同じAIが、解読器の凍結後（コミット c34d6db）に設計した第4系統 NAX。準初見であり独立テストではない",
+ "relatedness": {
+  "chance": 0.0636,
+  "n": 150,
+  "p_at_1": 0.5067
+ },
+ "segmentation": {
+  "f1": 0.8873,
+  "precision": 0.9874,
+  "recall": 0.8056
+ },
+ "structure": {
+  "adj_noun": "abstain",
+  "affix_position": "correct",
+  "num_noun": "correct",
+  "numeral_base": "abstain",
+  "so_order": "correct",
+  "verb_position": "correct"
+ },
+ "variants": {
+  "f1": 0.6618,
+  "gold_pairs": 368,
+  "precision": 0.7103,
+  "recall": 0.6196
+ }
+}

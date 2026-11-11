@@ -1,0 +1,2227 @@
+{
+  "language_id": "gpt6-blind-01",
+  "has_word_boundaries": true,
+  "level": "A",
+  "documents": [
+    {
+      "id": "d001",
+      "meta": {
+        "site": "North Gate",
+        "genre": "account",
+        "record": 1
+      },
+      "sentences": [
+        "teru laromke vor detraelnu sevilsa garufta",
+        "hilunke sek detranu laromsa sekarlo",
+        "rasu dalorke min detraelnu palekta",
+        "teru branikke min surinelnu omreksa lokirmi",
+        "sevilke min koradelnu hilunsa vomerta"
+      ]
+    },
+    {
+      "id": "d002",
+      "meta": {
+        "site": "Salt Quay",
+        "genre": "account",
+        "record": 2
+      },
+      "sentences": [
+        "dalorke vor koradelnu omreksa palekta",
+        "laromke dal koradelnu dalorsa redavlo",
+        "rasu dalorke tuk koradelnu palekta",
+        "tomarke lin lemarelnu peransa medunmi"
+      ]
+    },
+    {
+      "id": "d003",
+      "meta": {
+        "site": "Stone Ward",
+        "genre": "account",
+        "record": 3
+      },
+      "sentences": [
+        "sevilke tuk lemarelnu vezinsa sepanta",
+        "vezinke sek lemarnu dalorsa redavlo",
+        "rasu dalorke lin lemarelnu palekta",
+        "tomarke min lemarelnu sevilsa redavmi"
+      ]
+    },
+    {
+      "id": "d004",
+      "meta": {
+        "site": "Upper Fields",
+        "genre": "account",
+        "record": 4
+      },
+      "sentences": [
+        "sevilke tuk voselelnu vezinsa sekarta",
+        "omrekke vor voselelnu sevilsa medunlo",
+        "rasu dalorke om voselelnu palekta",
+        "sevilke sek lemarnu dalorsa garufmi",
+        "laromke sek mekatnu kirvensa palekta"
+      ]
+    },
+    {
+      "id": "d005",
+      "meta": {
+        "site": "North Gate",
+        "genre": "account",
+        "record": 5
+      },
+      "sentences": [
+        "omrekke tuk surinelnu peransa vomerta",
+        "tomarke per surinelnu braniksa paleklo",
+        "rasu dalorke ommin surinelnu palekta",
+        "omrekke dal mekatelnu vezinsa temakmi"
+      ]
+    },
+    {
+      "id": "d006",
+      "meta": {
+        "site": "Salt Quay",
+        "genre": "account",
+        "record": 6
+      },
+      "sentences": [
+        "branikke tuk surinelnu hilunsa vomerta",
+        "peranke vor surinelnu vezinsa paleklo",
+        "rasu dalorke om surinelnu palekta",
+        "vezinke lin mekatelnu vezinsa sepanmi"
+      ]
+    },
+    {
+      "id": "d007",
+      "meta": {
+        "site": "Stone Ward",
+        "genre": "account",
+        "record": 7
+      },
+      "sentences": [
+        "omrekke dal detraelnu hilunsa garufta",
+        "tomarke vor detraelnu vezinsa paleklo",
+        "rasu dalorke tuk detraelnu palekta",
+        "branikke min mekatelnu omreksa temakmi",
+        "peranke dal nanekelnu peransa divorta"
+      ]
+    },
+    {
+      "id": "d008",
+      "meta": {
+        "site": "Upper Fields",
+        "genre": "account",
+        "record": 8
+      },
+      "sentences": [
+        "sevilke vor lemarelnu kirvensa lokirta",
+        "laromke sek lemarnu dalorsa medunlo",
+        "rasu dalorke min lemarelnu palekta",
+        "hilunke vor voselelnu sevilsa vomermi"
+      ]
+    },
+    {
+      "id": "d009",
+      "meta": {
+        "site": "North Gate",
+        "genre": "account",
+        "record": 9
+      },
+      "sentences": [
+        "tomarke lin lemarelnu braniksa palekta",
+        "omrekke sek lemarnu hilunsa divorlo",
+        "rasu dalorke om lemarelnu palekta",
+        "sevilke vor lemarelnu tomarsa medunmi"
+      ]
+    },
+    {
+      "id": "d010",
+      "meta": {
+        "site": "Salt Quay",
+        "genre": "account",
+        "record": 10
+      },
+      "sentences": [
+        "tomarke sek voselnu kirvensa temakta",
+        "branikke per voselelnu hilunsa redavlo",
+        "rasu dalorke tuk voselelnu palekta",
+        "tomarke vor pivorelnu sevilsa garufmi",
+        "branikke dal mekatelnu kirvensa sepanta"
+      ]
+    },
+    {
+      "id": "d011",
+      "meta": {
+        "site": "Stone Ward",
+        "genre": "account",
+        "record": 11
+      },
+      "sentences": [
+        "omrekke min detraelnu tomarsa vomerta",
+        "dalorke tuk detraelnu vezinsa lokirlo",
+        "rasu dalorke omsek detraelnu palekta",
+        "vezinke dal detraelnu vezinsa temakmi"
+      ]
+    },
+    {
+      "id": "d012",
+      "meta": {
+        "site": "Upper Fields",
+        "genre": "account",
+        "record": 12
+      },
+      "sentences": [
+        "branikke dal surinelnu sevilsa medunta",
+        "tomarke tuk surinelnu omreksa sekarlo",
+        "rasu dalorke omvor surinelnu palekta",
+        "teru laromke tuk tepukelnu omreksa sekarmi"
+      ]
+    },
+    {
+      "id": "d013",
+      "meta": {
+        "site": "North Gate",
+        "genre": "account",
+        "record": 13
+      },
+      "sentences": [
+        "kirvenke per zelanelnu hilunsa divorta",
+        "tomarke sek zelannu braniksa sepanlo",
+        "rasu dalorke tuk zelanelnu palekta",
+        "laromke lin detraelnu vezinsa temakmi",
+        "hilunke lin koradelnu sevilsa vomerta"
+      ]
+    },
+    {
+      "id": "d014",
+      "meta": {
+        "site": "Salt Quay",
+        "genre": "account",
+        "record": 14
+      },
+      "sentences": [
+        "teru sevilke vor lemarelnu omreksa temakta",
+        "laromke min lemarelnu dalorsa divorlo",
+        "rasu dalorke per lemarelnu palekta",
+        "dalorke vor voselelnu sevilsa divormi"
+      ]
+    },
+    {
+      "id": "d015",
+      "meta": {
+        "site": "Stone Ward",
+        "genre": "account",
+        "record": 15
+      },
+      "sentences": [
+        "sevilke vor voselelnu braniksa sekarta",
+        "kirvenke tuk voselelnu sevilsa redavlo",
+        "rasu dalorke om voselelnu palekta",
+        "tomarke dal voselelnu dalorsa redavmi"
+      ]
+    },
+    {
+      "id": "d016",
+      "meta": {
+        "site": "Upper Fields",
+        "genre": "account",
+        "record": 16
+      },
+      "sentences": [
+        "hilunke vor nanekelnu braniksa lokirta",
+        "branikke per nanekelnu hilunsa medunlo",
+        "rasu dalorke lin nanekelnu palekta",
+        "peranke sek lemarnu tomarsa divormi",
+        "kirvenke sek mekatnu kirvensa sekarta"
+      ]
+    },
+    {
+      "id": "d017",
+      "meta": {
+        "site": "North Gate",
+        "genre": "account",
+        "record": 17
+      },
+      "sentences": [
+        "omrekke per tepukelnu sevilsa garufta",
+        "tomarke dal tepukelnu kirvensa sekarlo",
+        "rasu dalorke omsek tepukelnu palekta",
+        "branikke tuk tepukelnu vezinsa lokirmi"
+      ]
+    },
+    {
+      "id": "d018",
+      "meta": {
+        "site": "Salt Quay",
+        "genre": "account",
+        "record": 18
+      },
+      "sentences": [
+        "omrekke tuk zelanelnu hilunsa redavta",
+        "hilunke tuk zelanelnu vezinsa paleklo",
+        "rasu dalorke omdal zelanelnu palekta",
+        "vezinke per tepukelnu omreksa palekmi"
+      ]
+    },
+    {
+      "id": "d019",
+      "meta": {
+        "site": "Stone Ward",
+        "genre": "account",
+        "record": 19
+      },
+      "sentences": [
+        "laromke sek zelannu hilunsa medunta",
+        "sevilke min zelanelnu omreksa lokirlo",
+        "rasu dalorke dal zelanelnu palekta",
+        "branikke per mekatelnu laromsa sepanmi",
+        "tomarke sek pivornu hilunsa medunta"
+      ]
+    },
+    {
+      "id": "d020",
+      "meta": {
+        "site": "Upper Fields",
+        "genre": "account",
+        "record": 20
+      },
+      "sentences": [
+        "tomarke lin koradelnu omreksa sekarta",
+        "vezinke per koradelnu dalorsa garuflo",
+        "rasu dalorke omdal koradelnu palekta",
+        "sevilke dal voselelnu tomarsa garufmi"
+      ]
+    },
+    {
+      "id": "d021",
+      "meta": {
+        "site": "North Gate",
+        "genre": "account",
+        "record": 21
+      },
+      "sentences": [
+        "dalorke tuk lemarelnu braniksa lokirta",
+        "kirvenke vor lemarelnu hilunsa vomerlo",
+        "rasu dalorke om lemarelnu palekta",
+        "tomarke tuk nanekelnu sevilsa vomermi"
+      ]
+    },
+    {
+      "id": "d022",
+      "meta": {
+        "site": "Salt Quay",
+        "genre": "account",
+        "record": 22
+      },
+      "sentences": [
+        "dalorke dal lemarelnu vezinsa palekta",
+        "omrekke vor lemarelnu tomarsa medunlo",
+        "rasu dalorke tuk lemarelnu palekta",
+        "dalorke per koradelnu hilunsa vomermi",
+        "vezinke lin mekatelnu omreksa temakta"
+      ]
+    },
+    {
+      "id": "d023",
+      "meta": {
+        "site": "Stone Ward",
+        "genre": "account",
+        "record": 23
+      },
+      "sentences": [
+        "kirvenke tuk surinelnu tomarsa divorta",
+        "dalorke min surinelnu kirvensa paleklo",
+        "rasu dalorke omsek surinelnu palekta",
+        "teru laromke sek detranu vezinsa palekmi"
+      ]
+    },
+    {
+      "id": "d024",
+      "meta": {
+        "site": "Upper Fields",
+        "genre": "account",
+        "record": 24
+      },
+      "sentences": [
+        "omrekke vor mekatelnu hilunsa medunta",
+        "peranke min mekatelnu laromsa temaklo",
+        "rasu dalorke per mekatelnu palekta",
+        "kirvenke sek zelannu braniksa palekmi"
+      ]
+    },
+    {
+      "id": "d025",
+      "meta": {
+        "site": "North Gate",
+        "genre": "account",
+        "record": 25
+      },
+      "sentences": [
+        "vezinke lin tepukelnu tomarsa garufta",
+        "sevilke min tepukelnu omreksa lokirlo",
+        "rasu dalorke omvor tepukelnu palekta",
+        "branikke lin mekatelnu omreksa lokirmi",
+        "peranke sek koradnu sevilsa garufta"
+      ]
+    },
+    {
+      "id": "d026",
+      "meta": {
+        "site": "Salt Quay",
+        "genre": "account",
+        "record": 26
+      },
+      "sentences": [
+        "hilunke per nanekelnu kirvensa lokirta",
+        "omrekke per nanekelnu sevilsa vomerlo",
+        "rasu dalorke omvor nanekelnu palekta",
+        "hilunke tuk koradelnu sevilsa divormi"
+      ]
+    },
+    {
+      "id": "d027",
+      "meta": {
+        "site": "Stone Ward",
+        "genre": "account",
+        "record": 27
+      },
+      "sentences": [
+        "teru dalorke sek koradnu kirvensa sekarta",
+        "branikke lin koradelnu peransa vomerlo",
+        "rasu dalorke om koradelnu palekta",
+        "tomarke tuk voselelnu tomarsa vomermi"
+      ]
+    },
+    {
+      "id": "d028",
+      "meta": {
+        "site": "Upper Fields",
+        "genre": "account",
+        "record": 28
+      },
+      "sentences": [
+        "sevilke vor voselelnu omreksa temakta",
+        "vezinke sek voselnu tomarsa divorlo",
+        "rasu dalorke min voselelnu palekta",
+        "sevilke min nanekelnu peransa medunmi",
+        "laromke lin mekatelnu vezinsa sekarta"
+      ]
+    },
+    {
+      "id": "d029",
+      "meta": {
+        "site": "North Gate",
+        "genre": "account",
+        "record": 29
+      },
+      "sentences": [
+        "kirvenke sek detranu dalorsa divorta",
+        "tomarke dal detraelnu vezinsa paleklo",
+        "rasu dalorke per detraelnu palekta",
+        "vezinke per mekatelnu kirvensa lokirmi"
+      ]
+    },
+    {
+      "id": "d030",
+      "meta": {
+        "site": "Salt Quay",
+        "genre": "account",
+        "record": 30
+      },
+      "sentences": [
+        "omrekke sek detranu sevilsa divorta",
+        "sevilke min detraelnu vezinsa sepanlo",
+        "rasu dalorke dal detraelnu palekta",
+        "laromke sek tepuknu laromsa sepanmi"
+      ]
+    },
+    {
+      "id": "d031",
+      "meta": {
+        "site": "Stone Ward",
+        "genre": "account",
+        "record": 31
+      },
+      "sentences": [
+        "omrekke lin detraelnu peransa vomerta",
+        "hilunke per detraelnu kirvensa paleklo",
+        "rasu dalorke omdal detraelnu palekta",
+        "kirvenke min tepukelnu braniksa temakmi",
+        "tomarke tuk pivorelnu sevilsa vomerta"
+      ]
+    },
+    {
+      "id": "d032",
+      "meta": {
+        "site": "Upper Fields",
+        "genre": "account",
+        "record": 32
+      },
+      "sentences": [
+        "peranke per nanekelnu braniksa sekarta",
+        "omrekke tuk nanekelnu peransa vomerlo",
+        "rasu dalorke ommin nanekelnu palekta",
+        "peranke tuk pivorelnu tomarsa redavmi"
+      ]
+    },
+    {
+      "id": "d033",
+      "meta": {
+        "site": "North Gate",
+        "genre": "account",
+        "record": 33
+      },
+      "sentences": [
+        "tomarke sek lemarnu kirvensa sepanta",
+        "omrekke per lemarelnu hilunsa medunlo",
+        "rasu dalorke tuk lemarelnu palekta",
+        "hilunke per pivorelnu sevilsa garufmi"
+      ]
+    },
+    {
+      "id": "d034",
+      "meta": {
+        "site": "Salt Quay",
+        "genre": "account",
+        "record": 34
+      },
+      "sentences": [
+        "hilunke vor lemarelnu omreksa temakta",
+        "kirvenke lin lemarelnu hilunsa vomerlo",
+        "rasu dalorke omsek lemarelnu palekta",
+        "teru tomarke dal nanekelnu hilunsa medunmi",
+        "branikke sek mekatnu vezinsa lokirta"
+      ]
+    },
+    {
+      "id": "d035",
+      "meta": {
+        "site": "Stone Ward",
+        "genre": "account",
+        "record": 35
+      },
+      "sentences": [
+        "kirvenke tuk detraelnu dalorsa vomerta",
+        "hilunke sek detranu laromsa sekarlo",
+        "rasu dalorke lin detraelnu palekta",
+        "kirvenke dal zelanelnu kirvensa palekmi"
+      ]
+    },
+    {
+      "id": "d036",
+      "meta": {
+        "site": "Upper Fields",
+        "genre": "account",
+        "record": 36
+      },
+      "sentences": [
+        "vezinke sek tepuknu tomarsa divorta",
+        "peranke vor tepukelnu omreksa lokirlo",
+        "rasu dalorke min tepukelnu palekta",
+        "laromke per zelanelnu kirvensa sekarmi"
+      ]
+    },
+    {
+      "id": "d037",
+      "meta": {
+        "site": "North Gate",
+        "genre": "account",
+        "record": 37
+      },
+      "sentences": [
+        "vezinke lin detraelnu tomarsa divorta",
+        "sevilke per detraelnu vezinsa temaklo",
+        "rasu dalorke omdal detraelnu palekta",
+        "kirvenke tuk zelanelnu vezinsa temakmi",
+        "tomarke vor nanekelnu peransa medunta"
+      ]
+    },
+    {
+      "id": "d038",
+      "meta": {
+        "site": "Salt Quay",
+        "genre": "account",
+        "record": 38
+      },
+      "sentences": [
+        "peranke sek voselnu laromsa palekta",
+        "vezinke tuk voselelnu hilunsa redavlo",
+        "rasu dalorke lin voselelnu palekta",
+        "dalorke dal pivorelnu dalorsa medunmi"
+      ]
+    },
+    {
+      "id": "d039",
+      "meta": {
+        "site": "Stone Ward",
+        "genre": "account",
+        "record": 39
+      },
+      "sentences": [
+        "dalorke lin pivorelnu kirvensa lokirta",
+        "omrekke per pivorelnu peransa garuflo",
+        "rasu dalorke omdal pivorelnu palekta",
+        "hilunke vor pivorelnu hilunsa divormi"
+      ]
+    },
+    {
+      "id": "d040",
+      "meta": {
+        "site": "Upper Fields",
+        "genre": "account",
+        "record": 40
+      },
+      "sentences": [
+        "teru peranke min voselelnu kirvensa temakta",
+        "kirvenke sek voselnu sevilsa divorlo",
+        "rasu dalorke dal voselelnu palekta",
+        "tomarke sek lemarnu hilunsa divormi",
+        "branikke sek tepuknu vezinsa palekta"
+      ]
+    },
+    {
+      "id": "d041",
+      "meta": {
+        "site": "North Gate",
+        "genre": "account",
+        "record": 41
+      },
+      "sentences": [
+        "kirvenke lin mekatelnu hilunsa divorta",
+        "tomarke tuk mekatelnu kirvensa temaklo",
+        "rasu dalorke omper mekatelnu palekta",
+        "kirvenke lin tepukelnu braniksa temakmi"
+      ]
+    },
+    {
+      "id": "d042",
+      "meta": {
+        "site": "Salt Quay",
+        "genre": "account",
+        "record": 42
+      },
+      "sentences": [
+        "branikke tuk tepukelnu tomarsa redavta",
+        "hilunke vor tepukelnu omreksa sepanlo",
+        "rasu dalorke om tepukelnu palekta",
+        "vezinke tuk detraelnu omreksa sepanmi"
+      ]
+    },
+    {
+      "id": "d043",
+      "meta": {
+        "site": "Stone Ward",
+        "genre": "account",
+        "record": 43
+      },
+      "sentences": [
+        "vezinke per tepukelnu peransa garufta",
+        "tomarke per tepukelnu laromsa temaklo",
+        "rasu dalorke omvor tepukelnu palekta",
+        "vezinke dal detraelnu vezinsa palekmi",
+        "hilunke dal voselelnu tomarsa divorta"
+      ]
+    },
+    {
+      "id": "d044",
+      "meta": {
+        "site": "Upper Fields",
+        "genre": "account",
+        "record": 44
+      },
+      "sentences": [
+        "hilunke tuk voselelnu laromsa sepanta",
+        "omrekke min voselelnu sevilsa medunlo",
+        "rasu dalorke omsek voselelnu palekta",
+        "sevilke sek koradnu sevilsa redavmi"
+      ]
+    },
+    {
+      "id": "d045",
+      "meta": {
+        "site": "North Gate",
+        "genre": "account",
+        "record": 45
+      },
+      "sentences": [
+        "peranke per koradelnu kirvensa sepanta",
+        "kirvenke min koradelnu dalorsa vomerlo",
+        "rasu dalorke om koradelnu palekta",
+        "teru peranke min lemarelnu sevilsa medunmi"
+      ]
+    },
+    {
+      "id": "d046",
+      "meta": {
+        "site": "Salt Quay",
+        "genre": "account",
+        "record": 46
+      },
+      "sentences": [
+        "tomarke per voselelnu omreksa lokirta",
+        "omrekke min voselelnu tomarsa vomerlo",
+        "rasu dalorke om voselelnu palekta",
+        "sevilke dal lemarelnu dalorsa redavmi",
+        "kirvenke lin mekatelnu vezinsa lokirta"
+      ]
+    },
+    {
+      "id": "d047",
+      "meta": {
+        "site": "Stone Ward",
+        "genre": "account",
+        "record": 47
+      },
+      "sentences": [
+        "vezinke min mekatelnu sevilsa garufta",
+        "sevilke tuk mekatelnu omreksa sepanlo",
+        "rasu dalorke omsek mekatelnu palekta",
+        "branikke lin surinelnu vezinsa temakmi"
+      ]
+    },
+    {
+      "id": "d048",
+      "meta": {
+        "site": "Upper Fields",
+        "genre": "account",
+        "record": 48
+      },
+      "sentences": [
+        "omrekke tuk surinelnu hilunsa redavta",
+        "tomarke per surinelnu braniksa paleklo",
+        "rasu dalorke ommin surinelnu palekta",
+        "laromke tuk detraelnu braniksa palekmi"
+      ]
+    },
+    {
+      "id": "d049",
+      "meta": {
+        "site": "North Gate",
+        "genre": "account",
+        "record": 49
+      },
+      "sentences": [
+        "laromke sek zelannu tomarsa garufta",
+        "dalorke per zelanelnu laromsa sekarlo",
+        "rasu dalorke tuk zelanelnu palekta",
+        "vezinke dal tepukelnu vezinsa sepanmi",
+        "tomarke vor koradelnu dalorsa redavta"
+      ]
+    },
+    {
+      "id": "d050",
+      "meta": {
+        "site": "Salt Quay",
+        "genre": "account",
+        "record": 50
+      },
+      "sentences": [
+        "tomarke lin koradelnu omreksa lokirta",
+        "omrekke min koradelnu dalorsa divorlo",
+        "rasu dalorke omvor koradelnu palekta",
+        "sevilke lin nanekelnu hilunsa divormi"
+      ]
+    },
+    {
+      "id": "d051",
+      "meta": {
+        "site": "Stone Ward",
+        "genre": "account",
+        "record": 51
+      },
+      "sentences": [
+        "dalorke sek pivornu omreksa lokirta",
+        "laromke sek pivornu sevilsa garuflo",
+        "rasu dalorke vor pivorelnu palekta",
+        "dalorke dal nanekelnu tomarsa vomermi"
+      ]
+    },
+    {
+      "id": "d052",
+      "meta": {
+        "site": "Upper Fields",
+        "genre": "account",
+        "record": 52
+      },
+      "sentences": [
+        "sevilke min pivorelnu braniksa sepanta",
+        "omrekke min pivorelnu tomarsa redavlo",
+        "rasu dalorke tuk pivorelnu palekta",
+        "dalorke vor lemarelnu dalorsa redavmi",
+        "branikke per tepukelnu kirvensa temakta"
+      ]
+    },
+    {
+      "id": "d053",
+      "meta": {
+        "site": "North Gate",
+        "genre": "account",
+        "record": 53
+      },
+      "sentences": [
+        "teru branikke sek tepuknu hilunsa divorta",
+        "tomarke per tepukelnu vezinsa sekarlo",
+        "rasu dalorke tuk tepukelnu palekta",
+        "vezinke per mekatelnu laromsa sepanmi"
+      ]
+    },
+    {
+      "id": "d054",
+      "meta": {
+        "site": "Salt Quay",
+        "genre": "account",
+        "record": 54
+      },
+      "sentences": [
+        "kirvenke per detraelnu tomarsa divorta",
+        "hilunke sek detranu vezinsa sepanlo",
+        "rasu dalorke tuk detraelnu palekta",
+        "branikke dal surinelnu kirvensa palekmi"
+      ]
+    },
+    {
+      "id": "d055",
+      "meta": {
+        "site": "Stone Ward",
+        "genre": "account",
+        "record": 55
+      },
+      "sentences": [
+        "branikke tuk mekatelnu dalorsa garufta",
+        "sevilke min mekatelnu vezinsa temaklo",
+        "rasu dalorke omsek mekatelnu palekta",
+        "branikke dal surinelnu omreksa temakmi",
+        "sevilke sek voselnu peransa vomerta"
+      ]
+    },
+    {
+      "id": "d056",
+      "meta": {
+        "site": "Upper Fields",
+        "genre": "account",
+        "record": 56
+      },
+      "sentences": [
+        "tomarke tuk nanekelnu omreksa sepanta",
+        "kirvenke per nanekelnu hilunsa redavlo",
+        "rasu dalorke ommin nanekelnu palekta",
+        "teru sevilke tuk koradelnu sevilsa divormi"
+      ]
+    },
+    {
+      "id": "d057",
+      "meta": {
+        "site": "North Gate",
+        "genre": "account",
+        "record": 57
+      },
+      "sentences": [
+        "peranke vor koradelnu braniksa lokirta",
+        "laromke dal koradelnu dalorsa medunlo",
+        "rasu dalorke tuk koradelnu palekta",
+        "dalorke per nanekelnu tomarsa redavmi"
+      ]
+    },
+    {
+      "id": "d058",
+      "meta": {
+        "site": "Salt Quay",
+        "genre": "account",
+        "record": 58
+      },
+      "sentences": [
+        "tomarke min lemarelnu vezinsa sekarta",
+        "laromke min lemarelnu dalorsa medunlo",
+        "rasu dalorke tuk lemarelnu palekta",
+        "hilunke lin pivorelnu sevilsa divormi",
+        "laromke vor mekatelnu omreksa palekta"
+      ]
+    },
+    {
+      "id": "d059",
+      "meta": {
+        "site": "Stone Ward",
+        "genre": "account",
+        "record": 59
+      },
+      "sentences": [
+        "vezinke vor surinelnu dalorsa divorta",
+        "sevilke dal surinelnu omreksa sekarlo",
+        "rasu dalorke tuk surinelnu palekta",
+        "vezinke vor surinelnu laromsa sekarmi"
+      ]
+    },
+    {
+      "id": "d060",
+      "meta": {
+        "site": "Upper Fields",
+        "genre": "account",
+        "record": 60
+      },
+      "sentences": [
+        "vezinke per zelanelnu peransa divorta",
+        "sevilke vor zelanelnu omreksa temaklo",
+        "rasu dalorke lin zelanelnu palekta",
+        "laromke dal mekatelnu vezinsa sekarmi"
+      ]
+    },
+    {
+      "id": "d061",
+      "meta": {
+        "site": "North Gate",
+        "genre": "account",
+        "record": 61
+      },
+      "sentences": [
+        "vezinke dal zelanelnu peransa medunta",
+        "sevilke dal zelanelnu braniksa paleklo",
+        "rasu dalorke om zelanelnu palekta",
+        "kirvenke dal detraelnu vezinsa sepanmi",
+        "tomarke sek voselnu tomarsa divorta"
+      ]
+    },
+    {
+      "id": "d062",
+      "meta": {
+        "site": "Salt Quay",
+        "genre": "account",
+        "record": 62
+      },
+      "sentences": [
+        "tomarke sek lemarnu kirvensa temakta",
+        "kirvenke lin lemarelnu dalorsa divorlo",
+        "rasu dalorke om lemarelnu palekta",
+        "sevilke per koradelnu hilunsa divormi"
+      ]
+    },
+    {
+      "id": "d063",
+      "meta": {
+        "site": "Stone Ward",
+        "genre": "account",
+        "record": 63
+      },
+      "sentences": [
+        "tomarke per lemarelnu vezinsa sekarta",
+        "branikke min lemarelnu dalorsa medunlo",
+        "rasu dalorke om lemarelnu palekta",
+        "hilunke vor nanekelnu hilunsa garufmi"
+      ]
+    },
+    {
+      "id": "d064",
+      "meta": {
+        "site": "Upper Fields",
+        "genre": "account",
+        "record": 64
+      },
+      "sentences": [
+        "hilunke per koradelnu laromsa temakta",
+        "vezinke lin koradelnu peransa redavlo",
+        "rasu dalorke omdal koradelnu palekta",
+        "sevilke tuk lemarelnu peransa garufmi",
+        "laromke vor tepukelnu kirvensa sepanta"
+      ]
+    },
+    {
+      "id": "d065",
+      "meta": {
+        "site": "North Gate",
+        "genre": "account",
+        "record": 65
+      },
+      "sentences": [
+        "laromke min zelanelnu hilunsa redavta",
+        "sevilke sek zelannu kirvensa paleklo",
+        "rasu dalorke dal zelanelnu palekta",
+        "omrekke tuk zelanelnu kirvensa palekmi"
+      ]
+    },
+    {
+      "id": "d066",
+      "meta": {
+        "site": "Salt Quay",
+        "genre": "account",
+        "record": 66
+      },
+      "sentences": [
+        "teru vezinke lin detraelnu hilunsa vomerta",
+        "peranke vor detraelnu omreksa paleklo",
+        "rasu dalorke omsek detraelnu palekta",
+        "omrekke min detraelnu braniksa temakmi"
+      ]
+    },
+    {
+      "id": "d067",
+      "meta": {
+        "site": "Stone Ward",
+        "genre": "account",
+        "record": 67
+      },
+      "sentences": [
+        "laromke vor tepukelnu peransa medunta",
+        "hilunke min tepukelnu laromsa temaklo",
+        "rasu dalorke per tepukelnu palekta",
+        "teru laromke per surinelnu laromsa lokirmi",
+        "sevilke sek naneknu peransa vomerta"
+      ]
+    },
+    {
+      "id": "d068",
+      "meta": {
+        "site": "Upper Fields",
+        "genre": "account",
+        "record": 68
+      },
+      "sentences": [
+        "sevilke sek koradnu omreksa sekarta",
+        "omrekke sek koradnu hilunsa vomerlo",
+        "rasu dalorke vor koradelnu palekta",
+        "sevilke min voselelnu sevilsa vomermi"
+      ]
+    },
+    {
+      "id": "d069",
+      "meta": {
+        "site": "North Gate",
+        "genre": "account",
+        "record": 69
+      },
+      "sentences": [
+        "hilunke min nanekelnu vezinsa temakta",
+        "kirvenke lin nanekelnu sevilsa redavlo",
+        "rasu dalorke omvor nanekelnu palekta",
+        "hilunke sek lemarnu sevilsa medunmi"
+      ]
+    },
+    {
+      "id": "d070",
+      "meta": {
+        "site": "Salt Quay",
+        "genre": "account",
+        "record": 70
+      },
+      "sentences": [
+        "hilunke lin pivorelnu kirvensa sepanta",
+        "laromke per pivorelnu peransa redavlo",
+        "rasu dalorke omdal pivorelnu palekta",
+        "hilunke min nanekelnu dalorsa medunmi",
+        "omrekke tuk zelanelnu vezinsa palekta"
+      ]
+    },
+    {
+      "id": "d071",
+      "meta": {
+        "site": "Stone Ward",
+        "genre": "trade",
+        "record": 71
+      },
+      "sentences": [
+        "kirvenke per zelanelnu sevilsa divorta",
+        "hilunke sek zelannu braniksa sekarlo",
+        "rasu dalorke tuk zelanelnu palekta",
+        "omrekke dal tepukelnu kirvensa temakmi"
+      ]
+    },
+    {
+      "id": "d072",
+      "meta": {
+        "site": "Upper Fields",
+        "genre": "trade",
+        "record": 72
+      },
+      "sentences": [
+        "kirvenke dal mekatelnu sevilsa vomerta",
+        "sevilke tuk mekatelnu laromsa sekarlo",
+        "rasu dalorke omvor mekatelnu palekta",
+        "omrekke min mekatelnu omreksa sekarmi"
+      ]
+    },
+    {
+      "id": "d073",
+      "meta": {
+        "site": "North Gate",
+        "genre": "trade",
+        "record": 73
+      },
+      "sentences": [
+        "kirvenke tuk surinelnu peransa redavta",
+        "hilunke tuk surinelnu kirvensa sekarlo",
+        "rasu dalorke omdal surinelnu palekta",
+        "vezinke sek detranu laromsa lokirmi",
+        "dalorke tuk pivorelnu sevilsa vomerta"
+      ]
+    },
+    {
+      "id": "d074",
+      "meta": {
+        "site": "Salt Quay",
+        "genre": "trade",
+        "record": 74
+      },
+      "sentences": [
+        "peranke vor nanekelnu omreksa palekta",
+        "laromke tuk nanekelnu peransa redavlo",
+        "rasu dalorke om nanekelnu palekta",
+        "hilunke min lemarelnu tomarsa vomermi"
+      ]
+    },
+    {
+      "id": "d075",
+      "meta": {
+        "site": "Stone Ward",
+        "genre": "trade",
+        "record": 75
+      },
+      "sentences": [
+        "peranke dal voselelnu laromsa sepanta",
+        "vezinke sek voselnu hilunsa vomerlo",
+        "rasu dalorke per voselelnu palekta",
+        "hilunke vor lemarelnu sevilsa divormi"
+      ]
+    },
+    {
+      "id": "d076",
+      "meta": {
+        "site": "Upper Fields",
+        "genre": "trade",
+        "record": 76
+      },
+      "sentences": [
+        "sevilke vor lemarelnu kirvensa sepanta",
+        "omrekke lin lemarelnu dalorsa vomerlo",
+        "rasu dalorke omsek lemarelnu palekta",
+        "dalorke tuk nanekelnu tomarsa garufmi",
+        "branikke sek zelannu braniksa sekarta"
+      ]
+    },
+    {
+      "id": "d077",
+      "meta": {
+        "site": "North Gate",
+        "genre": "trade",
+        "record": 77
+      },
+      "sentences": [
+        "laromke per surinelnu hilunsa garufta",
+        "tomarke per surinelnu kirvensa temaklo",
+        "rasu dalorke omvor surinelnu palekta",
+        "omrekke per zelanelnu kirvensa sekarmi"
+      ]
+    },
+    {
+      "id": "d078",
+      "meta": {
+        "site": "Salt Quay",
+        "genre": "trade",
+        "record": 78
+      },
+      "sentences": [
+        "omrekke per surinelnu dalorsa garufta",
+        "peranke lin surinelnu vezinsa sekarlo",
+        "rasu dalorke omdal surinelnu palekta",
+        "teru kirvenke lin detraelnu laromsa sekarmi"
+      ]
+    },
+    {
+      "id": "d079",
+      "meta": {
+        "site": "Stone Ward",
+        "genre": "trade",
+        "record": 79
+      },
+      "sentences": [
+        "teru kirvenke min tepukelnu peransa divorta",
+        "dalorke tuk tepukelnu laromsa temaklo",
+        "rasu dalorke omsek tepukelnu palekta",
+        "omrekke min zelanelnu laromsa sepanmi",
+        "peranke lin koradelnu sevilsa divorta"
+      ]
+    },
+    {
+      "id": "d080",
+      "meta": {
+        "site": "Upper Fields",
+        "genre": "trade",
+        "record": 80
+      },
+      "sentences": [
+        "hilunke dal pivorelnu kirvensa lokirta",
+        "laromke min pivorelnu sevilsa divorlo",
+        "rasu dalorke lin pivorelnu palekta",
+        "dalorke vor koradelnu sevilsa redavmi"
+      ]
+    },
+    {
+      "id": "d081",
+      "meta": {
+        "site": "North Gate",
+        "genre": "trade",
+        "record": 81
+      },
+      "sentences": [
+        "hilunke min pivorelnu vezinsa sekarta",
+        "laromke per pivorelnu sevilsa vomerlo",
+        "rasu dalorke om pivorelnu palekta",
+        "sevilke vor lemarelnu sevilsa medunmi"
+      ]
+    },
+    {
+      "id": "d082",
+      "meta": {
+        "site": "Salt Quay",
+        "genre": "trade",
+        "record": 82
+      },
+      "sentences": [
+        "dalorke dal koradelnu braniksa palekta",
+        "omrekke dal koradelnu tomarsa redavlo",
+        "rasu dalorke om koradelnu palekta",
+        "tomarke min koradelnu peransa garufmi",
+        "omrekke dal mekatelnu braniksa sekarta"
+      ]
+    },
+    {
+      "id": "d083",
+      "meta": {
+        "site": "Stone Ward",
+        "genre": "trade",
+        "record": 83
+      },
+      "sentences": [
+        "vezinke min zelanelnu dalorsa redavta",
+        "peranke sek zelannu vezinsa temaklo",
+        "rasu dalorke dal zelanelnu palekta",
+        "branikke lin tepukelnu laromsa sekarmi"
+      ]
+    },
+    {
+      "id": "d084",
+      "meta": {
+        "site": "Upper Fields",
+        "genre": "trade",
+        "record": 84
+      },
+      "sentences": [
+        "omrekke vor zelanelnu peransa divorta",
+        "sevilke vor zelanelnu kirvensa sepanlo",
+        "rasu dalorke dal zelanelnu palekta",
+        "laromke sek mekatnu laromsa sekarmi"
+      ]
+    },
+    {
+      "id": "d085",
+      "meta": {
+        "site": "North Gate",
+        "genre": "trade",
+        "record": 85
+      },
+      "sentences": [
+        "branikke vor mekatelnu tomarsa garufta",
+        "tomarke min mekatelnu vezinsa paleklo",
+        "rasu dalorke per mekatelnu palekta",
+        "kirvenke sek zelannu laromsa temakmi",
+        "sevilke sek lemarnu peransa divorta"
+      ]
+    },
+    {
+      "id": "d086",
+      "meta": {
+        "site": "Salt Quay",
+        "genre": "chronicle",
+        "record": 86
+      },
+      "sentences": [
+        "dalorke vor pivorelnu laromsa sepanta",
+        "laromke tuk pivorelnu tomarsa vomerlo",
+        "rasu dalorke om pivorelnu palekta",
+        "dalorke sek naneknu peransa medunmi"
+      ]
+    },
+    {
+      "id": "d087",
+      "meta": {
+        "site": "Stone Ward",
+        "genre": "chronicle",
+        "record": 87
+      },
+      "sentences": [
+        "tomarke dal koradelnu laromsa palekta",
+        "vezinke lin koradelnu sevilsa divorlo",
+        "rasu dalorke ommin koradelnu palekta",
+        "peranke tuk koradelnu sevilsa vomermi"
+      ]
+    },
+    {
+      "id": "d088",
+      "meta": {
+        "site": "Upper Fields",
+        "genre": "chronicle",
+        "record": 88
+      },
+      "sentences": [
+        "peranke tuk pivorelnu kirvensa temakta",
+        "branikke min pivorelnu peransa divorlo",
+        "rasu dalorke omsek pivorelnu palekta",
+        "tomarke tuk koradelnu sevilsa divormi",
+        "omrekke vor tepukelnu vezinsa sepanta"
+      ]
+    },
+    {
+      "id": "d089",
+      "meta": {
+        "site": "North Gate",
+        "genre": "chronicle",
+        "record": 89
+      },
+      "sentences": [
+        "kirvenke dal mekatelnu tomarsa medunta",
+        "sevilke lin mekatelnu omreksa paleklo",
+        "rasu dalorke ommin mekatelnu palekta",
+        "teru omrekke dal detraelnu omreksa sekarmi"
+      ]
+    },
+    {
+      "id": "d090",
+      "meta": {
+        "site": "Salt Quay",
+        "genre": "chronicle",
+        "record": 90
+      },
+      "sentences": [
+        "omrekke lin zelanelnu dalorsa redavta",
+        "sevilke sek zelannu vezinsa lokirlo",
+        "rasu dalorke om zelanelnu palekta",
+        "omrekke vor zelanelnu laromsa sekarmi"
+      ]
+    },
+    {
+      "id": "d091",
+      "meta": {
+        "site": "Stone Ward",
+        "genre": "chronicle",
+        "record": 91
+      },
+      "sentences": [
+        "laromke vor mekatelnu sevilsa divorta",
+        "hilunke per mekatelnu braniksa paleklo",
+        "rasu dalorke lin mekatelnu palekta",
+        "vezinke min mekatelnu omreksa temakmi",
+        "peranke dal pivorelnu sevilsa redavta"
+      ]
+    },
+    {
+      "id": "d092",
+      "meta": {
+        "site": "Upper Fields",
+        "genre": "chronicle",
+        "record": 92
+      },
+      "sentences": [
+        "teru hilunke dal koradelnu braniksa temakta",
+        "branikke vor koradelnu peransa redavlo",
+        "rasu dalorke tuk koradelnu palekta",
+        "dalorke tuk koradelnu peransa redavmi"
+      ]
+    },
+    {
+      "id": "d093",
+      "meta": {
+        "site": "North Gate",
+        "genre": "chronicle",
+        "record": 93
+      },
+      "sentences": [
+        "hilunke per lemarelnu laromsa sekarta",
+        "vezinke min lemarelnu sevilsa medunlo",
+        "rasu dalorke om lemarelnu palekta",
+        "peranke lin lemarelnu hilunsa vomermi"
+      ]
+    },
+    {
+      "id": "d094",
+      "meta": {
+        "site": "Salt Quay",
+        "genre": "chronicle",
+        "record": 94
+      },
+      "sentences": [
+        "tomarke min pivorelnu kirvensa lokirta",
+        "branikke vor pivorelnu tomarsa vomerlo",
+        "rasu dalorke per pivorelnu palekta",
+        "dalorke per nanekelnu hilunsa divormi",
+        "omrekke vor surinelnu laromsa sekarta"
+      ]
+    },
+    {
+      "id": "d095",
+      "meta": {
+        "site": "Stone Ward",
+        "genre": "chronicle",
+        "record": 95
+      },
+      "sentences": [
+        "laromke per detraelnu peransa vomerta",
+        "tomarke lin detraelnu laromsa paleklo",
+        "rasu dalorke omdal detraelnu palekta",
+        "branikke per detraelnu laromsa sekarmi"
+      ]
+    },
+    {
+      "id": "d096",
+      "meta": {
+        "site": "Upper Fields",
+        "genre": "chronicle",
+        "record": 96
+      },
+      "sentences": [
+        "laromke min tepukelnu tomarsa vomerta",
+        "peranke per tepukelnu braniksa temaklo",
+        "rasu dalorke om tepukelnu palekta",
+        "kirvenke lin tepukelnu braniksa lokirmi"
+      ]
+    },
+    {
+      "id": "d097",
+      "meta": {
+        "site": "North Gate",
+        "genre": "chronicle",
+        "record": 97
+      },
+      "sentences": [
+        "vezinke sek mekatnu sevilsa medunta",
+        "dalorke dal mekatelnu kirvensa lokirlo",
+        "rasu dalorke per mekatelnu palekta",
+        "vezinke per surinelnu braniksa sekarmi",
+        "peranke vor voselelnu tomarsa medunta"
+      ]
+    },
+    {
+      "id": "d098",
+      "meta": {
+        "site": "Salt Quay",
+        "genre": "chronicle",
+        "record": 98
+      },
+      "sentences": [
+        "sevilke tuk koradelnu omreksa temakta",
+        "branikke sek koradnu hilunsa divorlo",
+        "rasu dalorke lin koradelnu palekta",
+        "hilunke sek lemarnu tomarsa medunmi"
+      ]
+    },
+    {
+      "id": "d099",
+      "meta": {
+        "site": "Stone Ward",
+        "genre": "chronicle",
+        "record": 99
+      },
+      "sentences": [
+        "dalorke min lemarelnu omreksa sekarta",
+        "vezinke dal lemarelnu tomarsa redavlo",
+        "rasu dalorke lin lemarelnu palekta",
+        "sevilke lin voselelnu peransa redavmi"
+      ]
+    },
+    {
+      "id": "d100",
+      "meta": {
+        "site": "Upper Fields",
+        "genre": "chronicle",
+        "record": 100
+      },
+      "sentences": [
+        "tomarke sek voselnu kirvensa sekarta",
+        "branikke lin voselelnu sevilsa divorlo",
+        "rasu dalorke om voselelnu palekta",
+        "teru peranke min voselelnu dalorsa divormi",
+        "branikke min surinelnu braniksa sepanta"
+      ]
+    }
+  ],
+  "known": [
+    {
+      "form": "vezinke",
+      "meaning": "merchant"
+    },
+    {
+      "form": "voselnu",
+      "meaning": "grain"
+    },
+    {
+      "form": "garufta",
+      "meaning": "give"
+    },
+    {
+      "form": "dalorke",
+      "meaning": "scribe"
+    },
+    {
+      "form": "palekta",
+      "meaning": "count"
+    },
+    {
+      "form": "sek",
+      "meaning": "#1"
+    },
+    {
+      "form": "vor",
+      "meaning": "#2"
+    },
+    {
+      "form": "min",
+      "meaning": "#3"
+    }
+  ],
+  "parallel": [
+    {
+      "doc": "d001",
+      "sent": 0,
+      "translation": {
+        "kind": "clause",
+        "pred": "give",
+        "tense": "PAST",
+        "args": [
+          {
+            "role": "subject",
+            "head": "king"
+          },
+          {
+            "role": "object",
+            "head": "salt",
+            "count": 2,
+            "pl": true
+          },
+          {
+            "role": "recipient",
+            "head": "baker"
+          }
+        ]
+      }
+    },
+    {
+      "doc": "d001",
+      "sent": 1,
+      "translation": {
+        "kind": "clause",
+        "pred": "carry",
+        "tense": "PRES",
+        "args": [
+          {
+            "role": "subject",
+            "head": "child"
+          },
+          {
+            "role": "object",
+            "head": "salt",
+            "count": 1,
+            "pl": false
+          },
+          {
+            "role": "recipient",
+            "head": "king"
+          }
+        ]
+      }
+    },
+    {
+      "doc": "d002",
+      "sent": 0,
+      "translation": {
+        "kind": "clause",
+        "pred": "count",
+        "tense": "PAST",
+        "args": [
+          {
+            "role": "subject",
+            "head": "scribe"
+          },
+          {
+            "role": "object",
+            "head": "copper",
+            "count": 2,
+            "pl": true
+          },
+          {
+            "role": "recipient",
+            "head": "sailor"
+          }
+        ]
+      }
+    },
+    {
+      "doc": "d002",
+      "sent": 1,
+      "translation": {
+        "kind": "clause",
+        "pred": "trade",
+        "tense": "PRES",
+        "args": [
+          {
+            "role": "subject",
+            "head": "king"
+          },
+          {
+            "role": "object",
+            "head": "copper",
+            "count": 4,
+            "pl": true
+          },
+          {
+            "role": "recipient",
+            "head": "scribe"
+          }
+        ]
+      }
+    },
+    {
+      "doc": "d003",
+      "sent": 0,
+      "translation": {
+        "kind": "clause",
+        "pred": "buy",
+        "tense": "PAST",
+        "args": [
+          {
+            "role": "subject",
+            "head": "baker"
+          },
+          {
+            "role": "object",
+            "head": "timber",
+            "count": 6,
+            "pl": true
+          },
+          {
+            "role": "recipient",
+            "head": "merchant"
+          }
+        ]
+      }
+    },
+    {
+      "doc": "d003",
+      "sent": 1,
+      "translation": {
+        "kind": "clause",
+        "pred": "trade",
+        "tense": "PRES",
+        "args": [
+          {
+            "role": "subject",
+            "head": "merchant"
+          },
+          {
+            "role": "object",
+            "head": "timber",
+            "count": 1,
+            "pl": false
+          },
+          {
+            "role": "recipient",
+            "head": "scribe"
+          }
+        ]
+      }
+    },
+    {
+      "doc": "d004",
+      "sent": 0,
+      "translation": {
+        "kind": "clause",
+        "pred": "carry",
+        "tense": "PAST",
+        "args": [
+          {
+            "role": "subject",
+            "head": "baker"
+          },
+          {
+            "role": "object",
+            "head": "grain",
+            "count": 6,
+            "pl": true
+          },
+          {
+            "role": "recipient",
+            "head": "merchant"
+          }
+        ]
+      }
+    },
+    {
+      "doc": "d004",
+      "sent": 1,
+      "translation": {
+        "kind": "clause",
+        "pred": "store",
+        "tense": "PRES",
+        "args": [
+          {
+            "role": "subject",
+            "head": "sailor"
+          },
+          {
+            "role": "object",
+            "head": "grain",
+            "count": 2,
+            "pl": true
+          },
+          {
+            "role": "recipient",
+            "head": "baker"
+          }
+        ]
+      }
+    },
+    {
+      "doc": "d005",
+      "sent": 0,
+      "translation": {
+        "kind": "clause",
+        "pred": "collect",
+        "tense": "PAST",
+        "args": [
+          {
+            "role": "subject",
+            "head": "sailor"
+          },
+          {
+            "role": "object",
+            "head": "water",
+            "count": 6,
+            "pl": true
+          },
+          {
+            "role": "recipient",
+            "head": "elder"
+          }
+        ]
+      }
+    },
+    {
+      "doc": "d005",
+      "sent": 1,
+      "translation": {
+        "kind": "clause",
+        "pred": "count",
+        "tense": "PRES",
+        "args": [
+          {
+            "role": "subject",
+            "head": "guard"
+          },
+          {
+            "role": "object",
+            "head": "water",
+            "count": 5,
+            "pl": true
+          },
+          {
+            "role": "recipient",
+            "head": "keeper"
+          }
+        ]
+      }
+    },
+    {
+      "doc": "d006",
+      "sent": 0,
+      "translation": {
+        "kind": "clause",
+        "pred": "collect",
+        "tense": "PAST",
+        "args": [
+          {
+            "role": "subject",
+            "head": "keeper"
+          },
+          {
+            "role": "object",
+            "head": "water",
+            "count": 6,
+            "pl": true
+          },
+          {
+            "role": "recipient",
+            "head": "child"
+          }
+        ]
+      }
+    },
+    {
+      "doc": "d006",
+      "sent": 1,
+      "translation": {
+        "kind": "clause",
+        "pred": "count",
+        "tense": "PRES",
+        "args": [
+          {
+            "role": "subject",
+            "head": "elder"
+          },
+          {
+            "role": "object",
+            "head": "water",
+            "count": 2,
+            "pl": true
+          },
+          {
+            "role": "recipient",
+            "head": "merchant"
+          }
+        ]
+      }
+    },
+    {
+      "doc": "d007",
+      "sent": 0,
+      "translation": {
+        "kind": "clause",
+        "pred": "give",
+        "tense": "PAST",
+        "args": [
+          {
+            "role": "subject",
+            "head": "sailor"
+          },
+          {
+            "role": "object",
+            "head": "salt",
+            "count": 4,
+            "pl": true
+          },
+          {
+            "role": "recipient",
+            "head": "child"
+          }
+        ]
+      }
+    },
+    {
+      "doc": "d007",
+      "sent": 1,
+      "translation": {
+        "kind": "clause",
+        "pred": "count",
+        "tense": "PRES",
+        "args": [
+          {
+            "role": "subject",
+            "head": "guard"
+          },
+          {
+            "role": "object",
+            "head": "salt",
+            "count": 2,
+            "pl": true
+          },
+          {
+            "role": "recipient",
+            "head": "merchant"
+          }
+        ]
+      }
+    },
+    {
+      "doc": "d008",
+      "sent": 0,
+      "translation": {
+        "kind": "clause",
+        "pred": "send",
+        "tense": "PAST",
+        "args": [
+          {
+            "role": "subject",
+            "head": "baker"
+          },
+          {
+            "role": "object",
+            "head": "timber",
+            "count": 2,
+            "pl": true
+          },
+          {
+            "role": "recipient",
+            "head": "farmer"
+          }
+        ]
+      }
+    },
+    {
+      "doc": "d008",
+      "sent": 1,
+      "translation": {
+        "kind": "clause",
+        "pred": "store",
+        "tense": "PRES",
+        "args": [
+          {
+            "role": "subject",
+            "head": "king"
+          },
+          {
+            "role": "object",
+            "head": "timber",
+            "count": 1,
+            "pl": false
+          },
+          {
+            "role": "recipient",
+            "head": "scribe"
+          }
+        ]
+      }
+    },
+    {
+      "doc": "d009",
+      "sent": 0,
+      "translation": {
+        "kind": "clause",
+        "pred": "count",
+        "tense": "PAST",
+        "args": [
+          {
+            "role": "subject",
+            "head": "guard"
+          },
+          {
+            "role": "object",
+            "head": "timber",
+            "count": 7,
+            "pl": true
+          },
+          {
+            "role": "recipient",
+            "head": "keeper"
+          }
+        ]
+      }
+    },
+    {
+      "doc": "d009",
+      "sent": 1,
+      "translation": {
+        "kind": "clause",
+        "pred": "sell",
+        "tense": "PRES",
+        "args": [
+          {
+            "role": "subject",
+            "head": "sailor"
+          },
+          {
+            "role": "object",
+            "head": "timber",
+            "count": 1,
+            "pl": false
+          },
+          {
+            "role": "recipient",
+            "head": "child"
+          }
+        ]
+      }
+    },
+    {
+      "doc": "d010",
+      "sent": 0,
+      "translation": {
+        "kind": "clause",
+        "pred": "return",
+        "tense": "PAST",
+        "args": [
+          {
+            "role": "subject",
+            "head": "guard"
+          },
+          {
+            "role": "object",
+            "head": "grain",
+            "count": 1,
+            "pl": false
+          },
+          {
+            "role": "recipient",
+            "head": "farmer"
+          }
+        ]
+      }
+    },
+    {
+      "doc": "d010",
+      "sent": 1,
+      "translation": {
+        "kind": "clause",
+        "pred": "trade",
+        "tense": "PRES",
+        "args": [
+          {
+            "role": "subject",
+            "head": "keeper"
+          },
+          {
+            "role": "object",
+            "head": "grain",
+            "count": 5,
+            "pl": true
+          },
+          {
+            "role": "recipient",
+            "head": "child"
+          }
+        ]
+      }
+    },
+    {
+      "doc": "d011",
+      "sent": 0,
+      "translation": {
+        "kind": "clause",
+        "pred": "collect",
+        "tense": "PAST",
+        "args": [
+          {
+            "role": "subject",
+            "head": "sailor"
+          },
+          {
+            "role": "object",
+            "head": "salt",
+            "count": 3,
+            "pl": true
+          },
+          {
+            "role": "recipient",
+            "head": "guard"
+          }
+        ]
+      }
+    },
+    {
+      "doc": "d011",
+      "sent": 1,
+      "translation": {
+        "kind": "clause",
+        "pred": "send",
+        "tense": "PRES",
+        "args": [
+          {
+            "role": "subject",
+            "head": "scribe"
+          },
+          {
+            "role": "object",
+            "head": "salt",
+            "count": 6,
+            "pl": true
+          },
+          {
+            "role": "recipient",
+            "head": "merchant"
+          }
+        ]
+      }
+    },
+    {
+      "doc": "d012",
+      "sent": 0,
+      "translation": {
+        "kind": "clause",
+        "pred": "store",
+        "tense": "PAST",
+        "args": [
+          {
+            "role": "subject",
+            "head": "keeper"
+          },
+          {
+            "role": "object",
+            "head": "water",
+            "count": 4,
+            "pl": true
+          },
+          {
+            "role": "recipient",
+            "head": "baker"
+          }
+        ]
+      }
+    },
+    {
+      "doc": "d012",
+      "sent": 1,
+      "translation": {
+        "kind": "clause",
+        "pred": "carry",
+        "tense": "PRES",
+        "args": [
+          {
+            "role": "subject",
+            "head": "guard"
+          },
+          {
+            "role": "object",
+            "head": "water",
+            "count": 6,
+            "pl": true
+          },
+          {
+            "role": "recipient",
+            "head": "sailor"
+          }
+        ]
+      }
+    },
+    {
+      "doc": "d013",
+      "sent": 0,
+      "translation": {
+        "kind": "clause",
+        "pred": "sell",
+        "tense": "PAST",
+        "args": [
+          {
+            "role": "subject",
+            "head": "farmer"
+          },
+          {
+            "role": "object",
+            "head": "fish",
+            "count": 5,
+            "pl": true
+          },
+          {
+            "role": "recipient",
+            "head": "child"
+          }
+        ]
+      }
+    },
+    {
+      "doc": "d013",
+      "sent": 1,
+      "translation": {
+        "kind": "clause",
+        "pred": "buy",
+        "tense": "PRES",
+        "args": [
+          {
+            "role": "subject",
+            "head": "guard"
+          },
+          {
+            "role": "object",
+            "head": "fish",
+            "count": 1,
+            "pl": false
+          },
+          {
+            "role": "recipient",
+            "head": "keeper"
+          }
+        ]
+      }
+    },
+    {
+      "doc": "d014",
+      "sent": 0,
+      "translation": {
+        "kind": "clause",
+        "pred": "return",
+        "tense": "PAST",
+        "args": [
+          {
+            "role": "subject",
+            "head": "baker"
+          },
+          {
+            "role": "object",
+            "head": "timber",
+            "count": 2,
+            "pl": true
+          },
+          {
+            "role": "recipient",
+            "head": "sailor"
+          }
+        ]
+      }
+    },
+    {
+      "doc": "d014",
+      "sent": 1,
+      "translation": {
+        "kind": "clause",
+        "pred": "sell",
+        "tense": "PRES",
+        "args": [
+          {
+            "role": "subject",
+            "head": "king"
+          },
+          {
+            "role": "object",
+            "head": "timber",
+            "count": 3,
+            "pl": true
+          },
+          {
+            "role": "recipient",
+            "head": "scribe"
+          }
+        ]
+      }
+    },
+    {
+      "doc": "d015",
+      "sent": 0,
+      "translation": {
+        "kind": "clause",
+        "pred": "carry",
+        "tense": "PAST",
+        "args": [
+          {
+            "role": "subject",
+            "head": "baker"
+          },
+          {
+            "role": "object",
+            "head": "grain",
+            "count": 2,
+            "pl": true
+          },
+          {
+            "role": "recipient",
+            "head": "keeper"
+          }
+        ]
+      }
+    },
+    {
+      "doc": "d015",
+      "sent": 1,
+      "translation": {
+        "kind": "clause",
+        "pred": "trade",
+        "tense": "PRES",
+        "args": [
+          {
+            "role": "subject",
+            "head": "farmer"
+          },
+          {
+            "role": "object",
+            "head": "grain",
+            "count": 6,
+            "pl": true
+          },
+          {
+            "role": "recipient",
+            "head": "baker"
+          }
+        ]
+      }
+    }
+  ]
+}

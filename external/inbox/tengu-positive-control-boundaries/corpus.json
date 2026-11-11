@@ -1,0 +1,159 @@
+{
+  "language_id": "tengu-positive-control-boundaries",
+  "level": "C",
+  "has_word_boundaries": true,
+  "known": [],
+  "parallel": [],
+  "documents": [
+    {
+      "id": "p01",
+      "meta": {
+        "description": "S-O-V artificially constructed positive control; not a historical text",
+        "synthetic": true
+      },
+      "sentences": [
+        "sok tal ruk x"
+      ]
+    },
+    {
+      "id": "p02",
+      "meta": {
+        "description": "S-O-V artificially constructed positive control; not a historical text",
+        "synthetic": true
+      },
+      "sentences": [
+        "mat tal den x"
+      ]
+    },
+    {
+      "id": "p03",
+      "meta": {
+        "description": "S-O-V artificially constructed positive control; not a historical text",
+        "synthetic": true
+      },
+      "sentences": [
+        "zin tal pif x"
+      ]
+    },
+    {
+      "id": "p04",
+      "meta": {
+        "description": "S-O-V artificially constructed positive control; not a historical text",
+        "synthetic": true
+      },
+      "sentences": [
+        "sok men den x"
+      ]
+    },
+    {
+      "id": "p05",
+      "meta": {
+        "description": "S-O-V artificially constructed positive control; not a historical text",
+        "synthetic": true
+      },
+      "sentences": [
+        "mat men pif x"
+      ]
+    },
+    {
+      "id": "p06",
+      "meta": {
+        "description": "S-O-V artificially constructed positive control; not a historical text",
+        "synthetic": true
+      },
+      "sentences": [
+        "zin men ruk x"
+      ]
+    },
+    {
+      "id": "p07",
+      "meta": {
+        "description": "S-O-V artificially constructed positive control; not a historical text",
+        "synthetic": true
+      },
+      "sentences": [
+        "sok vos pif x"
+      ]
+    },
+    {
+      "id": "p08",
+      "meta": {
+        "description": "S-O-V artificially constructed positive control; not a historical text",
+        "synthetic": true
+      },
+      "sentences": [
+        "mat vos ruk x"
+      ]
+    },
+    {
+      "id": "p09",
+      "meta": {
+        "description": "S-O-V artificially constructed positive control; not a historical text",
+        "synthetic": true
+      },
+      "sentences": [
+        "zin vos den x"
+      ]
+    },
+    {
+      "id": "p10",
+      "meta": {
+        "description": "S-O-V artificially constructed positive control; not a historical text",
+        "synthetic": true
+      },
+      "sentences": [
+        "sok tal ruk x"
+      ]
+    },
+    {
+      "id": "p11",
+      "meta": {
+        "description": "S-O-V artificially constructed positive control; not a historical text",
+        "synthetic": true
+      },
+      "sentences": [
+        "mat tal den"
+      ]
+    },
+    {
+      "id": "p12",
+      "meta": {
+        "description": "S-O-V artificially constructed positive control; not a historical text",
+        "synthetic": true
+      },
+      "sentences": [
+        "zin tal pif"
+      ]
+    },
+    {
+      "id": "p13",
+      "meta": {
+        "description": "S-O-V artificially constructed positive control; not a historical text",
+        "synthetic": true
+      },
+      "sentences": [
+        "sok men den"
+      ]
+    },
+    {
+      "id": "p14",
+      "meta": {
+        "description": "S-O-V artificially constructed positive control; not a historical text",
+        "synthetic": true
+      },
+      "sentences": [
+        "mat men pif"
+      ]
+    },
+    {
+      "id": "p15",
+      "meta": {
+        "description": "S-O-V artificially constructed positive control; not a historical text",
+        "synthetic": true
+      },
+      "sentences": [
+        "zin men ruk"
+      ]
+    }
+  ]
+}

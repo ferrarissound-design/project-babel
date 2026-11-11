@@ -75,7 +75,7 @@ def toponym_hypotheses(doc_stems, doc_site, eligible, min_docs=3):
         if cands:
             top = cands[0]
             second = cands[1][0] if len(cands) > 1 else 0.0
-            conf = top[1] * (1 - second / top[0]) ** 0.5 if top[0] > 0 else 0.0
+            conf = top[1] * (0.5 + 0.5 * (1 - second / top[0])) if top[0] > 0 else 0.0   # 次点と僅差なら半減
             out[site] = {"stem": top[3], "confidence": round(min(0.95, conf), 3),
                          "precision": round(top[1], 3), "coverage": round(top[2], 3),
                          "alternatives": [[c[3], round(c[1], 3)] for c in cands[1:3]]}

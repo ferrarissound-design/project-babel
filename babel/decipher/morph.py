@@ -128,9 +128,18 @@ class Morphology:
         if not enable:
             self.affixes, self.position, self.compounds = {}, "none", {}
             return
-        self.suf = Side(self.counts)
-        stems = {self.suf.split(w)[0] for w in self.counts}
-        self.pre = Side({s[::-1] for s in stems})
+        # 接尾辞側・接頭辞側をそれぞれ全語形で解析し、支持の大きい側を先に確定する。
+        # （接頭辞型の言語で接尾辞側を先に走らせると、語根が「語尾」に見えてしまうため）
+        suf0, pre0 = Side(self.counts), Side({w[::-1] for w in self.counts})
+        n_s = sum(c for w, c in self.counts.items() if suf0.split(w)[1])
+        n_p = sum(c for w, c in self.counts.items() if pre0.split(w[::-1])[1])
+        self.first = "suffix" if n_s >= n_p else "prefix"
+        if self.first == "suffix":
+            self.suf = suf0
+            self.pre = Side({self.suf.split(w)[0][::-1] for w in self.counts})
+        else:
+            self.pre = pre0
+            self.suf = Side({self.pre.split(w[::-1])[0][::-1] for w in self.counts})
         self.compounds = {}
         n_suf = sum(c for w, c in self.counts.items() if self.analyze(w)[2])
         n_pre = sum(c for w, c in self.counts.items() if self.analyze(w)[0])
@@ -156,11 +165,17 @@ class Morphology:
             return ([], w, [])
         if w in self.cache:
             return self.cache[w]
-        s1, sufs = self.suf.split(w)
-        r, pres = self.pre.split(s1[::-1])
-        core = r[::-1]
-        if len(core) < MIN_STEM:
-            core, pres = s1, []
+        if self.first == "suffix":
+            s1, sufs = self.suf.split(w)
+            r, pres = self.pre.split(s1[::-1])
+            core = r[::-1]
+            if len(core) < MIN_STEM:
+                core, pres = s1, []
+        else:
+            r, pres = self.pre.split(w[::-1])
+            core, sufs = self.suf.split(r[::-1])
+            if len(core) < MIN_STEM:
+                core, sufs = r[::-1], []
         res = ([p[::-1] for p in reversed(pres)], core, sufs)
         self.cache[w] = res
         return res

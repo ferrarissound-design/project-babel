@@ -174,6 +174,15 @@ def infer_base(values):
 
 
 def solve_numerals(docs, is_inflected, all_counts, anchors=(), extra_equations=(), enable_solver=True):
+    """数詞候補の補完を厳しめ・緩めの2通りで試し、より多くの式を満たす方を採る（競合仮説の比較）。"""
+    results = [_solve(docs, is_inflected, all_counts, anchors, extra_equations, enable_solver, r) for r in (0.85, 0.6)]
+    if not enable_solver:
+        return results[0]
+    results.sort(key=lambda r: (r["status"] == "solved", r["confidence"], r.get("satisfied", 0)), reverse=True)
+    return results[0]
+
+
+def _solve(docs, is_inflected, all_counts, anchors, extra_equations, enable_solver, anchor_ratio):
     """
     docs: [(doc_id, 文ごとの語形列, 欠損有無)]
     is_inflected(w): 名詞・動詞クラスに属する語なら True（数詞候補から外す）
@@ -221,6 +230,35 @@ def solve_numerals(docs, is_inflected, all_counts, anchors=(), extra_equations=(
                     variables.add(w)        # 既知の基体＋形成要素
                 elif side == "pre" and w.startswith(x) and w[len(x):] in variables:
                     variables.add(w)
+    # 位置による補完: 一覧の各行で、数詞はその文書の定型語（品目名）の決まった側に隣接する。
+    # 同じ位置に立つ未登録の語は、合計行に現れなかっただけの数詞とみなす（人名は反対側に立つ）。
+    for _ in range(2):
+        added = set()
+        for did, sents, const, damaged in lists:
+            adj = Counter()
+            for s_ in sents[:-1]:
+                for i, w in enumerate(s_):
+                    if w in const and w not in variables:
+                        if i > 0 and s_[i - 1] in variables:
+                            adj[(w, -1)] += 1
+                        if i + 1 < len(s_) and s_[i + 1] in variables:
+                            adj[(w, 1)] += 1
+            occ = Counter(w for s_ in sents[:-1] for w in s_ if w in const)
+            # 錨にする定型語: ほぼ常に数詞と隣り合うもの（動詞のように他の語とも隣り合う語は使わない）
+            good = sorted(((n / occ[w], n, w, sd) for (w, sd), n in adj.items() if n >= 2 and n / occ[w] >= anchor_ratio),
+                          reverse=True)
+            if not good:
+                continue
+            _, _, anchor, side = good[0]
+            for s_ in sents[:-1]:
+                for i, w in enumerate(s_):
+                    j = i + side
+                    if w == anchor and 0 <= j < len(s_) and s_[j] not in variables and s_[j] not in const \
+                            and s_[j] != marker and not _overlaps(s_[j], const):
+                        added.add(s_[j])
+        if not added:
+            break
+        variables |= added
     eqs, soft = [], []      # soft: 欠損のある文書の式（数詞が欠けていれば誤った式になる）
     for did, sents, const, damaged in lists:
         co = Counter()
@@ -285,7 +323,7 @@ def solve_numerals(docs, is_inflected, all_counts, anchors=(), extra_equations=(
                                and sum(c * best[2][w] for w, c in e.items()) == 0]
     # 値が決まりきらない場合: 数詞の形成要素について競合仮説（加法 / 乗法×k）を立て、合計式との整合で選ぶ
     result["affix_hypotheses"] = []
-    if best[2] is None or len(best[2]) < 0.9 * len(variables):
+    if best[2] is None or len(best[2]) < 0.9 * len(variables) or best[0] < 0.6 * n_all:
         aff = Counter()
         for w in variables:
             for k in range(1, len(w)):
@@ -293,41 +331,63 @@ def solve_numerals(docs, is_inflected, all_counts, anchors=(), extra_equations=(
                     aff[("suf", w[k:])] += 1
                 if w[k:] in variables and k >= 2:
                     aff[("pre", w[:k])] += 1
-        for (side, x), c in sorted(aff.items(), key=lambda kv: (-kv[1], kv[0]))[:3]:
-            if c < 3:
-                continue
-            pairs = [(w[: -len(x)], w) if side == "suf" else (w[len(x):], w) for w in sorted(variables)
-                     if (w.endswith(x) if side == "suf" else w.startswith(x)) and
-                     (w[: -len(x)] if side == "suf" else w[len(x):]) in variables]
-            hyps = [("mul", k, [{comp: 1, b: -k} for b, comp in pairs]) for k in range(2, 151)]
-            if x in variables:
-                hyps.append(("add", x, [{comp: 1, b: -1, x: -1} for b, comp in pairs]))
-            scored = []
-            saved = pre
-            for kind, k, cons in hyps:
-                pre = saved + cons
-                r = run(base_order)
-                if r[2] is not None:
-                    scored.append((r[0], len(r[2]), kind, k, r, cons))
+        cands = [(side, x) for (side, x), c in sorted(aff.items(), key=lambda kv: (-kv[1], kv[0])) if c >= 3][:3]
+
+        def pairs_of(side, x):
+            return [(w[: -len(x)], w) if side == "suf" else (w[len(x):], w) for w in sorted(variables)
+                    if (w.endswith(x) if side == "suf" else w.startswith(x)) and
+                    (w[: -len(x)] if side == "suf" else w[len(x):]) in variables]
+
+        def cons(side, x, hyp):
+            if hyp is None:
+                return []
+            if hyp == "add":
+                return [{comp: 1, b: -1, x: -1} for b, comp in pairs_of(side, x)]
+            return [{comp: 1, b: -hyp} for b, comp in pairs_of(side, x)]
+
+        saved = pre
+        # 形成要素が単独の語としても現れるなら、まず加法（例: 十＋三）を仮定し、1つずつ他の仮説と入れ替えて比べる
+        choice = {c: ("add" if c[1] in variables else None) for c in cands}
+
+        def evaluate(ch):
+            nonlocal pre
+            pre = saved + [e for c in cands for e in cons(c[0], c[1], ch[c])]
+            r = run(base_order)
             pre = saved
-            scored.sort(key=lambda t: (-t[0], -t[1], str(t[3])))
-            if scored and scored[0][0] >= 0.7 * len(base_order) and (len(scored) == 1 or scored[0][:2] > scored[1][:2]):
-                top = scored[0]
-                pre = saved + top[5]
-                if key(top[4]) >= key(best):
-                    best = top[4]
-                result["affix_hypotheses"].append({"affix": x, "side": side, "chosen": [top[2], top[3]],
-                                                   "satisfied": top[0], "rivals": [[t[2], t[3], t[0]] for t in scored[1:4]]})
-            elif scored:
-                result["affix_hypotheses"].append({"affix": x, "side": side, "chosen": None,
-                                                   "rivals": [[t[2], t[3], t[0]] for t in scored[:4]]})
+            return r
+
+        cur = evaluate(choice)
+        for c in cands:
+            options = [None] + (["add"] if c[1] in variables else []) + list(range(2, 151))
+            scored = []
+            for h in options:
+                if h == choice[c]:
+                    scored.append((key(cur), h, cur))
+                    continue
+                r = evaluate({**choice, c: h})
+                scored.append((key(r), h, r))
+            scored.sort(key=lambda t: (t[0], str(t[1])), reverse=True)
+            top = scored[0]
+            unique = len(scored) == 1 or top[0] > scored[1][0]
+            if top[0][0] and unique:
+                choice[c], cur = top[1], top[2]
+            result["affix_hypotheses"].append({
+                "affix": c[1], "side": c[0], "chosen": choice[c] if top[0][0] and unique else None,
+                "rivals": [[str(t[1]), t[0][1]] for t in scored[1:4]]})
+        if key(cur) > key(best):
+            best = cur
+            pre = saved + [e for c in cands for e in cons(c[0], c[1], choice[c])]
     sat, sysm, vals, rel = best
     result["satisfied"] = sat
     result.update(equations=sysm.accepted, rejected=sysm.rejected, redundant=sysm.redundant, relative=rel)
     if vals is None:
         result["reason"] = "方程式系が矛盾、または正の整数解がない"
         return result
-    conf = (1 - 0.5 ** sysm.redundant) * min(1.0, sat / max(1, len(eqs) + len(pre)))
+    conf = (1 - 0.5 ** max(sysm.redundant, sat - len(vals))) * min(1.0, sat / max(1, len(eqs) + len(pre)))
+    if sat < 0.5 * len(eqs) or conf < 0.45:
+        result["reason"] = "解は得られたが、満たされる式が少なく信頼できない"
+        result["confidence"] = round(conf, 3)
+        return result
     if rel:
         conf *= 0.85        # 単位（最小値=1）の仮定を含む
     base, scores = infer_base(vals.values())

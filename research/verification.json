@@ -1,0 +1,10 @@
+{
+ "cross_env": {
+  "match": true,
+  "local_digest": "8fb8902cf731b1ed",
+  "actions_digest": "8fb8902cf731b1ed",
+  "actions_run": "https://github.com/ferrarissound-design/project-babel/actions/runs/43019828061",
+  "commit": "c34d6dbccd49cfd14ea628d5335e7570e510c4c1",
+  "note": "ローカル 8fb8902cf731b1ed = Actions run 43019828061 の 8fb8902cf731b1ed、どちらも1675実行・失敗0"
+ }
+}

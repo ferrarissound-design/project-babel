@@ -182,6 +182,7 @@ def git_commit():
 
 def run_all(mode="quick", seeds=None, jobs=None, experiments=None):
     t0 = time.time()
+    commit = git_commit()       # 開始時点のコミット（実行中に HEAD が動いても、実行したコードはこれ）
     seeds = seeds or (DEV_SEEDS[:3] if mode == "quick" else TEST_SEEDS)
     conds = [c for c in conditions() if not experiments or c[0] in experiments]
     tasks = [(*c, fam, s) for c in conds for fam in FAMILIES for s in seeds]
@@ -234,7 +235,7 @@ def run_all(mode="quick", seeds=None, jobs=None, experiments=None):
     null_out["failed"] = [r for r in nulls if not r["ok"]]
     all_runs = runs + nulls + bounds
     return {
-        "meta": {"started_utc": datetime.now(timezone.utc).isoformat(timespec="seconds"), "commit": git_commit(),
+        "meta": {"started_utc": datetime.now(timezone.utc).isoformat(timespec="seconds"), "commit": commit,
                  "mode": mode, "seeds": seeds, "seed_role": "development" if set(seeds) <= set(DEV_SEEDS) else "evaluation",
                  "engine_version": VERSION, "python": platform.python_version(),
                  "environment": "github-actions" if os.environ.get("GITHUB_ACTIONS") else "local-container",

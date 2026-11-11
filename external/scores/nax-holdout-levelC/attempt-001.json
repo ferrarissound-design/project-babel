@@ -1,0 +1,95 @@
+{
+ "affix_inventory": {
+  "f1": 0.597,
+  "precision": 0.7143,
+  "recall": 0.5128
+ },
+ "attempt": {
+  "answer_already_public": false,
+  "attempt": 1,
+  "commit": "2eb1f6edef074c2992e4190a2b1ec12ae5ead285",
+  "created_utc": "2026-11-11T12:24:22+00:00",
+  "engine_fingerprint": "1b18f44f2b89587e",
+  "first_attempt": true,
+  "name": "nax-holdout-levelC",
+  "sha256": "052d8049fff4ea49a3118d172b4d2fa5f6afdcb988ef1e9eb5e4e4bf3aad6a5f"
+ },
+ "blind": true,
+ "errors": [],
+ "gloss_heldout": {
+  "abstain": 1.0,
+  "correct": 0.0,
+  "feature_jaccard": 0.0,
+  "numeral_correct": 0.0,
+  "tokens": 762,
+  "wrong": 0.0
+ },
+ "gloss_train": {
+  "abstain": 1.0,
+  "correct": 0.0,
+  "feature_jaccard": 0.0,
+  "numeral_correct": 0.0,
+  "tokens": 2972,
+  "wrong": 0.0
+ },
+ "independent": false,
+ "language_id": "NAX-7001",
+ "level": "C",
+ "lexicon": {
+  "abstain": 228,
+  "abstain_rate_without_evidence": 1.0,
+  "claimed": 0,
+  "correct": 0,
+  "coverage": 0.0,
+  "precision": null,
+  "wrong": 0
+ },
+ "null_verdict": null,
+ "numerals": {
+  "abstain": 17,
+  "accuracy": 0.0,
+  "correct": 0,
+  "false_numeral": 0,
+  "relative": true,
+  "wrong": 0
+ },
+ "oov": {
+  "claimed_anyway": 0,
+  "heldout_tokens_with_unseen_stem": 75
+ },
+ "overclaim": {
+  "meaning_claims": 0,
+  "overclaims": 0,
+  "semantic_evidence_available": false
+ },
+ "pos": {
+  "accuracy": 0.7095,
+  "accuracy_when_labelled": 0.8188,
+  "labelled": 0.8665
+ },
+ "provenance": "解読器と同じAIが、解読器の凍結後（コミット c34d6db）に設計した第4系統 NAX。準初見であり独立テストではない",
+ "relatedness": {
+  "chance": 0.0636,
+  "n": 150,
+  "p_at_1": 0.5067
+ },
+ "segmentation": {
+  "f1": 0.8873,
+  "precision": 0.9874,
+  "recall": 0.8056
+ },
+ "structure": {
+  "adj_noun": "abstain",
+  "affix_position": "correct",
+  "num_noun": "abstain",
+  "numeral_base": "abstain",
+  "so_order": "abstain",
+  "verb_position": "correct"
+ },
+ "variants": {
+  "f1": 0.6618,
+  "gold_pairs": 368,
+  "precision": 0.7103,
+  "recall": 0.6196
+ }
+}

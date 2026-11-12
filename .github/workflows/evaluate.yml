@@ -1,7 +1,8 @@
 name: evaluate
+# 評価シードを使うので、作業ブランチへの push では走らせない（main への push と手動実行だけ）
 on:
   push:
-    branches: [main, "claude/**"]
+    branches: [main]
     paths: ["babel/**", "research/**", ".github/workflows/evaluate.yml"]
   workflow_dispatch:
 permissions:

@@ -197,7 +197,8 @@ def analyze_image(path, regions=None, threshold=None, similarity=0.7, remove_rul
     if len({g["class_id"] for g in shapes}) > 6400:
         raise ValueError("Too many visual classes for Private Use Area encoding")
     for row in rows:
-        row["classes"] = [shapes[i]["class_id"] for i in row.pop("glyph_indices")]
+        # glyph_indices は glyphs の番号（構造解析で画像上の位置を辿るために残す）
+        row["classes"] = [shapes[i]["class_id"] for i in row["glyph_indices"]]
     frequencies = Counter(g["class_id"] for g in shapes)
     visible = [{k: g[k] for k in ("box", "class_id", "match_iou", "pixels")} for g in shapes]
     return {

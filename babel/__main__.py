@@ -43,6 +43,28 @@ def main(argv=None):
     v.add_argument("--similarity", type=float, default=0.7, help="同一形状とみなすIoU閾値")
     v.add_argument("--keep-rules", action="store_true",
                    help="罫線除去をしない（文字の線が切り出し領域の大部分を占める場合）")
+    s = sub.add_parser("analyze", help="意味を使わない構造発見（反復・境界・文法的な規則の仮説）。翻訳はしない")
+    s.add_argument("corpus", help="BABEL コーパス JSON / glyph-report.json / .txt / 画像（画像なら vision を内部で実行）")
+    s.add_argument("--out", required=True, help="解析結果 JSON（同じ名前の .md も書く）")
+    s.add_argument("--md", help="Markdown レポートの保存先（省略時は --out の拡張子を .md に）")
+    s.add_argument("--corrections", help="人間による転写の訂正 JSON（babel/structure/corpus.py の apply_corrections 参照）")
+    s.add_argument("--alt", action="append", default=[], help="別の転写候補（複数可）。仮説が転写の違いで変わるかを比べる")
+    s.add_argument("--similarity", default="0.7", help="画像入力のとき: 形状の類似度の閾値。カンマ区切りで複数指定すると、"
+                                                     "先頭を主、残りを別の転写候補として比べる（例: 0.7,0.6,0.8）")
+    s.add_argument("--region", action="append", default=[], metavar="ID:X1,Y1,X2,Y2", help="画像入力のとき: 文字領域")
+    s.add_argument("--image", help="glyph-report を入力したとき、根拠の位置を描く元画像")
+    s.add_argument("--permutations", type=int, help="置換回数（省略時はコーパスの大きさで自動）")
+    s.add_argument("--subsamples", type=int, help="部分標本の数（標本の揺れ）")
+    s.add_argument("--perturbations", type=int, help="転写の攪乱の回数（0 で無効）")
+    s.add_argument("--perturbation-rate", type=float, help="攪乱の割合（既定 0.05）")
+    s.add_argument("--seed", type=int, default=0)
+    sb = sub.add_parser("structure-benchmark", help="構造解析の評価（人工・外部・実データ）。結果は results/structure/")
+    sb.add_argument("--split", choices=["dev", "eval"], default="dev", help="dev: 調整用シード / eval: 最終評価用シード")
+    sb.add_argument("--seeds", help="カンマ区切りで上書き")
+    sb.add_argument("--sizes", default="5,13,30,100")
+    sb.add_argument("--jobs", type=int)
+    sb.add_argument("--out", help="結果 JSON（省略時は results/structure/benchmark-<split>.json）")
+    sb.add_argument("--quick", action="store_true", help="置換回数を減らした簡易版（テスト用）")
     a = ap.parse_args(argv)
 
     if a.cmd == "generate":
@@ -114,6 +136,13 @@ def main(argv=None):
                              threshold=a.threshold, similarity=a.similarity,
                              remove_rules=not a.keep_rules)
         print(json.dumps({"out_dir": a.out_dir, **data["stats"]}, ensure_ascii=False))
+    elif a.cmd == "analyze":
+        return _analyze(a, ap)
+    elif a.cmd == "structure-benchmark":
+        from babel.structure_eval.benchmark import run
+        res = run(a.split, [int(x) for x in a.seeds.split(",")] if a.seeds else None,
+                  [int(x) for x in a.sizes.split(",")], jobs=a.jobs, quick=a.quick, out=a.out)
+        print(json.dumps(res["summary_line"], ensure_ascii=False))
     elif a.cmd == "external":
         from babel import external
         from babel.experiments.run import git_commit
@@ -127,6 +156,62 @@ def main(argv=None):
         for p in problems:
             print("台帳の問題:", p, file=sys.stderr)
         return 1 if problems else 0
+    return 0
+
+
+def _parse_regions(specs, ap):
+    regions = []
+    for spec in specs:
+        try:
+            name, coords = spec.split(":", 1)
+            box = [int(t) for t in coords.split(",")]
+            if not name or len(box) != 4:
+                raise ValueError
+        except ValueError:
+            ap.error("--region は ID:X1,Y1,X2,Y2 の形式で指定してください")
+        regions.append({"id": name, "box": box})
+    return regions or None
+
+
+def _analyze(a, ap):
+    from babel.structure import corpus as sc
+    from babel.structure import transcription
+    from babel.structure.analyze import analyze
+    from babel.structure.report import markdown
+    cfg = {"seed": a.seed}
+    for k, v in (("permutations", a.permutations), ("subsamples", a.subsamples), ("perturbations", a.perturbations),
+                 ("perturbation_rate", a.perturbation_rate)):
+        if v is not None:
+            cfg[k] = v
+    corr = json.loads(Path(a.corrections).read_text(encoding="utf-8")) if a.corrections else None
+    src = Path(a.corpus)
+    image = a.image
+    alts = []
+    if src.suffix.lower() in transcription.IMAGE_SUFFIXES:
+        sims = [float(x) for x in a.similarity.split(",")]
+        reps = transcription.vision_variants(src, sims, regions=_parse_regions(a.region, ap),
+                                             out_dir=Path(a.out).parent / "transcriptions")
+        main_corpus = sc.from_glyph_report(reps[0][1])
+        alts = [(n, sc.from_glyph_report(r)) for n, r in reps[1:]]
+        image = image or str(src)
+    else:
+        main_corpus = sc.load(src)
+    alts += [(p, sc.load(p)) for p in a.alt]
+    if corr:
+        main_corpus = sc.apply_corrections(main_corpus, corr)
+    res = analyze(main_corpus, cfg)
+    if alts:
+        alt_cfg = dict(cfg, subsamples=0, perturbations=0)
+        res["transcription_comparison"] = transcription.compare(res, [(n, analyze(c, alt_cfg)) for n, c in alts])
+    out = Path(a.out)
+    out.parent.mkdir(parents=True, exist_ok=True)
+    out.write_text(json.dumps(res, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+    md = Path(a.md) if a.md else out.with_suffix(".md")
+    md.write_text(markdown(res), encoding="utf-8")
+    if image and main_corpus.boxes:
+        transcription.annotate(image, res, out.with_suffix(".png"))
+    print(json.dumps({"verdict": res["verdict"]["code"], "hypotheses": len(res["hypotheses"]),
+                      "stable": res["verdict"]["stable_hypotheses"], "json": str(out), "markdown": str(md)}, ensure_ascii=False))
     return 0
 
 

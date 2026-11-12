@@ -9,6 +9,7 @@
 - 発見した問題と対応: [docs/ISSUES.md](docs/ISSUES.md)
 - 初見言語の投入方法: [external/README.md](external/README.md)
 - API不要の画像→記号候補・反復パターン解析: [docs/VISION.md](docs/VISION.md)
+- 意味を使わない構造発見（反復・境界・文法的な規則の仮説）: [docs/STRUCTURE.md](docs/STRUCTURE.md)、評価結果: [docs/STRUCTURE_RESULTS.md](docs/STRUCTURE_RESULTS.md)
 
 ## 重要な注意
 
@@ -23,6 +24,8 @@ babel/decipher/     解読器（generator / evaluate を import しない。テ�
 babel/evaluate/     採点（予測と正解を比較する唯一の場所）
 babel/experiments/  実験ランナーと採点表
 babel/report/       ダッシュボード用 JSON と報告書の生成
+babel/structure/    構造発見（意味・辞書・対訳を使わない。翻訳しない。generator / evaluate を import しない）
+babel/structure_eval/ 構造発見の評価（生成器・正解・母集団オラクル。解析器には記号列だけを渡す）
 babel/external.py   初見コーパスの予測台帳（上書き禁止）
 docs/               静的サイト（HTML/CSS/JS が docs/data/*.json を表示）
 external/           投入コーパス・予測・台帳・正解・採点
@@ -45,6 +48,8 @@ python -m babel experiment --mode quick       # 開発シード3個（約1分）
 python -m babel experiment --mode full        # 評価シード20個
 python -m babel report                        # docs/data と報告書を生成
 python -m babel external predict              # external/inbox のコーパスを予測
+python -m babel analyze corpus.json --out analysis.json   # 構造発見（analysis.md も書く）
+python -m babel structure-benchmark --split eval          # 構造発見の評価（約30分、results/structure/）
 ```
 
 ## GitHub Actions

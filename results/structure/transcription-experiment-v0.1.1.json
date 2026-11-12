@@ -1,0 +1,712 @@
+{
+ "T1_simulated_transcription_errors": [
+  {
+   "seed": 1000,
+   "lines": 13,
+   "gold_rules": 8,
+   "conditions": {
+    "clean": {
+     "hypotheses": 30,
+     "gold_found": [
+      "文頭標識 S",
+      "文末標識 E",
+      "動詞接尾辞 v の直後に E",
+      "x は各行に1回（必須）",
+      "v は各行に1回（必須）"
+     ],
+     "symbol_types": 21,
+     "substitution_hypotheses": 0,
+     "substitution_same_character": 0
+    },
+    "substitute": {
+     "hypotheses": 20,
+     "gold_found": [
+      "文頭標識 S",
+      "文末標識 E",
+      "動詞接尾辞 v の直後に E",
+      "v は各行に1回（必須）"
+     ],
+     "symbol_types": 21,
+     "substitution_hypotheses": 0,
+     "substitution_same_character": 0
+    },
+    "oversplit": {
+     "hypotheses": 18,
+     "gold_found": [
+      "文頭標識 S",
+      "文末標識 E",
+      "動詞接尾辞 v の直後に E"
+     ],
+     "symbol_types": 40,
+     "substitution_hypotheses": 4,
+     "substitution_same_character": 3
+    },
+    "merged": {
+     "hypotheses": 26,
+     "gold_found": [
+      "文頭標識 S",
+      "文末標識 E",
+      "動詞接尾辞 v の直後に E",
+      "x は各行に1回（必須）"
+     ],
+     "symbol_types": 21,
+     "identical_to_clean_lines": true
+    }
+   }
+  },
+  {
+   "seed": 1000,
+   "lines": 30,
+   "gold_rules": 8,
+   "conditions": {
+    "clean": {
+     "hypotheses": 67,
+     "gold_found": [
+      "文頭標識 S",
+      "文末標識 E",
+      "動詞接尾辞 v の直後に E",
+      "x は各行に1回（必須）",
+      "v は各行に1回（必須）"
+     ],
+     "symbol_types": 21,
+     "substitution_hypotheses": 2,
+     "substitution_same_character": 0
+    },
+    "substitute": {
+     "hypotheses": 50,
+     "gold_found": [
+      "文頭標識 S",
+      "文末標識 E",
+      "動詞接尾辞 v の直後に E",
+      "x は各行に1回（必須）",
+      "v は各行に1回（必須）"
+     ],
+     "symbol_types": 21,
+     "substitution_hypotheses": 4,
+     "substitution_same_character": 0
+    },
+    "oversplit": {
+     "hypotheses": 36,
+     "gold_found": [
+      "文頭標識 S",
+      "文末標識 E",
+      "動詞接尾辞 v の直後に E",
+      "接尾辞 x/q/v が同じ枠に入る"
+     ],
+     "symbol_types": 42,
+     "substitution_hypotheses": 17,
+     "substitution_same_character": 15
+    },
+    "merged": {
+     "hypotheses": 65,
+     "gold_found": [
+      "文頭標識 S",
+      "文末標識 E",
+      "動詞接尾辞 v の直後に E",
+      "x は各行に1回（必須）",
+      "v は各行に1回（必須）"
+     ],
+     "symbol_types": 21,
+     "identical_to_clean_lines": true
+    }
+   }
+  },
+  {
+   "seed": 1001,
+   "lines": 13,
+   "gold_rules": 8,
+   "conditions": {
+    "clean": {
+     "hypotheses": 22,
+     "gold_found": [
+      "文頭標識 S",
+      "文末標識 E",
+      "動詞接尾辞 v の直後に E",
+      "x は各行に1回（必須）",
+      "v は各行に1回（必須）"
+     ],
+     "symbol_types": 20,
+     "substitution_hypotheses": 0,
+     "substitution_same_character": 0
+    },
+    "substitute": {
+     "hypotheses": 8,
+     "gold_found": [
+      "文頭標識 S",
+      "文末標識 E",
+      "動詞接尾辞 v の直後に E",
+      "x は各行に1回（必須）"
+     ],
+     "symbol_types": 20,
+     "substitution_hypotheses": 0,
+     "substitution_same_character": 0
+    },
+    "oversplit": {
+     "hypotheses": 13,
+     "gold_found": [
+      "文頭標識 S",
+      "文末標識 E",
+      "動詞接尾辞 v の直後に E",
+      "接尾辞 x/q/v が同じ枠に入る"
+     ],
+     "symbol_types": 38,
+     "substitution_hypotheses": 3,
+     "substitution_same_character": 3
+    },
+    "merged": {
+     "hypotheses": 22,
+     "gold_found": [
+      "文頭標識 S",
+      "文末標識 E",
+      "動詞接尾辞 v の直後に E",
+      "x は各行に1回（必須）",
+      "v は各行に1回（必須）"
+     ],
+     "symbol_types": 20,
+     "identical_to_clean_lines": true
+    }
+   }
+  },
+  {
+   "seed": 1001,
+   "lines": 30,
+   "gold_rules": 8,
+   "conditions": {
+    "clean": {
+     "hypotheses": 52,
+     "gold_found": [
+      "文頭標識 S",
+      "文末標識 E",
+      "動詞接尾辞 v の直後に E",
+      "x は各行に1回（必須）",
+      "v は各行に1回（必須）"
+     ],
+     "symbol_types": 20,
+     "substitution_hypotheses": 0,
+     "substitution_same_character": 0
+    },
+    "substitute": {
+     "hypotheses": 33,
+     "gold_found": [
+      "文頭標識 S",
+      "文末標識 E",
+      "動詞接尾辞 v の直後に E",
+      "x は各行に1回（必須）"
+     ],
+     "symbol_types": 20,
+     "substitution_hypotheses": 1,
+     "substitution_same_character": 0
+    },
+    "oversplit": {
+     "hypotheses": 29,
+     "gold_found": [
+      "文頭標識 S",
+      "文末標識 E",
+      "動詞接尾辞 v の直後に E",
+      "接尾辞 x/q/v が同じ枠に入る"
+     ],
+     "symbol_types": 38,
+     "substitution_hypotheses": 11,
+     "substitution_same_character": 8
+    },
+    "merged": {
+     "hypotheses": 60,
+     "gold_found": [
+      "文頭標識 S",
+      "文末標識 E",
+      "動詞接尾辞 v の直後に E",
+      "x は各行に1回（必須）",
+      "v は各行に1回（必須）"
+     ],
+     "symbol_types": 20,
+     "identical_to_clean_lines": true
+    }
+   }
+  },
+  {
+   "seed": 1002,
+   "lines": 13,
+   "gold_rules": 8,
+   "conditions": {
+    "clean": {
+     "hypotheses": 28,
+     "gold_found": [
+      "文頭標識 S",
+      "文末標識 E",
+      "動詞接尾辞 v の直後に E",
+      "x は各行に1回（必須）",
+      "v は各行に1回（必須）"
+     ],
+     "symbol_types": 21,
+     "substitution_hypotheses": 2,
+     "substitution_same_character": 0
+    },
+    "substitute": {
+     "hypotheses": 11,
+     "gold_found": [
+      "文頭標識 S",
+      "文末標識 E",
+      "動詞接尾辞 v の直後に E"
+     ],
+     "symbol_types": 21,
+     "substitution_hypotheses": 0,
+     "substitution_same_character": 0
+    },
+    "oversplit": {
+     "hypotheses": 11,
+     "gold_found": [
+      "文頭標識 S",
+      "文末標識 E",
+      "接尾辞 x/q/v が同じ枠に入る"
+     ],
+     "symbol_types": 39,
+     "substitution_hypotheses": 4,
+     "substitution_same_character": 4
+    },
+    "merged": {
+     "hypotheses": 20,
+     "gold_found": [
+      "文頭標識 S",
+      "文末標識 E",
+      "動詞接尾辞 v の直後に E"
+     ],
+     "symbol_types": 21,
+     "identical_to_clean_lines": true
+    }
+   }
+  },
+  {
+   "seed": 1002,
+   "lines": 30,
+   "gold_rules": 8,
+   "conditions": {
+    "clean": {
+     "hypotheses": 74,
+     "gold_found": [
+      "文頭標識 S",
+      "文末標識 E",
+      "動詞接尾辞 v の直後に E",
+      "x は各行に1回（必須）",
+      "v は各行に1回（必須）"
+     ],
+     "symbol_types": 21,
+     "substitution_hypotheses": 3,
+     "substitution_same_character": 0
+    },
+    "substitute": {
+     "hypotheses": 47,
+     "gold_found": [
+      "文頭標識 S",
+      "文末標識 E",
+      "動詞接尾辞 v の直後に E",
+      "x は各行に1回（必須）",
+      "v は各行に1回（必須）"
+     ],
+     "symbol_types": 21,
+     "substitution_hypotheses": 1,
+     "substitution_same_character": 0
+    },
+    "oversplit": {
+     "hypotheses": 40,
+     "gold_found": [
+      "文頭標識 S",
+      "文末標識 E",
+      "動詞接尾辞 v の直後に E",
+      "接尾辞 x/q/v が同じ枠に入る"
+     ],
+     "symbol_types": 42,
+     "substitution_hypotheses": 14,
+     "substitution_same_character": 10
+    },
+    "merged": {
+     "hypotheses": 60,
+     "gold_found": [
+      "文頭標識 S",
+      "文末標識 E",
+      "動詞接尾辞 v の直後に E",
+      "x は各行に1回（必須）",
+      "v は各行に1回（必須）"
+     ],
+     "symbol_types": 21,
+     "identical_to_clean_lines": true
+    }
+   }
+  }
+ ],
+ "T2_synthetic_image": [
+  {
+   "seed": 1000,
+   "lines": 13,
+   "image": "regular-1000-13.png",
+   "degraded": false,
+   "text_transcription": {
+    "hypotheses": 30,
+    "gold_found": [
+     "文頭標識 S",
+     "文末標識 E",
+     "動詞接尾辞 v の直後に E",
+     "x は各行に1回（必須）",
+     "v は各行に1回（必須）"
+    ]
+   },
+   "vision": {
+    "0.7": {
+     "transcription_errors": {
+      "glyph_candidates": 173,
+      "drawn_characters": 173,
+      "split_characters": 0,
+      "merged_candidates": 0,
+      "missing_characters": 0,
+      "visual_classes": 18,
+      "true_characters": 21,
+      "characters_split_into_several_classes": 0,
+      "classes_mixing_characters": 2
+     },
+     "hypotheses": 19,
+     "tiers": {
+      "A": 6,
+      "B": 2,
+      "C": 11
+     },
+     "gold_found": [
+      "文頭標識 S",
+      "文末標識 E",
+      "動詞接尾辞 v の直後に E"
+     ],
+     "mean_transcription_stability": 0.491
+    },
+    "0.6": {
+     "transcription_errors": {
+      "glyph_candidates": 173,
+      "drawn_characters": 173,
+      "split_characters": 0,
+      "merged_candidates": 0,
+      "missing_characters": 0,
+      "visual_classes": 16,
+      "true_characters": 21,
+      "characters_split_into_several_classes": 0,
+      "classes_mixing_characters": 3
+     },
+     "hypotheses": 28,
+     "tiers": {
+      "A": 7,
+      "B": 3,
+      "C": 18
+     },
+     "gold_found": [
+      "文頭標識 S",
+      "文末標識 E",
+      "動詞接尾辞 v の直後に E"
+     ],
+     "mean_transcription_stability": 0.446
+    },
+    "0.8": {
+     "transcription_errors": {
+      "glyph_candidates": 173,
+      "drawn_characters": 173,
+      "split_characters": 0,
+      "merged_candidates": 0,
+      "missing_characters": 0,
+      "visual_classes": 21,
+      "true_characters": 21,
+      "characters_split_into_several_classes": 0,
+      "classes_mixing_characters": 0
+     },
+     "hypotheses": 30,
+     "tiers": {
+      "A": 6,
+      "B": 1,
+      "C": 23
+     },
+     "gold_found": [
+      "文頭標識 S",
+      "文末標識 E",
+      "動詞接尾辞 v の直後に E",
+      "x は各行に1回（必須）",
+      "v は各行に1回（必須）"
+     ],
+     "mean_transcription_stability": 0.382
+    }
+   },
+   "reproduced_across_settings": {
+    "hypotheses_in_main": 19,
+    "reproduced_in_all": 16,
+    "reproduced_in_none": 3,
+    "only_in_alternatives": 20
+   }
+  },
+  {
+   "seed": 1000,
+   "lines": 13,
+   "image": "regular-1000-13-degraded.png",
+   "degraded": true,
+   "text_transcription": {
+    "hypotheses": 30,
+    "gold_found": [
+     "文頭標識 S",
+     "文末標識 E",
+     "動詞接尾辞 v の直後に E",
+     "x は各行に1回（必須）",
+     "v は各行に1回（必須）"
+    ]
+   },
+   "vision": {
+    "0.7": {
+     "transcription_errors": {
+      "glyph_candidates": 158,
+      "drawn_characters": 173,
+      "split_characters": 0,
+      "merged_candidates": 13,
+      "missing_characters": 15,
+      "visual_classes": 67,
+      "true_characters": 21,
+      "characters_split_into_several_classes": 20,
+      "classes_mixing_characters": 8
+     },
+     "hypotheses": 3,
+     "tiers": {
+      "C": 3
+     },
+     "gold_found": [
+      "文頭標識 S"
+     ],
+     "mean_transcription_stability": 0.333
+    },
+    "0.6": {
+     "transcription_errors": {
+      "glyph_candidates": 158,
+      "drawn_characters": 173,
+      "split_characters": 0,
+      "merged_candidates": 13,
+      "missing_characters": 15,
+      "visual_classes": 45,
+      "true_characters": 21,
+      "characters_split_into_several_classes": 19,
+      "classes_mixing_characters": 17
+     },
+     "hypotheses": 1,
+     "tiers": {
+      "B": 1
+     },
+     "gold_found": [],
+     "mean_transcription_stability": 0.67
+    },
+    "0.8": {
+     "transcription_errors": {
+      "glyph_candidates": 158,
+      "drawn_characters": 173,
+      "split_characters": 0,
+      "merged_candidates": 13,
+      "missing_characters": 15,
+      "visual_classes": 113,
+      "true_characters": 21,
+      "characters_split_into_several_classes": 20,
+      "classes_mixing_characters": 1
+     },
+     "hypotheses": 1,
+     "tiers": {
+      "C": 1
+     },
+     "gold_found": [],
+     "mean_transcription_stability": 0.67
+    }
+   },
+   "reproduced_across_settings": {
+    "hypotheses_in_main": 3,
+    "reproduced_in_all": 0,
+    "reproduced_in_none": 3,
+    "only_in_alternatives": 2
+   }
+  },
+  {
+   "seed": 1001,
+   "lines": 13,
+   "image": "regular-1001-13.png",
+   "degraded": false,
+   "text_transcription": {
+    "hypotheses": 22,
+    "gold_found": [
+     "文頭標識 S",
+     "文末標識 E",
+     "動詞接尾辞 v の直後に E",
+     "x は各行に1回（必須）",
+     "v は各行に1回（必須）"
+    ]
+   },
+   "vision": {
+    "0.7": {
+     "transcription_errors": {
+      "glyph_candidates": 171,
+      "drawn_characters": 171,
+      "split_characters": 0,
+      "merged_candidates": 0,
+      "missing_characters": 0,
+      "visual_classes": 18,
+      "true_characters": 20,
+      "characters_split_into_several_classes": 0,
+      "classes_mixing_characters": 2
+     },
+     "hypotheses": 21,
+     "tiers": {
+      "A": 8,
+      "B": 1,
+      "C": 12
+     },
+     "gold_found": [
+      "文頭標識 S",
+      "文末標識 E",
+      "動詞接尾辞 v の直後に E",
+      "x は各行に1回（必須）"
+     ],
+     "mean_transcription_stability": 0.424
+    },
+    "0.6": {
+     "transcription_errors": {
+      "glyph_candidates": 171,
+      "drawn_characters": 171,
+      "split_characters": 0,
+      "merged_candidates": 0,
+      "missing_characters": 0,
+      "visual_classes": 16,
+      "true_characters": 20,
+      "characters_split_into_several_classes": 0,
+      "classes_mixing_characters": 3
+     },
+     "hypotheses": 23,
+     "tiers": {
+      "A": 9,
+      "B": 1,
+      "C": 13
+     },
+     "gold_found": [
+      "文頭標識 S",
+      "文末標識 E",
+      "動詞接尾辞 v の直後に E",
+      "x は各行に1回（必須）",
+      "v は各行に1回（必須）"
+     ],
+     "mean_transcription_stability": 0.432
+    },
+    "0.8": {
+     "transcription_errors": {
+      "glyph_candidates": 171,
+      "drawn_characters": 171,
+      "split_characters": 0,
+      "merged_candidates": 0,
+      "missing_characters": 0,
+      "visual_classes": 20,
+      "true_characters": 20,
+      "characters_split_into_several_classes": 0,
+      "classes_mixing_characters": 0
+     },
+     "hypotheses": 22,
+     "tiers": {
+      "A": 7,
+      "C": 15
+     },
+     "gold_found": [
+      "文頭標識 S",
+      "文末標識 E",
+      "動詞接尾辞 v の直後に E",
+      "x は各行に1回（必須）",
+      "v は各行に1回（必須）"
+     ],
+     "mean_transcription_stability": 0.426
+    }
+   },
+   "reproduced_across_settings": {
+    "hypotheses_in_main": 21,
+    "reproduced_in_all": 18,
+    "reproduced_in_none": 1,
+    "only_in_alternatives": 7
+   }
+  },
+  {
+   "seed": 1001,
+   "lines": 13,
+   "image": "regular-1001-13-degraded.png",
+   "degraded": true,
+   "text_transcription": {
+    "hypotheses": 22,
+    "gold_found": [
+     "文頭標識 S",
+     "文末標識 E",
+     "動詞接尾辞 v の直後に E",
+     "x は各行に1回（必須）",
+     "v は各行に1回（必須）"
+    ]
+   },
+   "vision": {
+    "0.7": {
+     "transcription_errors": {
+      "glyph_candidates": 139,
+      "drawn_characters": 171,
+      "split_characters": 0,
+      "merged_candidates": 15,
+      "missing_characters": 33,
+      "visual_classes": 60,
+      "true_characters": 20,
+      "characters_split_into_several_classes": 19,
+      "classes_mixing_characters": 10
+     },
+     "hypotheses": 4,
+     "tiers": {
+      "C": 4
+     },
+     "gold_found": [
+      "文末標識 E",
+      "動詞接尾辞 v の直後に E"
+     ],
+     "mean_transcription_stability": 0.333
+    },
+    "0.6": {
+     "transcription_errors": {
+      "glyph_candidates": 139,
+      "drawn_characters": 171,
+      "split_characters": 0,
+      "merged_candidates": 15,
+      "missing_characters": 33,
+      "visual_classes": 42,
+      "true_characters": 20,
+      "characters_split_into_several_classes": 18,
+      "classes_mixing_characters": 13
+     },
+     "hypotheses": 5,
+     "tiers": {
+      "A": 2,
+      "C": 3
+     },
+     "gold_found": [
+      "文末標識 E",
+      "動詞接尾辞 v の直後に E"
+     ],
+     "mean_transcription_stability": 0.4
+    },
+    "0.8": {
+     "transcription_errors": {
+      "glyph_candidates": 139,
+      "drawn_characters": 171,
+      "split_characters": 0,
+      "merged_candidates": 15,
+      "missing_characters": 33,
+      "visual_classes": 99,
+      "true_characters": 20,
+      "characters_split_into_several_classes": 20,
+      "classes_mixing_characters": 5
+     },
+     "hypotheses": 0,
+     "tiers": {},
+     "gold_found": [],
+     "mean_transcription_stability": 0.0
+    }
+   },
+   "reproduced_across_settings": {
+    "hypotheses_in_main": 4,
+    "reproduced_in_all": 0,
+    "reproduced_in_none": 2,
+    "only_in_alternatives": 3
+   }
+  }
+ ],
+ "seconds": 211.6
+}

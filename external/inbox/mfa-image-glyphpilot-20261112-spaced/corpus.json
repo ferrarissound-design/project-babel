@@ -1,0 +1,35 @@
+{
+  "language_id": "mfa-image-glyphpilot-20261112-spaced",
+  "level": "C",
+  "has_word_boundaries": true,
+  "documents": [
+    {
+      "id": "L",
+      "meta": {},
+      "sentences": [
+        "      ",
+        "      ",
+        "         ",
+        "       ",
+        "      ",
+        "         ",
+        "        ",
+        "           ",
+        "     "
+      ]
+    },
+    {
+      "id": "R",
+      "meta": {},
+      "sentences": [
+        "        ",
+        "           ",
+        "       ",
+        "           "
+      ]
+    }
+  ],
+  "parallel": [],
+  "known": [],
+  "notes": "Same image as mfa-image-glyphpilot-20261112 but assumes every visual unit is a word. This is only an alternative segmentation baseline, NOT a validated transcription."
+}

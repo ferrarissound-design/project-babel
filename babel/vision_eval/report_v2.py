@@ -70,11 +70,20 @@ def build(out="docs/VISION_EVAL_V2.md"):
         m = res["meta"]
         L += [f"## 3{'a' if res is test else 'b'}. 方式の比較（{m['split']}、シード {m['seeds'][0]}〜{m['seeds'][-1]}、画像 {m['images']} 枚、OpenCV {m.get('opencv')}）", "",  # noqa: E501
               "| 方式 | 検出 F1 | ARI | 分割 | 結合 | 行 F1 | 文字以外の誤検出 | 秒/枚 |", "|---|---:|---:|---:|---:|---:|---:|---:|"]
+        dropped = {}
         for meth, s in res["summary"].items():
             a = s["all"]
-            L.append(f"| {meth} | {_c(a['f1'])} | {_c(a['ari'])} | {_c(a['split_glyphs'], 1)} | {_c(a['merged_predictions'], 1)} | "
+            ari = _c(a["ari"])
+            if a["ari"] and a["ari"]["n"] < m["images"]:     # 測れなかった画像を平均から除いたことを隠さない
+                dropped[meth] = m["images"] - a["ari"]["n"]
+                ari += f" （{a['ari']['n']} 枚）"
+            L.append(f"| {meth} | {_c(a['f1'])} | {ari} | {_c(a['split_glyphs'], 1)} | {_c(a['merged_predictions'], 1)} | "
                      f"{_c(a['line_f1'])} | {_c(a['non_glyph'], 1)} | {_c(a['seconds'], 3)} |")
         L.append("")
+        for meth, k in dropped.items():
+            L += [f"**注意:** {meth} の ARI は {m['images'] - k} 枚の平均。対応した記号が1つもない（検出 F1 0）画像 {k} 枚では "
+                  "ARI を定義できず、平均から除いている。そのため他の方式と同じ画像の平均ではなく、"
+                  f"{meth} の ARI は過大に見える。同じ画像どうしの比較は 3a の「同じ画像での比較」を見ること（docs/ISSUES.md #71）", ""]
         if res is test:
             L += ["### 同じ画像での比較（test）", "",
                   "| 比較 | 指標 | 画像 | 差の平均 | 良くなった | 悪くなった | 同じ |", "|---|---|---:|---:|---:|---:|---:|"]

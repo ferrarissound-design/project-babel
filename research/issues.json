@@ -628,5 +628,14 @@
   "cause": "study.json に画像の sha256 を記録していたが、照合していなかった。gt.json には画像のハッシュがなかった",
   "fix": "prepare は何かを書く前に、既存の study.json・gt.json の sha256（と gt.json の画像の大きさ）を新しい画像と照合し、違えば何も変えずに止める。下書きの gt.json に image_sha256 を記録し、evaluate・structure は gt.json と study.json のハッシュ・大きさが違えば評価しない（CLI は終了コード 2）",
   "verified": "tests/test_image_study.py の test_prepare_refuses_a_different_image_without_touching_the_study・test_evaluate_and_structure_refuse_ground_truth_of_another_image（修正前は失敗）"
+ },
+ {
+  "id": 71,
+  "title": "評価器: 予測の行が1つもない画像の行 F1 が「測定不能」になり、集計の平均から消えた（修正済み）。baseline の ARI の平均も、検出0の画像を除いていたことを明記",
+  "status": "修正済み",
+  "found": "Codex の独立レビュー（PR #11）。#67 の修正で、確認済みの行があるのに予測の行が0件の画像も行 F1 が「測定不能」になり、_agg が文字列を除くため、行の検出に完全に失敗した画像が平均の分母から消えて方式の比較が過大評価になりうる。調べたところ、記録済みの結果（methods-test-v2・val-v2 など）は #67 の修正前に作ったもので、行 F1 は全画像（test 320 枚・val 160 枚）で数えられており影響はなかった。一方、同じ仕組みで baseline の ARI が noise 条件の検出0の画像（test 40 枚・val 20 枚）を除いた平均（0.775、280 枚）になっていて、報告書の表に枚数が出ていなかった",
+  "cause": "未確認の行に対応した予測を除いて分母が0になる場合と、そもそも予測の行がない場合を区別していなかった。ARI は対応した記号がないと定義できない",
+  "fix": "予測の行が0件なら precision 0・F1 0（PR #10 以前と同じ）。予測の行がすべて未確認の行に対応したときは precision を「測定不能」、F1 は確認済みの行の再現率が0なので0（F1 ≤ 2R/(1+R)）。docs/VISION_EVAL_V2.md の方式の比較表で、ARI を平均した枚数が画像の数より少ないときは枚数と注意書きを出す（結果の JSON は変えない）。同じ画像どうしの比較（ARI、280 枚）でも improved-v2 は baseline より良い画像が多い（202 対 69）",
+  "verified": "tests/test_vision_eval.py の test_no_predicted_rows_keeps_line_f1_zero・test_line_precision_unmeasurable_when_all_rows_fall_on_unverified_lines（F1 0 の確認、修正前は失敗）"
  }
 ]

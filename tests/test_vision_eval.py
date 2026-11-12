@@ -298,3 +298,13 @@ def test_line_precision_unmeasurable_when_all_rows_fall_on_unverified_lines():
     rep = {"rows": [{"box": [0, 30, 30, 40], "classes": [2], "glyph_indices": [0]}], "glyphs": [{"box": [0, 30, 10, 40], "class_id": 2}]}
     ln = evaluate(rep, gt)["lines"]
     assert ln["precision"] == UNMEASURABLE and ln["recall"] == 0.0
+    assert ln["f1"] == 0.0                     # 再現率0なら precision によらず F1 は0（確認済みの行の検出に失敗している）
+
+
+def test_no_predicted_rows_keeps_line_f1_zero():
+    """予測の行が1つもないとき、行 F1 を「測定不能」にせず0として残す（集計の分母から消えないように。Codex レビュー、PR #11）。"""
+    gt = _gt([_it(1, [0, 0, 10, 10], "A", line="L1")], [{"id": "L1", "box": [0, 0, 30, 10], "verified": True}])
+    ln = evaluate({"glyphs": [], "rows": []}, gt)["lines"]
+    assert ln["f1"] == 0.0 and ln["recall"] == 0.0 and ln["precision"] == 0.0
+    from babel.vision_eval.benchmark import _agg
+    assert _agg([1.0, ln["f1"]])["mean"] == 0.5 and _agg([1.0, ln["f1"]])["n"] == 2

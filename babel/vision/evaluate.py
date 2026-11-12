@@ -229,9 +229,14 @@ def evaluate(report: dict, gt: dict, iou_thr=0.5) -> dict:
                "line_breaks_not_sentence_ends": sum(1 for ln in L if ln["continues_sentence"]),
                "note": "babel vision は1行を1文として出力するので、continues_sentence の行はすべて文の区切りの誤認になる"}
         lr = len(lm) / len(L)
-        if n_rows == 0:
-            res.update(recall=round(lr, 4), precision=UNMEASURABLE, f1=UNMEASURABLE,
-                       reason="確認済みの行に対応しうる予測の行がない（予測の行はすべて未確認の行に対応した）")
+        # n_rows == 0 なら確認済みの行はどれも検出されていない（recall 0）。F1 ≤ 2R/(1+R) なので precision によらず F1 は0。
+        # 「測定不能」にすると集計（_agg）の分母から消え、行の検出に失敗した画像が平均に入らない（Codex レビュー、PR #11）
+        if not rows:
+            res.update(precision=0.0, recall=round(lr, 4), f1=0.0, reason="予測の行が1つもない")
+        elif n_rows == 0:
+            res.update(recall=round(lr, 4), precision=UNMEASURABLE, f1=0.0,
+                       reason="確認済みの行に対応しうる予測の行がない（予測の行はすべて未確認の行に対応した）。"
+                              "precision は測定不能、確認済みの行の再現率が0なので F1 は0")
         else:
             lp = len(lm) / n_rows
             res.update(precision=round(lp, 4), recall=round(lr, 4), f1=round(2 * lp * lr / (lp + lr), 4) if lp + lr else 0.0)

@@ -1,6 +1,6 @@
 {
  "schema": "babel-structure-analysis-v1",
- "version": "0.1.1",
+ "version": "0.1.2",
  "input": {
   "format": "babel-public",
   "language_id": "tengu-pilot-v0-real",
@@ -405,15 +405,15 @@
  "global_tests": {
   "sequential_dependence": {
    "observed": 5.6315,
-   "null_mean": 5.595,
+   "null_mean": 5.5972,
    "null": "within",
    "description": "隣り合う記号の相互情報量（並びの依存）",
-   "p": 0.218,
+   "p": 0.228,
    "p_holm": 1.0
   },
   "repetition": {
    "observed": 0.0,
-   "null_mean": 0.004,
+   "null_mean": 0.006,
    "null": "within",
    "description": "3〜6記号列の反復の総数",
    "p": 1.0,
@@ -421,15 +421,15 @@
   },
   "edge_position": {
    "observed": 185.4252,
-   "null_mean": 173.6566,
+   "null_mean": 173.093,
    "null": "within",
    "description": "行頭・行末の記号の偏り（カイ二乗）",
-   "p": 0.253,
+   "p": 0.228,
    "p_holm": 1.0
   },
   "longest_repeat": {
    "observed": 2.0,
-   "null_mean": 1.039,
+   "null_mean": 1.041,
    "null": "within",
    "description": "最長反復部分列の長さ",
    "p": 0.518,
@@ -437,10 +437,10 @@
   },
   "line_similarity": {
    "observed": 1.0,
-   "null_mean": 0.4074,
+   "null_mean": 0.3704,
    "null": "global",
    "description": "行の間で共有される2記号列の数",
-   "p": 0.331,
+   "p": 0.314,
    "p_holm": 1.0
   }
  },
@@ -457,7 +457,7 @@
     ]
    },
    "p_raw": 0.002,
-   "p_family_corrected": 0.045,
+   "p_family_corrected": 0.072,
    "support": 4,
    "status": "多重検定の補正後は偶然と区別できない"
   },
@@ -471,8 +471,8 @@
      "る"
     ]
    },
-   "p_raw": 0.003,
-   "p_family_corrected": 0.174,
+   "p_raw": 0.002,
+   "p_family_corrected": 0.17,
    "support": 4,
    "status": "多重検定の補正後は偶然と区別できない"
   },
@@ -486,8 +486,8 @@
      "女"
     ]
    },
-   "p_raw": 0.008,
-   "p_family_corrected": 0.141,
+   "p_raw": 0.01,
+   "p_family_corrected": 0.18,
    "support": 3,
    "status": "多重検定の補正後は偶然と区別できない"
   },
@@ -501,8 +501,8 @@
      "る"
     ]
    },
-   "p_raw": 0.015,
-   "p_family_corrected": 0.288,
+   "p_raw": 0.019,
+   "p_family_corrected": 0.287,
    "support": 3,
    "status": "多重検定の補正後は偶然と区別できない"
   },
@@ -516,8 +516,8 @@
      "女"
     ]
    },
-   "p_raw": 0.026,
-   "p_family_corrected": 0.308,
+   "p_raw": 0.023,
+   "p_family_corrected": 0.313,
    "support": 2,
    "status": "多重検定の補正後は偶然と区別できない"
   },
@@ -531,24 +531,9 @@
      "女"
     ]
    },
-   "p_raw": 0.042,
-   "p_family_corrected": 0.587,
-   "support": 2,
-   "status": "多重検定の補正後は偶然と区別できない"
-  },
-  {
-   "family": "substitution",
-   "observation": "記号 の と ら が同じ直前の文脈 1 種・同じ直後の文脈 0 種を共有する",
-   "key": {
-    "family": "substitution",
-    "symbols": [
-     "の",
-     "ら"
-    ]
-   },
    "p_raw": 0.044,
-   "p_family_corrected": 0.842,
-   "support": 3,
+   "p_family_corrected": 0.582,
+   "support": 2,
    "status": "多重検定の補正後は偶然と区別できない"
   }
  ],
@@ -1259,7 +1244,7 @@
   "family_threshold_p": 0.00625,
   "min_attainable_p": 0.001,
   "permutations_sufficient": true,
-  "ngram_family_threshold_statistic": 2.032,
+  "ngram_family_threshold_statistic": 2.5,
   "bigram_occurrences_needed": {
    "two_most_frequent_symbols": {
     "symbols": [
@@ -1355,11 +1340,11 @@
  },
  "seconds": {
   "describe": 0.0,
-  "tests": 3.0,
-  "boundaries": 0.05,
-  "subsample_stability": 0.97,
-  "transcription_stability": 3.16,
-  "total": 7.18
+  "tests": 2.43,
+  "boundaries": 0.07,
+  "subsample_stability": 0.77,
+  "transcription_stability": 2.99,
+  "total": 6.25
  },
  "notes": [
   "観測された規則と、そこから考えられる機能（interpretation）は別物。機能は未検証。",

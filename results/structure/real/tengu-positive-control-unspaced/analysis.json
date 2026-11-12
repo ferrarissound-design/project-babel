@@ -1,6 +1,6 @@
 {
  "schema": "babel-structure-analysis-v1",
- "version": "0.1.1",
+ "version": "0.1.2",
  "input": {
   "format": "babel-public",
   "language_id": "tengu-positive-control-unspaced",
@@ -1173,7 +1173,7 @@
  "global_tests": {
   "sequential_dependence": {
    "observed": 2.9037,
-   "null_mean": 1.5003,
+   "null_mean": 1.4976,
    "null": "within",
    "description": "隣り合う記号の相互情報量（並びの依存）",
    "p": 0.001,
@@ -1181,7 +1181,7 @@
   },
   "repetition": {
    "observed": 166.0,
-   "null_mean": 2.2422,
+   "null_mean": 2.1882,
    "null": "within",
    "description": "3〜6記号列の反復の総数",
    "p": 0.001,
@@ -1189,7 +1189,7 @@
   },
   "edge_position": {
    "observed": 181.3508,
-   "null_mean": 31.8996,
+   "null_mean": 31.6029,
    "null": "within",
    "description": "行頭・行末の記号の偏り（カイ二乗）",
    "p": 0.001,
@@ -1197,7 +1197,7 @@
   },
   "longest_repeat": {
    "observed": 10.0,
-   "null_mean": 3.005,
+   "null_mean": 3.007,
    "null": "within",
    "description": "最長反復部分列の長さ",
    "p": 0.001,
@@ -1205,7 +1205,7 @@
   },
   "line_similarity": {
    "observed": 221.0,
-   "null_mean": 25.8438,
+   "null_mean": 25.8859,
    "null": "global",
    "description": "行の間で共有される2記号列の数",
    "p": 0.001,
@@ -1957,7 +1957,7 @@
     "permutations": 999
    },
    "stability": {
-    "sampling": 0.9,
+    "sampling": 0.7,
     "sampling_trials": 10,
     "transcription": 0.5,
     "transcription_trials": 6
@@ -1980,261 +1980,6 @@
   },
   {
    "id": "H07",
-   "family": "ngram",
-   "kind": "記号列の反復・連接",
-   "tier": "A",
-   "observation": "記号列 p i f x が 3 回現れる",
-   "evidence": [
-    {
-     "line": 2,
-     "start": 6,
-     "length": 4,
-     "doc": "p03",
-     "sent": 0,
-     "symbols": [
-      "p",
-      "i",
-      "f",
-      "x"
-     ]
-    },
-    {
-     "line": 4,
-     "start": 6,
-     "length": 4,
-     "doc": "p05",
-     "sent": 0,
-     "symbols": [
-      "p",
-      "i",
-      "f",
-      "x"
-     ]
-    },
-    {
-     "line": 6,
-     "start": 6,
-     "length": 4,
-     "doc": "p07",
-     "sent": 0,
-     "symbols": [
-      "p",
-      "i",
-      "f",
-      "x"
-     ]
-    }
-   ],
-   "support": 3,
-   "support_lines": 3,
-   "counterexamples": {
-    "description": "p i f の後に x が続かない出現、i f x の前に p がない出現",
-    "count": 2,
-    "examples": [
-     {
-      "line": 11,
-      "start": 6,
-      "length": 3,
-      "doc": "p12",
-      "sent": 0,
-      "symbols": [
-       "p",
-       "i",
-       "f"
-      ]
-     },
-     {
-      "line": 13,
-      "start": 6,
-      "length": 3,
-      "doc": "p14",
-      "sent": 0,
-      "symbols": [
-       "p",
-       "i",
-       "f"
-      ]
-     }
-    ]
-   },
-   "measures": {
-    "p_last_given_prefix": 0.6,
-    "p_first_given_suffix": 1.0,
-    "length": 4
-   },
-   "symbols": [
-    "p",
-    "i",
-    "f",
-    "x"
-   ],
-   "key": {
-    "family": "ngram",
-    "symbols": [
-     "p",
-     "i",
-     "f",
-     "x"
-    ]
-   },
-   "statistics": {
-    "p_family_corrected": 0.001,
-    "p_raw": 0.001,
-    "threshold": 0.00625,
-    "statistic": 7.546,
-    "statistic_kind": "-log10 Poisson 上側確率（行内シャッフルでの期待値）",
-    "null_model": "行内シャッフル",
-    "permutations": 999
-   },
-   "stability": {
-    "sampling": 0.8,
-    "sampling_trials": 10,
-    "transcription": 0.5,
-    "transcription_trials": 6
-   },
-   "corroborated_by": [
-    "単語境界の合議（方式の過半数）が、この列を語またはその端として切り出す",
-    "行頭・行末の仮説と重なる"
-   ],
-   "interpretation": {
-    "status": "未検証（観測からは選べない候補の列挙）",
-    "candidates": [
-     "語・語幹・定型句の一部",
-     "接辞",
-     "（2記号の場合）画像認識で1文字が2つに分割された可能性"
-    ]
-   },
-   "limits": [
-    "短いコーパス: 規則の一般性（別の資料でも成り立つか）は検証できない"
-   ],
-   "needed_data": "同じ記号列が別の文書・別の筆記者でも現れるか。前後の文脈が異なる出現例"
-  },
-  {
-   "id": "H08",
-   "family": "ngram",
-   "kind": "記号列の反復・連接",
-   "tier": "A",
-   "observation": "記号列 p i f が 5 回現れる",
-   "evidence": [
-    {
-     "line": 2,
-     "start": 6,
-     "length": 3,
-     "doc": "p03",
-     "sent": 0,
-     "symbols": [
-      "p",
-      "i",
-      "f"
-     ]
-    },
-    {
-     "line": 4,
-     "start": 6,
-     "length": 3,
-     "doc": "p05",
-     "sent": 0,
-     "symbols": [
-      "p",
-      "i",
-      "f"
-     ]
-    },
-    {
-     "line": 6,
-     "start": 6,
-     "length": 3,
-     "doc": "p07",
-     "sent": 0,
-     "symbols": [
-      "p",
-      "i",
-      "f"
-     ]
-    },
-    {
-     "line": 11,
-     "start": 6,
-     "length": 3,
-     "doc": "p12",
-     "sent": 0,
-     "symbols": [
-      "p",
-      "i",
-      "f"
-     ]
-    },
-    {
-     "line": 13,
-     "start": 6,
-     "length": 3,
-     "doc": "p14",
-     "sent": 0,
-     "symbols": [
-      "p",
-      "i",
-      "f"
-     ]
-    }
-   ],
-   "support": 5,
-   "support_lines": 5,
-   "counterexamples": {
-    "description": "p i の後に f が続かない出現、i f の前に p がない出現",
-    "count": 0,
-    "examples": []
-   },
-   "measures": {
-    "p_last_given_prefix": 1.0,
-    "p_first_given_suffix": 1.0,
-    "length": 3
-   },
-   "symbols": [
-    "p",
-    "i",
-    "f"
-   ],
-   "key": {
-    "family": "ngram",
-    "symbols": [
-     "p",
-     "i",
-     "f"
-    ]
-   },
-   "statistics": {
-    "p_family_corrected": 0.001,
-    "p_raw": 0.001,
-    "threshold": 0.00625,
-    "statistic": 7.435,
-    "statistic_kind": "-log10 Poisson 上側確率（行内シャッフルでの期待値）",
-    "null_model": "行内シャッフル",
-    "permutations": 999
-   },
-   "stability": {
-    "sampling": 0.8,
-    "sampling_trials": 10,
-    "transcription": 0.5,
-    "transcription_trials": 6
-   },
-   "corroborated_by": [
-    "単語境界の合議（方式の過半数）が、この列を語またはその端として切り出す"
-   ],
-   "interpretation": {
-    "status": "未検証（観測からは選べない候補の列挙）",
-    "candidates": [
-     "語・語幹・定型句の一部",
-     "接辞",
-     "（2記号の場合）画像認識で1文字が2つに分割された可能性"
-    ]
-   },
-   "limits": [
-    "短いコーパス: 規則の一般性（別の資料でも成り立つか）は検証できない"
-   ],
-   "needed_data": "同じ記号列が別の文書・別の筆記者でも現れるか。前後の文脈が異なる出現例"
-  },
-  {
-   "id": "H09",
    "family": "position",
    "kind": "行頭・行末への集中",
    "tier": "A",
@@ -2376,622 +2121,262 @@
    "needed_data": "改行が文の区切りかどうかの外部情報（句読点・余白・行の長さの分布）、別資料での行頭・行末の記号"
   },
   {
-   "id": "H10",
-   "family": "linepair",
-   "kind": "似た記号列を共有する行",
-   "tier": "B",
-   "observation": "2 行（5, 14）が、偶然より多くの2〜4記号列を互いに共有する（有意な行の組 1）",
+   "id": "H08",
+   "family": "ngram",
+   "kind": "記号列の反復・連接",
+   "tier": "A",
+   "observation": "記号列 p i f x が 3 回現れる",
    "evidence": [
     {
-     "line_a": {
-      "line": 5,
-      "start": 0,
-      "length": 10,
-      "doc": "p06",
-      "sent": 0,
-      "symbols": [
-       "z",
-       "i",
-       "n",
-       "m",
-       "e",
-       "n",
-       "r",
-       "u",
-       "k",
-       "x"
-      ]
-     },
-     "line_b": {
-      "line": 14,
-      "start": 0,
-      "length": 9,
-      "doc": "p15",
-      "sent": 0,
-      "symbols": [
-       "z",
-       "i",
-       "n",
-       "m",
-       "e",
-       "n",
-       "r",
-       "u",
-       "k"
-      ]
-     },
-     "fixed_parts": [
-      [
-       "z",
-       "i",
-       "n",
-       "m",
-       "e",
-       "n",
-       "r",
-       "u",
-       "k"
-      ]
-     ],
-     "variable_parts": [
-      {
-       "line_a": [
-        "x"
-       ],
-       "line_b": []
-      }
+     "line": 2,
+     "start": 6,
+     "length": 4,
+     "doc": "p03",
+     "sent": 0,
+     "symbols": [
+      "p",
+      "i",
+      "f",
+      "x"
+     ]
+    },
+    {
+     "line": 4,
+     "start": 6,
+     "length": 4,
+     "doc": "p05",
+     "sent": 0,
+     "symbols": [
+      "p",
+      "i",
+      "f",
+      "x"
+     ]
+    },
+    {
+     "line": 6,
+     "start": 6,
+     "length": 4,
+     "doc": "p07",
+     "sent": 0,
+     "symbols": [
+      "p",
+      "i",
+      "f",
+      "x"
      ]
     }
    ],
-   "support": 1,
-   "support_lines": 2,
+   "support": 3,
+   "support_lines": 3,
    "counterexamples": {
-    "description": "一致しない部分の数",
-    "count": 1
-   },
-   "measures": {
-    "sequence_ratio": 0.947,
-    "representative_pair": [
-     5,
-     14
-    ]
-   },
-   "symbols": [],
-   "key": {
-    "family": "linepair",
-    "lines": [
-     5,
-     14
-    ],
-    "pairs": [
-     [
-      5,
-      14
-     ]
-    ]
-   },
-   "statistics": {
-    "p_family_corrected": 0.001,
-    "p_raw": 0.001,
-    "threshold": 0.00625,
-    "statistic": 28.162,
-    "statistic_kind": "共有する2〜4記号列の数を置換分布で標準化した z（行の組の最良値）",
-    "null_model": "全体シャッフル",
-    "permutations": 999
-   },
-   "stability": {
-    "sampling": 1.0,
-    "sampling_trials": 4,
-    "transcription": 0.83,
-    "transcription_trials": 6
-   },
-   "corroborated_by": [],
-   "interpretation": {
-    "status": "未検証（観測からは選べない候補の列挙）",
-    "candidates": [
-     "同じ文型・定型文",
-     "同じ句の再録",
-     "（転写の場合）同じ行の重複転写"
-    ]
-   },
-   "limits": [
-    "短いコーパス: 規則の一般性（別の資料でも成り立つか）は検証できない"
-   ],
-   "needed_data": "同じ枠を持つ行がさらにあるか。行の対応部分の画像を人が照合すること"
-  },
-  {
-   "id": "H11",
-   "family": "linepair",
-   "kind": "似た記号列を共有する行",
-   "tier": "B",
-   "observation": "2 行（4, 13）が、偶然より多くの2〜4記号列を互いに共有する（有意な行の組 1）",
-   "evidence": [
-    {
-     "line_a": {
-      "line": 4,
-      "start": 0,
-      "length": 10,
-      "doc": "p05",
+    "description": "p i f の後に x が続かない出現、i f x の前に p がない出現",
+    "count": 2,
+    "examples": [
+     {
+      "line": 11,
+      "start": 6,
+      "length": 3,
+      "doc": "p12",
       "sent": 0,
       "symbols": [
-       "m",
-       "a",
-       "t",
-       "m",
-       "e",
-       "n",
        "p",
        "i",
-       "f",
-       "x"
+       "f"
       ]
      },
-     "line_b": {
+     {
       "line": 13,
-      "start": 0,
-      "length": 9,
+      "start": 6,
+      "length": 3,
       "doc": "p14",
       "sent": 0,
       "symbols": [
-       "m",
-       "a",
-       "t",
-       "m",
-       "e",
-       "n",
        "p",
        "i",
        "f"
       ]
-     },
-     "fixed_parts": [
-      [
-       "m",
-       "a",
-       "t",
-       "m",
-       "e",
-       "n",
-       "p",
-       "i",
-       "f"
-      ]
-     ],
-     "variable_parts": [
-      {
-       "line_a": [
-        "x"
-       ],
-       "line_b": []
-      }
-     ]
-    }
-   ],
-   "support": 1,
-   "support_lines": 2,
-   "counterexamples": {
-    "description": "一致しない部分の数",
-    "count": 1
-   },
-   "measures": {
-    "sequence_ratio": 0.947,
-    "representative_pair": [
-     4,
-     13
+     }
     ]
    },
-   "symbols": [],
+   "measures": {
+    "p_last_given_prefix": 0.6,
+    "p_first_given_suffix": 1.0,
+    "length": 4
+   },
+   "symbols": [
+    "p",
+    "i",
+    "f",
+    "x"
+   ],
    "key": {
-    "family": "linepair",
-    "lines": [
-     4,
-     13
-    ],
-    "pairs": [
-     [
-      4,
-      13
-     ]
+    "family": "ngram",
+    "symbols": [
+     "p",
+     "i",
+     "f",
+     "x"
     ]
    },
    "statistics": {
-    "p_family_corrected": 0.001,
+    "p_family_corrected": 0.004,
     "p_raw": 0.001,
     "threshold": 0.00625,
-    "statistic": 27.317,
-    "statistic_kind": "共有する2〜4記号列の数を置換分布で標準化した z（行の組の最良値）",
-    "null_model": "全体シャッフル",
+    "statistic": 7.546,
+    "statistic_kind": "-log10 Poisson 上側確率（行内シャッフルでの期待値）",
+    "null_model": "行内シャッフル",
     "permutations": 999
    },
    "stability": {
-    "sampling": 1.0,
-    "sampling_trials": 3,
+    "sampling": 0.8,
+    "sampling_trials": 10,
     "transcription": 0.5,
     "transcription_trials": 6
    },
-   "corroborated_by": [],
+   "corroborated_by": [
+    "単語境界の合議（方式の過半数）が、この列を語またはその端として切り出す",
+    "行頭・行末の仮説と重なる"
+   ],
    "interpretation": {
     "status": "未検証（観測からは選べない候補の列挙）",
     "candidates": [
-     "同じ文型・定型文",
-     "同じ句の再録",
-     "（転写の場合）同じ行の重複転写"
+     "語・語幹・定型句の一部",
+     "接辞",
+     "（2記号の場合）画像認識で1文字が2つに分割された可能性"
     ]
    },
    "limits": [
     "短いコーパス: 規則の一般性（別の資料でも成り立つか）は検証できない"
    ],
-   "needed_data": "同じ枠を持つ行がさらにあるか。行の対応部分の画像を人が照合すること"
+   "needed_data": "同じ記号列が別の文書・別の筆記者でも現れるか。前後の文脈が異なる出現例"
   },
   {
-   "id": "H12",
-   "family": "linepair",
-   "kind": "似た記号列を共有する行",
-   "tier": "B",
-   "observation": "2 行（3, 12）が、偶然より多くの2〜4記号列を互いに共有する（有意な行の組 1）",
+   "id": "H09",
+   "family": "ngram",
+   "kind": "記号列の反復・連接",
+   "tier": "A",
+   "observation": "記号列 p i f が 5 回現れる",
    "evidence": [
     {
-     "line_a": {
-      "line": 3,
-      "start": 0,
-      "length": 10,
-      "doc": "p04",
-      "sent": 0,
-      "symbols": [
-       "s",
-       "o",
-       "k",
-       "m",
-       "e",
-       "n",
-       "d",
-       "e",
-       "n",
-       "x"
-      ]
-     },
-     "line_b": {
-      "line": 12,
-      "start": 0,
-      "length": 9,
-      "doc": "p13",
-      "sent": 0,
-      "symbols": [
-       "s",
-       "o",
-       "k",
-       "m",
-       "e",
-       "n",
-       "d",
-       "e",
-       "n"
-      ]
-     },
-     "fixed_parts": [
-      [
-       "s",
-       "o",
-       "k",
-       "m",
-       "e",
-       "n",
-       "d",
-       "e",
-       "n"
-      ]
-     ],
-     "variable_parts": [
-      {
-       "line_a": [
-        "x"
-       ],
-       "line_b": []
-      }
+     "line": 2,
+     "start": 6,
+     "length": 3,
+     "doc": "p03",
+     "sent": 0,
+     "symbols": [
+      "p",
+      "i",
+      "f"
+     ]
+    },
+    {
+     "line": 4,
+     "start": 6,
+     "length": 3,
+     "doc": "p05",
+     "sent": 0,
+     "symbols": [
+      "p",
+      "i",
+      "f"
+     ]
+    },
+    {
+     "line": 6,
+     "start": 6,
+     "length": 3,
+     "doc": "p07",
+     "sent": 0,
+     "symbols": [
+      "p",
+      "i",
+      "f"
+     ]
+    },
+    {
+     "line": 11,
+     "start": 6,
+     "length": 3,
+     "doc": "p12",
+     "sent": 0,
+     "symbols": [
+      "p",
+      "i",
+      "f"
+     ]
+    },
+    {
+     "line": 13,
+     "start": 6,
+     "length": 3,
+     "doc": "p14",
+     "sent": 0,
+     "symbols": [
+      "p",
+      "i",
+      "f"
      ]
     }
    ],
-   "support": 1,
-   "support_lines": 2,
+   "support": 5,
+   "support_lines": 5,
    "counterexamples": {
-    "description": "一致しない部分の数",
-    "count": 1
+    "description": "p i の後に f が続かない出現、i f の前に p がない出現",
+    "count": 0,
+    "examples": []
    },
    "measures": {
-    "sequence_ratio": 0.947,
-    "representative_pair": [
-     3,
-     12
-    ]
+    "p_last_given_prefix": 1.0,
+    "p_first_given_suffix": 1.0,
+    "length": 3
    },
-   "symbols": [],
+   "symbols": [
+    "p",
+    "i",
+    "f"
+   ],
    "key": {
-    "family": "linepair",
-    "lines": [
-     3,
-     12
-    ],
-    "pairs": [
-     [
-      3,
-      12
-     ]
+    "family": "ngram",
+    "symbols": [
+     "p",
+     "i",
+     "f"
     ]
    },
    "statistics": {
-    "p_family_corrected": 0.001,
+    "p_family_corrected": 0.004,
     "p_raw": 0.001,
     "threshold": 0.00625,
-    "statistic": 26.645,
-    "statistic_kind": "共有する2〜4記号列の数を置換分布で標準化した z（行の組の最良値）",
-    "null_model": "全体シャッフル",
+    "statistic": 7.435,
+    "statistic_kind": "-log10 Poisson 上側確率（行内シャッフルでの期待値）",
+    "null_model": "行内シャッフル",
     "permutations": 999
    },
    "stability": {
-    "sampling": 1.0,
-    "sampling_trials": 6,
+    "sampling": 0.7,
+    "sampling_trials": 10,
     "transcription": 0.67,
     "transcription_trials": 6
    },
-   "corroborated_by": [],
+   "corroborated_by": [
+    "単語境界の合議（方式の過半数）が、この列を語またはその端として切り出す"
+   ],
    "interpretation": {
     "status": "未検証（観測からは選べない候補の列挙）",
     "candidates": [
-     "同じ文型・定型文",
-     "同じ句の再録",
-     "（転写の場合）同じ行の重複転写"
+     "語・語幹・定型句の一部",
+     "接辞",
+     "（2記号の場合）画像認識で1文字が2つに分割された可能性"
     ]
    },
    "limits": [
     "短いコーパス: 規則の一般性（別の資料でも成り立つか）は検証できない"
    ],
-   "needed_data": "同じ枠を持つ行がさらにあるか。行の対応部分の画像を人が照合すること"
+   "needed_data": "同じ記号列が別の文書・別の筆記者でも現れるか。前後の文脈が異なる出現例"
   },
   {
-   "id": "H13",
-   "family": "linepair",
-   "kind": "似た記号列を共有する行",
-   "tier": "B",
-   "observation": "2 行（0, 9）が、偶然より多くの2〜4記号列を互いに共有する（有意な行の組 1）",
-   "evidence": [
-    {
-     "line_a": {
-      "line": 0,
-      "start": 0,
-      "length": 10,
-      "doc": "p01",
-      "sent": 0,
-      "symbols": [
-       "s",
-       "o",
-       "k",
-       "t",
-       "a",
-       "l",
-       "r",
-       "u",
-       "k",
-       "x"
-      ]
-     },
-     "line_b": {
-      "line": 9,
-      "start": 0,
-      "length": 10,
-      "doc": "p10",
-      "sent": 0,
-      "symbols": [
-       "s",
-       "o",
-       "k",
-       "t",
-       "a",
-       "l",
-       "r",
-       "u",
-       "k",
-       "x"
-      ]
-     },
-     "fixed_parts": [
-      [
-       "s",
-       "o",
-       "k",
-       "t",
-       "a",
-       "l",
-       "r",
-       "u",
-       "k",
-       "x"
-      ]
-     ],
-     "variable_parts": []
-    }
-   ],
-   "support": 1,
-   "support_lines": 2,
-   "counterexamples": {
-    "description": "一致しない部分の数",
-    "count": 0
-   },
-   "measures": {
-    "sequence_ratio": 1.0,
-    "representative_pair": [
-     0,
-     9
-    ]
-   },
-   "symbols": [],
-   "key": {
-    "family": "linepair",
-    "lines": [
-     0,
-     9
-    ],
-    "pairs": [
-     [
-      0,
-      9
-     ]
-    ]
-   },
-   "statistics": {
-    "p_family_corrected": 0.001,
-    "p_raw": 0.001,
-    "threshold": 0.00625,
-    "statistic": 26.456,
-    "statistic_kind": "共有する2〜4記号列の数を置換分布で標準化した z（行の組の最良値）",
-    "null_model": "全体シャッフル",
-    "permutations": 999
-   },
-   "stability": {
-    "sampling": 1.0,
-    "sampling_trials": 3,
-    "transcription": 0.83,
-    "transcription_trials": 6
-   },
-   "corroborated_by": [],
-   "interpretation": {
-    "status": "未検証（観測からは選べない候補の列挙）",
-    "candidates": [
-     "同じ文型・定型文",
-     "同じ句の再録",
-     "（転写の場合）同じ行の重複転写"
-    ]
-   },
-   "limits": [
-    "短いコーパス: 規則の一般性（別の資料でも成り立つか）は検証できない"
-   ],
-   "needed_data": "同じ枠を持つ行がさらにあるか。行の対応部分の画像を人が照合すること"
-  },
-  {
-   "id": "H14",
-   "family": "linepair",
-   "kind": "似た記号列を共有する行",
-   "tier": "B",
-   "observation": "2 行（1, 10）が、偶然より多くの2〜4記号列を互いに共有する（有意な行の組 1）",
-   "evidence": [
-    {
-     "line_a": {
-      "line": 1,
-      "start": 0,
-      "length": 10,
-      "doc": "p02",
-      "sent": 0,
-      "symbols": [
-       "m",
-       "a",
-       "t",
-       "t",
-       "a",
-       "l",
-       "d",
-       "e",
-       "n",
-       "x"
-      ]
-     },
-     "line_b": {
-      "line": 10,
-      "start": 0,
-      "length": 9,
-      "doc": "p11",
-      "sent": 0,
-      "symbols": [
-       "m",
-       "a",
-       "t",
-       "t",
-       "a",
-       "l",
-       "d",
-       "e",
-       "n"
-      ]
-     },
-     "fixed_parts": [
-      [
-       "m",
-       "a",
-       "t",
-       "t",
-       "a",
-       "l",
-       "d",
-       "e",
-       "n"
-      ]
-     ],
-     "variable_parts": [
-      {
-       "line_a": [
-        "x"
-       ],
-       "line_b": []
-      }
-     ]
-    }
-   ],
-   "support": 1,
-   "support_lines": 2,
-   "counterexamples": {
-    "description": "一致しない部分の数",
-    "count": 1
-   },
-   "measures": {
-    "sequence_ratio": 0.947,
-    "representative_pair": [
-     1,
-     10
-    ]
-   },
-   "symbols": [],
-   "key": {
-    "family": "linepair",
-    "lines": [
-     1,
-     10
-    ],
-    "pairs": [
-     [
-      1,
-      10
-     ]
-    ]
-   },
-   "statistics": {
-    "p_family_corrected": 0.001,
-    "p_raw": 0.001,
-    "threshold": 0.00625,
-    "statistic": 26.439,
-    "statistic_kind": "共有する2〜4記号列の数を置換分布で標準化した z（行の組の最良値）",
-    "null_model": "全体シャッフル",
-    "permutations": 999
-   },
-   "stability": {
-    "sampling": 1.0,
-    "sampling_trials": 3,
-    "transcription": 0.5,
-    "transcription_trials": 6
-   },
-   "corroborated_by": [],
-   "interpretation": {
-    "status": "未検証（観測からは選べない候補の列挙）",
-    "candidates": [
-     "同じ文型・定型文",
-     "同じ句の再録",
-     "（転写の場合）同じ行の重複転写"
-    ]
-   },
-   "limits": [
-    "短いコーパス: 規則の一般性（別の資料でも成り立つか）は検証できない"
-   ],
-   "needed_data": "同じ枠を持つ行がさらにあるか。行の対応部分の画像を人が照合すること"
-  },
-  {
-   "id": "H15",
+   "id": "H10",
    "family": "linepair",
    "kind": "似た記号列を共有する行",
    "tier": "B",
@@ -3089,7 +2474,7 @@
     "p_family_corrected": 0.001,
     "p_raw": 0.001,
     "threshold": 0.00625,
-    "statistic": 25.811,
+    "statistic": 27.38,
     "statistic_kind": "共有する2〜4記号列の数を置換分布で標準化した z（行の組の最良値）",
     "null_model": "全体シャッフル",
     "permutations": 999
@@ -3098,6 +2483,621 @@
     "sampling": 1.0,
     "sampling_trials": 4,
     "transcription": 0.67,
+    "transcription_trials": 6
+   },
+   "corroborated_by": [],
+   "interpretation": {
+    "status": "未検証（観測からは選べない候補の列挙）",
+    "candidates": [
+     "同じ文型・定型文",
+     "同じ句の再録",
+     "（転写の場合）同じ行の重複転写"
+    ]
+   },
+   "limits": [
+    "短いコーパス: 規則の一般性（別の資料でも成り立つか）は検証できない"
+   ],
+   "needed_data": "同じ枠を持つ行がさらにあるか。行の対応部分の画像を人が照合すること"
+  },
+  {
+   "id": "H11",
+   "family": "linepair",
+   "kind": "似た記号列を共有する行",
+   "tier": "B",
+   "observation": "2 行（0, 9）が、偶然より多くの2〜4記号列を互いに共有する（有意な行の組 1）",
+   "evidence": [
+    {
+     "line_a": {
+      "line": 0,
+      "start": 0,
+      "length": 10,
+      "doc": "p01",
+      "sent": 0,
+      "symbols": [
+       "s",
+       "o",
+       "k",
+       "t",
+       "a",
+       "l",
+       "r",
+       "u",
+       "k",
+       "x"
+      ]
+     },
+     "line_b": {
+      "line": 9,
+      "start": 0,
+      "length": 10,
+      "doc": "p10",
+      "sent": 0,
+      "symbols": [
+       "s",
+       "o",
+       "k",
+       "t",
+       "a",
+       "l",
+       "r",
+       "u",
+       "k",
+       "x"
+      ]
+     },
+     "fixed_parts": [
+      [
+       "s",
+       "o",
+       "k",
+       "t",
+       "a",
+       "l",
+       "r",
+       "u",
+       "k",
+       "x"
+      ]
+     ],
+     "variable_parts": []
+    }
+   ],
+   "support": 1,
+   "support_lines": 2,
+   "counterexamples": {
+    "description": "一致しない部分の数",
+    "count": 0
+   },
+   "measures": {
+    "sequence_ratio": 1.0,
+    "representative_pair": [
+     0,
+     9
+    ]
+   },
+   "symbols": [],
+   "key": {
+    "family": "linepair",
+    "lines": [
+     0,
+     9
+    ],
+    "pairs": [
+     [
+      0,
+      9
+     ]
+    ]
+   },
+   "statistics": {
+    "p_family_corrected": 0.001,
+    "p_raw": 0.001,
+    "threshold": 0.00625,
+    "statistic": 26.948,
+    "statistic_kind": "共有する2〜4記号列の数を置換分布で標準化した z（行の組の最良値）",
+    "null_model": "全体シャッフル",
+    "permutations": 999
+   },
+   "stability": {
+    "sampling": 1.0,
+    "sampling_trials": 3,
+    "transcription": 0.83,
+    "transcription_trials": 6
+   },
+   "corroborated_by": [],
+   "interpretation": {
+    "status": "未検証（観測からは選べない候補の列挙）",
+    "candidates": [
+     "同じ文型・定型文",
+     "同じ句の再録",
+     "（転写の場合）同じ行の重複転写"
+    ]
+   },
+   "limits": [
+    "短いコーパス: 規則の一般性（別の資料でも成り立つか）は検証できない"
+   ],
+   "needed_data": "同じ枠を持つ行がさらにあるか。行の対応部分の画像を人が照合すること"
+  },
+  {
+   "id": "H12",
+   "family": "linepair",
+   "kind": "似た記号列を共有する行",
+   "tier": "B",
+   "observation": "2 行（5, 14）が、偶然より多くの2〜4記号列を互いに共有する（有意な行の組 1）",
+   "evidence": [
+    {
+     "line_a": {
+      "line": 5,
+      "start": 0,
+      "length": 10,
+      "doc": "p06",
+      "sent": 0,
+      "symbols": [
+       "z",
+       "i",
+       "n",
+       "m",
+       "e",
+       "n",
+       "r",
+       "u",
+       "k",
+       "x"
+      ]
+     },
+     "line_b": {
+      "line": 14,
+      "start": 0,
+      "length": 9,
+      "doc": "p15",
+      "sent": 0,
+      "symbols": [
+       "z",
+       "i",
+       "n",
+       "m",
+       "e",
+       "n",
+       "r",
+       "u",
+       "k"
+      ]
+     },
+     "fixed_parts": [
+      [
+       "z",
+       "i",
+       "n",
+       "m",
+       "e",
+       "n",
+       "r",
+       "u",
+       "k"
+      ]
+     ],
+     "variable_parts": [
+      {
+       "line_a": [
+        "x"
+       ],
+       "line_b": []
+      }
+     ]
+    }
+   ],
+   "support": 1,
+   "support_lines": 2,
+   "counterexamples": {
+    "description": "一致しない部分の数",
+    "count": 1
+   },
+   "measures": {
+    "sequence_ratio": 0.947,
+    "representative_pair": [
+     5,
+     14
+    ]
+   },
+   "symbols": [],
+   "key": {
+    "family": "linepair",
+    "lines": [
+     5,
+     14
+    ],
+    "pairs": [
+     [
+      5,
+      14
+     ]
+    ]
+   },
+   "statistics": {
+    "p_family_corrected": 0.001,
+    "p_raw": 0.001,
+    "threshold": 0.00625,
+    "statistic": 26.767,
+    "statistic_kind": "共有する2〜4記号列の数を置換分布で標準化した z（行の組の最良値）",
+    "null_model": "全体シャッフル",
+    "permutations": 999
+   },
+   "stability": {
+    "sampling": 1.0,
+    "sampling_trials": 4,
+    "transcription": 0.83,
+    "transcription_trials": 6
+   },
+   "corroborated_by": [],
+   "interpretation": {
+    "status": "未検証（観測からは選べない候補の列挙）",
+    "candidates": [
+     "同じ文型・定型文",
+     "同じ句の再録",
+     "（転写の場合）同じ行の重複転写"
+    ]
+   },
+   "limits": [
+    "短いコーパス: 規則の一般性（別の資料でも成り立つか）は検証できない"
+   ],
+   "needed_data": "同じ枠を持つ行がさらにあるか。行の対応部分の画像を人が照合すること"
+  },
+  {
+   "id": "H13",
+   "family": "linepair",
+   "kind": "似た記号列を共有する行",
+   "tier": "B",
+   "observation": "2 行（1, 10）が、偶然より多くの2〜4記号列を互いに共有する（有意な行の組 1）",
+   "evidence": [
+    {
+     "line_a": {
+      "line": 1,
+      "start": 0,
+      "length": 10,
+      "doc": "p02",
+      "sent": 0,
+      "symbols": [
+       "m",
+       "a",
+       "t",
+       "t",
+       "a",
+       "l",
+       "d",
+       "e",
+       "n",
+       "x"
+      ]
+     },
+     "line_b": {
+      "line": 10,
+      "start": 0,
+      "length": 9,
+      "doc": "p11",
+      "sent": 0,
+      "symbols": [
+       "m",
+       "a",
+       "t",
+       "t",
+       "a",
+       "l",
+       "d",
+       "e",
+       "n"
+      ]
+     },
+     "fixed_parts": [
+      [
+       "m",
+       "a",
+       "t",
+       "t",
+       "a",
+       "l",
+       "d",
+       "e",
+       "n"
+      ]
+     ],
+     "variable_parts": [
+      {
+       "line_a": [
+        "x"
+       ],
+       "line_b": []
+      }
+     ]
+    }
+   ],
+   "support": 1,
+   "support_lines": 2,
+   "counterexamples": {
+    "description": "一致しない部分の数",
+    "count": 1
+   },
+   "measures": {
+    "sequence_ratio": 0.947,
+    "representative_pair": [
+     1,
+     10
+    ]
+   },
+   "symbols": [],
+   "key": {
+    "family": "linepair",
+    "lines": [
+     1,
+     10
+    ],
+    "pairs": [
+     [
+      1,
+      10
+     ]
+    ]
+   },
+   "statistics": {
+    "p_family_corrected": 0.001,
+    "p_raw": 0.001,
+    "threshold": 0.00625,
+    "statistic": 26.458,
+    "statistic_kind": "共有する2〜4記号列の数を置換分布で標準化した z（行の組の最良値）",
+    "null_model": "全体シャッフル",
+    "permutations": 999
+   },
+   "stability": {
+    "sampling": 1.0,
+    "sampling_trials": 3,
+    "transcription": 0.67,
+    "transcription_trials": 6
+   },
+   "corroborated_by": [],
+   "interpretation": {
+    "status": "未検証（観測からは選べない候補の列挙）",
+    "candidates": [
+     "同じ文型・定型文",
+     "同じ句の再録",
+     "（転写の場合）同じ行の重複転写"
+    ]
+   },
+   "limits": [
+    "短いコーパス: 規則の一般性（別の資料でも成り立つか）は検証できない"
+   ],
+   "needed_data": "同じ枠を持つ行がさらにあるか。行の対応部分の画像を人が照合すること"
+  },
+  {
+   "id": "H14",
+   "family": "linepair",
+   "kind": "似た記号列を共有する行",
+   "tier": "B",
+   "observation": "2 行（4, 13）が、偶然より多くの2〜4記号列を互いに共有する（有意な行の組 1）",
+   "evidence": [
+    {
+     "line_a": {
+      "line": 4,
+      "start": 0,
+      "length": 10,
+      "doc": "p05",
+      "sent": 0,
+      "symbols": [
+       "m",
+       "a",
+       "t",
+       "m",
+       "e",
+       "n",
+       "p",
+       "i",
+       "f",
+       "x"
+      ]
+     },
+     "line_b": {
+      "line": 13,
+      "start": 0,
+      "length": 9,
+      "doc": "p14",
+      "sent": 0,
+      "symbols": [
+       "m",
+       "a",
+       "t",
+       "m",
+       "e",
+       "n",
+       "p",
+       "i",
+       "f"
+      ]
+     },
+     "fixed_parts": [
+      [
+       "m",
+       "a",
+       "t",
+       "m",
+       "e",
+       "n",
+       "p",
+       "i",
+       "f"
+      ]
+     ],
+     "variable_parts": [
+      {
+       "line_a": [
+        "x"
+       ],
+       "line_b": []
+      }
+     ]
+    }
+   ],
+   "support": 1,
+   "support_lines": 2,
+   "counterexamples": {
+    "description": "一致しない部分の数",
+    "count": 1
+   },
+   "measures": {
+    "sequence_ratio": 0.947,
+    "representative_pair": [
+     4,
+     13
+    ]
+   },
+   "symbols": [],
+   "key": {
+    "family": "linepair",
+    "lines": [
+     4,
+     13
+    ],
+    "pairs": [
+     [
+      4,
+      13
+     ]
+    ]
+   },
+   "statistics": {
+    "p_family_corrected": 0.001,
+    "p_raw": 0.001,
+    "threshold": 0.00625,
+    "statistic": 25.441,
+    "statistic_kind": "共有する2〜4記号列の数を置換分布で標準化した z（行の組の最良値）",
+    "null_model": "全体シャッフル",
+    "permutations": 999
+   },
+   "stability": {
+    "sampling": 1.0,
+    "sampling_trials": 3,
+    "transcription": 0.5,
+    "transcription_trials": 6
+   },
+   "corroborated_by": [],
+   "interpretation": {
+    "status": "未検証（観測からは選べない候補の列挙）",
+    "candidates": [
+     "同じ文型・定型文",
+     "同じ句の再録",
+     "（転写の場合）同じ行の重複転写"
+    ]
+   },
+   "limits": [
+    "短いコーパス: 規則の一般性（別の資料でも成り立つか）は検証できない"
+   ],
+   "needed_data": "同じ枠を持つ行がさらにあるか。行の対応部分の画像を人が照合すること"
+  },
+  {
+   "id": "H15",
+   "family": "linepair",
+   "kind": "似た記号列を共有する行",
+   "tier": "B",
+   "observation": "2 行（3, 12）が、偶然より多くの2〜4記号列を互いに共有する（有意な行の組 1）",
+   "evidence": [
+    {
+     "line_a": {
+      "line": 3,
+      "start": 0,
+      "length": 10,
+      "doc": "p04",
+      "sent": 0,
+      "symbols": [
+       "s",
+       "o",
+       "k",
+       "m",
+       "e",
+       "n",
+       "d",
+       "e",
+       "n",
+       "x"
+      ]
+     },
+     "line_b": {
+      "line": 12,
+      "start": 0,
+      "length": 9,
+      "doc": "p13",
+      "sent": 0,
+      "symbols": [
+       "s",
+       "o",
+       "k",
+       "m",
+       "e",
+       "n",
+       "d",
+       "e",
+       "n"
+      ]
+     },
+     "fixed_parts": [
+      [
+       "s",
+       "o",
+       "k",
+       "m",
+       "e",
+       "n",
+       "d",
+       "e",
+       "n"
+      ]
+     ],
+     "variable_parts": [
+      {
+       "line_a": [
+        "x"
+       ],
+       "line_b": []
+      }
+     ]
+    }
+   ],
+   "support": 1,
+   "support_lines": 2,
+   "counterexamples": {
+    "description": "一致しない部分の数",
+    "count": 1
+   },
+   "measures": {
+    "sequence_ratio": 0.947,
+    "representative_pair": [
+     3,
+     12
+    ]
+   },
+   "symbols": [],
+   "key": {
+    "family": "linepair",
+    "lines": [
+     3,
+     12
+    ],
+    "pairs": [
+     [
+      3,
+      12
+     ]
+    ]
+   },
+   "statistics": {
+    "p_family_corrected": 0.001,
+    "p_raw": 0.001,
+    "threshold": 0.00625,
+    "statistic": 25.189,
+    "statistic_kind": "共有する2〜4記号列の数を置換分布で標準化した z（行の組の最良値）",
+    "null_model": "全体シャッフル",
+    "permutations": 999
+   },
+   "stability": {
+    "sampling": 1.0,
+    "sampling_trials": 6,
+    "transcription": 1.0,
     "transcription_trials": 6
    },
    "corroborated_by": [],
@@ -4072,123 +4072,6 @@
    "family": "cooccurrence",
    "kind": "同じ行での共起",
    "tier": "C",
-   "observation": "記号 s と o が同じ行に 7 回現れる",
-   "evidence": [
-    {
-     "line": 0,
-     "doc": "p01",
-     "positions": {
-      "s": 0,
-      "o": 1
-     }
-    },
-    {
-     "line": 3,
-     "doc": "p04",
-     "positions": {
-      "s": 0,
-      "o": 1
-     }
-    },
-    {
-     "line": 6,
-     "doc": "p07",
-     "positions": {
-      "s": 0,
-      "o": 1
-     }
-    },
-    {
-     "line": 7,
-     "doc": "p08",
-     "positions": {
-      "s": 5,
-      "o": 4
-     }
-    },
-    {
-     "line": 8,
-     "doc": "p09",
-     "positions": {
-      "s": 5,
-      "o": 4
-     }
-    },
-    {
-     "line": 9,
-     "doc": "p10",
-     "positions": {
-      "s": 0,
-      "o": 1
-     }
-    },
-    {
-     "line": 12,
-     "doc": "p13",
-     "positions": {
-      "s": 0,
-      "o": 1
-     }
-    }
-   ],
-   "support": 7,
-   "support_lines": 7,
-   "counterexamples": {
-    "description": "片方だけが現れる行",
-    "count": 0,
-    "only_s": 0,
-    "only_o": 0
-   },
-   "measures": {
-    "jaccard_lines": 1.0
-   },
-   "symbols": [
-    "s",
-    "o"
-   ],
-   "key": {
-    "family": "cooccurrence",
-    "symbols": [
-     "s",
-     "o"
-    ]
-   },
-   "statistics": {
-    "p_family_corrected": 0.001,
-    "p_raw": 0.001,
-    "threshold": 0.00625,
-    "statistic": 3.809,
-    "statistic_kind": "-log10 超幾何の上側確率",
-    "null_model": "各記号を含む行の数を保った独立配置",
-    "permutations": 999
-   },
-   "stability": {
-    "sampling": 0.4,
-    "sampling_trials": 10,
-    "transcription": 0.17,
-    "transcription_trials": 6
-   },
-   "corroborated_by": [],
-   "interpretation": {
-    "status": "未検証（観測からは選べない候補の列挙）",
-    "candidates": [
-     "同じ話題・文型で使われる語の一部",
-     "一致（agreement）",
-     "同じ写字生・同じ文書の癖"
-    ]
-   },
-   "limits": [
-    "行の部分標本（70%）で再現したのは 40% のみ: 一部の行に依存している",
-    "転写を 5% 攪乱すると再現したのは 17% のみ: 画像認識・転写の誤差に弱い",
-    "短いコーパス: 規則の一般性（別の資料でも成り立つか）は検証できない"
-   ],
-   "needed_data": "共起する行の数を増やす（現在の行数では偶然との区別が弱い）"
-  },
-  {
-   "id": "H25",
-   "family": "cooccurrence",
-   "kind": "同じ行での共起",
-   "tier": "C",
    "observation": "記号 t と a が同じ行に 9 回現れる",
    "evidence": [
     {
@@ -4279,16 +4162,16 @@
     ]
    },
    "statistics": {
-    "p_family_corrected": 0.001,
-    "p_raw": 0.001,
+    "p_family_corrected": 0.002,
+    "p_raw": 0.002,
     "threshold": 0.00625,
-    "statistic": 3.699,
-    "statistic_kind": "-log10 超幾何の上側確率",
-    "null_model": "各記号を含む行の数を保った独立配置",
+    "statistic": 3.713,
+    "statistic_kind": "同じ行に現れる回数を置換分布で標準化した z",
+    "null_model": "行の長さの層ごとに、各記号を含む行の数を保った独立配置",
     "permutations": 999
    },
    "stability": {
-    "sampling": 0.5,
+    "sampling": 0.2,
     "sampling_trials": 10,
     "transcription": 0.33,
     "transcription_trials": 6
@@ -4303,7 +4186,125 @@
     ]
    },
    "limits": [
+    "行の部分標本（70%）で再現したのは 20% のみ: 一部の行に依存している",
     "転写を 5% 攪乱すると再現したのは 33% のみ: 画像認識・転写の誤差に弱い",
+    "短いコーパス: 規則の一般性（別の資料でも成り立つか）は検証できない"
+   ],
+   "needed_data": "共起する行の数を増やす（現在の行数では偶然との区別が弱い）"
+  },
+  {
+   "id": "H25",
+   "family": "cooccurrence",
+   "kind": "同じ行での共起",
+   "tier": "C",
+   "observation": "記号 s と o が同じ行に 7 回現れる",
+   "evidence": [
+    {
+     "line": 0,
+     "doc": "p01",
+     "positions": {
+      "s": 0,
+      "o": 1
+     }
+    },
+    {
+     "line": 3,
+     "doc": "p04",
+     "positions": {
+      "s": 0,
+      "o": 1
+     }
+    },
+    {
+     "line": 6,
+     "doc": "p07",
+     "positions": {
+      "s": 0,
+      "o": 1
+     }
+    },
+    {
+     "line": 7,
+     "doc": "p08",
+     "positions": {
+      "s": 5,
+      "o": 4
+     }
+    },
+    {
+     "line": 8,
+     "doc": "p09",
+     "positions": {
+      "s": 5,
+      "o": 4
+     }
+    },
+    {
+     "line": 9,
+     "doc": "p10",
+     "positions": {
+      "s": 0,
+      "o": 1
+     }
+    },
+    {
+     "line": 12,
+     "doc": "p13",
+     "positions": {
+      "s": 0,
+      "o": 1
+     }
+    }
+   ],
+   "support": 7,
+   "support_lines": 7,
+   "counterexamples": {
+    "description": "片方だけが現れる行",
+    "count": 0,
+    "only_s": 0,
+    "only_o": 0
+   },
+   "measures": {
+    "jaccard_lines": 1.0
+   },
+   "symbols": [
+    "s",
+    "o"
+   ],
+   "key": {
+    "family": "cooccurrence",
+    "symbols": [
+     "s",
+     "o"
+    ]
+   },
+   "statistics": {
+    "p_family_corrected": 0.002,
+    "p_raw": 0.001,
+    "threshold": 0.00625,
+    "statistic": 3.42,
+    "statistic_kind": "同じ行に現れる回数を置換分布で標準化した z",
+    "null_model": "行の長さの層ごとに、各記号を含む行の数を保った独立配置",
+    "permutations": 999
+   },
+   "stability": {
+    "sampling": 0.1,
+    "sampling_trials": 10,
+    "transcription": 0.0,
+    "transcription_trials": 6
+   },
+   "corroborated_by": [],
+   "interpretation": {
+    "status": "未検証（観測からは選べない候補の列挙）",
+    "candidates": [
+     "同じ話題・文型で使われる語の一部",
+     "一致（agreement）",
+     "同じ写字生・同じ文書の癖"
+    ]
+   },
+   "limits": [
+    "行の部分標本（70%）で再現したのは 10% のみ: 一部の行に依存している",
+    "転写を 5% 攪乱すると再現したのは 0% のみ: 画像認識・転写の誤差に弱い",
     "短いコーパス: 規則の一般性（別の資料でも成り立つか）は検証できない"
    ],
    "needed_data": "共起する行の数を増やす（現在の行数では偶然との区別が弱い）"
@@ -4459,7 +4460,7 @@
     ]
    },
    "statistics": {
-    "p_family_corrected": 0.004,
+    "p_family_corrected": 0.005,
     "p_raw": 0.001,
     "threshold": 0.00625,
     "statistic": 6.828,
@@ -4468,9 +4469,9 @@
     "permutations": 999
    },
    "stability": {
-    "sampling": 0.7,
+    "sampling": 0.8,
     "sampling_trials": 10,
-    "transcription": 0.17,
+    "transcription": 0.0,
     "transcription_trials": 6
    },
    "corroborated_by": [
@@ -4485,7 +4486,7 @@
     ]
    },
    "limits": [
-    "転写を 5% 攪乱すると再現したのは 17% のみ: 画像認識・転写の誤差に弱い",
+    "転写を 5% 攪乱すると再現したのは 0% のみ: 画像認識・転写の誤差に弱い",
     "短いコーパス: 規則の一般性（別の資料でも成り立つか）は検証できない"
    ],
    "needed_data": "同じ記号列が別の文書・別の筆記者でも現れるか。前後の文脈が異なる出現例"
@@ -4590,7 +4591,7 @@
     ]
    },
    "statistics": {
-    "p_family_corrected": 0.004,
+    "p_family_corrected": 0.005,
     "p_raw": 0.001,
     "threshold": 0.00625,
     "statistic": 6.818,
@@ -4599,7 +4600,7 @@
     "permutations": 999
    },
    "stability": {
-    "sampling": 1.0,
+    "sampling": 0.9,
     "sampling_trials": 10,
     "transcription": 0.17,
     "transcription_trials": 6
@@ -4715,7 +4716,7 @@
     ]
    },
    "statistics": {
-    "p_family_corrected": 0.004,
+    "p_family_corrected": 0.005,
     "p_raw": 0.001,
     "threshold": 0.00625,
     "statistic": 6.688,
@@ -4724,9 +4725,9 @@
     "permutations": 999
    },
    "stability": {
-    "sampling": 0.9,
+    "sampling": 0.7,
     "sampling_trials": 10,
-    "transcription": 0.17,
+    "transcription": 0.33,
     "transcription_trials": 6
    },
    "corroborated_by": [
@@ -4742,7 +4743,7 @@
     ]
    },
    "limits": [
-    "転写を 5% 攪乱すると再現したのは 17% のみ: 画像認識・転写の誤差に弱い",
+    "転写を 5% 攪乱すると再現したのは 33% のみ: 画像認識・転写の誤差に弱い",
     "短いコーパス: 規則の一般性（別の資料でも成り立つか）は検証できない"
    ],
    "needed_data": "同じ記号列が別の文書・別の筆記者でも現れるか。前後の文脈が異なる出現例"
@@ -4841,7 +4842,7 @@
     ]
    },
    "statistics": {
-    "p_family_corrected": 0.004,
+    "p_family_corrected": 0.005,
     "p_raw": 0.001,
     "threshold": 0.00625,
     "statistic": 6.64,
@@ -4877,6 +4878,21 @@
  "descriptive_observations": [
   {
    "family": "ngram",
+   "observation": "記号 t の直後に a が 6 回現れる",
+   "key": {
+    "family": "ngram",
+    "symbols": [
+     "t",
+     "a"
+    ]
+   },
+   "p_raw": 0.001,
+   "p_family_corrected": 0.747,
+   "support": 6,
+   "status": "多重検定の補正後は偶然と区別できない"
+  },
+  {
+   "family": "ngram",
    "observation": "記号 i の直後に f が 5 回現れる",
    "key": {
     "family": "ngram",
@@ -4886,23 +4902,8 @@
     ]
    },
    "p_raw": 0.001,
-   "p_family_corrected": 0.342,
+   "p_family_corrected": 0.338,
    "support": 5,
-   "status": "多重検定の補正後は偶然と区別できない"
-  },
-  {
-   "family": "ngram",
-   "observation": "記号 m の直後に e が 6 回現れる",
-   "key": {
-    "family": "ngram",
-    "symbols": [
-     "m",
-     "e"
-    ]
-   },
-   "p_raw": 0.001,
-   "p_family_corrected": 0.574,
-   "support": 6,
    "status": "多重検定の補正後は偶然と区別できない"
   },
   {
@@ -4916,7 +4917,7 @@
     ]
    },
    "p_raw": 0.001,
-   "p_family_corrected": 0.342,
+   "p_family_corrected": 0.338,
    "support": 5,
    "status": "多重検定の補正後は偶然と区別できない"
   },
@@ -4931,7 +4932,7 @@
     ]
    },
    "p_raw": 0.001,
-   "p_family_corrected": 0.342,
+   "p_family_corrected": 0.338,
    "support": 5,
    "status": "多重検定の補正後は偶然と区別できない"
   },
@@ -4946,7 +4947,7 @@
     ]
    },
    "p_raw": 0.001,
-   "p_family_corrected": 0.143,
+   "p_family_corrected": 0.14,
    "support": 6,
    "status": "多重検定の補正後は偶然と区別できない"
   },
@@ -4961,7 +4962,22 @@
     ]
    },
    "p_raw": 0.001,
-   "p_family_corrected": 0.679,
+   "p_family_corrected": 0.648,
+   "support": 5,
+   "status": "多重検定の補正後は偶然と区別できない"
+  },
+  {
+   "family": "ngram",
+   "observation": "記号 s の直後に o が 5 回現れる",
+   "key": {
+    "family": "ngram",
+    "symbols": [
+     "s",
+     "o"
+    ]
+   },
+   "p_raw": 0.001,
+   "p_family_corrected": 0.68,
    "support": 5,
    "status": "多重検定の補正後は偶然と区別できない"
   },
@@ -4976,7 +4992,7 @@
     ]
    },
    "p_raw": 0.001,
-   "p_family_corrected": 0.591,
+   "p_family_corrected": 0.556,
    "support": 5,
    "status": "多重検定の補正後は偶然と区別できない"
   },
@@ -4991,7 +5007,7 @@
     ]
    },
    "p_raw": 0.001,
-   "p_family_corrected": 0.342,
+   "p_family_corrected": 0.338,
    "support": 5,
    "status": "多重検定の補正後は偶然と区別できない"
   },
@@ -5006,8 +5022,23 @@
     ]
    },
    "p_raw": 0.001,
-   "p_family_corrected": 0.135,
+   "p_family_corrected": 0.123,
    "support": 5,
+   "status": "多重検定の補正後は偶然と区別できない"
+  },
+  {
+   "family": "ngram",
+   "observation": "記号 v の直後に o が 3 回現れる",
+   "key": {
+    "family": "ngram",
+    "symbols": [
+     "v",
+     "o"
+    ]
+   },
+   "p_raw": 0.001,
+   "p_family_corrected": 0.789,
+   "support": 3,
    "status": "多重検定の補正後は偶然と区別できない"
   },
   {
@@ -5023,36 +5054,6 @@
    "p_raw": 0.001,
    "p_family_corrected": 0.017,
    "support": 11,
-   "status": "多重検定の補正後は偶然と区別できない"
-  },
-  {
-   "family": "ngram",
-   "observation": "記号 u の直後に k が 5 回現れる",
-   "key": {
-    "family": "ngram",
-    "symbols": [
-     "u",
-     "k"
-    ]
-   },
-   "p_raw": 0.001,
-   "p_family_corrected": 0.286,
-   "support": 5,
-   "status": "多重検定の補正後は偶然と区別できない"
-  },
-  {
-   "family": "ngram",
-   "observation": "記号 f の直後に x が 3 回現れる",
-   "key": {
-    "family": "ngram",
-    "symbols": [
-     "f",
-     "x"
-    ]
-   },
-   "p_raw": 0.001,
-   "p_family_corrected": 0.686,
-   "support": 3,
    "status": "多重検定の補正後は偶然と区別できない"
   }
  ],
@@ -6098,37 +6099,7 @@
   },
   {
    "what": "H24（同じ行での共起）: 安定性が低い",
-   "why": "行の部分標本（70%）で再現したのは 40% のみ: 一部の行に依存している; 転写を 5% 攪乱すると再現したのは 17% のみ: 画像認識・転写の誤差に弱い",
-   "where": [
-    {
-     "line": 0,
-     "doc": "p01",
-     "positions": {
-      "s": 0,
-      "o": 1
-     }
-    },
-    {
-     "line": 3,
-     "doc": "p04",
-     "positions": {
-      "s": 0,
-      "o": 1
-     }
-    },
-    {
-     "line": 6,
-     "doc": "p07",
-     "positions": {
-      "s": 0,
-      "o": 1
-     }
-    }
-   ]
-  },
-  {
-   "what": "H25（同じ行での共起）: 安定性が低い",
-   "why": "転写を 5% 攪乱すると再現したのは 33% のみ: 画像認識・転写の誤差に弱い; 短いコーパス: 規則の一般性（別の資料でも成り立つか）は検証できない",
+   "why": "行の部分標本（70%）で再現したのは 20% のみ: 一部の行に依存している; 転写を 5% 攪乱すると再現したのは 33% のみ: 画像認識・転写の誤差に弱い",
    "where": [
     {
      "line": 0,
@@ -6157,8 +6128,38 @@
    ]
   },
   {
+   "what": "H25（同じ行での共起）: 安定性が低い",
+   "why": "行の部分標本（70%）で再現したのは 10% のみ: 一部の行に依存している; 転写を 5% 攪乱すると再現したのは 0% のみ: 画像認識・転写の誤差に弱い",
+   "where": [
+    {
+     "line": 0,
+     "doc": "p01",
+     "positions": {
+      "s": 0,
+      "o": 1
+     }
+    },
+    {
+     "line": 3,
+     "doc": "p04",
+     "positions": {
+      "s": 0,
+      "o": 1
+     }
+    },
+    {
+     "line": 6,
+     "doc": "p07",
+     "positions": {
+      "s": 0,
+      "o": 1
+     }
+    }
+   ]
+  },
+  {
    "what": "H26（記号列の反復・連接）: 安定性が低い",
-   "why": "転写を 5% 攪乱すると再現したのは 17% のみ: 画像認識・転写の誤差に弱い; 短いコーパス: 規則の一般性（別の資料でも成り立つか）は検証できない",
+   "why": "転写を 5% 攪乱すると再現したのは 0% のみ: 画像認識・転写の誤差に弱い; 短いコーパス: 規則の一般性（別の資料でも成り立つか）は検証できない",
    "where": [
     {
      "line": 3,
@@ -6245,7 +6246,7 @@
   },
   {
    "what": "H28（記号列の反復・連接）: 安定性が低い",
-   "why": "転写を 5% 攪乱すると再現したのは 17% のみ: 画像認識・転写の誤差に弱い; 短いコーパス: 規則の一般性（別の資料でも成り立つか）は検証できない",
+   "why": "転写を 5% 攪乱すると再現したのは 33% のみ: 画像認識・転写の誤差に弱い; 短いコーパス: 規則の一般性（別の資料でも成り立つか）は検証できない",
    "where": [
     {
      "line": 2,
@@ -6390,11 +6391,11 @@
  },
  "seconds": {
   "describe": 0.0,
-  "tests": 2.21,
-  "boundaries": 0.04,
-  "subsample_stability": 1.54,
-  "transcription_stability": 2.48,
-  "total": 6.29
+  "tests": 2.56,
+  "boundaries": 0.03,
+  "subsample_stability": 1.4,
+  "transcription_stability": 2.68,
+  "total": 6.68
  },
  "notes": [
   "観測された規則と、そこから考えられる機能（interpretation）は別物。機能は未検証。",

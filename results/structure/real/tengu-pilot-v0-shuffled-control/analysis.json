@@ -1,6 +1,6 @@
 {
  "schema": "babel-structure-analysis-v1",
- "version": "0.1.1",
+ "version": "0.1.2",
  "input": {
   "format": "babel-public",
   "language_id": "tengu-pilot-v0-shuffled-control",
@@ -419,15 +419,15 @@
  "global_tests": {
   "sequential_dependence": {
    "observed": 5.6008,
-   "null_mean": 5.5953,
+   "null_mean": 5.5951,
    "null": "within",
    "description": "隣り合う記号の相互情報量（並びの依存）",
-   "p": 0.456,
+   "p": 0.454,
    "p_holm": 1.0
   },
   "repetition": {
    "observed": 0.0,
-   "null_mean": 0.004,
+   "null_mean": 0.001,
    "null": "within",
    "description": "3〜6記号列の反復の総数",
    "p": 1.0,
@@ -435,27 +435,27 @@
   },
   "edge_position": {
    "observed": 163.1962,
-   "null_mean": 172.9969,
+   "null_mean": 172.9712,
    "null": "within",
    "description": "行頭・行末の記号の偏り（カイ二乗）",
-   "p": 0.721,
+   "p": 0.705,
    "p_holm": 1.0
   },
   "longest_repeat": {
    "observed": 2.0,
-   "null_mean": 0.967,
+   "null_mean": 1.022,
    "null": "within",
    "description": "最長反復部分列の長さ",
-   "p": 0.482,
+   "p": 0.511,
    "p_holm": 1.0
   },
   "line_similarity": {
    "observed": 2.0,
-   "null_mean": 0.4024,
+   "null_mean": 0.4224,
    "null": "global",
    "description": "行の間で共有される2記号列の数",
-   "p": 0.053,
-   "p_holm": 0.265
+   "p": 0.067,
+   "p_holm": 0.335
   }
  },
  "hypotheses": [],
@@ -471,7 +471,7 @@
     ]
    },
    "p_raw": 0.002,
-   "p_family_corrected": 0.03,
+   "p_family_corrected": 0.063,
    "support": 3,
    "status": "多重検定の補正後は偶然と区別できない"
   },
@@ -485,8 +485,23 @@
      "以"
     ]
    },
-   "p_raw": 0.01,
-   "p_family_corrected": 0.125,
+   "p_raw": 0.006,
+   "p_family_corrected": 0.052,
+   "support": 3,
+   "status": "多重検定の補正後は偶然と区別できない"
+  },
+  {
+   "family": "substitution",
+   "observation": "記号 也 と 石 が同じ直前の文脈 0 種・同じ直後の文脈 1 種を共有する",
+   "key": {
+    "family": "substitution",
+    "symbols": [
+     "也",
+     "石"
+    ]
+   },
+   "p_raw": 0.014,
+   "p_family_corrected": 0.368,
    "support": 3,
    "status": "多重検定の補正後は偶然と区別できない"
   },
@@ -500,24 +515,9 @@
      "の"
     ]
    },
-   "p_raw": 0.013,
-   "p_family_corrected": 0.474,
+   "p_raw": 0.014,
+   "p_family_corrected": 0.515,
    "support": 4,
-   "status": "多重検定の補正後は偶然と区別できない"
-  },
-  {
-   "family": "substitution",
-   "observation": "記号 也 と 石 が同じ直前の文脈 0 種・同じ直後の文脈 1 種を共有する",
-   "key": {
-    "family": "substitution",
-    "symbols": [
-     "也",
-     "石"
-    ]
-   },
-   "p_raw": 0.016,
-   "p_family_corrected": 0.395,
-   "support": 3,
    "status": "多重検定の補正後は偶然と区別できない"
   },
   {
@@ -530,24 +530,9 @@
      "安"
     ]
    },
-   "p_raw": 0.017,
-   "p_family_corrected": 0.264,
+   "p_raw": 0.021,
+   "p_family_corrected": 0.294,
    "support": 2,
-   "status": "多重検定の補正後は偶然と区別できない"
-  },
-  {
-   "family": "substitution",
-   "observation": "記号 く と ら が同じ直前の文脈 1 種・同じ直後の文脈 0 種を共有する",
-   "key": {
-    "family": "substitution",
-    "symbols": [
-     "く",
-     "ら"
-    ]
-   },
-   "p_raw": 0.035,
-   "p_family_corrected": 0.746,
-   "support": 3,
    "status": "多重検定の補正後は偶然と区別できない"
   },
   {
@@ -561,23 +546,38 @@
     ]
    },
    "p_raw": 0.036,
-   "p_family_corrected": 0.44,
+   "p_family_corrected": 0.47,
    "support": 2,
    "status": "多重検定の補正後は偶然と区別できない"
   },
   {
-   "family": "position",
-   "observation": "女 が 15 行中 2 行の行頭にある",
+   "family": "substitution",
+   "observation": "記号 く と ら が同じ直前の文脈 1 種・同じ直後の文脈 0 種を共有する",
    "key": {
-    "family": "position",
-    "side": "^",
+    "family": "substitution",
     "symbols": [
-     "女"
+     "く",
+     "ら"
     ]
    },
-   "p_raw": 0.036,
-   "p_family_corrected": 0.553,
-   "support": 2,
+   "p_raw": 0.041,
+   "p_family_corrected": 0.771,
+   "support": 3,
+   "status": "多重検定の補正後は偶然と区別できない"
+  },
+  {
+   "family": "substitution",
+   "observation": "記号 以 と く が同じ直前の文脈 1 種・同じ直後の文脈 0 種を共有する",
+   "key": {
+    "family": "substitution",
+    "symbols": [
+     "以",
+     "く"
+    ]
+   },
+   "p_raw": 0.05,
+   "p_family_corrected": 0.896,
+   "support": 3,
    "status": "多重検定の補正後は偶然と区別できない"
   }
  ],
@@ -1379,11 +1379,11 @@
  },
  "seconds": {
   "describe": 0.0,
-  "tests": 3.18,
+  "tests": 2.53,
   "boundaries": 0.05,
-  "subsample_stability": 0.74,
-  "transcription_stability": 2.76,
-  "total": 6.74
+  "subsample_stability": 0.76,
+  "transcription_stability": 3.1,
+  "total": 6.43
  },
  "notes": [
   "観測された規則と、そこから考えられる機能（interpretation）は別物。機能は未検証。",

@@ -21,9 +21,9 @@
    "compression_reps": 19,
    "affix_permutations": 199
   },
-  "commit": "8dd39ac",
+  "commit": "0089ade",
   "python": "3.13.18",
-  "seconds": 382.2,
+  "seconds": 404.3,
   "jobs": 4,
   "generators": {
    "random_uniform": "20種の記号を一様・独立に並べた行（長さ6〜14）。規則は存在しない",
@@ -46,7 +46,8 @@
    "runs": 3,
    "mean_lines": 5.0,
    "tiers": {
-    "C": 14,
+    "C": 13,
+    "A": 1,
     "B": 1
    },
    "false_by_tier": {},
@@ -73,8 +74,8 @@
     "transition": 0.16,
     "unigram": 0.16
    },
-   "mean_seconds": 2.89,
-   "max_seconds": 3.09
+   "mean_seconds": 2.91,
+   "max_seconds": 3.06
   },
   {
    "generator": "babel_generator",
@@ -82,12 +83,12 @@
    "runs": 3,
    "mean_lines": 13.0,
    "tiers": {
-    "A": 4,
+    "A": 5,
     "B": 4,
-    "C": 44
+    "C": 31
    },
    "false_by_tier": {
-    "C": 2
+    "C": 1
    },
    "principle": "babel-own-generator",
    "gold_rules": 0,
@@ -95,12 +96,12 @@
    "gold_undecided": 0,
    "gold_missed": 0,
    "gold_recall": null,
-   "hypotheses": 52,
-   "true": 50,
-   "false": 2,
+   "hypotheses": 40,
+   "true": 39,
+   "false": 1,
    "unverifiable": 0,
-   "false_discovery_rate": 0.038,
-   "corpora_with_any_false_hypothesis": 2,
+   "false_discovery_rate": 0.025,
+   "corpora_with_any_false_hypothesis": 1,
    "structure_detected": 3,
    "old_babel_structure_detected": 1,
    "old_babel_errors": 0,
@@ -112,8 +113,8 @@
     "transition": 0.284,
     "unigram": 0.281
    },
-   "mean_seconds": 5.3,
-   "max_seconds": 5.52
+   "mean_seconds": 5.12,
+   "max_seconds": 5.79
   },
   {
    "generator": "babel_generator",
@@ -121,12 +122,12 @@
    "runs": 3,
    "mean_lines": 30.0,
    "tiers": {
-    "A": 33,
-    "B": 13,
-    "C": 112
+    "A": 32,
+    "B": 16,
+    "C": 148
    },
    "false_by_tier": {
-    "C": 5
+    "C": 7
    },
    "principle": "babel-own-generator",
    "gold_rules": 0,
@@ -134,12 +135,12 @@
    "gold_undecided": 0,
    "gold_missed": 0,
    "gold_recall": null,
-   "hypotheses": 158,
-   "true": 153,
-   "false": 5,
+   "hypotheses": 196,
+   "true": 189,
+   "false": 7,
    "unverifiable": 0,
-   "false_discovery_rate": 0.032,
-   "corpora_with_any_false_hypothesis": 3,
+   "false_discovery_rate": 0.036,
+   "corpora_with_any_false_hypothesis": 2,
    "structure_detected": 3,
    "old_babel_structure_detected": 1,
    "old_babel_errors": 0,
@@ -151,8 +152,8 @@
     "transition": 0.358,
     "unigram": 0.359
    },
-   "mean_seconds": 11.91,
-   "max_seconds": 13.0
+   "mean_seconds": 12.7,
+   "max_seconds": 14.71
   },
   {
    "generator": "babel_generator",
@@ -160,13 +161,13 @@
    "runs": 3,
    "mean_lines": 100.0,
    "tiers": {
-    "A": 197,
-    "B": 115,
-    "C": 544
+    "A": 186,
+    "B": 108,
+    "C": 480
    },
    "false_by_tier": {
-    "B": 7,
-    "C": 92,
+    "B": 4,
+    "C": 84,
     "A": 1
    },
    "principle": "babel-own-generator",
@@ -175,11 +176,11 @@
    "gold_undecided": 0,
    "gold_missed": 0,
    "gold_recall": null,
-   "hypotheses": 856,
-   "true": 756,
-   "false": 100,
+   "hypotheses": 774,
+   "true": 685,
+   "false": 89,
    "unverifiable": 0,
-   "false_discovery_rate": 0.117,
+   "false_discovery_rate": 0.115,
    "corpora_with_any_false_hypothesis": 3,
    "structure_detected": 3,
    "old_babel_structure_detected": 3,
@@ -192,8 +193,8 @@
     "transition": 0.367,
     "unigram": 0.37
    },
-   "mean_seconds": 56.59,
-   "max_seconds": 59.41
+   "mean_seconds": 59.54,
+   "max_seconds": 63.68
   },
   {
    "generator": "embedded_repeat",
@@ -220,8 +221,8 @@
    "old_babel_structure_detected": 0,
    "old_babel_errors": 0,
    "segmentation_f1": {},
-   "mean_seconds": 0.9,
-   "max_seconds": 1.12
+   "mean_seconds": 1.04,
+   "max_seconds": 1.19
   },
   {
    "generator": "embedded_repeat",
@@ -230,7 +231,7 @@
    "mean_lines": 13.0,
    "tiers": {
     "B": 2,
-    "C": 4,
+    "C": 5,
     "A": 2
    },
    "false_by_tier": {},
@@ -240,8 +241,8 @@
    "gold_undecided": 0,
    "gold_missed": 0,
    "gold_recall": 1.0,
-   "hypotheses": 8,
-   "true": 8,
+   "hypotheses": 9,
+   "true": 9,
    "false": 0,
    "unverifiable": 0,
    "false_discovery_rate": 0.0,
@@ -250,8 +251,8 @@
    "old_babel_structure_detected": 0,
    "old_babel_errors": 0,
    "segmentation_f1": {},
-   "mean_seconds": 3.13,
-   "max_seconds": 3.2
+   "mean_seconds": 3.46,
+   "max_seconds": 3.79
   },
   {
    "generator": "embedded_repeat",
@@ -259,8 +260,8 @@
    "runs": 3,
    "mean_lines": 30.0,
    "tiers": {
-    "A": 5,
-    "C": 10
+    "A": 6,
+    "C": 13
    },
    "false_by_tier": {
     "C": 1
@@ -271,18 +272,18 @@
    "gold_undecided": 0,
    "gold_missed": 0,
    "gold_recall": 1.0,
-   "hypotheses": 15,
-   "true": 14,
+   "hypotheses": 19,
+   "true": 18,
    "false": 1,
    "unverifiable": 0,
-   "false_discovery_rate": 0.067,
+   "false_discovery_rate": 0.053,
    "corpora_with_any_false_hypothesis": 1,
    "structure_detected": 3,
    "old_babel_structure_detected": 0,
    "old_babel_errors": 0,
    "segmentation_f1": {},
-   "mean_seconds": 5.83,
-   "max_seconds": 6.13
+   "mean_seconds": 5.82,
+   "max_seconds": 6.1
   },
   {
    "generator": "embedded_repeat",
@@ -290,9 +291,9 @@
    "runs": 3,
    "mean_lines": 100.0,
    "tiers": {
-    "A": 10,
+    "A": 9,
     "B": 5,
-    "C": 26
+    "C": 31
    },
    "false_by_tier": {
     "C": 1
@@ -303,18 +304,18 @@
    "gold_undecided": 0,
    "gold_missed": 0,
    "gold_recall": 1.0,
-   "hypotheses": 41,
-   "true": 40,
+   "hypotheses": 45,
+   "true": 44,
    "false": 1,
    "unverifiable": 0,
-   "false_discovery_rate": 0.024,
+   "false_discovery_rate": 0.022,
    "corpora_with_any_false_hypothesis": 1,
    "structure_detected": 3,
    "old_babel_structure_detected": 0,
    "old_babel_errors": 0,
    "segmentation_f1": {},
-   "mean_seconds": 17.33,
-   "max_seconds": 17.65
+   "mean_seconds": 17.98,
+   "max_seconds": 19.0
   },
   {
    "generator": "external_gpt6",
@@ -323,8 +324,8 @@
    "mean_lines": 5.0,
    "tiers": {
     "A": 4,
-    "B": 4,
-    "C": 30
+    "B": 3,
+    "C": 31
    },
    "false_by_tier": {
     "C": 2
@@ -352,8 +353,8 @@
     "transition": 0.335,
     "unigram": 0.335
    },
-   "mean_seconds": 2.81,
-   "max_seconds": 3.35
+   "mean_seconds": 2.78,
+   "max_seconds": 3.45
   },
   {
    "generator": "external_gpt6",
@@ -362,8 +363,8 @@
    "mean_lines": 13.0,
    "tiers": {
     "A": 18,
-    "B": 8,
-    "C": 89
+    "B": 9,
+    "C": 83
    },
    "false_by_tier": {
     "C": 3,
@@ -375,11 +376,11 @@
    "gold_undecided": 0,
    "gold_missed": 0,
    "gold_recall": null,
-   "hypotheses": 115,
-   "true": 111,
+   "hypotheses": 110,
+   "true": 106,
    "false": 4,
    "unverifiable": 0,
-   "false_discovery_rate": 0.035,
+   "false_discovery_rate": 0.036,
    "corpora_with_any_false_hypothesis": 3,
    "structure_detected": 3,
    "old_babel_structure_detected": 3,
@@ -392,8 +393,8 @@
     "transition": 0.372,
     "unigram": 0.38
    },
-   "mean_seconds": 5.29,
-   "max_seconds": 6.52
+   "mean_seconds": 6.06,
+   "max_seconds": 7.41
   },
   {
    "generator": "external_gpt6",
@@ -401,9 +402,9 @@
    "runs": 3,
    "mean_lines": 30.0,
    "tiers": {
-    "A": 63,
-    "B": 35,
-    "C": 232
+    "A": 66,
+    "B": 41,
+    "C": 225
    },
    "false_by_tier": {
     "A": 1,
@@ -415,8 +416,8 @@
    "gold_undecided": 0,
    "gold_missed": 0,
    "gold_recall": null,
-   "hypotheses": 330,
-   "true": 323,
+   "hypotheses": 332,
+   "true": 325,
    "false": 7,
    "unverifiable": 0,
    "false_discovery_rate": 0.021,
@@ -432,8 +433,8 @@
     "transition": 0.395,
     "unigram": 0.404
    },
-   "mean_seconds": 13.12,
-   "max_seconds": 14.97
+   "mean_seconds": 13.38,
+   "max_seconds": 14.9
   },
   {
    "generator": "external_gpt6",
@@ -441,13 +442,13 @@
    "runs": 3,
    "mean_lines": 100.0,
    "tiers": {
-    "A": 323,
-    "B": 175,
-    "C": 693
+    "A": 318,
+    "B": 181,
+    "C": 652
    },
    "false_by_tier": {
-    "C": 47,
-    "A": 1
+    "B": 1,
+    "C": 41
    },
    "principle": "third-party",
    "gold_rules": 0,
@@ -455,11 +456,11 @@
    "gold_undecided": 0,
    "gold_missed": 0,
    "gold_recall": null,
-   "hypotheses": 1191,
-   "true": 1143,
-   "false": 48,
+   "hypotheses": 1151,
+   "true": 1109,
+   "false": 42,
    "unverifiable": 0,
-   "false_discovery_rate": 0.04,
+   "false_discovery_rate": 0.036,
    "corpora_with_any_false_hypothesis": 3,
    "structure_detected": 3,
    "old_babel_structure_detected": 3,
@@ -472,8 +473,8 @@
     "transition": 0.385,
     "unigram": 0.399
    },
-   "mean_seconds": 71.49,
-   "max_seconds": 81.8
+   "mean_seconds": 72.62,
+   "max_seconds": 82.67
   },
   {
    "generator": "noisy_regular",
@@ -481,19 +482,19 @@
    "runs": 3,
    "mean_lines": 5.0,
    "tiers": {
-    "B": 1,
+    "B": 4,
     "A": 1,
-    "C": 4
+    "C": 2
    },
    "false_by_tier": {},
    "principle": "internal",
    "gold_rules": 24,
-   "gold_found": 4,
-   "gold_undecided": 6,
+   "gold_found": 6,
+   "gold_undecided": 4,
    "gold_missed": 14,
-   "gold_recall": 0.167,
-   "hypotheses": 6,
-   "true": 6,
+   "gold_recall": 0.25,
+   "hypotheses": 7,
+   "true": 7,
    "false": 0,
    "unverifiable": 0,
    "false_discovery_rate": 0.0,
@@ -509,8 +510,8 @@
     "transition": 0.257,
     "unigram": 0.257
    },
-   "mean_seconds": 1.19,
-   "max_seconds": 1.23
+   "mean_seconds": 1.24,
+   "max_seconds": 1.41
   },
   {
    "generator": "noisy_regular",
@@ -519,8 +520,8 @@
    "mean_lines": 13.0,
    "tiers": {
     "A": 10,
-    "B": 5,
-    "C": 15
+    "C": 24,
+    "B": 3
    },
    "false_by_tier": {},
    "principle": "internal",
@@ -529,8 +530,8 @@
    "gold_undecided": 0,
    "gold_missed": 15,
    "gold_recall": 0.375,
-   "hypotheses": 30,
-   "true": 30,
+   "hypotheses": 37,
+   "true": 37,
    "false": 0,
    "unverifiable": 0,
    "false_discovery_rate": 0.0,
@@ -546,8 +547,8 @@
     "transition": 0.238,
     "unigram": 0.238
    },
-   "mean_seconds": 3.09,
-   "max_seconds": 3.13
+   "mean_seconds": 3.4,
+   "max_seconds": 3.83
   },
   {
    "generator": "noisy_regular",
@@ -555,23 +556,25 @@
    "runs": 3,
    "mean_lines": 30.0,
    "tiers": {
-    "A": 47,
-    "C": 67,
-    "B": 3
+    "A": 49,
+    "C": 70,
+    "B": 5
    },
-   "false_by_tier": {},
+   "false_by_tier": {
+    "C": 1
+   },
    "principle": "internal",
    "gold_rules": 24,
    "gold_found": 14,
    "gold_undecided": 0,
    "gold_missed": 10,
    "gold_recall": 0.583,
-   "hypotheses": 117,
-   "true": 117,
-   "false": 0,
+   "hypotheses": 124,
+   "true": 123,
+   "false": 1,
    "unverifiable": 0,
-   "false_discovery_rate": 0.0,
-   "corpora_with_any_false_hypothesis": 0,
+   "false_discovery_rate": 0.008,
+   "corpora_with_any_false_hypothesis": 1,
    "structure_detected": 3,
    "old_babel_structure_detected": 0,
    "old_babel_errors": 0,
@@ -583,8 +586,8 @@
     "transition": 0.337,
     "unigram": 0.337
    },
-   "mean_seconds": 5.8,
-   "max_seconds": 6.13
+   "mean_seconds": 6.77,
+   "max_seconds": 7.01
   },
   {
    "generator": "noisy_regular",
@@ -592,24 +595,24 @@
    "runs": 3,
    "mean_lines": 100.0,
    "tiers": {
-    "A": 180,
+    "A": 187,
     "B": 31,
-    "C": 153
+    "C": 179
    },
    "false_by_tier": {
-    "C": 4
+    "C": 5
    },
    "principle": "internal",
    "gold_rules": 24,
-   "gold_found": 16,
+   "gold_found": 17,
    "gold_undecided": 0,
-   "gold_missed": 8,
-   "gold_recall": 0.667,
-   "hypotheses": 364,
-   "true": 360,
-   "false": 4,
+   "gold_missed": 7,
+   "gold_recall": 0.708,
+   "hypotheses": 397,
+   "true": 392,
+   "false": 5,
    "unverifiable": 0,
-   "false_discovery_rate": 0.011,
+   "false_discovery_rate": 0.013,
    "corpora_with_any_false_hypothesis": 2,
    "structure_detected": 3,
    "old_babel_structure_detected": 2,
@@ -622,8 +625,8 @@
     "transition": 0.301,
     "unigram": 0.3
    },
-   "mean_seconds": 18.89,
-   "max_seconds": 20.0
+   "mean_seconds": 21.92,
+   "max_seconds": 22.54
   },
   {
    "generator": "pcfg_prefix",
@@ -633,7 +636,7 @@
    "tiers": {
     "A": 2,
     "C": 10,
-    "B": 2
+    "B": 1
    },
    "false_by_tier": {},
    "principle": "external-principle",
@@ -642,8 +645,8 @@
    "gold_undecided": 2,
    "gold_missed": 10,
    "gold_recall": 0.0,
-   "hypotheses": 14,
-   "true": 14,
+   "hypotheses": 13,
+   "true": 13,
    "false": 0,
    "unverifiable": 0,
    "false_discovery_rate": 0.0,
@@ -659,8 +662,8 @@
     "transition": 0.168,
     "unigram": 0.168
    },
-   "mean_seconds": 1.53,
-   "max_seconds": 2.08
+   "mean_seconds": 1.54,
+   "max_seconds": 2.05
   },
   {
    "generator": "pcfg_prefix",
@@ -670,21 +673,23 @@
    "tiers": {
     "A": 8,
     "B": 5,
-    "C": 36
+    "C": 33
    },
-   "false_by_tier": {},
+   "false_by_tier": {
+    "C": 1
+   },
    "principle": "external-principle",
    "gold_rules": 12,
-   "gold_found": 4,
+   "gold_found": 3,
    "gold_undecided": 1,
-   "gold_missed": 7,
-   "gold_recall": 0.333,
-   "hypotheses": 49,
-   "true": 49,
-   "false": 0,
+   "gold_missed": 8,
+   "gold_recall": 0.25,
+   "hypotheses": 46,
+   "true": 45,
+   "false": 1,
    "unverifiable": 0,
-   "false_discovery_rate": 0.0,
-   "corpora_with_any_false_hypothesis": 0,
+   "false_discovery_rate": 0.022,
+   "corpora_with_any_false_hypothesis": 1,
    "structure_detected": 3,
    "old_babel_structure_detected": 0,
    "old_babel_errors": 0,
@@ -696,8 +701,8 @@
     "transition": 0.154,
     "unigram": 0.154
    },
-   "mean_seconds": 5.02,
-   "max_seconds": 5.49
+   "mean_seconds": 5.16,
+   "max_seconds": 5.92
   },
   {
    "generator": "pcfg_prefix",
@@ -705,9 +710,9 @@
    "runs": 3,
    "mean_lines": 30.0,
    "tiers": {
-    "A": 48,
-    "B": 20,
-    "C": 119
+    "A": 53,
+    "B": 21,
+    "C": 116
    },
    "false_by_tier": {
     "C": 1
@@ -718,8 +723,8 @@
    "gold_undecided": 0,
    "gold_missed": 3,
    "gold_recall": 0.75,
-   "hypotheses": 187,
-   "true": 186,
+   "hypotheses": 190,
+   "true": 189,
    "false": 1,
    "unverifiable": 0,
    "false_discovery_rate": 0.005,
@@ -735,8 +740,8 @@
     "transition": 0.188,
     "unigram": 0.192
    },
-   "mean_seconds": 9.18,
-   "max_seconds": 9.48
+   "mean_seconds": 9.53,
+   "max_seconds": 9.81
   },
   {
    "generator": "pcfg_prefix",
@@ -744,12 +749,12 @@
    "runs": 3,
    "mean_lines": 100.0,
    "tiers": {
-    "A": 300,
-    "B": 83,
-    "C": 429
+    "A": 293,
+    "B": 53,
+    "C": 430
    },
    "false_by_tier": {
-    "C": 13,
+    "C": 12,
     "A": 1
    },
    "principle": "external-principle",
@@ -758,9 +763,9 @@
    "gold_undecided": 0,
    "gold_missed": 3,
    "gold_recall": 0.75,
-   "hypotheses": 812,
-   "true": 798,
-   "false": 14,
+   "hypotheses": 776,
+   "true": 763,
+   "false": 13,
    "unverifiable": 0,
    "false_discovery_rate": 0.017,
    "corpora_with_any_false_hypothesis": 3,
@@ -775,8 +780,8 @@
     "transition": 0.254,
     "unigram": 0.26
    },
-   "mean_seconds": 30.14,
-   "max_seconds": 31.62
+   "mean_seconds": 30.69,
+   "max_seconds": 31.76
   },
   {
    "generator": "periodic",
@@ -804,8 +809,8 @@
    "old_babel_structure_detected": 0,
    "old_babel_errors": 0,
    "segmentation_f1": {},
-   "mean_seconds": 0.99,
-   "max_seconds": 1.16
+   "mean_seconds": 0.93,
+   "max_seconds": 1.02
   },
   {
    "generator": "periodic",
@@ -832,8 +837,8 @@
    "old_babel_structure_detected": 0,
    "old_babel_errors": 0,
    "segmentation_f1": {},
-   "mean_seconds": 2.84,
-   "max_seconds": 3.04
+   "mean_seconds": 2.88,
+   "max_seconds": 3.18
   },
   {
    "generator": "periodic",
@@ -841,11 +846,12 @@
    "runs": 3,
    "mean_lines": 30.0,
    "tiers": {
-    "B": 9,
-    "C": 1
+    "B": 8,
+    "A": 1,
+    "C": 2
    },
    "false_by_tier": {
-    "C": 1
+    "C": 2
    },
    "principle": "internal",
    "gold_rules": 3,
@@ -853,18 +859,18 @@
    "gold_undecided": 0,
    "gold_missed": 0,
    "gold_recall": 1.0,
-   "hypotheses": 10,
+   "hypotheses": 11,
    "true": 9,
-   "false": 1,
+   "false": 2,
    "unverifiable": 0,
-   "false_discovery_rate": 0.1,
+   "false_discovery_rate": 0.182,
    "corpora_with_any_false_hypothesis": 1,
    "structure_detected": 3,
    "old_babel_structure_detected": 0,
    "old_babel_errors": 0,
    "segmentation_f1": {},
-   "mean_seconds": 5.0,
-   "max_seconds": 5.35
+   "mean_seconds": 5.65,
+   "max_seconds": 6.2
   },
   {
    "generator": "periodic",
@@ -873,27 +879,29 @@
    "mean_lines": 100.0,
    "tiers": {
     "B": 12,
-    "C": 4
+    "C": 3
    },
-   "false_by_tier": {},
+   "false_by_tier": {
+    "C": 2
+   },
    "principle": "internal",
    "gold_rules": 3,
    "gold_found": 3,
    "gold_undecided": 0,
    "gold_missed": 0,
    "gold_recall": 1.0,
-   "hypotheses": 16,
-   "true": 16,
-   "false": 0,
+   "hypotheses": 15,
+   "true": 13,
+   "false": 2,
    "unverifiable": 0,
-   "false_discovery_rate": 0.0,
-   "corpora_with_any_false_hypothesis": 0,
+   "false_discovery_rate": 0.133,
+   "corpora_with_any_false_hypothesis": 1,
    "structure_detected": 3,
    "old_babel_structure_detected": 3,
    "old_babel_errors": 0,
    "segmentation_f1": {},
-   "mean_seconds": 18.74,
-   "max_seconds": 19.6
+   "mean_seconds": 18.84,
+   "max_seconds": 20.22
   },
   {
    "generator": "random_uniform",
@@ -919,7 +927,7 @@
    "old_babel_errors": 0,
    "segmentation_f1": {},
    "mean_seconds": 0.72,
-   "max_seconds": 0.88
+   "max_seconds": 0.91
   },
   {
    "generator": "random_uniform",
@@ -948,8 +956,8 @@
    "old_babel_structure_detected": 0,
    "old_babel_errors": 0,
    "segmentation_f1": {},
-   "mean_seconds": 3.03,
-   "max_seconds": 3.22
+   "mean_seconds": 3.11,
+   "max_seconds": 3.76
   },
   {
    "generator": "random_uniform",
@@ -974,8 +982,8 @@
    "old_babel_structure_detected": 0,
    "old_babel_errors": 0,
    "segmentation_f1": {},
-   "mean_seconds": 4.82,
-   "max_seconds": 4.96
+   "mean_seconds": 5.07,
+   "max_seconds": 5.2
   },
   {
    "generator": "random_uniform",
@@ -1000,8 +1008,8 @@
    "old_babel_structure_detected": 0,
    "old_babel_errors": 0,
    "segmentation_f1": {},
-   "mean_seconds": 13.51,
-   "max_seconds": 14.31
+   "mean_seconds": 15.23,
+   "max_seconds": 16.12
   },
   {
    "generator": "random_zipf",
@@ -1026,8 +1034,8 @@
    "old_babel_structure_detected": 0,
    "old_babel_errors": 0,
    "segmentation_f1": {},
-   "mean_seconds": 0.62,
-   "max_seconds": 0.72
+   "mean_seconds": 0.58,
+   "max_seconds": 0.77
   },
   {
    "generator": "random_zipf",
@@ -1048,12 +1056,12 @@
    "unverifiable": 0,
    "false_discovery_rate": null,
    "corpora_with_any_false_hypothesis": 0,
-   "structure_detected": 1,
+   "structure_detected": 3,
    "old_babel_structure_detected": 0,
    "old_babel_errors": 0,
    "segmentation_f1": {},
-   "mean_seconds": 1.92,
-   "max_seconds": 2.02
+   "mean_seconds": 1.86,
+   "max_seconds": 2.04
   },
   {
    "generator": "random_zipf",
@@ -1078,8 +1086,8 @@
    "old_babel_structure_detected": 0,
    "old_babel_errors": 0,
    "segmentation_f1": {},
-   "mean_seconds": 5.34,
-   "max_seconds": 5.55
+   "mean_seconds": 6.31,
+   "max_seconds": 7.14
   },
   {
    "generator": "random_zipf",
@@ -1104,8 +1112,8 @@
    "old_babel_structure_detected": 0,
    "old_babel_errors": 0,
    "segmentation_f1": {},
-   "mean_seconds": 20.39,
-   "max_seconds": 21.09
+   "mean_seconds": 24.29,
+   "max_seconds": 25.3
   },
   {
    "generator": "real_english",
@@ -1113,9 +1121,9 @@
    "runs": 3,
    "mean_lines": 5.0,
    "tiers": {
-    "A": 22,
+    "A": 21,
     "B": 7,
-    "C": 43
+    "C": 39
    },
    "false_by_tier": {
     "C": 10
@@ -1126,11 +1134,11 @@
    "gold_undecided": 0,
    "gold_missed": 0,
    "gold_recall": null,
-   "hypotheses": 72,
-   "true": 62,
+   "hypotheses": 67,
+   "true": 57,
    "false": 10,
    "unverifiable": 0,
-   "false_discovery_rate": 0.139,
+   "false_discovery_rate": 0.149,
    "corpora_with_any_false_hypothesis": 3,
    "structure_detected": 3,
    "old_babel_structure_detected": 0,
@@ -1143,8 +1151,8 @@
     "transition": 0.445,
     "unigram": 0.454
    },
-   "mean_seconds": 6.03,
-   "max_seconds": 6.95
+   "mean_seconds": 6.21,
+   "max_seconds": 7.67
   },
   {
    "generator": "real_english",
@@ -1152,12 +1160,12 @@
    "runs": 3,
    "mean_lines": 13.0,
    "tiers": {
-    "A": 43,
-    "B": 19,
-    "C": 98
+    "A": 39,
+    "B": 18,
+    "C": 92
    },
    "false_by_tier": {
-    "C": 31,
+    "C": 27,
     "A": 1,
     "B": 1
    },
@@ -1167,11 +1175,11 @@
    "gold_undecided": 0,
    "gold_missed": 0,
    "gold_recall": null,
-   "hypotheses": 160,
-   "true": 127,
-   "false": 33,
+   "hypotheses": 149,
+   "true": 120,
+   "false": 29,
    "unverifiable": 0,
-   "false_discovery_rate": 0.206,
+   "false_discovery_rate": 0.195,
    "corpora_with_any_false_hypothesis": 3,
    "structure_detected": 3,
    "old_babel_structure_detected": 2,
@@ -1184,8 +1192,8 @@
     "transition": 0.488,
     "unigram": 0.5
    },
-   "mean_seconds": 13.02,
-   "max_seconds": 14.93
+   "mean_seconds": 12.55,
+   "max_seconds": 13.06
   },
   {
    "generator": "real_english",
@@ -1194,13 +1202,13 @@
    "mean_lines": 25.0,
    "tiers": {
     "A": 78,
-    "B": 66,
-    "C": 324
+    "B": 77,
+    "C": 340
    },
    "false_by_tier": {
+    "A": 5,
     "B": 10,
-    "C": 123,
-    "A": 4
+    "C": 128
    },
    "principle": "real-language",
    "gold_rules": 0,
@@ -1208,11 +1216,11 @@
    "gold_undecided": 0,
    "gold_missed": 0,
    "gold_recall": null,
-   "hypotheses": 468,
-   "true": 331,
-   "false": 137,
+   "hypotheses": 495,
+   "true": 352,
+   "false": 143,
    "unverifiable": 0,
-   "false_discovery_rate": 0.293,
+   "false_discovery_rate": 0.289,
    "corpora_with_any_false_hypothesis": 3,
    "structure_detected": 3,
    "old_babel_structure_detected": 3,
@@ -1225,8 +1233,8 @@
     "transition": 0.494,
     "unigram": 0.502
    },
-   "mean_seconds": 30.22,
-   "max_seconds": 31.27
+   "mean_seconds": 30.29,
+   "max_seconds": 31.63
   },
   {
    "generator": "regular",
@@ -1236,7 +1244,7 @@
    "tiers": {
     "A": 4,
     "B": 2,
-    "C": 9
+    "C": 6
    },
    "false_by_tier": {},
    "principle": "internal",
@@ -1245,8 +1253,8 @@
    "gold_undecided": 2,
    "gold_missed": 16,
    "gold_recall": 0.25,
-   "hypotheses": 15,
-   "true": 15,
+   "hypotheses": 12,
+   "true": 12,
    "false": 0,
    "unverifiable": 0,
    "false_discovery_rate": 0.0,
@@ -1262,8 +1270,8 @@
     "transition": 0.319,
     "unigram": 0.319
    },
-   "mean_seconds": 1.31,
-   "max_seconds": 1.61
+   "mean_seconds": 1.36,
+   "max_seconds": 1.51
   },
   {
    "generator": "regular",
@@ -1271,9 +1279,8 @@
    "runs": 3,
    "mean_lines": 13.0,
    "tiers": {
-    "A": 25,
-    "B": 3,
-    "C": 44
+    "A": 26,
+    "C": 48
    },
    "false_by_tier": {},
    "principle": "internal",
@@ -1282,8 +1289,8 @@
    "gold_undecided": 0,
    "gold_missed": 11,
    "gold_recall": 0.542,
-   "hypotheses": 72,
-   "true": 72,
+   "hypotheses": 74,
+   "true": 74,
    "false": 0,
    "unverifiable": 0,
    "false_discovery_rate": 0.0,
@@ -1299,8 +1306,8 @@
     "transition": 0.333,
     "unigram": 0.333
    },
-   "mean_seconds": 3.57,
-   "max_seconds": 3.6
+   "mean_seconds": 3.81,
+   "max_seconds": 4.6
   },
   {
    "generator": "regular",
@@ -1308,25 +1315,23 @@
    "runs": 3,
    "mean_lines": 30.0,
    "tiers": {
-    "A": 75,
-    "B": 13,
-    "C": 79
+    "A": 81,
+    "B": 11,
+    "C": 92
    },
-   "false_by_tier": {
-    "C": 1
-   },
+   "false_by_tier": {},
    "principle": "internal",
    "gold_rules": 24,
-   "gold_found": 16,
+   "gold_found": 15,
    "gold_undecided": 0,
-   "gold_missed": 8,
-   "gold_recall": 0.667,
-   "hypotheses": 167,
-   "true": 166,
-   "false": 1,
+   "gold_missed": 9,
+   "gold_recall": 0.625,
+   "hypotheses": 184,
+   "true": 184,
+   "false": 0,
    "unverifiable": 0,
-   "false_discovery_rate": 0.006,
-   "corpora_with_any_false_hypothesis": 1,
+   "false_discovery_rate": 0.0,
+   "corpora_with_any_false_hypothesis": 0,
    "structure_detected": 3,
    "old_babel_structure_detected": 3,
    "old_babel_errors": 0,
@@ -1338,8 +1343,8 @@
     "transition": 0.366,
     "unigram": 0.366
    },
-   "mean_seconds": 5.87,
-   "max_seconds": 6.12
+   "mean_seconds": 7.4,
+   "max_seconds": 8.37
   },
   {
    "generator": "regular",
@@ -1347,25 +1352,24 @@
    "runs": 3,
    "mean_lines": 100.0,
    "tiers": {
-    "A": 211,
-    "B": 71,
-    "C": 288
+    "A": 223,
+    "B": 67,
+    "C": 242
    },
    "false_by_tier": {
-    "B": 1,
-    "C": 3
+    "C": 4
    },
    "principle": "internal",
    "gold_rules": 24,
-   "gold_found": 16,
+   "gold_found": 15,
    "gold_undecided": 0,
-   "gold_missed": 8,
-   "gold_recall": 0.667,
-   "hypotheses": 570,
-   "true": 566,
+   "gold_missed": 9,
+   "gold_recall": 0.625,
+   "hypotheses": 532,
+   "true": 528,
    "false": 4,
    "unverifiable": 0,
-   "false_discovery_rate": 0.007,
+   "false_discovery_rate": 0.008,
    "corpora_with_any_false_hypothesis": 2,
    "structure_detected": 3,
    "old_babel_structure_detected": 3,
@@ -1378,29 +1382,31 @@
     "transition": 0.343,
     "unigram": 0.341
    },
-   "mean_seconds": 21.06,
-   "max_seconds": 22.27
+   "mean_seconds": 23.94,
+   "max_seconds": 25.37
   },
   {
    "generator": "weak_regular",
    "size": 5,
    "runs": 3,
    "mean_lines": 5.0,
-   "tiers": {},
+   "tiers": {
+    "C": 1
+   },
    "false_by_tier": {},
    "principle": "internal",
    "gold_rules": 24,
    "gold_found": 0,
-   "gold_undecided": 7,
-   "gold_missed": 17,
+   "gold_undecided": 6,
+   "gold_missed": 18,
    "gold_recall": 0.0,
-   "hypotheses": 0,
-   "true": 0,
+   "hypotheses": 1,
+   "true": 1,
    "false": 0,
    "unverifiable": 0,
-   "false_discovery_rate": null,
+   "false_discovery_rate": 0.0,
    "corpora_with_any_false_hypothesis": 0,
-   "structure_detected": 3,
+   "structure_detected": 2,
    "old_babel_structure_detected": 0,
    "old_babel_errors": 0,
    "segmentation_f1": {
@@ -1411,8 +1417,8 @@
     "transition": 0.259,
     "unigram": 0.259
    },
-   "mean_seconds": 1.24,
-   "max_seconds": 1.37
+   "mean_seconds": 1.21,
+   "max_seconds": 1.3
   },
   {
    "generator": "weak_regular",
@@ -1420,11 +1426,13 @@
    "runs": 3,
    "mean_lines": 13.0,
    "tiers": {
-    "B": 3,
-    "C": 11,
-    "A": 1
+    "C": 12,
+    "A": 1,
+    "B": 2
    },
-   "false_by_tier": {},
+   "false_by_tier": {
+    "C": 1
+   },
    "principle": "internal",
    "gold_rules": 24,
    "gold_found": 7,
@@ -1432,11 +1440,11 @@
    "gold_missed": 17,
    "gold_recall": 0.292,
    "hypotheses": 15,
-   "true": 15,
-   "false": 0,
+   "true": 14,
+   "false": 1,
    "unverifiable": 0,
-   "false_discovery_rate": 0.0,
-   "corpora_with_any_false_hypothesis": 0,
+   "false_discovery_rate": 0.067,
+   "corpora_with_any_false_hypothesis": 1,
    "structure_detected": 3,
    "old_babel_structure_detected": 0,
    "old_babel_errors": 0,
@@ -1448,8 +1456,8 @@
     "transition": 0.413,
     "unigram": 0.413
    },
-   "mean_seconds": 3.39,
-   "max_seconds": 3.59
+   "mean_seconds": 3.72,
+   "max_seconds": 3.96
   },
   {
    "generator": "weak_regular",
@@ -1458,24 +1466,22 @@
    "mean_lines": 30.0,
    "tiers": {
     "A": 8,
-    "B": 11,
-    "C": 27
+    "B": 12,
+    "C": 18
    },
-   "false_by_tier": {
-    "C": 3
-   },
+   "false_by_tier": {},
    "principle": "internal",
    "gold_rules": 24,
    "gold_found": 13,
-   "gold_undecided": 0,
-   "gold_missed": 11,
+   "gold_undecided": 1,
+   "gold_missed": 10,
    "gold_recall": 0.542,
-   "hypotheses": 46,
-   "true": 43,
-   "false": 3,
+   "hypotheses": 38,
+   "true": 38,
+   "false": 0,
    "unverifiable": 0,
-   "false_discovery_rate": 0.065,
-   "corpora_with_any_false_hypothesis": 1,
+   "false_discovery_rate": 0.0,
+   "corpora_with_any_false_hypothesis": 0,
    "structure_detected": 3,
    "old_babel_structure_detected": 0,
    "old_babel_errors": 0,
@@ -1487,8 +1493,8 @@
     "transition": 0.441,
     "unigram": 0.441
    },
-   "mean_seconds": 6.06,
-   "max_seconds": 6.33
+   "mean_seconds": 6.67,
+   "max_seconds": 6.71
   },
   {
    "generator": "weak_regular",
@@ -1496,24 +1502,24 @@
    "runs": 3,
    "mean_lines": 100.0,
    "tiers": {
-    "A": 73,
-    "B": 9,
-    "C": 139
+    "A": 71,
+    "B": 11,
+    "C": 130
    },
    "false_by_tier": {
     "C": 15
    },
    "principle": "internal",
    "gold_rules": 24,
-   "gold_found": 17,
+   "gold_found": 16,
    "gold_undecided": 0,
-   "gold_missed": 7,
-   "gold_recall": 0.708,
-   "hypotheses": 221,
-   "true": 206,
+   "gold_missed": 8,
+   "gold_recall": 0.667,
+   "hypotheses": 212,
+   "true": 197,
    "false": 15,
    "unverifiable": 0,
-   "false_discovery_rate": 0.068,
+   "false_discovery_rate": 0.071,
    "corpora_with_any_false_hypothesis": 3,
    "structure_detected": 3,
    "old_babel_structure_detected": 1,
@@ -1526,8 +1532,8 @@
     "transition": 0.454,
     "unigram": 0.454
    },
-   "mean_seconds": 18.48,
-   "max_seconds": 19.06
+   "mean_seconds": 20.31,
+   "max_seconds": 20.95
   }
  ],
  "runs": [
@@ -1569,7 +1575,7 @@
     "decipherable_structure": false,
     "seconds": 0.0
    },
-   "seconds": 0.66,
+   "seconds": 0.65,
    "description": "20種の記号を一様・独立に並べた行（長さ6〜14）。規則は存在しない"
   },
   {
@@ -1595,7 +1601,7 @@
     "verdict": "no_structure_detected"
    },
    "global": {
-    "sequential_dependence": 0.075,
+    "sequential_dependence": 0.1,
     "repetition": 1.0,
     "edge_position": 1.0,
     "longest_repeat": 1.0,
@@ -1610,7 +1616,7 @@
     "decipherable_structure": false,
     "seconds": 0.0
    },
-   "seconds": 0.63,
+   "seconds": 0.61,
    "description": "20種の記号を一様・独立に並べた行（長さ6〜14）。規則は存在しない"
   },
   {
@@ -1651,7 +1657,7 @@
     "decipherable_structure": false,
     "seconds": 0.0
    },
-   "seconds": 0.88,
+   "seconds": 0.91,
    "description": "20種の記号を一様・独立に並べた行（長さ6〜14）。規則は存在しない"
   },
   {
@@ -1692,7 +1698,7 @@
     "decipherable_structure": false,
     "seconds": 0.0
    },
-   "seconds": 2.73,
+   "seconds": 2.4,
    "description": "20種の記号を一様・独立に並べた行（長さ6〜14）。規則は存在しない"
   },
   {
@@ -1728,7 +1734,7 @@
     "verdict": "structure_unstable"
    },
    "global": {
-    "sequential_dependence": 0.725,
+    "sequential_dependence": 0.8500000000000001,
     "repetition": 1.0,
     "edge_position": 1.0,
     "longest_repeat": 1.0,
@@ -1741,9 +1747,9 @@
     "syntax_z": 0.0,
     "morphology_present": false,
     "decipherable_structure": false,
-    "seconds": 0.0
+    "seconds": 0.01
    },
-   "seconds": 3.13,
+   "seconds": 3.76,
    "description": "20種の記号を一様・独立に並べた行（長さ6〜14）。規則は存在しない"
   },
   {
@@ -1784,7 +1790,7 @@
     "decipherable_structure": false,
     "seconds": 0.0
    },
-   "seconds": 3.22,
+   "seconds": 3.17,
    "description": "20種の記号を一様・独立に並べた行（長さ6〜14）。規則は存在しない"
   },
   {
@@ -1825,7 +1831,7 @@
     "decipherable_structure": false,
     "seconds": 0.01
    },
-   "seconds": 4.87,
+   "seconds": 4.96,
    "description": "20種の記号を一様・独立に並べた行（長さ6〜14）。規則は存在しない"
   },
   {
@@ -1866,7 +1872,7 @@
     "decipherable_structure": false,
     "seconds": 0.01
    },
-   "seconds": 4.64,
+   "seconds": 5.04,
    "description": "20種の記号を一様・独立に並べた行（長さ6〜14）。規則は存在しない"
   },
   {
@@ -1907,7 +1913,7 @@
     "decipherable_structure": false,
     "seconds": 0.01
    },
-   "seconds": 4.96,
+   "seconds": 5.2,
    "description": "20種の記号を一様・独立に並べた行（長さ6〜14）。規則は存在しない"
   },
   {
@@ -1935,7 +1941,7 @@
    "global": {
     "sequential_dependence": 1.0,
     "repetition": 1.0,
-    "edge_position": 0.25,
+    "edge_position": 0.275,
     "longest_repeat": 1.0,
     "line_similarity": 1.0
    },
@@ -1946,9 +1952,9 @@
     "syntax_z": 0.0,
     "morphology_present": false,
     "decipherable_structure": false,
-    "seconds": 0.04
+    "seconds": 0.03
    },
-   "seconds": 13.35,
+   "seconds": 15.2,
    "description": "20種の記号を一様・独立に並べた行（長さ6〜14）。規則は存在しない"
   },
   {
@@ -1987,9 +1993,9 @@
     "syntax_z": 0.0,
     "morphology_present": false,
     "decipherable_structure": false,
-    "seconds": 0.03
+    "seconds": 0.05
    },
-   "seconds": 12.87,
+   "seconds": 14.37,
    "description": "20種の記号を一様・独立に並べた行（長さ6〜14）。規則は存在しない"
   },
   {
@@ -2015,11 +2021,11 @@
     "verdict": "no_structure_detected"
    },
    "global": {
-    "sequential_dependence": 0.645,
-    "repetition": 0.66,
-    "edge_position": 0.1,
+    "sequential_dependence": 0.56,
+    "repetition": 0.65,
+    "edge_position": 0.075,
     "longest_repeat": 1.0,
-    "line_similarity": 0.34
+    "line_similarity": 0.56
    },
    "segmentation_f1": {},
    "compression_p": 1.0,
@@ -2028,9 +2034,9 @@
     "syntax_z": 2.09,
     "morphology_present": false,
     "decipherable_structure": false,
-    "seconds": 0.03
+    "seconds": 0.07
    },
-   "seconds": 14.31,
+   "seconds": 16.12,
    "description": "20種の記号を一様・独立に並べた行（長さ6〜14）。規則は存在しない"
   },
   {
@@ -2056,7 +2062,7 @@
     "verdict": "no_structure_detected"
    },
    "global": {
-    "sequential_dependence": 0.1,
+    "sequential_dependence": 0.125,
     "repetition": 1.0,
     "edge_position": 1.0,
     "longest_repeat": 1.0,
@@ -2071,7 +2077,7 @@
     "decipherable_structure": false,
     "seconds": 0.0
    },
-   "seconds": 0.72,
+   "seconds": 0.77,
    "description": "30種の記号を Zipf 分布で独立に並べた行。頻度の偏りはあるが並びの規則はない"
   },
   {
@@ -2098,9 +2104,9 @@
    },
    "global": {
     "sequential_dependence": 1.0,
-    "repetition": 0.35000000000000003,
+    "repetition": 0.36,
     "edge_position": 1.0,
-    "longest_repeat": 0.35000000000000003,
+    "longest_repeat": 0.325,
     "line_similarity": 1.0
    },
    "segmentation_f1": {},
@@ -2112,7 +2118,7 @@
     "decipherable_structure": false,
     "seconds": 0.0
    },
-   "seconds": 0.61,
+   "seconds": 0.48,
    "description": "30種の記号を Zipf 分布で独立に並べた行。頻度の偏りはあるが並びの規則はない"
   },
   {
@@ -2153,7 +2159,7 @@
     "decipherable_structure": false,
     "seconds": 0.0
    },
-   "seconds": 0.54,
+   "seconds": 0.48,
    "description": "30種の記号を Zipf 分布で独立に並べた行。頻度の偏りはあるが並びの規則はない"
   },
   {
@@ -2179,11 +2185,11 @@
     "verdict": "global_only"
    },
    "global": {
-    "sequential_dependence": 0.025,
-    "repetition": 0.82,
+    "sequential_dependence": 0.05,
+    "repetition": 0.78,
     "edge_position": 1.0,
     "longest_repeat": 1.0,
-    "line_similarity": 0.82
+    "line_similarity": 0.885
    },
    "segmentation_f1": {},
    "compression_p": 0.1,
@@ -2194,7 +2200,7 @@
     "decipherable_structure": false,
     "seconds": 0.0
    },
-   "seconds": 2.02,
+   "seconds": 2.04,
    "description": "30種の記号を Zipf 分布で独立に並べた行。頻度の偏りはあるが並びの規則はない"
   },
   {
@@ -2217,13 +2223,13 @@
     "false_examples": [],
     "tiers": {},
     "false_by_tier": {},
-    "verdict": "no_structure_detected"
+    "verdict": "global_only"
    },
    "global": {
     "sequential_dependence": 1.0,
-    "repetition": 0.075,
+    "repetition": 0.05,
     "edge_position": 1.0,
-    "longest_repeat": 0.22,
+    "longest_repeat": 0.32,
     "line_similarity": 1.0
    },
    "segmentation_f1": {},
@@ -2235,7 +2241,7 @@
     "decipherable_structure": false,
     "seconds": 0.0
    },
-   "seconds": 1.85,
+   "seconds": 1.82,
    "description": "30種の記号を Zipf 分布で独立に並べた行。頻度の偏りはあるが並びの規則はない"
   },
   {
@@ -2258,12 +2264,12 @@
     "false_examples": [],
     "tiers": {},
     "false_by_tier": {},
-    "verdict": "no_structure_detected"
+    "verdict": "global_only"
    },
    "global": {
     "sequential_dependence": 1.0,
     "repetition": 1.0,
-    "edge_position": 0.15,
+    "edge_position": 0.05,
     "longest_repeat": 1.0,
     "line_similarity": 1.0
    },
@@ -2276,7 +2282,7 @@
     "decipherable_structure": false,
     "seconds": 0.0
    },
-   "seconds": 1.9,
+   "seconds": 1.71,
    "description": "30種の記号を Zipf 分布で独立に並べた行。頻度の偏りはあるが並びの規則はない"
   },
   {
@@ -2303,7 +2309,7 @@
    },
    "global": {
     "sequential_dependence": 1.0,
-    "repetition": 0.925,
+    "repetition": 1.0,
     "edge_position": 1.0,
     "longest_repeat": 1.0,
     "line_similarity": 1.0
@@ -2317,7 +2323,7 @@
     "decipherable_structure": false,
     "seconds": 0.01
    },
-   "seconds": 5.53,
+   "seconds": 7.14,
    "description": "30種の記号を Zipf 分布で独立に並べた行。頻度の偏りはあるが並びの規則はない"
   },
   {
@@ -2344,10 +2350,10 @@
    },
    "global": {
     "sequential_dependence": 0.88,
-    "repetition": 0.1,
-    "edge_position": 0.025,
-    "longest_repeat": 0.38,
-    "line_similarity": 0.21000000000000002
+    "repetition": 0.06,
+    "edge_position": 0.05,
+    "longest_repeat": 0.36,
+    "line_similarity": 0.255
    },
    "segmentation_f1": {},
    "compression_p": 0.9,
@@ -2358,7 +2364,7 @@
     "decipherable_structure": false,
     "seconds": 0.01
    },
-   "seconds": 5.55,
+   "seconds": 6.05,
    "description": "30種の記号を Zipf 分布で独立に並べた行。頻度の偏りはあるが並びの規則はない"
   },
   {
@@ -2386,7 +2392,7 @@
    "global": {
     "sequential_dependence": 1.0,
     "repetition": 1.0,
-    "edge_position": 0.075,
+    "edge_position": 0.1,
     "longest_repeat": 1.0,
     "line_similarity": 1.0
    },
@@ -2399,7 +2405,7 @@
     "decipherable_structure": false,
     "seconds": 0.01
    },
-   "seconds": 4.95,
+   "seconds": 5.75,
    "description": "30種の記号を Zipf 分布で独立に並べた行。頻度の偏りはあるが並びの規則はない"
   },
   {
@@ -2440,7 +2446,7 @@
     "decipherable_structure": false,
     "seconds": 0.03
    },
-   "seconds": 19.39,
+   "seconds": 25.3,
    "description": "30種の記号を Zipf 分布で独立に並べた行。頻度の偏りはあるが並びの規則はない"
   },
   {
@@ -2468,9 +2474,9 @@
    "global": {
     "sequential_dependence": 1.0,
     "repetition": 1.0,
-    "edge_position": 0.6,
+    "edge_position": 0.55,
     "longest_repeat": 1.0,
-    "line_similarity": 0.6
+    "line_similarity": 0.56
    },
    "segmentation_f1": {},
    "compression_p": 0.95,
@@ -2479,9 +2485,9 @@
     "syntax_z": 4.53,
     "morphology_present": false,
     "decipherable_structure": false,
-    "seconds": 0.03
+    "seconds": 0.06
    },
-   "seconds": 20.7,
+   "seconds": 23.37,
    "description": "30種の記号を Zipf 分布で独立に並べた行。頻度の偏りはあるが並びの規則はない"
   },
   {
@@ -2507,11 +2513,11 @@
     "verdict": "no_structure_detected"
    },
    "global": {
-    "sequential_dependence": 0.98,
+    "sequential_dependence": 1.0,
     "repetition": 1.0,
     "edge_position": 1.0,
     "longest_repeat": 1.0,
-    "line_similarity": 0.875
+    "line_similarity": 0.8999999999999999
    },
    "segmentation_f1": {},
    "compression_p": 1.0,
@@ -2520,9 +2526,9 @@
     "syntax_z": -0.55,
     "morphology_present": false,
     "decipherable_structure": false,
-    "seconds": 0.04
+    "seconds": 0.03
    },
-   "seconds": 21.09,
+   "seconds": 24.19,
    "description": "30種の記号を Zipf 分布で独立に並べた行。頻度の偏りはあるが並びの規則はない"
   },
   {
@@ -2556,10 +2562,10 @@
       "true": 1
      },
      "linepair": {
-      "true": 1
+      "true": 2
      },
      "ngram": {
-      "true": 2
+      "true": 1
      }
     },
     "false_examples": [],
@@ -2595,7 +2601,7 @@
     "decipherable_structure": false,
     "seconds": 0.0
    },
-   "seconds": 1.13,
+   "seconds": 1.16,
    "description": "S 主語-x [形容詞] 目的語-q 動詞-v E の固定文型。文頭標識 S・文末標識 E・格接尾辞 x/q・動詞接尾辞 v"
   },
   {
@@ -2621,8 +2627,8 @@
     "gold_undecided": [
      "文頭標識 S"
     ],
-    "hypotheses": 7,
-    "true": 7,
+    "hypotheses": 5,
+    "true": 5,
     "false": 0,
     "unverifiable": 0,
     "per_family": {
@@ -2633,9 +2639,6 @@
       "true": 3
      },
      "linepair": {
-      "true": 2
-     },
-     "gap": {
       "true": 1
      }
     },
@@ -2643,7 +2646,7 @@
     "tiers": {
      "A": 2,
      "B": 1,
-     "C": 4
+     "C": 2
     },
     "false_by_tier": {},
     "verdict": "structure_observed"
@@ -2672,7 +2675,7 @@
     "decipherable_structure": false,
     "seconds": 0.0
    },
-   "seconds": 1.61,
+   "seconds": 1.51,
    "description": "S 主語-x [形容詞] 目的語-q 動詞-v E の固定文型。文頭標識 S・文末標識 E・格接尾辞 x/q・動詞接尾辞 v"
   },
   {
@@ -2698,8 +2701,8 @@
     "gold_undecided": [
      "文頭標識 S"
     ],
-    "hypotheses": 4,
-    "true": 4,
+    "hypotheses": 3,
+    "true": 3,
     "false": 0,
     "unverifiable": 0,
     "per_family": {
@@ -2710,13 +2713,13 @@
       "true": 1
      },
      "ngram": {
-      "true": 2
+      "true": 1
      }
     },
     "false_examples": [],
     "tiers": {
      "A": 1,
-     "C": 3
+     "C": 2
     },
     "false_by_tier": {},
     "verdict": "structure_observed"
@@ -2745,7 +2748,7 @@
     "decipherable_structure": false,
     "seconds": 0.0
    },
-   "seconds": 1.19,
+   "seconds": 1.42,
    "description": "S 主語-x [形容詞] 目的語-q 動詞-v E の固定文型。文頭標識 S・文末標識 E・格接尾辞 x/q・動詞接尾辞 v"
   },
   {
@@ -2760,18 +2763,18 @@
     "gold_found": [
      "文頭標識 S",
      "文末標識 E",
-     "動詞接尾辞 v の直後に E"
+     "動詞接尾辞 v の直後に E",
+     "x は各行に1回（必須）",
+     "v は各行に1回（必須）"
     ],
     "gold_missed": [
      "接尾辞 x/q/v が同じ枠に入る",
      "格接尾辞 x",
-     "格接尾辞 q",
-     "x は各行に1回（必須）",
-     "v は各行に1回（必須）"
+     "格接尾辞 q"
     ],
     "gold_undecided": [],
-    "hypotheses": 18,
-    "true": 18,
+    "hypotheses": 27,
+    "true": 27,
     "false": 0,
     "unverifiable": 0,
     "per_family": {
@@ -2779,17 +2782,19 @@
       "true": 6
      },
      "ngram": {
-      "true": 10
+      "true": 15
      },
      "linepair": {
-      "true": 2
+      "true": 1
+     },
+     "dispersion": {
+      "true": 5
      }
     },
     "false_examples": [],
     "tiers": {
-     "A": 7,
-     "B": 1,
-     "C": 10
+     "A": 8,
+     "C": 19
     },
     "false_by_tier": {},
     "verdict": "structure_observed"
@@ -2816,9 +2821,9 @@
     "syntax_z": 0.0,
     "morphology_present": false,
     "decipherable_structure": false,
-    "seconds": 0.01
+    "seconds": 0.0
    },
-   "seconds": 3.6,
+   "seconds": 3.33,
    "description": "S 主語-x [形容詞] 目的語-q 動詞-v E の固定文型。文頭標識 S・文末標識 E・格接尾辞 x/q・動詞接尾辞 v"
   },
   {
@@ -2843,8 +2848,8 @@
      "格接尾辞 q"
     ],
     "gold_undecided": [],
-    "hypotheses": 28,
-    "true": 28,
+    "hypotheses": 26,
+    "true": 26,
     "false": 0,
     "unverifiable": 0,
     "per_family": {
@@ -2855,9 +2860,6 @@
       "true": 14
      },
      "linepair": {
-      "true": 2
-     },
-     "substitution": {
       "true": 1
      },
      "dispersion": {
@@ -2866,9 +2868,8 @@
     },
     "false_examples": [],
     "tiers": {
-     "A": 7,
-     "B": 1,
-     "C": 20
+     "A": 8,
+     "C": 18
     },
     "false_by_tier": {},
     "verdict": "structure_observed"
@@ -2897,7 +2898,7 @@
     "decipherable_structure": false,
     "seconds": 0.0
    },
-   "seconds": 3.56,
+   "seconds": 3.49,
    "description": "S 主語-x [形容詞] 目的語-q 動詞-v E の固定文型。文頭標識 S・文末標識 E・格接尾辞 x/q・動詞接尾辞 v"
   },
   {
@@ -2912,18 +2913,18 @@
     "gold_found": [
      "文頭標識 S",
      "文末標識 E",
-     "動詞接尾辞 v の直後に E",
-     "x は各行に1回（必須）",
-     "v は各行に1回（必須）"
+     "動詞接尾辞 v の直後に E"
     ],
     "gold_missed": [
      "接尾辞 x/q/v が同じ枠に入る",
      "格接尾辞 x",
-     "格接尾辞 q"
+     "格接尾辞 q",
+     "x は各行に1回（必須）",
+     "v は各行に1回（必須）"
     ],
     "gold_undecided": [],
-    "hypotheses": 26,
-    "true": 26,
+    "hypotheses": 21,
+    "true": 21,
     "false": 0,
     "unverifiable": 0,
     "per_family": {
@@ -2932,9 +2933,6 @@
      },
      "ngram": {
       "true": 11
-     },
-     "dispersion": {
-      "true": 5
      },
      "linepair": {
       "true": 1
@@ -2945,9 +2943,8 @@
     },
     "false_examples": [],
     "tiers": {
-     "A": 11,
-     "B": 1,
-     "C": 14
+     "A": 10,
+     "C": 11
     },
     "false_by_tier": {},
     "verdict": "structure_observed"
@@ -2974,9 +2971,9 @@
     "syntax_z": 0.0,
     "morphology_present": false,
     "decipherable_structure": false,
-    "seconds": 0.0
+    "seconds": 0.01
    },
-   "seconds": 3.56,
+   "seconds": 4.6,
    "description": "S 主語-x [形容詞] 目的語-q 動詞-v E の固定文型。文頭標識 S・文末標識 E・格接尾辞 x/q・動詞接尾辞 v"
   },
   {
@@ -3001,8 +2998,8 @@
      "格接尾辞 q"
     ],
     "gold_undecided": [],
-    "hypotheses": 54,
-    "true": 54,
+    "hypotheses": 52,
+    "true": 52,
     "false": 0,
     "unverifiable": 0,
     "per_family": {
@@ -3010,15 +3007,15 @@
       "true": 13
      },
      "ngram": {
-      "true": 33
+      "true": 31
      },
      "dispersion": {
       "true": 5
      },
-     "substitution": {
+     "linepair": {
       "true": 1
      },
-     "linepair": {
+     "substitution": {
       "true": 1
      },
      "cooccurrence": {
@@ -3027,9 +3024,9 @@
     },
     "false_examples": [],
     "tiers": {
-     "A": 27,
-     "B": 4,
-     "C": 23
+     "A": 24,
+     "B": 2,
+     "C": 26
     },
     "false_by_tier": {},
     "verdict": "structure_observed"
@@ -3056,9 +3053,9 @@
     "syntax_z": 5.96,
     "morphology_present": false,
     "decipherable_structure": true,
-    "seconds": 0.01
+    "seconds": 0.02
    },
-   "seconds": 5.65,
+   "seconds": 7.19,
    "description": "S 主語-x [形容詞] 目的語-q 動詞-v E の固定文型。文頭標識 S・文末標識 E・格接尾辞 x/q・動詞接尾辞 v"
   },
   {
@@ -3083,8 +3080,8 @@
      "格接尾辞 q"
     ],
     "gold_undecided": [],
-    "hypotheses": 63,
-    "true": 63,
+    "hypotheses": 65,
+    "true": 65,
     "false": 0,
     "unverifiable": 0,
     "per_family": {
@@ -3092,26 +3089,26 @@
       "true": 15
      },
      "ngram": {
-      "true": 39
+      "true": 40
      },
      "dispersion": {
       "true": 5
      },
      "substitution": {
-      "true": 2
-     },
-     "gap": {
       "true": 1
      },
      "linepair": {
+      "true": 3
+     },
+     "gap": {
       "true": 1
      }
     },
     "false_examples": [],
     "tiers": {
-     "A": 25,
+     "A": 29,
      "B": 6,
-     "C": 32
+     "C": 30
     },
     "false_by_tier": {},
     "verdict": "structure_observed"
@@ -3138,9 +3135,9 @@
     "syntax_z": 6.8,
     "morphology_present": false,
     "decipherable_structure": true,
-    "seconds": 0.01
+    "seconds": 0.02
    },
-   "seconds": 6.12,
+   "seconds": 6.64,
    "description": "S 主語-x [形容詞] 目的語-q 動詞-v E の固定文型。文頭標識 S・文末標識 E・格接尾辞 x/q・動詞接尾辞 v"
   },
   {
@@ -3156,51 +3153,43 @@
      "文頭標識 S",
      "文末標識 E",
      "動詞接尾辞 v の直後に E",
-     "接尾辞 x/q/v が同じ枠に入る",
      "x は各行に1回（必須）",
      "v は各行に1回（必須）"
     ],
     "gold_missed": [
+     "接尾辞 x/q/v が同じ枠に入る",
      "格接尾辞 x",
      "格接尾辞 q"
     ],
     "gold_undecided": [],
-    "hypotheses": 50,
-    "true": 49,
-    "false": 1,
+    "hypotheses": 67,
+    "true": 67,
+    "false": 0,
     "unverifiable": 0,
     "per_family": {
      "position": {
       "true": 16
      },
      "ngram": {
-      "true": 24
+      "true": 39
      },
      "dispersion": {
-      "true": 6
+      "true": 5
      },
      "linepair": {
-      "true": 1
-     },
-     "substitution": {
-      "false": 1,
-      "true": 1
+      "true": 6
      },
      "gap": {
       "true": 1
      }
     },
-    "false_examples": [
-     "記号 n と m が同じ直前の文脈 3 種・同じ直後の文脈 1 種を共有する"
-    ],
+    "false_examples": [],
     "tiers": {
-     "A": 23,
+     "A": 28,
      "B": 3,
-     "C": 24
+     "C": 36
     },
-    "false_by_tier": {
-     "C": 1
-    },
+    "false_by_tier": {},
     "verdict": "structure_observed"
    },
    "global": {
@@ -3227,7 +3216,7 @@
     "decipherable_structure": true,
     "seconds": 0.01
    },
-   "seconds": 5.84,
+   "seconds": 8.37,
    "description": "S 主語-x [形容詞] 目的語-q 動詞-v E の固定文型。文頭標識 S・文末標識 E・格接尾辞 x/q・動詞接尾辞 v"
   },
   {
@@ -3252,8 +3241,8 @@
      "格接尾辞 q"
     ],
     "gold_undecided": [],
-    "hypotheses": 168,
-    "true": 168,
+    "hypotheses": 164,
+    "true": 164,
     "false": 0,
     "unverifiable": 0,
     "per_family": {
@@ -3261,26 +3250,26 @@
       "true": 18
      },
      "ngram": {
-      "true": 136
+      "true": 133
      },
      "dispersion": {
       "true": 5
      },
-     "cooccurrence": {
-      "true": 6
-     },
      "linepair": {
-      "true": 2
-     },
-     "gap": {
       "true": 1
+     },
+     "cooccurrence": {
+      "true": 5
+     },
+     "substitution": {
+      "true": 2
      }
     },
     "false_examples": [],
     "tiers": {
-     "A": 62,
-     "B": 17,
-     "C": 89
+     "A": 70,
+     "B": 15,
+     "C": 79
     },
     "false_by_tier": {},
     "verdict": "structure_observed"
@@ -3307,9 +3296,9 @@
     "syntax_z": 29.25,
     "morphology_present": false,
     "decipherable_structure": true,
-    "seconds": 0.02
+    "seconds": 0.03
    },
-   "seconds": 20.53,
+   "seconds": 24.25,
    "description": "S 主語-x [形容詞] 目的語-q 動詞-v E の固定文型。文頭標識 S・文末標識 E・格接尾辞 x/q・動詞接尾辞 v"
   },
   {
@@ -3334,8 +3323,8 @@
      "格接尾辞 q"
     ],
     "gold_undecided": [],
-    "hypotheses": 198,
-    "true": 196,
+    "hypotheses": 162,
+    "true": 160,
     "false": 2,
     "unverifiable": 0,
     "per_family": {
@@ -3343,7 +3332,7 @@
       "true": 18
      },
      "ngram": {
-      "true": 163,
+      "true": 128,
       "false": 1
      },
      "dispersion": {
@@ -3352,29 +3341,28 @@
      "gap": {
       "true": 4
      },
-     "cooccurrence": {
-      "true": 1,
-      "false": 1
-     },
      "substitution": {
-      "true": 4
+      "true": 2
      },
      "linepair": {
       "true": 1
+     },
+     "cooccurrence": {
+      "true": 2,
+      "false": 1
      }
     },
     "false_examples": [
-     "記号 a と l が同じ行に 56 回現れる",
-     "記号列 e p x p a k q n i m v E が 2 回現れる"
+     "記号列 e p x p a k q n i m v E が 2 回現れる",
+     "記号 a と l が同じ行に 56 回現れる"
     ],
     "tiers": {
-     "A": 77,
-     "B": 28,
-     "C": 93
+     "A": 71,
+     "B": 23,
+     "C": 68
     },
     "false_by_tier": {
-     "B": 1,
-     "C": 1
+     "C": 2
     },
     "verdict": "structure_observed"
    },
@@ -3402,7 +3390,7 @@
     "decipherable_structure": true,
     "seconds": 0.03
    },
-   "seconds": 20.37,
+   "seconds": 22.21,
    "description": "S 主語-x [形容詞] 目的語-q 動詞-v E の固定文型。文頭標識 S・文末標識 E・格接尾辞 x/q・動詞接尾辞 v"
   },
   {
@@ -3418,17 +3406,17 @@
      "文頭標識 S",
      "文末標識 E",
      "動詞接尾辞 v の直後に E",
-     "接尾辞 x/q/v が同じ枠に入る",
      "x は各行に1回（必須）",
      "v は各行に1回（必須）"
     ],
     "gold_missed": [
+     "接尾辞 x/q/v が同じ枠に入る",
      "格接尾辞 x",
      "格接尾辞 q"
     ],
     "gold_undecided": [],
-    "hypotheses": 204,
-    "true": 202,
+    "hypotheses": 206,
+    "true": 204,
     "false": 2,
     "unverifiable": 0,
     "per_family": {
@@ -3436,14 +3424,11 @@
       "true": 20
      },
      "ngram": {
-      "true": 166,
+      "true": 169,
       "false": 1
      },
      "dispersion": {
       "true": 6
-     },
-     "cooccurrence": {
-      "true": 4
      },
      "gap": {
       "true": 4
@@ -3451,19 +3436,19 @@
      "linepair": {
       "true": 1
      },
-     "substitution": {
-      "true": 1,
+     "cooccurrence": {
+      "true": 4,
       "false": 1
      }
     },
     "false_examples": [
      "記号列 S d i x d i q p e n が 2 回現れる",
-     "記号 n と m が同じ直前の文脈 4 種・同じ直後の文脈 1 種を共有する"
+     "記号 t と a が同じ行に 38 回現れる"
     ],
     "tiers": {
-     "A": 72,
-     "B": 26,
-     "C": 106
+     "A": 82,
+     "B": 29,
+     "C": 95
     },
     "false_by_tier": {
      "C": 2
@@ -3494,7 +3479,7 @@
     "decipherable_structure": true,
     "seconds": 0.05
    },
-   "seconds": 22.27,
+   "seconds": 25.37,
    "description": "S 主語-x [形容詞] 目的語-q 動詞-v E の固定文型。文頭標識 S・文末標識 E・格接尾辞 x/q・動詞接尾辞 v"
   },
   {
@@ -3530,10 +3515,10 @@
     "verdict": "global_only"
    },
    "global": {
-    "sequential_dependence": 0.03,
-    "repetition": 0.025,
-    "edge_position": 0.03,
-    "longest_repeat": 0.25,
+    "sequential_dependence": 0.045,
+    "repetition": 0.045,
+    "edge_position": 0.04,
+    "longest_repeat": 0.28,
     "line_similarity": 0.025
    },
    "segmentation_f1": {
@@ -3553,7 +3538,7 @@
     "decipherable_structure": false,
     "seconds": 0.0
    },
-   "seconds": 1.21,
+   "seconds": 1.3,
    "description": "Regular の弱い版: 標識は半分の行だけ、語順は無作為、格接尾辞の30%が入れ替わり、記号の5%が雑音"
   },
   {
@@ -3568,6 +3553,7 @@
     "gold_found": [],
     "gold_missed": [
      "動詞接尾辞 v の直後に E",
+     "接尾辞 x/q/v が同じ枠に入る",
      "格接尾辞 x",
      "格接尾辞 q",
      "x は各行に1回（必須）",
@@ -3575,25 +3561,30 @@
     ],
     "gold_undecided": [
      "文頭標識 S",
-     "文末標識 E",
-     "接尾辞 x/q/v が同じ枠に入る"
+     "文末標識 E"
     ],
-    "hypotheses": 0,
-    "true": 0,
+    "hypotheses": 1,
+    "true": 1,
     "false": 0,
     "unverifiable": 0,
-    "per_family": {},
+    "per_family": {
+     "linepair": {
+      "true": 1
+     }
+    },
     "false_examples": [],
-    "tiers": {},
+    "tiers": {
+     "C": 1
+    },
     "false_by_tier": {},
-    "verdict": "global_only"
+    "verdict": "structure_unstable"
    },
    "global": {
-    "sequential_dependence": 0.81,
-    "repetition": 0.06,
+    "sequential_dependence": 0.79,
+    "repetition": 0.04,
     "edge_position": 0.025,
-    "longest_repeat": 0.06,
-    "line_similarity": 0.2
+    "longest_repeat": 0.04,
+    "line_similarity": 0.13
    },
    "segmentation_f1": {
     "repeats": 0.0,
@@ -3612,7 +3603,7 @@
     "decipherable_structure": false,
     "seconds": 0.0
    },
-   "seconds": 1.15,
+   "seconds": 1.16,
    "description": "Regular の弱い版: 標識は半分の行だけ、語順は無作為、格接尾辞の30%が入れ替わり、記号の5%が雑音"
   },
   {
@@ -3645,14 +3636,14 @@
     "false_examples": [],
     "tiers": {},
     "false_by_tier": {},
-    "verdict": "global_only"
+    "verdict": "no_structure_detected"
    },
    "global": {
-    "sequential_dependence": 0.495,
-    "repetition": 0.495,
-    "edge_position": 0.025,
-    "longest_repeat": 0.495,
-    "line_similarity": 0.2
+    "sequential_dependence": 0.5549999999999999,
+    "repetition": 0.5549999999999999,
+    "edge_position": 0.125,
+    "longest_repeat": 0.5549999999999999,
+    "line_similarity": 0.18
    },
    "segmentation_f1": {
     "repeats": 0.118,
@@ -3671,7 +3662,7 @@
     "decipherable_structure": false,
     "seconds": 0.0
    },
-   "seconds": 1.37,
+   "seconds": 1.16,
    "description": "Regular の弱い版: 標識は半分の行だけ、語順は無作為、格接尾辞の30%が入れ替わり、記号の5%が雑音"
   },
   {
@@ -3696,31 +3687,30 @@
      "x は各行に1回（必須）"
     ],
     "gold_undecided": [],
-    "hypotheses": 7,
-    "true": 7,
+    "hypotheses": 6,
+    "true": 6,
     "false": 0,
     "unverifiable": 0,
     "per_family": {
+     "linepair": {
+      "true": 1
+     },
+     "ngram": {
+      "true": 2
+     },
      "position": {
       "true": 2
      },
-     "linepair": {
-      "true": 2
-     },
-     "ngram": {
-      "true": 1
-     },
      "dispersion": {
-      "true": 2
+      "true": 1
      }
     },
     "false_examples": [],
     "tiers": {
-     "B": 1,
      "C": 6
     },
     "false_by_tier": {},
-    "verdict": "structure_observed"
+    "verdict": "structure_unstable"
    },
    "global": {
     "sequential_dependence": 0.025,
@@ -3744,9 +3734,9 @@
     "syntax_z": 0.0,
     "morphology_present": false,
     "decipherable_structure": false,
-    "seconds": 0.01
+    "seconds": 0.0
    },
-   "seconds": 3.45,
+   "seconds": 3.96,
    "description": "Regular の弱い版: 標識は半分の行だけ、語順は無作為、格接尾辞の30%が入れ替わり、記号の5%が雑音"
   },
   {
@@ -3777,10 +3767,7 @@
     "unverifiable": 0,
     "per_family": {
      "position": {
-      "true": 3
-     },
-     "linepair": {
-      "true": 1
+      "true": 4
      },
      "ngram": {
       "true": 2
@@ -3817,9 +3804,9 @@
     "syntax_z": 0.0,
     "morphology_present": false,
     "decipherable_structure": false,
-    "seconds": 0.0
+    "seconds": 0.01
    },
-   "seconds": 3.14,
+   "seconds": 3.43,
    "description": "Regular の弱い版: 標識は半分の行だけ、語順は無作為、格接尾辞の30%が入れ替わり、記号の5%が雑音"
   },
   {
@@ -3844,24 +3831,29 @@
      "v は各行に1回（必須）"
     ],
     "gold_undecided": [],
-    "hypotheses": 2,
+    "hypotheses": 3,
     "true": 2,
-    "false": 0,
+    "false": 1,
     "unverifiable": 0,
     "per_family": {
      "position": {
       "true": 1
      },
-     "ngram": {
+     "linepair": {
+      "false": 1,
       "true": 1
      }
     },
-    "false_examples": [],
+    "false_examples": [
+     "2 行（3, 7）が、偶然より多くの2〜4記号列を互いに共有する（有意な行の組 1）"
+    ],
     "tiers": {
      "B": 1,
+     "C": 2
+    },
+    "false_by_tier": {
      "C": 1
     },
-    "false_by_tier": {},
     "verdict": "structure_observed"
    },
    "global": {
@@ -3886,9 +3878,9 @@
     "syntax_z": 0.0,
     "morphology_present": false,
     "decipherable_structure": false,
-    "seconds": 0.0
+    "seconds": 0.01
    },
-   "seconds": 3.59,
+   "seconds": 3.78,
    "description": "Regular の弱い版: 標識は半分の行だけ、語順は無作為、格接尾辞の30%が入れ替わり、記号の5%が雑音"
   },
   {
@@ -3898,169 +3890,6 @@
    "size_requested": 30,
    "lines": 30,
    "symbols": 363,
-   "symbol_types": 21,
-   "score": {
-    "gold_found": [
-     "文頭標識 S",
-     "文末標識 E",
-     "x は各行に1回（必須）",
-     "v は各行に1回（必須）"
-    ],
-    "gold_missed": [
-     "動詞接尾辞 v の直後に E",
-     "接尾辞 x/q/v が同じ枠に入る",
-     "格接尾辞 x",
-     "格接尾辞 q"
-    ],
-    "gold_undecided": [],
-    "hypotheses": 16,
-    "true": 16,
-    "false": 0,
-    "unverifiable": 0,
-    "per_family": {
-     "dispersion": {
-      "true": 3
-     },
-     "position": {
-      "true": 3
-     },
-     "linepair": {
-      "true": 4
-     },
-     "ngram": {
-      "true": 5
-     },
-     "substitution": {
-      "true": 1
-     }
-    },
-    "false_examples": [],
-    "tiers": {
-     "A": 1,
-     "B": 5,
-     "C": 10
-    },
-    "false_by_tier": {},
-    "verdict": "structure_observed"
-   },
-   "global": {
-    "sequential_dependence": 0.025,
-    "repetition": 0.025,
-    "edge_position": 0.025,
-    "longest_repeat": 0.025,
-    "line_similarity": 0.025
-   },
-   "segmentation_f1": {
-    "mdl": 0.439,
-    "branching": 0.624,
-    "repeats": 0.529,
-    "consensus": 0.521,
-    "transition": 0.388,
-    "unigram": 0.388,
-    "_top_by_description_length": "mdl"
-   },
-   "compression_p": 1.0,
-   "old_babel": {
-    "syntax_present": false,
-    "syntax_z": 0.0,
-    "morphology_present": false,
-    "decipherable_structure": false,
-    "seconds": 0.01
-   },
-   "seconds": 6.33,
-   "description": "Regular の弱い版: 標識は半分の行だけ、語順は無作為、格接尾辞の30%が入れ替わり、記号の5%が雑音"
-  },
-  {
-   "generator": "weak_regular",
-   "principle": "internal",
-   "seed": 1,
-   "size_requested": 30,
-   "lines": 30,
-   "symbols": 387,
-   "symbol_types": 21,
-   "score": {
-    "gold_found": [
-     "文頭標識 S",
-     "文末標識 E",
-     "動詞接尾辞 v の直後に E",
-     "x は各行に1回（必須）",
-     "v は各行に1回（必須）"
-    ],
-    "gold_missed": [
-     "接尾辞 x/q/v が同じ枠に入る",
-     "格接尾辞 x",
-     "格接尾辞 q"
-    ],
-    "gold_undecided": [],
-    "hypotheses": 19,
-    "true": 16,
-    "false": 3,
-    "unverifiable": 0,
-    "per_family": {
-     "position": {
-      "true": 5
-     },
-     "ngram": {
-      "true": 6,
-      "false": 1
-     },
-     "dispersion": {
-      "true": 3
-     },
-     "substitution": {
-      "true": 2,
-      "false": 2
-     }
-    },
-    "false_examples": [
-     "記号列 l q k o t が 2 回現れる",
-     "記号 g と r が同じ直前の文脈 6 種・同じ直後の文脈 5 種を共有する",
-     "記号 g と p が同じ直前の文脈 4 種・同じ直後の文脈 2 種を共有する"
-    ],
-    "tiers": {
-     "A": 5,
-     "B": 3,
-     "C": 11
-    },
-    "false_by_tier": {
-     "C": 3
-    },
-    "verdict": "structure_observed"
-   },
-   "global": {
-    "sequential_dependence": 0.025,
-    "repetition": 0.025,
-    "edge_position": 0.025,
-    "longest_repeat": 0.025,
-    "line_similarity": 0.025
-   },
-   "segmentation_f1": {
-    "mdl": 0.512,
-    "branching": 0.611,
-    "repeats": 0.474,
-    "consensus": 0.586,
-    "transition": 0.417,
-    "unigram": 0.417,
-    "_top_by_description_length": "mdl"
-   },
-   "compression_p": 0.05,
-   "old_babel": {
-    "syntax_present": false,
-    "syntax_z": 0.41,
-    "morphology_present": false,
-    "decipherable_structure": false,
-    "seconds": 0.01
-   },
-   "seconds": 5.52,
-   "description": "Regular の弱い版: 標識は半分の行だけ、語順は無作為、格接尾辞の30%が入れ替わり、記号の5%が雑音"
-  },
-  {
-   "generator": "weak_regular",
-   "principle": "internal",
-   "seed": 2,
-   "size_requested": 30,
-   "lines": 30,
-   "symbols": 367,
    "symbol_types": 21,
    "score": {
     "gold_found": [
@@ -4090,13 +3919,89 @@
      "position": {
       "true": 4
      },
-     "substitution": {
+     "linepair": {
       "true": 3
      }
     },
     "false_examples": [],
     "tiers": {
      "A": 2,
+     "B": 5,
+     "C": 4
+    },
+    "false_by_tier": {},
+    "verdict": "structure_observed"
+   },
+   "global": {
+    "sequential_dependence": 0.025,
+    "repetition": 0.025,
+    "edge_position": 0.025,
+    "longest_repeat": 0.03,
+    "line_similarity": 0.025
+   },
+   "segmentation_f1": {
+    "mdl": 0.439,
+    "branching": 0.624,
+    "repeats": 0.529,
+    "consensus": 0.521,
+    "transition": 0.388,
+    "unigram": 0.388,
+    "_top_by_description_length": "mdl"
+   },
+   "compression_p": 1.0,
+   "old_babel": {
+    "syntax_present": false,
+    "syntax_z": 0.0,
+    "morphology_present": false,
+    "decipherable_structure": false,
+    "seconds": 0.01
+   },
+   "seconds": 6.7,
+   "description": "Regular の弱い版: 標識は半分の行だけ、語順は無作為、格接尾辞の30%が入れ替わり、記号の5%が雑音"
+  },
+  {
+   "generator": "weak_regular",
+   "principle": "internal",
+   "seed": 1,
+   "size_requested": 30,
+   "lines": 30,
+   "symbols": 387,
+   "symbol_types": 21,
+   "score": {
+    "gold_found": [
+     "文頭標識 S",
+     "文末標識 E",
+     "動詞接尾辞 v の直後に E",
+     "x は各行に1回（必須）",
+     "v は各行に1回（必須）"
+    ],
+    "gold_missed": [
+     "接尾辞 x/q/v が同じ枠に入る",
+     "格接尾辞 x",
+     "格接尾辞 q"
+    ],
+    "gold_undecided": [],
+    "hypotheses": 13,
+    "true": 13,
+    "false": 0,
+    "unverifiable": 0,
+    "per_family": {
+     "position": {
+      "true": 5
+     },
+     "dispersion": {
+      "true": 3
+     },
+     "ngram": {
+      "true": 3
+     },
+     "substitution": {
+      "true": 2
+     }
+    },
+    "false_examples": [],
+    "tiers": {
+     "A": 4,
      "B": 3,
      "C": 6
     },
@@ -4107,7 +4012,87 @@
     "sequential_dependence": 0.025,
     "repetition": 0.025,
     "edge_position": 0.025,
-    "longest_repeat": 0.03,
+    "longest_repeat": 0.025,
+    "line_similarity": 0.025
+   },
+   "segmentation_f1": {
+    "mdl": 0.512,
+    "branching": 0.611,
+    "repeats": 0.474,
+    "consensus": 0.586,
+    "transition": 0.417,
+    "unigram": 0.417,
+    "_top_by_description_length": "mdl"
+   },
+   "compression_p": 0.05,
+   "old_babel": {
+    "syntax_present": false,
+    "syntax_z": 0.41,
+    "morphology_present": false,
+    "decipherable_structure": false,
+    "seconds": 0.01
+   },
+   "seconds": 6.71,
+   "description": "Regular の弱い版: 標識は半分の行だけ、語順は無作為、格接尾辞の30%が入れ替わり、記号の5%が雑音"
+  },
+  {
+   "generator": "weak_regular",
+   "principle": "internal",
+   "seed": 2,
+   "size_requested": 30,
+   "lines": 30,
+   "symbols": 367,
+   "symbol_types": 21,
+   "score": {
+    "gold_found": [
+     "文頭標識 S",
+     "文末標識 E",
+     "x は各行に1回（必須）",
+     "v は各行に1回（必須）"
+    ],
+    "gold_missed": [
+     "接尾辞 x/q/v が同じ枠に入る",
+     "格接尾辞 x",
+     "格接尾辞 q"
+    ],
+    "gold_undecided": [
+     "動詞接尾辞 v の直後に E"
+    ],
+    "hypotheses": 14,
+    "true": 14,
+    "false": 0,
+    "unverifiable": 0,
+    "per_family": {
+     "position": {
+      "true": 2
+     },
+     "ngram": {
+      "true": 4
+     },
+     "dispersion": {
+      "true": 3
+     },
+     "linepair": {
+      "true": 4
+     },
+     "substitution": {
+      "true": 1
+     }
+    },
+    "false_examples": [],
+    "tiers": {
+     "A": 2,
+     "B": 4,
+     "C": 8
+    },
+    "false_by_tier": {},
+    "verdict": "structure_observed"
+   },
+   "global": {
+    "sequential_dependence": 0.025,
+    "repetition": 0.025,
+    "edge_position": 0.025,
+    "longest_repeat": 0.025,
     "line_similarity": 0.025
    },
    "segmentation_f1": {
@@ -4125,9 +4110,9 @@
     "syntax_z": 0.0,
     "morphology_present": false,
     "decipherable_structure": false,
-    "seconds": 0.01
+    "seconds": 0.02
    },
-   "seconds": 6.33,
+   "seconds": 6.59,
    "description": "Regular の弱い版: 標識は半分の行だけ、語順は無作為、格接尾辞の30%が入れ替わり、記号の5%が雑音"
   },
   {
@@ -4152,8 +4137,8 @@
      "格接尾辞 q"
     ],
     "gold_undecided": [],
-    "hypotheses": 56,
-    "true": 51,
+    "hypotheses": 79,
+    "true": 74,
     "false": 5,
     "unverifiable": 0,
     "per_family": {
@@ -4161,31 +4146,30 @@
       "true": 15
      },
      "ngram": {
-      "true": 18,
-      "false": 2
+      "true": 49,
+      "false": 5
      },
      "dispersion": {
       "true": 3
      },
      "substitution": {
-      "true": 10,
-      "false": 3
+      "true": 4
      },
      "linepair": {
-      "true": 5
+      "true": 3
      }
     },
     "false_examples": [
      "記号列 S m i l x d i が 2 回現れる",
      "記号列 k i r u l が 3 回現れる",
-     "記号 k と t が同じ直前の文脈 7 種・同じ直後の文脈 4 種を共有する",
-     "記号 m と d が同じ直前の文脈 8 種・同じ直後の文脈 5 種を共有する",
-     "記号 i と u が同じ直前の文脈 8 種・同じ直後の文脈 11 種を共有する"
+     "記号列 k i r u l x が 2 回現れる",
+     "記号列 v k i r u l が 2 回現れる",
+     "記号列 k u d v m u が 2 回現れる"
     ],
     "tiers": {
-     "A": 14,
+     "A": 17,
      "B": 7,
-     "C": 35
+     "C": 55
     },
     "false_by_tier": {
      "C": 5
@@ -4214,9 +4198,9 @@
     "syntax_z": 2.03,
     "morphology_present": false,
     "decipherable_structure": false,
-    "seconds": 0.04
+    "seconds": 0.05
    },
-   "seconds": 19.06,
+   "seconds": 19.86,
    "description": "Regular の弱い版: 標識は半分の行だけ、語順は無作為、格接尾辞の30%が入れ替わり、記号の5%が雑音"
   },
   {
@@ -4232,46 +4216,48 @@
      "文頭標識 S",
      "文末標識 E",
      "動詞接尾辞 v の直後に E",
-     "接尾辞 x/q/v が同じ枠に入る",
      "x は各行に1回（必須）",
      "v は各行に1回（必須）"
     ],
     "gold_missed": [
+     "接尾辞 x/q/v が同じ枠に入る",
      "格接尾辞 x",
      "格接尾辞 q"
     ],
     "gold_undecided": [],
-    "hypotheses": 85,
-    "true": 82,
-    "false": 3,
+    "hypotheses": 64,
+    "true": 62,
+    "false": 2,
     "unverifiable": 0,
     "per_family": {
      "position": {
-      "true": 22
+      "true": 16
      },
      "ngram": {
-      "true": 51,
-      "false": 3
+      "true": 34,
+      "false": 2
      },
      "dispersion": {
       "true": 4
      },
      "substitution": {
-      "true": 5
+      "true": 2
+     },
+     "linepair": {
+      "true": 6
      }
     },
     "false_examples": [
      "記号列 s q b i m v d が 2 回現れる",
-     "記号列 s i v l i d x が 2 回現れる",
-     "記号列 x d e v r a が 2 回現れる"
+     "記号列 s i v l i d x が 2 回現れる"
     ],
     "tiers": {
-     "A": 31,
-     "B": 1,
-     "C": 53
+     "A": 29,
+     "B": 2,
+     "C": 33
     },
     "false_by_tier": {
-     "C": 3
+     "C": 2
     },
     "verdict": "structure_observed"
    },
@@ -4299,7 +4285,7 @@
     "decipherable_structure": false,
     "seconds": 0.04
    },
-   "seconds": 18.22,
+   "seconds": 20.95,
    "description": "Regular の弱い版: 標識は半分の行だけ、語順は無作為、格接尾辞の30%が入れ替わり、記号の5%が雑音"
   },
   {
@@ -4324,30 +4310,30 @@
      "格接尾辞 q"
     ],
     "gold_undecided": [],
-    "hypotheses": 80,
-    "true": 73,
-    "false": 7,
+    "hypotheses": 69,
+    "true": 61,
+    "false": 8,
     "unverifiable": 0,
     "per_family": {
      "position": {
-      "true": 18
+      "true": 13
      },
      "ngram": {
       "true": 35,
       "false": 6
      },
      "dispersion": {
-      "true": 5
+      "true": 3
+     },
+     "substitution": {
+      "true": 7,
+      "false": 2
      },
      "linepair": {
-      "true": 6
+      "true": 2
      },
      "cooccurrence": {
       "true": 1
-     },
-     "substitution": {
-      "true": 8,
-      "false": 1
      }
     },
     "false_examples": [
@@ -4358,12 +4344,12 @@
      "記号列 v l e k q E が 2 回現れる"
     ],
     "tiers": {
-     "A": 28,
-     "B": 1,
-     "C": 51
+     "A": 25,
+     "B": 2,
+     "C": 42
     },
     "false_by_tier": {
-     "C": 7
+     "C": 8
     },
     "verdict": "structure_observed"
    },
@@ -4389,9 +4375,9 @@
     "syntax_z": 11.44,
     "morphology_present": false,
     "decipherable_structure": true,
-    "seconds": 0.03
+    "seconds": 0.04
    },
-   "seconds": 18.17,
+   "seconds": 20.11,
    "description": "Regular の弱い版: 標識は半分の行だけ、語順は無作為、格接尾辞の30%が入れ替わり、記号の5%が雑音"
   },
   {
@@ -4403,34 +4389,41 @@
    "symbols": 60,
    "symbol_types": 20,
    "score": {
-    "gold_found": [],
+    "gold_found": [
+     "文頭標識 S",
+     "文末標識 E"
+    ],
     "gold_missed": [
-     "接尾辞 x/q/v が同じ枠に入る",
      "格接尾辞 x",
      "格接尾辞 q",
      "x は各行に1回（必須）",
      "v は各行に1回（必須）"
     ],
     "gold_undecided": [
-     "文頭標識 S",
-     "文末標識 E",
-     "動詞接尾辞 v の直後に E"
+     "動詞接尾辞 v の直後に E",
+     "接尾辞 x/q/v が同じ枠に入る"
     ],
-    "hypotheses": 0,
-    "true": 0,
+    "hypotheses": 2,
+    "true": 2,
     "false": 0,
     "unverifiable": 0,
-    "per_family": {},
+    "per_family": {
+     "position": {
+      "true": 2
+     }
+    },
     "false_examples": [],
-    "tiers": {},
+    "tiers": {
+     "B": 2
+    },
     "false_by_tier": {},
-    "verdict": "global_only"
+    "verdict": "structure_observed"
    },
    "global": {
     "sequential_dependence": 0.025,
-    "repetition": 0.025,
+    "repetition": 0.03,
     "edge_position": 0.025,
-    "longest_repeat": 0.15,
+    "longest_repeat": 0.135,
     "line_similarity": 0.025
    },
    "segmentation_f1": {
@@ -4469,12 +4462,12 @@
      "接尾辞 x/q/v が同じ枠に入る",
      "格接尾辞 x",
      "格接尾辞 q",
-     "x は各行に1回（必須）"
+     "x は各行に1回（必須）",
+     "v は各行に1回（必須）"
     ],
     "gold_undecided": [
      "文頭標識 S",
-     "動詞接尾辞 v の直後に E",
-     "v は各行に1回（必須）"
+     "動詞接尾辞 v の直後に E"
     ],
     "hypotheses": 1,
     "true": 1,
@@ -4493,7 +4486,7 @@
     "verdict": "structure_observed"
    },
    "global": {
-    "sequential_dependence": 0.165,
+    "sequential_dependence": 0.27,
     "repetition": 1.0,
     "edge_position": 0.025,
     "longest_repeat": 1.0,
@@ -4516,7 +4509,7 @@
     "decipherable_structure": false,
     "seconds": 0.0
    },
-   "seconds": 1.18,
+   "seconds": 1.41,
    "description": "Regular に転写の誤りを模した雑音: 記号の10%を別の記号に置換、5%を欠損"
   },
   {
@@ -4541,8 +4534,8 @@
      "v は各行に1回（必須）"
     ],
     "gold_undecided": [],
-    "hypotheses": 5,
-    "true": 5,
+    "hypotheses": 4,
+    "true": 4,
     "false": 0,
     "unverifiable": 0,
     "per_family": {
@@ -4550,7 +4543,7 @@
       "true": 2
      },
      "linepair": {
-      "true": 2
+      "true": 1
      },
      "ngram": {
       "true": 1
@@ -4559,7 +4552,8 @@
     "false_examples": [],
     "tiers": {
      "A": 1,
-     "C": 4
+     "B": 1,
+     "C": 2
     },
     "false_by_tier": {},
     "verdict": "structure_observed"
@@ -4588,7 +4582,7 @@
     "decipherable_structure": false,
     "seconds": 0.0
    },
-   "seconds": 1.23,
+   "seconds": 1.17,
    "description": "Regular に転写の誤りを模した雑音: 記号の10%を別の記号に置換、5%を欠損"
   },
   {
@@ -4613,26 +4607,25 @@
      "v は各行に1回（必須）"
     ],
     "gold_undecided": [],
-    "hypotheses": 7,
-    "true": 7,
+    "hypotheses": 16,
+    "true": 16,
     "false": 0,
     "unverifiable": 0,
     "per_family": {
      "position": {
-      "true": 4
+      "true": 5
      },
      "linepair": {
-      "true": 1
+      "true": 4
      },
      "ngram": {
-      "true": 2
+      "true": 7
      }
     },
     "false_examples": [],
     "tiers": {
-     "A": 3,
-     "B": 2,
-     "C": 2
+     "A": 4,
+     "C": 12
     },
     "false_by_tier": {},
     "verdict": "structure_observed"
@@ -4661,7 +4654,7 @@
     "decipherable_structure": false,
     "seconds": 0.0
    },
-   "seconds": 3.13,
+   "seconds": 3.2,
    "description": "Regular に転写の誤りを模した雑音: 記号の10%を別の記号に置換、5%を欠損"
   },
   {
@@ -4686,8 +4679,8 @@
      "v は各行に1回（必須）"
     ],
     "gold_undecided": [],
-    "hypotheses": 11,
-    "true": 11,
+    "hypotheses": 13,
+    "true": 13,
     "false": 0,
     "unverifiable": 0,
     "per_family": {
@@ -4695,7 +4688,7 @@
       "true": 6
      },
      "ngram": {
-      "true": 3
+      "true": 5
      },
      "linepair": {
       "true": 2
@@ -4705,7 +4698,7 @@
     "tiers": {
      "A": 3,
      "B": 2,
-     "C": 6
+     "C": 8
     },
     "false_by_tier": {},
     "verdict": "structure_observed"
@@ -4732,9 +4725,9 @@
     "syntax_z": 0.0,
     "morphology_present": false,
     "decipherable_structure": false,
-    "seconds": 0.0
+    "seconds": 0.01
    },
-   "seconds": 3.06,
+   "seconds": 3.83,
    "description": "Regular に転写の誤りを模した雑音: 記号の10%を別の記号に置換、5%を欠損"
   },
   {
@@ -4759,29 +4752,26 @@
      "v は各行に1回（必須）"
     ],
     "gold_undecided": [],
-    "hypotheses": 12,
-    "true": 12,
+    "hypotheses": 8,
+    "true": 8,
     "false": 0,
     "unverifiable": 0,
     "per_family": {
      "position": {
-      "true": 5
+      "true": 4
      },
      "ngram": {
-      "true": 4
+      "true": 2
      },
      "linepair": {
       "true": 2
-     },
-     "dispersion": {
-      "true": 1
      }
     },
     "false_examples": [],
     "tiers": {
-     "A": 4,
+     "A": 3,
      "B": 1,
-     "C": 7
+     "C": 4
     },
     "false_by_tier": {},
     "verdict": "structure_observed"
@@ -4810,7 +4800,7 @@
     "decipherable_structure": false,
     "seconds": 0.0
    },
-   "seconds": 3.07,
+   "seconds": 3.16,
    "description": "Regular に転写の誤りを模した雑音: 記号の10%を別の記号に置換、5%を欠損"
   },
   {
@@ -4825,40 +4815,48 @@
     "gold_found": [
      "文頭標識 S",
      "文末標識 E",
-     "動詞接尾辞 v の直後に E",
-     "x は各行に1回（必須）",
-     "v は各行に1回（必須）"
+     "動詞接尾辞 v の直後に E"
     ],
     "gold_missed": [
      "接尾辞 x/q/v が同じ枠に入る",
      "格接尾辞 x",
-     "格接尾辞 q"
+     "格接尾辞 q",
+     "x は各行に1回（必須）",
+     "v は各行に1回（必須）"
     ],
     "gold_undecided": [],
-    "hypotheses": 30,
-    "true": 30,
-    "false": 0,
+    "hypotheses": 40,
+    "true": 39,
+    "false": 1,
     "unverifiable": 0,
     "per_family": {
      "position": {
-      "true": 10
+      "true": 14
      },
      "ngram": {
-      "true": 13
+      "true": 18
      },
      "dispersion": {
-      "true": 5
+      "true": 2
      },
      "linepair": {
-      "true": 2
+      "true": 4
+     },
+     "substitution": {
+      "true": 1,
+      "false": 1
      }
     },
-    "false_examples": [],
+    "false_examples": [
+     "記号 r と l が同じ直前の文脈 4 種・同じ直後の文脈 3 種を共有する"
+    ],
     "tiers": {
      "A": 13,
-     "C": 17
+     "C": 27
     },
-    "false_by_tier": {},
+    "false_by_tier": {
+     "C": 1
+    },
     "verdict": "structure_observed"
    },
    "global": {
@@ -4885,7 +4883,7 @@
     "decipherable_structure": false,
     "seconds": 0.01
    },
-   "seconds": 5.68,
+   "seconds": 6.84,
    "description": "Regular に転写の誤りを模した雑音: 記号の10%を別の記号に置換、5%を欠損"
   },
   {
@@ -4910,8 +4908,8 @@
      "格接尾辞 q"
     ],
     "gold_undecided": [],
-    "hypotheses": 42,
-    "true": 42,
+    "hypotheses": 45,
+    "true": 45,
     "false": 0,
     "unverifiable": 0,
     "per_family": {
@@ -4919,23 +4917,23 @@
       "true": 11
      },
      "ngram": {
-      "true": 25
+      "true": 26
+     },
+     "dispersion": {
+      "true": 3
      },
      "linepair": {
-      "true": 3
+      "true": 4
      },
      "substitution": {
       "true": 1
-     },
-     "dispersion": {
-      "true": 2
      }
     },
     "false_examples": [],
     "tiers": {
      "A": 21,
-     "B": 3,
-     "C": 18
+     "B": 4,
+     "C": 20
     },
     "false_by_tier": {},
     "verdict": "structure_observed"
@@ -4962,9 +4960,9 @@
     "syntax_z": 0.0,
     "morphology_present": false,
     "decipherable_structure": false,
-    "seconds": 0.01
+    "seconds": 0.02
    },
-   "seconds": 5.59,
+   "seconds": 7.01,
    "description": "Regular に転写の誤りを模した雑音: 記号の10%を別の記号に置換、5%を欠損"
   },
   {
@@ -4980,17 +4978,17 @@
      "文頭標識 S",
      "文末標識 E",
      "動詞接尾辞 v の直後に E",
+     "接尾辞 x/q/v が同じ枠に入る",
+     "x は各行に1回（必須）",
      "v は各行に1回（必須）"
     ],
     "gold_missed": [
-     "接尾辞 x/q/v が同じ枠に入る",
      "格接尾辞 x",
-     "格接尾辞 q",
-     "x は各行に1回（必須）"
+     "格接尾辞 q"
     ],
     "gold_undecided": [],
-    "hypotheses": 45,
-    "true": 45,
+    "hypotheses": 39,
+    "true": 39,
     "false": 0,
     "unverifiable": 0,
     "per_family": {
@@ -4998,22 +4996,23 @@
       "true": 13
      },
      "ngram": {
-      "true": 20
-     },
-     "linepair": {
-      "true": 6
+      "true": 15
      },
      "dispersion": {
-      "true": 4
+      "true": 5
+     },
+     "linepair": {
+      "true": 3
      },
      "substitution": {
-      "true": 2
+      "true": 3
      }
     },
     "false_examples": [],
     "tiers": {
-     "A": 13,
-     "C": 32
+     "A": 15,
+     "B": 1,
+     "C": 23
     },
     "false_by_tier": {},
     "verdict": "structure_observed"
@@ -5042,7 +5041,7 @@
     "decipherable_structure": false,
     "seconds": 0.01
    },
-   "seconds": 6.13,
+   "seconds": 6.45,
    "description": "Regular に転写の誤りを模した雑音: 記号の10%を別の記号に置換、5%を欠損"
   },
   {
@@ -5067,43 +5066,44 @@
      "格接尾辞 q"
     ],
     "gold_undecided": [],
-    "hypotheses": 140,
-    "true": 137,
-    "false": 3,
+    "hypotheses": 130,
+    "true": 126,
+    "false": 4,
     "unverifiable": 0,
     "per_family": {
      "position": {
       "true": 23
      },
      "ngram": {
-      "true": 97,
+      "true": 91,
       "false": 3
      },
      "dispersion": {
       "true": 5
      },
-     "cooccurrence": {
-      "true": 1
+     "substitution": {
+      "true": 3
      },
      "linepair": {
-      "true": 9
+      "true": 4
      },
-     "substitution": {
-      "true": 2
+     "cooccurrence": {
+      "false": 1
      }
     },
     "false_examples": [
      "記号列 S r u t x g i r u が 3 回現れる",
      "記号列 u t x g i r u t q が 2 回現れる",
-     "記号列 r e g m u v E が 2 回現れる"
+     "記号列 r e g m u v E が 2 回現れる",
+     "記号 e と g が同じ行に 47 回現れる"
     ],
     "tiers": {
-     "A": 54,
+     "A": 57,
      "B": 10,
-     "C": 76
+     "C": 63
     },
     "false_by_tier": {
-     "C": 3
+     "C": 4
     },
     "verdict": "structure_observed"
    },
@@ -5129,9 +5129,9 @@
     "syntax_z": 7.07,
     "morphology_present": false,
     "decipherable_structure": true,
-    "seconds": 0.04
+    "seconds": 0.03
    },
-   "seconds": 20.0,
+   "seconds": 21.23,
    "description": "Regular に転写の誤りを模した雑音: 記号の10%を別の記号に置換、5%を欠損"
   },
   {
@@ -5156,40 +5156,45 @@
      "格接尾辞 q"
     ],
     "gold_undecided": [],
-    "hypotheses": 128,
-    "true": 128,
-    "false": 0,
+    "hypotheses": 132,
+    "true": 131,
+    "false": 1,
     "unverifiable": 0,
     "per_family": {
      "position": {
-      "true": 23
+      "true": 24
      },
      "ngram": {
-      "true": 87
+      "true": 89
      },
      "dispersion": {
       "true": 5
      },
-     "cooccurrence": {
+     "substitution": {
       "true": 2
      },
-     "substitution": {
-      "true": 4
-     },
      "linepair": {
-      "true": 6
+      "true": 8
+     },
+     "cooccurrence": {
+      "true": 2,
+      "false": 1
      },
      "gap": {
       "true": 1
      }
     },
-    "false_examples": [],
+    "false_examples": [
+     "記号 u と n が同じ行に 36 回現れる"
+    ],
     "tiers": {
      "A": 58,
-     "B": 14,
-     "C": 56
+     "B": 16,
+     "C": 58
     },
-    "false_by_tier": {},
+    "false_by_tier": {
+     "C": 1
+    },
     "verdict": "structure_observed"
    },
    "global": {
@@ -5214,9 +5219,9 @@
     "syntax_z": 18.57,
     "morphology_present": false,
     "decipherable_structure": true,
-    "seconds": 0.05
+    "seconds": 0.06
    },
-   "seconds": 17.68,
+   "seconds": 22.54,
    "description": "Regular に転写の誤りを模した雑音: 記号の10%を別の記号に置換、5%を欠損"
   },
   {
@@ -5232,54 +5237,49 @@
      "文頭標識 S",
      "文末標識 E",
      "動詞接尾辞 v の直後に E",
+     "接尾辞 x/q/v が同じ枠に入る",
      "x は各行に1回（必須）",
      "v は各行に1回（必須）"
     ],
     "gold_missed": [
-     "接尾辞 x/q/v が同じ枠に入る",
      "格接尾辞 x",
      "格接尾辞 q"
     ],
     "gold_undecided": [],
-    "hypotheses": 96,
-    "true": 95,
-    "false": 1,
+    "hypotheses": 135,
+    "true": 135,
+    "false": 0,
     "unverifiable": 0,
     "per_family": {
      "position": {
       "true": 25
      },
      "ngram": {
-      "true": 51
+      "true": 88
      },
      "dispersion": {
-      "true": 7
-     },
-     "cooccurrence": {
-      "true": 2,
-      "false": 1
+      "true": 5
      },
      "gap": {
       "true": 1
      },
-     "substitution": {
-      "true": 2
-     },
      "linepair": {
-      "true": 7
+      "true": 11
+     },
+     "cooccurrence": {
+      "true": 1
+     },
+     "substitution": {
+      "true": 4
      }
     },
-    "false_examples": [
-     "記号 u と n が同じ行に 25 回現れる"
-    ],
+    "false_examples": [],
     "tiers": {
-     "A": 68,
-     "B": 7,
-     "C": 21
+     "A": 72,
+     "B": 5,
+     "C": 58
     },
-    "false_by_tier": {
-     "C": 1
-    },
+    "false_by_tier": {},
     "verdict": "structure_observed"
    },
    "global": {
@@ -5306,7 +5306,7 @@
     "decipherable_structure": false,
     "seconds": 0.05
    },
-   "seconds": 18.98,
+   "seconds": 21.99,
    "description": "Regular に転写の誤りを模した雑音: 記号の10%を別の記号に置換、5%を欠損"
   },
   {
@@ -5343,11 +5343,11 @@
     "verdict": "structure_unstable"
    },
    "global": {
-    "sequential_dependence": 0.585,
+    "sequential_dependence": 0.505,
     "repetition": 0.025,
-    "edge_position": 0.03,
+    "edge_position": 0.045,
     "longest_repeat": 0.025,
-    "line_similarity": 0.11
+    "line_similarity": 0.12
    },
    "segmentation_f1": {},
    "compression_p": 0.9,
@@ -5358,7 +5358,7 @@
     "decipherable_structure": false,
     "seconds": 0.0
    },
-   "seconds": 0.77,
+   "seconds": 0.81,
    "description": "一様な無作為列の約35%の行に、決まった6記号列を1回埋め込んだもの"
   },
   {
@@ -5401,7 +5401,7 @@
     "decipherable_structure": false,
     "seconds": 0.0
    },
-   "seconds": 0.8,
+   "seconds": 1.11,
    "description": "一様な無作為列の約35%の行に、決まった6記号列を1回埋め込んだもの"
   },
   {
@@ -5444,7 +5444,7 @@
     "decipherable_structure": false,
     "seconds": 0.0
    },
-   "seconds": 1.12,
+   "seconds": 1.19,
    "description": "一様な無作為列の約35%の行に、決まった6記号列を1回埋め込んだもの"
   },
   {
@@ -5482,11 +5482,11 @@
     "verdict": "structure_observed"
    },
    "global": {
-    "sequential_dependence": 0.29,
+    "sequential_dependence": 0.265,
     "repetition": 0.025,
-    "edge_position": 0.045,
+    "edge_position": 0.025,
     "longest_repeat": 0.025,
-    "line_similarity": 0.08
+    "line_similarity": 0.09
    },
    "segmentation_f1": {},
    "compression_p": 1.0,
@@ -5497,7 +5497,7 @@
     "decipherable_structure": false,
     "seconds": 0.0
    },
-   "seconds": 3.03,
+   "seconds": 3.41,
    "description": "一様な無作為列の約35%の行に、決まった6記号列を1回埋め込んだもの"
   },
   {
@@ -5535,11 +5535,11 @@
     "verdict": "structure_observed"
    },
    "global": {
-    "sequential_dependence": 0.78,
+    "sequential_dependence": 0.86,
     "repetition": 0.025,
-    "edge_position": 0.78,
+    "edge_position": 0.86,
     "longest_repeat": 0.025,
-    "line_similarity": 0.705
+    "line_similarity": 0.585
    },
    "segmentation_f1": {},
    "compression_p": 0.85,
@@ -5548,9 +5548,9 @@
     "syntax_z": 0.0,
     "morphology_present": false,
     "decipherable_structure": false,
-    "seconds": 0.0
+    "seconds": 0.01
    },
-   "seconds": 3.16,
+   "seconds": 3.18,
    "description": "一様な無作為列の約35%の行に、決まった6記号列を1回埋め込んだもの"
   },
   {
@@ -5567,13 +5567,13 @@
     ],
     "gold_missed": [],
     "gold_undecided": [],
-    "hypotheses": 4,
-    "true": 4,
+    "hypotheses": 5,
+    "true": 5,
     "false": 0,
     "unverifiable": 0,
     "per_family": {
      "ngram": {
-      "true": 2
+      "true": 3
      },
      "position": {
       "true": 1
@@ -5585,7 +5585,7 @@
     "false_examples": [],
     "tiers": {
      "A": 2,
-     "C": 2
+     "C": 3
     },
     "false_by_tier": {},
     "verdict": "structure_observed"
@@ -5593,7 +5593,7 @@
    "global": {
     "sequential_dependence": 0.025,
     "repetition": 0.025,
-    "edge_position": 0.025,
+    "edge_position": 0.03,
     "longest_repeat": 0.025,
     "line_similarity": 0.025
    },
@@ -5604,9 +5604,9 @@
     "syntax_z": 0.0,
     "morphology_present": false,
     "decipherable_structure": false,
-    "seconds": 0.0
+    "seconds": 0.01
    },
-   "seconds": 3.2,
+   "seconds": 3.79,
    "description": "一様な無作為列の約35%の行に、決まった6記号列を1回埋め込んだもの"
   },
   {
@@ -5623,13 +5623,13 @@
     ],
     "gold_missed": [],
     "gold_undecided": [],
-    "hypotheses": 3,
-    "true": 3,
+    "hypotheses": 4,
+    "true": 4,
     "false": 0,
     "unverifiable": 0,
     "per_family": {
      "ngram": {
-      "true": 2
+      "true": 3
      },
      "linepair": {
       "true": 1
@@ -5638,7 +5638,7 @@
     "false_examples": [],
     "tiers": {
      "A": 2,
-     "C": 1
+     "C": 2
     },
     "false_by_tier": {},
     "verdict": "structure_observed"
@@ -5646,7 +5646,7 @@
    "global": {
     "sequential_dependence": 0.025,
     "repetition": 0.025,
-    "edge_position": 0.065,
+    "edge_position": 0.09,
     "longest_repeat": 0.025,
     "line_similarity": 0.025
    },
@@ -5657,9 +5657,9 @@
     "syntax_z": 0.0,
     "morphology_present": false,
     "decipherable_structure": false,
-    "seconds": 0.01
+    "seconds": 0.02
    },
-   "seconds": 5.81,
+   "seconds": 5.76,
    "description": "一様な無作為列の約35%の行に、決まった6記号列を1回埋め込んだもの"
   },
   {
@@ -5676,8 +5676,8 @@
     ],
     "gold_missed": [],
     "gold_undecided": [],
-    "hypotheses": 5,
-    "true": 4,
+    "hypotheses": 6,
+    "true": 5,
     "false": 1,
     "unverifiable": 0,
     "per_family": {
@@ -5686,7 +5686,7 @@
       "false": 1
      },
      "linepair": {
-      "true": 1
+      "true": 2
      },
      "gap": {
       "true": 1
@@ -5697,7 +5697,7 @@
     ],
     "tiers": {
      "A": 1,
-     "C": 4
+     "C": 5
     },
     "false_by_tier": {
      "C": 1
@@ -5707,7 +5707,7 @@
    "global": {
     "sequential_dependence": 0.025,
     "repetition": 0.025,
-    "edge_position": 0.465,
+    "edge_position": 0.455,
     "longest_repeat": 0.025,
     "line_similarity": 0.025
    },
@@ -5720,7 +5720,7 @@
     "decipherable_structure": false,
     "seconds": 0.01
    },
-   "seconds": 5.55,
+   "seconds": 5.59,
    "description": "一様な無作為列の約35%の行に、決まった6記号列を1回埋め込んだもの"
   },
   {
@@ -5737,25 +5737,25 @@
     ],
     "gold_missed": [],
     "gold_undecided": [],
-    "hypotheses": 7,
-    "true": 7,
+    "hypotheses": 9,
+    "true": 9,
     "false": 0,
     "unverifiable": 0,
     "per_family": {
      "ngram": {
-      "true": 5
-     },
-     "linepair": {
-      "true": 1
+      "true": 7
      },
      "position": {
+      "true": 1
+     },
+     "linepair": {
       "true": 1
      }
     },
     "false_examples": [],
     "tiers": {
-     "A": 2,
-     "C": 5
+     "A": 3,
+     "C": 6
     },
     "false_by_tier": {},
     "verdict": "structure_observed"
@@ -5763,7 +5763,7 @@
    "global": {
     "sequential_dependence": 0.025,
     "repetition": 0.025,
-    "edge_position": 0.15,
+    "edge_position": 0.145,
     "longest_repeat": 0.025,
     "line_similarity": 0.025
    },
@@ -5776,7 +5776,7 @@
     "decipherable_structure": false,
     "seconds": 0.01
    },
-   "seconds": 6.13,
+   "seconds": 6.1,
    "description": "一様な無作為列の約35%の行に、決まった6記号列を1回埋め込んだもの"
   },
   {
@@ -5793,13 +5793,13 @@
     ],
     "gold_missed": [],
     "gold_undecided": [],
-    "hypotheses": 12,
-    "true": 12,
+    "hypotheses": 18,
+    "true": 18,
     "false": 0,
     "unverifiable": 0,
     "per_family": {
      "ngram": {
-      "true": 7
+      "true": 13
      },
      "gap": {
       "true": 3
@@ -5815,7 +5815,7 @@
     "tiers": {
      "A": 2,
      "B": 3,
-     "C": 7
+     "C": 13
     },
     "false_by_tier": {},
     "verdict": "structure_observed"
@@ -5834,9 +5834,9 @@
     "syntax_z": -0.71,
     "morphology_present": false,
     "decipherable_structure": false,
-    "seconds": 0.06
+    "seconds": 0.07
    },
-   "seconds": 17.65,
+   "seconds": 17.88,
    "description": "一様な無作為列の約35%の行に、決まった6記号列を1回埋め込んだもの"
   },
   {
@@ -5853,8 +5853,8 @@
     ],
     "gold_missed": [],
     "gold_undecided": [],
-    "hypotheses": 13,
-    "true": 13,
+    "hypotheses": 12,
+    "true": 12,
     "false": 0,
     "unverifiable": 0,
     "per_family": {
@@ -5869,16 +5869,13 @@
      },
      "linepair": {
       "true": 1
-     },
-     "substitution": {
-      "true": 1
      }
     },
     "false_examples": [],
     "tiers": {
      "A": 4,
      "B": 1,
-     "C": 8
+     "C": 7
     },
     "false_by_tier": {},
     "verdict": "structure_observed"
@@ -5886,7 +5883,7 @@
    "global": {
     "sequential_dependence": 0.025,
     "repetition": 0.025,
-    "edge_position": 0.325,
+    "edge_position": 0.375,
     "longest_repeat": 0.025,
     "line_similarity": 0.025
    },
@@ -5899,7 +5896,7 @@
     "decipherable_structure": false,
     "seconds": 0.04
    },
-   "seconds": 16.93,
+   "seconds": 17.06,
    "description": "一様な無作為列の約35%の行に、決まった6記号列を1回埋め込んだもの"
   },
   {
@@ -5916,13 +5913,13 @@
     ],
     "gold_missed": [],
     "gold_undecided": [],
-    "hypotheses": 16,
-    "true": 15,
+    "hypotheses": 15,
+    "true": 14,
     "false": 1,
     "unverifiable": 0,
     "per_family": {
      "ngram": {
-      "true": 10,
+      "true": 9,
       "false": 1
      },
      "position": {
@@ -5942,7 +5939,7 @@
      "記号列 n p l h o o g o t が 2 回現れる"
     ],
     "tiers": {
-     "A": 4,
+     "A": 3,
      "B": 1,
      "C": 11
     },
@@ -5954,7 +5951,7 @@
    "global": {
     "sequential_dependence": 0.025,
     "repetition": 0.025,
-    "edge_position": 0.09,
+    "edge_position": 0.045,
     "longest_repeat": 0.025,
     "line_similarity": 0.025
    },
@@ -5965,9 +5962,9 @@
     "syntax_z": 3.66,
     "morphology_present": false,
     "decipherable_structure": false,
-    "seconds": 0.04
+    "seconds": 0.05
    },
-   "seconds": 17.4,
+   "seconds": 19.0,
    "description": "一様な無作為列の約35%の行に、決まった6記号列を1回埋め込んだもの"
   },
   {
@@ -6017,7 +6014,7 @@
     "decipherable_structure": false,
     "seconds": 0.0
    },
-   "seconds": 0.68,
+   "seconds": 0.77,
    "description": "無作為列の 0,4,8,… 番目に記号 P を置いた行（各位置 90%）"
   },
   {
@@ -6028,55 +6025,6 @@
    "lines": 5,
    "symbols": 69,
    "symbol_types": 17,
-   "score": {
-    "gold_found": [
-     "P が4記号おき"
-    ],
-    "gold_missed": [],
-    "gold_undecided": [],
-    "hypotheses": 2,
-    "true": 2,
-    "false": 0,
-    "unverifiable": 0,
-    "per_family": {
-     "gap": {
-      "true": 2
-     }
-    },
-    "false_examples": [],
-    "tiers": {
-     "C": 2
-    },
-    "false_by_tier": {},
-    "verdict": "structure_unstable"
-   },
-   "global": {
-    "sequential_dependence": 1.0,
-    "repetition": 1.0,
-    "edge_position": 1.0,
-    "longest_repeat": 1.0,
-    "line_similarity": 1.0
-   },
-   "segmentation_f1": {},
-   "compression_p": 1.0,
-   "old_babel": {
-    "syntax_present": false,
-    "syntax_z": 0.0,
-    "morphology_present": false,
-    "decipherable_structure": false,
-    "seconds": 0.0
-   },
-   "seconds": 1.16,
-   "description": "無作為列の 0,4,8,… 番目に記号 P を置いた行（各位置 90%）"
-  },
-  {
-   "generator": "periodic",
-   "principle": "internal",
-   "seed": 2,
-   "size_requested": 5,
-   "lines": 5,
-   "symbols": 72,
-   "symbol_types": 16,
    "score": {
     "gold_found": [
      "P が4記号おき"
@@ -6108,6 +6056,55 @@
     "line_similarity": 1.0
    },
    "segmentation_f1": {},
+   "compression_p": 1.0,
+   "old_babel": {
+    "syntax_present": false,
+    "syntax_z": 0.0,
+    "morphology_present": false,
+    "decipherable_structure": false,
+    "seconds": 0.0
+   },
+   "seconds": 1.01,
+   "description": "無作為列の 0,4,8,… 番目に記号 P を置いた行（各位置 90%）"
+  },
+  {
+   "generator": "periodic",
+   "principle": "internal",
+   "seed": 2,
+   "size_requested": 5,
+   "lines": 5,
+   "symbols": 72,
+   "symbol_types": 16,
+   "score": {
+    "gold_found": [
+     "P が4記号おき"
+    ],
+    "gold_missed": [],
+    "gold_undecided": [],
+    "hypotheses": 2,
+    "true": 2,
+    "false": 0,
+    "unverifiable": 0,
+    "per_family": {
+     "gap": {
+      "true": 2
+     }
+    },
+    "false_examples": [],
+    "tiers": {
+     "C": 2
+    },
+    "false_by_tier": {},
+    "verdict": "structure_unstable"
+   },
+   "global": {
+    "sequential_dependence": 1.0,
+    "repetition": 1.0,
+    "edge_position": 1.0,
+    "longest_repeat": 1.0,
+    "line_similarity": 1.0
+   },
+   "segmentation_f1": {},
    "compression_p": 0.9,
    "old_babel": {
     "syntax_present": false,
@@ -6116,7 +6113,7 @@
     "decipherable_structure": false,
     "seconds": 0.0
    },
-   "seconds": 1.14,
+   "seconds": 1.02,
    "description": "無作為列の 0,4,8,… 番目に記号 P を置いた行（各位置 90%）"
   },
   {
@@ -6150,9 +6147,9 @@
     "verdict": "structure_observed"
    },
    "global": {
-    "sequential_dependence": 0.54,
+    "sequential_dependence": 0.62,
     "repetition": 1.0,
-    "edge_position": 0.4,
+    "edge_position": 0.44999999999999996,
     "longest_repeat": 1.0,
     "line_similarity": 1.0
    },
@@ -6163,9 +6160,9 @@
     "syntax_z": 0.0,
     "morphology_present": false,
     "decipherable_structure": false,
-    "seconds": 0.01
+    "seconds": 0.0
    },
-   "seconds": 2.81,
+   "seconds": 2.47,
    "description": "無作為列の 0,4,8,… 番目に記号 P を置いた行（各位置 90%）"
   },
   {
@@ -6199,7 +6196,7 @@
     "verdict": "structure_observed"
    },
    "global": {
-    "sequential_dependence": 0.96,
+    "sequential_dependence": 1.0,
     "repetition": 1.0,
     "edge_position": 0.125,
     "longest_repeat": 1.0,
@@ -6214,7 +6211,7 @@
     "decipherable_structure": false,
     "seconds": 0.0
    },
-   "seconds": 2.67,
+   "seconds": 2.99,
    "description": "無作為列の 0,4,8,… 番目に記号 P を置いた行（各位置 90%）"
   },
   {
@@ -6248,11 +6245,11 @@
     "verdict": "structure_observed"
    },
    "global": {
-    "sequential_dependence": 0.05,
+    "sequential_dependence": 0.025,
     "repetition": 1.0,
-    "edge_position": 0.24,
+    "edge_position": 0.16,
     "longest_repeat": 1.0,
-    "line_similarity": 0.24
+    "line_similarity": 0.22499999999999998
    },
    "segmentation_f1": {},
    "compression_p": 0.95,
@@ -6263,7 +6260,7 @@
     "decipherable_structure": false,
     "seconds": 0.0
    },
-   "seconds": 3.04,
+   "seconds": 3.18,
    "description": "無作為列の 0,4,8,… 番目に記号 P を置いた行（各位置 90%）"
   },
   {
@@ -6300,10 +6297,10 @@
     "verdict": "structure_observed"
    },
    "global": {
-    "sequential_dependence": 0.025,
+    "sequential_dependence": 0.06,
     "repetition": 1.0,
     "edge_position": 0.025,
-    "longest_repeat": 0.34500000000000003,
+    "longest_repeat": 0.46499999999999997,
     "line_similarity": 1.0
    },
    "segmentation_f1": {},
@@ -6315,7 +6312,7 @@
     "decipherable_structure": false,
     "seconds": 0.01
    },
-   "seconds": 4.77,
+   "seconds": 4.6,
    "description": "無作為列の 0,4,8,… 番目に記号 P を置いた行（各位置 90%）"
   },
   {
@@ -6332,39 +6329,44 @@
     ],
     "gold_missed": [],
     "gold_undecided": [],
-    "hypotheses": 4,
+    "hypotheses": 5,
     "true": 3,
-    "false": 1,
+    "false": 2,
     "unverifiable": 0,
     "per_family": {
+     "position": {
+      "true": 1
+     },
      "gap": {
       "true": 2
      },
-     "position": {
-      "true": 1
+     "ngram": {
+      "false": 1
      },
      "substitution": {
       "false": 1
      }
     },
     "false_examples": [
+     "記号列 P l m b P が 3 回現れる",
      "記号 d と l が同じ直前の文脈 4 種・同じ直後の文脈 7 種を共有する"
     ],
     "tiers": {
-     "B": 3,
-     "C": 1
+     "A": 1,
+     "B": 2,
+     "C": 2
     },
     "false_by_tier": {
-     "C": 1
+     "C": 2
     },
     "verdict": "structure_observed"
    },
    "global": {
-    "sequential_dependence": 0.025,
-    "repetition": 0.48,
+    "sequential_dependence": 0.04,
+    "repetition": 0.39,
     "edge_position": 0.025,
-    "longest_repeat": 0.48,
-    "line_similarity": 0.48
+    "longest_repeat": 0.39,
+    "line_similarity": 0.39
    },
    "segmentation_f1": {},
    "compression_p": 0.95,
@@ -6373,9 +6375,9 @@
     "syntax_z": 0.0,
     "morphology_present": false,
     "decipherable_structure": false,
-    "seconds": 0.01
+    "seconds": 0.03
    },
-   "seconds": 4.89,
+   "seconds": 6.14,
    "description": "無作為列の 0,4,8,… 番目に記号 P を置いた行（各位置 90%）"
   },
   {
@@ -6416,7 +6418,7 @@
     "repetition": 1.0,
     "edge_position": 0.025,
     "longest_repeat": 1.0,
-    "line_similarity": 0.75
+    "line_similarity": 0.795
    },
    "segmentation_f1": {},
    "compression_p": 0.95,
@@ -6427,7 +6429,7 @@
     "decipherable_structure": false,
     "seconds": 0.01
    },
-   "seconds": 5.35,
+   "seconds": 6.2,
    "description": "無作為列の 0,4,8,… 番目に記号 P を置いた行（各位置 90%）"
   },
   {
@@ -6444,9 +6446,9 @@
     ],
     "gold_missed": [],
     "gold_undecided": [],
-    "hypotheses": 6,
-    "true": 6,
-    "false": 0,
+    "hypotheses": 7,
+    "true": 5,
+    "false": 2,
     "unverifiable": 0,
     "per_family": {
      "gap": {
@@ -6455,24 +6457,29 @@
      "position": {
       "true": 3
      },
-     "substitution": {
-      "true": 1
+     "linepair": {
+      "false": 2
      }
     },
-    "false_examples": [],
+    "false_examples": [
+     "2 行（78, 93）が、偶然より多くの2〜4記号列を互いに共有する（有意な行の組 1）",
+     "2 行（7, 79）が、偶然より多くの2〜4記号列を互いに共有する（有意な行の組 1）"
+    ],
     "tiers": {
      "B": 4,
+     "C": 3
+    },
+    "false_by_tier": {
      "C": 2
     },
-    "false_by_tier": {},
     "verdict": "structure_observed"
    },
    "global": {
     "sequential_dependence": 0.025,
-    "repetition": 0.07500000000000001,
+    "repetition": 0.045,
     "edge_position": 0.025,
-    "longest_repeat": 0.2,
-    "line_similarity": 0.54
+    "longest_repeat": 0.18,
+    "line_similarity": 0.595
    },
    "segmentation_f1": {},
    "compression_p": 1.0,
@@ -6481,9 +6488,9 @@
     "syntax_z": 7.91,
     "morphology_present": false,
     "decipherable_structure": true,
-    "seconds": 0.06
+    "seconds": 0.07
    },
-   "seconds": 17.49,
+   "seconds": 16.83,
    "description": "無作為列の 0,4,8,… 番目に記号 P を置いた行（各位置 90%）"
   },
   {
@@ -6500,8 +6507,8 @@
     ],
     "gold_missed": [],
     "gold_undecided": [],
-    "hypotheses": 5,
-    "true": 5,
+    "hypotheses": 4,
+    "true": 4,
     "false": 0,
     "unverifiable": 0,
     "per_family": {
@@ -6509,13 +6516,12 @@
       "true": 2
      },
      "position": {
-      "true": 3
+      "true": 2
      }
     },
     "false_examples": [],
     "tiers": {
-     "B": 4,
-     "C": 1
+     "B": 4
     },
     "false_by_tier": {},
     "verdict": "structure_observed"
@@ -6524,8 +6530,8 @@
     "sequential_dependence": 0.025,
     "repetition": 0.025,
     "edge_position": 0.025,
-    "longest_repeat": 0.78,
-    "line_similarity": 0.33
+    "longest_repeat": 0.81,
+    "line_similarity": 0.31
    },
    "segmentation_f1": {},
    "compression_p": 1.0,
@@ -6534,9 +6540,9 @@
     "syntax_z": 10.06,
     "morphology_present": false,
     "decipherable_structure": true,
-    "seconds": 0.05
+    "seconds": 0.06
    },
-   "seconds": 19.6,
+   "seconds": 20.22,
    "description": "無作為列の 0,4,8,… 番目に記号 P を置いた行（各位置 90%）"
   },
   {
@@ -6553,8 +6559,8 @@
     ],
     "gold_missed": [],
     "gold_undecided": [],
-    "hypotheses": 5,
-    "true": 5,
+    "hypotheses": 4,
+    "true": 4,
     "false": 0,
     "unverifiable": 0,
     "per_family": {
@@ -6563,15 +6569,11 @@
      },
      "position": {
       "true": 2
-     },
-     "substitution": {
-      "true": 1
      }
     },
     "false_examples": [],
     "tiers": {
-     "B": 4,
-     "C": 1
+     "B": 4
     },
     "false_by_tier": {},
     "verdict": "structure_observed"
@@ -6592,7 +6594,7 @@
     "decipherable_structure": true,
     "seconds": 0.06
    },
-   "seconds": 19.13,
+   "seconds": 19.47,
    "description": "無作為列の 0,4,8,… 番目に記号 P を置いた行（各位置 90%）"
   },
   {
@@ -6636,7 +6638,7 @@
    "global": {
     "sequential_dependence": 0.025,
     "repetition": 0.025,
-    "edge_position": 0.065,
+    "edge_position": 0.055,
     "longest_repeat": 0.025,
     "line_similarity": 0.025
    },
@@ -6657,7 +6659,7 @@
     "decipherable_structure": false,
     "seconds": 0.0
    },
-   "seconds": 1.29,
+   "seconds": 1.43,
    "description": "再帰的な句構造文法（動詞が先頭・接頭辞で標示・等位接続と所有の入れ子）。時制接頭辞 Σ/Τ、定冠接頭辞 Δ、複数接頭辞 Π、接続語 Κ、所有標識 Φ。記号はギリシア文字"
   },
   {
@@ -6678,13 +6680,13 @@
     "gold_undecided": [
      "文頭の時制接頭辞 Τ"
     ],
-    "hypotheses": 6,
-    "true": 6,
+    "hypotheses": 5,
+    "true": 5,
     "false": 0,
     "unverifiable": 0,
     "per_family": {
      "ngram": {
-      "true": 5
+      "true": 4
      },
      "linepair": {
       "true": 1
@@ -6693,7 +6695,6 @@
     "false_examples": [],
     "tiers": {
      "A": 1,
-     "B": 1,
      "C": 4
     },
     "false_by_tier": {},
@@ -6723,7 +6724,7 @@
     "decipherable_structure": false,
     "seconds": 0.0
    },
-   "seconds": 2.08,
+   "seconds": 2.05,
    "description": "再帰的な句構造文法（動詞が先頭・接頭辞で標示・等位接続と所有の入れ子）。時制接頭辞 Σ/Τ、定冠接頭辞 Δ、複数接頭辞 Π、接続語 Κ、所有標識 Φ。記号はギリシア文字"
   },
   {
@@ -6787,7 +6788,7 @@
     "decipherable_structure": false,
     "seconds": 0.0
    },
-   "seconds": 1.23,
+   "seconds": 1.14,
    "description": "再帰的な句構造文法（動詞が先頭・接頭辞で標示・等位接続と所有の入れ子）。時制接頭辞 Σ/Τ、定冠接頭辞 Δ、複数接頭辞 Π、接続語 Κ、所有標識 Φ。記号はギリシア文字"
   },
   {
@@ -6856,7 +6857,7 @@
     "decipherable_structure": false,
     "seconds": 0.01
    },
-   "seconds": 5.2,
+   "seconds": 5.34,
    "description": "再帰的な句構造文法（動詞が先頭・接頭辞で標示・等位接続と所有の入れ子）。時制接頭辞 Σ/Τ、定冠接頭辞 Δ、複数接頭辞 Π、接続語 Κ、所有標識 Φ。記号はギリシア文字"
   },
   {
@@ -6878,30 +6879,34 @@
     ],
     "gold_undecided": [],
     "hypotheses": 18,
-    "true": 18,
-    "false": 0,
+    "true": 17,
+    "false": 1,
     "unverifiable": 0,
     "per_family": {
      "ngram": {
-      "true": 12
+      "true": 13
      },
      "position": {
       "true": 3
      },
      "linepair": {
-      "true": 2
+      "true": 1
      },
      "substitution": {
-      "true": 1
+      "false": 1
      }
     },
-    "false_examples": [],
+    "false_examples": [
+     "記号 π と Π が同じ直前の文脈 1 種・同じ直後の文脈 1 種を共有する"
+    ],
     "tiers": {
      "A": 2,
-     "B": 2,
-     "C": 14
+     "B": 3,
+     "C": 13
     },
-    "false_by_tier": {},
+    "false_by_tier": {
+     "C": 1
+    },
     "verdict": "structure_observed"
    },
    "global": {
@@ -6928,7 +6933,7 @@
     "decipherable_structure": false,
     "seconds": 0.01
    },
-   "seconds": 5.49,
+   "seconds": 5.92,
    "description": "再帰的な句構造文法（動詞が先頭・接頭辞で標示・等位接続と所有の入れ子）。時制接頭辞 Σ/Τ、定冠接頭辞 Δ、複数接頭辞 Π、接続語 Κ、所有標識 Φ。記号はギリシア文字"
   },
   {
@@ -6941,38 +6946,35 @@
    "symbol_types": 26,
    "score": {
     "gold_found": [
-     "文頭の時制接頭辞 Σ",
-     "時制接頭辞 Σ/Τ が同じ枠"
+     "文頭の時制接頭辞 Σ"
     ],
     "gold_missed": [
+     "時制接頭辞 Σ/Τ が同じ枠",
      "定冠接頭辞 Δ"
     ],
     "gold_undecided": [
      "文頭の時制接頭辞 Τ"
     ],
-    "hypotheses": 15,
-    "true": 15,
+    "hypotheses": 12,
+    "true": 12,
     "false": 0,
     "unverifiable": 0,
     "per_family": {
      "ngram": {
-      "true": 10
+      "true": 8
      },
      "position": {
       "true": 2
      },
      "linepair": {
       "true": 2
-     },
-     "substitution": {
-      "true": 1
      }
     },
     "false_examples": [],
     "tiers": {
      "A": 2,
-     "B": 2,
-     "C": 11
+     "B": 1,
+     "C": 9
     },
     "false_by_tier": {},
     "verdict": "structure_observed"
@@ -6999,9 +7001,9 @@
     "syntax_z": 0.0,
     "morphology_present": false,
     "decipherable_structure": false,
-    "seconds": 0.0
+    "seconds": 0.01
    },
-   "seconds": 4.37,
+   "seconds": 4.22,
    "description": "再帰的な句構造文法（動詞が先頭・接頭辞で標示・等位接続と所有の入れ子）。時制接頭辞 Σ/Τ、定冠接頭辞 Δ、複数接頭辞 Π、接続語 Κ、所有標識 Φ。記号はギリシア文字"
   },
   {
@@ -7022,22 +7024,22 @@
      "定冠接頭辞 Δ"
     ],
     "gold_undecided": [],
-    "hypotheses": 74,
-    "true": 74,
+    "hypotheses": 66,
+    "true": 66,
     "false": 0,
     "unverifiable": 0,
     "per_family": {
      "ngram": {
-      "true": 57
+      "true": 49
      },
      "position": {
       "true": 9
      },
-     "linepair": {
-      "true": 4
-     },
      "substitution": {
-      "true": 3
+      "true": 2
+     },
+     "linepair": {
+      "true": 5
      },
      "cooccurrence": {
       "true": 1
@@ -7045,9 +7047,9 @@
     },
     "false_examples": [],
     "tiers": {
-     "A": 14,
-     "B": 8,
-     "C": 52
+     "A": 17,
+     "B": 6,
+     "C": 43
     },
     "false_by_tier": {},
     "verdict": "structure_observed"
@@ -7076,7 +7078,7 @@
     "decipherable_structure": false,
     "seconds": 0.02
    },
-   "seconds": 9.48,
+   "seconds": 9.06,
    "description": "再帰的な句構造文法（動詞が先頭・接頭辞で標示・等位接続と所有の入れ子）。時制接頭辞 Σ/Τ、定冠接頭辞 Δ、複数接頭辞 Π、接続語 Κ、所有標識 Φ。記号はギリシア文字"
   },
   {
@@ -7097,32 +7099,35 @@
      "定冠接頭辞 Δ"
     ],
     "gold_undecided": [],
-    "hypotheses": 70,
-    "true": 69,
+    "hypotheses": 71,
+    "true": 70,
     "false": 1,
     "unverifiable": 0,
     "per_family": {
      "ngram": {
-      "true": 50,
+      "true": 52,
       "false": 1
      },
      "position": {
-      "true": 12
-     },
-     "linepair": {
-      "true": 5
+      "true": 11
      },
      "substitution": {
-      "true": 2
+      "true": 3
+     },
+     "linepair": {
+      "true": 3
+     },
+     "dispersion": {
+      "true": 1
      }
     },
     "false_examples": [
      "記号列 Κ Τ μ μ Δ ι α ο χ が 2 回現れる"
     ],
     "tiers": {
-     "A": 22,
-     "B": 4,
-     "C": 44
+     "A": 21,
+     "B": 5,
+     "C": 45
     },
     "false_by_tier": {
      "C": 1
@@ -7153,7 +7158,7 @@
     "decipherable_structure": true,
     "seconds": 0.01
    },
-   "seconds": 9.11,
+   "seconds": 9.72,
    "description": "再帰的な句構造文法（動詞が先頭・接頭辞で標示・等位接続と所有の入れ子）。時制接頭辞 Σ/Τ、定冠接頭辞 Δ、複数接頭辞 Π、接続語 Κ、所有標識 Φ。記号はギリシア文字"
   },
   {
@@ -7174,19 +7179,19 @@
      "定冠接頭辞 Δ"
     ],
     "gold_undecided": [],
-    "hypotheses": 43,
-    "true": 43,
+    "hypotheses": 53,
+    "true": 53,
     "false": 0,
     "unverifiable": 0,
     "per_family": {
      "ngram": {
-      "true": 27
+      "true": 36
      },
      "position": {
       "true": 11
      },
      "linepair": {
-      "true": 4
+      "true": 5
      },
      "substitution": {
       "true": 1
@@ -7194,9 +7199,9 @@
     },
     "false_examples": [],
     "tiers": {
-     "A": 12,
-     "B": 8,
-     "C": 23
+     "A": 15,
+     "B": 10,
+     "C": 28
     },
     "false_by_tier": {},
     "verdict": "structure_observed"
@@ -7225,7 +7230,7 @@
     "decipherable_structure": true,
     "seconds": 0.01
    },
-   "seconds": 8.96,
+   "seconds": 9.81,
    "description": "再帰的な句構造文法（動詞が先頭・接頭辞で標示・等位接続と所有の入れ子）。時制接頭辞 Σ/Τ、定冠接頭辞 Δ、複数接頭辞 Π、接続語 Κ、所有標識 Φ。記号はギリシア文字"
   },
   {
@@ -7246,46 +7251,48 @@
      "定冠接頭辞 Δ"
     ],
     "gold_undecided": [],
-    "hypotheses": 271,
-    "true": 268,
-    "false": 3,
+    "hypotheses": 278,
+    "true": 274,
+    "false": 4,
     "unverifiable": 0,
     "per_family": {
      "ngram": {
-      "true": 217,
+      "true": 223,
       "false": 3
      },
      "position": {
       "true": 34
      },
-     "dispersion": {
-      "true": 1
-     },
      "cooccurrence": {
-      "true": 6
+      "true": 6,
+      "false": 1
      },
      "gap": {
       "true": 3
      },
      "substitution": {
-      "true": 1
+      "true": 4
      },
      "linepair": {
-      "true": 6
+      "true": 1
+     },
+     "dispersion": {
+      "true": 3
      }
     },
     "false_examples": [
      "記号列 ο ρ η Φ Δ Π θ γ ε が 2 回現れる",
      "記号列 Φ Δ ρ λ ψ κ Δ ο が 2 回現れる",
-     "記号列 ι Κ Σ ρ ψ Δ α ι が 2 回現れる"
+     "記号列 ι Κ Σ ρ ψ Δ α ι が 2 回現れる",
+     "記号 ο と ρ が同じ行に 28 回現れる"
     ],
     "tiers": {
-     "A": 94,
-     "B": 31,
-     "C": 146
+     "A": 82,
+     "B": 18,
+     "C": 178
     },
     "false_by_tier": {
-     "C": 3
+     "C": 4
     },
     "verdict": "structure_observed"
    },
@@ -7311,9 +7318,9 @@
     "syntax_z": 15.54,
     "morphology_present": true,
     "decipherable_structure": true,
-    "seconds": 0.1
+    "seconds": 0.12
    },
-   "seconds": 31.62,
+   "seconds": 31.11,
    "description": "再帰的な句構造文法（動詞が先頭・接頭辞で標示・等位接続と所有の入れ子）。時制接頭辞 Σ/Τ、定冠接頭辞 Δ、複数接頭辞 Π、接続語 Κ、所有標識 Φ。記号はギリシア文字"
   },
   {
@@ -7334,34 +7341,32 @@
      "定冠接頭辞 Δ"
     ],
     "gold_undecided": [],
-    "hypotheses": 274,
-    "true": 267,
-    "false": 7,
+    "hypotheses": 281,
+    "true": 276,
+    "false": 5,
     "unverifiable": 0,
     "per_family": {
      "ngram": {
-      "true": 211,
+      "true": 217,
       "false": 5
      },
      "position": {
-      "true": 36
+      "true": 37
      },
      "dispersion": {
-      "true": 2
-     },
-     "cooccurrence": {
-      "true": 12,
-      "false": 1
+      "true": 4
      },
      "substitution": {
-      "true": 4,
-      "false": 1
+      "true": 4
      },
      "linepair": {
-      "true": 1
+      "true": 5
+     },
+     "cooccurrence": {
+      "true": 7
      },
      "gap": {
-      "true": 1
+      "true": 2
      }
     },
     "false_examples": [
@@ -7372,13 +7377,13 @@
      "記号列 μ ι Δ α η Φ Δ η ξ が 2 回現れる"
     ],
     "tiers": {
-     "A": 95,
-     "B": 19,
-     "C": 160
+     "A": 106,
+     "B": 13,
+     "C": 162
     },
     "false_by_tier": {
      "A": 1,
-     "C": 6
+     "C": 4
     },
     "verdict": "structure_observed"
    },
@@ -7406,7 +7411,7 @@
     "decipherable_structure": true,
     "seconds": 0.06
    },
-   "seconds": 28.64,
+   "seconds": 29.19,
    "description": "再帰的な句構造文法（動詞が先頭・接頭辞で標示・等位接続と所有の入れ子）。時制接頭辞 Σ/Τ、定冠接頭辞 Δ、複数接頭辞 Π、接続語 Κ、所有標識 Φ。記号はギリシア文字"
   },
   {
@@ -7427,32 +7432,32 @@
      "定冠接頭辞 Δ"
     ],
     "gold_undecided": [],
-    "hypotheses": 267,
-    "true": 263,
+    "hypotheses": 217,
+    "true": 213,
     "false": 4,
     "unverifiable": 0,
     "per_family": {
      "ngram": {
-      "true": 202,
+      "true": 161,
       "false": 4
      },
      "position": {
-      "true": 35
-     },
-     "cooccurrence": {
-      "true": 11
+      "true": 36
      },
      "gap": {
       "true": 3
      },
      "substitution": {
-      "true": 2
+      "true": 1
      },
      "linepair": {
-      "true": 7
+      "true": 5
+     },
+     "cooccurrence": {
+      "true": 6
      },
      "dispersion": {
-      "true": 3
+      "true": 1
      }
     },
     "false_examples": [
@@ -7462,9 +7467,9 @@
      "記号列 χ κ δ θ Φ Δ χ κ δ θ Δ が 2 回現れる"
     ],
     "tiers": {
-     "A": 111,
-     "B": 33,
-     "C": 123
+     "A": 105,
+     "B": 22,
+     "C": 90
     },
     "false_by_tier": {
      "C": 4
@@ -7493,9 +7498,9 @@
     "syntax_z": 21.06,
     "morphology_present": true,
     "decipherable_structure": true,
-    "seconds": 0.05
+    "seconds": 0.04
    },
-   "seconds": 30.16,
+   "seconds": 31.76,
    "description": "再帰的な句構造文法（動詞が先頭・接頭辞で標示・等位接続と所有の入れ子）。時制接頭辞 Σ/Τ、定冠接頭辞 Δ、複数接頭辞 Π、接続語 Κ、所有標識 Φ。記号はギリシア文字"
   },
   {
@@ -7551,9 +7556,9 @@
     "syntax_z": 0.0,
     "morphology_present": false,
     "decipherable_structure": false,
-    "seconds": 0.0
+    "seconds": 0.01
    },
-   "seconds": 3.09,
+   "seconds": 3.06,
    "description": "BABEL 本体の生成器（babel.generator、系統 KES/SOT/… をシードで切り替え、LEVEL C、欠損なし）（この標本は KES）"
   },
   {
@@ -7573,11 +7578,11 @@
     "false": 0,
     "unverifiable": 0,
     "per_family": {
-     "ngram": {
-      "true": 3
-     },
      "position": {
       "true": 1
+     },
+     "ngram": {
+      "true": 3
      },
      "linepair": {
       "true": 1
@@ -7585,16 +7590,17 @@
     },
     "false_examples": [],
     "tiers": {
-     "C": 5
+     "A": 1,
+     "C": 4
     },
     "false_by_tier": {},
-    "verdict": "structure_unstable"
+    "verdict": "structure_observed"
    },
    "global": {
     "sequential_dependence": 0.025,
     "repetition": 0.025,
-    "edge_position": 0.04,
-    "longest_repeat": 0.065,
+    "edge_position": 0.025,
+    "longest_repeat": 0.045,
     "line_similarity": 0.025
    },
    "segmentation_f1": {
@@ -7612,9 +7618,9 @@
     "syntax_z": 0.0,
     "morphology_present": false,
     "decipherable_structure": false,
-    "seconds": 0.01
+    "seconds": 0.02
    },
-   "seconds": 2.53,
+   "seconds": 2.8,
    "description": "BABEL 本体の生成器（babel.generator、系統 KES/SOT/… をシードで切り替え、LEVEL C、欠損なし）（この標本は UMB）"
   },
   {
@@ -7658,7 +7664,7 @@
    "global": {
     "sequential_dependence": 0.025,
     "repetition": 0.025,
-    "edge_position": 0.065,
+    "edge_position": 0.045,
     "longest_repeat": 0.025,
     "line_similarity": 0.025
    },
@@ -7679,7 +7685,7 @@
     "decipherable_structure": false,
     "seconds": 0.0
    },
-   "seconds": 3.04,
+   "seconds": 2.88,
    "description": "BABEL 本体の生成器（babel.generator、系統 KES/SOT/… をシードで切り替え、LEVEL C、欠損なし）（この標本は SOT）"
   },
   {
@@ -7694,29 +7700,29 @@
     "gold_found": [],
     "gold_missed": [],
     "gold_undecided": [],
-    "hypotheses": 13,
-    "true": 13,
+    "hypotheses": 12,
+    "true": 12,
     "false": 0,
     "unverifiable": 0,
     "per_family": {
+     "ngram": {
+      "true": 6
+     },
      "position": {
       "true": 3
      },
-     "ngram": {
-      "true": 7
-     },
-     "substitution": {
+     "linepair": {
       "true": 1
      },
-     "linepair": {
+     "substitution": {
       "true": 2
      }
     },
     "false_examples": [],
     "tiers": {
-     "A": 2,
-     "B": 1,
-     "C": 10
+     "A": 1,
+     "B": 2,
+     "C": 9
     },
     "false_by_tier": {},
     "verdict": "structure_observed"
@@ -7745,7 +7751,7 @@
     "decipherable_structure": false,
     "seconds": 0.02
    },
-   "seconds": 5.29,
+   "seconds": 5.79,
    "description": "BABEL 本体の生成器（babel.generator、系統 KES/SOT/… をシードで切り替え、LEVEL C、欠損なし）（この標本は KES）"
   },
   {
@@ -7760,20 +7766,20 @@
     "gold_found": [],
     "gold_missed": [],
     "gold_undecided": [],
-    "hypotheses": 18,
-    "true": 17,
+    "hypotheses": 14,
+    "true": 13,
     "false": 1,
     "unverifiable": 0,
     "per_family": {
      "ngram": {
-      "true": 13,
+      "true": 10,
       "false": 1
      },
      "position": {
       "true": 2
      },
      "linepair": {
-      "true": 2
+      "true": 1
      }
     },
     "false_examples": [
@@ -7781,7 +7787,7 @@
     ],
     "tiers": {
      "A": 2,
-     "C": 16
+     "C": 12
     },
     "false_by_tier": {
      "C": 1
@@ -7812,7 +7818,7 @@
     "decipherable_structure": true,
     "seconds": 0.02
    },
-   "seconds": 5.09,
+   "seconds": 4.35,
    "description": "BABEL 本体の生成器（babel.generator、系統 KES/SOT/… をシードで切り替え、LEVEL C、欠損なし）（この標本は UMB）"
   },
   {
@@ -7827,44 +7833,37 @@
     "gold_found": [],
     "gold_missed": [],
     "gold_undecided": [],
-    "hypotheses": 21,
-    "true": 20,
-    "false": 1,
+    "hypotheses": 14,
+    "true": 14,
+    "false": 0,
     "unverifiable": 0,
     "per_family": {
+     "ngram": {
+      "true": 9
+     },
      "position": {
+      "true": 1
+     },
+     "substitution": {
       "true": 1
      },
      "linepair": {
       "true": 3
-     },
-     "substitution": {
-      "true": 3,
-      "false": 1
-     },
-     "ngram": {
-      "true": 12
-     },
-     "gap": {
-      "true": 1
      }
     },
-    "false_examples": [
-     "記号 l と b が同じ直前の文脈 2 種・同じ直後の文脈 3 種を共有する"
-    ],
+    "false_examples": [],
     "tiers": {
-     "B": 3,
-     "C": 18
+     "A": 2,
+     "B": 2,
+     "C": 10
     },
-    "false_by_tier": {
-     "C": 1
-    },
+    "false_by_tier": {},
     "verdict": "structure_observed"
    },
    "global": {
     "sequential_dependence": 0.025,
     "repetition": 0.025,
-    "edge_position": 0.025,
+    "edge_position": 0.045,
     "longest_repeat": 0.025,
     "line_similarity": 0.025
    },
@@ -7885,7 +7884,7 @@
     "decipherable_structure": false,
     "seconds": 0.01
    },
-   "seconds": 5.52,
+   "seconds": 5.21,
    "description": "BABEL 本体の生成器（babel.generator、系統 KES/SOT/… をシードで切り替え、LEVEL C、欠損なし）（この標本は SOT）"
   },
   {
@@ -7900,39 +7899,31 @@
     "gold_found": [],
     "gold_missed": [],
     "gold_undecided": [],
-    "hypotheses": 52,
-    "true": 51,
-    "false": 1,
+    "hypotheses": 54,
+    "true": 54,
+    "false": 0,
     "unverifiable": 0,
     "per_family": {
      "position": {
       "true": 11
      },
      "ngram": {
-      "true": 26
+      "true": 34
      },
      "linepair": {
       "true": 4
      },
      "substitution": {
-      "true": 9,
-      "false": 1
-     },
-     "gap": {
-      "true": 1
+      "true": 5
      }
     },
-    "false_examples": [
-     "記号 d と r が同じ直前の文脈 11 種・同じ直後の文脈 4 種を共有する"
-    ],
+    "false_examples": [],
     "tiers": {
      "A": 16,
-     "B": 6,
+     "B": 8,
      "C": 30
     },
-    "false_by_tier": {
-     "C": 1
-    },
+    "false_by_tier": {},
     "verdict": "structure_observed"
    },
    "global": {
@@ -7959,7 +7950,7 @@
     "decipherable_structure": false,
     "seconds": 0.02
    },
-   "seconds": 11.21,
+   "seconds": 10.93,
    "description": "BABEL 本体の生成器（babel.generator、系統 KES/SOT/… をシードで切り替え、LEVEL C、欠損なし）（この標本は KES）"
   },
   {
@@ -7974,35 +7965,38 @@
     "gold_found": [],
     "gold_missed": [],
     "gold_undecided": [],
-    "hypotheses": 50,
-    "true": 49,
-    "false": 1,
+    "hypotheses": 69,
+    "true": 65,
+    "false": 4,
     "unverifiable": 0,
     "per_family": {
      "ngram": {
-      "true": 36,
-      "false": 1
+      "true": 51,
+      "false": 4
      },
      "position": {
-      "true": 7
-     },
-     "substitution": {
-      "true": 3
+      "true": 8
      },
      "linepair": {
-      "true": 3
+      "true": 4
+     },
+     "substitution": {
+      "true": 2
      }
     },
     "false_examples": [
-     "記号列 n u u w a s i i n u u t i q u l a が 2 回現れる"
+     "記号列 n u u w a s i i n u u t i q u l a が 2 回現れる",
+     "記号列 a a l i w a h a が 2 回現れる",
+     "記号列 n a a m u n i が 2 回現れる",
+     "記号列 g i s i n u u が 2 回現れる"
     ],
     "tiers": {
-     "A": 9,
+     "A": 10,
      "B": 5,
-     "C": 36
+     "C": 54
     },
     "false_by_tier": {
-     "C": 1
+     "C": 4
     },
     "verdict": "structure_observed"
    },
@@ -8028,9 +8022,9 @@
     "syntax_z": 38.78,
     "morphology_present": false,
     "decipherable_structure": true,
-    "seconds": 0.06
+    "seconds": 0.05
    },
-   "seconds": 11.52,
+   "seconds": 12.47,
    "description": "BABEL 本体の生成器（babel.generator、系統 KES/SOT/… をシードで切り替え、LEVEL C、欠損なし）（この標本は UMB）"
   },
   {
@@ -8045,26 +8039,26 @@
     "gold_found": [],
     "gold_missed": [],
     "gold_undecided": [],
-    "hypotheses": 56,
-    "true": 53,
+    "hypotheses": 73,
+    "true": 70,
     "false": 3,
     "unverifiable": 0,
     "per_family": {
      "ngram": {
-      "true": 39,
+      "true": 53,
       "false": 3
      },
      "position": {
-      "true": 6
+      "true": 7
+     },
+     "substitution": {
+      "true": 7
      },
      "linepair": {
       "true": 2
      },
      "gap": {
       "true": 1
-     },
-     "substitution": {
-      "true": 5
      }
     },
     "false_examples": [
@@ -8073,9 +8067,9 @@
      "記号列 e s u d a e l i t u が 2 回現れる"
     ],
     "tiers": {
-     "A": 8,
-     "B": 2,
-     "C": 46
+     "A": 6,
+     "B": 3,
+     "C": 64
     },
     "false_by_tier": {
      "C": 3
@@ -8104,9 +8098,9 @@
     "syntax_z": -1.74,
     "morphology_present": false,
     "decipherable_structure": false,
-    "seconds": 0.04
+    "seconds": 0.03
    },
-   "seconds": 13.0,
+   "seconds": 14.71,
    "description": "BABEL 本体の生成器（babel.generator、系統 KES/SOT/… をシードで切り替え、LEVEL C、欠損なし）（この標本は SOT）"
   },
   {
@@ -8121,50 +8115,51 @@
     "gold_found": [],
     "gold_missed": [],
     "gold_undecided": [],
-    "hypotheses": 267,
-    "true": 230,
-    "false": 37,
+    "hypotheses": 246,
+    "true": 217,
+    "false": 29,
     "unverifiable": 0,
     "per_family": {
      "position": {
-      "true": 24
+      "true": 26
      },
      "ngram": {
-      "true": 177,
-      "false": 34
-     },
-     "linepair": {
-      "true": 11
-     },
-     "cooccurrence": {
-      "false": 2
+      "true": 164,
+      "false": 26
      },
      "dispersion": {
       "false": 1,
-      "true": 1
+      "true": 2
      },
      "gap": {
       "true": 4
      },
      "substitution": {
-      "true": 13
+      "true": 17,
+      "false": 1
+     },
+     "linepair": {
+      "true": 4
+     },
+     "cooccurrence": {
+      "false": 1
      }
     },
     "false_examples": [
      "記号列 n i g a g e y i が 2 回現れる",
-     "記号 t と s が同じ行に 55 回現れる",
      "記号 b（42 回）が 18 行だけに集中する",
      "記号列 f e d y a h i d が 3 回現れる",
-     "記号列 s u y a g u h a n が 3 回現れる"
+     "記号列 s u y a g u h a n が 3 回現れる",
+     "記号列 i h e n t が 5 回現れる"
     ],
     "tiers": {
-     "A": 57,
-     "B": 35,
-     "C": 175
+     "A": 61,
+     "B": 38,
+     "C": 147
     },
     "false_by_tier": {
-     "B": 3,
-     "C": 34
+     "B": 2,
+     "C": 27
     },
     "verdict": "structure_observed"
    },
@@ -8190,9 +8185,9 @@
     "syntax_z": 18.85,
     "morphology_present": false,
     "decipherable_structure": true,
-    "seconds": 0.14
+    "seconds": 0.16
    },
-   "seconds": 53.03,
+   "seconds": 54.75,
    "description": "BABEL 本体の生成器（babel.generator、系統 KES/SOT/… をシードで切り替え、LEVEL C、欠損なし）（この標本は KES）"
   },
   {
@@ -8207,14 +8202,14 @@
     "gold_found": [],
     "gold_missed": [],
     "gold_undecided": [],
-    "hypotheses": 253,
-    "true": 223,
-    "false": 30,
+    "hypotheses": 283,
+    "true": 246,
+    "false": 37,
     "unverifiable": 0,
     "per_family": {
      "ngram": {
-      "true": 189,
-      "false": 27
+      "true": 207,
+      "false": 34
      },
      "position": {
       "true": 19
@@ -8227,28 +8222,29 @@
      },
      "gap": {
       "true": 2,
-      "false": 2
+      "false": 1
      },
      "substitution": {
-      "true": 4
+      "true": 9,
+      "false": 1
      }
     },
     "false_examples": [
      "記号列 s i q i e s i c u が 2 回現れる",
      "記号列 n a a m u n i が 6 回現れる",
-     "記号列 s i n a a m u n が 3 回現れる",
      "記号 a（587 回）が 93 行だけに集中する",
-     "記号列 s i n u u n a a m u n i が 4 回現れる"
+     "記号列 s i n u u n a a m u n i が 4 回現れる",
+     "記号列 s i n a a m u n が 3 回現れる"
     ],
     "tiers": {
-     "A": 68,
-     "B": 38,
-     "C": 147
+     "A": 63,
+     "B": 30,
+     "C": 190
     },
     "false_by_tier": {
      "A": 1,
-     "B": 3,
-     "C": 26
+     "B": 2,
+     "C": 34
     },
     "verdict": "structure_observed"
    },
@@ -8274,9 +8270,9 @@
     "syntax_z": 43.91,
     "morphology_present": false,
     "decipherable_structure": true,
-    "seconds": 0.18
+    "seconds": 0.17
    },
-   "seconds": 57.34,
+   "seconds": 60.18,
    "description": "BABEL 本体の生成器（babel.generator、系統 KES/SOT/… をシードで切り替え、LEVEL C、欠損なし）（この標本は UMB）"
   },
   {
@@ -8291,48 +8287,46 @@
     "gold_found": [],
     "gold_missed": [],
     "gold_undecided": [],
-    "hypotheses": 336,
-    "true": 303,
-    "false": 33,
+    "hypotheses": 245,
+    "true": 222,
+    "false": 23,
     "unverifiable": 0,
     "per_family": {
      "ngram": {
-      "true": 253,
-      "false": 30
+      "true": 171,
+      "false": 20
      },
      "position": {
-      "true": 20,
-      "false": 2
+      "true": 21,
+      "false": 3
      },
      "gap": {
       "true": 4
      },
      "linepair": {
-      "true": 9
+      "true": 12
      },
      "substitution": {
-      "true": 16,
-      "false": 1
+      "true": 12
      },
      "dispersion": {
-      "true": 1
+      "true": 2
      }
     },
     "false_examples": [
-     "記号列 a l a t e r e m a が 2 回現れる",
      "記号列 g e d a r が 5 回現れる",
      "記号列 v o f u n c f o d i が 2 回現れる",
      "記号列 g h a t a c i g h が 2 回現れる",
-     "記号列 g e b p a s o d e r が 2 回現れる"
+     "記号列 g e b p a s o d e r が 2 回現れる",
+     "記号列 k p o k l e b i t が 2 回現れる"
     ],
     "tiers": {
-     "A": 72,
-     "B": 42,
-     "C": 222
+     "A": 62,
+     "B": 40,
+     "C": 143
     },
     "false_by_tier": {
-     "B": 1,
-     "C": 32
+     "C": 23
     },
     "verdict": "structure_observed"
    },
@@ -8360,7 +8354,7 @@
     "decipherable_structure": true,
     "seconds": 0.21
    },
-   "seconds": 59.41,
+   "seconds": 63.68,
    "description": "BABEL 本体の生成器（babel.generator、系統 KES/SOT/… をシードで切り替え、LEVEL C、欠損なし）（この標本は SOT）"
   },
   {
@@ -8426,7 +8420,7 @@
     "decipherable_structure": false,
     "seconds": 0.0
    },
-   "seconds": 2.83,
+   "seconds": 2.65,
    "description": "第三者（GPT-6）が作成した外部コーパス（external/inbox、読み取りのみ）。シードで2つのコーパスを切り替え（この標本は gpt6-blind-01）"
   },
   {
@@ -8446,11 +8440,11 @@
     "false": 0,
     "unverifiable": 0,
     "per_family": {
-     "linepair": {
-      "true": 2
-     },
      "ngram": {
       "true": 5
+     },
+     "linepair": {
+      "true": 2
      },
      "substitution": {
       "true": 1
@@ -8461,7 +8455,8 @@
     },
     "false_examples": [],
     "tiers": {
-     "B": 2,
+     "A": 1,
+     "B": 1,
      "C": 7
     },
     "false_by_tier": {},
@@ -8470,7 +8465,7 @@
    "global": {
     "sequential_dependence": 0.025,
     "repetition": 0.025,
-    "edge_position": 0.03,
+    "edge_position": 0.025,
     "longest_repeat": 0.025,
     "line_similarity": 0.025
    },
@@ -8491,7 +8486,7 @@
     "decipherable_structure": false,
     "seconds": 0.01
    },
-   "seconds": 3.35,
+   "seconds": 3.45,
    "description": "第三者（GPT-6）が作成した外部コーパス（external/inbox、読み取りのみ）。シードで2つのコーパスを切り替え（この標本は outsider-vso-prefix-7-v1）"
   },
   {
@@ -8511,15 +8506,15 @@
     "false": 2,
     "unverifiable": 0,
     "per_family": {
-     "ngram": {
-      "true": 16,
-      "false": 2
-     },
      "position": {
       "true": 1
      },
      "linepair": {
       "true": 1
+     },
+     "ngram": {
+      "true": 16,
+      "false": 2
      }
     },
     "false_examples": [
@@ -8527,9 +8522,9 @@
      "記号列 r k e m i n l e が 2 回現れる"
     ],
     "tiers": {
-     "A": 2,
+     "A": 1,
      "B": 1,
-     "C": 17
+     "C": 18
     },
     "false_by_tier": {
      "C": 2
@@ -8539,7 +8534,7 @@
    "global": {
     "sequential_dependence": 0.025,
     "repetition": 0.025,
-    "edge_position": 0.18,
+    "edge_position": 0.16,
     "longest_repeat": 0.025,
     "line_similarity": 0.025
    },
@@ -8560,7 +8555,7 @@
     "decipherable_structure": false,
     "seconds": 0.0
    },
-   "seconds": 2.26,
+   "seconds": 2.23,
    "description": "第三者（GPT-6）が作成した外部コーパス（external/inbox、読み取りのみ）。シードで2つのコーパスを切り替え（この標本は gpt6-blind-01）"
   },
   {
@@ -8575,13 +8570,13 @@
     "gold_found": [],
     "gold_missed": [],
     "gold_undecided": [],
-    "hypotheses": 31,
-    "true": 29,
+    "hypotheses": 27,
+    "true": 25,
     "false": 2,
     "unverifiable": 0,
     "per_family": {
      "ngram": {
-      "true": 21,
+      "true": 18,
       "false": 2
      },
      "position": {
@@ -8591,7 +8586,7 @@
       "true": 1
      },
      "substitution": {
-      "true": 2
+      "true": 1
      }
     },
     "false_examples": [
@@ -8601,7 +8596,7 @@
     "tiers": {
      "A": 5,
      "B": 2,
-     "C": 24
+     "C": 20
     },
     "false_by_tier": {
      "C": 2
@@ -8632,7 +8627,7 @@
     "decipherable_structure": true,
     "seconds": 0.02
    },
-   "seconds": 4.62,
+   "seconds": 5.2,
    "description": "第三者（GPT-6）が作成した外部コーパス（external/inbox、読み取りのみ）。シードで2つのコーパスを切り替え（この標本は gpt6-blind-01）"
   },
   {
@@ -8659,13 +8654,13 @@
      "position": {
       "true": 4
      },
-     "linepair": {
+     "substitution": {
       "true": 1
      },
      "gap": {
       "true": 1
      },
-     "substitution": {
+     "linepair": {
       "true": 1
      }
     },
@@ -8706,7 +8701,7 @@
     "decipherable_structure": true,
     "seconds": 0.01
    },
-   "seconds": 6.52,
+   "seconds": 7.41,
    "description": "第三者（GPT-6）が作成した外部コーパス（external/inbox、読み取りのみ）。シードで2つのコーパスを切り替え（この標本は outsider-vso-prefix-7-v1）"
   },
   {
@@ -8721,8 +8716,8 @@
     "gold_found": [],
     "gold_missed": [],
     "gold_undecided": [],
-    "hypotheses": 24,
-    "true": 23,
+    "hypotheses": 23,
+    "true": 22,
     "false": 1,
     "unverifiable": 0,
     "per_family": {
@@ -8738,9 +8733,6 @@
      },
      "substitution": {
       "true": 1
-     },
-     "gap": {
-      "true": 1
      }
     },
     "false_examples": [
@@ -8748,8 +8740,8 @@
     ],
     "tiers": {
      "A": 7,
-     "B": 1,
-     "C": 16
+     "B": 2,
+     "C": 14
     },
     "false_by_tier": {
      "C": 1
@@ -8780,7 +8772,7 @@
     "decipherable_structure": true,
     "seconds": 0.01
    },
-   "seconds": 4.74,
+   "seconds": 5.58,
    "description": "第三者（GPT-6）が作成した外部コーパス（external/inbox、読み取りのみ）。シードで2つのコーパスを切り替え（この標本は gpt6-blind-01）"
   },
   {
@@ -8795,26 +8787,26 @@
     "gold_found": [],
     "gold_missed": [],
     "gold_undecided": [],
-    "hypotheses": 85,
-    "true": 81,
+    "hypotheses": 100,
+    "true": 96,
     "false": 4,
     "unverifiable": 0,
     "per_family": {
      "ngram": {
-      "true": 67,
+      "true": 80,
       "false": 4
      },
      "position": {
       "true": 10
      },
+     "substitution": {
+      "true": 2
+     },
      "linepair": {
       "true": 1
      },
-     "substitution": {
-      "true": 1
-     },
      "gap": {
-      "true": 2
+      "true": 3
      }
     },
     "false_examples": [
@@ -8824,9 +8816,9 @@
      "記号列 m a r e l n u o m r e k s a t e m a k t a が 2 回現れる"
     ],
     "tiers": {
-     "A": 19,
-     "B": 11,
-     "C": 55
+     "A": 21,
+     "B": 16,
+     "C": 63
     },
     "false_by_tier": {
      "A": 1,
@@ -8858,7 +8850,7 @@
     "decipherable_structure": true,
     "seconds": 0.04
    },
-   "seconds": 12.17,
+   "seconds": 12.78,
    "description": "第三者（GPT-6）が作成した外部コーパス（external/inbox、読み取りのみ）。シードで2つのコーパスを切り替え（この標本は gpt6-blind-01）"
   },
   {
@@ -8873,13 +8865,13 @@
     "gold_found": [],
     "gold_missed": [],
     "gold_undecided": [],
-    "hypotheses": 153,
-    "true": 152,
+    "hypotheses": 147,
+    "true": 146,
     "false": 1,
     "unverifiable": 0,
     "per_family": {
      "ngram": {
-      "true": 138,
+      "true": 134,
       "false": 1
      },
      "position": {
@@ -8889,12 +8881,9 @@
       "true": 2
      },
      "substitution": {
-      "true": 2
-     },
-     "linepair": {
       "true": 1
      },
-     "dispersion": {
+     "linepair": {
       "true": 1
      }
     },
@@ -8902,9 +8891,9 @@
      "記号列 z a r e v g a t a p e l p が 2 回現れる"
     ],
     "tiers": {
-     "A": 27,
-     "B": 12,
-     "C": 114
+     "A": 31,
+     "B": 16,
+     "C": 100
     },
     "false_by_tier": {
      "C": 1
@@ -8935,7 +8924,7 @@
     "decipherable_structure": true,
     "seconds": 0.04
    },
-   "seconds": 14.97,
+   "seconds": 14.9,
    "description": "第三者（GPT-6）が作成した外部コーパス（external/inbox、読み取りのみ）。シードで2つのコーパスを切り替え（この標本は outsider-vso-prefix-7-v1）"
   },
   {
@@ -8950,20 +8939,20 @@
     "gold_found": [],
     "gold_missed": [],
     "gold_undecided": [],
-    "hypotheses": 92,
-    "true": 90,
+    "hypotheses": 85,
+    "true": 83,
     "false": 2,
     "unverifiable": 0,
     "per_family": {
      "ngram": {
-      "true": 74,
+      "true": 69,
       "false": 2
      },
      "position": {
       "true": 10
      },
      "gap": {
-      "true": 4
+      "true": 2
      },
      "substitution": {
       "true": 1
@@ -8977,9 +8966,9 @@
      "記号列 m a r e l n u o m r が 2 回現れる"
     ],
     "tiers": {
-     "A": 17,
-     "B": 12,
-     "C": 63
+     "A": 14,
+     "B": 9,
+     "C": 62
     },
     "false_by_tier": {
      "C": 2
@@ -9010,7 +8999,7 @@
     "decipherable_structure": true,
     "seconds": 0.04
    },
-   "seconds": 12.21,
+   "seconds": 12.46,
    "description": "第三者（GPT-6）が作成した外部コーパス（external/inbox、読み取りのみ）。シードで2つのコーパスを切り替え（この標本は gpt6-blind-01）"
   },
   {
@@ -9025,21 +9014,21 @@
     "gold_found": [],
     "gold_missed": [],
     "gold_undecided": [],
-    "hypotheses": 344,
-    "true": 319,
-    "false": 25,
+    "hypotheses": 353,
+    "true": 327,
+    "false": 26,
     "unverifiable": 0,
     "per_family": {
      "ngram": {
-      "true": 281,
-      "false": 22
+      "true": 288,
+      "false": 25
      },
      "position": {
       "true": 25
      },
      "gap": {
       "true": 9,
-      "false": 2
+      "false": 1
      },
      "linepair": {
       "true": 1
@@ -9048,10 +9037,7 @@
       "true": 2
      },
      "substitution": {
-      "true": 1
-     },
-     "cooccurrence": {
-      "false": 1
+      "true": 2
      }
     },
     "false_examples": [
@@ -9062,11 +9048,12 @@
      "記号列 t r a e l n u o m r が 3 回現れる"
     ],
     "tiers": {
-     "A": 93,
-     "B": 49,
-     "C": 202
+     "A": 97,
+     "B": 60,
+     "C": 196
     },
     "false_by_tier": {
+     "B": 1,
      "C": 25
     },
     "verdict": "structure_observed"
@@ -9093,9 +9080,9 @@
     "syntax_z": 41.05,
     "morphology_present": false,
     "decipherable_structure": true,
-    "seconds": 0.2
+    "seconds": 0.25
    },
-   "seconds": 68.67,
+   "seconds": 68.22,
    "description": "第三者（GPT-6）が作成した外部コーパス（external/inbox、読み取りのみ）。シードで2つのコーパスを切り替え（この標本は gpt6-blind-01）"
   },
   {
@@ -9110,13 +9097,13 @@
     "gold_found": [],
     "gold_missed": [],
     "gold_undecided": [],
-    "hypotheses": 474,
-    "true": 469,
-    "false": 5,
+    "hypotheses": 462,
+    "true": 459,
+    "false": 3,
     "unverifiable": 0,
     "per_family": {
      "ngram": {
-      "true": 439,
+      "true": 431,
       "false": 3
      },
      "position": {
@@ -9125,33 +9112,28 @@
      "gap": {
       "true": 4
      },
+     "dispersion": {
+      "true": 1
+     },
      "linepair": {
       "true": 1
      },
-     "dispersion": {
-      "true": 4
-     },
-     "cooccurrence": {
-      "false": 2
-     },
      "substitution": {
-      "true": 4
+      "true": 5
      }
     },
     "false_examples": [
      "記号列 v e n z h o r s a l が 3 回現れる",
      "記号列 r e h z h o r p u m が 2 回現れる",
-     "記号列 v z h o r t u g が 2 回現れる",
-     "記号 z と h が同じ行に 66 回現れる",
-     "記号 z と o が同じ行に 64 回現れる"
+     "記号列 v z h o r t u g が 2 回現れる"
     ],
     "tiers": {
-     "A": 137,
-     "B": 61,
-     "C": 276
+     "A": 138,
+     "B": 62,
+     "C": 262
     },
     "false_by_tier": {
-     "C": 5
+     "C": 3
     },
     "verdict": "structure_observed"
    },
@@ -9177,9 +9159,9 @@
     "syntax_z": 55.85,
     "morphology_present": false,
     "decipherable_structure": true,
-    "seconds": 0.2
+    "seconds": 0.13
    },
-   "seconds": 81.8,
+   "seconds": 82.67,
    "description": "第三者（GPT-6）が作成した外部コーパス（external/inbox、読み取りのみ）。シードで2つのコーパスを切り替え（この標本は outsider-vso-prefix-7-v1）"
   },
   {
@@ -9194,29 +9176,29 @@
     "gold_found": [],
     "gold_missed": [],
     "gold_undecided": [],
-    "hypotheses": 373,
-    "true": 355,
-    "false": 18,
+    "hypotheses": 336,
+    "true": 323,
+    "false": 13,
     "unverifiable": 0,
     "per_family": {
      "ngram": {
-      "true": 321,
-      "false": 17
+      "true": 288,
+      "false": 12
      },
      "position": {
       "true": 22
      },
      "gap": {
-      "true": 8,
+      "true": 9,
       "false": 1
-     },
-     "substitution": {
-      "true": 1
      },
      "linepair": {
       "true": 1
      },
      "dispersion": {
+      "true": 1
+     },
+     "substitution": {
       "true": 2
      }
     },
@@ -9224,17 +9206,16 @@
      "記号列 r k e m i n l e が 4 回現れる",
      "記号列 n k e s e k d e が 3 回現れる",
      "記号列 k e l n u s e v が 3 回現れる",
-     "記号列 d e t r a n u v e z i n が 2 回現れる",
-     "記号列 u n k e s e k d が 2 回現れる"
+     "記号列 t r a n u v e z i n が 2 回現れる",
+     "記号列 e k k e t u k z e が 2 回現れる"
     ],
     "tiers": {
-     "A": 93,
-     "B": 65,
-     "C": 215
+     "A": 83,
+     "B": 59,
+     "C": 194
     },
     "false_by_tier": {
-     "A": 1,
-     "C": 17
+     "C": 13
     },
     "verdict": "structure_observed"
    },
@@ -9260,9 +9241,9 @@
     "syntax_z": 303.79,
     "morphology_present": false,
     "decipherable_structure": true,
-    "seconds": 0.25
+    "seconds": 0.26
    },
-   "seconds": 64.01,
+   "seconds": 66.96,
    "description": "第三者（GPT-6）が作成した外部コーパス（external/inbox、読み取りのみ）。シードで2つのコーパスを切り替え（この標本は gpt6-blind-01）"
   },
   {
@@ -9277,13 +9258,13 @@
     "gold_found": [],
     "gold_missed": [],
     "gold_undecided": [],
-    "hypotheses": 39,
-    "true": 34,
+    "hypotheses": 33,
+    "true": 28,
     "false": 5,
     "unverifiable": 0,
     "per_family": {
      "ngram": {
-      "true": 31,
+      "true": 24,
       "false": 4
      },
      "linepair": {
@@ -9293,7 +9274,8 @@
       "true": 2
      },
      "gap": {
-      "false": 1
+      "false": 1,
+      "true": 1
      }
     },
     "false_examples": [
@@ -9304,9 +9286,9 @@
      "記号 w が 7 記号の間隔で 3 回繰り返される"
     ],
     "tiers": {
-     "A": 12,
+     "A": 11,
      "B": 3,
-     "C": 24
+     "C": 19
     },
     "false_by_tier": {
      "C": 5
@@ -9316,9 +9298,9 @@
    "global": {
     "sequential_dependence": 0.025,
     "repetition": 0.025,
-    "edge_position": 0.39,
+    "edge_position": 0.51,
     "longest_repeat": 0.025,
-    "line_similarity": 0.63
+    "line_similarity": 0.64
    },
    "segmentation_f1": {
     "mdl": 0.446,
@@ -9337,7 +9319,7 @@
     "decipherable_structure": false,
     "seconds": 0.02
    },
-   "seconds": 6.95,
+   "seconds": 7.67,
    "description": "実在の言語: The Zen of Python（標準ライブラリ）と創世記1章（KJV、パブリックドメイン）。英字26種、空白を除去"
   },
   {
@@ -9352,13 +9334,13 @@
     "gold_found": [],
     "gold_missed": [],
     "gold_undecided": [],
-    "hypotheses": 23,
-    "true": 20,
+    "hypotheses": 24,
+    "true": 21,
     "false": 3,
     "unverifiable": 0,
     "per_family": {
      "ngram": {
-      "true": 18,
+      "true": 19,
       "false": 3
      },
      "linepair": {
@@ -9376,7 +9358,7 @@
     "tiers": {
      "A": 10,
      "B": 3,
-     "C": 10
+     "C": 11
     },
     "false_by_tier": {
      "C": 3
@@ -9386,9 +9368,9 @@
    "global": {
     "sequential_dependence": 0.025,
     "repetition": 0.025,
-    "edge_position": 0.16,
+    "edge_position": 0.27,
     "longest_repeat": 0.025,
-    "line_similarity": 0.745
+    "line_similarity": 0.725
    },
    "segmentation_f1": {
     "mdl": 0.475,
@@ -9407,7 +9389,7 @@
     "decipherable_structure": false,
     "seconds": 0.02
    },
-   "seconds": 6.62,
+   "seconds": 6.41,
    "description": "実在の言語: The Zen of Python（標準ライブラリ）と創世記1章（KJV、パブリックドメイン）。英字26種、空白を除去"
   },
   {
@@ -9451,9 +9433,9 @@
    "global": {
     "sequential_dependence": 0.025,
     "repetition": 0.025,
-    "edge_position": 0.14,
+    "edge_position": 0.12,
     "longest_repeat": 0.025,
-    "line_similarity": 0.25
+    "line_similarity": 0.235
    },
    "segmentation_f1": {
     "mdl": 0.432,
@@ -9472,7 +9454,7 @@
     "decipherable_structure": false,
     "seconds": 0.01
    },
-   "seconds": 4.53,
+   "seconds": 4.56,
    "description": "実在の言語: The Zen of Python（標準ライブラリ）と創世記1章（KJV、パブリックドメイン）。英字26種、空白を除去"
   },
   {
@@ -9487,17 +9469,17 @@
     "gold_found": [],
     "gold_missed": [],
     "gold_undecided": [],
-    "hypotheses": 58,
-    "true": 50,
-    "false": 8,
+    "hypotheses": 52,
+    "true": 46,
+    "false": 6,
     "unverifiable": 0,
     "per_family": {
      "ngram": {
-      "true": 44,
+      "true": 38,
       "false": 6
      },
      "position": {
-      "true": 2
+      "true": 4
      },
      "linepair": {
       "true": 2
@@ -9506,8 +9488,7 @@
       "true": 1
      },
      "gap": {
-      "true": 1,
-      "false": 2
+      "true": 1
      }
     },
     "false_examples": [
@@ -9518,12 +9499,12 @@
      "記号列 n e s s a n d が 2 回現れる"
     ],
     "tiers": {
-     "A": 17,
-     "B": 7,
-     "C": 34
+     "A": 16,
+     "B": 6,
+     "C": 30
     },
     "false_by_tier": {
-     "C": 8
+     "C": 6
     },
     "verdict": "structure_observed"
    },
@@ -9549,9 +9530,9 @@
     "syntax_z": 0.0,
     "morphology_present": false,
     "decipherable_structure": false,
-    "seconds": 0.06
+    "seconds": 0.07
    },
-   "seconds": 12.03,
+   "seconds": 11.58,
    "description": "実在の言語: The Zen of Python（標準ライブラリ）と創世記1章（KJV、パブリックドメイン）。英字26種、空白を除去"
   },
   {
@@ -9566,9 +9547,9 @@
     "gold_found": [],
     "gold_missed": [],
     "gold_undecided": [],
-    "hypotheses": 47,
+    "hypotheses": 48,
     "true": 33,
-    "false": 14,
+    "false": 15,
     "unverifiable": 0,
     "per_family": {
      "ngram": {
@@ -9580,6 +9561,9 @@
      },
      "linepair": {
       "true": 2
+     },
+     "substitution": {
+      "false": 1
      }
     },
     "false_examples": [
@@ -9590,14 +9574,14 @@
      "記号列 t o r u l e が 3 回現れる"
     ],
     "tiers": {
-     "A": 17,
+     "A": 15,
      "B": 6,
-     "C": 24
+     "C": 27
     },
     "false_by_tier": {
      "A": 1,
      "B": 1,
-     "C": 12
+     "C": 13
     },
     "verdict": "structure_observed"
    },
@@ -9623,9 +9607,9 @@
     "syntax_z": 5.03,
     "morphology_present": false,
     "decipherable_structure": true,
-    "seconds": 0.05
+    "seconds": 0.08
    },
-   "seconds": 14.93,
+   "seconds": 13.06,
    "description": "実在の言語: The Zen of Python（標準ライブラリ）と創世記1章（KJV、パブリックドメイン）。英字26種、空白を除去"
   },
   {
@@ -9640,23 +9624,20 @@
     "gold_found": [],
     "gold_missed": [],
     "gold_undecided": [],
-    "hypotheses": 55,
-    "true": 44,
-    "false": 11,
+    "hypotheses": 49,
+    "true": 41,
+    "false": 8,
     "unverifiable": 0,
     "per_family": {
      "ngram": {
-      "true": 41,
-      "false": 9
+      "true": 38,
+      "false": 8
      },
      "position": {
       "true": 1
      },
      "linepair": {
       "true": 2
-     },
-     "substitution": {
-      "false": 2
      }
     },
     "false_examples": [
@@ -9667,21 +9648,21 @@
      "記号列 p l i c i t が 3 回現れる"
     ],
     "tiers": {
-     "A": 9,
+     "A": 8,
      "B": 6,
-     "C": 40
+     "C": 35
     },
     "false_by_tier": {
-     "C": 11
+     "C": 8
     },
     "verdict": "structure_observed"
    },
    "global": {
     "sequential_dependence": 0.025,
     "repetition": 0.025,
-    "edge_position": 0.06,
+    "edge_position": 0.03,
     "longest_repeat": 0.025,
-    "line_similarity": 0.06
+    "line_similarity": 0.045
    },
    "segmentation_f1": {
     "mdl": 0.441,
@@ -9700,7 +9681,7 @@
     "decipherable_structure": true,
     "seconds": 0.04
    },
-   "seconds": 12.1,
+   "seconds": 13.02,
    "description": "実在の言語: The Zen of Python（標準ライブラリ）と創世記1章（KJV、パブリックドメイン）。英字26種、空白を除去"
   },
   {
@@ -9715,13 +9696,13 @@
     "gold_found": [],
     "gold_missed": [],
     "gold_undecided": [],
-    "hypotheses": 143,
-    "true": 102,
+    "hypotheses": 141,
+    "true": 100,
     "false": 41,
     "unverifiable": 0,
     "per_family": {
      "ngram": {
-      "true": 90,
+      "true": 88,
       "false": 39
      },
      "position": {
@@ -9730,29 +9711,30 @@
      "linepair": {
       "true": 3
      },
+     "substitution": {
+      "true": 2
+     },
      "gap": {
       "true": 1,
       "false": 2
-     },
-     "substitution": {
-      "true": 2
      }
     },
     "false_examples": [
+     "記号列 a n d l e t t h e m が 3 回現れる",
      "記号列 t h e f i r m a m e が 7 回現れる",
      "記号列 r m a m e n t o f が 4 回現れる",
      "記号列 b e f o r が 3 回現れる",
-     "記号列 u p o n t h e f a c e o f が 3 回現れる",
-     "記号列 a m e n t o f t h e h e a v e n t o が 3 回現れる"
+     "記号列 u p o n t h e f a c e o f が 3 回現れる"
     ],
     "tiers": {
-     "A": 25,
-     "B": 19,
-     "C": 99
+     "A": 27,
+     "B": 26,
+     "C": 88
     },
     "false_by_tier": {
+     "A": 1,
      "B": 3,
-     "C": 38
+     "C": 37
     },
     "verdict": "structure_observed"
    },
@@ -9778,9 +9760,9 @@
     "syntax_z": 24.37,
     "morphology_present": false,
     "decipherable_structure": true,
-    "seconds": 0.13
+    "seconds": 0.12
    },
-   "seconds": 29.86,
+   "seconds": 29.88,
    "description": "実在の言語: The Zen of Python（標準ライブラリ）と創世記1章（KJV、パブリックドメイン）。英字26種、空白を除去"
   },
   {
@@ -9795,21 +9777,21 @@
     "gold_found": [],
     "gold_missed": [],
     "gold_undecided": [],
-    "hypotheses": 183,
-    "true": 123,
-    "false": 60,
+    "hypotheses": 216,
+    "true": 149,
+    "false": 67,
     "unverifiable": 0,
     "per_family": {
      "ngram": {
-      "true": 114,
-      "false": 57
+      "true": 141,
+      "false": 64
      },
      "position": {
       "true": 4,
       "false": 2
      },
      "linepair": {
-      "true": 4
+      "true": 3
      },
      "gap": {
       "false": 1,
@@ -9824,14 +9806,14 @@
      "記号列 h e e a r t h b r が 3 回現れる"
     ],
     "tiers": {
-     "A": 33,
-     "B": 26,
-     "C": 124
+     "A": 32,
+     "B": 25,
+     "C": 159
     },
     "false_by_tier": {
      "A": 3,
-     "B": 3,
-     "C": 54
+     "B": 2,
+     "C": 62
     },
     "verdict": "structure_observed"
    },
@@ -9840,7 +9822,7 @@
     "repetition": 0.025,
     "edge_position": 0.025,
     "longest_repeat": 0.025,
-    "line_similarity": 0.095
+    "line_similarity": 0.1
    },
    "segmentation_f1": {
     "mdl": 0.494,
@@ -9859,7 +9841,7 @@
     "decipherable_structure": true,
     "seconds": 0.14
    },
-   "seconds": 31.27,
+   "seconds": 31.63,
    "description": "実在の言語: The Zen of Python（標準ライブラリ）と創世記1章（KJV、パブリックドメイン）。英字26種、空白を除去"
   },
   {
@@ -9874,14 +9856,14 @@
     "gold_found": [],
     "gold_missed": [],
     "gold_undecided": [],
-    "hypotheses": 142,
-    "true": 106,
-    "false": 36,
+    "hypotheses": 138,
+    "true": 103,
+    "false": 35,
     "unverifiable": 0,
     "per_family": {
      "ngram": {
-      "true": 102,
-      "false": 34
+      "true": 99,
+      "false": 32
      },
      "position": {
       "true": 2,
@@ -9891,7 +9873,7 @@
       "true": 2
      },
      "substitution": {
-      "false": 1
+      "false": 2
      }
     },
     "false_examples": [
@@ -9902,14 +9884,14 @@
      "記号列 e n i g h t a n が 2 回現れる"
     ],
     "tiers": {
-     "A": 20,
-     "B": 21,
-     "C": 101
+     "A": 19,
+     "B": 26,
+     "C": 93
     },
     "false_by_tier": {
      "A": 1,
-     "B": 4,
-     "C": 31
+     "B": 5,
+     "C": 29
     },
     "verdict": "structure_observed"
    },
@@ -9935,9 +9917,9 @@
     "syntax_z": 16.06,
     "morphology_present": false,
     "decipherable_structure": true,
-    "seconds": 0.11
+    "seconds": 0.1
    },
-   "seconds": 29.53,
+   "seconds": 29.37,
    "description": "実在の言語: The Zen of Python（標準ライブラリ）と創世記1章（KJV、パブリックドメイン）。英字26種、空白を除去"
   }
  ],
@@ -9949,46 +9931,46 @@
    "null_corpora_judged_structured": 0,
    "null_corpora_old_babel_structured": 0,
    "designed_rules": 90,
-   "designed_rules_found": 14,
-   "designed_rules_undecided": 18,
+   "designed_rules_found": 16,
+   "designed_rules_undecided": 15,
    "structured_corpora": 27,
-   "structured_corpora_detected": 25,
+   "structured_corpora_detected": 24,
    "structured_corpora_old_babel_detected": 0,
    "false_rate_by_tier": {
     "A": 0.0,
     "B": 0.0,
-    "C": 0.103
+    "C": 0.111
    },
    "hypotheses_by_tier": {
-    "C": 116,
-    "B": 19,
-    "A": 33
+    "C": 108,
+    "A": 33,
+    "B": 20
    },
-   "mean_seconds": 1.84
+   "mean_seconds": 1.87
   },
   {
    "size": 13,
    "null_corpora": 6,
    "null_corpora_with_false_hypothesis": 1,
-   "null_corpora_judged_structured": 3,
+   "null_corpora_judged_structured": 5,
    "null_corpora_old_babel_structured": 0,
    "designed_rules": 90,
-   "designed_rules_found": 39,
+   "designed_rules_found": 38,
    "designed_rules_undecided": 1,
    "structured_corpora": 27,
    "structured_corpora_detected": 27,
    "structured_corpora_old_babel_detected": 6,
    "false_rate_by_tier": {
     "A": 0.009,
-    "B": 0.036,
-    "C": 0.108
+    "B": 0.041,
+    "C": 0.103
    },
    "hypotheses_by_tier": {
-    "A": 111,
-    "B": 55,
-    "C": 342
+    "A": 109,
+    "B": 49,
+    "C": 329
    },
-   "mean_seconds": 4.51
+   "mean_seconds": 4.65
   },
   {
    "size": 30,
@@ -9997,22 +9979,22 @@
    "null_corpora_judged_structured": 1,
    "null_corpora_old_babel_structured": 0,
    "designed_rules": 90,
-   "designed_rules_found": 58,
-   "designed_rules_undecided": 0,
+   "designed_rules_found": 57,
+   "designed_rules_undecided": 1,
    "structured_corpora": 27,
    "structured_corpora_detected": 27,
    "structured_corpora_old_babel_detected": 12,
    "false_rate_by_tier": {
-    "A": 0.014,
-    "B": 0.059,
-    "C": 0.145
+    "A": 0.016,
+    "B": 0.052,
+    "C": 0.143
    },
    "hypotheses_by_tier": {
-    "A": 357,
-    "B": 170,
-    "C": 971
+    "A": 374,
+    "B": 191,
+    "C": 1024
    },
-   "mean_seconds": 9.38
+   "mean_seconds": 9.96
   },
   {
    "size": 100,
@@ -10021,27 +10003,27 @@
    "null_corpora_judged_structured": 0,
    "null_corpora_old_babel_structured": 0,
    "designed_rules": 90,
-   "designed_rules_found": 64,
+   "designed_rules_found": 63,
    "designed_rules_undecided": 0,
    "structured_corpora": 24,
    "structured_corpora_detected": 24,
    "structured_corpora_old_babel_detected": 18,
    "false_rate_by_tier": {
     "A": 0.002,
-    "B": 0.016,
-    "C": 0.077
+    "B": 0.011,
+    "C": 0.076
    },
    "hypotheses_by_tier": {
-    "A": 1294,
-    "B": 501,
-    "C": 2276
+    "A": 1287,
+    "B": 468,
+    "C": 2147
    },
-   "mean_seconds": 28.66
+   "mean_seconds": 30.54
   }
  ],
  "summary_line": {
   "split": "dev",
   "runs": 129,
-  "seconds": 382.2
+  "seconds": 404.3
  }
 }

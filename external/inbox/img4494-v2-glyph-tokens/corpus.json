@@ -1,0 +1,35 @@
+{
+  "language_id": "img4494-v2-glyph-tokens",
+  "level": "C",
+  "has_word_boundaries": true,
+  "documents": [
+    {
+      "id": "left",
+      "meta": {},
+      "sentences": [
+        "      ",
+        "      ",
+        "        ",
+        "       ",
+        "      ",
+        "         ",
+        "       ",
+        "           ",
+        "     "
+      ]
+    },
+    {
+      "id": "right",
+      "meta": {},
+      "sentences": [
+        "        ",
+        "           ",
+        "       ",
+        "          "
+      ]
+    }
+  ],
+  "known": [],
+  "parallel": [],
+  "notes": "Previously shared image IMG_4494, reanalyzed using revised BABEL vision module from PR #6; 13 lines, 114 visual candidates, 74 clusters; this is unverified transcription, not gold. Two segmentation hypotheses are run separately. Any results are exploratory, not independent language-decipherment validation."
+}

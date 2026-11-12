@@ -8,4 +8,4 @@
 （tests/test_structure.py で強制）。正解は評価側だけが持つ。
 """
 
-VERSION = "0.1.3"
+VERSION = "0.1.4"

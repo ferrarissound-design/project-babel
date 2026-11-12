@@ -5,6 +5,7 @@
 """
 from __future__ import annotations
 
+import itertools
 from pathlib import Path
 
 IMAGE_SUFFIXES = {".png", ".jpg", ".jpeg", ".bmp", ".tif", ".tiff", ".webp"}
@@ -18,16 +19,23 @@ def _iou(a, b):
 
 
 def _boxes(h):
-    out = []
+    return [b for bs in _groups(h).values() for b in bs]
+
+
+def _groups(h):
+    """根拠の画像上の枠を、仮説の中での役割ごとに分ける。
+    記号の組（共起・置換可能性）は記号ごと（evidence の role）、行の組は line_a / line_b ごと、それ以外は1つ。
+    役割を混ぜて照合すると、片方の記号（または行）だけが共通な別の組が一致してしまう（Codex レビュー、PR #8）。"""
+    groups = {}
     for e in h.get("evidence", []):
         if not isinstance(e, dict):
             continue
         if e.get("image_box"):
-            out.append(e["image_box"])
+            groups.setdefault(str(e.get("role", "")), []).append(e["image_box"])
         for side in ("line_a", "line_b"):          # 行の組の根拠は、両方の行の位置を持つ
             if isinstance(e.get(side), dict) and e[side].get("image_box"):
-                out.append(e[side]["image_box"])
-    return out
+                groups.setdefault(side, []).append(e[side]["image_box"])
+    return groups
 
 
 def _params(h):
@@ -35,15 +43,24 @@ def _params(h):
     return {k: v for k, v in (h.get("key") or {}).items() if k not in ("symbols", "lines", "pairs", "family")}
 
 
+def _overlap(bh, bg, iou):
+    # 半分以上（切り上げ）。切り捨てだと、3枠のうち1枠の重なりでも通ってしまう（Codex レビュー、PR #9）
+    hit = sum(1 for x in bh if any(_iou(x, y) >= iou for y in bg))
+    return hit >= max(1, (len(bh) + 1) // 2)
+
+
 def same_hypothesis(h, g, iou=0.5):
     """同じ族で、族ごとの鍵（距離など）が同じで、根拠の画像上の位置が重なるか。
-    位置がない場合は、記号名と鍵がすべて同じか（行の組は対象の行が半分以上重なるか）で照合する。"""
+    根拠に役割がある仮説（記号の組・行の組）は、役割どうしを1対1に対応させ、どの役割も位置が重なることを求める
+    （記号名は転写ごとに変わってよい）。位置がない場合は、記号名と鍵がすべて同じか（行の組は対象の行が半分以上重なるか）で照合する。"""
     if h["family"] != g["family"] or _params(h) != _params(g):
         return False
-    bh, bg = _boxes(h), _boxes(g)
-    if bh and bg:
-        hit = sum(1 for x in bh if any(_iou(x, y) >= iou for y in bg))
-        return hit >= max(1, len(bh) // 2)
+    gh, gg = _groups(h), _groups(g)
+    if gh and gg:
+        if len(gh) != len(gg):
+            return False
+        hs, gs = list(gh.values()), list(gg.values())
+        return any(all(_overlap(a, b, iou) for a, b in zip(hs, perm)) for perm in itertools.permutations(gs))
     kh, kg = h.get("key") or {}, g.get("key") or {}
     if h["family"] == "linepair":
         a, b = set(kh.get("lines") or []), set(kg.get("lines") or [])

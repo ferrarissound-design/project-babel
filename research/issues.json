@@ -475,5 +475,14 @@
   "cause": "警告の判定が根拠の最上位の要素だけを見ていたが、行の組の根拠は line_a / line_b の中に位置情報を持つ",
   "fix": "v0.1.3: 根拠を入れ子の中まで調べる",
   "verified": "tests/test_structure.py::test_uncertain_marks_inside_linepair_evidence_are_reported（修正前は失敗）"
+ },
+ {
+  "id": 54,
+  "title": "#52 の修正で、片方の記号（または行）だけが共通な別の組を同じ仮説とみなすようになった（修正済み）",
+  "status": "修正済み",
+  "found": "Codex の独立レビュー（PR #8、マージ後）。8行の ABC で、共起・置換可能性の (A, B) と (A, C) の仮説が same_hypothesis() で一致した。行の組でも、行0–1 と行0–5 が一致しうる",
+  "cause": "#52 で根拠に記号ごとの枠を持たせたが、照合はすべての枠をまとめて半分以上が重なるかを見ていた。共通な記号 A の枠だけで半分に達する。転写の安定性を高く出す方向の誤り",
+  "fix": "v0.1.4: 根拠の枠を役割（記号の組は記号ごと、行の組は line_a / line_b）に分け、役割どうしを1対1に対応させて、どの役割も位置が重なることを求める。記号名は転写ごとに変わってよい。役割ごとの「半分以上」は切り上げで数える（切り捨てだと、各記号3枠のうち1枠の重なりでも通っていた: Codex レビュー、PR #9）",
+  "verified": "tests/test_structure.py の test_pair_hypotheses_need_both_members_to_match_in_the_image と test_linepair_needs_both_lines_to_match_in_the_image（修正前は失敗）。この照合を使う転写の誤差の実験（T2 の設定をまたいだ再現）を再実行した。評価の数値（benchmark）はこの照合を使わないので変わらない。tests/test_structure.py::test_role_overlap_threshold_rounds_up_for_odd_groups（切り捨てのコードでは失敗）"
  }
 ]

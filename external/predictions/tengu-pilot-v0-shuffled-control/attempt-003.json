@@ -1,0 +1,1818 @@
+{
+ "classes": {
+  "groups": {},
+  "labels": {},
+  "verb_confidence": 0.0,
+  "verb_group": null
+ },
+ "engine": {
+  "config": {
+   "abstain": true,
+   "align_method": "em",
+   "claim_threshold": 0.5,
+   "morph_method": "paradigm",
+   "pos_constraint": true,
+   "segmentation": "transductive",
+   "use_em": true,
+   "use_metadata": true,
+   "use_morph": true,
+   "use_numeral_solver": true,
+   "use_variants": true
+  },
+  "name": "babel-decipher",
+  "version": "1.2.0"
+ },
+ "frequency": {
+  "tokens": 54,
+  "top_chars": [
+   [
+    "安",
+    7
+   ],
+   [
+    "女",
+    4
+   ],
+   [
+    "る",
+    4
+   ],
+   [
+    "の",
+    4
+   ],
+   [
+    "也",
+    3
+   ],
+   [
+    "寿",
+    3
+   ],
+   [
+    "以",
+    3
+   ],
+   [
+    "石",
+    3
+   ],
+   [
+    "く",
+    3
+   ],
+   [
+    "ら",
+    3
+   ],
+   [
+    "号",
+    2
+   ],
+   [
+    "果",
+    2
+   ],
+   [
+    "云",
+    2
+   ],
+   [
+    "才",
+    2
+   ],
+   [
+    "汐",
+    2
+   ]
+  ],
+  "top_words": [
+   [
+    "文也",
+    1
+   ],
+   [
+    "侮吉号",
+    1
+   ],
+   [
+    "毋若果名寿",
+    1
+   ],
+   [
+    "去画云",
+    1
+   ],
+   [
+    "西",
+    1
+   ],
+   [
+    "才汐",
+    1
+   ],
+   [
+    "由左",
+    1
+   ],
+   [
+    "鬼女",
+    1
+   ],
+   [
+    "以中曳",
+    1
+   ],
+   [
+    "予止与字学石",
+    1
+   ],
+   [
+    "汐李曲女",
+    1
+   ],
+   [
+    "區己",
+    1
+   ],
+   [
+    "以呂石",
+    1
+   ],
+   [
+    "わ冶式法",
+    1
+   ],
+   [
+    "女号",
+    1
+   ]
+  ],
+  "types": 54,
+  "word_entropy_bits": 5.755
+ },
+ "hypotheses": [
+  {
+   "alternatives": {},
+   "confidence": 0.0,
+   "evidence": "動詞クラスが1つだけ現れる文 0 文での位置",
+   "status": "保留（判定不能）",
+   "topic": "動詞の位置",
+   "value": null
+  },
+  {
+   "alternatives": {
+    "prefix": 0,
+    "suffix": 0
+   },
+   "confidence": 0.0,
+   "evidence": "接頭辞・接尾辞として解析された語の延べ数",
+   "status": "保留（判定不能）",
+   "topic": "接辞の付く側",
+   "value": null
+  },
+  {
+   "alternatives": {},
+   "confidence": 0.0,
+   "evidence": "意味の手がかりがなく、主語と目的語を区別できない",
+   "status": "保留（判定不能）",
+   "topic": "主語と目的語の順序",
+   "value": null
+  },
+  {
+   "alternatives": {},
+   "confidence": 0.0,
+   "evidence": "意味の手がかりがなく、主語と目的語を区別できない",
+   "status": "保留（判定不能）",
+   "topic": "形容詞と名詞の順序",
+   "value": null
+  },
+  {
+   "alternatives": {},
+   "confidence": 0.0,
+   "evidence": "合計行 0 行",
+   "status": "保留（判定不能）",
+   "topic": "数詞と名詞の順序",
+   "value": null
+  },
+  {
+   "alternatives": {},
+   "confidence": 0.0,
+   "evidence": "合計の方程式 0 本（冗長 0、棄却 0）合計行を示す標識が見つからず、対訳にも数量の手がかりがない",
+   "status": "保留（判定不能）",
+   "topic": "数詞の基数",
+   "value": null
+  }
+ ],
+ "input_warnings": [],
+ "language_id": "tengu-pilot-v0-shuffled-control",
+ "level": "C",
+ "lexicon": [
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 1,
+   "evidence": 0,
+   "forms": [
+    "くくら"
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": "くくら"
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 1,
+   "evidence": 0,
+   "forms": [
+    "くら"
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": "くら"
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 1,
+   "evidence": 0,
+   "forms": [
+    "すゝ"
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": "すゝ"
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 1,
+   "evidence": 0,
+   "forms": [
+    "せ冊たそ"
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": "せ冊たそ"
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 1,
+   "evidence": 0,
+   "forms": [
+    "と"
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": "と"
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 1,
+   "evidence": 0,
+   "forms": [
+    "にの"
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": "にの"
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 1,
+   "evidence": 0,
+   "forms": [
+    "ぬに"
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": "ぬに"
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 1,
+   "evidence": 0,
+   "forms": [
+    "の才"
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": "の才"
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 1,
+   "evidence": 0,
+   "forms": [
+    "め"
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": "め"
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 1,
+   "evidence": 0,
+   "forms": [
+    "も"
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": "も"
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 1,
+   "evidence": 0,
+   "forms": [
+    "るの"
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": "るの"
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 1,
+   "evidence": 0,
+   "forms": [
+    "れる"
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": "れる"
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 1,
+   "evidence": 0,
+   "forms": [
+    "ろよ日"
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": "ろよ日"
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 1,
+   "evidence": 0,
+   "forms": [
+    "わ冶式法"
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": "わ冶式法"
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 1,
+   "evidence": 0,
+   "forms": [
+    "ゐち"
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": "ゐち"
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 1,
+   "evidence": 0,
+   "forms": [
+    "ゑら"
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": "ゑら"
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 1,
+   "evidence": 0,
+   "forms": [
+    "ゝ多"
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": "ゝ多"
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 1,
+   "evidence": 0,
+   "forms": [
+    "乏央寒主"
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": "乏央寒主"
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 1,
+   "evidence": 0,
+   "forms": [
+    "予止与字学石"
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": "予止与字学石"
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 1,
+   "evidence": 0,
+   "forms": [
+    "云る"
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": "云る"
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 1,
+   "evidence": 0,
+   "forms": [
+    "亡寺"
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": "亡寺"
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 1,
+   "evidence": 0,
+   "forms": [
+    "以中曳"
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": "以中曳"
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 1,
+   "evidence": 0,
+   "forms": [
+    "以呂石"
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": "以呂石"
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 1,
+   "evidence": 0,
+   "forms": [
+    "以安"
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": "以安"
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 1,
+   "evidence": 0,
+   "forms": [
+    "伊果"
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": "伊果"
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 1,
+   "evidence": 0,
+   "forms": [
+    "侮吉号"
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": "侮吉号"
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 1,
+   "evidence": 0,
+   "forms": [
+    "區己"
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": "區己"
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 1,
+   "evidence": 0,
+   "forms": [
+    "去画云"
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": "去画云"
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 1,
+   "evidence": 0,
+   "forms": [
+    "古"
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": "古"
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 1,
+   "evidence": 0,
+   "forms": [
+    "君天華"
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": "君天華"
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 1,
+   "evidence": 0,
+   "forms": [
+    "多乙手"
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": "多乙手"
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 1,
+   "evidence": 0,
+   "forms": [
+    "女号"
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": "女号"
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 1,
+   "evidence": 0,
+   "forms": [
+    "女曳"
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": "女曳"
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 1,
+   "evidence": 0,
+   "forms": [
+    "安む左"
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": "安む左"
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 1,
+   "evidence": 0,
+   "forms": [
+    "安甚壬与"
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": "安甚壬与"
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 1,
+   "evidence": 0,
+   "forms": [
+    "官男ち"
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": "官男ち"
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 1,
+   "evidence": 0,
+   "forms": [
+    "寿主"
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": "寿主"
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 1,
+   "evidence": 0,
+   "forms": [
+    "寿凡函両也安"
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": "寿凡函両也安"
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 1,
+   "evidence": 0,
+   "forms": [
+    "己也安"
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": "己也安"
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 1,
+   "evidence": 0,
+   "forms": [
+    "手石"
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": "手石"
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 1,
+   "evidence": 0,
+   "forms": [
+    "才汐"
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": "才汐"
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 1,
+   "evidence": 0,
+   "forms": [
+    "文也"
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": "文也"
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 1,
+   "evidence": 0,
+   "forms": [
+    "日寺安"
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": "日寺安"
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 1,
+   "evidence": 0,
+   "forms": [
+    "毋若果名寿"
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": "毋若果名寿"
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 1,
+   "evidence": 0,
+   "forms": [
+    "汐李曲女"
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": "汐李曲女"
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 1,
+   "evidence": 0,
+   "forms": [
+    "由収当命の"
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": "由収当命の"
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 1,
+   "evidence": 0,
+   "forms": [
+    "由左"
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": "由左"
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 1,
+   "evidence": 0,
+   "forms": [
+    "目未毛"
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": "目未毛"
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 1,
+   "evidence": 0,
+   "forms": [
+    "示安"
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": "示安"
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 1,
+   "evidence": 0,
+   "forms": [
+    "華そ"
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": "華そ"
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 1,
+   "evidence": 0,
+   "forms": [
+    "西"
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": "西"
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 1,
+   "evidence": 0,
+   "forms": [
+    "誠セ歴得法書る"
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": "誠セ歴得法書る"
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 1,
+   "evidence": 0,
+   "forms": [
+    "香舟"
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": "香舟"
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 1,
+   "evidence": 0,
+   "forms": [
+    "鬼女"
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": "鬼女"
+  }
+ ],
+ "morphology": {
+  "affixes": [],
+  "allomorph_candidates": [],
+  "compounds": 0
+ },
+ "numerals": {
+  "base": null,
+  "confidence": 0.0,
+  "equations": 0,
+  "list_documents": 0,
+  "reason": "合計行を示す標識が見つからず、対訳にも数量の手がかりがない",
+  "redundant": 0,
+  "rejected": 0,
+  "relative": null,
+  "status": "undetermined",
+  "sum_marker": null,
+  "values": {}
+ },
+ "relatedness": {},
+ "segmentation_used": "transductive",
+ "split_used": {
+  "heldout": [],
+  "status": "unspecified",
+  "train": 11
+ },
+ "structure": {
+  "adj_noun": {
+   "confidence": 0.0,
+   "n": 0,
+   "reason": "意味の手がかりがなく、主語と目的語を区別できない",
+   "value": null
+  },
+  "affix_position": {
+   "confidence": 0.0,
+   "support": {
+    "prefix": 0,
+    "suffix": 0
+   },
+   "value": null
+  },
+  "num_noun": {
+   "confidence": 0.0,
+   "n": 0,
+   "value": null
+  },
+  "numeral_base": {
+   "alternatives": {},
+   "confidence": 0.0,
+   "value": null
+  },
+  "so_order": {
+   "confidence": 0.0,
+   "n": 0,
+   "reason": "意味の手がかりがなく、主語と目的語を区別できない",
+   "value": null
+  },
+  "sum_marker": {
+   "note": "合計行を示す機能語（算術的に検証できる機能であり、実世界の意味の主張ではない）",
+   "value": null
+  },
+  "verb_position": {
+   "alternatives": {},
+   "confidence": 0.0,
+   "n": 0,
+   "value": null
+  }
+ },
+ "summary": {
+  "claim_threshold": 0.5,
+  "claimed": 0,
+  "stems": 54,
+  "undetermined": 54
+ },
+ "tokens": {
+  "A": [
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "文也",
+     "pos": "X",
+     "s": "文也",
+     "stem": "文也"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "侮吉号",
+     "pos": "X",
+     "s": "侮吉号",
+     "stem": "侮吉号"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "毋若果名寿",
+     "pos": "X",
+     "s": "毋若果名寿",
+     "stem": "毋若果名寿"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "去画云",
+     "pos": "X",
+     "s": "去画云",
+     "stem": "去画云"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "西",
+     "pos": "X",
+     "s": "西",
+     "stem": "西"
+    }
+   ]
+  ],
+  "B": [
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "才汐",
+     "pos": "X",
+     "s": "才汐",
+     "stem": "才汐"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "由左",
+     "pos": "X",
+     "s": "由左",
+     "stem": "由左"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "鬼女",
+     "pos": "X",
+     "s": "鬼女",
+     "stem": "鬼女"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "以中曳",
+     "pos": "X",
+     "s": "以中曳",
+     "stem": "以中曳"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "予止与字学石",
+     "pos": "X",
+     "s": "予止与字学石",
+     "stem": "予止与字学石"
+    }
+   ]
+  ],
+  "C": [
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "汐李曲女",
+     "pos": "X",
+     "s": "汐李曲女",
+     "stem": "汐李曲女"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "區己",
+     "pos": "X",
+     "s": "區己",
+     "stem": "區己"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "以呂石",
+     "pos": "X",
+     "s": "以呂石",
+     "stem": "以呂石"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "わ冶式法",
+     "pos": "X",
+     "s": "わ冶式法",
+     "stem": "わ冶式法"
+    }
+   ]
+  ],
+  "D": [
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "女号",
+     "pos": "X",
+     "s": "女号",
+     "stem": "女号"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "己也安",
+     "pos": "X",
+     "s": "己也安",
+     "stem": "己也安"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "多乙手",
+     "pos": "X",
+     "s": "多乙手",
+     "stem": "多乙手"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "乏央寒主",
+     "pos": "X",
+     "s": "乏央寒主",
+     "stem": "乏央寒主"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "香舟",
+     "pos": "X",
+     "s": "香舟",
+     "stem": "香舟"
+    }
+   ]
+  ],
+  "E": [
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "誠セ歴得法書る",
+     "pos": "X",
+     "s": "誠セ歴得法書る",
+     "stem": "誠セ歴得法書る"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "伊果",
+     "pos": "X",
+     "s": "伊果",
+     "stem": "伊果"
+    }
+   ]
+  ],
+  "F": [
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "女曳",
+     "pos": "X",
+     "s": "女曳",
+     "stem": "女曳"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "るの",
+     "pos": "X",
+     "s": "るの",
+     "stem": "るの"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "以安",
+     "pos": "X",
+     "s": "以安",
+     "stem": "以安"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "古",
+     "pos": "X",
+     "s": "古",
+     "stem": "古"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "すゝ",
+     "pos": "X",
+     "s": "すゝ",
+     "stem": "すゝ"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "くら",
+     "pos": "X",
+     "s": "くら",
+     "stem": "くら"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "ぬに",
+     "pos": "X",
+     "s": "ぬに",
+     "stem": "ぬに"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "と",
+     "pos": "X",
+     "s": "と",
+     "stem": "と"
+    }
+   ]
+  ],
+  "G": [
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "官男ち",
+     "pos": "X",
+     "s": "官男ち",
+     "stem": "官男ち"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "云る",
+     "pos": "X",
+     "s": "云る",
+     "stem": "云る"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "亡寺",
+     "pos": "X",
+     "s": "亡寺",
+     "stem": "亡寺"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "れる",
+     "pos": "X",
+     "s": "れる",
+     "stem": "れる"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "にの",
+     "pos": "X",
+     "s": "にの",
+     "stem": "にの"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "め",
+     "pos": "X",
+     "s": "め",
+     "stem": "め"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "ゐち",
+     "pos": "X",
+     "s": "ゐち",
+     "stem": "ゐち"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "目未毛",
+     "pos": "X",
+     "s": "目未毛",
+     "stem": "目未毛"
+    }
+   ]
+  ],
+  "H": [
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "由収当命の",
+     "pos": "X",
+     "s": "由収当命の",
+     "stem": "由収当命の"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "くくら",
+     "pos": "X",
+     "s": "くくら",
+     "stem": "くくら"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "ゝ多",
+     "pos": "X",
+     "s": "ゝ多",
+     "stem": "ゝ多"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "せ冊たそ",
+     "pos": "X",
+     "s": "せ冊たそ",
+     "stem": "せ冊たそ"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "ゑら",
+     "pos": "X",
+     "s": "ゑら",
+     "stem": "ゑら"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "ろよ日",
+     "pos": "X",
+     "s": "ろよ日",
+     "stem": "ろよ日"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "華そ",
+     "pos": "X",
+     "s": "華そ",
+     "stem": "華そ"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "も",
+     "pos": "X",
+     "s": "も",
+     "stem": "も"
+    }
+   ]
+  ],
+  "S1": [
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "の才",
+     "pos": "X",
+     "s": "の才",
+     "stem": "の才"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "示安",
+     "pos": "X",
+     "s": "示安",
+     "stem": "示安"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "寿凡函両也安",
+     "pos": "X",
+     "s": "寿凡函両也安",
+     "stem": "寿凡函両也安"
+    }
+   ]
+  ],
+  "S2": [
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "君天華",
+     "pos": "X",
+     "s": "君天華",
+     "stem": "君天華"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "手石",
+     "pos": "X",
+     "s": "手石",
+     "stem": "手石"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "安む左",
+     "pos": "X",
+     "s": "安む左",
+     "stem": "安む左"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "安甚壬与",
+     "pos": "X",
+     "s": "安甚壬与",
+     "stem": "安甚壬与"
+    }
+   ]
+  ],
+  "S3": [
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "寿主",
+     "pos": "X",
+     "s": "寿主",
+     "stem": "寿主"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "日寺安",
+     "pos": "X",
+     "s": "日寺安",
+     "stem": "日寺安"
+    }
+   ]
+  ]
+ },
+ "variants": {
+  "merged_types": 0,
+  "rules": []
+ },
+ "verdict": {
+  "decipherable_structure": false,
+  "morphology": {
+   "affixed_token_share": 0.0,
+   "n_affixes": 0,
+   "present": false
+  },
+  "semantic_evidence": "none",
+  "syntax": {
+   "entropy": -0.0,
+   "present": false,
+   "reduction": 0.0,
+   "shuffled_mean": 0.0,
+   "z": 0.0
+  },
+  "text": "言語的な構造が検出されない。解読不能と判定する。"
+ }
+}

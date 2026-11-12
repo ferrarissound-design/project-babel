@@ -118,3 +118,14 @@ def test_numerals_from_parallel_when_no_total_lines():
 
 def test_base_is_not_claimed_from_few_values():
     assert numerals.infer_base([1, 2, 4, 6])[0] is None
+
+
+def test_parallel_equations_use_consensus_not_first_come():
+    """Codex レビュー（PR #3）の例: 誤った式1本と正しい式10本なら、正しい方が採られる。
+
+    対訳の式を固定順で入れると、最初に入った誤った式が値を決めてしまっていた。
+    """
+    seed = {"alpha", "beta", "gamma", "delta"}
+    extra = [(["alpha"], 9)] + [(["alpha"], 2)] * 10 + [(["gamma"], 3), (["delta"], 4)]
+    r = numerals.solve_numerals([], lambda w: False, {}, [("beta", 1)], extra, True, seed_variables=seed)
+    assert r["status"] == "solved" and r["values"]["alpha"] == 2

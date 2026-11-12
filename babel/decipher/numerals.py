@@ -302,10 +302,11 @@ def _solve(docs, is_inflected, all_counts, anchors, extra_equations, enable_solv
         pre.append(dict(co))
     result["variables"] = sorted(variables)
     if marker is None:
-        # 対訳の式は数詞の見落としで誤ることがあるので、既知の数詞以外は合意型の解法にかける
-        eqs = [e for e in pre if len(e) > 2 or not any(w for w, _ in anchors if w in e)]
-        pre = [e for e in pre if e not in eqs]
-    if len(eqs) + len(pre) < 3:
+        # 対訳の式は数詞の見落としで誤ることがあるので、既知の数詞以外は合意型の解法にかける。
+        # 固定順の eqs に入れると最初に入った誤った式が値を決めてしまうので、順序を変えて試す soft に入れる
+        soft = [e for e in pre if len(e) > 2 or not any(w for w, _ in anchors if w in e)]
+        pre = [e for e in pre if e not in soft]
+    if len(eqs) + len(soft) + len(pre) < 3:
         result["reason"] = "合計行のある一覧文書が足りない" if marker is not None else "数量つきの対訳が足りない"
         return result
 
@@ -334,6 +335,9 @@ def _solve(docs, is_inflected, all_counts, anchors, extra_equations, enable_solv
     best = run(base_order)
     rng = random.Random(0)
     n_all = len(eqs) + len(soft) + len(pre)
+    best_soft = soft_order if marker is None else None
+    if marker is None and soft:
+        best = run(base_order + soft_order)
     for trial in range(30 if soft else 0):
         if best[2] and len(best[2]) >= 0.9 * len(variables) and best[0] >= 0.8 * n_all:
             break
@@ -341,10 +345,15 @@ def _solve(docs, is_inflected, all_counts, anchors, extra_equations, enable_solv
         rng.shuffle(order)
         cand = run(base_order + order)
         if key(cand) > key(best):
-            best = cand
-    base_order = base_order + [e for e in soft_order
-                               if best[2] and all(w in best[2] for w in e)
-                               and sum(c * best[2][w] for w, c in e.items()) == 0]
+            best, best_soft = cand, order
+    if marker is None:
+        # 合計行がない場合、対訳の式は次の段階（形成要素の仮説）の材料でもある。値が決まっていない語を含む式も
+        # 捨てずに、合意で最もよく式を満たした並び順のまま渡す（矛盾する式は、その順序で後ろのものが棄却される）
+        base_order = base_order + list(best_soft or [])
+    else:
+        base_order = base_order + [e for e in soft_order
+                                   if best[2] and all(w in best[2] for w in e)
+                                   and sum(c * best[2][w] for w, c in e.items()) == 0]
     # 値が決まりきらない場合: 数詞の形成要素について競合仮説（加法 / 乗法×k）を立て、合計式との整合で選ぶ
     result["affix_hypotheses"] = []
     if best[2] is None or len(best[2]) < 0.9 * len(variables) or best[0] < 0.6 * n_all:

@@ -41,6 +41,8 @@ def main(argv=None):
                    help="画像の文字領域を指定（複数指定可、右下座標は含まない）")
     v.add_argument("--threshold", type=int, help="二値化のしきい値（省略すると自動）")
     v.add_argument("--similarity", type=float, default=0.7, help="同一形状とみなすIoU閾値")
+    v.add_argument("--keep-rules", action="store_true",
+                   help="罫線除去をしない（文字の線が切り出し領域の大部分を占める場合）")
     a = ap.parse_args(argv)
 
     if a.cmd == "generate":
@@ -109,7 +111,8 @@ def main(argv=None):
                 ap.error("--region は ID:X1,Y1,X2,Y2 の形式で指定してください")
             regions.append({"id": name, "box": box})
         data = save_analysis(a.image, a.out_dir, regions=regions or None,
-                             threshold=a.threshold, similarity=a.similarity)
+                             threshold=a.threshold, similarity=a.similarity,
+                             remove_rules=not a.keep_rules)
         print(json.dumps({"out_dir": a.out_dir, **data["stats"]}, ensure_ascii=False))
     elif a.cmd == "external":
         from babel import external

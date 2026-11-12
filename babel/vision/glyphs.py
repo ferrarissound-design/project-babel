@@ -50,18 +50,28 @@ def _mask(image, threshold=None):
     return binary
 
 
-def _without_rules(region):
-    """Remove long straight UI dividers; never assume borders are glyphs."""
+RULE_SPAN = 0.8   # a straight line counts as a divider only if it spans this share of the region
+
+
+def _without_rules(region, span=RULE_SPAN):
+    """Remove long straight UI dividers; never assume borders are glyphs.
+
+    A line is treated as a divider only when it runs across at least ``span``
+    of the region in its direction. Shorter straight strokes (e.g. the stems
+    of a large glyph) are kept: erasing them split glyphs into slivers.
+    Text whose own strokes cover most of a tight crop is still at risk; such
+    crops should pass ``remove_rules=False``.
+    """
     cv2, _ = _dependencies()
     height, width = region.shape[:2]
     cleaned = region.copy()
     if width >= 80:
         horizontal = cv2.morphologyEx(cleaned, cv2.MORPH_OPEN,
-                                     cv2.getStructuringElement(cv2.MORPH_RECT, (max(45, width // 3), 1)))
+                                     cv2.getStructuringElement(cv2.MORPH_RECT, (max(45, int(width * span)), 1)))
         cleaned = cv2.subtract(cleaned, horizontal)
     if height >= 60:
         vertical = cv2.morphologyEx(cleaned, cv2.MORPH_OPEN,
-                                   cv2.getStructuringElement(cv2.MORPH_RECT, (1, max(45, height // 2))))
+                                   cv2.getStructuringElement(cv2.MORPH_RECT, (1, max(45, int(height * span)))))
         cleaned = cv2.subtract(cleaned, vertical)
     return cleaned
 
@@ -102,13 +112,15 @@ def _rectangles(image_shape, regions):
     return parsed
 
 
-def _extract_regions(mask, regions, min_pixels=3, row_gap=6, glyph_gap=2):
+def _extract_regions(mask, regions, min_pixels=3, row_gap=6, glyph_gap=2, remove_rules=True):
     """Projection-based candidate segmentation; every rectangle is auditable."""
     _, np = _dependencies()
     rows, shapes = [], []
     for region in regions:
         x1, y1, x2, y2 = region["box"]
-        m = _without_rules(mask[y1:y2, x1:x2])
+        m = mask[y1:y2, x1:x2]
+        if remove_rules:
+            m = _without_rules(m)
         for top, bottom in _runs(np.any(m > 0, axis=1), max_gap=row_gap):
             strip = m[top:bottom + 1]
             if int(np.count_nonzero(strip)) < min_pixels:
@@ -121,7 +133,9 @@ def _extract_regions(mask, regions, min_pixels=3, row_gap=6, glyph_gap=2):
                     continue
                 gx1, gy1 = x1 + left + int(xs.min()), y1 + top + int(ys.min())
                 gx2, gy2 = x1 + left + int(xs.max()) + 1, y1 + top + int(ys.max()) + 1
-                shape = mask[gy1:gy2, gx1:gx2]
+                # Features come from the same rule-cleaned pixels used for segmentation,
+                # so a divider crossing a glyph does not change its visual class.
+                shape = m[gy1 - y1:gy2 - y1, gx1 - x1:gx2 - x1]
                 ids.append(len(shapes))
                 shapes.append({"box": [gx1, gy1, gx2, gy2], "feature": _feature(shape),
                                "width": gx2 - gx1, "height": gy2 - gy1, "pixels": int(len(xs))})
@@ -166,7 +180,7 @@ def repeated_patterns(rows, sizes=(2, 3, 4), limit=20):
     return [{"symbols": list(symbols), "occurrences": count} for symbols, count in repeated[:limit]]
 
 
-def analyze_image(path, regions=None, threshold=None, similarity=0.7):
+def analyze_image(path, regions=None, threshold=None, similarity=0.7, remove_rules=True):
     """Analyze an image without network access; output never claims meaning.
 
     regions: optional [{"id":"left", "box":[x1,y1,x2,y2]}].
@@ -178,7 +192,7 @@ def analyze_image(path, regions=None, threshold=None, similarity=0.7):
     if image is None:
         raise ValueError(f"Cannot read image: {path}")
     selected = _rectangles(image.shape, regions)
-    rows, shapes = _extract_regions(_mask(image, threshold), selected)
+    rows, shapes = _extract_regions(_mask(image, threshold), selected, remove_rules=remove_rules)
     _cluster(shapes, similarity)
     if len({g["class_id"] for g in shapes}) > 6400:
         raise ValueError("Too many visual classes for Private Use Area encoding")
@@ -190,6 +204,8 @@ def analyze_image(path, regions=None, threshold=None, similarity=0.7):
         "schema": "babel-glyph-pilot-v1", "source_image": Path(path).name,
         "image_size": [int(image.shape[1]), int(image.shape[0])],
         "regions": selected, "rows": rows, "glyphs": visible,
+        "settings": {"threshold": threshold, "similarity": similarity, "remove_rules": remove_rules,
+                     "rule_span": RULE_SPAN if remove_rules else None},
         "stats": {"rows": len(rows), "glyph_candidates": len(visible),
                   "visual_classes": len(frequencies),
                   "classes_repeated": sum(n > 1 for n in frequencies.values())},
@@ -197,7 +213,8 @@ def analyze_image(path, regions=None, threshold=None, similarity=0.7):
         "repeated_patterns": repeated_patterns(rows),
         "warnings": ["Visual glyph clusters are not validated characters, words, or translations.",
                      "Projection grouping can split one glyph or merge neighboring glyphs.",
-                     "Without translations or other anchors, meanings are not identifiable."],
+                     "Without translations or other anchors, meanings are not identifiable.",
+                     "Each image row is exported as one sentence; a line break may be wrapping, not a sentence end."],
     }
 
 
@@ -219,12 +236,12 @@ def _corpus(analysis, spaced):
             "notes": "Image-derived, unverified segmentation hypothesis. No gold or meaning supplied."}
 
 
-def save_analysis(path, out_dir, regions=None, threshold=None, similarity=0.7):
+def save_analysis(path, out_dir, regions=None, threshold=None, similarity=0.7, remove_rules=True):
     """Write JSON report, two distinct corpus hypotheses, and annotated PNG."""
     cv2, _ = _dependencies()
     out_dir = Path(out_dir)
     out_dir.mkdir(parents=True, exist_ok=True)
-    data = analyze_image(path, regions=regions, threshold=threshold, similarity=similarity)
+    data = analyze_image(path, regions=regions, threshold=threshold, similarity=similarity, remove_rules=remove_rules)
     (out_dir / "glyph-report.json").write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     for spaced, filename in ((False, "corpus-continuous.json"), (True, "corpus-glyph-tokens.json")):
         (out_dir / filename).write_text(json.dumps(_corpus(data, spaced), ensure_ascii=False, indent=2) + "\n", encoding="utf-8")

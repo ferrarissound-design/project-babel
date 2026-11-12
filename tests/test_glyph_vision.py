@@ -72,3 +72,51 @@ def test_cli_runs_offline(tmp_path, capsys):
                  "--region", "words:0,0,160,90"]) == 0
     assert (output / "glyph-report.json").exists()
     assert "glyph_candidates" in capsys.readouterr().out
+
+
+# --- Regression tests for PR #6 review (each fails on c350f89) ---
+
+def _canvas(width, height):
+    return np.full((height, width, 3), 255, dtype=np.uint8)
+
+
+def test_tall_glyph_stems_are_not_erased_as_rules(tmp_path):
+    """Stems of large glyphs (>=45px) in a 70px-high region were removed as vertical rules."""
+    frame = _canvas(200, 70)
+    for x in (20, 80, 140):
+        cv2.putText(frame, "H", (x, 62), cv2.FONT_HERSHEY_SIMPLEX, 2.0, (0, 0, 0), 3, cv2.LINE_8)
+    img = tmp_path / "tall.png"
+    assert cv2.imwrite(str(img), frame)
+    data = analyze_image(img)
+    assert data["stats"]["glyph_candidates"] == 3
+    assert data["stats"]["visual_classes"] == 1
+
+
+def test_divider_crossing_glyph_keeps_its_class(tmp_path):
+    """Features were cropped from the raw mask, so a removed divider re-entered the shape."""
+    frame = _canvas(240, 40)
+    for x in (10, 60, 110, 220):                           # four identical 11x11 X glyphs
+        cv2.line(frame, (x, 14), (x + 10, 24), (0, 0, 0), 1)
+        cv2.line(frame, (x + 10, 14), (x, 24), (0, 0, 0), 1)
+    cv2.line(frame, (0, 17), (205, 17), (0, 0, 0), 1)      # divider (>=80% of width) crossing all but the last
+    img = tmp_path / "divider.png"
+    assert cv2.imwrite(str(img), frame)
+    data = analyze_image(img)
+    assert data["stats"]["glyph_candidates"] == 4
+    assert data["stats"]["visual_classes"] == 1, [g["match_iou"] for g in data["glyphs"]]
+
+
+def test_full_width_divider_still_removed_and_can_be_kept(tmp_path):
+    frame = _canvas(200, 90)
+    for y in (25, 70):
+        for x in (20, 80, 140):
+            cv2.putText(frame, "O", (x, y), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 0, 0), 2, cv2.LINE_8)
+    cv2.line(frame, (0, 45), (199, 45), (0, 0, 0), 1)
+    img = tmp_path / "rule.png"
+    assert cv2.imwrite(str(img), frame)
+    data = analyze_image(img)
+    assert data["stats"]["rows"] == 2 and data["stats"]["glyph_candidates"] == 6
+    assert data["settings"]["remove_rules"] is True
+    kept = analyze_image(img, remove_rules=False)
+    assert kept["settings"]["remove_rules"] is False
+    assert kept["stats"]["glyph_candidates"] != 6       # the divider now shows up as ink

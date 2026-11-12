@@ -62,3 +62,13 @@ def test_region_validation_and_repeated_pattern_boundaries(tmp_path):
     with pytest.raises(ValueError, match="similarity"):
         analyze_image(img, similarity=0)
     assert repeated_patterns([{"classes": [1, 2]}, {"classes": [3, 4]}]) == []
+
+def test_cli_runs_offline(tmp_path, capsys):
+    from babel.__main__ import main
+
+    img = _draw_test_image(tmp_path)
+    output = tmp_path / "cli-result"
+    assert main(["vision", str(img), "--out-dir", str(output),
+                 "--region", "words:0,0,160,90"]) == 0
+    assert (output / "glyph-report.json").exists()
+    assert "glyph_candidates" in capsys.readouterr().out

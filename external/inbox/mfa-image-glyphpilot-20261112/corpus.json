@@ -1,0 +1,35 @@
+{
+  "language_id": "mfa-image-glyphpilot-20261112",
+  "level": "C",
+  "has_word_boundaries": false,
+  "documents": [
+    {
+      "id": "L",
+      "meta": {},
+      "sentences": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "R",
+      "meta": {},
+      "sentences": [
+        "",
+        "",
+        "",
+        ""
+      ]
+    }
+  ],
+  "known": [],
+  "parallel": [],
+  "notes": "Exploratory one-image transcription of visual glyphs. Two text panels only, excludes answer grids and rules. 117 heuristic graphic units clustered into 83 provisional shapes; segmentation boundaries and grouping not verified. Class labels are Unicode PUA and encode no meaning. Do not count as independent gold-scored decipherment."
+}

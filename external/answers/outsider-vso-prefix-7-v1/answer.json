@@ -1,0 +1,225 @@
+{
+  "independent": true,
+  "provenance": "Constructed independently by GPT-6 on 2026-11-12, without the PROJECT BABEL generator. Gold grammar and dictionary published only after the first GitHub SHA256-ledger prediction entry (answer_already_public=false). A test of VSO prefix inflection, repeated semantic roles, no total lines, base-7 quantities, 34 heldout docs; 160 docs and 800 utterances, 83 partial parallel clues. Note VSO means predicate in initial position; S before O.",
+  "language_id": "outsider-vso-prefix-7-v1",
+  "structure": {
+    "verb_position": "initial",
+    "affix_position": "prefix",
+    "so_order": "SO",
+    "adj_noun": "AN",
+    "num_noun": "NumN",
+    "numeral_base": 7
+  },
+  "lexicon": [
+    {
+      "form": "yalven",
+      "meaning": "king"
+    },
+    {
+      "form": "fumet",
+      "meaning": "merchant"
+    },
+    {
+      "form": "korap",
+      "meaning": "guard"
+    },
+    {
+      "form": "neshil",
+      "meaning": "farmer"
+    },
+    {
+      "form": "tavren",
+      "meaning": "scribe"
+    },
+    {
+      "form": "lomak",
+      "meaning": "sailor"
+    },
+    {
+      "form": "vereh",
+      "meaning": "child"
+    },
+    {
+      "form": "gunar",
+      "meaning": "elder"
+    },
+    {
+      "form": "edris",
+      "meaning": "potter"
+    },
+    {
+      "form": "sahun",
+      "meaning": "healer"
+    },
+    {
+      "form": "tapel",
+      "meaning": "mason"
+    },
+    {
+      "form": "liren",
+      "meaning": "weaver"
+    },
+    {
+      "form": "dukal",
+      "meaning": "fisher"
+    },
+    {
+      "form": "medri",
+      "meaning": "grain"
+    },
+    {
+      "form": "surak",
+      "meaning": "salt"
+    },
+    {
+      "form": "felen",
+      "meaning": "cloth"
+    },
+    {
+      "form": "coven",
+      "meaning": "water"
+    },
+    {
+      "form": "bekal",
+      "meaning": "stone"
+    },
+    {
+      "form": "boshi",
+      "meaning": "timber"
+    },
+    {
+      "form": "gavun",
+      "meaning": "iron"
+    },
+    {
+      "form": "sipen",
+      "meaning": "fish"
+    },
+    {
+      "form": "wanek",
+      "meaning": "oil"
+    },
+    {
+      "form": "ritol",
+      "meaning": "bread"
+    },
+    {
+      "form": "zarev",
+      "meaning": "carry"
+    },
+    {
+      "form": "burak",
+      "meaning": "give"
+    },
+    {
+      "form": "temir",
+      "meaning": "count"
+    },
+    {
+      "form": "kilon",
+      "meaning": "trade"
+    },
+    {
+      "form": "faver",
+      "meaning": "sell"
+    },
+    {
+      "form": "merut",
+      "meaning": "buy"
+    },
+    {
+      "form": "kalis",
+      "meaning": "store"
+    },
+    {
+      "form": "tovel",
+      "meaning": "return"
+    },
+    {
+      "form": "rikam",
+      "meaning": "inspect"
+    },
+    {
+      "form": "susen",
+      "meaning": "borrow"
+    },
+    {
+      "form": "nev",
+      "meaning": "red"
+    },
+    {
+      "form": "pay",
+      "meaning": "large"
+    },
+    {
+      "form": "sil",
+      "meaning": "wet"
+    }
+  ],
+  "numerals": [
+    {
+      "form": "ik",
+      "value": 1
+    },
+    {
+      "form": "dub",
+      "value": 2
+    },
+    {
+      "form": "tes",
+      "value": 3
+    },
+    {
+      "form": "kar",
+      "value": 4
+    },
+    {
+      "form": "pum",
+      "value": 5
+    },
+    {
+      "form": "sal",
+      "value": 6
+    },
+    {
+      "form": "zhor",
+      "value": 7
+    },
+    {
+      "form": "zhorik",
+      "value": 8
+    },
+    {
+      "form": "zhordub",
+      "value": 9
+    },
+    {
+      "form": "zhortes",
+      "value": 10
+    },
+    {
+      "form": "zhorkar",
+      "value": 11
+    },
+    {
+      "form": "zhorpum",
+      "value": 12
+    },
+    {
+      "form": "zhorsal",
+      "value": 13
+    },
+    {
+      "form": "dubzhor",
+      "value": 14
+    },
+    {
+      "form": "teszhor",
+      "value": 21
+    },
+    {
+      "form": "karzhor",
+      "value": 28
+    }
+  ]
+}

@@ -3,10 +3,10 @@ import json
 
 import pytest
 
+from babel.vision.glyphs import analyze_image, repeated_patterns, save_analysis
+
 cv2 = pytest.importorskip("cv2")
 np = pytest.importorskip("numpy")
-
-from babel.vision.glyphs import analyze_image, repeated_patterns, save_analysis
 
 
 def _draw_test_image(tmp_path, light=False):

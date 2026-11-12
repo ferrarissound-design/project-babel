@@ -457,5 +457,23 @@
   "cause": "仮説を識別する族ごとの鍵（距離・行頭か行末か・均等か集中か・対象の行）を照合に使っていなかった",
   "fix": "v0.1.2: 記号名以外の鍵が一致することを常に要求し、行の組は対象の行が半分以上重なることで照合する。行の組の両方の行の画像位置も使う",
   "verified": "tests/test_structure.py::test_transcription_matching_uses_family_keys（修正前は失敗）。転写の誤差の実験 T2 を再実行した"
+ },
+ {
+  "id": 52,
+  "title": "分散・共起・置換可能性の根拠に画像上の位置がなく、転写の照合がクラス番号に依存した（修正済み）",
+  "status": "修正済み",
+  "found": "Codex の独立レビュー（PR #7、マージ後の2回目）。同じ行・同じ枠でクラス番号を100ずらした2つの glyph-report で、各行に1回ずつ出る記号の分散の仮説が両方で見つかるのに、compare() が「再現しない」と報告した",
+  "cause": "この3つの族の根拠は、行番号・回数・文脈の集合だけを持ち、Builder.loc() を通していなかったため image_box がなかった。照合は記号名に戻り、視覚クラスの番号が変わると別の仮説とみなされた（転写の安定性が低く出る方向の誤り）",
+  "fix": "v0.1.3: 3つの族の根拠を loc() 経由にして、各出現の画像上の枠と「不確か」の印を持たせる（共起は両方の記号、置換可能性は両方の記号の出現例）。仮説の検出・統計は変えていないので、評価の数値は変わらない",
+  "verified": "tests/test_structure.py::test_dispersion_cooccurrence_substitution_evidence_keeps_image_boxes（修正前は失敗）"
+ },
+ {
+  "id": 53,
+  "title": "行の組の根拠に入れ子で付いた「不確か」の印が、限界の警告に出なかった（修正済み）",
+  "status": "修正済み",
+  "found": "Codex の独立レビュー（PR #7、マージ後の2回目）。同じ10行の位置0をすべて不確かと印を付けても、行の組の仮説の限界に警告が出なかった",
+  "cause": "警告の判定が根拠の最上位の要素だけを見ていたが、行の組の根拠は line_a / line_b の中に位置情報を持つ",
+  "fix": "v0.1.3: 根拠を入れ子の中まで調べる",
+  "verified": "tests/test_structure.py::test_uncertain_marks_inside_linepair_evidence_are_reported（修正前は失敗）"
  }
 ]

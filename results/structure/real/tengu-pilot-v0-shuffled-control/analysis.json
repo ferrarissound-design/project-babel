@@ -1,6 +1,6 @@
 {
  "schema": "babel-structure-analysis-v1",
- "version": "0.1.2",
+ "version": "0.1.3",
  "input": {
   "format": "babel-public",
   "language_id": "tengu-pilot-v0-shuffled-control",
@@ -1379,11 +1379,11 @@
  },
  "seconds": {
   "describe": 0.0,
-  "tests": 2.53,
-  "boundaries": 0.05,
-  "subsample_stability": 0.76,
-  "transcription_stability": 3.1,
-  "total": 6.43
+  "tests": 2.37,
+  "boundaries": 0.04,
+  "subsample_stability": 0.89,
+  "transcription_stability": 2.48,
+  "total": 5.78
  },
  "notes": [
   "観測された規則と、そこから考えられる機能（interpretation）は別物。機能は未検証。",

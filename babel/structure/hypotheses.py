@@ -160,7 +160,8 @@ class Builder:
         ev = []
         for li in both[:self.max_examples]:
             ln = self.lines[li]
-            ev.append({"line": li, "doc": self.c.line_info[li].get("doc"), "positions": {na: ln.index(a), nb: ln.index(b)}})
+            ev.append({**self.loc(li, ln.index(a), 1), "role": na})
+            ev.append({**self.loc(li, ln.index(b), 1), "role": nb})
         return {
             "observation": f"記号 {na} と {nb} が同じ行に {len(both)} 回現れる",
             "evidence": ev, "support": len(both), "support_lines": len(both),
@@ -182,7 +183,9 @@ class Builder:
         else:
             obs = f"記号 {name}（{sum(per_line)} 回）が {has} 行だけに集中する"
             counter = {"description": "（集中の反例は、記号を含む行の外での出現がないこと自体）", "count": None}
-        ev = [{"line": li, "doc": self.c.line_info[li].get("doc"), "count": k} for li, k in enumerate(per_line) if k][:self.max_examples]
+        # 根拠は各行の最初の出現位置（画像入力では枠の座標と「不確か」の印を持つ。転写どうしの照合は座標で行う）
+        ev = [{**self.loc(li, self.lines[li].index(x), 1), "count": k}
+              for li, k in enumerate(per_line) if k][:self.max_examples]
         return {"observation": obs, "evidence": ev, "support": has, "support_lines": has, "counterexamples": counter,
                 "measures": {"lines_with_symbol": has, "occurrences": sum(per_line)}, "symbols": [name], "side": side}
 
@@ -196,6 +199,17 @@ class Builder:
         rec["support_lines"] = len(members)
         rec["measures"]["representative_pair"] = list(best)
         return rec
+
+    def _occurrences(self, s, name, limit=4):
+        out = []
+        for li, ln in enumerate(self.lines):
+            for i, t in enumerate(ln):
+                if t == s:
+                    out.append({**self.loc(li, i, 1), "role": name})
+                    break
+            if len(out) >= limit:
+                break
+        return out
 
     def substitution(self, key):
         x, y = key
@@ -213,7 +227,7 @@ class Builder:
         nx, ny = self.c.name(x), self.c.name(y)
         return {
             "observation": f"記号 {nx} と {ny} が同じ直前の文脈 {len(sl)} 種・同じ直後の文脈 {len(sr)} 種を共有する",
-            "evidence": [{"shared_left": sorted(map(nm, sl)), "shared_right": sorted(map(nm, sr))}],
+            "evidence": [{"shared_left": sorted(map(nm, sl)), "shared_right": sorted(map(nm, sr))}] + self._occurrences(x, nx) + self._occurrences(y, ny),
             "support": len(sl) + len(sr), "support_lines": None,
             "counterexamples": {"description": "片方だけに現れる文脈の数",
                                 "count": len((L[x] ^ L[y])) + len((R[x] ^ R[y])),

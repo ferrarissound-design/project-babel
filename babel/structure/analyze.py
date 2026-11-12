@@ -561,7 +561,7 @@ def analyze(corpus: Corpus, config: dict | None = None) -> dict:
             if any(k2[0] in ("^", "$") and key[1] in k2[1] for _, k2, _, _ in pos):
                 corro.append("行頭・行末の仮説と重なる")
         stable = all(x is None or x >= cfg["stable_threshold"] for x in (stab_s, stab_t))
-        unc = any(e.get("contains_uncertain_symbol") for e in rec.get("evidence", []) if isinstance(e, dict))
+        unc = _has_uncertain(rec.get("evidence", []))
         limits = []
         if fam != "affix":
             if stab_s is None:
@@ -661,6 +661,15 @@ def analyze(corpus: Corpus, config: dict | None = None) -> dict:
                   "標本の揺れ（stability.sampling）と転写の誤差（stability.transcription）は別に測っている。"],
     }
     return out
+
+
+def _has_uncertain(x):
+    """根拠の入れ子の中まで見て、人が「不確か」と印を付けた記号を含むか（行の組の根拠は line_a / line_b の中に持つ）。"""
+    if isinstance(x, dict):
+        return bool(x.get("contains_uncertain_symbol")) or any(_has_uncertain(v) for v in x.values())
+    if isinstance(x, list):
+        return any(_has_uncertain(v) for v in x)
+    return False
 
 
 def _local_pairs(h, corpus):

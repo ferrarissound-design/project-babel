@@ -44,11 +44,16 @@ def sanitize_public(public: dict):
         d["sentences"] = [str(x) for x in (d.get("sentences") or [])]
         docs.append(d)
     # 重複した文書IDは名前を付け直して両方の中身を残す（後の文書で前の文書が黙って上書きされていた）
-    seen, alias_of = Counter(), {}
+    # 付け直す名前は、元からあるIDとも、すでに付けた名前とも衝突しないものにする
+    seen, alias_of, taken = Counter(), {}, {d["id"] for d in docs}
     for d in docs:
         seen[d["id"]] += 1
         if seen[d["id"]] > 1:
-            new = f"{d['id']}#dup{seen[d['id']] - 1}"
+            k = seen[d["id"]] - 1
+            while f"{d['id']}#dup{k}" in taken:
+                k += 1
+            new = f"{d['id']}#dup{k}"
+            taken.add(new)
             warnings.append(f"文書ID {d['id']} が重複していたので、{seen[d['id']]} 番目を {new} とした（分割上は元のIDと同じ側に置く）")
             alias_of[new] = d["id"]
             d["id"] = new
@@ -137,8 +142,11 @@ class Decipherer:
             held = set(self.heldout_ids)
             lines = [(d["id"], s) for d in public["documents"] for s in d["sentences"]]
             if mode == "inductive" and held:
-                tr_lines = [x for x in lines if x[0] not in held]
-                he_lines = [x for x in lines if x[0] in held]
+                # 分割の学習は解読器の学習対象（train_ids）と同じ文書だけ。heldout と、どちらにも割り当てられて
+                # いない文書には、凍結したモデルを当てる
+                train = set(self.train_ids)
+                tr_lines = [x for x in lines if x[0] in train]
+                he_lines = [x for x in lines if x[0] not in train]
                 tr_seg, he_seg = segment.inductive_segment([s for _, s in tr_lines], [s for _, s in he_lines])
                 pairs = list(zip(tr_lines, tr_seg)) + list(zip(he_lines, he_seg))
                 order = {id(x): k for k, x in enumerate(lines)}

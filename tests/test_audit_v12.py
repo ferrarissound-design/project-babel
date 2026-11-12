@@ -167,3 +167,31 @@ def test_engine_reports_segmentation_mode():
     assert decipher(pub, {"segmentation": "inductive"})["segmentation_used"] == "inductive"
     pub2, _ = build_corpus("KES", 1, "C", n_docs=10)
     assert decipher(pub2)["segmentation_used"] is None
+
+
+# ---- Codex レビュー（PR #4）の指摘2件 ---------------------------------------------------
+def test_inductive_segmentation_fits_only_on_train_ids(monkeypatch):
+    """train にも heldout にもない文書の文字列を、分割の学習に使わない。"""
+    from babel.decipher import segment
+    seen = {}
+    orig = segment.inductive_segment
+
+    def spy(tr, te, *a, **k):
+        seen["train"], seen["test"] = list(tr), list(te)
+        return orig(tr, te, *a, **k)
+    monkeypatch.setattr(segment, "inductive_segment", spy)
+    pub = {"has_word_boundaries": False, "documents": [
+        {"id": "train", "sentences": ["kamitaso", "kamira"]}, {"id": "unused", "sentences": ["ZZZZQQQQ"]},
+        {"id": "test", "sentences": ["kamiso"]}], "split": {"train": ["train"], "heldout": ["test"]}}
+    d = Decipherer(pub, {"segmentation": "inductive"})
+    assert seen["train"] == ["kamitaso", "kamira"] and "ZZZZQQQQ" in seen["test"]
+    assert set(d.tokens) == {"train", "unused", "test"}
+
+
+def test_duplicate_alias_does_not_collide_with_existing_id():
+    pub = {"documents": [{"id": "x#dup1", "sentences": ["aa bb"]}, {"id": "x", "sentences": ["cc dd"]},
+                         {"id": "x", "sentences": ["ee ff"]}]}
+    d = Decipherer(pub)
+    ids = [x["id"] for x in d.pub["documents"]]
+    assert len(ids) == len(set(ids)) == 3
+    assert d.tokens["x#dup1"] == [["aa", "bb"]] and d.tokens["x"] == [["cc", "dd"]]

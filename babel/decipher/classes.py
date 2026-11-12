@@ -57,7 +57,11 @@ def label_classes(sentences, infos, stem_group, numeral_types=()):
     cands = [g for g in stats if stats[g]["stems"] >= 4 and stats[g]["coverage"] >= 0.3]
     verb = None
     if cands:
-        best = max(cands, key=lambda g: (stats[g]["one_per_sentence"], g))
+        # 動詞と数詞の両方が「出るときは1回」になりやすい。従来は同率の場合に
+        # グループ名の辞書順で選んでいたため、数詞を動詞と誤認した。
+        # そのグループが出現する文の割合（coverage）と語幹の種類数を同率時の根拠に使う。
+        best = max(cands, key=lambda g: (stats[g]["one_per_sentence"],
+                                         stats[g]["coverage"], stats[g]["stems"], g))
         others = [g for g in cands if g != best]
         if stats[best]["one_per_sentence"] >= 0.7 and others:
             verb = best
@@ -86,7 +90,7 @@ def function_words(sentences, infos, stem_pos, numeral_types):
     return out
 
 
-def verb_position(sentences, infos, stem_pos):
+def verb_position(sentences, infos, stem_pos, class_confidence=1.0):
     counts = Counter()
     for sent in sentences:
         idx = [i for i, w in enumerate(sent) if w in infos and stem_pos.get(infos[w][1]) == "V"]
@@ -98,4 +102,8 @@ def verb_position(sentences, infos, stem_pos):
         return {"value": None, "confidence": 0.0, "alternatives": {}, "n": n}
     alts = {k: round(counts[k] / n, 3) for k in ("initial", "medial", "final")}
     best = max(alts, key=lambda k: alts[k])
-    return {"value": best, "confidence": round(alts[best] * min(1.0, n / 40), 3), "alternatives": alts, "n": n}
+    # 語順の票がすべて一致しても、その票を作った「動詞クラス」の識別が
+    # 曖昧なら確信度は上げない（クラス識別0.5 → 語順の信頼度は最大0.5）。
+    return {"value": best,
+            "confidence": round(alts[best] * min(1.0, n / 40) * class_confidence, 3),
+            "alternatives": alts, "n": n}

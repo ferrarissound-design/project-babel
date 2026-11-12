@@ -179,7 +179,9 @@ class Decipherer:
         self.stem_pos, self.class_info = classes.label_classes(self.sents, self.infos, self.stem_group)
         self._fit_numerals()
         self.func_words = classes.function_words(self.sents, self.infos, self.stem_pos, self.num_values)
-        self.verb_pos = classes.verb_position(self.sents, self.infos, self.stem_pos)
+        self.verb_pos = classes.verb_position(
+            self.sents, self.infos, self.stem_pos,
+            class_confidence=self.class_info["verb_confidence"])
         self.lexicon: dict[str, dict] = {}
         self.affix_fn: dict[str, dict] = {}
         self.slot_pos: dict[str, str] = {}

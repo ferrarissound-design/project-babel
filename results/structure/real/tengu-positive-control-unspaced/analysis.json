@@ -1,6 +1,6 @@
 {
  "schema": "babel-structure-analysis-v1",
- "version": "0.1.2",
+ "version": "0.1.3",
  "input": {
   "format": "babel-public",
   "language_id": "tengu-positive-control-unspaced",
@@ -4076,67 +4076,179 @@
    "evidence": [
     {
      "line": 0,
+     "start": 3,
+     "length": 1,
      "doc": "p01",
-     "positions": {
-      "t": 3,
-      "a": 4
-     }
+     "sent": 0,
+     "symbols": [
+      "t"
+     ],
+     "role": "t"
+    },
+    {
+     "line": 0,
+     "start": 4,
+     "length": 1,
+     "doc": "p01",
+     "sent": 0,
+     "symbols": [
+      "a"
+     ],
+     "role": "a"
     },
     {
      "line": 1,
+     "start": 2,
+     "length": 1,
      "doc": "p02",
-     "positions": {
-      "t": 2,
-      "a": 1
-     }
+     "sent": 0,
+     "symbols": [
+      "t"
+     ],
+     "role": "t"
+    },
+    {
+     "line": 1,
+     "start": 1,
+     "length": 1,
+     "doc": "p02",
+     "sent": 0,
+     "symbols": [
+      "a"
+     ],
+     "role": "a"
     },
     {
      "line": 2,
+     "start": 3,
+     "length": 1,
      "doc": "p03",
-     "positions": {
-      "t": 3,
-      "a": 4
-     }
+     "sent": 0,
+     "symbols": [
+      "t"
+     ],
+     "role": "t"
+    },
+    {
+     "line": 2,
+     "start": 4,
+     "length": 1,
+     "doc": "p03",
+     "sent": 0,
+     "symbols": [
+      "a"
+     ],
+     "role": "a"
     },
     {
      "line": 4,
+     "start": 2,
+     "length": 1,
      "doc": "p05",
-     "positions": {
-      "t": 2,
-      "a": 1
-     }
+     "sent": 0,
+     "symbols": [
+      "t"
+     ],
+     "role": "t"
+    },
+    {
+     "line": 4,
+     "start": 1,
+     "length": 1,
+     "doc": "p05",
+     "sent": 0,
+     "symbols": [
+      "a"
+     ],
+     "role": "a"
     },
     {
      "line": 7,
+     "start": 2,
+     "length": 1,
      "doc": "p08",
-     "positions": {
-      "t": 2,
-      "a": 1
-     }
+     "sent": 0,
+     "symbols": [
+      "t"
+     ],
+     "role": "t"
+    },
+    {
+     "line": 7,
+     "start": 1,
+     "length": 1,
+     "doc": "p08",
+     "sent": 0,
+     "symbols": [
+      "a"
+     ],
+     "role": "a"
     },
     {
      "line": 9,
+     "start": 3,
+     "length": 1,
      "doc": "p10",
-     "positions": {
-      "t": 3,
-      "a": 4
-     }
+     "sent": 0,
+     "symbols": [
+      "t"
+     ],
+     "role": "t"
+    },
+    {
+     "line": 9,
+     "start": 4,
+     "length": 1,
+     "doc": "p10",
+     "sent": 0,
+     "symbols": [
+      "a"
+     ],
+     "role": "a"
     },
     {
      "line": 10,
+     "start": 2,
+     "length": 1,
      "doc": "p11",
-     "positions": {
-      "t": 2,
-      "a": 1
-     }
+     "sent": 0,
+     "symbols": [
+      "t"
+     ],
+     "role": "t"
+    },
+    {
+     "line": 10,
+     "start": 1,
+     "length": 1,
+     "doc": "p11",
+     "sent": 0,
+     "symbols": [
+      "a"
+     ],
+     "role": "a"
     },
     {
      "line": 11,
+     "start": 3,
+     "length": 1,
      "doc": "p12",
-     "positions": {
-      "t": 3,
-      "a": 4
-     }
+     "sent": 0,
+     "symbols": [
+      "t"
+     ],
+     "role": "t"
+    },
+    {
+     "line": 11,
+     "start": 4,
+     "length": 1,
+     "doc": "p12",
+     "sent": 0,
+     "symbols": [
+      "a"
+     ],
+     "role": "a"
     }
    ],
    "support": 9,
@@ -4201,59 +4313,157 @@
    "evidence": [
     {
      "line": 0,
+     "start": 0,
+     "length": 1,
      "doc": "p01",
-     "positions": {
-      "s": 0,
-      "o": 1
-     }
+     "sent": 0,
+     "symbols": [
+      "s"
+     ],
+     "role": "s"
+    },
+    {
+     "line": 0,
+     "start": 1,
+     "length": 1,
+     "doc": "p01",
+     "sent": 0,
+     "symbols": [
+      "o"
+     ],
+     "role": "o"
     },
     {
      "line": 3,
+     "start": 0,
+     "length": 1,
      "doc": "p04",
-     "positions": {
-      "s": 0,
-      "o": 1
-     }
+     "sent": 0,
+     "symbols": [
+      "s"
+     ],
+     "role": "s"
+    },
+    {
+     "line": 3,
+     "start": 1,
+     "length": 1,
+     "doc": "p04",
+     "sent": 0,
+     "symbols": [
+      "o"
+     ],
+     "role": "o"
     },
     {
      "line": 6,
+     "start": 0,
+     "length": 1,
      "doc": "p07",
-     "positions": {
-      "s": 0,
-      "o": 1
-     }
+     "sent": 0,
+     "symbols": [
+      "s"
+     ],
+     "role": "s"
+    },
+    {
+     "line": 6,
+     "start": 1,
+     "length": 1,
+     "doc": "p07",
+     "sent": 0,
+     "symbols": [
+      "o"
+     ],
+     "role": "o"
     },
     {
      "line": 7,
+     "start": 5,
+     "length": 1,
      "doc": "p08",
-     "positions": {
-      "s": 5,
-      "o": 4
-     }
+     "sent": 0,
+     "symbols": [
+      "s"
+     ],
+     "role": "s"
+    },
+    {
+     "line": 7,
+     "start": 4,
+     "length": 1,
+     "doc": "p08",
+     "sent": 0,
+     "symbols": [
+      "o"
+     ],
+     "role": "o"
     },
     {
      "line": 8,
+     "start": 5,
+     "length": 1,
      "doc": "p09",
-     "positions": {
-      "s": 5,
-      "o": 4
-     }
+     "sent": 0,
+     "symbols": [
+      "s"
+     ],
+     "role": "s"
+    },
+    {
+     "line": 8,
+     "start": 4,
+     "length": 1,
+     "doc": "p09",
+     "sent": 0,
+     "symbols": [
+      "o"
+     ],
+     "role": "o"
     },
     {
      "line": 9,
+     "start": 0,
+     "length": 1,
      "doc": "p10",
-     "positions": {
-      "s": 0,
-      "o": 1
-     }
+     "sent": 0,
+     "symbols": [
+      "s"
+     ],
+     "role": "s"
+    },
+    {
+     "line": 9,
+     "start": 1,
+     "length": 1,
+     "doc": "p10",
+     "sent": 0,
+     "symbols": [
+      "o"
+     ],
+     "role": "o"
     },
     {
      "line": 12,
+     "start": 0,
+     "length": 1,
      "doc": "p13",
-     "positions": {
-      "s": 0,
-      "o": 1
-     }
+     "sent": 0,
+     "symbols": [
+      "s"
+     ],
+     "role": "s"
+    },
+    {
+     "line": 12,
+     "start": 1,
+     "length": 1,
+     "doc": "p13",
+     "sent": 0,
+     "symbols": [
+      "o"
+     ],
+     "role": "o"
     }
    ],
    "support": 7,
@@ -6103,27 +6313,36 @@
    "where": [
     {
      "line": 0,
+     "start": 3,
+     "length": 1,
      "doc": "p01",
-     "positions": {
-      "t": 3,
-      "a": 4
-     }
+     "sent": 0,
+     "symbols": [
+      "t"
+     ],
+     "role": "t"
+    },
+    {
+     "line": 0,
+     "start": 4,
+     "length": 1,
+     "doc": "p01",
+     "sent": 0,
+     "symbols": [
+      "a"
+     ],
+     "role": "a"
     },
     {
      "line": 1,
+     "start": 2,
+     "length": 1,
      "doc": "p02",
-     "positions": {
-      "t": 2,
-      "a": 1
-     }
-    },
-    {
-     "line": 2,
-     "doc": "p03",
-     "positions": {
-      "t": 3,
-      "a": 4
-     }
+     "sent": 0,
+     "symbols": [
+      "t"
+     ],
+     "role": "t"
     }
    ]
   },
@@ -6133,27 +6352,36 @@
    "where": [
     {
      "line": 0,
+     "start": 0,
+     "length": 1,
      "doc": "p01",
-     "positions": {
-      "s": 0,
-      "o": 1
-     }
+     "sent": 0,
+     "symbols": [
+      "s"
+     ],
+     "role": "s"
+    },
+    {
+     "line": 0,
+     "start": 1,
+     "length": 1,
+     "doc": "p01",
+     "sent": 0,
+     "symbols": [
+      "o"
+     ],
+     "role": "o"
     },
     {
      "line": 3,
+     "start": 0,
+     "length": 1,
      "doc": "p04",
-     "positions": {
-      "s": 0,
-      "o": 1
-     }
-    },
-    {
-     "line": 6,
-     "doc": "p07",
-     "positions": {
-      "s": 0,
-      "o": 1
-     }
+     "sent": 0,
+     "symbols": [
+      "s"
+     ],
+     "role": "s"
     }
    ]
   },
@@ -6391,11 +6619,11 @@
  },
  "seconds": {
   "describe": 0.0,
-  "tests": 2.56,
+  "tests": 2.47,
   "boundaries": 0.03,
-  "subsample_stability": 1.4,
-  "transcription_stability": 2.68,
-  "total": 6.68
+  "subsample_stability": 1.65,
+  "transcription_stability": 3.09,
+  "total": 7.25
  },
  "notes": [
   "観測された規則と、そこから考えられる機能（interpretation）は別物。機能は未検証。",

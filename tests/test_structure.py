@@ -384,3 +384,47 @@ def test_transcription_matching_uses_family_keys():
           "evidence": [{"line_a": {"image_box": box}, "line_b": {"image_box": [0, 20, 10, 30]}}]}
     from babel.structure.transcription import _boxes
     assert _boxes(lp) == [box, [0, 20, 10, 30]]
+
+
+# --- Codex レビュー（PR #7、マージ後の2回目）の指摘の回帰テスト ---
+
+def _glyph_report(offset, n=25, seed=3):
+    """同じ画像（同じ枠）で、視覚クラスの番号だけをずらした glyph-report。記号 99 が各行に1回ずつ入る。"""
+    rows, glyphs = [], []
+    r = random.Random(seed)
+    for li in range(n):
+        classes = [r.randrange(2, 14) for _ in range(r.randint(6, 10))]
+        classes.insert(r.randint(0, len(classes)), 99)
+        idx, cls = [], []
+        for k, cl in enumerate(classes):
+            idx.append(len(glyphs))
+            cls.append(cl + offset)
+            glyphs.append({"box": [10 * k, 20 * li, 10 * k + 8, 20 * li + 15], "class_id": cl + offset, "match_iou": 1.0, "pixels": 5})
+        rows.append({"region": "p", "box": [0, 0, 1, 1], "classes": cls, "glyph_indices": idx})
+    return {"schema": "babel-glyph-pilot-v1", "source_image": "x.png", "rows": rows, "glyphs": glyphs, "settings": {}}
+
+
+def test_dispersion_cooccurrence_substitution_evidence_keeps_image_boxes():
+    a = analyze(sc.from_glyph_report(_glyph_report(0)), FAST)
+    b = analyze(sc.from_glyph_report(_glyph_report(100)), FAST)         # クラス番号だけが違う同じ画像
+    disp = [h for h in a["hypotheses"] if h["family"] == "dispersion"]
+    assert disp and all("image_box" in e for e in disp[0]["evidence"])
+    cmp = compare(a, [("shifted-classes", b)])
+    rows = {x["id"]: x for x in cmp["by_hypothesis"]}
+    assert all(rows[h["id"]]["reproduced_in"]["shifted-classes"] for h in disp)
+    from babel.structure.hypotheses import Builder
+    c = sc.from_glyph_report(_glyph_report(0))
+    bld = Builder(c)
+    k = (c.symbols.index("g2"), c.symbols.index("g3"))
+    for rec in (bld.cooccurrence(k), bld.substitution(k)):
+        boxes = [e for e in rec["evidence"] if "image_box" in e]
+        assert boxes, rec["observation"]
+
+
+def test_uncertain_marks_inside_linepair_evidence_are_reported():
+    lines = [list("abcdefghij") for _ in range(10)]
+    c = sc.apply_corrections(sc.from_lines(lines), {"uncertain": [{"line": i, "pos": 0} for i in range(10)]})
+    a = analyze(c, FAST)
+    lp = [h for h in a["hypotheses"] if h["family"] == "linepair"]
+    assert lp
+    assert all(any("不確か" in x for x in h["limits"]) for h in lp)

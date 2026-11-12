@@ -136,7 +136,14 @@ def build(results: dict, issues: list, extras: dict | None = None) -> dict:
     rep = results.get("reproducibility", {})
     pts, det7, status = (2.0 if rep.get("identical") else 0.0), [f"同一シード再実行の出力ハッシュ一致: {rep.get('identical')}"], "評価済み"
     cross = extras.get("cross_env")
-    if cross:
+    digest = (rep.get("digests") or [None])[0]
+    if cross and cross.get("local_digest") != digest:
+        # 検証記録が別の実行（旧版など）のものなら、今回の結果の再現性の証拠にはならない
+        det7.append(f"ローカルと GitHub Actions の一致: 未評価（検証記録は別の実行 {cross.get('local_digest')} のもので、"
+                    f"今回の出力 {digest} とは照合していない）")
+        cross = None
+        status = "一部未評価"
+    elif cross:
         pts += 2.0 if cross["match"] else 0.0
         det7.append(f"ローカルと GitHub Actions のハッシュ一致: {cross['match']}（{cross.get('note', '')}）")
     else:

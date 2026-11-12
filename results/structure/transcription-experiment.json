@@ -33,8 +33,7 @@
      "hypotheses": 15,
      "gold_found": [
       "文頭標識 S",
-      "文末標識 E",
-      "接尾辞 x/q/v が同じ枠に入る"
+      "文末標識 E"
      ],
      "symbol_types": 40,
      "substitution_hypotheses": 6,
@@ -90,8 +89,7 @@
      "gold_found": [
       "文頭標識 S",
       "文末標識 E",
-      "動詞接尾辞 v の直後に E",
-      "接尾辞 x/q/v が同じ枠に入る"
+      "動詞接尾辞 v の直後に E"
      ],
      "symbol_types": 42,
      "substitution_hypotheses": 11,
@@ -255,8 +253,7 @@
     "oversplit": {
      "hypotheses": 10,
      "gold_found": [
-      "文末標識 E",
-      "接尾辞 x/q/v が同じ枠に入る"
+      "文末標識 E"
      ],
      "symbol_types": 39,
      "substitution_hypotheses": 6,
@@ -310,8 +307,7 @@
      "gold_found": [
       "文頭標識 S",
       "文末標識 E",
-      "動詞接尾辞 v の直後に E",
-      "接尾辞 x/q/v が同じ枠に入る"
+      "動詞接尾辞 v の直後に E"
      ],
      "symbol_types": 42,
      "substitution_hypotheses": 11,
@@ -349,88 +345,88 @@
    "vision": {
     "0.7": {
      "transcription_errors": {
-      "glyph_candidates": 173,
+      "glyph_candidates": 170,
       "drawn_characters": 173,
       "split_characters": 0,
-      "merged_candidates": 0,
-      "missing_characters": 0,
-      "visual_classes": 18,
+      "merged_candidates": 3,
+      "missing_characters": 3,
+      "visual_classes": 20,
       "true_characters": 21,
-      "characters_split_into_several_classes": 0,
+      "characters_split_into_several_classes": 1,
       "classes_mixing_characters": 2
      },
      "hypotheses": 24,
      "tiers": {
       "A": 6,
-      "B": 2,
-      "C": 16
-     },
-     "gold_found": [
-      "文頭標識 S",
-      "文末標識 E",
-      "動詞接尾辞 v の直後に E",
-      "x は各行に1回（必須）",
-      "v は各行に1回（必須）"
-     ],
-     "mean_transcription_stability": 0.426
-    },
-    "0.6": {
-     "transcription_errors": {
-      "glyph_candidates": 173,
-      "drawn_characters": 173,
-      "split_characters": 0,
-      "merged_candidates": 0,
-      "missing_characters": 0,
-      "visual_classes": 16,
-      "true_characters": 21,
-      "characters_split_into_several_classes": 0,
-      "classes_mixing_characters": 3
-     },
-     "hypotheses": 26,
-     "tiers": {
-      "A": 5,
-      "B": 4,
+      "B": 1,
       "C": 17
      },
      "gold_found": [
       "文頭標識 S",
       "文末標識 E",
       "動詞接尾辞 v の直後に E",
+      "x は各行に1回（必須）"
+     ],
+     "mean_transcription_stability": 0.473
+    },
+    "0.6": {
+     "transcription_errors": {
+      "glyph_candidates": 170,
+      "drawn_characters": 173,
+      "split_characters": 0,
+      "merged_candidates": 3,
+      "missing_characters": 3,
+      "visual_classes": 19,
+      "true_characters": 21,
+      "characters_split_into_several_classes": 1,
+      "classes_mixing_characters": 3
+     },
+     "hypotheses": 28,
+     "tiers": {
+      "A": 8,
+      "B": 1,
+      "C": 19
+     },
+     "gold_found": [
+      "文頭標識 S",
+      "文末標識 E",
+      "動詞接尾辞 v の直後に E",
       "x は各行に1回（必須）",
       "v は各行に1回（必須）"
      ],
-     "mean_transcription_stability": 0.448
+     "mean_transcription_stability": 0.445
     },
     "0.8": {
      "transcription_errors": {
-      "glyph_candidates": 173,
+      "glyph_candidates": 170,
       "drawn_characters": 173,
       "split_characters": 0,
-      "merged_candidates": 0,
-      "missing_characters": 0,
+      "merged_candidates": 3,
+      "missing_characters": 3,
       "visual_classes": 21,
       "true_characters": 21,
-      "characters_split_into_several_classes": 0,
-      "classes_mixing_characters": 0
+      "characters_split_into_several_classes": 1,
+      "classes_mixing_characters": 1
      },
-     "hypotheses": 23,
+     "hypotheses": 19,
      "tiers": {
-      "A": 8,
-      "C": 15
+      "A": 5,
+      "B": 2,
+      "C": 12
      },
      "gold_found": [
       "文頭標識 S",
       "文末標識 E",
       "動詞接尾辞 v の直後に E"
      ],
-     "mean_transcription_stability": 0.516
+     "mean_transcription_stability": 0.564
     }
    },
    "reproduced_across_settings": {
     "hypotheses_in_main": 24,
-    "reproduced_in_all": 18,
-    "reproduced_in_none": 2,
-    "only_in_alternatives": 9
+    "reproduced_in_all": 19,
+    "reproduced_in_none": 1,
+    "only_in_alternatives": 5
    }
   },
   {
@@ -449,72 +445,61 @@
    "vision": {
     "0.7": {
      "transcription_errors": {
-      "glyph_candidates": 158,
+      "glyph_candidates": 79,
       "drawn_characters": 173,
       "split_characters": 0,
-      "merged_candidates": 13,
-      "missing_characters": 15,
-      "visual_classes": 67,
+      "merged_candidates": 50,
+      "missing_characters": 97,
+      "visual_classes": 68,
       "true_characters": 21,
-      "characters_split_into_several_classes": 20,
-      "classes_mixing_characters": 8
+      "characters_split_into_several_classes": 16,
+      "classes_mixing_characters": 2
      },
-     "hypotheses": 2,
-     "tiers": {
-      "C": 2
-     },
-     "gold_found": [
-      "接尾辞 x/q/v が同じ枠に入る"
-     ],
-     "mean_transcription_stability": 0.5
+     "hypotheses": 0,
+     "tiers": {},
+     "gold_found": [],
+     "mean_transcription_stability": 0.0
     },
     "0.6": {
      "transcription_errors": {
-      "glyph_candidates": 158,
+      "glyph_candidates": 79,
       "drawn_characters": 173,
       "split_characters": 0,
-      "merged_candidates": 13,
-      "missing_characters": 15,
-      "visual_classes": 45,
+      "merged_candidates": 50,
+      "missing_characters": 97,
+      "visual_classes": 62,
       "true_characters": 21,
-      "characters_split_into_several_classes": 19,
-      "classes_mixing_characters": 17
+      "characters_split_into_several_classes": 16,
+      "classes_mixing_characters": 5
      },
-     "hypotheses": 5,
-     "tiers": {
-      "C": 5
-     },
-     "gold_found": [
-      "文頭標識 S",
-      "文末標識 E"
-     ],
-     "mean_transcription_stability": 0.132
+     "hypotheses": 0,
+     "tiers": {},
+     "gold_found": [],
+     "mean_transcription_stability": 0.0
     },
     "0.8": {
      "transcription_errors": {
-      "glyph_candidates": 158,
+      "glyph_candidates": 79,
       "drawn_characters": 173,
       "split_characters": 0,
-      "merged_candidates": 13,
-      "missing_characters": 15,
-      "visual_classes": 113,
+      "merged_candidates": 50,
+      "missing_characters": 97,
+      "visual_classes": 71,
       "true_characters": 21,
-      "characters_split_into_several_classes": 20,
+      "characters_split_into_several_classes": 16,
       "classes_mixing_characters": 1
      },
-     "hypotheses": 1,
-     "tiers": {
-      "C": 1
-     },
+     "hypotheses": 0,
+     "tiers": {},
      "gold_found": [],
-     "mean_transcription_stability": 0.67
+     "mean_transcription_stability": 0.0
     }
    },
    "reproduced_across_settings": {
-    "hypotheses_in_main": 2,
-    "reproduced_in_all": 1,
-    "reproduced_in_none": 1,
-    "only_in_alternatives": 4
+    "hypotheses_in_main": 0,
+    "reproduced_in_all": 0,
+    "reproduced_in_none": 0,
+    "only_in_alternatives": 0
    }
   },
   {
@@ -535,20 +520,69 @@
    "vision": {
     "0.7": {
      "transcription_errors": {
-      "glyph_candidates": 171,
+      "glyph_candidates": 164,
       "drawn_characters": 171,
       "split_characters": 0,
-      "merged_candidates": 0,
-      "missing_characters": 0,
-      "visual_classes": 18,
+      "merged_candidates": 7,
+      "missing_characters": 7,
+      "visual_classes": 20,
       "true_characters": 20,
-      "characters_split_into_several_classes": 0,
+      "characters_split_into_several_classes": 1,
       "classes_mixing_characters": 2
      },
-     "hypotheses": 22,
+     "hypotheses": 23,
      "tiers": {
-      "A": 9,
-      "B": 1,
+      "A": 7,
+      "C": 16
+     },
+     "gold_found": [
+      "文頭標識 S",
+      "文末標識 E",
+      "動詞接尾辞 v の直後に E",
+      "x は各行に1回（必須）"
+     ],
+     "mean_transcription_stability": 0.49
+    },
+    "0.6": {
+     "transcription_errors": {
+      "glyph_candidates": 164,
+      "drawn_characters": 171,
+      "split_characters": 0,
+      "merged_candidates": 7,
+      "missing_characters": 7,
+      "visual_classes": 18,
+      "true_characters": 20,
+      "characters_split_into_several_classes": 1,
+      "classes_mixing_characters": 2
+     },
+     "hypotheses": 19,
+     "tiers": {
+      "A": 7,
+      "B": 2,
+      "C": 10
+     },
+     "gold_found": [
+      "文頭標識 S",
+      "文末標識 E",
+      "動詞接尾辞 v の直後に E"
+     ],
+     "mean_transcription_stability": 0.509
+    },
+    "0.8": {
+     "transcription_errors": {
+      "glyph_candidates": 164,
+      "drawn_characters": 171,
+      "split_characters": 0,
+      "merged_candidates": 7,
+      "missing_characters": 7,
+      "visual_classes": 21,
+      "true_characters": 20,
+      "characters_split_into_several_classes": 1,
+      "classes_mixing_characters": 1
+     },
+     "hypotheses": 19,
+     "tiers": {
+      "A": 7,
       "C": 12
      },
      "gold_found": [
@@ -557,65 +591,14 @@
       "動詞接尾辞 v の直後に E",
       "x は各行に1回（必須）"
      ],
-     "mean_transcription_stability": 0.42
-    },
-    "0.6": {
-     "transcription_errors": {
-      "glyph_candidates": 171,
-      "drawn_characters": 171,
-      "split_characters": 0,
-      "merged_candidates": 0,
-      "missing_characters": 0,
-      "visual_classes": 16,
-      "true_characters": 20,
-      "characters_split_into_several_classes": 0,
-      "classes_mixing_characters": 3
-     },
-     "hypotheses": 18,
-     "tiers": {
-      "A": 9,
-      "B": 1,
-      "C": 8
-     },
-     "gold_found": [
-      "文頭標識 S",
-      "文末標識 E",
-      "動詞接尾辞 v の直後に E"
-     ],
-     "mean_transcription_stability": 0.535
-    },
-    "0.8": {
-     "transcription_errors": {
-      "glyph_candidates": 171,
-      "drawn_characters": 171,
-      "split_characters": 0,
-      "merged_candidates": 0,
-      "missing_characters": 0,
-      "visual_classes": 20,
-      "true_characters": 20,
-      "characters_split_into_several_classes": 0,
-      "classes_mixing_characters": 0
-     },
-     "hypotheses": 21,
-     "tiers": {
-      "A": 6,
-      "C": 15
-     },
-     "gold_found": [
-      "文頭標識 S",
-      "文末標識 E",
-      "動詞接尾辞 v の直後に E",
-      "x は各行に1回（必須）",
-      "v は各行に1回（必須）"
-     ],
-     "mean_transcription_stability": 0.391
+     "mean_transcription_stability": 0.541
     }
    },
    "reproduced_across_settings": {
-    "hypotheses_in_main": 22,
-    "reproduced_in_all": 16,
+    "hypotheses_in_main": 23,
+    "reproduced_in_all": 18,
     "reproduced_in_none": 2,
-    "only_in_alternatives": 4
+    "only_in_alternatives": 2
    }
   },
   {
@@ -636,74 +619,75 @@
    "vision": {
     "0.7": {
      "transcription_errors": {
-      "glyph_candidates": 139,
+      "glyph_candidates": 88,
       "drawn_characters": 171,
       "split_characters": 0,
-      "merged_candidates": 15,
-      "missing_characters": 33,
-      "visual_classes": 60,
+      "merged_candidates": 36,
+      "missing_characters": 86,
+      "visual_classes": 73,
       "true_characters": 20,
       "characters_split_into_several_classes": 19,
-      "classes_mixing_characters": 10
+      "classes_mixing_characters": 0
      },
-     "hypotheses": 4,
+     "hypotheses": 1,
      "tiers": {
-      "C": 4
+      "B": 1
      },
      "gold_found": [
-      "文末標識 E",
-      "動詞接尾辞 v の直後に E"
+      "文末標識 E"
      ],
-     "mean_transcription_stability": 0.415
+     "mean_transcription_stability": 1.0
     },
     "0.6": {
      "transcription_errors": {
-      "glyph_candidates": 139,
+      "glyph_candidates": 88,
       "drawn_characters": 171,
       "split_characters": 0,
-      "merged_candidates": 15,
-      "missing_characters": 33,
-      "visual_classes": 42,
+      "merged_candidates": 36,
+      "missing_characters": 86,
+      "visual_classes": 71,
       "true_characters": 20,
-      "characters_split_into_several_classes": 18,
-      "classes_mixing_characters": 13
+      "characters_split_into_several_classes": 19,
+      "classes_mixing_characters": 1
      },
-     "hypotheses": 5,
+     "hypotheses": 1,
      "tiers": {
-      "A": 2,
-      "C": 3
+      "B": 1
      },
      "gold_found": [
-      "文末標識 E",
-      "動詞接尾辞 v の直後に E"
+      "文末標識 E"
      ],
-     "mean_transcription_stability": 0.334
+     "mean_transcription_stability": 1.0
     },
     "0.8": {
      "transcription_errors": {
-      "glyph_candidates": 139,
+      "glyph_candidates": 88,
       "drawn_characters": 171,
       "split_characters": 0,
-      "merged_candidates": 15,
-      "missing_characters": 33,
-      "visual_classes": 99,
+      "merged_candidates": 36,
+      "missing_characters": 86,
+      "visual_classes": 75,
       "true_characters": 20,
-      "characters_split_into_several_classes": 20,
-      "classes_mixing_characters": 5
+      "characters_split_into_several_classes": 19,
+      "classes_mixing_characters": 0
      },
-     "hypotheses": 0,
-     "tiers": {},
-     "gold_found": [],
-     "mean_transcription_stability": 0.0
+     "hypotheses": 1,
+     "tiers": {
+      "C": 1
+     },
+     "gold_found": [
+      "文末標識 E"
+     ],
+     "mean_transcription_stability": 0.33
     }
    },
    "reproduced_across_settings": {
-    "hypotheses_in_main": 4,
-    "reproduced_in_all": 0,
-    "reproduced_in_none": 3,
-    "only_in_alternatives": 4
+    "hypotheses_in_main": 1,
+    "reproduced_in_all": 1,
+    "reproduced_in_none": 0,
+    "only_in_alternatives": 0
    }
   }
  ],
- "seconds": 215.4
+ "seconds": 178.8
 }

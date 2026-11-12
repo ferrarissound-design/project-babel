@@ -1,0 +1,1546 @@
+{
+ "schema": "babel-structure-analysis-v1",
+ "version": "0.1.4",
+ "input": {
+  "format": "babel-public",
+  "language_id": "img4494-v2-continuous",
+  "level": "C",
+  "has_word_boundaries": false,
+  "corrections_applied": [],
+  "low_confidence_symbols": 0,
+  "uncertain_marked": 0
+ },
+ "mode": "short-corpus",
+ "config": {
+  "alpha": 0.05,
+  "permutations": 999,
+  "max_n": 8,
+  "max_gap": 8,
+  "subsamples": 10,
+  "subsample_fraction": 0.7,
+  "perturbations": 6,
+  "perturbation_rate": 0.05,
+  "compression_reps": 19,
+  "seed": 0
+ },
+ "verdict": {
+  "code": "structure_observed",
+  "text": "偶然では説明しにくい規則性を 1 件観測した（安定性の低いもの 0 件は別記）。意味・文法機能は未検証",
+  "hypotheses": 1,
+  "stable_hypotheses": 1,
+  "global_structure": true
+ },
+ "statistics": {
+  "lines": 13,
+  "documents": 2,
+  "symbols_total": 114,
+  "symbol_types": 74,
+  "type_token_ratio": 0.649,
+  "hapax_types": 47,
+  "mean_count_per_type": 1.54,
+  "line_length": {
+   "min": 6,
+   "median": 8,
+   "max": 12
+  },
+  "top_symbols": [
+   {
+    "symbol": "",
+    "count": 5
+   },
+   {
+    "symbol": "",
+    "count": 4
+   },
+   {
+    "symbol": "",
+    "count": 4
+   },
+   {
+    "symbol": "",
+    "count": 4
+   },
+   {
+    "symbol": "",
+    "count": 3
+   },
+   {
+    "symbol": "",
+    "count": 3
+   },
+   {
+    "symbol": "",
+    "count": 3
+   },
+   {
+    "symbol": "",
+    "count": 3
+   },
+   {
+    "symbol": "",
+    "count": 2
+   },
+   {
+    "symbol": "",
+    "count": 2
+   },
+   {
+    "symbol": "",
+    "count": 2
+   },
+   {
+    "symbol": "",
+    "count": 2
+   },
+   {
+    "symbol": "",
+    "count": 2
+   },
+   {
+    "symbol": "",
+    "count": 2
+   },
+   {
+    "symbol": "",
+    "count": 2
+   }
+  ],
+  "repeated_ngrams": {
+   "2": {
+    "types": 6,
+    "top": [
+     {
+      "symbols": [
+       "",
+       ""
+      ],
+      "count": 2
+     },
+     {
+      "symbols": [
+       "",
+       ""
+      ],
+      "count": 2
+     },
+     {
+      "symbols": [
+       "",
+       ""
+      ],
+      "count": 2
+     },
+     {
+      "symbols": [
+       "",
+       ""
+      ],
+      "count": 2
+     },
+     {
+      "symbols": [
+       "",
+       ""
+      ],
+      "count": 2
+     },
+     {
+      "symbols": [
+       "",
+       ""
+      ],
+      "count": 2
+     }
+    ]
+   },
+   "3": {
+    "types": 1,
+    "top": [
+     {
+      "symbols": [
+       "",
+       "",
+       ""
+      ],
+      "count": 2
+     }
+    ]
+   }
+  },
+  "longest_repeat": {
+   "length": 3,
+   "symbols": [
+    "",
+    "",
+    ""
+   ]
+  },
+  "shared_line_prefixes": [
+   {
+    "symbols": [
+     "",
+     ""
+    ],
+    "lines": 2
+   }
+  ],
+  "shared_line_suffixes": [],
+  "context_variety": [
+   {
+    "symbol": "",
+    "count": 5,
+    "distinct_next": 5,
+    "distinct_prev": 5
+   },
+   {
+    "symbol": "",
+    "count": 4,
+    "distinct_next": 4,
+    "distinct_prev": 4
+   },
+   {
+    "symbol": "",
+    "count": 4,
+    "distinct_next": 3,
+    "distinct_prev": 3
+   },
+   {
+    "symbol": "",
+    "count": 4,
+    "distinct_next": 3,
+    "distinct_prev": 3
+   },
+   {
+    "symbol": "",
+    "count": 3,
+    "distinct_next": 2,
+    "distinct_prev": 1
+   },
+   {
+    "symbol": "",
+    "count": 3,
+    "distinct_next": 3,
+    "distinct_prev": 3
+   },
+   {
+    "symbol": "",
+    "count": 3,
+    "distinct_next": 3,
+    "distinct_prev": 2
+   },
+   {
+    "symbol": "",
+    "count": 3,
+    "distinct_next": 2,
+    "distinct_prev": 3
+   },
+   {
+    "symbol": "",
+    "count": 2,
+    "distinct_next": 1,
+    "distinct_prev": 0
+   },
+   {
+    "symbol": "",
+    "count": 2,
+    "distinct_next": 2,
+    "distinct_prev": 1
+   },
+   {
+    "symbol": "",
+    "count": 2,
+    "distinct_next": 2,
+    "distinct_prev": 2
+   },
+   {
+    "symbol": "",
+    "count": 2,
+    "distinct_next": 2,
+    "distinct_prev": 2
+   },
+   {
+    "symbol": "",
+    "count": 2,
+    "distinct_next": 1,
+    "distinct_prev": 2
+   },
+   {
+    "symbol": "",
+    "count": 2,
+    "distinct_next": 2,
+    "distinct_prev": 1
+   },
+   {
+    "symbol": "",
+    "count": 2,
+    "distinct_next": 1,
+    "distinct_prev": 2
+   }
+  ],
+  "mean_relative_position": [
+   {
+    "symbol": "",
+    "count": 5,
+    "mean": 0.482
+   },
+   {
+    "symbol": "",
+    "count": 4,
+    "mean": 0.366
+   },
+   {
+    "symbol": "",
+    "count": 4,
+    "mean": 0.461
+   },
+   {
+    "symbol": "",
+    "count": 4,
+    "mean": 0.586
+   },
+   {
+    "symbol": "",
+    "count": 3,
+    "mean": 0.111
+   },
+   {
+    "symbol": "",
+    "count": 3,
+    "mean": 0.636
+   },
+   {
+    "symbol": "",
+    "count": 3,
+    "mean": 0.103
+   },
+   {
+    "symbol": "",
+    "count": 3,
+    "mean": 0.5
+   },
+   {
+    "symbol": "",
+    "count": 2,
+    "mean": 0.0
+   },
+   {
+    "symbol": "",
+    "count": 2,
+    "mean": 0.229
+   },
+   {
+    "symbol": "",
+    "count": 2,
+    "mean": 0.611
+   },
+   {
+    "symbol": "",
+    "count": 2,
+    "mean": 0.854
+   },
+   {
+    "symbol": "",
+    "count": 2,
+    "mean": 0.625
+   },
+   {
+    "symbol": "",
+    "count": 2,
+    "mean": 0.062
+   },
+   {
+    "symbol": "",
+    "count": 2,
+    "mean": 0.929
+   }
+  ],
+  "top_cooccurrences": [
+   {
+    "symbols": [
+     "",
+     ""
+    ],
+    "lines": 3
+   },
+   {
+    "symbols": [
+     "",
+     ""
+    ],
+    "lines": 3
+   },
+   {
+    "symbols": [
+     "",
+     ""
+    ],
+    "lines": 2
+   },
+   {
+    "symbols": [
+     "",
+     ""
+    ],
+    "lines": 2
+   },
+   {
+    "symbols": [
+     "",
+     ""
+    ],
+    "lines": 2
+   },
+   {
+    "symbols": [
+     "",
+     ""
+    ],
+    "lines": 2
+   },
+   {
+    "symbols": [
+     "",
+     ""
+    ],
+    "lines": 2
+   },
+   {
+    "symbols": [
+     "",
+     ""
+    ],
+    "lines": 2
+   }
+  ],
+  "most_similar_lines": [
+   {
+    "lines": [
+     3,
+     4
+    ],
+    "bigram_jaccard": 0.182
+   },
+   {
+    "lines": [
+     0,
+     1
+    ],
+    "bigram_jaccard": 0.091
+   },
+   {
+    "lines": [
+     0,
+     9
+    ],
+    "bigram_jaccard": 0.077
+   },
+   {
+    "lines": [
+     6,
+     10
+    ],
+    "bigram_jaccard": 0.059
+   }
+  ],
+  "most_similar_documents": [
+   {
+    "documents": [
+     "left",
+     "right"
+    ],
+    "bigram_jaccard": 0.021
+   }
+  ]
+ },
+ "global_tests": {
+  "sequential_dependence": {
+   "observed": 5.1558,
+   "null_mean": 5.2075,
+   "null": "within",
+   "description": "隣り合う記号の相互情報量（並びの依存）",
+   "p": 0.835,
+   "p_holm": 0.835
+  },
+  "repetition": {
+   "observed": 1.0,
+   "null_mean": 0.03,
+   "null": "within",
+   "description": "3〜6記号列の反復の総数",
+   "p": 0.029,
+   "p_holm": 0.08700000000000001
+  },
+  "edge_position": {
+   "observed": 165.0347,
+   "null_mean": 130.4428,
+   "null": "within",
+   "description": "行頭・行末の記号の偏り（カイ二乗）",
+   "p": 0.003,
+   "p_holm": 0.012
+  },
+  "longest_repeat": {
+   "observed": 3.0,
+   "null_mean": 1.4264,
+   "null": "within",
+   "description": "最長反復部分列の長さ",
+   "p": 0.029,
+   "p_holm": 0.08700000000000001
+  },
+  "line_similarity": {
+   "observed": 5.0,
+   "null_mean": 0.3714,
+   "null": "global",
+   "description": "行の間で共有される2記号列の数",
+   "p": 0.001,
+   "p_holm": 0.005
+  }
+ },
+ "hypotheses": [
+  {
+   "id": "H01",
+   "family": "linepair",
+   "kind": "似た記号列を共有する行",
+   "tier": "B",
+   "observation": "2 行（3, 4）が、偶然より多くの2〜4記号列を互いに共有する（有意な行の組 1）",
+   "evidence": [
+    {
+     "line_a": {
+      "line": 3,
+      "start": 0,
+      "length": 8,
+      "doc": "left",
+      "sent": 3,
+      "symbols": [
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       ""
+      ]
+     },
+     "line_b": {
+      "line": 4,
+      "start": 0,
+      "length": 7,
+      "doc": "left",
+      "sent": 4,
+      "symbols": [
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       ""
+      ]
+     },
+     "fixed_parts": [
+      [
+       ""
+      ],
+      [
+       "",
+       "",
+       ""
+      ]
+     ],
+     "variable_parts": [
+      {
+       "line_a": [
+        ""
+       ],
+       "line_b": [
+        ""
+       ]
+      },
+      {
+       "line_a": [
+        ""
+       ],
+       "line_b": [
+        ""
+       ]
+      },
+      {
+       "line_a": [
+        "",
+        ""
+       ],
+       "line_b": [
+        ""
+       ]
+      }
+     ]
+    }
+   ],
+   "support": 1,
+   "support_lines": 2,
+   "counterexamples": {
+    "description": "一致しない部分の数",
+    "count": 3
+   },
+   "measures": {
+    "sequence_ratio": 0.533,
+    "representative_pair": [
+     3,
+     4
+    ]
+   },
+   "symbols": [],
+   "key": {
+    "family": "linepair",
+    "lines": [
+     3,
+     4
+    ],
+    "pairs": [
+     [
+      3,
+      4
+     ]
+    ]
+   },
+   "statistics": {
+    "p_family_corrected": 0.003,
+    "p_raw": 0.001,
+    "threshold": 0.00625,
+    "statistic": 5.994,
+    "statistic_kind": "共有する2〜4記号列の数を置換分布で標準化した z（行の組の最良値）",
+    "null_model": "全体シャッフル",
+    "permutations": 999
+   },
+   "stability": {
+    "sampling": 1.0,
+    "sampling_trials": 4,
+    "transcription": 0.5,
+    "transcription_trials": 6
+   },
+   "corroborated_by": [],
+   "interpretation": {
+    "status": "未検証（観測からは選べない候補の列挙）",
+    "candidates": [
+     "同じ文型・定型文",
+     "同じ句の再録",
+     "（転写の場合）同じ行の重複転写"
+    ]
+   },
+   "limits": [
+    "短いコーパス: 規則の一般性（別の資料でも成り立つか）は検証できない"
+   ],
+   "needed_data": "同じ枠を持つ行がさらにあるか。行の対応部分の画像を人が照合すること"
+  }
+ ],
+ "descriptive_observations": [
+  {
+   "family": "ngram",
+   "observation": "記号列    が 2 回現れる",
+   "key": {
+    "family": "ngram",
+    "symbols": [
+     "",
+     "",
+     ""
+    ]
+   },
+   "p_raw": 0.001,
+   "p_family_corrected": 0.024,
+   "support": 2,
+   "status": "多重検定の補正後は偶然と区別できない"
+  },
+  {
+   "family": "position",
+   "observation": "  が 13 行中 2 行の行頭にある",
+   "key": {
+    "family": "position",
+    "side": "^",
+    "symbols": [
+     "",
+     ""
+    ]
+   },
+   "p_raw": 0.001,
+   "p_family_corrected": 0.03,
+   "support": 2,
+   "status": "多重検定の補正後は偶然と区別できない"
+  },
+  {
+   "family": "cooccurrence",
+   "observation": "記号  と  が同じ行に 3 回現れる",
+   "key": {
+    "family": "cooccurrence",
+    "symbols": [
+     "",
+     ""
+    ]
+   },
+   "p_raw": 0.003,
+   "p_family_corrected": 0.011,
+   "support": 3,
+   "status": "多重検定の補正後は偶然と区別できない"
+  },
+  {
+   "family": "ngram",
+   "observation": "記号  の直後に  が 2 回現れる",
+   "key": {
+    "family": "ngram",
+    "symbols": [
+     "",
+     ""
+    ]
+   },
+   "p_raw": 0.014,
+   "p_family_corrected": 0.434,
+   "support": 2,
+   "status": "多重検定の補正後は偶然と区別できない"
+  },
+  {
+   "family": "cooccurrence",
+   "observation": "記号  と  が同じ行に 3 回現れる",
+   "key": {
+    "family": "cooccurrence",
+    "symbols": [
+     "",
+     ""
+    ]
+   },
+   "p_raw": 0.016,
+   "p_family_corrected": 0.124,
+   "support": 3,
+   "status": "多重検定の補正後は偶然と区別できない"
+  },
+  {
+   "family": "position",
+   "observation": " が 13 行中 2 行の行頭にある",
+   "key": {
+    "family": "position",
+    "side": "^",
+    "symbols": [
+     ""
+    ]
+   },
+   "p_raw": 0.017,
+   "p_family_corrected": 0.415,
+   "support": 2,
+   "status": "多重検定の補正後は偶然と区別できない"
+  },
+  {
+   "family": "position",
+   "observation": " が 13 行中 2 行の行末にある",
+   "key": {
+    "family": "position",
+    "side": "$",
+    "symbols": [
+     ""
+    ]
+   },
+   "p_raw": 0.018,
+   "p_family_corrected": 0.368,
+   "support": 2,
+   "status": "多重検定の補正後は偶然と区別できない"
+  },
+  {
+   "family": "ngram",
+   "observation": "記号  の直後に  が 2 回現れる",
+   "key": {
+    "family": "ngram",
+    "symbols": [
+     "",
+     ""
+    ]
+   },
+   "p_raw": 0.021,
+   "p_family_corrected": 0.284,
+   "support": 2,
+   "status": "多重検定の補正後は偶然と区別できない"
+  },
+  {
+   "family": "ngram",
+   "observation": "記号  の直後に  が 2 回現れる",
+   "key": {
+    "family": "ngram",
+    "symbols": [
+     "",
+     ""
+    ]
+   },
+   "p_raw": 0.021,
+   "p_family_corrected": 0.434,
+   "support": 2,
+   "status": "多重検定の補正後は偶然と区別できない"
+  },
+  {
+   "family": "dispersion",
+   "observation": "記号 （4 回）が 2 行だけに集中する",
+   "key": {
+    "family": "dispersion",
+    "side": "clump",
+    "symbols": [
+     ""
+    ]
+   },
+   "p_raw": 0.023,
+   "p_family_corrected": 0.053,
+   "support": 4,
+   "status": "多重検定の補正後は偶然と区別できない"
+  },
+  {
+   "family": "ngram",
+   "observation": "記号  の直後に  が 2 回現れる",
+   "key": {
+    "family": "ngram",
+    "symbols": [
+     "",
+     ""
+    ]
+   },
+   "p_raw": 0.025,
+   "p_family_corrected": 0.484,
+   "support": 2,
+   "status": "多重検定の補正後は偶然と区別できない"
+  },
+  {
+   "family": "dispersion",
+   "observation": "記号 （4 回）が 2 行だけに集中する",
+   "key": {
+    "family": "dispersion",
+    "side": "clump",
+    "symbols": [
+     ""
+    ]
+   },
+   "p_raw": 0.033,
+   "p_family_corrected": 0.084,
+   "support": 4,
+   "status": "多重検定の補正後は偶然と区別できない"
+  }
+ ],
+ "experimental_observations": [],
+ "structures": {
+  "substitution_sets": [],
+  "line_templates": [
+   {
+    "lines": [
+     3,
+     4
+    ],
+    "pattern_on_first_line": "_  _    _",
+    "fixed_symbols": 4,
+    "variable_slots": 3
+   }
+  ]
+ },
+ "boundaries": {
+  "candidates": [
+   {
+    "method": "repeats",
+    "description_length_bits": 839.2,
+    "word_types": 13,
+    "word_tokens": 13,
+    "mean_agreement_with_others": 0.0,
+    "subsample_reproducibility": 1.0,
+    "cuts": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ],
+    "rank_by_description_length": 1
+   },
+   {
+    "method": "branching",
+    "description_length_bits": 870.3,
+    "word_types": 17,
+    "word_tokens": 18,
+    "mean_agreement_with_others": 0.079,
+    "subsample_reproducibility": 0.86,
+    "cuts": [
+     [
+      1
+     ],
+     [],
+     [],
+     [
+      3,
+      6
+     ],
+     [
+      3,
+      6
+     ],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ],
+    "rank_by_description_length": 2
+   },
+   {
+    "method": "transition",
+    "description_length_bits": 1262.7,
+    "word_types": 47,
+    "word_tokens": 48,
+    "mean_agreement_with_others": 0.524,
+    "subsample_reproducibility": 0.898,
+    "cuts": [
+     [
+      3,
+      5
+     ],
+     [
+      2,
+      4
+     ],
+     [
+      2,
+      8
+     ],
+     [
+      2,
+      6
+     ],
+     [
+      2,
+      6
+     ],
+     [
+      2,
+      4,
+      6,
+      8
+     ],
+     [
+      5,
+      7
+     ],
+     [
+      2,
+      6,
+      10
+     ],
+     [
+      3
+     ],
+     [
+      2,
+      4,
+      8
+     ],
+     [
+      2,
+      4,
+      7,
+      9,
+      11
+     ],
+     [
+      3,
+      6
+     ],
+     [
+      2,
+      4,
+      6,
+      8,
+      10
+     ]
+    ],
+    "rank_by_description_length": 3
+   },
+   {
+    "method": "unigram",
+    "description_length_bits": 1262.7,
+    "word_types": 47,
+    "word_tokens": 48,
+    "mean_agreement_with_others": 0.524,
+    "subsample_reproducibility": 0.898,
+    "cuts": [
+     [
+      3,
+      5
+     ],
+     [
+      2,
+      4
+     ],
+     [
+      2,
+      8
+     ],
+     [
+      2,
+      6
+     ],
+     [
+      2,
+      6
+     ],
+     [
+      2,
+      4,
+      6,
+      8
+     ],
+     [
+      5,
+      7
+     ],
+     [
+      2,
+      6,
+      10
+     ],
+     [
+      3
+     ],
+     [
+      2,
+      4,
+      8
+     ],
+     [
+      2,
+      4,
+      7,
+      9,
+      11
+     ],
+     [
+      3,
+      6
+     ],
+     [
+      2,
+      4,
+      6,
+      8,
+      10
+     ]
+    ],
+    "rank_by_description_length": 4
+   },
+   {
+    "method": "consensus",
+    "description_length_bits": 1262.7,
+    "word_types": 47,
+    "word_tokens": 48,
+    "mean_agreement_with_others": 0.524,
+    "subsample_reproducibility": 0.898,
+    "cuts": [
+     [
+      3,
+      5
+     ],
+     [
+      2,
+      4
+     ],
+     [
+      2,
+      8
+     ],
+     [
+      2,
+      6
+     ],
+     [
+      2,
+      6
+     ],
+     [
+      2,
+      4,
+      6,
+      8
+     ],
+     [
+      5,
+      7
+     ],
+     [
+      2,
+      6,
+      10
+     ],
+     [
+      3
+     ],
+     [
+      2,
+      4,
+      8
+     ],
+     [
+      2,
+      4,
+      7,
+      9,
+      11
+     ],
+     [
+      3,
+      6
+     ],
+     [
+      2,
+      4,
+      6,
+      8,
+      10
+     ]
+    ],
+    "rank_by_description_length": 5
+   },
+   {
+    "method": "mdl",
+    "description_length_bits": 1587.4,
+    "word_types": 73,
+    "word_tokens": 112,
+    "mean_agreement_with_others": 0.332,
+    "subsample_reproducibility": 0.986,
+    "cuts": [
+     [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+     ],
+     [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+     ],
+     [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+     ],
+     [
+      1,
+      2,
+      3,
+      4,
+      6,
+      7
+     ],
+     [
+      1,
+      2,
+      3,
+      4,
+      6
+     ],
+     [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+     ],
+     [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+     ],
+     [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+     ],
+     [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+     ],
+     [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+     ],
+     [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+     ],
+     [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+     ]
+    ],
+    "rank_by_description_length": 6
+   }
+  ],
+  "top": [
+   "repeats",
+   "branching",
+   "transition"
+  ],
+  "agreement": {
+   "transition": {
+    "unigram": 1.0,
+    "branching": 0.1,
+    "mdl": 0.522,
+    "repeats": 0.0,
+    "consensus": 1.0
+   },
+   "unigram": {
+    "transition": 1.0,
+    "branching": 0.1,
+    "mdl": 0.522,
+    "repeats": 0.0,
+    "consensus": 1.0
+   },
+   "branching": {
+    "transition": 0.1,
+    "unigram": 0.1,
+    "mdl": 0.096,
+    "repeats": 0.0,
+    "consensus": 0.1
+   },
+   "mdl": {
+    "transition": 0.522,
+    "unigram": 0.522,
+    "branching": 0.096,
+    "repeats": 0.0,
+    "consensus": 0.522
+   },
+   "repeats": {
+    "transition": 0.0,
+    "unigram": 0.0,
+    "branching": 0.0,
+    "mdl": 0.0,
+    "consensus": 0.0
+   },
+   "consensus": {
+    "transition": 1.0,
+    "unigram": 1.0,
+    "branching": 0.1,
+    "mdl": 0.522,
+    "repeats": 0.0
+   }
+  },
+  "baselines_bits": {
+   "no_cuts": 839.2,
+   "every_symbol": 1608.2
+  },
+  "boundary_vote_share": [
+   {
+    "1": 0.4,
+    "2": 0.2,
+    "3": 0.6,
+    "4": 0.2,
+    "5": 0.6,
+    "6": 0.2
+   },
+   {
+    "1": 0.2,
+    "2": 0.6,
+    "3": 0.2,
+    "4": 0.6,
+    "5": 0.2,
+    "6": 0.2
+   },
+   {
+    "1": 0.2,
+    "2": 0.6,
+    "3": 0.2,
+    "4": 0.2,
+    "5": 0.2,
+    "6": 0.2,
+    "7": 0.2,
+    "8": 0.6
+   },
+   {
+    "1": 0.2,
+    "2": 0.6,
+    "3": 0.4,
+    "4": 0.2,
+    "6": 0.8,
+    "7": 0.2
+   },
+   {
+    "1": 0.2,
+    "2": 0.6,
+    "3": 0.4,
+    "4": 0.2,
+    "6": 0.8
+   },
+   {
+    "1": 0.2,
+    "2": 0.6,
+    "3": 0.2,
+    "4": 0.6,
+    "5": 0.2,
+    "6": 0.6,
+    "7": 0.2,
+    "8": 0.6,
+    "9": 0.2
+   },
+   {
+    "1": 0.2,
+    "2": 0.2,
+    "3": 0.2,
+    "4": 0.2,
+    "5": 0.6,
+    "6": 0.2,
+    "7": 0.6
+   },
+   {
+    "1": 0.2,
+    "2": 0.6,
+    "3": 0.2,
+    "4": 0.2,
+    "5": 0.2,
+    "6": 0.6,
+    "7": 0.2,
+    "8": 0.2,
+    "9": 0.2,
+    "10": 0.6,
+    "11": 0.2
+   },
+   {
+    "1": 0.2,
+    "2": 0.2,
+    "3": 0.6,
+    "4": 0.2,
+    "5": 0.2
+   },
+   {
+    "1": 0.2,
+    "2": 0.6,
+    "3": 0.2,
+    "4": 0.6,
+    "5": 0.2,
+    "6": 0.2,
+    "7": 0.2,
+    "8": 0.6
+   },
+   {
+    "1": 0.2,
+    "2": 0.6,
+    "3": 0.2,
+    "4": 0.6,
+    "5": 0.2,
+    "6": 0.2,
+    "7": 0.6,
+    "8": 0.2,
+    "9": 0.6,
+    "10": 0.2,
+    "11": 0.6
+   },
+   {
+    "1": 0.2,
+    "2": 0.2,
+    "3": 0.6,
+    "4": 0.2,
+    "5": 0.2,
+    "6": 0.6,
+    "7": 0.2
+   },
+   {
+    "1": 0.2,
+    "2": 0.6,
+    "3": 0.2,
+    "4": 0.6,
+    "5": 0.2,
+    "6": 0.6,
+    "7": 0.2,
+    "8": 0.6,
+    "9": 0.2,
+    "10": 0.6
+   }
+  ],
+  "compression_test": {
+   "observed_ratio": 0.9871,
+   "null_mean_ratio": 0.9993,
+   "null_min_ratio": 0.9871,
+   "p": 0.1,
+   "reps": 19,
+   "description": "MDL 分割で記述長がどれだけ縮むか（小さいほど再利用される単位が多い）。行内シャッフルと比較"
+  }
+ },
+ "given_boundaries_agreement": null,
+ "detectability": {
+  "family_threshold_p": 0.00625,
+  "min_attainable_p": 0.001,
+  "permutations_sufficient": true,
+  "ngram_family_threshold_statistic": 3.159,
+  "bigram_occurrences_needed": {
+   "two_most_frequent_symbols": {
+    "symbols": [
+     "",
+     ""
+    ],
+    "expected_count_under_null": 0.226,
+    "occurrences_needed": 4
+   },
+   "two_median_frequency_symbols": {
+    "symbols": [
+     "",
+     ""
+    ],
+    "expected_count_under_null": 0.0,
+    "occurrences_needed": 2
+   }
+  }
+ },
+ "data_limits": [
+  "短いコーパスモード: 行数 ≤ 30 または記号数 ≤ 600。高次の統計（条件付きエントロピー、語順、語の分布）は記述のみ",
+  "記号の異なり数が多い（異なり/延べ = 0.649）。1記号あたり平均 1.54 回しか現れず、多くの記号について位置・文脈の規則は検定できない",
+  "1回しか現れない記号が 47 種（全 74 種）。視覚クラスの分けすぎ（同じ文字が別クラス）の可能性も確認が必要",
+  "文の境界は入力の行（または文）をそのまま使う。改行が文の区切りとは限らない",
+  "単語・形態素レベルの置き換え可能性（語の範疇）は、単語境界が不確かなため記号レベルでのみ検定している"
+ ],
+ "review_points": [
+  {
+   "what": "方式によって判断が分かれる単語境界 36 箇所",
+   "why": "半数前後の方式だけが切る位置",
+   "where": [
+    {
+     "line": 0,
+     "cut_before_position": 1
+    },
+    {
+     "line": 0,
+     "cut_before_position": 3
+    },
+    {
+     "line": 0,
+     "cut_before_position": 5
+    },
+    {
+     "line": 1,
+     "cut_before_position": 2
+    },
+    {
+     "line": 1,
+     "cut_before_position": 4
+    },
+    {
+     "line": 2,
+     "cut_before_position": 2
+    },
+    {
+     "line": 2,
+     "cut_before_position": 8
+    },
+    {
+     "line": 3,
+     "cut_before_position": 2
+    },
+    {
+     "line": 3,
+     "cut_before_position": 3
+    },
+    {
+     "line": 4,
+     "cut_before_position": 2
+    }
+   ]
+  },
+  {
+   "what": "単語境界の候補はすべて暫定",
+   "why": "MDL 分割の圧縮が行内シャッフルと区別できない（p=0.1）",
+   "where": []
+  }
+ ],
+ "multiple_testing": {
+  "families": [
+   "ngram",
+   "position",
+   "gap",
+   "cooccurrence",
+   "dispersion",
+   "substitution",
+   "linepair",
+   "affix"
+  ],
+  "per_family_threshold": 0.00625,
+  "method": "族ごとに Westfall–Young single-step maxT（置換分布）、族の数で Bonferroni。大域検定は Holm"
+ },
+ "seconds": {
+  "describe": 0.0,
+  "tests": 1.58,
+  "boundaries": 0.04,
+  "subsample_stability": 0.68,
+  "transcription_stability": 1.42,
+  "total": 3.71
+ },
+ "notes": [
+  "観測された規則と、そこから考えられる機能（interpretation）は別物。機能は未検証。",
+  "規則が見つからないことは『無意味な記号列』の証明ではない。検出力（detectability）を併せて読むこと。",
+  "標本の揺れ（stability.sampling）と転写の誤差（stability.transcription）は別に測っている。"
+ ]
+}

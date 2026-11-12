@@ -118,7 +118,8 @@ def from_glyph_report(report: dict) -> Corpus:
         for p, gi in enumerate(idx):
             if 0 <= gi < len(glyphs):
                 boxes[(ln, p)] = list(glyphs[gi]["box"])
-                if glyphs[gi].get("match_iou", 1.0) < LOW_MATCH:
+                mi = glyphs[gi].get("match_iou")
+                if mi is not None and mi < LOW_MATCH:          # None: 一致度を出さない認識方式（不明として扱う）
                     low.append([ln, p])
     return Corpus(lines=lines, symbols=b.symbols, line_info=info, origins=origins, boxes=boxes,
                   source={"format": "glyph-report", "image": report.get("source_image"),

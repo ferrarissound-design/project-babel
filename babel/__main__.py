@@ -43,6 +43,24 @@ def main(argv=None):
     v.add_argument("--similarity", type=float, default=0.7, help="同一形状とみなすIoU閾値")
     v.add_argument("--keep-rules", action="store_true",
                    help="罫線除去をしない（文字の線が切り出し領域の大部分を占める場合）")
+    v.add_argument("--method", default="baseline",
+                   help="認識の方式（baseline = 従来、improved など。babel/vision/recognizers.py の METHODS）。"
+                        "baseline 以外は --region / --threshold / --similarity を使わない")
+    an = sub.add_parser("annotate", help="正解転写を作る・直すローカルの UI（127.0.0.1 のみ）")
+    an.add_argument("image")
+    an.add_argument("--gt", required=True, help="正解転写 JSON（babel-glyph-gt-v1）。なければ作る")
+    an.add_argument("--report", help="下書きに使う glyph-report.json（すべて未確認・label なしで取り込む）")
+    an.add_argument("--port", type=int, default=8765)
+    an.add_argument("--open", action="store_true", help="ブラウザを開く")
+    ve = sub.add_parser("vision-eval", help="認識結果（glyph-report）と正解転写を比べる")
+    ve.add_argument("report")
+    ve.add_argument("gt")
+    ve.add_argument("--iou", type=float, default=0.5)
+    ve.add_argument("--out")
+    vb = sub.add_parser("vision-benchmark", help="人工画像で認識方式を比べる（results/vision/）")
+    vb.add_argument("--split", choices=["dev", "val", "test"], default="dev")
+    vb.add_argument("--methods", help="カンマ区切り（省略時はすべて）")
+    vb.add_argument("--out")
     s = sub.add_parser("analyze", help="意味を使わない構造発見（反復・境界・文法的な規則の仮説）。翻訳はしない")
     s.add_argument("corpus", help="BABEL コーパス JSON / glyph-report.json / .txt / 画像（画像なら vision を内部で実行）")
     s.add_argument("--out", required=True, help="解析結果 JSON（同じ名前の .md も書く）")
@@ -132,10 +150,36 @@ def main(argv=None):
             except ValueError:
                 ap.error("--region は ID:X1,Y1,X2,Y2 の形式で指定してください")
             regions.append({"id": name, "box": box})
-        data = save_analysis(a.image, a.out_dir, regions=regions or None,
-                             threshold=a.threshold, similarity=a.similarity,
-                             remove_rules=not a.keep_rules)
+        if a.method == "baseline":
+            data = save_analysis(a.image, a.out_dir, regions=regions or None,
+                                 threshold=a.threshold, similarity=a.similarity,
+                                 remove_rules=not a.keep_rules)
+        else:
+            from babel.vision.glyphs import _corpus
+            from babel.vision.recognizers import recognize
+            data = recognize(a.image, a.method)
+            out = Path(a.out_dir)
+            out.mkdir(parents=True, exist_ok=True)
+            (out / "glyph-report.json").write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+            for spaced, fn in ((False, "corpus-continuous.json"), (True, "corpus-glyph-tokens.json")):
+                (out / fn).write_text(json.dumps(_corpus({**data, "regions": [{"id": "page"}]}, spaced), ensure_ascii=False,
+                                                 indent=2) + "\n", encoding="utf-8")
         print(json.dumps({"out_dir": a.out_dir, **data["stats"]}, ensure_ascii=False))
+    elif a.cmd == "annotate":
+        from babel.vision.annotate import serve
+        serve(a.image, a.gt, report=a.report, port=a.port, open_browser=a.open)
+    elif a.cmd == "vision-eval":
+        from babel.vision.evaluate import evaluate
+        from babel.vision.groundtruth import load
+        res = evaluate(json.loads(Path(a.report).read_text(encoding="utf-8")), load(a.gt), iou_thr=a.iou)
+        text = json.dumps(res, ensure_ascii=False, indent=1)
+        if a.out:
+            Path(a.out).write_text(text + "\n", encoding="utf-8")
+        print(text)
+    elif a.cmd == "vision-benchmark":
+        from babel.vision_eval.benchmark import run as vrun
+        res = vrun(a.split, a.methods.split(",") if a.methods else None, out=a.out or f"results/vision/methods-{a.split}.json")
+        print(json.dumps(res["meta"], ensure_ascii=False))
     elif a.cmd == "analyze":
         return _analyze(a, ap)
     elif a.cmd == "structure-benchmark":

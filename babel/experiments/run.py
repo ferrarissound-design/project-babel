@@ -19,8 +19,9 @@ from babel.evaluate.score import score
 from babel.generator.corpus import build_corpus, null_corpus
 from babel.generator.languages import FAMILIES
 
-DEV_SEEDS = [0, 1, 2, 3, 4]              # 解読器の調整に使ってよいシード
-TEST_SEEDS = list(range(100, 120))       # 最終報告専用。調整に使わない
+DEV_SEEDS = list(range(20))              # 解読器の調整に使ってよいシード（v1.1 で 5 → 20 個）
+TEST_SEEDS = list(range(200, 220))       # v1.1 の最終報告専用。調整に使わない
+RETIRED_SEEDS = list(range(100, 120))    # v1.0 の評価シード。結果を見たので以後の評価に使わない
 DEFAULT_GEN = dict(n_docs=130, parallel_frac=0.05, var_rate=0.45, lacuna=0.02, split="random")
 
 
@@ -29,6 +30,8 @@ def conditions():
     out = []
     for lv in "ABC":
         out.append(("E1_main", f"level{lv}", lv, "engine", {}))
+    for lv in "AC":
+        out.append(("E1_main", f"level{lv}:no_totals", lv, "engine", {"totals": False}))
     for lv in "AC":
         for b in ("baseline_freq", "baseline_ngram"):
             out.append(("E2_baseline", f"level{lv}:{b}", lv, b, {}))

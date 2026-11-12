@@ -169,10 +169,51 @@ class Decipherer:
                         extra.append((ws, counts[0][0]))
             if extra:
                 res = numerals.solve_numerals(docs, self._is_inflected, self.counts, anchors, extra, True)
+        if solver and res["status"] != "solved" and res.get("sum_marker") is None and self.pub.get("parallel"):
+            res2 = self._numerals_from_parallel(docs, anchors)
+            if res2 is not None:
+                res = res2
         self.num = res
         self.num_values = dict(res["values"])
         for w, v in anchors:
             self.num_values.setdefault(w, v)
+
+    def _numerals_from_parallel(self, docs, anchors):
+        """合計行がない場合: 対訳の数量を概念 #NUM として対応付けに混ぜ、#NUM に結び付く語を数詞候補にする。
+
+        数詞語は「数量のある文」にだけ規則的に現れるので、EM の対応付けで #NUM に吸着される。
+        候補が決まれば、対訳の文ごとに「数詞語の値の和＝数量」という方程式が立つ。
+        """
+        items, counted = [], []
+        for p in self.pub["parallel"]:
+            if p["doc"] not in self.norm_docs:
+                continue
+            sent = self.norm_docs[p["doc"]][p["sent"]]
+            concepts, feats, counts = flatten(p["translation"])
+            if counts:
+                concepts = concepts + [("#NUM", "num")]
+            units = []
+            for i, w in enumerate(sent):
+                if w != LACUNA:
+                    units.append(("S:" + w, i))      # 数詞は屈折しないことが多いので、語形全体を単位にする
+            items.append({"units": units, "concepts": concepts, "feats": [], "sent": sent, "counts": counts})
+            if len(counts) == 1 and LACUNA not in sent:
+                counted.append((sent, counts[0][0]))
+        if len(counted) < 3:
+            return None
+        al = Aligner(items, mode="em")
+        cand = set()
+        for u in al.n:
+            meaning, conf, _ = al.best(u, "C:")
+            if meaning == "#NUM" and al.joint[u]["C:#NUM"] >= 1:
+                cand.add(u[2:])
+        cand |= {w for w, _ in anchors}
+        if len(cand) < 2:
+            return None
+        extra = [([w for w in sent if w != LACUNA], n) for sent, n in counted]   # 絞り込みはソルバーが候補拡張の後に行う
+        res = numerals.solve_numerals(docs, self._is_inflected, self.counts, anchors, extra, True, seed_variables=cand)
+        res["parallel_candidates"] = len(cand)
+        return res
 
     def _units(self, sent):
         """文 → [(unit, 語の位置)]。数詞と欠損は除く。"""

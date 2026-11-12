@@ -30,7 +30,7 @@ def _row(ev):
 
 
 def _agg(vals):
-    vals = [v for v in vals if v is not None]
+    vals = [v for v in vals if isinstance(v, (int, float)) and not isinstance(v, bool)]   # 「測定不能」などは除く
     if not vals:
         return None
     return {"mean": round(statistics.mean(vals), 4), "sd": round(statistics.pstdev(vals), 4), "n": len(vals)}

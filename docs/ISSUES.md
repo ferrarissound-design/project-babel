@@ -456,3 +456,17 @@
 - 原因: #62 の「未確認の位置の予測を除外する」判定が、#63 で入れた outline（中空）を考慮せず、外接矩形の内部全体を使っていた
 - 対応: 未確認の項目による除外でも、中空の要素は縁の帯だけを見る（文字以外の判定と同じ関数を使う）
 - 検証: tests/test_vision_eval.py::test_unverified_hollow_frame_only_ignores_its_border（修正前は失敗）。人工画像はすべて確認済みなので、評価の数値には影響しない
+
+## 66. 評価器: 未確認の項目の same_as が、確認済みの正解クラスを統合した（修正済み）（修正済み）
+
+- 発見: Codex の独立レビュー（PR #10 マージ後）。確認済みの A/B/A/B を正しく2クラスに分けた予測でも、未確認の項目に label=B, same_as=A を足すだけで ARI・NMI が 1.0 から 0.0 になった
+- 原因: 評価用の別名の辞書（aliases）が、未確認の項目の same_as も取り込んでいた。評価する記号は確認済みに限っていたが、統合の関係は限っていなかった
+- 対応: 評価用の統合は、確認済みの文字の項目の same_as だけで作る（alias_resolution）。和集合でまとめ、代表は辞書順で最小の名前にする（循環 A→B→A も1つのクラス）。1つの名前に複数の統合先がある矛盾は統合したうえで conflicts として報告する。評価に使った範囲と、無視した未確認の same_as の件数を evaluation_scope に出す
+- 検証: tests/test_vision_eval.py の test_unverified_same_as_does_not_merge_verified_classes・test_alias_cycles_and_conflicts_are_resolved_deterministically（修正前は失敗）。人工画像は same_as を使わないので評価の数値は変わらない
+
+## 67. 評価器: 未確認の行に対応する予測の行を、行の precision の分母に入れた（修正済み）（修正済み）
+
+- 発見: Codex の独立レビュー（PR #10 マージ後）。2行を完全に検出した画像で片方の行だけを確認済みにすると、行 precision 0.5・F1 0.667、行割り当て精度 0.5 になった
+- 原因: 予測の行を確認済みの行とだけ対応付けていたので、未確認の行を正しく検出した予測も偽陽性になった。行割り当て精度も、未確認の行に属する記号を含めていた
+- 対応: 予測の行を確認済みと未確認の両方の行に1対1で対応付け、未確認の行に対応した予測は分母に入れず件数（ignored_rows_on_unverified_lines）を報告する。どの行にも対応しない余分な予測は偽陽性のまま。行割り当て精度は確認済みの行に属する記号だけで計算する。分母が0なら precision と F1 は「測定不能」
+- 検証: tests/test_vision_eval.py の test_unverified_line_does_not_lower_line_scores・test_line_precision_unmeasurable_when_all_rows_fall_on_unverified_lines（修正前は失敗）

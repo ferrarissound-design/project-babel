@@ -248,3 +248,53 @@ def test_unverified_hollow_frame_only_ignores_its_border():
                   {"id": "f", "box": [1, 1, 99, 99], "kind": "decoration", "verified": verified, "outline": True}])
         d = evaluate(_report([([10, 10, 20, 20], 1), ([40, 40, 45, 45], 2)]), gt)["detection"]
         assert d["fp"] == 1 and d["f1"] == 0.6667, verified       # 確認の有無で結果が変わらない
+
+
+# --- Codex レビュー（PR #10 マージ後）の指摘2件の回帰テスト ---
+
+def _abab(extra=()):
+    items = [_it(i, [20 * i, 0, 20 * i + 10, 10], lab) for i, lab in enumerate("ABAB", 1)] + list(extra)
+    rep = _report([([20 * i, 0, 20 * i + 10, 10], c) for i, c in zip(range(1, 5), (1, 2, 1, 2))])
+    return _gt(items), rep
+
+
+def test_unverified_same_as_does_not_merge_verified_classes():
+    gt, rep = _abab()
+    base = evaluate(rep, gt)["classes"]
+    gt2, _ = _abab([_it(9, [200, 0, 210, 10], "B", verified=False, same_as="A")])
+    ev = evaluate(rep, gt2)
+    assert ev["classes"]["ari"] == base["ari"] == 1.0 and ev["classes"]["nmi"] == base["nmi"] == 1.0
+    assert ev["evaluation_scope"]["unverified_same_as_ignored"] == 1
+    gt3, _ = _abab([_it(9, [200, 0, 210, 10], "B", same_as="A")])     # 確認済みの統合は使う
+    assert evaluate(rep, gt3)["classes"]["true_classes"] == 1
+
+
+def test_alias_cycles_and_conflicts_are_resolved_deterministically():
+    items = [_it(1, [0, 0, 10, 10], "A"), _it(2, [20, 0, 30, 10], "B", same_as="A"), _it(3, [40, 0, 50, 10], "A", same_as="B"),
+             _it(4, [60, 0, 70, 10], "C"), _it(5, [80, 0, 90, 10], "D", same_as="C"), _it(6, [100, 0, 110, 10], "D", same_as="A")]
+    ar = G.alias_resolution(_gt(items))
+    assert ar["map"]["B"] == "A" and ar["map"]["C"] == "A" and ar["map"]["D"] == "A"   # 循環も矛盾も1つにまとまる
+    assert "A" in ar["cycles"] and ar["conflicts"] == [{"label": "D", "same_as": ["A", "C"]}]
+
+
+def test_unverified_line_does_not_lower_line_scores():
+    lines = [{"id": "L1", "box": [0, 0, 30, 10], "verified": True}, {"id": "L2", "box": [0, 30, 30, 40], "verified": False}]
+    gt = _gt([_it(1, [0, 0, 10, 10], "A", line="L1"), _it(2, [0, 30, 10, 40], "B", line="L2")], lines)
+    rep = {"rows": [{"box": [0, 0, 30, 10], "classes": [1], "glyph_indices": [0]},
+                    {"box": [0, 30, 30, 40], "classes": [2], "glyph_indices": [1]}],
+           "glyphs": [{"box": [0, 0, 10, 10], "class_id": 1}, {"box": [0, 30, 10, 40], "class_id": 2}]}
+    ln = evaluate(rep, gt)["lines"]
+    assert ln["precision"] == 1.0 and ln["f1"] == 1.0 and ln["glyph_line_assignment_accuracy"] == 1.0
+    assert ln["ignored_rows_on_unverified_lines"] == 1
+    # 未確認の領域の外にある余分な行は、偽陽性のまま
+    rep["rows"].append({"box": [0, 60, 30, 70], "classes": [3], "glyph_indices": [2]})
+    rep["glyphs"].append({"box": [0, 60, 10, 70], "class_id": 3})
+    assert evaluate(rep, gt)["lines"]["precision"] == 0.5
+
+
+def test_line_precision_unmeasurable_when_all_rows_fall_on_unverified_lines():
+    lines = [{"id": "L1", "box": [0, 0, 30, 10], "verified": True}, {"id": "L2", "box": [0, 30, 30, 40], "verified": False}]
+    gt = _gt([_it(1, [0, 0, 10, 10], "A", line="L1")], lines)
+    rep = {"rows": [{"box": [0, 30, 30, 40], "classes": [2], "glyph_indices": [0]}], "glyphs": [{"box": [0, 30, 10, 40], "class_id": 2}]}
+    ln = evaluate(rep, gt)["lines"]
+    assert ln["precision"] == UNMEASURABLE and ln["recall"] == 0.0

@@ -1,0 +1,49 @@
+name: IMG4494 BABEL structure research (unmerged experiment)
+on:
+  push:
+    branches:
+      - experiment/babel-structure-img4494-20261112
+    paths:
+      - ".github/workflows/img4494-structure-experiment.yml"
+      - "experiments/img4494/corpus-continuous.json"
+permissions:
+  contents: read
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Run offline structure analysis
+        run: |
+          python -m babel analyze experiments/img4494/corpus-continuous.json --out /tmp/img4494-analysis.json --permutations 999 --subsamples 10 --perturbations 6 --seed 0
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path('/tmp/img4494-analysis.json')
+          d=json.loads(p.read_text())
+          out={
+            'schema':d.get('schema'),
+            'version':d.get('version'),
+            'mode':d.get('mode'),
+            'statistics':d.get('statistics'),
+            'verdict':d.get('verdict'),
+            'hypotheses':d.get('hypotheses'),
+            'descriptive_observations':d.get('descriptive_observations'),
+            'global_tests':d.get('global_tests'),
+            'boundaries': {
+               'top':d.get('boundaries',{}).get('top'),
+               'candidates':[{k:v for k,v in x.items() if k != 'cuts'} for x in d.get('boundaries',{}).get('candidates',[])],
+               'compression_test':d.get('boundaries',{}).get('compression_test'),
+            },
+            'detectability':d.get('detectability'),
+            'data_limits':d.get('data_limits'),
+            'review_points':d.get('review_points'),
+            'seconds':d.get('seconds'),
+          }
+          print('BEGIN_BABEL_IMAGE_ANALYSIS')
+          print(json.dumps(out,ensure_ascii=False,indent=2))
+          print('END_BABEL_IMAGE_ANALYSIS')
+          PY

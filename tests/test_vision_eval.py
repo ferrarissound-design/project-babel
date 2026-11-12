@@ -231,3 +231,11 @@ def test_hollow_frame_does_not_absorb_glyph_errors_inside():
               {"id": "f", "box": [1, 1, 99, 99], "kind": "decoration", "verified": True, "outline": True}])
     ev = evaluate(_report([([10, 10, 20, 20], 1), ([40, 40, 45, 45], 2), ([1, 30, 3, 40], 3)]), gt)
     assert ev["detection"]["non_glyph_detected_as_glyph"] == 1     # 縁の上の1つだけ。枠の内部の破片は数えない
+
+
+def test_substitution_collapsed_by_renaming_is_not_a_discovery():
+    """クラスの分けすぎ（v と v'）を読み替えた v, v を、接尾辞の置換可能性の発見に数えない（Codex レビュー、PR #10）。"""
+    from babel.structure_eval.score import match_gold
+    rule = {"family": "substitution", "symbols": ["x", "q", "v"], "label": "x/q/v"}
+    assert not match_gold(rule, {"family": "substitution", "symbols": ["v", "v"]})
+    assert match_gold(rule, {"family": "substitution", "symbols": ["x", "v"]})

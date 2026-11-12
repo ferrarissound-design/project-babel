@@ -163,7 +163,9 @@ def match_gold(rule, key):
     if rule["family"] == "gap":
         return h == g and key["distance"] % rule["distance"] == 0
     if rule["family"] == "substitution":
-        return set(h) <= set(g)
+        # 読み替えで同じ記号に潰れた組（例: クラスの分けすぎ v と v' → v, v）は、異なる記号どうしの関係ではない
+        # （Codex レビュー、PR #10）
+        return len(set(h)) >= 2 and set(h) <= set(g)
     if rule["family"] in ("affix", "dispersion"):
         return rule["side"] == key["side"] and h == g
     return False

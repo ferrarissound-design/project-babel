@@ -65,6 +65,12 @@ def markdown(a: dict) -> str:
                   f"- **解釈の候補（未検証）**: {' / '.join(h['interpretation']['candidates'])}",
                   f"- **信頼度の限界**: {'; '.join(h['limits']) or '—'}",
                   f"- **追加検証に必要なデータ**: {h['needed_data']}", ""]
+    if a.get("experimental_observations"):
+        L += ["### 実験的な観察（接辞、規則として扱わない）", "",
+              "接辞の検定は評価で偽の率が94%だったため、仮説に含めない。分割候補に依存する参考表示。", ""]
+        for h in a["experimental_observations"][:10]:
+            L.append(f"- {h['observation']}（補正後 p = {_p(h['statistics']['p_family_corrected'])}）")
+        L.append("")
     s = a["structures"]
     if s["substitution_sets"] or s["line_templates"]:
         L += ["### まとめた構造", ""]

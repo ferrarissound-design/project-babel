@@ -26,3 +26,9 @@ jobs:
         run: python -m pytest
       - name: 外部予測台帳の改竄検査
         run: python -m babel external verify
+      - name: 構造解析のスモーク実行（未知の記号列 → JSON と Markdown、外部API不要）
+        run: |
+          python -m babel analyze external/inbox/tengu-pilot-v0-real/corpus.json --out /tmp/structure/tengu.json --permutations 199
+          python -m babel analyze external/inbox/tengu-positive-control-unspaced/corpus.json --out /tmp/structure/control.json --permutations 199
+          python -m babel structure-benchmark --quick --split dev --seeds 0 --sizes 13 --jobs 2 --out /tmp/structure/bench.json
+          test -s /tmp/structure/tengu.md && test -s /tmp/structure/bench.md

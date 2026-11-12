@@ -1,0 +1,1369 @@
+{
+ "schema": "babel-structure-analysis-v1",
+ "version": "0.1.1",
+ "input": {
+  "format": "babel-public",
+  "language_id": "tengu-pilot-v0-real",
+  "level": "C",
+  "has_word_boundaries": false,
+  "corrections_applied": [],
+  "low_confidence_symbols": 0,
+  "uncertain_marked": 0
+ },
+ "mode": "short-corpus",
+ "config": {
+  "alpha": 0.05,
+  "permutations": 999,
+  "max_n": 8,
+  "max_gap": 8,
+  "subsamples": 10,
+  "subsample_fraction": 0.7,
+  "perturbations": 6,
+  "perturbation_rate": 0.05,
+  "compression_reps": 19,
+  "seed": 0
+ },
+ "verdict": {
+  "code": "no_structure_detected",
+  "text": "このデータ量で検出できる規則性は見つからなかった。これは規則が存在しないことの証明ではない（短いコーパスのため検出力が低い）",
+  "hypotheses": 0,
+  "stable_hypotheses": 0,
+  "global_structure": false
+ },
+ "statistics": {
+  "lines": 15,
+  "documents": 11,
+  "symbols_total": 145,
+  "symbol_types": 97,
+  "type_token_ratio": 0.669,
+  "hapax_types": 66,
+  "mean_count_per_type": 1.49,
+  "line_length": {
+   "min": 5,
+   "median": 9,
+   "max": 16
+  },
+  "top_symbols": [
+   {
+    "symbol": "安",
+    "count": 7
+   },
+   {
+    "symbol": "女",
+    "count": 4
+   },
+   {
+    "symbol": "る",
+    "count": 4
+   },
+   {
+    "symbol": "の",
+    "count": 4
+   },
+   {
+    "symbol": "也",
+    "count": 3
+   },
+   {
+    "symbol": "寿",
+    "count": 3
+   },
+   {
+    "symbol": "石",
+    "count": 3
+   },
+   {
+    "symbol": "以",
+    "count": 3
+   },
+   {
+    "symbol": "ら",
+    "count": 3
+   },
+   {
+    "symbol": "く",
+    "count": 3
+   },
+   {
+    "symbol": "云",
+    "count": 2
+   },
+   {
+    "symbol": "果",
+    "count": 2
+   },
+   {
+    "symbol": "号",
+    "count": 2
+   },
+   {
+    "symbol": "左",
+    "count": 2
+   },
+   {
+    "symbol": "曳",
+    "count": 2
+   }
+  ],
+  "repeated_ngrams": {
+   "2": {
+    "types": 1,
+    "top": [
+     {
+      "symbols": [
+       "以",
+       "女"
+      ],
+      "count": 2
+     }
+    ]
+   }
+  },
+  "longest_repeat": {
+   "length": 2,
+   "symbols": [
+    "以",
+    "女"
+   ]
+  },
+  "shared_line_prefixes": [],
+  "shared_line_suffixes": [],
+  "context_variety": [
+   {
+    "symbol": "安",
+    "count": 7,
+    "distinct_next": 5,
+    "distinct_prev": 7
+   },
+   {
+    "symbol": "女",
+    "count": 4,
+    "distinct_next": 2,
+    "distinct_prev": 3
+   },
+   {
+    "symbol": "る",
+    "count": 4,
+    "distinct_next": 1,
+    "distinct_prev": 4
+   },
+   {
+    "symbol": "の",
+    "count": 4,
+    "distinct_next": 4,
+    "distinct_prev": 2
+   },
+   {
+    "symbol": "也",
+    "count": 3,
+    "distinct_next": 3,
+    "distinct_prev": 3
+   },
+   {
+    "symbol": "寿",
+    "count": 3,
+    "distinct_next": 3,
+    "distinct_prev": 2
+   },
+   {
+    "symbol": "石",
+    "count": 3,
+    "distinct_next": 3,
+    "distinct_prev": 3
+   },
+   {
+    "symbol": "以",
+    "count": 3,
+    "distinct_next": 2,
+    "distinct_prev": 3
+   },
+   {
+    "symbol": "ら",
+    "count": 3,
+    "distinct_next": 3,
+    "distinct_prev": 2
+   },
+   {
+    "symbol": "く",
+    "count": 3,
+    "distinct_next": 3,
+    "distinct_prev": 3
+   },
+   {
+    "symbol": "云",
+    "count": 2,
+    "distinct_next": 2,
+    "distinct_prev": 2
+   },
+   {
+    "symbol": "果",
+    "count": 2,
+    "distinct_next": 1,
+    "distinct_prev": 2
+   },
+   {
+    "symbol": "号",
+    "count": 2,
+    "distinct_next": 2,
+    "distinct_prev": 2
+   },
+   {
+    "symbol": "左",
+    "count": 2,
+    "distinct_next": 2,
+    "distinct_prev": 2
+   },
+   {
+    "symbol": "曳",
+    "count": 2,
+    "distinct_next": 2,
+    "distinct_prev": 2
+   }
+  ],
+  "mean_relative_position": [
+   {
+    "symbol": "安",
+    "count": 7,
+    "mean": 0.741
+   },
+   {
+    "symbol": "女",
+    "count": 4,
+    "mean": 0.881
+   },
+   {
+    "symbol": "る",
+    "count": 4,
+    "mean": 0.938
+   },
+   {
+    "symbol": "の",
+    "count": 4,
+    "mean": 0.347
+   },
+   {
+    "symbol": "也",
+    "count": 3,
+    "mean": 0.276
+   },
+   {
+    "symbol": "寿",
+    "count": 3,
+    "mean": 0.372
+   },
+   {
+    "symbol": "石",
+    "count": 3,
+    "mean": 0.442
+   },
+   {
+    "symbol": "以",
+    "count": 3,
+    "mean": 0.679
+   },
+   {
+    "symbol": "ら",
+    "count": 3,
+    "mean": 0.378
+   },
+   {
+    "symbol": "く",
+    "count": 3,
+    "mean": 0.689
+   },
+   {
+    "symbol": "云",
+    "count": 2,
+    "mean": 0.526
+   },
+   {
+    "symbol": "果",
+    "count": 2,
+    "mean": 0.769
+   },
+   {
+    "symbol": "号",
+    "count": 2,
+    "mean": 0.885
+   },
+   {
+    "symbol": "左",
+    "count": 2,
+    "mean": 0.172
+   },
+   {
+    "symbol": "曳",
+    "count": 2,
+    "mean": 0.155
+   }
+  ],
+  "top_cooccurrences": [
+   {
+    "symbols": [
+     "以",
+     "女"
+    ],
+    "lines": 3
+   },
+   {
+    "symbols": [
+     "也",
+     "寿"
+    ],
+    "lines": 2
+   },
+   {
+    "symbols": [
+     "也",
+     "号"
+    ],
+    "lines": 2
+   },
+   {
+    "symbols": [
+     "左",
+     "与"
+    ],
+    "lines": 2
+   },
+   {
+    "symbols": [
+     "左",
+     "石"
+    ],
+    "lines": 2
+   },
+   {
+    "symbols": [
+     "曳",
+     "以"
+    ],
+    "lines": 2
+   },
+   {
+    "symbols": [
+     "曳",
+     "女"
+    ],
+    "lines": 2
+   },
+   {
+    "symbols": [
+     "与",
+     "石"
+    ],
+    "lines": 2
+   }
+  ],
+  "most_similar_lines": [
+   {
+    "lines": [
+     1,
+     2
+    ],
+    "bigram_jaccard": 0.04
+   }
+  ],
+  "most_similar_documents": [
+   {
+    "documents": [
+     "B",
+     "C"
+    ],
+    "bigram_jaccard": 0.04
+   },
+   {
+    "documents": [
+     "S2",
+     "S3"
+    ],
+    "bigram_jaccard": 0.0
+   },
+   {
+    "documents": [
+     "S1",
+     "S3"
+    ],
+    "bigram_jaccard": 0.0
+   },
+   {
+    "documents": [
+     "S1",
+     "S2"
+    ],
+    "bigram_jaccard": 0.0
+   },
+   {
+    "documents": [
+     "H",
+     "S3"
+    ],
+    "bigram_jaccard": 0.0
+   }
+  ]
+ },
+ "global_tests": {
+  "sequential_dependence": {
+   "observed": 5.6315,
+   "null_mean": 5.595,
+   "null": "within",
+   "description": "隣り合う記号の相互情報量（並びの依存）",
+   "p": 0.218,
+   "p_holm": 1.0
+  },
+  "repetition": {
+   "observed": 0.0,
+   "null_mean": 0.004,
+   "null": "within",
+   "description": "3〜6記号列の反復の総数",
+   "p": 1.0,
+   "p_holm": 1.0
+  },
+  "edge_position": {
+   "observed": 185.4252,
+   "null_mean": 173.6566,
+   "null": "within",
+   "description": "行頭・行末の記号の偏り（カイ二乗）",
+   "p": 0.253,
+   "p_holm": 1.0
+  },
+  "longest_repeat": {
+   "observed": 2.0,
+   "null_mean": 1.039,
+   "null": "within",
+   "description": "最長反復部分列の長さ",
+   "p": 0.518,
+   "p_holm": 1.0
+  },
+  "line_similarity": {
+   "observed": 1.0,
+   "null_mean": 0.4074,
+   "null": "global",
+   "description": "行の間で共有される2記号列の数",
+   "p": 0.331,
+   "p_holm": 1.0
+  }
+ },
+ "hypotheses": [],
+ "descriptive_observations": [
+  {
+   "family": "substitution",
+   "observation": "記号 女 と る が同じ直前の文脈 0 種・同じ直後の文脈 1 種を共有する",
+   "key": {
+    "family": "substitution",
+    "symbols": [
+     "女",
+     "る"
+    ]
+   },
+   "p_raw": 0.002,
+   "p_family_corrected": 0.045,
+   "support": 4,
+   "status": "多重検定の補正後は偶然と区別できない"
+  },
+  {
+   "family": "substitution",
+   "observation": "記号 安 と る が同じ直前の文脈 1 種・同じ直後の文脈 1 種を共有する",
+   "key": {
+    "family": "substitution",
+    "symbols": [
+     "安",
+     "る"
+    ]
+   },
+   "p_raw": 0.003,
+   "p_family_corrected": 0.174,
+   "support": 4,
+   "status": "多重検定の補正後は偶然と区別できない"
+  },
+  {
+   "family": "cooccurrence",
+   "observation": "記号 以 と 女 が同じ行に 3 回現れる",
+   "key": {
+    "family": "cooccurrence",
+    "symbols": [
+     "以",
+     "女"
+    ]
+   },
+   "p_raw": 0.008,
+   "p_family_corrected": 0.141,
+   "support": 3,
+   "status": "多重検定の補正後は偶然と区別できない"
+  },
+  {
+   "family": "position",
+   "observation": "る が 15 行中 3 行の行末にある",
+   "key": {
+    "family": "position",
+    "side": "$",
+    "symbols": [
+     "る"
+    ]
+   },
+   "p_raw": 0.015,
+   "p_family_corrected": 0.288,
+   "support": 3,
+   "status": "多重検定の補正後は偶然と区別できない"
+  },
+  {
+   "family": "ngram",
+   "observation": "記号 以 の直後に 女 が 2 回現れる",
+   "key": {
+    "family": "ngram",
+    "symbols": [
+     "以",
+     "女"
+    ]
+   },
+   "p_raw": 0.026,
+   "p_family_corrected": 0.308,
+   "support": 2,
+   "status": "多重検定の補正後は偶然と区別できない"
+  },
+  {
+   "family": "position",
+   "observation": "女 が 15 行中 2 行の行末にある",
+   "key": {
+    "family": "position",
+    "side": "$",
+    "symbols": [
+     "女"
+    ]
+   },
+   "p_raw": 0.042,
+   "p_family_corrected": 0.587,
+   "support": 2,
+   "status": "多重検定の補正後は偶然と区別できない"
+  },
+  {
+   "family": "substitution",
+   "observation": "記号 の と ら が同じ直前の文脈 1 種・同じ直後の文脈 0 種を共有する",
+   "key": {
+    "family": "substitution",
+    "symbols": [
+     "の",
+     "ら"
+    ]
+   },
+   "p_raw": 0.044,
+   "p_family_corrected": 0.842,
+   "support": 3,
+   "status": "多重検定の補正後は偶然と区別できない"
+  }
+ ],
+ "experimental_observations": [],
+ "structures": {
+  "substitution_sets": [],
+  "line_templates": []
+ },
+ "boundaries": {
+  "candidates": [
+   {
+    "method": "repeats",
+    "description_length_bits": 1117.0,
+    "word_types": 15,
+    "word_tokens": 15,
+    "mean_agreement_with_others": 0.0,
+    "subsample_reproducibility": 1.0,
+    "cuts": [
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ],
+    "rank_by_description_length": 1
+   },
+   {
+    "method": "branching",
+    "description_length_bits": 1141.1,
+    "word_types": 17,
+    "word_tokens": 17,
+    "mean_agreement_with_others": 0.034,
+    "subsample_reproducibility": 0.467,
+    "cuts": [
+     [],
+     [
+      13
+     ],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [
+      2
+     ],
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ],
+    "rank_by_description_length": 2
+   },
+   {
+    "method": "transition",
+    "description_length_bits": 1639.5,
+    "word_types": 55,
+    "word_tokens": 56,
+    "mean_agreement_with_others": 0.505,
+    "subsample_reproducibility": 0.741,
+    "cuts": [
+     [
+      2,
+      6,
+      9,
+      13
+     ],
+     [
+      2,
+      6,
+      8,
+      10,
+      13
+     ],
+     [
+      5,
+      8,
+      10
+     ],
+     [
+      3,
+      5,
+      9,
+      11,
+      13
+     ],
+     [
+      5
+     ],
+     [
+      2,
+      5
+     ],
+     [
+      3,
+      5
+     ],
+     [
+      4,
+      6
+     ],
+     [
+      3
+     ],
+     [],
+     [
+      4,
+      7,
+      11,
+      13,
+      15
+     ],
+     [
+      2,
+      4
+     ],
+     [
+      4,
+      7,
+      9
+     ],
+     [
+      4,
+      6,
+      8,
+      11
+     ],
+     [
+      2,
+      4
+     ]
+    ],
+    "rank_by_description_length": 3
+   },
+   {
+    "method": "unigram",
+    "description_length_bits": 1639.5,
+    "word_types": 55,
+    "word_tokens": 56,
+    "mean_agreement_with_others": 0.505,
+    "subsample_reproducibility": 0.741,
+    "cuts": [
+     [
+      2,
+      6,
+      9,
+      13
+     ],
+     [
+      2,
+      6,
+      8,
+      10,
+      13
+     ],
+     [
+      5,
+      8,
+      10
+     ],
+     [
+      3,
+      5,
+      9,
+      11,
+      13
+     ],
+     [
+      5
+     ],
+     [
+      2,
+      5
+     ],
+     [
+      3,
+      5
+     ],
+     [
+      4,
+      6
+     ],
+     [
+      3
+     ],
+     [],
+     [
+      4,
+      7,
+      11,
+      13,
+      15
+     ],
+     [
+      2,
+      4
+     ],
+     [
+      4,
+      7,
+      9
+     ],
+     [
+      4,
+      6,
+      8,
+      11
+     ],
+     [
+      2,
+      4
+     ]
+    ],
+    "rank_by_description_length": 4
+   },
+   {
+    "method": "consensus",
+    "description_length_bits": 1639.5,
+    "word_types": 55,
+    "word_tokens": 56,
+    "mean_agreement_with_others": 0.505,
+    "subsample_reproducibility": 0.741,
+    "cuts": [
+     [
+      2,
+      6,
+      9,
+      13
+     ],
+     [
+      2,
+      6,
+      8,
+      10,
+      13
+     ],
+     [
+      5,
+      8,
+      10
+     ],
+     [
+      3,
+      5,
+      9,
+      11,
+      13
+     ],
+     [
+      5
+     ],
+     [
+      2,
+      5
+     ],
+     [
+      3,
+      5
+     ],
+     [
+      4,
+      6
+     ],
+     [
+      3
+     ],
+     [],
+     [
+      4,
+      7,
+      11,
+      13,
+      15
+     ],
+     [
+      2,
+      4
+     ],
+     [
+      4,
+      7,
+      9
+     ],
+     [
+      4,
+      6,
+      8,
+      11
+     ],
+     [
+      2,
+      4
+     ]
+    ],
+    "rank_by_description_length": 5
+   },
+   {
+    "method": "mdl",
+    "description_length_bits": 2210.2,
+    "word_types": 97,
+    "word_tokens": 145,
+    "mean_agreement_with_others": 0.294,
+    "subsample_reproducibility": 1.0,
+    "cuts": [
+     [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
+     ],
+     [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14
+     ],
+     [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+     ],
+     [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
+     ],
+     [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+     ],
+     [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+     ],
+     [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+     ],
+     [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+     ],
+     [
+      1,
+      2,
+      3,
+      4
+     ],
+     [
+      1,
+      2,
+      3,
+      4
+     ],
+     [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+     ],
+     [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+     ],
+     [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+     ],
+     [
+      1,
+      2,
+      3,
+      4
+     ]
+    ],
+    "rank_by_description_length": 6
+   }
+  ],
+  "top": [
+   "repeats",
+   "branching",
+   "transition"
+  ],
+  "agreement": {
+   "transition": {
+    "unigram": 1.0,
+    "branching": 0.047,
+    "mdl": 0.48,
+    "repeats": 0.0,
+    "consensus": 1.0
+   },
+   "unigram": {
+    "transition": 1.0,
+    "branching": 0.047,
+    "mdl": 0.48,
+    "repeats": 0.0,
+    "consensus": 1.0
+   },
+   "branching": {
+    "transition": 0.047,
+    "unigram": 0.047,
+    "mdl": 0.03,
+    "repeats": 0.0,
+    "consensus": 0.047
+   },
+   "mdl": {
+    "transition": 0.48,
+    "unigram": 0.48,
+    "branching": 0.03,
+    "repeats": 0.0,
+    "consensus": 0.48
+   },
+   "repeats": {
+    "transition": 0.0,
+    "unigram": 0.0,
+    "branching": 0.0,
+    "mdl": 0.0,
+    "consensus": 0.0
+   },
+   "consensus": {
+    "transition": 1.0,
+    "unigram": 1.0,
+    "branching": 0.047,
+    "mdl": 0.48,
+    "repeats": 0.0
+   }
+  },
+  "baselines_bits": {
+   "no_cuts": 1117.0,
+   "every_symbol": 2210.2
+  },
+  "boundary_vote_share": [
+   {
+    "1": 0.2,
+    "2": 0.6,
+    "3": 0.2,
+    "4": 0.2,
+    "5": 0.2,
+    "6": 0.6,
+    "7": 0.2,
+    "8": 0.2,
+    "9": 0.6,
+    "10": 0.2,
+    "11": 0.2,
+    "12": 0.2,
+    "13": 0.6
+   },
+   {
+    "1": 0.2,
+    "2": 0.6,
+    "3": 0.2,
+    "4": 0.2,
+    "5": 0.2,
+    "6": 0.6,
+    "7": 0.2,
+    "8": 0.6,
+    "9": 0.2,
+    "10": 0.6,
+    "11": 0.2,
+    "12": 0.2,
+    "13": 0.8,
+    "14": 0.2
+   },
+   {
+    "1": 0.2,
+    "2": 0.2,
+    "3": 0.2,
+    "4": 0.2,
+    "5": 0.6,
+    "6": 0.2,
+    "7": 0.2,
+    "8": 0.6,
+    "9": 0.2,
+    "10": 0.6,
+    "11": 0.2,
+    "12": 0.2
+   },
+   {
+    "1": 0.2,
+    "2": 0.2,
+    "3": 0.6,
+    "4": 0.2,
+    "5": 0.6,
+    "6": 0.2,
+    "7": 0.2,
+    "8": 0.2,
+    "9": 0.6,
+    "10": 0.2,
+    "11": 0.6,
+    "12": 0.2,
+    "13": 0.6
+   },
+   {
+    "1": 0.2,
+    "2": 0.2,
+    "3": 0.2,
+    "4": 0.2,
+    "5": 0.6,
+    "6": 0.2,
+    "7": 0.2,
+    "8": 0.2
+   },
+   {
+    "1": 0.2,
+    "2": 0.6,
+    "3": 0.2,
+    "4": 0.2,
+    "5": 0.6,
+    "6": 0.2
+   },
+   {
+    "1": 0.2,
+    "2": 0.2,
+    "3": 0.6,
+    "4": 0.2,
+    "5": 0.6,
+    "6": 0.2
+   },
+   {
+    "1": 0.2,
+    "2": 0.2,
+    "3": 0.2,
+    "4": 0.6,
+    "5": 0.2,
+    "6": 0.6
+   },
+   {
+    "1": 0.2,
+    "2": 0.4,
+    "3": 0.6,
+    "4": 0.2
+   },
+   {
+    "1": 0.2,
+    "2": 0.2,
+    "3": 0.2,
+    "4": 0.2
+   },
+   {
+    "1": 0.2,
+    "2": 0.2,
+    "3": 0.2,
+    "4": 0.6,
+    "5": 0.2,
+    "6": 0.2,
+    "7": 0.6,
+    "8": 0.2,
+    "9": 0.2,
+    "10": 0.2,
+    "11": 0.6,
+    "12": 0.2,
+    "13": 0.6,
+    "14": 0.2,
+    "15": 0.6
+   },
+   {
+    "1": 0.2,
+    "2": 0.6,
+    "3": 0.2,
+    "4": 0.6,
+    "5": 0.2
+   },
+   {
+    "1": 0.2,
+    "2": 0.2,
+    "3": 0.2,
+    "4": 0.6,
+    "5": 0.2,
+    "6": 0.2,
+    "7": 0.6,
+    "8": 0.2,
+    "9": 0.6
+   },
+   {
+    "1": 0.2,
+    "2": 0.2,
+    "3": 0.2,
+    "4": 0.6,
+    "5": 0.2,
+    "6": 0.6,
+    "7": 0.2,
+    "8": 0.6,
+    "9": 0.2,
+    "10": 0.2,
+    "11": 0.6
+   },
+   {
+    "1": 0.2,
+    "2": 0.6,
+    "3": 0.2,
+    "4": 0.6
+   }
+  ],
+  "compression_test": {
+   "observed_ratio": 1.0,
+   "null_mean_ratio": 1.0,
+   "null_min_ratio": 1.0,
+   "p": 1.0,
+   "reps": 19,
+   "description": "MDL 分割で記述長がどれだけ縮むか（小さいほど再利用される単位が多い）。行内シャッフルと比較"
+  }
+ },
+ "given_boundaries_agreement": null,
+ "detectability": {
+  "family_threshold_p": 0.00625,
+  "min_attainable_p": 0.001,
+  "permutations_sufficient": true,
+  "ngram_family_threshold_statistic": 2.032,
+  "bigram_occurrences_needed": {
+   "two_most_frequent_symbols": {
+    "symbols": [
+     "安",
+     "女"
+    ],
+    "expected_count_under_null": 0.214,
+    "occurrences_needed": 3
+   },
+   "two_median_frequency_symbols": {
+    "symbols": [
+     "區",
+     "李"
+    ],
+    "expected_count_under_null": 0.077,
+    "occurrences_needed": 2
+   }
+  }
+ },
+ "data_limits": [
+  "短いコーパスモード: 行数 ≤ 30 または記号数 ≤ 600。高次の統計（条件付きエントロピー、語順、語の分布）は記述のみ",
+  "記号の異なり数が多い（異なり/延べ = 0.669）。1記号あたり平均 1.49 回しか現れず、多くの記号について位置・文脈の規則は検定できない",
+  "1回しか現れない記号が 66 種（全 97 種）。視覚クラスの分けすぎ（同じ文字が別クラス）の可能性も確認が必要",
+  "文の境界は入力の行（または文）をそのまま使う。改行が文の区切りとは限らない",
+  "単語・形態素レベルの置き換え可能性（語の範疇）は、単語境界が不確かなため記号レベルでのみ検定している"
+ ],
+ "review_points": [
+  {
+   "what": "方式によって判断が分かれる単語境界 41 箇所",
+   "why": "半数前後の方式だけが切る位置",
+   "where": [
+    {
+     "line": 0,
+     "cut_before_position": 2
+    },
+    {
+     "line": 0,
+     "cut_before_position": 6
+    },
+    {
+     "line": 0,
+     "cut_before_position": 9
+    },
+    {
+     "line": 0,
+     "cut_before_position": 13
+    },
+    {
+     "line": 1,
+     "cut_before_position": 2
+    },
+    {
+     "line": 1,
+     "cut_before_position": 6
+    },
+    {
+     "line": 1,
+     "cut_before_position": 8
+    },
+    {
+     "line": 1,
+     "cut_before_position": 10
+    },
+    {
+     "line": 2,
+     "cut_before_position": 5
+    },
+    {
+     "line": 2,
+     "cut_before_position": 8
+    }
+   ]
+  },
+  {
+   "what": "単語境界の候補はすべて暫定",
+   "why": "MDL 分割の圧縮が行内シャッフルと区別できない（p=1.0）",
+   "where": []
+  }
+ ],
+ "multiple_testing": {
+  "families": [
+   "ngram",
+   "position",
+   "gap",
+   "cooccurrence",
+   "dispersion",
+   "substitution",
+   "linepair",
+   "affix"
+  ],
+  "per_family_threshold": 0.00625,
+  "method": "族ごとに Westfall–Young single-step maxT（置換分布）、族の数で Bonferroni。大域検定は Holm"
+ },
+ "seconds": {
+  "describe": 0.0,
+  "tests": 3.0,
+  "boundaries": 0.05,
+  "subsample_stability": 0.97,
+  "transcription_stability": 3.16,
+  "total": 7.18
+ },
+ "notes": [
+  "観測された規則と、そこから考えられる機能（interpretation）は別物。機能は未検証。",
+  "規則が見つからないことは『無意味な記号列』の証明ではない。検出力（detectability）を併せて読むこと。",
+  "標本の揺れ（stability.sampling）と転写の誤差（stability.transcription）は別に測っている。"
+ ]
+}

@@ -594,6 +594,13 @@ def analyze(corpus: Corpus, config: dict | None = None) -> dict:
             "limits": limits,
             "needed_data": NEEDED[fam],
         })
+    # 接辞は評価（シード 1000〜1009、凍結版 8dd39ac）で偽の率 94% だったため、仮説から外して「実験的な観察」にする。
+    # 多重検定の族の数（閾値）は評価時と同じにして、他の族の判定を変えない（docs/ISSUES.md #41）
+    experimental = [h for h in hyps if h["family"] == "affix"]
+    for h in experimental:
+        h["tier"] = "実験的"
+        h["limits"].insert(0, "接辞の検定は評価で偽の率が94%だった。規則として扱わない（参考表示）")
+    hyps = [h for h in hyps if h["family"] != "affix"]
     tier_order = {"A": 0, "B": 1, "C": 2}
     hyps.sort(key=lambda h: (tier_order[h["tier"]], h["statistics"]["p_family_corrected"], -h["statistics"]["statistic"]))
     for i, h in enumerate(hyps):
@@ -636,6 +643,7 @@ def analyze(corpus: Corpus, config: dict | None = None) -> dict:
         "global_tests": glob,
         "hypotheses": hyps,
         "descriptive_observations": desc_out,
+        "experimental_observations": experimental,
         "structures": {
             "substitution_sets": [sorted(c) for c in components(subst_pairs)],
             "line_templates": tmpl,

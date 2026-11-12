@@ -5,7 +5,7 @@
 （未検証）を必ず区別して出力する。
 
 このパッケージは babel.generator / babel.evaluate / babel.structure_eval を import しない
-（tests/test_structure_isolation.py で強制）。正解は評価側だけが持つ。
+（tests/test_structure.py で強制）。正解は評価側だけが持つ。
 """
 
-VERSION = "0.1.0"
+VERSION = "0.1.1"

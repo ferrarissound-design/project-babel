@@ -44,8 +44,9 @@ def _params(h):
 
 
 def _overlap(bh, bg, iou):
+    # 半分以上（切り上げ）。切り捨てだと、3枠のうち1枠の重なりでも通ってしまう（Codex レビュー、PR #9）
     hit = sum(1 for x in bh if any(_iou(x, y) >= iou for y in bg))
-    return hit >= max(1, len(bh) // 2)
+    return hit >= max(1, (len(bh) + 1) // 2)
 
 
 def same_hypothesis(h, g, iou=0.5):

@@ -465,3 +465,12 @@ def test_linepair_needs_both_lines_to_match_in_the_image():
                 "evidence": [{"line_a": {"image_box": box(i)}, "line_b": {"image_box": box(j)}}]}
     assert not same_hypothesis(lp(0, 1), lp(0, 5))
     assert same_hypothesis(lp(0, 1), lp(0, 1)) and same_hypothesis(lp(0, 1), lp(1, 0))
+
+
+def test_role_overlap_threshold_rounds_up_for_odd_groups():
+    box = lambda i: [10 * i, 0, 10 * i + 8, 15]          # noqa: E731
+    def h(xs, ys):
+        return {"family": "cooccurrence", "key": {"family": "cooccurrence", "symbols": ["x", "y"]},
+                "evidence": [{"image_box": box(i), "role": "x"} for i in xs] + [{"image_box": box(i), "role": "y"} for i in ys]}
+    assert not same_hypothesis(h([0, 1, 2], [10, 11, 12]), h([0, 5, 6], [10, 15, 16]))   # 各記号 1/3 だけ重なる
+    assert same_hypothesis(h([0, 1, 2], [10, 11, 12]), h([0, 1, 6], [10, 11, 16]))       # 各記号 2/3 重なる

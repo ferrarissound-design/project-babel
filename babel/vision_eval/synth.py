@@ -182,7 +182,7 @@ def render(lines_symbols, style, condition, seed, n_classes=None):
                               "kind": "rule", "label": None, "verified": True, "uncertain": False, "same_as": None})
         cv2.rectangle(ink, (1, 1), (W - 2, Hh - 2), 255, 1)
         items.append({"id": "frame", "box": [1, 1, W - 1, Hh - 1], "line": None, "kind": "decoration", "label": None,
-                      "verified": True, "uncertain": False, "same_as": None})
+                      "verified": True, "uncertain": False, "same_as": None, "outline": True})
         xx = W - margin + 2
         for k in range(3):
             yy = margin + k * 7

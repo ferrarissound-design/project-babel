@@ -33,6 +33,17 @@ def _area(a):
     return (a[2] - a[0]) * (a[3] - a[1])
 
 
+def _on_non_glyph(box, item):
+    """予測が文字以外の要素の上にあるか。枠のような中空の要素（outline=true）は、内部ではなく縁の帯だけを見る
+    （内部全体を文字以外とみなすと、枠の中の文字の切り出しの誤りまで装飾の誤検出に数えてしまう: Codex レビュー、PR #10）。"""
+    b = item["box"]
+    if not item.get("outline"):
+        return _inter(box, b) >= 0.5 * _area(box)
+    w = max(2, round(0.02 * min(b[2] - b[0], b[3] - b[1])))
+    bands = [[b[0], b[1], b[2], b[1] + w], [b[0], b[3] - w, b[2], b[3]], [b[0], b[1], b[0] + w, b[3]], [b[2] - w, b[1], b[2], b[3]]]
+    return sum(_inter(box, band) for band in bands) >= 0.5 * _area(box)
+
+
 def match(gt_boxes, pred_boxes, thr=0.5):
     """IoU の高い順に1対1で対応付ける。戻り値: [(gt_index, pred_index, iou)]"""
     cand = []
@@ -144,13 +155,21 @@ def evaluate(report: dict, gt: dict, iou_thr=0.5) -> dict:
     pairs = match(gb, pb, iou_thr)
     tp = len(pairs)
     matched_p = {j for _, j, _ in pairs}
+    # 未確認の正解の位置にある予測は、正しいか判断できないので偽陽性にも precision の分母にも入れない
+    # （確認の進み具合で精度が変わらないように。Codex レビュー、PR #10）
+    U = [it for it in gt["items"] if not it["verified"]]
+    um = {j for _, j, _ in match([u["box"] for u in U], [pb[j] for j in range(len(P))], iou_thr)} if U else set()
+    ignored = {j for j in range(len(P)) if j not in matched_p and
+               (j in um or any(_inter(pb[j], u["box"]) >= 0.5 * _area(pb[j]) for u in U))}
     # 文字以外（罫線・装飾・雑音）を記号として検出したもの
-    nonglyph_hits = sum(1 for j, p in enumerate(P) if j not in matched_p and
-                        any(_inter(p["box"], n["box"]) >= 0.5 * _area(p["box"]) for n in N))
-    prec, rec = tp / len(P) if P else 0.0, tp / len(G)
-    out["detection"] = {"tp": tp, "fp": len(P) - tp, "fn": len(G) - tp, "precision": round(prec, 4), "recall": round(rec, 4),
+    nonglyph_hits = sum(1 for j, p in enumerate(P) if j not in matched_p and j not in ignored and
+                        any(_on_non_glyph(p["box"], n) for n in N))
+    n_pred = len(P) - len(ignored)
+    prec, rec = tp / n_pred if n_pred else 0.0, tp / len(G)
+    out["detection"] = {"tp": tp, "fp": n_pred - tp, "fn": len(G) - tp, "precision": round(prec, 4), "recall": round(rec, 4),
                         "f1": round(2 * prec * rec / (prec + rec), 4) if prec + rec else 0.0,
-                        "non_glyph_detected_as_glyph": nonglyph_hits}
+                        "non_glyph_detected_as_glyph": nonglyph_hits,
+                        "ignored_predictions_on_unverified": len(ignored)}
     # 分割・結合
     splits = merges = fragments = 0
     for g in gb:

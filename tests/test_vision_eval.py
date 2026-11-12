@@ -214,3 +214,20 @@ def test_impact_corruption_keeps_the_mapping_to_true_symbols():
     out, rename, origin = _corrupt(lines, "seg", random.Random(3))
     assert all(len(a) == len(b) for a, b in zip(out, origin))
     assert all(rename[s] is None for ln in out for s in ln if "~" in s or "+" in s)
+
+
+# --- Codex レビュー（PR #10）の指摘の回帰テスト ---
+
+def test_predictions_on_unverified_items_are_not_false_positives():
+    gt = _gt([_it(1, [0, 0, 10, 10], "A"), _it(2, [20, 0, 30, 10], "B", verified=False)])
+    ev = evaluate(_report([([0, 0, 10, 10], 1), ([20, 0, 30, 10], 2)]), gt)
+    d = ev["detection"]
+    assert d["fp"] == 0 and d["precision"] == 1.0 and d["f1"] == 1.0
+    assert d["ignored_predictions_on_unverified"] == 1
+
+
+def test_hollow_frame_does_not_absorb_glyph_errors_inside():
+    gt = _gt([_it(1, [10, 10, 20, 20], "A"),
+              {"id": "f", "box": [1, 1, 99, 99], "kind": "decoration", "verified": True, "outline": True}])
+    ev = evaluate(_report([([10, 10, 20, 20], 1), ([40, 40, 45, 45], 2), ([1, 30, 3, 40], 3)]), gt)
+    assert ev["detection"]["non_glyph_detected_as_glyph"] == 1     # 縁の上の1つだけ。枠の内部の破片は数えない

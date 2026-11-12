@@ -14,6 +14,7 @@
              "verified": false,               # 人が枠と label を確認したか
              "uncertain": false,              # 人が見ても判断できない
              "same_as": null,                 # 別名で付けた label の統合先（例: "A"）
+             "outline": false,                # 枠のような中空の要素（評価では内部ではなく縁だけを見る）
              "proposed": {"class": 12, "by": "vision-0.7"}}],   # 認識器の案（参考。正解ではない）
   "annotators": ["..."], "notes": "..."
 }
@@ -74,7 +75,8 @@ def validate(gt: dict) -> dict:
         items.append({"id": gid, "box": _box(it.get("box"), f"記号 {gid}"), "line": None if line is None else str(line),
                       "kind": kind, "label": None if label in (None, "") else str(label),
                       "verified": bool(it.get("verified", False)), "uncertain": bool(it.get("uncertain", False)),
-                      "same_as": it.get("same_as") or None, "proposed": it.get("proposed")})
+                      "same_as": it.get("same_as") or None, "proposed": it.get("proposed"),
+                      "outline": bool(it.get("outline", False))})
     labels = {it["label"] for it in items if it["label"]}
     for it in items:
         if it["same_as"] and it["same_as"] not in labels:

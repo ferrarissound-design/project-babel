@@ -33,6 +33,7 @@ button{margin:3px 2px}.k{color:#666;font-size:12px}#msg{margin-top:8px;white-spa
 <label>same_as（別名の統合先）<input id="same" type="text"></label>
 <label><input id="ver" type="checkbox"> 人が確認した (v)</label>
 <label><input id="unc" type="checkbox"> 不確か (u)</label>
+<label><input id="outl" type="checkbox"> 中空（枠などの文字以外の要素。評価では縁だけを見る）</label>
 <div class="k" id="prop"></div></div>
 <div class="k">枠の中をドラッグで移動、右下の角でリサイズ。「新しい枠」の後にドラッグで追加。認識器の案（proposed）は参考で、正解ではない。</div>
 <div id="msg"></div></div>
@@ -47,7 +48,7 @@ function draw(){const z=Z();c.width=img.width*z;c.height=img.height*z;x.imageSmo
  if(it.label){x.fillStyle=col(it);x.font='11px sans-serif';x.fillText(it.label,b[0]*z,b[1]*z-2);}});}
 function panel(){const it=gt.items[sel];$('sel').style.opacity=it?1:.4;const ls=$('line');ls.innerHTML='<option value="">（なし）</option>'+gt.lines.map(l=>`<option>${l.id}</option>`).join('');
  if(!it)return;$('iid').textContent=it.id;$('label').value=it.label||'';$('kind').value=it.kind;ls.value=it.line||'';$('same').value=it.same_as||'';
- $('ver').checked=it.verified;$('unc').checked=it.uncertain;$('prop').textContent=it.proposed?'認識器の案: '+JSON.stringify(it.proposed):'';}
+ $('ver').checked=it.verified;$('unc').checked=it.uncertain;$('outl').checked=!!it.outline;$('prop').textContent=it.proposed?'認識器の案: '+JSON.stringify(it.proposed):'';}
 function pos(e){const r=c.getBoundingClientRect(),z=Z();return[(e.clientX-r.left)/z,(e.clientY-r.top)/z];}
 function hit(p){for(let i=gt.items.length-1;i>=0;i--){const b=gt.items[i].box;if(p[0]>=b[0]-1&&p[0]<=b[2]+1&&p[1]>=b[1]-1&&p[1]<=b[3]+1)return i;}return -1;}
 c.onmousedown=e=>{const p=pos(e);if(mode==='new'){drag={t:'new',p0:p};return;}const i=hit(p);sel=i;panel();draw();if(i<0)return;const b=gt.items[i].box;
@@ -60,8 +61,8 @@ c.onmouseup=e=>{if(drag&&drag.t==='new'){const p=pos(e);const b=[Math.round(Math
  if(b[2]>b[0]&&b[3]>b[1]){let n=gt.items.length+1;const ids=new Set(gt.items.map(i=>i.id));while(ids.has('h'+n))n++;
  const cy=(b[1]+b[3])/2,ln=gt.lines.find(l=>cy>=l.box[1]&&cy<=l.box[3]);gt.items.push({id:'h'+n,box:b,line:ln?ln.id:null,kind:'glyph',label:null,verified:true,uncertain:false,same_as:null,proposed:null});sel=gt.items.length-1;}
  mode=null;}drag=null;panel();draw();};
-function upd(){const it=gt.items[sel];if(!it)return;it.label=$('label').value||null;it.kind=$('kind').value;it.line=$('line').value||null;it.same_as=$('same').value||null;it.verified=$('ver').checked;it.uncertain=$('unc').checked;draw();}
-['label','kind','line','same','ver','unc'].forEach(id=>$(id).oninput=upd);$('zoom').oninput=draw;
+function upd(){const it=gt.items[sel];if(!it)return;it.label=$('label').value||null;it.kind=$('kind').value;it.line=$('line').value||null;it.same_as=$('same').value||null;it.verified=$('ver').checked;it.uncertain=$('unc').checked;it.outline=$('outl').checked;draw();}
+['label','kind','line','same','ver','unc','outl'].forEach(id=>$(id).oninput=upd);$('zoom').oninput=draw;
 $('new').onclick=()=>{mode='new';};$('del').onclick=()=>{if(sel>=0){gt.items.splice(sel,1);sel=-1;panel();draw();}};
 $('prev').onclick=()=>{sel=Math.max(0,sel-1);panel();draw();};$('next').onclick=()=>{sel=Math.min(gt.items.length-1,sel+1);panel();draw();};
 $('vline').onclick=()=>{const it=gt.items[sel];if(!it||!it.line)return;const ln=gt.lines.find(l=>l.id===it.line);if(ln)ln.verified=true;draw();};

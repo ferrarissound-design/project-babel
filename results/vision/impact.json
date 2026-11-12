@@ -31,7 +31,8 @@
    "compression_reps": 19,
    "affix_permutations": 99
   },
-  "seconds": 376.4
+  "opencv": "4.14.0",
+  "seconds": 474.9
  },
  "summary": [
   {
@@ -97,19 +98,19 @@
    "condition": "clean",
    "runs": 6,
    "gold_found": {
-    "mean": 4.333,
-    "sd": 0.745,
+    "mean": 4.167,
+    "sd": 0.898,
     "n": 6
    },
    "gold_rules": 8,
    "hypotheses": {
-    "mean": 23,
-    "sd": 5.099,
+    "mean": 20.5,
+    "sd": 5.123,
     "n": 6
    },
    "false": {
-    "mean": 6.5,
-    "sd": 1.607,
+    "mean": 7.333,
+    "sd": 4.819,
     "n": 6
    },
    "false_unmapped": {
@@ -118,29 +119,29 @@
     "n": 6
    },
    "false_rate": {
-    "mean": 0.31,
-    "sd": 0.051,
+    "mean": 0.36,
+    "sd": 0.183,
     "n": 6
    },
    "symbol_types": {
-    "mean": 16,
-    "sd": 0.577,
+    "mean": 15.833,
+    "sd": 0.898,
     "n": 6
    },
    "analysis_impossible": 0,
    "sampling_stability": {
     "mean": 0.73,
-    "sd": 0.038,
+    "sd": 0.058,
     "n": 6
    },
    "transcription_stability": {
-    "mean": 0.448,
-    "sd": 0.075,
+    "mean": 0.44,
+    "sd": 0.086,
     "n": 6
    },
    "seg_f1_consensus": {
-    "mean": 0.249,
-    "sd": 0.06,
+    "mean": 0.299,
+    "sd": 0.076,
     "n": 6
    },
    "vision_f1": {
@@ -149,8 +150,8 @@
     "n": 6
    },
    "vision_ari": {
-    "mean": 0.834,
-    "sd": 0.042,
+    "mean": 0.817,
+    "sd": 0.053,
     "n": 6
    }
   },
@@ -183,17 +184,17 @@
    },
    "false_rate": null,
    "symbol_types": {
-    "mean": 6.5,
-    "sd": 1.384,
+    "mean": 5.5,
+    "sd": 1.893,
     "n": 6
    },
-   "analysis_impossible": 0,
+   "analysis_impossible": 1,
    "sampling_stability": null,
    "transcription_stability": null,
    "seg_f1_consensus": {
     "mean": 0.0,
     "sd": 0.0,
-    "n": 6
+    "n": 5
    },
    "vision_f1": {
     "mean": 0.0,
@@ -209,19 +210,19 @@
    "condition": "size_thickness",
    "runs": 6,
    "gold_found": {
-    "mean": 0.833,
-    "sd": 0.687,
+    "mean": 0.5,
+    "sd": 0.764,
     "n": 6
    },
    "gold_rules": 8,
    "hypotheses": {
-    "mean": 1.667,
-    "sd": 1.247,
+    "mean": 1,
+    "sd": 1.155,
     "n": 6
    },
    "false": {
-    "mean": 0.5,
-    "sd": 0.5,
+    "mean": 0,
+    "sd": 0.0,
     "n": 6
    },
    "false_unmapped": {
@@ -230,39 +231,39 @@
     "n": 6
    },
    "false_rate": {
-    "mean": 0.367,
-    "sd": 0.371,
-    "n": 5
+    "mean": 0.0,
+    "sd": 0.0,
+    "n": 2
    },
    "symbol_types": {
-    "mean": 51.167,
-    "sd": 8.896,
+    "mean": 74.667,
+    "sd": 8.32,
     "n": 6
    },
    "analysis_impossible": 0,
    "sampling_stability": {
-    "mean": 0.52,
-    "sd": 0.325,
-    "n": 5
+    "mean": 0.733,
+    "sd": 0.249,
+    "n": 3
    },
    "transcription_stability": {
-    "mean": 0.426,
-    "sd": 0.318,
-    "n": 5
+    "mean": 0.294,
+    "sd": 0.227,
+    "n": 3
    },
    "seg_f1_consensus": {
-    "mean": 0.15,
-    "sd": 0.036,
+    "mean": 0.202,
+    "sd": 0.045,
     "n": 6
    },
    "vision_f1": {
-    "mean": 0.482,
-    "sd": 0.199,
+    "mean": 0.67,
+    "sd": 0.158,
     "n": 6
    },
    "vision_ari": {
-    "mean": 0.631,
-    "sd": 0.133,
+    "mean": 0.308,
+    "sd": 0.036,
     "n": 6
    }
   },
@@ -273,60 +274,60 @@
    "condition": "spacing",
    "runs": 6,
    "gold_found": {
-    "mean": 2.667,
-    "sd": 0.471,
+    "mean": 2.833,
+    "sd": 0.373,
     "n": 6
    },
    "gold_rules": 8,
    "hypotheses": {
-    "mean": 9,
-    "sd": 2.944,
+    "mean": 12.167,
+    "sd": 3.67,
     "n": 6
    },
    "false": {
-    "mean": 1.833,
-    "sd": 1.675,
+    "mean": 3.333,
+    "sd": 3.448,
     "n": 6
    },
    "false_unmapped": {
-    "mean": 0.333,
-    "sd": 0.471,
+    "mean": 0.167,
+    "sd": 0.373,
     "n": 6
    },
    "false_rate": {
-    "mean": 0.198,
-    "sd": 0.161,
+    "mean": 0.268,
+    "sd": 0.219,
     "n": 6
    },
    "symbol_types": {
-    "mean": 33.833,
-    "sd": 4.598,
+    "mean": 28.167,
+    "sd": 3.184,
     "n": 6
    },
    "analysis_impossible": 0,
    "sampling_stability": {
-    "mean": 0.809,
-    "sd": 0.108,
+    "mean": 0.736,
+    "sd": 0.083,
     "n": 6
    },
    "transcription_stability": {
-    "mean": 0.601,
-    "sd": 0.14,
+    "mean": 0.473,
+    "sd": 0.154,
     "n": 6
    },
    "seg_f1_consensus": {
-    "mean": 0.186,
-    "sd": 0.07,
+    "mean": 0.239,
+    "sd": 0.039,
     "n": 6
    },
    "vision_f1": {
-    "mean": 0.782,
-    "sd": 0.03,
+    "mean": 0.864,
+    "sd": 0.024,
     "n": 6
    },
    "vision_ari": {
-    "mean": 0.806,
-    "sd": 0.065,
+    "mean": 0.802,
+    "sd": 0.047,
     "n": 6
    }
   },
@@ -423,17 +424,17 @@
    },
    "false_rate": null,
    "symbol_types": {
-    "mean": 5.833,
-    "sd": 0.898,
+    "mean": 5.167,
+    "sd": 1.772,
     "n": 6
    },
-   "analysis_impossible": 0,
+   "analysis_impossible": 1,
    "sampling_stability": null,
    "transcription_stability": null,
    "seg_f1_consensus": {
     "mean": 0.0,
     "sd": 0.0,
-    "n": 6
+    "n": 5
    },
    "vision_f1": {
     "mean": 0.0,
@@ -449,57 +450,61 @@
    "condition": "size_thickness",
    "runs": 6,
    "gold_found": {
-    "mean": 0,
-    "sd": 0.0,
+    "mean": 1.167,
+    "sd": 1.067,
     "n": 6
    },
    "gold_rules": 8,
    "hypotheses": {
-    "mean": 0.333,
-    "sd": 0.745,
+    "mean": 6.333,
+    "sd": 2.494,
     "n": 6
    },
    "false": {
-    "mean": 0.167,
-    "sd": 0.373,
+    "mean": 4,
+    "sd": 2.517,
     "n": 6
    },
    "false_unmapped": {
-    "mean": 0.167,
-    "sd": 0.373,
+    "mean": 2.833,
+    "sd": 2.115,
     "n": 6
    },
    "false_rate": {
-    "mean": 1.0,
-    "sd": 0.0,
-    "n": 1
-   },
-   "symbol_types": {
-    "mean": 11.333,
-    "sd": 8.844,
+    "mean": 0.639,
+    "sd": 0.362,
     "n": 6
    },
-   "analysis_impossible": 1,
-   "sampling_stability": null,
+   "symbol_types": {
+    "mean": 88.167,
+    "sd": 6.466,
+    "n": 6
+   },
+   "analysis_impossible": 0,
+   "sampling_stability": {
+    "mean": 0.721,
+    "sd": 0.163,
+    "n": 6
+   },
    "transcription_stability": {
-    "mean": 0.0,
-    "sd": 0.0,
-    "n": 1
+    "mean": 0.456,
+    "sd": 0.182,
+    "n": 6
    },
    "seg_f1_consensus": {
-    "mean": 0.012,
-    "sd": 0.015,
-    "n": 5
+    "mean": 0.306,
+    "sd": 0.106,
+    "n": 6
    },
    "vision_f1": {
-    "mean": 0.072,
-    "sd": 0.08,
+    "mean": 0.905,
+    "sd": 0.062,
     "n": 6
    },
    "vision_ari": {
-    "mean": 0.371,
-    "sd": 0.414,
-    "n": 4
+    "mean": 0.306,
+    "sd": 0.026,
+    "n": 6
    }
   },
   {
@@ -573,19 +578,19 @@
    "condition": "clean",
    "runs": 6,
    "gold_found": {
-    "mean": 4.333,
-    "sd": 0.471,
+    "mean": 4.5,
+    "sd": 0.764,
     "n": 6
    },
    "gold_rules": 8,
    "hypotheses": {
-    "mean": 21.5,
-    "sd": 4.193,
+    "mean": 22,
+    "sd": 4.203,
     "n": 6
    },
    "false": {
-    "mean": 3.5,
-    "sd": 2.566,
+    "mean": 3.833,
+    "sd": 1.067,
     "n": 6
    },
    "false_unmapped": {
@@ -594,29 +599,29 @@
     "n": 6
    },
    "false_rate": {
-    "mean": 0.189,
-    "sd": 0.154,
+    "mean": 0.199,
+    "sd": 0.085,
     "n": 6
    },
    "symbol_types": {
-    "mean": 19,
-    "sd": 0.577,
+    "mean": 17.667,
+    "sd": 0.745,
     "n": 6
    },
    "analysis_impossible": 0,
    "sampling_stability": {
-    "mean": 0.711,
-    "sd": 0.063,
+    "mean": 0.736,
+    "sd": 0.022,
     "n": 6
    },
    "transcription_stability": {
-    "mean": 0.48,
-    "sd": 0.06,
+    "mean": 0.463,
+    "sd": 0.03,
     "n": 6
    },
    "seg_f1_consensus": {
-    "mean": 0.267,
-    "sd": 0.044,
+    "mean": 0.265,
+    "sd": 0.051,
     "n": 6
    },
    "vision_f1": {
@@ -625,8 +630,8 @@
     "n": 6
    },
    "vision_ari": {
-    "mean": 0.917,
-    "sd": 0.048,
+    "mean": 0.93,
+    "sd": 0.014,
     "n": 6
    }
   },
@@ -637,19 +642,19 @@
    "condition": "noise",
    "runs": 6,
    "gold_found": {
-    "mean": 4,
-    "sd": 0.577,
+    "mean": 4.5,
+    "sd": 0.764,
     "n": 6
    },
    "gold_rules": 8,
    "hypotheses": {
-    "mean": 21,
-    "sd": 3.367,
+    "mean": 22.667,
+    "sd": 3.448,
     "n": 6
    },
    "false": {
-    "mean": 3.833,
-    "sd": 2.734,
+    "mean": 4,
+    "sd": 1.915,
     "n": 6
    },
    "false_unmapped": {
@@ -658,29 +663,29 @@
     "n": 6
    },
    "false_rate": {
-    "mean": 0.215,
-    "sd": 0.173,
+    "mean": 0.205,
+    "sd": 0.135,
     "n": 6
    },
    "symbol_types": {
-    "mean": 19.833,
-    "sd": 1.067,
+    "mean": 17.667,
+    "sd": 0.943,
     "n": 6
    },
    "analysis_impossible": 0,
    "sampling_stability": {
-    "mean": 0.711,
-    "sd": 0.064,
+    "mean": 0.726,
+    "sd": 0.034,
     "n": 6
    },
    "transcription_stability": {
-    "mean": 0.492,
-    "sd": 0.054,
+    "mean": 0.471,
+    "sd": 0.029,
     "n": 6
    },
    "seg_f1_consensus": {
-    "mean": 0.283,
-    "sd": 0.055,
+    "mean": 0.259,
+    "sd": 0.056,
     "n": 6
    },
    "vision_f1": {
@@ -689,8 +694,8 @@
     "n": 6
    },
    "vision_ari": {
-    "mean": 0.91,
-    "sd": 0.045,
+    "mean": 0.935,
+    "sd": 0.018,
     "n": 6
    }
   },
@@ -701,60 +706,60 @@
    "condition": "size_thickness",
    "runs": 6,
    "gold_found": {
-    "mean": 4.333,
-    "sd": 1.106,
+    "mean": 1.5,
+    "sd": 0.5,
     "n": 6
    },
    "gold_rules": 8,
    "hypotheses": {
-    "mean": 18.167,
-    "sd": 4.375,
+    "mean": 3.5,
+    "sd": 1.258,
     "n": 6
    },
    "false": {
-    "mean": 2.833,
-    "sd": 3.023,
+    "mean": 0.833,
+    "sd": 0.898,
     "n": 6
    },
    "false_unmapped": {
-    "mean": 0,
-    "sd": 0.0,
+    "mean": 0.167,
+    "sd": 0.373,
     "n": 6
    },
    "false_rate": {
-    "mean": 0.166,
-    "sd": 0.16,
+    "mean": 0.25,
+    "sd": 0.268,
     "n": 6
    },
    "symbol_types": {
-    "mean": 27.833,
-    "sd": 1.572,
+    "mean": 29.333,
+    "sd": 1.7,
     "n": 6
    },
    "analysis_impossible": 0,
    "sampling_stability": {
-    "mean": 0.701,
-    "sd": 0.04,
+    "mean": 0.847,
+    "sd": 0.128,
     "n": 6
    },
    "transcription_stability": {
-    "mean": 0.48,
-    "sd": 0.043,
+    "mean": 0.328,
+    "sd": 0.118,
     "n": 6
    },
    "seg_f1_consensus": {
-    "mean": 0.322,
-    "sd": 0.107,
+    "mean": 0.253,
+    "sd": 0.059,
     "n": 6
    },
    "vision_f1": {
-    "mean": 0.999,
-    "sd": 0.003,
+    "mean": 0.747,
+    "sd": 0.04,
     "n": 6
    },
    "vision_ari": {
-    "mean": 0.867,
-    "sd": 0.071,
+    "mean": 0.89,
+    "sd": 0.032,
     "n": 6
    }
   },
@@ -765,19 +770,19 @@
    "condition": "spacing",
    "runs": 6,
    "gold_found": {
-    "mean": 3.333,
+    "mean": 4.667,
     "sd": 0.471,
     "n": 6
    },
    "gold_rules": 8,
    "hypotheses": {
-    "mean": 19.167,
-    "sd": 1.772,
+    "mean": 22.5,
+    "sd": 3.594,
     "n": 6
    },
    "false": {
     "mean": 3.667,
-    "sd": 2.494,
+    "sd": 1.247,
     "n": 6
    },
    "false_unmapped": {
@@ -786,39 +791,39 @@
     "n": 6
    },
    "false_rate": {
-    "mean": 0.215,
-    "sd": 0.143,
+    "mean": 0.185,
+    "sd": 0.09,
     "n": 6
    },
    "symbol_types": {
-    "mean": 22.5,
-    "sd": 1.118,
+    "mean": 17.833,
+    "sd": 0.687,
     "n": 6
    },
    "analysis_impossible": 0,
    "sampling_stability": {
-    "mean": 0.742,
-    "sd": 0.047,
+    "mean": 0.739,
+    "sd": 0.024,
     "n": 6
    },
    "transcription_stability": {
-    "mean": 0.518,
-    "sd": 0.054,
+    "mean": 0.472,
+    "sd": 0.026,
     "n": 6
    },
    "seg_f1_consensus": {
-    "mean": 0.244,
-    "sd": 0.079,
+    "mean": 0.265,
+    "sd": 0.051,
     "n": 6
    },
    "vision_f1": {
-    "mean": 0.963,
-    "sd": 0.02,
+    "mean": 0.998,
+    "sd": 0.003,
     "n": 6
    },
    "vision_ari": {
-    "mean": 0.912,
-    "sd": 0.05,
+    "mean": 0.929,
+    "sd": 0.014,
     "n": 6
    }
   },
@@ -940,8 +945,8 @@
     "n": 6
    },
    "vision_f1": {
-    "mean": 0.897,
-    "sd": 0.058,
+    "mean": 0.895,
+    "sd": 0.057,
     "n": 6
    },
    "vision_ari": {
@@ -963,8 +968,8 @@
    },
    "gold_rules": 8,
    "hypotheses": {
-    "mean": 4.5,
-    "sd": 1.893,
+    "mean": 4.333,
+    "sd": 2.055,
     "n": 6
    },
    "false": {
@@ -983,19 +988,19 @@
     "n": 6
    },
    "symbol_types": {
-    "mean": 42.667,
-    "sd": 2.925,
+    "mean": 42.5,
+    "sd": 2.872,
     "n": 6
    },
    "analysis_impossible": 0,
    "sampling_stability": {
-    "mean": 0.759,
-    "sd": 0.168,
+    "mean": 0.809,
+    "sd": 0.158,
     "n": 6
    },
    "transcription_stability": {
-    "mean": 0.67,
-    "sd": 0.057,
+    "mean": 0.698,
+    "sd": 0.084,
     "n": 6
    },
    "seg_f1_consensus": {
@@ -1004,13 +1009,13 @@
     "n": 6
    },
    "vision_f1": {
-    "mean": 0.604,
-    "sd": 0.104,
+    "mean": 0.606,
+    "sd": 0.107,
     "n": 6
    },
    "vision_ari": {
     "mean": 0.877,
-    "sd": 0.047,
+    "sd": 0.046,
     "n": 6
    }
   },
@@ -1021,8 +1026,8 @@
    "condition": "spacing",
    "runs": 6,
    "gold_found": {
-    "mean": 2.667,
-    "sd": 1.106,
+    "mean": 2.5,
+    "sd": 1.258,
     "n": 6
    },
    "gold_rules": 8,
@@ -1141,8 +1146,8 @@
    "condition": null,
    "runs": 6,
    "gold_found": {
-    "mean": 2.833,
-    "sd": 0.898,
+    "mean": 2.333,
+    "sd": 0.745,
     "n": 6
    },
    "gold_rules": 8,
@@ -1309,19 +1314,19 @@
    "condition": "clean",
    "runs": 6,
    "gold_found": {
-    "mean": 4.833,
-    "sd": 0.687,
+    "mean": 5.167,
+    "sd": 0.373,
     "n": 6
    },
    "gold_rules": 8,
    "hypotheses": {
-    "mean": 51.667,
-    "sd": 6.625,
+    "mean": 56.5,
+    "sd": 2.63,
     "n": 6
    },
    "false": {
-    "mean": 20.5,
-    "sd": 3.403,
+    "mean": 22.5,
+    "sd": 4.787,
     "n": 6
    },
    "false_unmapped": {
@@ -1331,28 +1336,28 @@
    },
    "false_rate": {
     "mean": 0.42,
-    "sd": 0.055,
+    "sd": 0.088,
     "n": 6
    },
    "symbol_types": {
-    "mean": 16.333,
-    "sd": 0.471,
+    "mean": 16.167,
+    "sd": 0.373,
     "n": 6
    },
    "analysis_impossible": 0,
    "sampling_stability": {
-    "mean": 0.797,
-    "sd": 0.038,
+    "mean": 0.774,
+    "sd": 0.028,
     "n": 6
    },
    "transcription_stability": {
-    "mean": 0.47,
-    "sd": 0.03,
+    "mean": 0.448,
+    "sd": 0.052,
     "n": 6
    },
    "seg_f1_consensus": {
-    "mean": 0.313,
-    "sd": 0.082,
+    "mean": 0.368,
+    "sd": 0.085,
     "n": 6
    },
    "vision_f1": {
@@ -1361,8 +1366,8 @@
     "n": 6
    },
    "vision_ari": {
-    "mean": 0.827,
-    "sd": 0.041,
+    "mean": 0.815,
+    "sd": 0.051,
     "n": 6
    }
   },
@@ -1417,60 +1422,60 @@
    "condition": "size_thickness",
    "runs": 6,
    "gold_found": {
-    "mean": 1.667,
+    "mean": 0.667,
     "sd": 0.745,
     "n": 6
    },
    "gold_rules": 8,
    "hypotheses": {
-    "mean": 6.833,
-    "sd": 3.891,
+    "mean": 6,
+    "sd": 3.215,
     "n": 6
    },
    "false": {
-    "mean": 3.167,
-    "sd": 2.478,
+    "mean": 4.333,
+    "sd": 2.211,
     "n": 6
    },
    "false_unmapped": {
-    "mean": 0.667,
-    "sd": 0.745,
+    "mean": 0,
+    "sd": 0.0,
     "n": 6
    },
    "false_rate": {
-    "mean": 0.439,
-    "sd": 0.23,
+    "mean": 0.853,
+    "sd": 0.18,
     "n": 6
    },
    "symbol_types": {
-    "mean": 83.333,
-    "sd": 20.45,
+    "mean": 128.833,
+    "sd": 12.615,
     "n": 6
    },
    "analysis_impossible": 0,
    "sampling_stability": {
-    "mean": 0.672,
-    "sd": 0.067,
+    "mean": 0.601,
+    "sd": 0.126,
     "n": 6
    },
    "transcription_stability": {
-    "mean": 0.362,
-    "sd": 0.168,
+    "mean": 0.572,
+    "sd": 0.182,
     "n": 6
    },
    "seg_f1_consensus": {
-    "mean": 0.17,
-    "sd": 0.083,
+    "mean": 0.239,
+    "sd": 0.024,
     "n": 6
    },
    "vision_f1": {
-    "mean": 0.462,
-    "sd": 0.136,
+    "mean": 0.691,
+    "sd": 0.089,
     "n": 6
    },
    "vision_ari": {
-    "mean": 0.53,
-    "sd": 0.066,
+    "mean": 0.283,
+    "sd": 0.027,
     "n": 6
    }
   },
@@ -1481,60 +1486,60 @@
    "condition": "spacing",
    "runs": 6,
    "gold_found": {
-    "mean": 3,
-    "sd": 0.577,
+    "mean": 3.667,
+    "sd": 0.745,
     "n": 6
    },
    "gold_rules": 8,
    "hypotheses": {
-    "mean": 30.333,
-    "sd": 5.735,
+    "mean": 39.667,
+    "sd": 7.565,
     "n": 6
    },
    "false": {
-    "mean": 10.667,
-    "sd": 4.643,
+    "mean": 11.5,
+    "sd": 4.425,
     "n": 6
    },
    "false_unmapped": {
-    "mean": 2.333,
-    "sd": 2.749,
+    "mean": 1.667,
+    "sd": 1.7,
     "n": 6
    },
    "false_rate": {
-    "mean": 0.378,
-    "sd": 0.104,
+    "mean": 0.313,
+    "sd": 0.109,
     "n": 6
    },
    "symbol_types": {
-    "mean": 48.667,
-    "sd": 3.543,
+    "mean": 39.667,
+    "sd": 3.399,
     "n": 6
    },
    "analysis_impossible": 0,
    "sampling_stability": {
-    "mean": 0.709,
-    "sd": 0.054,
+    "mean": 0.735,
+    "sd": 0.07,
     "n": 6
    },
    "transcription_stability": {
-    "mean": 0.433,
-    "sd": 0.061,
+    "mean": 0.418,
+    "sd": 0.096,
     "n": 6
    },
    "seg_f1_consensus": {
-    "mean": 0.192,
-    "sd": 0.073,
+    "mean": 0.278,
+    "sd": 0.052,
     "n": 6
    },
    "vision_f1": {
-    "mean": 0.787,
-    "sd": 0.026,
+    "mean": 0.87,
+    "sd": 0.021,
     "n": 6
    },
    "vision_ari": {
-    "mean": 0.795,
-    "sd": 0.047,
+    "mean": 0.793,
+    "sd": 0.049,
     "n": 6
    }
   },
@@ -1631,14 +1636,18 @@
    },
    "false_rate": null,
    "symbol_types": {
-    "mean": 1.167,
-    "sd": 0.373,
+    "mean": 3.333,
+    "sd": 4.384,
     "n": 6
    },
-   "analysis_impossible": 6,
+   "analysis_impossible": 5,
    "sampling_stability": null,
    "transcription_stability": null,
-   "seg_f1_consensus": null,
+   "seg_f1_consensus": {
+    "mean": 0.0,
+    "sd": 0.0,
+    "n": 1
+   },
    "vision_f1": {
     "mean": 0.0,
     "sd": 0.0,
@@ -1653,61 +1662,61 @@
    "condition": "size_thickness",
    "runs": 6,
    "gold_found": {
-    "mean": 0,
-    "sd": 0.0,
+    "mean": 2,
+    "sd": 0.577,
     "n": 6
    },
    "gold_rules": 8,
    "hypotheses": {
-    "mean": 0.333,
-    "sd": 0.745,
+    "mean": 24,
+    "sd": 10.132,
     "n": 6
    },
    "false": {
-    "mean": 0.167,
-    "sd": 0.373,
+    "mean": 18.5,
+    "sd": 9.106,
     "n": 6
    },
    "false_unmapped": {
-    "mean": 0.167,
-    "sd": 0.373,
+    "mean": 7,
+    "sd": 5.416,
     "n": 6
    },
    "false_rate": {
-    "mean": 1.0,
-    "sd": 0.0,
-    "n": 1
-   },
-   "symbol_types": {
-    "mean": 17.833,
-    "sd": 9.873,
+    "mean": 0.791,
+    "sd": 0.12,
     "n": 6
    },
-   "analysis_impossible": 1,
+   "symbol_types": {
+    "mean": 142,
+    "sd": 7.572,
+    "n": 6
+   },
+   "analysis_impossible": 0,
    "sampling_stability": {
-    "mean": 0.8,
-    "sd": 0.0,
-    "n": 1
+    "mean": 0.659,
+    "sd": 0.07,
+    "n": 6
    },
    "transcription_stability": {
-    "mean": 0.33,
-    "sd": 0.0,
-    "n": 1
+    "mean": 0.62,
+    "sd": 0.07,
+    "n": 6
    },
    "seg_f1_consensus": {
-    "mean": 0.014,
-    "sd": 0.009,
-    "n": 5
+    "mean": 0.296,
+    "sd": 0.061,
+    "n": 6
    },
    "vision_f1": {
-    "mean": 0.054,
-    "sd": 0.037,
+    "mean": 0.906,
+    "sd": 0.064,
     "n": 6
    },
    "vision_ari": {
-    "mean": 0.253,
-    "sd": 0.31,
-    "n": 5
+    "mean": 0.28,
+    "sd": 0.013,
+    "n": 6
    }
   },
   {
@@ -1717,8 +1726,8 @@
    "condition": "spacing",
    "runs": 6,
    "gold_found": {
-    "mean": 2.167,
-    "sd": 0.898,
+    "mean": 2,
+    "sd": 1.0,
     "n": 6
    },
    "gold_rules": 8,
@@ -1781,19 +1790,19 @@
    "condition": "clean",
    "runs": 6,
    "gold_found": {
-    "mean": 4.833,
-    "sd": 0.373,
+    "mean": 5,
+    "sd": 0.0,
     "n": 6
    },
    "gold_rules": 8,
    "hypotheses": {
-    "mean": 53.833,
-    "sd": 7.081,
+    "mean": 53.167,
+    "sd": 4.705,
     "n": 6
    },
    "false": {
-    "mean": 12,
-    "sd": 4.0,
+    "mean": 10.667,
+    "sd": 2.925,
     "n": 6
    },
    "false_unmapped": {
@@ -1802,29 +1811,29 @@
     "n": 6
    },
    "false_rate": {
-    "mean": 0.231,
-    "sd": 0.064,
+    "mean": 0.21,
+    "sd": 0.053,
     "n": 6
    },
    "symbol_types": {
-    "mean": 19.333,
+    "mean": 18.333,
     "sd": 0.471,
     "n": 6
    },
    "analysis_impossible": 0,
    "sampling_stability": {
-    "mean": 0.778,
-    "sd": 0.031,
+    "mean": 0.785,
+    "sd": 0.022,
     "n": 6
    },
    "transcription_stability": {
-    "mean": 0.535,
-    "sd": 0.075,
+    "mean": 0.561,
+    "sd": 0.053,
     "n": 6
    },
    "seg_f1_consensus": {
-    "mean": 0.316,
-    "sd": 0.077,
+    "mean": 0.343,
+    "sd": 0.067,
     "n": 6
    },
    "vision_f1": {
@@ -1833,8 +1842,8 @@
     "n": 6
    },
    "vision_ari": {
-    "mean": 0.917,
-    "sd": 0.033,
+    "mean": 0.941,
+    "sd": 0.017,
     "n": 6
    }
   },
@@ -1845,19 +1854,19 @@
    "condition": "noise",
    "runs": 6,
    "gold_found": {
-    "mean": 4.833,
-    "sd": 0.373,
+    "mean": 5,
+    "sd": 0.0,
     "n": 6
    },
    "gold_rules": 8,
    "hypotheses": {
-    "mean": 53,
-    "sd": 6.658,
+    "mean": 53.167,
+    "sd": 4.705,
     "n": 6
    },
    "false": {
-    "mean": 12.833,
-    "sd": 4.18,
+    "mean": 10.667,
+    "sd": 2.925,
     "n": 6
    },
    "false_unmapped": {
@@ -1866,29 +1875,29 @@
     "n": 6
    },
    "false_rate": {
-    "mean": 0.256,
-    "sd": 0.083,
+    "mean": 0.21,
+    "sd": 0.053,
     "n": 6
    },
    "symbol_types": {
-    "mean": 20.5,
-    "sd": 0.5,
+    "mean": 18.333,
+    "sd": 0.471,
     "n": 6
    },
    "analysis_impossible": 0,
    "sampling_stability": {
-    "mean": 0.784,
-    "sd": 0.031,
+    "mean": 0.785,
+    "sd": 0.022,
     "n": 6
    },
    "transcription_stability": {
-    "mean": 0.569,
-    "sd": 0.065,
+    "mean": 0.561,
+    "sd": 0.053,
     "n": 6
    },
    "seg_f1_consensus": {
-    "mean": 0.311,
-    "sd": 0.084,
+    "mean": 0.343,
+    "sd": 0.067,
     "n": 6
    },
    "vision_f1": {
@@ -1897,8 +1906,8 @@
     "n": 6
    },
    "vision_ari": {
-    "mean": 0.912,
-    "sd": 0.032,
+    "mean": 0.941,
+    "sd": 0.017,
     "n": 6
    }
   },
@@ -1909,60 +1918,60 @@
    "condition": "size_thickness",
    "runs": 6,
    "gold_found": {
-    "mean": 5,
+    "mean": 2,
     "sd": 0.0,
     "n": 6
    },
    "gold_rules": 8,
    "hypotheses": {
-    "mean": 46.667,
-    "sd": 6.074,
+    "mean": 10.5,
+    "sd": 3.99,
     "n": 6
    },
    "false": {
-    "mean": 8.167,
-    "sd": 5.398,
+    "mean": 2.833,
+    "sd": 2.034,
     "n": 6
    },
    "false_unmapped": {
-    "mean": 0,
-    "sd": 0.0,
+    "mean": 0.667,
+    "sd": 0.745,
     "n": 6
    },
    "false_rate": {
-    "mean": 0.203,
-    "sd": 0.143,
+    "mean": 0.255,
+    "sd": 0.13,
     "n": 6
    },
    "symbol_types": {
-    "mean": 29,
-    "sd": 2.236,
+    "mean": 35.667,
+    "sd": 2.494,
     "n": 6
    },
    "analysis_impossible": 0,
    "sampling_stability": {
-    "mean": 0.772,
-    "sd": 0.029,
+    "mean": 0.775,
+    "sd": 0.134,
     "n": 6
    },
    "transcription_stability": {
-    "mean": 0.562,
-    "sd": 0.059,
+    "mean": 0.563,
+    "sd": 0.118,
     "n": 6
    },
    "seg_f1_consensus": {
-    "mean": 0.36,
-    "sd": 0.087,
+    "mean": 0.23,
+    "sd": 0.051,
     "n": 6
    },
    "vision_f1": {
-    "mean": 0.998,
-    "sd": 0.004,
+    "mean": 0.74,
+    "sd": 0.027,
     "n": 6
    },
    "vision_ari": {
-    "mean": 0.869,
-    "sd": 0.072,
+    "mean": 0.899,
+    "sd": 0.016,
     "n": 6
    }
   },
@@ -1979,54 +1988,54 @@
    },
    "gold_rules": 8,
    "hypotheses": {
-    "mean": 50,
-    "sd": 2.309,
+    "mean": 56,
+    "sd": 3.651,
     "n": 6
    },
    "false": {
-    "mean": 10.5,
-    "sd": 3.547,
+    "mean": 11,
+    "sd": 2.887,
     "n": 6
    },
    "false_unmapped": {
-    "mean": 0.333,
-    "sd": 0.471,
+    "mean": 0,
+    "sd": 0.0,
     "n": 6
    },
    "false_rate": {
-    "mean": 0.225,
-    "sd": 0.075,
+    "mean": 0.205,
+    "sd": 0.053,
     "n": 6
    },
    "symbol_types": {
-    "mean": 25.667,
-    "sd": 2.134,
+    "mean": 18.833,
+    "sd": 0.373,
     "n": 6
    },
    "analysis_impossible": 0,
    "sampling_stability": {
     "mean": 0.771,
-    "sd": 0.025,
+    "sd": 0.028,
     "n": 6
    },
    "transcription_stability": {
-    "mean": 0.542,
-    "sd": 0.026,
+    "mean": 0.555,
+    "sd": 0.068,
     "n": 6
    },
    "seg_f1_consensus": {
-    "mean": 0.321,
-    "sd": 0.053,
+    "mean": 0.343,
+    "sd": 0.066,
     "n": 6
    },
    "vision_f1": {
-    "mean": 0.962,
-    "sd": 0.017,
+    "mean": 0.998,
+    "sd": 0.002,
     "n": 6
    },
    "vision_ari": {
-    "mean": 0.911,
-    "sd": 0.036,
+    "mean": 0.941,
+    "sd": 0.017,
     "n": 6
    }
   },
@@ -2107,54 +2116,54 @@
    },
    "gold_rules": 8,
    "hypotheses": {
-    "mean": 60,
-    "sd": 7.483,
+    "mean": 56.5,
+    "sd": 7.719,
     "n": 6
    },
    "false": {
     "mean": 23.5,
-    "sd": 13.877,
+    "sd": 13.635,
     "n": 6
    },
    "false_unmapped": {
-    "mean": 22,
-    "sd": 14.866,
+    "mean": 22.333,
+    "sd": 14.579,
     "n": 6
    },
    "false_rate": {
-    "mean": 0.406,
-    "sd": 0.203,
+    "mean": 0.42,
+    "sd": 0.206,
     "n": 6
    },
    "symbol_types": {
-    "mean": 26.333,
-    "sd": 1.972,
+    "mean": 26,
+    "sd": 2.309,
     "n": 6
    },
    "analysis_impossible": 0,
    "sampling_stability": {
-    "mean": 0.772,
-    "sd": 0.032,
+    "mean": 0.77,
+    "sd": 0.019,
     "n": 6
    },
    "transcription_stability": {
-    "mean": 0.537,
-    "sd": 0.055,
+    "mean": 0.552,
+    "sd": 0.061,
     "n": 6
    },
    "seg_f1_consensus": {
-    "mean": 0.372,
-    "sd": 0.047,
+    "mean": 0.364,
+    "sd": 0.038,
     "n": 6
    },
    "vision_f1": {
-    "mean": 0.873,
-    "sd": 0.054,
+    "mean": 0.872,
+    "sd": 0.053,
     "n": 6
    },
    "vision_ari": {
-    "mean": 0.983,
-    "sd": 0.024,
+    "mean": 0.982,
+    "sd": 0.025,
     "n": 6
    }
   },
@@ -2171,53 +2180,53 @@
    },
    "gold_rules": 8,
    "hypotheses": {
-    "mean": 14.667,
-    "sd": 2.981,
+    "mean": 16.167,
+    "sd": 3.804,
     "n": 6
    },
    "false": {
-    "mean": 9.833,
-    "sd": 3.436,
+    "mean": 11.167,
+    "sd": 2.267,
     "n": 6
    },
    "false_unmapped": {
-    "mean": 7.333,
-    "sd": 3.037,
+    "mean": 8.333,
+    "sd": 1.7,
     "n": 6
    },
    "false_rate": {
-    "mean": 0.694,
-    "sd": 0.199,
+    "mean": 0.74,
+    "sd": 0.127,
     "n": 6
    },
    "symbol_types": {
-    "mean": 51.5,
-    "sd": 4.387,
+    "mean": 51.333,
+    "sd": 4.19,
     "n": 6
    },
    "analysis_impossible": 0,
    "sampling_stability": {
-    "mean": 0.748,
-    "sd": 0.063,
+    "mean": 0.734,
+    "sd": 0.098,
     "n": 6
    },
    "transcription_stability": {
-    "mean": 0.579,
-    "sd": 0.13,
+    "mean": 0.591,
+    "sd": 0.136,
     "n": 6
    },
    "seg_f1_consensus": {
-    "mean": 0.216,
-    "sd": 0.068,
+    "mean": 0.217,
+    "sd": 0.064,
     "n": 6
    },
    "vision_f1": {
-    "mean": 0.584,
+    "mean": 0.585,
     "sd": 0.065,
     "n": 6
    },
    "vision_ari": {
-    "mean": 0.896,
+    "mean": 0.897,
     "sd": 0.039,
     "n": 6
    }
@@ -2229,7 +2238,7 @@
    "condition": "spacing",
    "runs": 6,
    "gold_found": {
-    "mean": 3.667,
+    "mean": 3.333,
     "sd": 0.745,
     "n": 6
    },
@@ -2349,8 +2358,8 @@
    "condition": null,
    "runs": 6,
    "gold_found": {
-    "mean": 4,
-    "sd": 0.0,
+    "mean": 3.167,
+    "sd": 0.373,
     "n": 6
    },
    "gold_rules": 8,
@@ -2826,12 +2835,11 @@
    "condition": null,
    "hypotheses": 11,
    "gold_rules": 8,
-   "gold_found": 4,
+   "gold_found": 3,
    "found": [
     "文頭標識 S",
     "文末標識 E",
-    "動詞接尾辞 v の直後に E",
-    "接尾辞 x/q/v が同じ枠に入る"
+    "動詞接尾辞 v の直後に E"
    ],
    "true": 7,
    "false": 3,
@@ -2970,12 +2978,11 @@
    "condition": null,
    "hypotheses": 25,
    "gold_rules": 8,
-   "gold_found": 4,
+   "gold_found": 3,
    "found": [
     "文頭標識 S",
     "文末標識 E",
-    "動詞接尾辞 v の直後に E",
-    "接尾辞 x/q/v が同じ枠に入る"
+    "動詞接尾辞 v の直後に E"
    ],
    "true": 22,
    "false": 3,
@@ -3115,10 +3122,9 @@
    "condition": null,
    "hypotheses": 12,
    "gold_rules": 8,
-   "gold_found": 2,
+   "gold_found": 1,
    "found": [
-    "文末標識 E",
-    "接尾辞 x/q/v が同じ枠に入る"
+    "文末標識 E"
    ],
    "true": 5,
    "false": 5,
@@ -3257,12 +3263,11 @@
    "condition": null,
    "hypotheses": 43,
    "gold_rules": 8,
-   "gold_found": 4,
+   "gold_found": 3,
    "found": [
     "文頭標識 S",
     "文末標識 E",
-    "動詞接尾辞 v の直後に E",
-    "接尾辞 x/q/v が同じ枠に入る"
+    "動詞接尾辞 v の直後に E"
    ],
    "true": 25,
    "false": 10,
@@ -3547,12 +3552,11 @@
    "condition": null,
    "hypotheses": 24,
    "gold_rules": 8,
-   "gold_found": 4,
+   "gold_found": 3,
    "found": [
     "文頭標識 S",
     "文末標識 E",
-    "動詞接尾辞 v の直後に E",
-    "接尾辞 x/q/v が同じ枠に入る"
+    "動詞接尾辞 v の直後に E"
    ],
    "true": 17,
    "false": 5,
@@ -3689,12 +3693,11 @@
    "condition": null,
    "hypotheses": 18,
    "gold_rules": 8,
-   "gold_found": 4,
+   "gold_found": 3,
    "found": [
     "文頭標識 S",
     "文末標識 E",
-    "動詞接尾辞 v の直後に E",
-    "接尾辞 x/q/v が同じ枠に入る"
+    "動詞接尾辞 v の直後に E"
    ],
    "true": 12,
    "false": 3,
@@ -3834,12 +3837,11 @@
    "condition": null,
    "hypotheses": 33,
    "gold_rules": 8,
-   "gold_found": 4,
+   "gold_found": 3,
    "found": [
     "文頭標識 S",
     "文末標識 E",
-    "動詞接尾辞 v の直後に E",
-    "接尾辞 x/q/v が同じ枠に入る"
+    "動詞接尾辞 v の直後に E"
    ],
    "true": 22,
    "false": 8,
@@ -4121,12 +4123,11 @@
    "condition": null,
    "hypotheses": 27,
    "gold_rules": 8,
-   "gold_found": 4,
+   "gold_found": 3,
    "found": [
     "文頭標識 S",
     "文末標識 E",
-    "動詞接尾辞 v の直後に E",
-    "接尾辞 x/q/v が同じ枠に入る"
+    "動詞接尾辞 v の直後に E"
    ],
    "true": 14,
    "false": 9,
@@ -4192,37 +4193,37 @@
    "input": "B",
    "style": "font",
    "condition": "clean",
-   "hypotheses": 19,
+   "hypotheses": 14,
    "gold_rules": 8,
    "gold_found": 4,
    "found": [
+    "文頭標識 S",
     "文末標識 E",
     "動詞接尾辞 v の直後に E",
-    "x は各行に1回（必須）",
-    "v は各行に1回（必須）"
+    "x は各行に1回（必須）"
    ],
-   "true": 12,
-   "false": 5,
+   "true": 11,
+   "false": 2,
    "false_unmapped_symbols": 0,
-   "unverifiable": 2,
+   "unverifiable": 1,
    "tiers": {
-    "A": 7,
-    "C": 12
+    "A": 5,
+    "C": 9
    },
-   "mean_sampling_stability": 0.747,
-   "mean_transcription_stability": 0.499,
+   "mean_sampling_stability": 0.829,
+   "mean_transcription_stability": 0.492,
    "symbol_types": 17,
    "symbols": 174,
    "verdict": "structure_observed",
    "segmentation_f1": {
     "mdl": 0.415,
-    "branching": 0.349,
-    "consensus": 0.255,
-    "unigram": 0.217
+    "branching": 0.404,
+    "consensus": 0.288,
+    "unigram": 0.255
    },
    "vision": {
     "f1": 1.0,
-    "ari": 0.8449,
+    "ari": 0.8259,
     "class_ratio": 0.81,
     "split": 0,
     "merge": 0
@@ -4234,38 +4235,39 @@
    "input": "C",
    "style": "font",
    "condition": "clean",
-   "hypotheses": 18,
+   "hypotheses": 23,
    "gold_rules": 8,
-   "gold_found": 4,
+   "gold_found": 5,
    "found": [
+    "文頭標識 S",
     "文末標識 E",
     "動詞接尾辞 v の直後に E",
     "x は各行に1回（必須）",
     "v は各行に1回（必須）"
    ],
-   "true": 13,
-   "false": 4,
+   "true": 19,
+   "false": 3,
    "false_unmapped_symbols": 0,
    "unverifiable": 1,
    "tiers": {
-    "A": 8,
-    "C": 10
+    "A": 9,
+    "C": 14
    },
-   "mean_sampling_stability": 0.767,
-   "mean_transcription_stability": 0.538,
-   "symbol_types": 20,
+   "mean_sampling_stability": 0.73,
+   "mean_transcription_stability": 0.451,
+   "symbol_types": 19,
    "symbols": 174,
    "verdict": "structure_observed",
    "segmentation_f1": {
     "mdl": 0.514,
-    "branching": 0.346,
-    "consensus": 0.299,
-    "unigram": 0.261
+    "branching": 0.393,
+    "consensus": 0.352,
+    "unigram": 0.323
    },
    "vision": {
     "f1": 1.0,
-    "ari": 0.8977,
-    "class_ratio": 0.952,
+    "ari": 0.9381,
+    "class_ratio": 0.905,
     "split": 0,
     "merge": 0
    }
@@ -4287,8 +4289,8 @@
    "tiers": {},
    "mean_sampling_stability": null,
    "mean_transcription_stability": null,
-   "symbol_types": 7,
-   "symbols": 7,
+   "symbol_types": 5,
+   "symbols": 5,
    "verdict": "no_structure_detected",
    "segmentation_f1": {
     "branching": 0.0,
@@ -4310,87 +4312,7 @@
    "input": "C",
    "style": "font",
    "condition": "noise",
-   "hypotheses": 20,
-   "gold_rules": 8,
-   "gold_found": 4,
-   "found": [
-    "文末標識 E",
-    "動詞接尾辞 v の直後に E",
-    "x は各行に1回（必須）",
-    "v は各行に1回（必須）"
-   ],
-   "true": 14,
-   "false": 4,
-   "false_unmapped_symbols": 0,
-   "unverifiable": 2,
-   "tiers": {
-    "A": 8,
-    "C": 12
-   },
-   "mean_sampling_stability": 0.79,
-   "mean_transcription_stability": 0.516,
-   "symbol_types": 21,
-   "symbols": 174,
-   "verdict": "structure_observed",
-   "segmentation_f1": {
-    "mdl": 0.5,
-    "branching": 0.346,
-    "consensus": 0.315,
-    "unigram": 0.261
-   },
-   "vision": {
-    "f1": 1.0,
-    "ari": 0.8953,
-    "class_ratio": 1.0,
-    "split": 0,
-    "merge": 0
-   }
-  },
-  {
-   "seed": 1000,
-   "lines": 13,
-   "input": "B",
-   "style": "font",
-   "condition": "size_thickness",
-   "hypotheses": 4,
-   "gold_rules": 8,
-   "gold_found": 1,
-   "found": [
-    "文末標識 E"
-   ],
-   "true": 2,
-   "false": 1,
-   "false_unmapped_symbols": 0,
-   "unverifiable": 1,
-   "tiers": {
-    "C": 4
-   },
-   "mean_sampling_stability": 0.6,
-   "mean_transcription_stability": 0.125,
-   "symbol_types": 53,
-   "symbols": 118,
-   "verdict": "structure_unstable",
-   "segmentation_f1": {
-    "branching": 0.031,
-    "unigram": 0.173,
-    "consensus": 0.167,
-    "mdl": 0.4
-   },
-   "vision": {
-    "f1": 0.7192,
-    "ari": 0.6234,
-    "class_ratio": 1.905,
-    "split": 0,
-    "merge": 13
-   }
-  },
-  {
-   "seed": 1000,
-   "lines": 13,
-   "input": "C",
-   "style": "font",
-   "condition": "size_thickness",
-   "hypotheses": 24,
+   "hypotheses": 23,
    "gold_rules": 8,
    "gold_found": 5,
    "found": [
@@ -4400,30 +4322,104 @@
     "x は各行に1回（必須）",
     "v は各行に1回（必須）"
    ],
-   "true": 22,
-   "false": 1,
+   "true": 19,
+   "false": 3,
    "false_unmapped_symbols": 0,
    "unverifiable": 1,
    "tiers": {
-    "A": 7,
-    "B": 1,
-    "C": 16
+    "A": 9,
+    "C": 14
    },
-   "mean_sampling_stability": 0.708,
-   "mean_transcription_stability": 0.464,
-   "symbol_types": 27,
+   "mean_sampling_stability": 0.73,
+   "mean_transcription_stability": 0.451,
+   "symbol_types": 19,
    "symbols": 174,
    "verdict": "structure_observed",
    "segmentation_f1": {
-    "mdl": 0.49,
-    "branching": 0.354,
-    "consensus": 0.4,
-    "unigram": 0.33
+    "mdl": 0.514,
+    "branching": 0.393,
+    "consensus": 0.352,
+    "unigram": 0.323
    },
    "vision": {
     "f1": 1.0,
-    "ari": 0.922,
-    "class_ratio": 1.286,
+    "ari": 0.9381,
+    "class_ratio": 0.905,
+    "split": 0,
+    "merge": 0
+   }
+  },
+  {
+   "seed": 1000,
+   "lines": 13,
+   "input": "B",
+   "style": "font",
+   "condition": "size_thickness",
+   "hypotheses": 1,
+   "gold_rules": 8,
+   "gold_found": 0,
+   "found": [],
+   "true": 0,
+   "false": 0,
+   "false_unmapped_symbols": 0,
+   "unverifiable": 1,
+   "tiers": {
+    "C": 1
+   },
+   "mean_sampling_stability": 1.0,
+   "mean_transcription_stability": 0.0,
+   "symbol_types": 86,
+   "symbols": 131,
+   "verdict": "structure_unstable",
+   "segmentation_f1": {
+    "branching": 0.031,
+    "unigram": 0.176,
+    "consensus": 0.176,
+    "mdl": 0.434
+   },
+   "vision": {
+    "f1": 0.6689,
+    "ari": 0.3056,
+    "class_ratio": 2.762,
+    "split": 0,
+    "merge": 30
+   }
+  },
+  {
+   "seed": 1000,
+   "lines": 13,
+   "input": "C",
+   "style": "font",
+   "condition": "size_thickness",
+   "hypotheses": 4,
+   "gold_rules": 8,
+   "gold_found": 1,
+   "found": [
+    "文頭標識 S"
+   ],
+   "true": 3,
+   "false": 0,
+   "false_unmapped_symbols": 0,
+   "unverifiable": 1,
+   "tiers": {
+    "B": 1,
+    "C": 3
+   },
+   "mean_sampling_stability": 0.95,
+   "mean_transcription_stability": 0.168,
+   "symbol_types": 28,
+   "symbols": 134,
+   "verdict": "structure_observed",
+   "segmentation_f1": {
+    "mdl": 0.397,
+    "branching": 0.137,
+    "unigram": 0.213,
+    "consensus": 0.22
+   },
+   "vision": {
+    "f1": 0.7468,
+    "ari": 0.9557,
+    "class_ratio": 1.05,
     "split": 0,
     "merge": 0
    }
@@ -4434,7 +4430,7 @@
    "input": "B",
    "style": "font",
    "condition": "spacing",
-   "hypotheses": 9,
+   "hypotheses": 12,
    "gold_rules": 8,
    "gold_found": 3,
    "found": [
@@ -4442,31 +4438,32 @@
     "文末標識 E",
     "動詞接尾辞 v の直後に E"
    ],
-   "true": 6,
-   "false": 2,
+   "true": 10,
+   "false": 0,
    "false_unmapped_symbols": 0,
-   "unverifiable": 1,
+   "unverifiable": 2,
    "tiers": {
-    "A": 6,
-    "C": 3
+    "A": 2,
+    "B": 1,
+    "C": 9
    },
-   "mean_sampling_stability": 1.0,
-   "mean_transcription_stability": 0.557,
-   "symbol_types": 42,
-   "symbols": 142,
+   "mean_sampling_stability": 0.883,
+   "mean_transcription_stability": 0.378,
+   "symbol_types": 31,
+   "symbols": 156,
    "verdict": "structure_observed",
    "segmentation_f1": {
-    "branching": 0.179,
-    "mdl": 0.491,
-    "unigram": 0.133,
-    "consensus": 0.203
+    "mdl": 0.5,
+    "branching": 0.275,
+    "unigram": 0.198,
+    "consensus": 0.316
    },
    "vision": {
-    "f1": 0.7911,
-    "ari": 0.7582,
-    "class_ratio": 1.286,
+    "f1": 0.8667,
+    "ari": 0.8131,
+    "class_ratio": 0.952,
     "split": 0,
-    "merge": 29
+    "merge": 18
    }
   },
   {
@@ -4475,40 +4472,41 @@
    "input": "C",
    "style": "font",
    "condition": "spacing",
-   "hypotheses": 19,
+   "hypotheses": 23,
    "gold_rules": 8,
-   "gold_found": 4,
+   "gold_found": 5,
    "found": [
+    "文頭標識 S",
     "文末標識 E",
     "動詞接尾辞 v の直後に E",
     "x は各行に1回（必須）",
     "v は各行に1回（必須）"
    ],
-   "true": 13,
-   "false": 4,
+   "true": 19,
+   "false": 3,
    "false_unmapped_symbols": 0,
-   "unverifiable": 2,
+   "unverifiable": 1,
    "tiers": {
-    "A": 7,
-    "C": 12
+    "A": 9,
+    "C": 14
    },
-   "mean_sampling_stability": 0.789,
-   "mean_transcription_stability": 0.445,
-   "symbol_types": 22,
-   "symbols": 172,
+   "mean_sampling_stability": 0.73,
+   "mean_transcription_stability": 0.451,
+   "symbol_types": 19,
+   "symbols": 174,
    "verdict": "structure_observed",
    "segmentation_f1": {
-    "mdl": 0.558,
-    "branching": 0.32,
-    "consensus": 0.333,
-    "unigram": 0.244
+    "mdl": 0.514,
+    "branching": 0.393,
+    "consensus": 0.352,
+    "unigram": 0.323
    },
    "vision": {
-    "f1": 0.9884,
-    "ari": 0.8905,
-    "class_ratio": 1.0,
+    "f1": 1.0,
+    "ari": 0.9381,
+    "class_ratio": 0.905,
     "split": 0,
-    "merge": 2
+    "merge": 0
    }
   },
   {
@@ -4680,34 +4678,38 @@
    "input": "B",
    "style": "stroke",
    "condition": "size_thickness",
-   "hypotheses": 2,
+   "hypotheses": 10,
    "gold_rules": 8,
-   "gold_found": 0,
-   "found": [],
-   "true": 0,
-   "false": 1,
-   "false_unmapped_symbols": 1,
-   "unverifiable": 1,
+   "gold_found": 1,
+   "found": [
+    "文末標識 E"
+   ],
+   "true": 2,
+   "false": 6,
+   "false_unmapped_symbols": 5,
+   "unverifiable": 2,
    "tiers": {
-    "C": 2
+    "A": 1,
+    "B": 2,
+    "C": 7
    },
-   "mean_sampling_stability": null,
-   "mean_transcription_stability": 0.0,
-   "symbol_types": 29,
-   "symbols": 36,
-   "verdict": "structure_unstable",
+   "mean_sampling_stability": 0.78,
+   "mean_transcription_stability": 0.35,
+   "symbol_types": 97,
+   "symbols": 196,
+   "verdict": "structure_observed",
    "segmentation_f1": {
-    "branching": 0.034,
-    "consensus": 0.03,
-    "unigram": 0.03,
-    "mdl": 0.25
+    "branching": 0.0,
+    "unigram": 0.519,
+    "consensus": 0.514,
+    "mdl": 0.577
    },
    "vision": {
-    "f1": 0.2286,
-    "ari": 0.486,
-    "class_ratio": 1.667,
-    "split": 4,
-    "merge": 3
+    "f1": 0.8541,
+    "ari": 0.26,
+    "class_ratio": 4.286,
+    "split": 17,
+    "merge": 0
    }
   },
   {
@@ -4840,38 +4842,40 @@
    "input": "B",
    "style": "font",
    "condition": "clean",
-   "hypotheses": 51,
+   "hypotheses": 55,
    "gold_rules": 8,
-   "gold_found": 4,
+   "gold_found": 6,
    "found": [
+    "文頭標識 S",
     "文末標識 E",
     "動詞接尾辞 v の直後に E",
+    "接尾辞 x/q/v が同じ枠に入る",
     "x は各行に1回（必須）",
     "v は各行に1回（必須）"
    ],
-   "true": 26,
-   "false": 21,
+   "true": 31,
+   "false": 19,
    "false_unmapped_symbols": 0,
-   "unverifiable": 4,
+   "unverifiable": 5,
    "tiers": {
-    "A": 22,
-    "B": 3,
-    "C": 26
+    "A": 17,
+    "B": 2,
+    "C": 36
    },
-   "mean_sampling_stability": 0.78,
-   "mean_transcription_stability": 0.486,
+   "mean_sampling_stability": 0.742,
+   "mean_transcription_stability": 0.451,
    "symbol_types": 17,
    "symbols": 405,
    "verdict": "structure_observed",
    "segmentation_f1": {
-    "mdl": 0.446,
-    "branching": 0.431,
-    "consensus": 0.297,
-    "unigram": 0.245
+    "mdl": 0.488,
+    "branching": 0.462,
+    "consensus": 0.282,
+    "unigram": 0.212
    },
    "vision": {
     "f1": 1.0,
-    "ari": 0.8381,
+    "ari": 0.8141,
     "class_ratio": 0.81,
     "split": 0,
     "merge": 0
@@ -4883,40 +4887,40 @@
    "input": "C",
    "style": "font",
    "condition": "clean",
-   "hypotheses": 54,
+   "hypotheses": 56,
    "gold_rules": 8,
    "gold_found": 5,
    "found": [
+    "文頭標識 S",
     "文末標識 E",
     "動詞接尾辞 v の直後に E",
-    "接尾辞 x/q/v が同じ枠に入る",
     "x は各行に1回（必須）",
     "v は各行に1回（必須）"
    ],
-   "true": 35,
-   "false": 14,
+   "true": 38,
+   "false": 17,
    "false_unmapped_symbols": 0,
-   "unverifiable": 5,
+   "unverifiable": 1,
    "tiers": {
-    "A": 22,
-    "B": 5,
+    "A": 26,
+    "B": 3,
     "C": 27
    },
-   "mean_sampling_stability": 0.77,
-   "mean_transcription_stability": 0.516,
-   "symbol_types": 20,
+   "mean_sampling_stability": 0.757,
+   "mean_transcription_stability": 0.501,
+   "symbol_types": 19,
    "symbols": 405,
    "verdict": "structure_observed",
    "segmentation_f1": {
-    "mdl": 0.457,
-    "branching": 0.428,
-    "consensus": 0.287,
-    "unigram": 0.222
+    "mdl": 0.5,
+    "branching": 0.46,
+    "consensus": 0.292,
+    "unigram": 0.216
    },
    "vision": {
     "f1": 1.0,
-    "ari": 0.8949,
-    "class_ratio": 0.952,
+    "ari": 0.9159,
+    "class_ratio": 0.905,
     "split": 0,
     "merge": 0
    }
@@ -4958,36 +4962,36 @@
    "gold_rules": 8,
    "gold_found": 5,
    "found": [
+    "文頭標識 S",
     "文末標識 E",
     "動詞接尾辞 v の直後に E",
-    "接尾辞 x/q/v が同じ枠に入る",
     "x は各行に1回（必須）",
     "v は各行に1回（必須）"
    ],
-   "true": 36,
-   "false": 19,
+   "true": 38,
+   "false": 17,
    "false_unmapped_symbols": 0,
    "unverifiable": 1,
    "tiers": {
-    "A": 24,
-    "B": 4,
-    "C": 28
+    "A": 26,
+    "B": 3,
+    "C": 27
    },
-   "mean_sampling_stability": 0.728,
-   "mean_transcription_stability": 0.529,
-   "symbol_types": 21,
+   "mean_sampling_stability": 0.757,
+   "mean_transcription_stability": 0.501,
+   "symbol_types": 19,
    "symbols": 405,
    "verdict": "structure_observed",
    "segmentation_f1": {
-    "mdl": 0.439,
-    "branching": 0.405,
-    "consensus": 0.259,
-    "unigram": 0.222
+    "mdl": 0.5,
+    "branching": 0.46,
+    "consensus": 0.292,
+    "unigram": 0.216
    },
    "vision": {
     "f1": 1.0,
-    "ari": 0.8922,
-    "class_ratio": 1.0,
+    "ari": 0.9159,
+    "class_ratio": 0.905,
     "split": 0,
     "merge": 0
    }
@@ -4998,81 +5002,74 @@
    "input": "B",
    "style": "font",
    "condition": "size_thickness",
-   "hypotheses": 8,
+   "hypotheses": 4,
+   "gold_rules": 8,
+   "gold_found": 0,
+   "found": [],
+   "true": 0,
+   "false": 4,
+   "false_unmapped_symbols": 0,
+   "unverifiable": 0,
+   "tiers": {
+    "B": 1,
+    "C": 3
+   },
+   "mean_sampling_stability": 0.5,
+   "mean_transcription_stability": 0.333,
+   "symbol_types": 144,
+   "symbols": 307,
+   "verdict": "structure_observed",
+   "segmentation_f1": {
+    "branching": 0.0,
+    "unigram": 0.224,
+    "consensus": 0.224,
+    "mdl": 0.462
+   },
+   "vision": {
+    "f1": 0.7472,
+    "ari": 0.2672,
+    "class_ratio": 4.952,
+    "split": 0,
+    "merge": 42
+   }
+  },
+  {
+   "seed": 1000,
+   "lines": 30,
+   "input": "C",
+   "style": "font",
+   "condition": "size_thickness",
+   "hypotheses": 16,
    "gold_rules": 8,
    "gold_found": 2,
    "found": [
-    "文末標識 E",
-    "接尾辞 x/q/v が同じ枠に入る"
+    "文頭標識 S",
+    "文末標識 E"
    ],
-   "true": 5,
-   "false": 2,
-   "false_unmapped_symbols": 0,
+   "true": 10,
+   "false": 5,
+   "false_unmapped_symbols": 1,
    "unverifiable": 1,
    "tiers": {
-    "B": 2,
-    "C": 6
+    "B": 5,
+    "C": 11
    },
-   "mean_sampling_stability": 0.7,
-   "mean_transcription_stability": 0.346,
-   "symbol_types": 107,
-   "symbols": 246,
+   "mean_sampling_stability": 0.569,
+   "mean_transcription_stability": 0.417,
+   "symbol_types": 33,
+   "symbols": 325,
    "verdict": "structure_observed",
    "segmentation_f1": {
-    "branching": 0.117,
-    "unigram": 0.234,
-    "consensus": 0.24,
-    "mdl": 0.358
+    "mdl": 0.463,
+    "branching": 0.181,
+    "unigram": 0.237,
+    "consensus": 0.29
    },
    "vision": {
-    "f1": 0.5991,
-    "ari": 0.5323,
-    "class_ratio": 2.714,
-    "split": 0,
-    "merge": 51
-   }
-  },
-  {
-   "seed": 1000,
-   "lines": 30,
-   "input": "C",
-   "style": "font",
-   "condition": "size_thickness",
-   "hypotheses": 35,
-   "gold_rules": 8,
-   "gold_found": 5,
-   "found": [
-    "文末標識 E",
-    "動詞接尾辞 v の直後に E",
-    "接尾辞 x/q/v が同じ枠に入る",
-    "x は各行に1回（必須）",
-    "v は各行に1回（必須）"
-   ],
-   "true": 21,
-   "false": 13,
-   "false_unmapped_symbols": 0,
-   "unverifiable": 1,
-   "tiers": {
-    "A": 20,
-    "B": 2,
-    "C": 13
-   },
-   "mean_sampling_stability": 0.781,
-   "mean_transcription_stability": 0.628,
-   "symbol_types": 29,
-   "symbols": 405,
-   "verdict": "structure_observed",
-   "segmentation_f1": {
-    "mdl": 0.504,
-    "branching": 0.485,
-    "consensus": 0.362,
-    "unigram": 0.324
-   },
-   "vision": {
-    "f1": 1.0,
-    "ari": 0.8203,
-    "class_ratio": 1.381,
-    "split": 0,
+    "f1": 0.7589,
+    "ari": 0.9201,
+    "class_ratio": 1.143,
+    "split": 1,
     "merge": 0
    }
   },
@@ -5082,40 +5079,41 @@
    "input": "B",
    "style": "font",
    "condition": "spacing",
-   "hypotheses": 38,
+   "hypotheses": 37,
    "gold_rules": 8,
-   "gold_found": 3,
+   "gold_found": 5,
    "found": [
     "文頭標識 S",
     "文末標識 E",
-    "動詞接尾辞 v の直後に E"
+    "動詞接尾辞 v の直後に E",
+    "接尾辞 x/q/v が同じ枠に入る",
+    "v は各行に1回（必須）"
    ],
-   "true": 21,
-   "false": 12,
-   "false_unmapped_symbols": 1,
-   "unverifiable": 5,
+   "true": 28,
+   "false": 5,
+   "false_unmapped_symbols": 0,
+   "unverifiable": 4,
    "tiers": {
-    "A": 10,
-    "B": 1,
-    "C": 27
+    "A": 15,
+    "C": 22
    },
-   "mean_sampling_stability": 0.683,
-   "mean_transcription_stability": 0.42,
-   "symbol_types": 54,
-   "symbols": 340,
+   "mean_sampling_stability": 0.761,
+   "mean_transcription_stability": 0.444,
+   "symbol_types": 41,
+   "symbols": 366,
    "verdict": "structure_observed",
    "segmentation_f1": {
-    "mdl": 0.493,
-    "branching": 0.281,
-    "unigram": 0.151,
-    "consensus": 0.217
+    "mdl": 0.514,
+    "consensus": 0.324,
+    "branching": 0.405,
+    "unigram": 0.251
    },
    "vision": {
-    "f1": 0.8134,
-    "ari": 0.7774,
-    "class_ratio": 1.476,
+    "f1": 0.882,
+    "ari": 0.807,
+    "class_ratio": 1.048,
     "split": 0,
-    "merge": 58
+    "merge": 37
    }
   },
   {
@@ -5124,41 +5122,42 @@
    "input": "C",
    "style": "font",
    "condition": "spacing",
-   "hypotheses": 53,
+   "hypotheses": 56,
    "gold_rules": 8,
-   "gold_found": 4,
+   "gold_found": 5,
    "found": [
+    "文頭標識 S",
     "文末標識 E",
     "動詞接尾辞 v の直後に E",
     "x は各行に1回（必須）",
     "v は各行に1回（必須）"
    ],
-   "true": 34,
-   "false": 14,
+   "true": 38,
+   "false": 17,
    "false_unmapped_symbols": 0,
-   "unverifiable": 5,
+   "unverifiable": 1,
    "tiers": {
-    "A": 23,
-    "B": 1,
-    "C": 29
+    "A": 26,
+    "B": 3,
+    "C": 27
    },
-   "mean_sampling_stability": 0.771,
-   "mean_transcription_stability": 0.533,
-   "symbol_types": 25,
-   "symbols": 398,
+   "mean_sampling_stability": 0.757,
+   "mean_transcription_stability": 0.501,
+   "symbol_types": 19,
+   "symbols": 405,
    "verdict": "structure_observed",
    "segmentation_f1": {
-    "mdl": 0.462,
-    "branching": 0.474,
-    "consensus": 0.336,
-    "unigram": 0.287
+    "mdl": 0.5,
+    "branching": 0.46,
+    "consensus": 0.292,
+    "unigram": 0.216
    },
    "vision": {
-    "f1": 0.9813,
-    "ari": 0.885,
-    "class_ratio": 1.048,
+    "f1": 1.0,
+    "ari": 0.9159,
+    "class_ratio": 0.905,
     "split": 0,
-    "merge": 7
+    "merge": 0
    }
   },
   {
@@ -5293,30 +5292,30 @@
     "x は各行に1回（必須）",
     "v は各行に1回（必須）"
    ],
-   "true": 36,
-   "false": 14,
+   "true": 39,
+   "false": 13,
    "false_unmapped_symbols": 7,
-   "unverifiable": 3,
+   "unverifiable": 1,
    "tiers": {
-    "A": 27,
-    "B": 5,
-    "C": 21
+    "A": 28,
+    "B": 6,
+    "C": 19
    },
-   "mean_sampling_stability": 0.815,
-   "mean_transcription_stability": 0.636,
-   "symbol_types": 24,
-   "symbols": 433,
+   "mean_sampling_stability": 0.788,
+   "mean_transcription_stability": 0.665,
+   "symbol_types": 23,
+   "symbols": 434,
    "verdict": "structure_observed",
    "segmentation_f1": {
-    "mdl": 0.498,
-    "branching": 0.442,
-    "consensus": 0.308,
+    "mdl": 0.5,
+    "branching": 0.448,
+    "consensus": 0.317,
     "unigram": 0.241
    },
    "vision": {
-    "f1": 0.9236,
+    "f1": 0.9201,
     "ari": 0.9788,
-    "class_ratio": 1.095,
+    "class_ratio": 1.1,
     "split": 19,
     "merge": 0
    }
@@ -5327,34 +5326,39 @@
    "input": "B",
    "style": "stroke",
    "condition": "size_thickness",
-   "hypotheses": 2,
+   "hypotheses": 43,
    "gold_rules": 8,
-   "gold_found": 0,
-   "found": [],
-   "true": 0,
-   "false": 1,
-   "false_unmapped_symbols": 1,
-   "unverifiable": 1,
+   "gold_found": 2,
+   "found": [
+    "文頭標識 S",
+    "文末標識 E"
+   ],
+   "true": 5,
+   "false": 34,
+   "false_unmapped_symbols": 7,
+   "unverifiable": 4,
    "tiers": {
-    "C": 2
+    "A": 3,
+    "B": 9,
+    "C": 31
    },
-   "mean_sampling_stability": 0.8,
-   "mean_transcription_stability": 0.33,
-   "symbol_types": 33,
-   "symbols": 42,
-   "verdict": "structure_unstable",
+   "mean_sampling_stability": 0.553,
+   "mean_transcription_stability": 0.479,
+   "symbol_types": 155,
+   "symbols": 458,
+   "verdict": "structure_observed",
    "segmentation_f1": {
-    "branching": 0.015,
-    "consensus": 0.028,
-    "unigram": 0.028,
-    "mdl": 0.138
+    "branching": 0.053,
+    "consensus": 0.371,
+    "mdl": 0.558,
+    "unigram": 0.376
    },
    "vision": {
-    "f1": 0.1163,
-    "ari": 0.6056,
-    "class_ratio": 1.667,
-    "split": 4,
-    "merge": 7
+    "f1": 0.8598,
+    "ari": 0.2565,
+    "class_ratio": 7.048,
+    "split": 38,
+    "merge": 0
    }
   },
   {
@@ -5491,34 +5495,37 @@
    "condition": "clean",
    "hypotheses": 19,
    "gold_rules": 8,
-   "gold_found": 3,
+   "gold_found": 5,
    "found": [
+    "文頭標識 S",
     "文末標識 E",
     "動詞接尾辞 v の直後に E",
+    "x は各行に1回（必須）",
     "v は各行に1回（必須）"
    ],
-   "true": 12,
+   "true": 13,
    "false": 4,
    "false_unmapped_symbols": 0,
-   "unverifiable": 3,
+   "unverifiable": 2,
    "tiers": {
-    "A": 6,
-    "C": 13
+    "A": 4,
+    "B": 1,
+    "C": 14
    },
-   "mean_sampling_stability": 0.663,
-   "mean_transcription_stability": 0.504,
+   "mean_sampling_stability": 0.653,
+   "mean_transcription_stability": 0.401,
    "symbol_types": 16,
    "symbols": 164,
    "verdict": "structure_observed",
    "segmentation_f1": {
-    "mdl": 0.55,
-    "branching": 0.33,
-    "consensus": 0.321,
-    "unigram": 0.212
+    "mdl": 0.558,
+    "branching": 0.311,
+    "consensus": 0.309,
+    "unigram": 0.259
    },
    "vision": {
     "f1": 1.0,
-    "ari": 0.8491,
+    "ari": 0.8822,
     "class_ratio": 0.8,
     "split": 0,
     "merge": 0
@@ -5530,39 +5537,40 @@
    "input": "C",
    "style": "font",
    "condition": "clean",
-   "hypotheses": 20,
+   "hypotheses": 24,
    "gold_rules": 8,
-   "gold_found": 4,
+   "gold_found": 5,
    "found": [
+    "文頭標識 S",
     "文末標識 E",
     "動詞接尾辞 v の直後に E",
     "x は各行に1回（必須）",
     "v は各行に1回（必須）"
    ],
-   "true": 14,
+   "true": 17,
    "false": 4,
    "false_unmapped_symbols": 0,
-   "unverifiable": 2,
+   "unverifiable": 3,
    "tiers": {
     "A": 6,
     "B": 1,
-    "C": 13
+    "C": 17
    },
-   "mean_sampling_stability": 0.6,
-   "mean_transcription_stability": 0.445,
-   "symbol_types": 19,
+   "mean_sampling_stability": 0.692,
+   "mean_transcription_stability": 0.442,
+   "symbol_types": 18,
    "symbols": 164,
    "verdict": "structure_observed",
    "segmentation_f1": {
-    "mdl": 0.566,
-    "branching": 0.33,
-    "consensus": 0.33,
-    "unigram": 0.25
+    "mdl": 0.571,
+    "branching": 0.294,
+    "consensus": 0.286,
+    "unigram": 0.261
    },
    "vision": {
     "f1": 1.0,
-    "ari": 0.8872,
-    "class_ratio": 0.95,
+    "ari": 0.9303,
+    "class_ratio": 0.9,
     "split": 0,
     "merge": 0
    }
@@ -5598,7 +5606,7 @@
     "ari": null,
     "class_ratio": null,
     "split": 0,
-    "merge": 1
+    "merge": 2
    }
   },
   {
@@ -5607,39 +5615,40 @@
    "input": "C",
    "style": "font",
    "condition": "noise",
-   "hypotheses": 20,
+   "hypotheses": 24,
    "gold_rules": 8,
-   "gold_found": 4,
+   "gold_found": 5,
    "found": [
+    "文頭標識 S",
     "文末標識 E",
     "動詞接尾辞 v の直後に E",
     "x は各行に1回（必須）",
     "v は各行に1回（必須）"
    ],
-   "true": 14,
+   "true": 17,
    "false": 4,
    "false_unmapped_symbols": 0,
-   "unverifiable": 2,
+   "unverifiable": 3,
    "tiers": {
     "A": 6,
     "B": 1,
-    "C": 13
+    "C": 17
    },
-   "mean_sampling_stability": 0.6,
-   "mean_transcription_stability": 0.445,
-   "symbol_types": 19,
+   "mean_sampling_stability": 0.692,
+   "mean_transcription_stability": 0.442,
+   "symbol_types": 18,
    "symbols": 164,
    "verdict": "structure_observed",
    "segmentation_f1": {
-    "mdl": 0.566,
-    "branching": 0.33,
-    "consensus": 0.33,
-    "unigram": 0.25
+    "mdl": 0.571,
+    "branching": 0.294,
+    "consensus": 0.286,
+    "unigram": 0.261
    },
    "vision": {
     "f1": 1.0,
-    "ari": 0.8872,
-    "class_ratio": 0.95,
+    "ari": 0.9303,
+    "class_ratio": 0.9,
     "split": 0,
     "merge": 0
    }
@@ -5650,34 +5659,32 @@
    "input": "B",
    "style": "font",
    "condition": "size_thickness",
-   "hypotheses": 1,
+   "hypotheses": 0,
    "gold_rules": 8,
    "gold_found": 0,
    "found": [],
    "true": 0,
-   "false": 1,
+   "false": 0,
    "false_unmapped_symbols": 0,
    "unverifiable": 0,
-   "tiers": {
-    "C": 1
-   },
-   "mean_sampling_stability": 0.0,
-   "mean_transcription_stability": 0.0,
-   "symbol_types": 62,
-   "symbols": 84,
-   "verdict": "structure_unstable",
+   "tiers": {},
+   "mean_sampling_stability": null,
+   "mean_transcription_stability": null,
+   "symbol_types": 64,
+   "symbols": 100,
+   "verdict": "global_only",
    "segmentation_f1": {
-    "branching": 0.034,
-    "unigram": 0.139,
-    "consensus": 0.139,
-    "mdl": 0.369
+    "branching": 0.0,
+    "unigram": 0.253,
+    "consensus": 0.253,
+    "mdl": 0.436
    },
    "vision": {
-    "f1": 0.3952,
-    "ari": 0.5874,
-    "class_ratio": 1.611,
+    "f1": 0.6212,
+    "ari": 0.3461,
+    "class_ratio": 2.3,
     "split": 0,
-    "merge": 36
+    "merge": 18
    }
   },
   {
@@ -5686,37 +5693,36 @@
    "input": "C",
    "style": "font",
    "condition": "size_thickness",
-   "hypotheses": 10,
+   "hypotheses": 4,
    "gold_rules": 8,
    "gold_found": 2,
    "found": [
-    "文末標識 E",
-    "動詞接尾辞 v の直後に E"
+    "文頭標識 S",
+    "文末標識 E"
    ],
-   "true": 8,
+   "true": 2,
    "false": 1,
    "false_unmapped_symbols": 0,
    "unverifiable": 1,
    "tiers": {
-    "A": 3,
-    "B": 2,
-    "C": 5
+    "B": 1,
+    "C": 3
    },
-   "mean_sampling_stability": 0.66,
-   "mean_transcription_stability": 0.507,
-   "symbol_types": 28,
-   "symbols": 164,
+   "mean_sampling_stability": 0.8,
+   "mean_transcription_stability": 0.333,
+   "symbol_types": 27,
+   "symbols": 130,
    "verdict": "structure_observed",
    "segmentation_f1": {
-    "mdl": 0.482,
-    "branching": 0.235,
-    "unigram": 0.319,
-    "consensus": 0.311
+    "mdl": 0.412,
+    "branching": 0.114,
+    "unigram": 0.349,
+    "consensus": 0.352
    },
    "vision": {
-    "f1": 1.0,
-    "ari": 0.8306,
-    "class_ratio": 1.4,
+    "f1": 0.7891,
+    "ari": 0.8701,
+    "class_ratio": 1.1,
     "split": 0,
     "merge": 0
    }
@@ -5727,7 +5733,7 @@
    "input": "B",
    "style": "font",
    "condition": "spacing",
-   "hypotheses": 8,
+   "hypotheses": 6,
    "gold_rules": 8,
    "gold_found": 3,
    "found": [
@@ -5735,32 +5741,32 @@
     "文末標識 E",
     "動詞接尾辞 v の直後に E"
    ],
-   "true": 7,
-   "false": 0,
+   "true": 4,
+   "false": 2,
    "false_unmapped_symbols": 0,
-   "unverifiable": 1,
+   "unverifiable": 0,
    "tiers": {
-    "A": 3,
-    "B": 2,
+    "A": 2,
+    "B": 1,
     "C": 3
    },
    "mean_sampling_stability": 0.7,
-   "mean_transcription_stability": 0.585,
-   "symbol_types": 36,
-   "symbols": 132,
+   "mean_transcription_stability": 0.667,
+   "symbol_types": 30,
+   "symbols": 142,
    "verdict": "structure_observed",
    "segmentation_f1": {
-    "branching": 0.116,
-    "mdl": 0.392,
-    "unigram": 0.135,
-    "consensus": 0.154
+    "mdl": 0.449,
+    "branching": 0.182,
+    "unigram": 0.2,
+    "consensus": 0.235
    },
    "vision": {
-    "f1": 0.7568,
-    "ari": 0.7675,
-    "class_ratio": 1.15,
+    "f1": 0.8366,
+    "ari": 0.8319,
+    "class_ratio": 1.05,
     "split": 0,
-    "merge": 29
+    "merge": 21
    }
   },
   {
@@ -5769,40 +5775,42 @@
    "input": "C",
    "style": "font",
    "condition": "spacing",
-   "hypotheses": 17,
+   "hypotheses": 24,
    "gold_rules": 8,
-   "gold_found": 3,
+   "gold_found": 5,
    "found": [
+    "文頭標識 S",
     "文末標識 E",
     "動詞接尾辞 v の直後に E",
+    "x は各行に1回（必須）",
     "v は各行に1回（必須）"
    ],
-   "true": 10,
+   "true": 17,
    "false": 4,
    "false_unmapped_symbols": 0,
    "unverifiable": 3,
    "tiers": {
-    "A": 5,
+    "A": 6,
     "B": 1,
-    "C": 11
+    "C": 17
    },
-   "mean_sampling_stability": 0.664,
-   "mean_transcription_stability": 0.495,
-   "symbol_types": 24,
-   "symbols": 157,
+   "mean_sampling_stability": 0.692,
+   "mean_transcription_stability": 0.442,
+   "symbol_types": 18,
+   "symbols": 164,
    "verdict": "structure_observed",
    "segmentation_f1": {
-    "mdl": 0.456,
-    "branching": 0.2,
-    "consensus": 0.217,
-    "unigram": 0.175
+    "mdl": 0.571,
+    "branching": 0.294,
+    "consensus": 0.286,
+    "unigram": 0.261
    },
    "vision": {
-    "f1": 0.9346,
-    "ari": 0.8774,
-    "class_ratio": 0.95,
+    "f1": 1.0,
+    "ari": 0.9303,
+    "class_ratio": 0.9,
     "split": 0,
-    "merge": 7
+    "merge": 0
    }
   },
   {
@@ -5905,8 +5913,8 @@
    "tiers": {},
    "mean_sampling_stability": null,
    "mean_transcription_stability": null,
-   "symbol_types": 5,
-   "symbols": 5,
+   "symbol_types": 4,
+   "symbols": 4,
    "verdict": "no_structure_detected",
    "segmentation_f1": {
     "branching": 0.0,
@@ -5968,32 +5976,37 @@
    "input": "B",
    "style": "stroke",
    "condition": "size_thickness",
-   "hypotheses": 0,
+   "hypotheses": 5,
    "gold_rules": 8,
-   "gold_found": 0,
-   "found": [],
-   "true": 0,
-   "false": 0,
-   "false_unmapped_symbols": 0,
-   "unverifiable": 0,
-   "tiers": {},
-   "mean_sampling_stability": null,
-   "mean_transcription_stability": null,
-   "symbol_types": 7,
-   "symbols": 9,
-   "verdict": "no_structure_detected",
+   "gold_found": 1,
+   "found": [
+    "文頭標識 S"
+   ],
+   "true": 1,
+   "false": 3,
+   "false_unmapped_symbols": 3,
+   "unverifiable": 1,
+   "tiers": {
+    "B": 2,
+    "C": 3
+   },
+   "mean_sampling_stability": 0.8,
+   "mean_transcription_stability": 0.466,
+   "symbol_types": 89,
+   "symbols": 183,
+   "verdict": "structure_observed",
    "segmentation_f1": {
     "branching": 0.0,
-    "consensus": 0.0,
-    "unigram": 0.0,
-    "mdl": 0.033
+    "unigram": 0.326,
+    "consensus": 0.326,
+    "mdl": 0.477
    },
    "vision": {
-    "f1": 0.0347,
-    "ari": 1.0,
-    "class_ratio": 1.0,
-    "split": 2,
-    "merge": 2
+    "f1": 0.8818,
+    "ari": 0.3138,
+    "class_ratio": 4.2,
+    "split": 19,
+    "merge": 0
    }
   },
   {
@@ -6122,7 +6135,7 @@
    "input": "B",
    "style": "font",
    "condition": "clean",
-   "hypotheses": 50,
+   "hypotheses": 57,
    "gold_rules": 8,
    "gold_found": 5,
    "found": [
@@ -6132,29 +6145,29 @@
     "x は各行に1回（必須）",
     "v は各行に1回（必須）"
    ],
-   "true": 31,
+   "true": 36,
    "false": 17,
    "false_unmapped_symbols": 0,
-   "unverifiable": 2,
+   "unverifiable": 4,
    "tiers": {
-    "A": 21,
-    "B": 3,
-    "C": 26
+    "A": 20,
+    "B": 6,
+    "C": 31
    },
-   "mean_sampling_stability": 0.802,
-   "mean_transcription_stability": 0.5,
+   "mean_sampling_stability": 0.786,
+   "mean_transcription_stability": 0.486,
    "symbol_types": 16,
    "symbols": 402,
    "verdict": "structure_observed",
    "segmentation_f1": {
-    "mdl": 0.456,
-    "branching": 0.468,
-    "consensus": 0.319,
-    "unigram": 0.256
+    "mdl": 0.49,
+    "branching": 0.505,
+    "consensus": 0.376,
+    "unigram": 0.311
    },
    "vision": {
     "f1": 1.0,
-    "ari": 0.8758,
+    "ari": 0.9024,
     "class_ratio": 0.8,
     "split": 0,
     "merge": 0
@@ -6166,7 +6179,7 @@
    "input": "C",
    "style": "font",
    "condition": "clean",
-   "hypotheses": 46,
+   "hypotheses": 49,
    "gold_rules": 8,
    "gold_found": 5,
    "found": [
@@ -6176,30 +6189,30 @@
     "x は各行に1回（必須）",
     "v は各行に1回（必須）"
    ],
-   "true": 34,
-   "false": 11,
+   "true": 36,
+   "false": 10,
    "false_unmapped_symbols": 0,
-   "unverifiable": 1,
+   "unverifiable": 3,
    "tiers": {
-    "A": 23,
+    "A": 25,
     "B": 6,
-    "C": 17
+    "C": 18
    },
-   "mean_sampling_stability": 0.812,
-   "mean_transcription_stability": 0.623,
-   "symbol_types": 19,
+   "mean_sampling_stability": 0.816,
+   "mean_transcription_stability": 0.622,
+   "symbol_types": 18,
    "symbols": 402,
    "verdict": "structure_observed",
    "segmentation_f1": {
-    "mdl": 0.456,
-    "branching": 0.467,
-    "consensus": 0.312,
-    "unigram": 0.258
+    "mdl": 0.447,
+    "branching": 0.48,
+    "consensus": 0.333,
+    "unigram": 0.303
    },
    "vision": {
     "f1": 1.0,
-    "ari": 0.9117,
-    "class_ratio": 0.95,
+    "ari": 0.9366,
+    "class_ratio": 0.9,
     "split": 0,
     "merge": 0
    }
@@ -6237,7 +6250,7 @@
    "input": "C",
    "style": "font",
    "condition": "noise",
-   "hypotheses": 59,
+   "hypotheses": 49,
    "gold_rules": 8,
    "gold_found": 5,
    "found": [
@@ -6247,30 +6260,30 @@
     "x は各行に1回（必須）",
     "v は各行に1回（必須）"
    ],
-   "true": 41,
-   "false": 13,
+   "true": 36,
+   "false": 10,
    "false_unmapped_symbols": 0,
-   "unverifiable": 5,
+   "unverifiable": 3,
    "tiers": {
-    "A": 28,
+    "A": 25,
     "B": 6,
-    "C": 25
+    "C": 18
    },
-   "mean_sampling_stability": 0.763,
-   "mean_transcription_stability": 0.596,
-   "symbol_types": 20,
+   "mean_sampling_stability": 0.816,
+   "mean_transcription_stability": 0.622,
+   "symbol_types": 18,
    "symbols": 402,
    "verdict": "structure_observed",
    "segmentation_f1": {
-    "mdl": 0.456,
-    "consensus": 0.269,
-    "branching": 0.46,
-    "unigram": 0.201
+    "mdl": 0.447,
+    "branching": 0.48,
+    "consensus": 0.333,
+    "unigram": 0.303
    },
    "vision": {
     "f1": 1.0,
-    "ari": 0.9056,
-    "class_ratio": 1.0,
+    "ari": 0.9366,
+    "class_ratio": 0.9,
     "split": 0,
     "merge": 0
    }
@@ -6281,7 +6294,44 @@
    "input": "B",
    "style": "font",
    "condition": "size_thickness",
-   "hypotheses": 13,
+   "hypotheses": 5,
+   "gold_rules": 8,
+   "gold_found": 0,
+   "found": [],
+   "true": 0,
+   "false": 3,
+   "false_unmapped_symbols": 0,
+   "unverifiable": 2,
+   "tiers": {
+    "B": 1,
+    "C": 4
+   },
+   "mean_sampling_stability": 0.76,
+   "mean_transcription_stability": 0.334,
+   "symbol_types": 125,
+   "symbols": 282,
+   "verdict": "structure_observed",
+   "segmentation_f1": {
+    "branching": 0.093,
+    "unigram": 0.235,
+    "consensus": 0.244,
+    "mdl": 0.46
+   },
+   "vision": {
+    "f1": 0.7164,
+    "ari": 0.2934,
+    "class_ratio": 4.4,
+    "split": 0,
+    "merge": 37
+   }
+  },
+  {
+   "seed": 1001,
+   "lines": 30,
+   "input": "C",
+   "style": "font",
+   "condition": "size_thickness",
+   "hypotheses": 6,
    "gold_rules": 8,
    "gold_found": 2,
    "found": [
@@ -6289,72 +6339,28 @@
     "文末標識 E"
    ],
    "true": 5,
-   "false": 7,
-   "false_unmapped_symbols": 2,
-   "unverifiable": 1,
-   "tiers": {
-    "B": 4,
-    "C": 9
-   },
-   "mean_sampling_stability": 0.633,
-   "mean_transcription_stability": 0.486,
-   "symbol_types": 111,
-   "symbols": 273,
-   "verdict": "structure_observed",
-   "segmentation_f1": {
-    "branching": 0.089,
-    "unigram": 0.256,
-    "consensus": 0.261,
-    "mdl": 0.422
-   },
-   "vision": {
-    "f1": 0.637,
-    "ari": 0.4757,
-    "class_ratio": 2.9,
-    "split": 0,
-    "merge": 59
-   }
-  },
-  {
-   "seed": 1001,
-   "lines": 30,
-   "input": "C",
-   "style": "font",
-   "condition": "size_thickness",
-   "hypotheses": 51,
-   "gold_rules": 8,
-   "gold_found": 5,
-   "found": [
-    "文頭標識 S",
-    "文末標識 E",
-    "動詞接尾辞 v の直後に E",
-    "x は各行に1回（必須）",
-    "v は各行に1回（必須）"
-   ],
-   "true": 32,
-   "false": 12,
+   "false": 1,
    "false_unmapped_symbols": 0,
-   "unverifiable": 7,
+   "unverifiable": 0,
    "tiers": {
-    "A": 14,
-    "B": 6,
-    "C": 31
+    "B": 5,
+    "C": 1
    },
-   "mean_sampling_stability": 0.788,
-   "mean_transcription_stability": 0.52,
-   "symbol_types": 29,
-   "symbols": 402,
+   "mean_sampling_stability": 0.8,
+   "mean_transcription_stability": 0.723,
+   "symbol_types": 35,
+   "symbols": 317,
    "verdict": "structure_observed",
    "segmentation_f1": {
-    "mdl": 0.42,
-    "branching": 0.54,
-    "consensus": 0.467,
-    "unigram": 0.28
+    "mdl": 0.446,
+    "branching": 0.239,
+    "unigram": 0.195,
+    "consensus": 0.294
    },
    "vision": {
-    "f1": 1.0,
-    "ari": 0.8571,
-    "class_ratio": 1.45,
+    "f1": 0.765,
+    "ari": 0.8729,
+    "class_ratio": 1.2,
     "split": 0,
     "merge": 0
    }
@@ -6365,7 +6371,7 @@
    "input": "B",
    "style": "font",
    "condition": "spacing",
-   "hypotheses": 26,
+   "hypotheses": 45,
    "gold_rules": 8,
    "gold_found": 3,
    "found": [
@@ -6373,31 +6379,32 @@
     "文末標識 E",
     "動詞接尾辞 v の直後に E"
    ],
-   "true": 15,
-   "false": 5,
-   "false_unmapped_symbols": 0,
-   "unverifiable": 6,
+   "true": 28,
+   "false": 13,
+   "false_unmapped_symbols": 2,
+   "unverifiable": 4,
    "tiers": {
-    "A": 5,
-    "C": 21
+    "A": 7,
+    "B": 4,
+    "C": 34
    },
-   "mean_sampling_stability": 0.7,
-   "mean_transcription_stability": 0.401,
-   "symbol_types": 49,
-   "symbols": 328,
+   "mean_sampling_stability": 0.629,
+   "mean_transcription_stability": 0.328,
+   "symbol_types": 43,
+   "symbols": 352,
    "verdict": "structure_observed",
    "segmentation_f1": {
-    "mdl": 0.419,
-    "branching": 0.131,
-    "consensus": 0.112,
-    "unigram": 0.069
+    "mdl": 0.444,
+    "branching": 0.316,
+    "consensus": 0.26,
+    "unigram": 0.126
    },
    "vision": {
-    "f1": 0.7589,
-    "ari": 0.8066,
-    "class_ratio": 1.2,
+    "f1": 0.8408,
+    "ari": 0.8791,
+    "class_ratio": 1.1,
     "split": 0,
-    "merge": 65
+    "merge": 46
    }
   },
   {
@@ -6406,42 +6413,41 @@
    "input": "C",
    "style": "font",
    "condition": "spacing",
-   "hypotheses": 50,
+   "hypotheses": 57,
    "gold_rules": 8,
-   "gold_found": 5,
+   "gold_found": 4,
    "found": [
     "文頭標識 S",
     "文末標識 E",
     "動詞接尾辞 v の直後に E",
-    "x は各行に1回（必須）",
     "v は各行に1回（必須）"
    ],
-   "true": 37,
-   "false": 8,
-   "false_unmapped_symbols": 1,
+   "true": 41,
+   "false": 11,
+   "false_unmapped_symbols": 0,
    "unverifiable": 5,
    "tiers": {
-    "A": 23,
-    "B": 4,
-    "C": 23
+    "A": 25,
+    "B": 7,
+    "C": 25
    },
-   "mean_sampling_stability": 0.78,
-   "mean_transcription_stability": 0.503,
-   "symbol_types": 28,
-   "symbols": 387,
+   "mean_sampling_stability": 0.786,
+   "mean_transcription_stability": 0.522,
+   "symbol_types": 19,
+   "symbols": 401,
    "verdict": "structure_observed",
    "segmentation_f1": {
-    "mdl": 0.468,
-    "consensus": 0.325,
-    "branching": 0.426,
-    "unigram": 0.173
+    "mdl": 0.459,
+    "branching": 0.482,
+    "consensus": 0.34,
+    "unigram": 0.303
    },
    "vision": {
-    "f1": 0.943,
-    "ari": 0.9058,
-    "class_ratio": 0.95,
+    "f1": 0.9963,
+    "ari": 0.936,
+    "class_ratio": 0.9,
     "split": 0,
-    "merge": 15
+    "merge": 1
    }
   },
   {
@@ -6545,8 +6551,8 @@
    "tiers": {},
    "mean_sampling_stability": null,
    "mean_transcription_stability": null,
-   "symbol_types": 2,
-   "symbols": 2,
+   "symbol_types": 3,
+   "symbols": 3,
    "verdict": "analysis_impossible",
    "analysis_error": "解析には4記号以上の記号列が必要",
    "segmentation_f1": {},
@@ -6561,7 +6567,7 @@
    "input": "C",
    "style": "stroke",
    "condition": "noise",
-   "hypotheses": 54,
+   "hypotheses": 48,
    "gold_rules": 8,
    "gold_found": 3,
    "found": [
@@ -6569,30 +6575,30 @@
     "x は各行に1回（必須）",
     "v は各行に1回（必須）"
    ],
-   "true": 35,
-   "false": 18,
-   "false_unmapped_symbols": 18,
-   "unverifiable": 1,
+   "true": 25,
+   "false": 21,
+   "false_unmapped_symbols": 20,
+   "unverifiable": 2,
    "tiers": {
-    "A": 18,
-    "B": 5,
-    "C": 31
+    "A": 21,
+    "B": 4,
+    "C": 23
    },
-   "mean_sampling_stability": 0.726,
-   "mean_transcription_stability": 0.504,
+   "mean_sampling_stability": 0.746,
+   "mean_transcription_stability": 0.57,
    "symbol_types": 29,
    "symbols": 431,
    "verdict": "structure_observed",
    "segmentation_f1": {
-    "mdl": 0.451,
+    "mdl": 0.444,
     "branching": 0.505,
-    "consensus": 0.417,
-    "unigram": 0.434
+    "consensus": 0.409,
+    "unigram": 0.425
    },
    "vision": {
-    "f1": 0.8691,
-    "ari": 0.9331,
-    "class_ratio": 1.2,
+    "f1": 0.8667,
+    "ari": 0.9289,
+    "class_ratio": 1.263,
     "split": 29,
     "merge": 0
    }
@@ -6603,32 +6609,39 @@
    "input": "B",
    "style": "stroke",
    "condition": "size_thickness",
-   "hypotheses": 0,
+   "hypotheses": 21,
    "gold_rules": 8,
-   "gold_found": 0,
-   "found": [],
-   "true": 0,
-   "false": 0,
-   "false_unmapped_symbols": 0,
-   "unverifiable": 0,
-   "tiers": {},
-   "mean_sampling_stability": null,
-   "mean_transcription_stability": null,
-   "symbol_types": 23,
-   "symbols": 26,
-   "verdict": "no_structure_detected",
+   "gold_found": 2,
+   "found": [
+    "文頭標識 S",
+    "文末標識 E"
+   ],
+   "true": 3,
+   "false": 15,
+   "false_unmapped_symbols": 10,
+   "unverifiable": 3,
+   "tiers": {
+    "A": 5,
+    "B": 8,
+    "C": 8
+   },
+   "mean_sampling_stability": 0.77,
+   "mean_transcription_stability": 0.641,
+   "symbol_types": 149,
+   "symbols": 443,
+   "verdict": "structure_observed",
    "segmentation_f1": {
-    "branching": 0.0,
-    "unigram": 0.014,
-    "consensus": 0.014,
-    "mdl": 0.066
+    "branching": 0.054,
+    "consensus": 0.214,
+    "unigram": 0.211,
+    "mdl": 0.504
    },
    "vision": {
-    "f1": 0.0748,
-    "ari": 0.6591,
-    "class_ratio": 1.167,
-    "split": 2,
-    "merge": 5
+    "f1": 0.9065,
+    "ari": 0.2872,
+    "class_ratio": 7.2,
+    "split": 41,
+    "merge": 0
    }
   },
   {
@@ -6679,10 +6692,9 @@
    "condition": "spacing",
    "hypotheses": 21,
    "gold_rules": 8,
-   "gold_found": 2,
+   "gold_found": 1,
    "found": [
-    "文頭標識 S",
-    "接尾辞 x/q/v が同じ枠に入る"
+    "文頭標識 S"
    ],
    "true": 2,
    "false": 15,
@@ -6720,12 +6732,11 @@
    "condition": "spacing",
    "hypotheses": 30,
    "gold_rules": 8,
-   "gold_found": 5,
+   "gold_found": 4,
    "found": [
     "文頭標識 S",
     "文末標識 E",
     "動詞接尾辞 v の直後に E",
-    "接尾辞 x/q/v が同じ枠に入る",
     "x は各行に1回（必須）"
    ],
    "true": 16,
@@ -6762,38 +6773,37 @@
    "input": "B",
    "style": "font",
    "condition": "clean",
-   "hypotheses": 32,
+   "hypotheses": 29,
    "gold_rules": 8,
-   "gold_found": 4,
+   "gold_found": 3,
    "found": [
+    "文頭標識 S",
     "文末標識 E",
-    "動詞接尾辞 v の直後に E",
-    "x は各行に1回（必須）",
-    "v は各行に1回（必須）"
+    "動詞接尾辞 v の直後に E"
    ],
-   "true": 22,
-   "false": 9,
+   "true": 11,
+   "false": 15,
    "false_unmapped_symbols": 0,
-   "unverifiable": 1,
+   "unverifiable": 3,
    "tiers": {
-    "A": 7,
-    "C": 25
+    "A": 9,
+    "C": 20
    },
-   "mean_sampling_stability": 0.738,
-   "mean_transcription_stability": 0.285,
-   "symbol_types": 15,
+   "mean_sampling_stability": 0.703,
+   "mean_transcription_stability": 0.42,
+   "symbol_types": 14,
    "symbols": 169,
    "verdict": "structure_observed",
    "segmentation_f1": {
-    "mdl": 0.27,
-    "consensus": 0.128,
-    "branching": 0.131,
-    "unigram": 0.091
+    "mdl": 0.397,
+    "branching": 0.195,
+    "consensus": 0.167,
+    "unigram": 0.069
    },
    "vision": {
     "f1": 1.0,
-    "ari": 0.7509,
-    "class_ratio": 0.789,
+    "ari": 0.7309,
+    "class_ratio": 0.737,
     "split": 0,
     "merge": 0
    }
@@ -6804,38 +6814,39 @@
    "input": "C",
    "style": "font",
    "condition": "clean",
-   "hypotheses": 25,
+   "hypotheses": 28,
    "gold_rules": 8,
-   "gold_found": 4,
+   "gold_found": 5,
    "found": [
+    "文頭標識 S",
     "文末標識 E",
     "動詞接尾辞 v の直後に E",
     "x は各行に1回（必須）",
     "v は各行に1回（必須）"
    ],
-   "true": 20,
-   "false": 4,
+   "true": 24,
+   "false": 3,
    "false_unmapped_symbols": 0,
    "unverifiable": 1,
    "tiers": {
-    "A": 8,
-    "C": 17
+    "A": 10,
+    "C": 18
    },
-   "mean_sampling_stability": 0.656,
-   "mean_transcription_stability": 0.464,
-   "symbol_types": 18,
+   "mean_sampling_stability": 0.757,
+   "mean_transcription_stability": 0.487,
+   "symbol_types": 17,
    "symbols": 169,
    "verdict": "structure_observed",
    "segmentation_f1": {
-    "mdl": 0.346,
-    "unigram": 0.147,
-    "branching": 0.206,
-    "consensus": 0.194
+    "mdl": 0.431,
+    "consensus": 0.182,
+    "unigram": 0.11,
+    "branching": 0.218
    },
    "vision": {
     "f1": 1.0,
-    "ari": 0.8505,
-    "class_ratio": 0.947,
+    "ari": 0.9401,
+    "class_ratio": 0.895,
     "split": 0,
     "merge": 0
    }
@@ -6857,21 +6868,14 @@
    "tiers": {},
    "mean_sampling_stability": null,
    "mean_transcription_stability": null,
-   "symbol_types": 6,
-   "symbols": 6,
-   "verdict": "no_structure_detected",
-   "segmentation_f1": {
-    "branching": 0.0,
-    "unigram": 0.0,
-    "consensus": 0.0,
-    "mdl": 0.0
-   },
+   "symbol_types": 3,
+   "symbols": 3,
+   "verdict": "analysis_impossible",
+   "analysis_error": "解析には4記号以上の記号列が必要",
+   "segmentation_f1": {},
    "vision": {
     "f1": 0.0,
-    "ari": null,
-    "class_ratio": null,
-    "split": 0,
-    "merge": 1
+    "ari": null
    }
   },
   {
@@ -6880,38 +6884,39 @@
    "input": "C",
    "style": "font",
    "condition": "noise",
-   "hypotheses": 25,
+   "hypotheses": 28,
    "gold_rules": 8,
-   "gold_found": 4,
+   "gold_found": 5,
    "found": [
+    "文頭標識 S",
     "文末標識 E",
     "動詞接尾辞 v の直後に E",
     "x は各行に1回（必須）",
     "v は各行に1回（必須）"
    ],
-   "true": 20,
-   "false": 4,
+   "true": 24,
+   "false": 3,
    "false_unmapped_symbols": 0,
    "unverifiable": 1,
    "tiers": {
-    "A": 8,
-    "C": 17
+    "A": 10,
+    "C": 18
    },
-   "mean_sampling_stability": 0.656,
-   "mean_transcription_stability": 0.464,
-   "symbol_types": 18,
+   "mean_sampling_stability": 0.757,
+   "mean_transcription_stability": 0.487,
+   "symbol_types": 17,
    "symbols": 169,
    "verdict": "structure_observed",
    "segmentation_f1": {
-    "mdl": 0.346,
-    "unigram": 0.147,
-    "branching": 0.206,
-    "consensus": 0.194
+    "mdl": 0.431,
+    "consensus": 0.182,
+    "unigram": 0.11,
+    "branching": 0.218
    },
    "vision": {
     "f1": 1.0,
-    "ari": 0.8505,
-    "class_ratio": 0.947,
+    "ari": 0.9401,
+    "class_ratio": 0.895,
     "split": 0,
     "merge": 0
    }
@@ -6922,37 +6927,32 @@
    "input": "B",
    "style": "font",
    "condition": "size_thickness",
-   "hypotheses": 2,
+   "hypotheses": 0,
    "gold_rules": 8,
-   "gold_found": 2,
-   "found": [
-    "文末標識 E",
-    "動詞接尾辞 v の直後に E"
-   ],
-   "true": 2,
+   "gold_found": 0,
+   "found": [],
+   "true": 0,
    "false": 0,
    "false_unmapped_symbols": 0,
    "unverifiable": 0,
-   "tiers": {
-    "C": 2
-   },
-   "mean_sampling_stability": 0.4,
-   "mean_transcription_stability": 0.5,
-   "symbol_types": 41,
-   "symbols": 56,
-   "verdict": "structure_unstable",
+   "tiers": {},
+   "mean_sampling_stability": null,
+   "mean_transcription_stability": null,
+   "symbol_types": 74,
+   "symbols": 102,
+   "verdict": "global_only",
    "segmentation_f1": {
-    "branching": 0.069,
-    "unigram": 0.091,
-    "consensus": 0.091,
-    "mdl": 0.212
+    "branching": 0.033,
+    "unigram": 0.158,
+    "consensus": 0.156,
+    "mdl": 0.41
    },
    "vision": {
-    "f1": 0.3022,
-    "ari": 0.6998,
-    "class_ratio": 1.357,
+    "f1": 0.524,
+    "ari": 0.3614,
+    "class_ratio": 2.389,
     "split": 0,
-    "merge": 22
+    "merge": 31
    }
   },
   {
@@ -6961,39 +6961,36 @@
    "input": "C",
    "style": "font",
    "condition": "size_thickness",
-   "hypotheses": 21,
+   "hypotheses": 5,
    "gold_rules": 8,
-   "gold_found": 4,
+   "gold_found": 2,
    "found": [
-    "文末標識 E",
-    "動詞接尾辞 v の直後に E",
-    "接尾辞 x/q/v が同じ枠に入る",
-    "x は各行に1回（必須）"
+    "文頭標識 S",
+    "文末標識 E"
    ],
-   "true": 12,
-   "false": 8,
+   "true": 4,
+   "false": 0,
    "false_unmapped_symbols": 0,
    "unverifiable": 1,
    "tiers": {
-    "A": 7,
     "B": 1,
-    "C": 13
+    "C": 4
    },
-   "mean_sampling_stability": 0.648,
-   "mean_transcription_stability": 0.555,
-   "symbol_types": 27,
-   "symbols": 169,
+   "mean_sampling_stability": 0.88,
+   "mean_transcription_stability": 0.332,
+   "symbol_types": 29,
+   "symbols": 143,
    "verdict": "structure_observed",
    "segmentation_f1": {
-    "mdl": 0.286,
-    "branching": 0.191,
-    "unigram": 0.133,
-    "consensus": 0.137
+    "mdl": 0.395,
+    "branching": 0.132,
+    "unigram": 0.167,
+    "consensus": 0.182
    },
    "vision": {
-    "f1": 1.0,
-    "ari": 0.7407,
-    "class_ratio": 1.421,
+    "f1": 0.7564,
+    "ari": 0.8591,
+    "class_ratio": 1.211,
     "split": 0,
     "merge": 0
    }
@@ -7004,39 +7001,40 @@
    "input": "B",
    "style": "font",
    "condition": "spacing",
-   "hypotheses": 12,
+   "hypotheses": 18,
    "gold_rules": 8,
-   "gold_found": 2,
+   "gold_found": 3,
    "found": [
+    "文頭標識 S",
     "文末標識 E",
     "動詞接尾辞 v の直後に E"
    ],
-   "true": 8,
-   "false": 2,
+   "true": 7,
+   "false": 10,
    "false_unmapped_symbols": 1,
-   "unverifiable": 2,
+   "unverifiable": 1,
    "tiers": {
-    "A": 3,
-    "B": 1,
-    "C": 8
+    "A": 8,
+    "B": 4,
+    "C": 6
    },
-   "mean_sampling_stability": 0.717,
-   "mean_transcription_stability": 0.362,
-   "symbol_types": 27,
-   "symbols": 148,
+   "mean_sampling_stability": 0.678,
+   "mean_transcription_stability": 0.692,
+   "symbol_types": 22,
+   "symbols": 158,
    "verdict": "structure_observed",
    "segmentation_f1": {
-    "mdl": 0.309,
-    "unigram": 0.1,
-    "branching": 0.071,
-    "consensus": 0.085
+    "mdl": 0.353,
+    "unigram": 0.106,
+    "branching": 0.213,
+    "consensus": 0.214
    },
    "vision": {
-    "f1": 0.8328,
-    "ari": 0.7138,
-    "class_ratio": 1.0,
+    "f1": 0.9113,
+    "ari": 0.7205,
+    "class_ratio": 0.842,
     "split": 0,
-    "merge": 20
+    "merge": 11
    }
   },
   {
@@ -7045,40 +7043,41 @@
    "input": "C",
    "style": "font",
    "condition": "spacing",
-   "hypotheses": 21,
+   "hypotheses": 28,
    "gold_rules": 8,
-   "gold_found": 3,
+   "gold_found": 5,
    "found": [
+    "文頭標識 S",
     "文末標識 E",
     "動詞接尾辞 v の直後に E",
-    "x は各行に1回（必須）"
+    "x は各行に1回（必須）",
+    "v は各行に1回（必須）"
    ],
-   "true": 14,
-   "false": 6,
+   "true": 24,
+   "false": 3,
    "false_unmapped_symbols": 0,
    "unverifiable": 1,
    "tiers": {
-    "A": 9,
-    "B": 1,
-    "C": 11
+    "A": 10,
+    "C": 18
    },
-   "mean_sampling_stability": 0.771,
-   "mean_transcription_stability": 0.559,
-   "symbol_types": 21,
-   "symbols": 165,
+   "mean_sampling_stability": 0.757,
+   "mean_transcription_stability": 0.487,
+   "symbol_types": 17,
+   "symbols": 169,
    "verdict": "structure_observed",
    "segmentation_f1": {
-    "mdl": 0.301,
-    "consensus": 0.119,
-    "branching": 0.208,
-    "unigram": 0.119
+    "mdl": 0.431,
+    "consensus": 0.182,
+    "unigram": 0.11,
+    "branching": 0.218
    },
    "vision": {
-    "f1": 0.9701,
-    "ari": 0.844,
-    "class_ratio": 1.0,
+    "f1": 1.0,
+    "ari": 0.9401,
+    "class_ratio": 0.895,
     "split": 0,
-    "merge": 4
+    "merge": 0
    }
   },
   {
@@ -7183,21 +7182,14 @@
    "tiers": {},
    "mean_sampling_stability": null,
    "mean_transcription_stability": null,
-   "symbol_types": 6,
-   "symbols": 6,
-   "verdict": "no_structure_detected",
-   "segmentation_f1": {
-    "branching": 0.0,
-    "unigram": 0.0,
-    "consensus": 0.0,
-    "mdl": 0.0
-   },
+   "symbol_types": 3,
+   "symbols": 3,
+   "verdict": "analysis_impossible",
+   "analysis_error": "解析には4記号以上の記号列が必要",
+   "segmentation_f1": {},
    "vision": {
     "f1": 0.0,
-    "ari": null,
-    "class_ratio": null,
-    "split": 0,
-    "merge": 1
+    "ari": null
    }
   },
   {
@@ -7235,7 +7227,7 @@
     "consensus": 0.202
    },
    "vision": {
-    "f1": 0.9283,
+    "f1": 0.9221,
     "ari": 1.0,
     "class_ratio": 1.0,
     "split": 0,
@@ -7248,32 +7240,39 @@
    "input": "B",
    "style": "stroke",
    "condition": "size_thickness",
-   "hypotheses": 0,
+   "hypotheses": 6,
    "gold_rules": 8,
-   "gold_found": 0,
-   "found": [],
-   "true": 0,
-   "false": 0,
+   "gold_found": 3,
+   "found": [
+    "文頭標識 S",
+    "文末標識 E",
+    "動詞接尾辞 v の直後に E"
+   ],
+   "true": 4,
+   "false": 2,
    "false_unmapped_symbols": 0,
    "unverifiable": 0,
-   "tiers": {},
-   "mean_sampling_stability": null,
-   "mean_transcription_stability": null,
-   "symbol_types": 12,
-   "symbols": 12,
-   "verdict": "no_structure_detected",
+   "tiers": {
+    "B": 1,
+    "C": 5
+   },
+   "mean_sampling_stability": 0.633,
+   "mean_transcription_stability": 0.333,
+   "symbol_types": 84,
+   "symbols": 172,
+   "verdict": "structure_observed",
    "segmentation_f1": {
     "branching": 0.0,
-    "unigram": 0.0,
-    "consensus": 0.0,
-    "mdl": 0.066
+    "unigram": 0.227,
+    "consensus": 0.227,
+    "mdl": 0.514
    },
    "vision": {
-    "f1": 0.0552,
-    "ari": 0.0,
-    "class_ratio": 1.25,
-    "split": 0,
-    "merge": 7
+    "f1": 0.9795,
+    "ari": 0.3324,
+    "class_ratio": 4.263,
+    "split": 3,
+    "merge": 0
    }
   },
   {
@@ -7282,37 +7281,36 @@
    "input": "C",
    "style": "stroke",
    "condition": "size_thickness",
-   "hypotheses": 3,
+   "hypotheses": 2,
    "gold_rules": 8,
    "gold_found": 2,
    "found": [
     "文頭標識 S",
     "文末標識 E"
    ],
-   "true": 3,
+   "true": 2,
    "false": 0,
    "false_unmapped_symbols": 0,
    "unverifiable": 0,
    "tiers": {
-    "B": 2,
-    "C": 1
+    "B": 2
    },
-   "mean_sampling_stability": 0.6,
-   "mean_transcription_stability": 0.667,
-   "symbol_types": 44,
-   "symbols": 145,
+   "mean_sampling_stability": 0.9,
+   "mean_transcription_stability": 0.835,
+   "symbol_types": 43,
+   "symbols": 144,
    "verdict": "structure_observed",
    "segmentation_f1": {
-    "branching": 0.09,
-    "mdl": 0.4,
+    "branching": 0.116,
+    "mdl": 0.368,
     "unigram": 0.133,
     "consensus": 0.132
    },
    "vision": {
-    "f1": 0.7643,
-    "ari": 0.925,
+    "f1": 0.7732,
+    "ari": 0.9249,
     "class_ratio": 1.474,
-    "split": 2,
+    "split": 1,
     "merge": 4
    }
   },
@@ -7402,39 +7400,40 @@
    "input": "B",
    "style": "font",
    "condition": "clean",
-   "hypotheses": 60,
+   "hypotheses": 56,
    "gold_rules": 8,
-   "gold_found": 4,
+   "gold_found": 5,
    "found": [
+    "文頭標識 S",
     "文末標識 E",
     "動詞接尾辞 v の直後に E",
     "x は各行に1回（必須）",
     "v は各行に1回（必須）"
    ],
-   "true": 28,
-   "false": 27,
+   "true": 26,
+   "false": 28,
    "false_unmapped_symbols": 0,
-   "unverifiable": 5,
+   "unverifiable": 2,
    "tiers": {
-    "A": 21,
-    "B": 2,
-    "C": 37
+    "A": 22,
+    "B": 4,
+    "C": 30
    },
-   "mean_sampling_stability": 0.833,
-   "mean_transcription_stability": 0.436,
-   "symbol_types": 17,
+   "mean_sampling_stability": 0.811,
+   "mean_transcription_stability": 0.527,
+   "symbol_types": 16,
    "symbols": 397,
    "verdict": "structure_observed",
    "segmentation_f1": {
-    "mdl": 0.308,
-    "consensus": 0.145,
-    "branching": 0.234,
-    "unigram": 0.105
+    "mdl": 0.463,
+    "consensus": 0.234,
+    "branching": 0.322,
+    "unigram": 0.099
    },
    "vision": {
     "f1": 1.0,
-    "ari": 0.752,
-    "class_ratio": 0.81,
+    "ari": 0.7323,
+    "class_ratio": 0.762,
     "split": 0,
     "merge": 0
    }
@@ -7445,39 +7444,40 @@
    "input": "C",
    "style": "font",
    "condition": "clean",
-   "hypotheses": 68,
+   "hypotheses": 61,
    "gold_rules": 8,
-   "gold_found": 4,
+   "gold_found": 5,
    "found": [
+    "文頭標識 S",
     "文末標識 E",
     "動詞接尾辞 v の直後に E",
     "x は各行に1回（必須）",
     "v は各行に1回（必須）"
    ],
-   "true": 45,
-   "false": 17,
+   "true": 52,
+   "false": 8,
    "false_unmapped_symbols": 0,
-   "unverifiable": 6,
+   "unverifiable": 1,
    "tiers": {
     "A": 25,
-    "B": 5,
-    "C": 38
+    "B": 3,
+    "C": 33
    },
-   "mean_sampling_stability": 0.788,
-   "mean_transcription_stability": 0.455,
-   "symbol_types": 20,
+   "mean_sampling_stability": 0.8,
+   "mean_transcription_stability": 0.518,
+   "symbol_types": 19,
    "symbols": 397,
    "verdict": "structure_observed",
    "segmentation_f1": {
-    "mdl": 0.311,
-    "consensus": 0.169,
-    "branching": 0.288,
-    "unigram": 0.178
+    "mdl": 0.463,
+    "branching": 0.349,
+    "consensus": 0.231,
+    "unigram": 0.218
    },
    "vision": {
     "f1": 1.0,
-    "ari": 0.8598,
-    "class_ratio": 0.952,
+    "ari": 0.951,
+    "class_ratio": 0.905,
     "split": 0,
     "merge": 0
    }
@@ -7517,37 +7517,38 @@
    "condition": "noise",
    "hypotheses": 61,
    "gold_rules": 8,
-   "gold_found": 4,
+   "gold_found": 5,
    "found": [
+    "文頭標識 S",
     "文末標識 E",
     "動詞接尾辞 v の直後に E",
     "x は各行に1回（必須）",
     "v は各行に1回（必須）"
    ],
-   "true": 40,
-   "false": 15,
+   "true": 52,
+   "false": 8,
    "false_unmapped_symbols": 0,
-   "unverifiable": 6,
+   "unverifiable": 1,
    "tiers": {
-    "A": 24,
-    "B": 4,
+    "A": 25,
+    "B": 3,
     "C": 33
    },
-   "mean_sampling_stability": 0.826,
-   "mean_transcription_stability": 0.483,
-   "symbol_types": 21,
+   "mean_sampling_stability": 0.8,
+   "mean_transcription_stability": 0.518,
+   "symbol_types": 19,
    "symbols": 397,
    "verdict": "structure_observed",
    "segmentation_f1": {
-    "mdl": 0.273,
-    "consensus": 0.177,
-    "branching": 0.266,
-    "unigram": 0.176
+    "mdl": 0.463,
+    "branching": 0.349,
+    "consensus": 0.231,
+    "unigram": 0.218
    },
    "vision": {
     "f1": 1.0,
-    "ari": 0.8587,
-    "class_ratio": 1.0,
+    "ari": 0.951,
+    "class_ratio": 0.905,
     "split": 0,
     "merge": 0
    }
@@ -7564,31 +7565,31 @@
    "found": [
     "文末標識 E"
    ],
-   "true": 2,
-   "false": 2,
-   "false_unmapped_symbols": 1,
-   "unverifiable": 1,
+   "true": 1,
+   "false": 4,
+   "false_unmapped_symbols": 0,
+   "unverifiable": 0,
    "tiers": {
     "B": 1,
     "C": 4
    },
-   "mean_sampling_stability": 0.68,
-   "mean_transcription_stability": 0.468,
-   "symbol_types": 77,
-   "symbols": 126,
+   "mean_sampling_stability": 0.52,
+   "mean_transcription_stability": 0.668,
+   "symbol_types": 140,
+   "symbols": 242,
    "verdict": "structure_observed",
    "segmentation_f1": {
-    "branching": 0.029,
-    "unigram": 0.065,
-    "consensus": 0.065,
-    "mdl": 0.26
+    "branching": 0.014,
+    "unigram": 0.222,
+    "consensus": 0.22,
+    "mdl": 0.432
    },
    "vision": {
-    "f1": 0.2906,
-    "ari": 0.5565,
-    "class_ratio": 1.579,
+    "f1": 0.5383,
+    "ari": 0.3175,
+    "class_ratio": 3.476,
     "split": 0,
-    "merge": 50
+    "merge": 70
    }
   },
   {
@@ -7597,41 +7598,38 @@
    "input": "C",
    "style": "font",
    "condition": "size_thickness",
-   "hypotheses": 46,
+   "hypotheses": 10,
    "gold_rules": 8,
-   "gold_found": 5,
+   "gold_found": 2,
    "found": [
-    "文末標識 E",
-    "動詞接尾辞 v の直後に E",
-    "接尾辞 x/q/v が同じ枠に入る",
-    "x は各行に1回（必須）",
-    "v は各行に1回（必須）"
+    "文頭標識 S",
+    "文末標識 E"
    ],
-   "true": 27,
-   "false": 14,
+   "true": 9,
+   "false": 1,
    "false_unmapped_symbols": 0,
-   "unverifiable": 5,
+   "unverifiable": 0,
    "tiers": {
-    "A": 16,
-    "B": 4,
-    "C": 26
+    "A": 1,
+    "B": 6,
+    "C": 3
    },
-   "mean_sampling_stability": 0.791,
-   "mean_transcription_stability": 0.494,
-   "symbol_types": 33,
-   "symbols": 397,
+   "mean_sampling_stability": 0.94,
+   "mean_transcription_stability": 0.667,
+   "symbol_types": 38,
+   "symbols": 332,
    "verdict": "structure_observed",
    "segmentation_f1": {
-    "mdl": 0.385,
-    "branching": 0.276,
-    "consensus": 0.222,
-    "unigram": 0.216
+    "mdl": 0.326,
+    "branching": 0.182,
+    "unigram": 0.187,
+    "consensus": 0.182
    },
    "vision": {
-    "f1": 1.0,
-    "ari": 0.7504,
-    "class_ratio": 1.571,
-    "split": 0,
+    "f1": 0.7462,
+    "ari": 0.901,
+    "class_ratio": 1.333,
+    "split": 1,
     "merge": 0
    }
   },
@@ -7641,38 +7639,40 @@
    "input": "B",
    "style": "font",
    "condition": "spacing",
-   "hypotheses": 28,
+   "hypotheses": 34,
    "gold_rules": 8,
-   "gold_found": 2,
+   "gold_found": 3,
    "found": [
+    "文頭標識 S",
     "文末標識 E",
     "動詞接尾辞 v の直後に E"
    ],
-   "true": 15,
-   "false": 13,
-   "false_unmapped_symbols": 3,
-   "unverifiable": 0,
+   "true": 16,
+   "false": 16,
+   "false_unmapped_symbols": 2,
+   "unverifiable": 2,
    "tiers": {
-    "A": 13,
-    "C": 15
+    "A": 16,
+    "B": 2,
+    "C": 16
    },
-   "mean_sampling_stability": 0.671,
-   "mean_transcription_stability": 0.489,
-   "symbol_types": 45,
-   "symbols": 329,
+   "mean_sampling_stability": 0.835,
+   "mean_transcription_stability": 0.578,
+   "symbol_types": 35,
+   "symbols": 361,
    "verdict": "structure_observed",
    "segmentation_f1": {
-    "mdl": 0.29,
-    "branching": 0.122,
-    "consensus": 0.096,
-    "unigram": 0.089
+    "mdl": 0.309,
+    "branching": 0.298,
+    "consensus": 0.198,
+    "unigram": 0.13
    },
    "vision": {
-    "f1": 0.8072,
-    "ari": 0.7019,
-    "class_ratio": 1.3,
+    "f1": 0.8997,
+    "ari": 0.7152,
+    "class_ratio": 1.048,
     "split": 0,
-    "merge": 57
+    "merge": 32
    }
   },
   {
@@ -7681,41 +7681,42 @@
    "input": "C",
    "style": "font",
    "condition": "spacing",
-   "hypotheses": 53,
+   "hypotheses": 61,
    "gold_rules": 8,
-   "gold_found": 4,
+   "gold_found": 5,
    "found": [
+    "文頭標識 S",
     "文末標識 E",
     "動詞接尾辞 v の直後に E",
     "x は各行に1回（必須）",
     "v は各行に1回（必須）"
    ],
-   "true": 34,
-   "false": 14,
-   "false_unmapped_symbols": 1,
-   "unverifiable": 5,
+   "true": 52,
+   "false": 8,
+   "false_unmapped_symbols": 0,
+   "unverifiable": 1,
    "tiers": {
-    "A": 22,
-    "B": 4,
-    "C": 27
+    "A": 25,
+    "B": 3,
+    "C": 33
    },
-   "mean_sampling_stability": 0.819,
-   "mean_transcription_stability": 0.547,
-   "symbol_types": 25,
-   "symbols": 388,
+   "mean_sampling_stability": 0.8,
+   "mean_transcription_stability": 0.518,
+   "symbol_types": 19,
+   "symbols": 397,
    "verdict": "structure_observed",
    "segmentation_f1": {
-    "mdl": 0.308,
-    "consensus": 0.215,
-    "branching": 0.292,
-    "unigram": 0.209
+    "mdl": 0.463,
+    "branching": 0.349,
+    "consensus": 0.231,
+    "unigram": 0.218
    },
    "vision": {
-    "f1": 0.9732,
-    "ari": 0.8517,
-    "class_ratio": 1.048,
+    "f1": 1.0,
+    "ari": 0.951,
+    "class_ratio": 0.905,
     "split": 0,
-    "merge": 9
+    "merge": 0
    }
   },
   {
@@ -7821,14 +7822,21 @@
    "tiers": {},
    "mean_sampling_stability": null,
    "mean_transcription_stability": null,
-   "symbol_types": 1,
-   "symbols": 1,
-   "verdict": "analysis_impossible",
-   "analysis_error": "解析には4記号以上の記号列が必要",
-   "segmentation_f1": {},
+   "symbol_types": 13,
+   "symbols": 13,
+   "verdict": "no_structure_detected",
+   "segmentation_f1": {
+    "branching": 0.0,
+    "unigram": 0.0,
+    "consensus": 0.0,
+    "mdl": 0.0
+   },
    "vision": {
     "f1": 0.0,
-    "ari": null
+    "ari": null,
+    "class_ratio": null,
+    "split": 0,
+    "merge": 7
    }
   },
   {
@@ -7837,38 +7845,38 @@
    "input": "C",
    "style": "stroke",
    "condition": "noise",
-   "hypotheses": 65,
+   "hypotheses": 67,
    "gold_rules": 8,
    "gold_found": 2,
    "found": [
     "文頭標識 S",
     "x は各行に1回（必須）"
    ],
-   "true": 24,
+   "true": 26,
    "false": 40,
    "false_unmapped_symbols": 40,
    "unverifiable": 1,
    "tiers": {
-    "A": 32,
-    "B": 7,
-    "C": 26
+    "A": 29,
+    "B": 4,
+    "C": 34
    },
-   "mean_sampling_stability": 0.799,
-   "mean_transcription_stability": 0.587,
-   "symbol_types": 25,
-   "symbols": 403,
+   "mean_sampling_stability": 0.791,
+   "mean_transcription_stability": 0.541,
+   "symbol_types": 26,
+   "symbols": 402,
    "verdict": "structure_observed",
    "segmentation_f1": {
-    "mdl": 0.482,
-    "branching": 0.381,
-    "consensus": 0.321,
-    "unigram": 0.319
+    "mdl": 0.484,
+    "branching": 0.365,
+    "consensus": 0.308,
+    "unigram": 0.302
    },
    "vision": {
-    "f1": 0.8075,
-    "ari": 0.9984,
+    "f1": 0.806,
+    "ari": 0.9964,
     "class_ratio": 1.053,
-    "split": 33,
+    "split": 32,
     "merge": 30
    }
   },
@@ -7878,32 +7886,38 @@
    "input": "B",
    "style": "stroke",
    "condition": "size_thickness",
-   "hypotheses": 0,
+   "hypotheses": 20,
    "gold_rules": 8,
-   "gold_found": 0,
-   "found": [],
-   "true": 0,
-   "false": 0,
-   "false_unmapped_symbols": 0,
+   "gold_found": 2,
+   "found": [
+    "文頭標識 S",
+    "文末標識 E"
+   ],
+   "true": 9,
+   "false": 11,
+   "false_unmapped_symbols": 1,
    "unverifiable": 0,
-   "tiers": {},
-   "mean_sampling_stability": null,
-   "mean_transcription_stability": null,
-   "symbol_types": 11,
-   "symbols": 11,
-   "verdict": "no_structure_detected",
+   "tiers": {
+    "B": 11,
+    "C": 9
+   },
+   "mean_sampling_stability": 0.72,
+   "mean_transcription_stability": 0.65,
+   "symbol_types": 133,
+   "symbols": 412,
+   "verdict": "structure_observed",
    "segmentation_f1": {
-    "branching": 0.0,
-    "unigram": 0.015,
-    "consensus": 0.015,
-    "mdl": 0.029
+    "branching": 0.154,
+    "unigram": 0.326,
+    "consensus": 0.323,
+    "mdl": 0.508
    },
    "vision": {
-    "f1": 0.0245,
-    "ari": 0.0,
-    "class_ratio": 1.25,
-    "split": 0,
-    "merge": 6
+    "f1": 0.9815,
+    "ari": 0.2947,
+    "class_ratio": 6.238,
+    "split": 15,
+    "merge": 0
    }
   },
   {
@@ -7912,38 +7926,38 @@
    "input": "C",
    "style": "stroke",
    "condition": "size_thickness",
-   "hypotheses": 13,
+   "hypotheses": 22,
    "gold_rules": 8,
    "gold_found": 1,
    "found": [
     "文頭標識 S"
    ],
    "true": 8,
-   "false": 4,
-   "false_unmapped_symbols": 2,
+   "false": 13,
+   "false_unmapped_symbols": 9,
    "unverifiable": 1,
    "tiers": {
-    "A": 4,
-    "B": 1,
-    "C": 8
+    "A": 6,
+    "B": 3,
+    "C": 13
    },
-   "mean_sampling_stability": 0.692,
-   "mean_transcription_stability": 0.487,
-   "symbol_types": 57,
-   "symbols": 320,
+   "mean_sampling_stability": 0.564,
+   "mean_transcription_stability": 0.5,
+   "symbol_types": 56,
+   "symbols": 318,
    "verdict": "structure_observed",
    "segmentation_f1": {
-    "mdl": 0.377,
-    "branching": 0.136,
-    "unigram": 0.233,
-    "consensus": 0.25
+    "mdl": 0.383,
+    "branching": 0.147,
+    "unigram": 0.244,
+    "consensus": 0.262
    },
    "vision": {
-    "f1": 0.6974,
-    "ari": 0.93,
+    "f1": 0.6993,
+    "ari": 0.9304,
     "class_ratio": 1.667,
-    "split": 5,
-    "merge": 20
+    "split": 4,
+    "merge": 21
    }
   },
   {
@@ -8036,39 +8050,37 @@
    "input": "B",
    "style": "font",
    "condition": "clean",
-   "hypotheses": 20,
+   "hypotheses": 16,
    "gold_rules": 8,
-   "gold_found": 5,
+   "gold_found": 3,
    "found": [
     "文頭標識 S",
     "文末標識 E",
-    "動詞接尾辞 v の直後に E",
-    "x は各行に1回（必須）",
-    "v は各行に1回（必須）"
+    "動詞接尾辞 v の直後に E"
    ],
    "true": 11,
-   "false": 7,
+   "false": 3,
    "false_unmapped_symbols": 0,
    "unverifiable": 2,
    "tiers": {
     "A": 6,
     "B": 3,
-    "C": 11
+    "C": 7
    },
-   "mean_sampling_stability": 0.78,
-   "mean_transcription_stability": 0.477,
+   "mean_sampling_stability": 0.775,
+   "mean_transcription_stability": 0.538,
    "symbol_types": 16,
    "symbols": 163,
    "verdict": "structure_observed",
    "segmentation_f1": {
-    "mdl": 0.422,
-    "branching": 0.237,
-    "consensus": 0.289,
-    "unigram": 0.311
+    "mdl": 0.567,
+    "branching": 0.411,
+    "consensus": 0.411,
+    "unigram": 0.233
    },
    "vision": {
     "f1": 1.0,
-    "ari": 0.882,
+    "ari": 0.8787,
     "class_ratio": 0.8,
     "split": 0,
     "merge": 0
@@ -8080,39 +8092,38 @@
    "input": "C",
    "style": "font",
    "condition": "clean",
-   "hypotheses": 20,
+   "hypotheses": 16,
    "gold_rules": 8,
-   "gold_found": 4,
+   "gold_found": 3,
    "found": [
     "文頭標識 S",
     "文末標識 E",
-    "動詞接尾辞 v の直後に E",
-    "x は各行に1回（必須）"
+    "動詞接尾辞 v の直後に E"
    ],
-   "true": 9,
-   "false": 8,
+   "true": 12,
+   "false": 3,
    "false_unmapped_symbols": 0,
-   "unverifiable": 3,
+   "unverifiable": 1,
    "tiers": {
-    "A": 6,
-    "B": 3,
-    "C": 11
+    "A": 5,
+    "B": 1,
+    "C": 10
    },
-   "mean_sampling_stability": 0.77,
-   "mean_transcription_stability": 0.458,
-   "symbol_types": 19,
+   "mean_sampling_stability": 0.738,
+   "mean_transcription_stability": 0.429,
+   "symbol_types": 17,
    "symbols": 163,
    "verdict": "structure_observed",
    "segmentation_f1": {
     "mdl": 0.435,
-    "branching": 0.234,
-    "consensus": 0.26,
-    "unigram": 0.217
+    "consensus": 0.271,
+    "branching": 0.232,
+    "unigram": 0.244
    },
    "vision": {
     "f1": 1.0,
-    "ari": 0.9097,
-    "class_ratio": 0.95,
+    "ari": 0.9005,
+    "class_ratio": 0.85,
     "split": 0,
     "merge": 0
    }
@@ -8134,8 +8145,8 @@
    "tiers": {},
    "mean_sampling_stability": null,
    "mean_transcription_stability": null,
-   "symbol_types": 5,
-   "symbols": 5,
+   "symbol_types": 8,
+   "symbols": 8,
    "verdict": "no_structure_detected",
    "segmentation_f1": {
     "branching": 0.0,
@@ -8157,88 +8168,7 @@
    "input": "C",
    "style": "font",
    "condition": "noise",
-   "hypotheses": 17,
-   "gold_rules": 8,
-   "gold_found": 3,
-   "found": [
-    "文頭標識 S",
-    "文末標識 E",
-    "動詞接尾辞 v の直後に E"
-   ],
-   "true": 7,
-   "false": 9,
-   "false_unmapped_symbols": 0,
-   "unverifiable": 1,
-   "tiers": {
-    "A": 6,
-    "B": 1,
-    "C": 10
-   },
-   "mean_sampling_stability": 0.741,
-   "mean_transcription_stability": 0.554,
-   "symbol_types": 21,
-   "symbols": 163,
-   "verdict": "structure_observed",
-   "segmentation_f1": {
-    "mdl": 0.408,
-    "consensus": 0.218,
-    "branching": 0.156,
-    "unigram": 0.217
-   },
-   "vision": {
-    "f1": 1.0,
-    "ari": 0.8938,
-    "class_ratio": 1.05,
-    "split": 0,
-    "merge": 0
-   }
-  },
-  {
-   "seed": 1003,
-   "lines": 13,
-   "input": "B",
-   "style": "font",
-   "condition": "size_thickness",
-   "hypotheses": 2,
-   "gold_rules": 8,
-   "gold_found": 1,
-   "found": [
-    "文末標識 E"
-   ],
-   "true": 1,
-   "false": 1,
-   "false_unmapped_symbols": 0,
-   "unverifiable": 0,
-   "tiers": {
-    "B": 1,
-    "C": 1
-   },
-   "mean_sampling_stability": 0.6,
-   "mean_transcription_stability": 0.835,
-   "symbol_types": 63,
-   "symbols": 112,
-   "verdict": "structure_observed",
-   "segmentation_f1": {
-    "branching": 0.0,
-    "unigram": 0.145,
-    "consensus": 0.143,
-    "mdl": 0.486
-   },
-   "vision": {
-    "f1": 0.6764,
-    "ari": 0.5334,
-    "class_ratio": 2.316,
-    "split": 0,
-    "merge": 20
-   }
-  },
-  {
-   "seed": 1003,
-   "lines": 13,
-   "input": "C",
-   "style": "font",
-   "condition": "size_thickness",
-   "hypotheses": 19,
+   "hypotheses": 20,
    "gold_rules": 8,
    "gold_found": 5,
    "found": [
@@ -8248,30 +8178,108 @@
     "x は各行に1回（必須）",
     "v は各行に1回（必須）"
    ],
-   "true": 10,
-   "false": 6,
+   "true": 16,
+   "false": 2,
    "false_unmapped_symbols": 0,
-   "unverifiable": 3,
+   "unverifiable": 2,
    "tiers": {
-    "A": 4,
+    "A": 7,
     "B": 3,
-    "C": 12
+    "C": 10
    },
-   "mean_sampling_stability": 0.695,
-   "mean_transcription_stability": 0.461,
-   "symbol_types": 28,
+   "mean_sampling_stability": 0.75,
+   "mean_transcription_stability": 0.467,
+   "symbol_types": 18,
    "symbols": 163,
    "verdict": "structure_observed",
    "segmentation_f1": {
-    "mdl": 0.362,
-    "consensus": 0.245,
-    "branching": 0.242,
-    "unigram": 0.277
+    "mdl": 0.443,
+    "consensus": 0.274,
+    "branching": 0.227,
+    "unigram": 0.242
    },
    "vision": {
     "f1": 1.0,
-    "ari": 0.8385,
-    "class_ratio": 1.4,
+    "ari": 0.9641,
+    "class_ratio": 0.9,
+    "split": 0,
+    "merge": 0
+   }
+  },
+  {
+   "seed": 1003,
+   "lines": 13,
+   "input": "B",
+   "style": "font",
+   "condition": "size_thickness",
+   "hypotheses": 3,
+   "gold_rules": 8,
+   "gold_found": 1,
+   "found": [
+    "文頭標識 S"
+   ],
+   "true": 2,
+   "false": 0,
+   "false_unmapped_symbols": 0,
+   "unverifiable": 1,
+   "tiers": {
+    "B": 1,
+    "C": 2
+   },
+   "mean_sampling_stability": 0.8,
+   "mean_transcription_stability": 0.553,
+   "symbol_types": 79,
+   "symbols": 163,
+   "verdict": "structure_observed",
+   "segmentation_f1": {
+    "branching": 0.149,
+    "unigram": 0.263,
+    "consensus": 0.263,
+    "mdl": 0.565
+   },
+   "vision": {
+    "f1": 1.0,
+    "ari": 0.2976,
+    "class_ratio": 3.95,
+    "split": 0,
+    "merge": 0
+   }
+  },
+  {
+   "seed": 1003,
+   "lines": 13,
+   "input": "C",
+   "style": "font",
+   "condition": "size_thickness",
+   "hypotheses": 3,
+   "gold_rules": 8,
+   "gold_found": 1,
+   "found": [
+    "文頭標識 S"
+   ],
+   "true": 1,
+   "false": 2,
+   "false_unmapped_symbols": 0,
+   "unverifiable": 0,
+   "tiers": {
+    "B": 1,
+    "C": 2
+   },
+   "mean_sampling_stability": 0.6,
+   "mean_transcription_stability": 0.557,
+   "symbol_types": 29,
+   "symbols": 127,
+   "verdict": "structure_observed",
+   "segmentation_f1": {
+    "branching": 0.088,
+    "mdl": 0.471,
+    "unigram": 0.187,
+    "consensus": 0.203
+   },
+   "vision": {
+    "f1": 0.6621,
+    "ari": 0.9011,
+    "class_ratio": 1.1,
     "split": 0,
     "merge": 0
    }
@@ -8282,7 +8290,7 @@
    "input": "B",
    "style": "font",
    "condition": "spacing",
-   "hypotheses": 13,
+   "hypotheses": 10,
    "gold_rules": 8,
    "gold_found": 3,
    "found": [
@@ -8290,32 +8298,31 @@
     "文末標識 E",
     "動詞接尾辞 v の直後に E"
    ],
-   "true": 6,
-   "false": 5,
-   "false_unmapped_symbols": 1,
-   "unverifiable": 2,
+   "true": 9,
+   "false": 0,
+   "false_unmapped_symbols": 0,
+   "unverifiable": 1,
    "tiers": {
-    "A": 5,
-    "B": 3,
-    "C": 5
+    "A": 3,
+    "C": 7
    },
-   "mean_sampling_stability": 0.738,
-   "mean_transcription_stability": 0.604,
-   "symbol_types": 33,
-   "symbols": 138,
+   "mean_sampling_stability": 0.76,
+   "mean_transcription_stability": 0.366,
+   "symbol_types": 26,
+   "symbols": 146,
    "verdict": "structure_observed",
    "segmentation_f1": {
-    "mdl": 0.521,
-    "branching": 0.198,
-    "unigram": 0.152,
-    "consensus": 0.19
+    "mdl": 0.5,
+    "branching": 0.255,
+    "consensus": 0.255,
+    "unigram": 0.188
    },
    "vision": {
-    "f1": 0.804,
-    "ari": 0.8693,
-    "class_ratio": 1.053,
+    "f1": 0.8673,
+    "ari": 0.8642,
+    "class_ratio": 0.9,
     "split": 0,
-    "merge": 22
+    "merge": 15
    }
   },
   {
@@ -8324,7 +8331,7 @@
    "input": "C",
    "style": "font",
    "condition": "spacing",
-   "hypotheses": 18,
+   "hypotheses": 19,
    "gold_rules": 8,
    "gold_found": 4,
    "found": [
@@ -8333,32 +8340,32 @@
     "動詞接尾辞 v の直後に E",
     "x は各行に1回（必須）"
    ],
-   "true": 10,
-   "false": 7,
+   "true": 15,
+   "false": 2,
    "false_unmapped_symbols": 0,
-   "unverifiable": 1,
+   "unverifiable": 2,
    "tiers": {
-    "A": 8,
+    "A": 7,
     "B": 2,
-    "C": 8
+    "C": 10
    },
-   "mean_sampling_stability": 0.767,
-   "mean_transcription_stability": 0.613,
-   "symbol_types": 22,
-   "symbols": 160,
+   "mean_sampling_stability": 0.758,
+   "mean_transcription_stability": 0.482,
+   "symbol_types": 18,
+   "symbols": 162,
    "verdict": "structure_observed",
    "segmentation_f1": {
-    "mdl": 0.5,
-    "branching": 0.213,
-    "consensus": 0.267,
-    "unigram": 0.194
+    "mdl": 0.448,
+    "consensus": 0.274,
+    "branching": 0.229,
+    "unigram": 0.247
    },
    "vision": {
-    "f1": 0.9783,
-    "ari": 0.9053,
-    "class_ratio": 1.0,
+    "f1": 0.9908,
+    "ari": 0.8986,
+    "class_ratio": 0.85,
     "split": 0,
-    "merge": 3
+    "merge": 1
    }
   },
   {
@@ -8462,8 +8469,8 @@
    "tiers": {},
    "mean_sampling_stability": null,
    "mean_transcription_stability": null,
-   "symbol_types": 5,
-   "symbols": 5,
+   "symbol_types": 8,
+   "symbols": 8,
    "verdict": "no_structure_detected",
    "segmentation_f1": {
     "branching": 0.0,
@@ -8526,32 +8533,35 @@
    "input": "B",
    "style": "stroke",
    "condition": "size_thickness",
-   "hypotheses": 0,
+   "hypotheses": 8,
    "gold_rules": 8,
    "gold_found": 0,
    "found": [],
    "true": 0,
-   "false": 0,
-   "false_unmapped_symbols": 0,
-   "unverifiable": 0,
-   "tiers": {},
-   "mean_sampling_stability": null,
-   "mean_transcription_stability": null,
-   "symbol_types": 13,
-   "symbols": 13,
-   "verdict": "no_structure_detected",
+   "false": 6,
+   "false_unmapped_symbols": 5,
+   "unverifiable": 2,
+   "tiers": {
+    "B": 1,
+    "C": 7
+   },
+   "mean_sampling_stability": 0.486,
+   "mean_transcription_stability": 0.209,
+   "symbol_types": 80,
+   "symbols": 174,
+   "verdict": "structure_observed",
    "segmentation_f1": {
-    "branching": 0.0,
-    "unigram": 0.032,
-    "consensus": 0.032,
-    "mdl": 0.088
+    "branching": 0.116,
+    "unigram": 0.194,
+    "consensus": 0.194,
+    "mdl": 0.521
    },
    "vision": {
-    "f1": 0.1136,
-    "ari": 0.0,
-    "class_ratio": 1.111,
-    "split": 1,
-    "merge": 1
+    "f1": 0.9139,
+    "ari": 0.3229,
+    "class_ratio": 3.75,
+    "split": 11,
+    "merge": 0
    }
   },
   {
@@ -8638,10 +8648,9 @@
    "condition": "spacing",
    "hypotheses": 13,
    "gold_rules": 8,
-   "gold_found": 2,
+   "gold_found": 1,
    "found": [
-    "文頭標識 S",
-    "接尾辞 x/q/v が同じ枠に入る"
+    "文頭標識 S"
    ],
    "true": 5,
    "false": 7,
@@ -8677,7 +8686,7 @@
    "input": "B",
    "style": "font",
    "condition": "clean",
-   "hypotheses": 57,
+   "hypotheses": 62,
    "gold_rules": 8,
    "gold_found": 5,
    "found": [
@@ -8687,29 +8696,29 @@
     "x は各行に1回（必須）",
     "v は各行に1回（必須）"
    ],
-   "true": 33,
-   "false": 22,
+   "true": 39,
+   "false": 20,
    "false_unmapped_symbols": 0,
-   "unverifiable": 2,
+   "unverifiable": 3,
    "tiers": {
-    "A": 21,
-    "B": 3,
-    "C": 33
+    "A": 19,
+    "B": 1,
+    "C": 42
    },
-   "mean_sampling_stability": 0.743,
-   "mean_transcription_stability": 0.422,
+   "mean_sampling_stability": 0.74,
+   "mean_transcription_stability": 0.42,
    "symbol_types": 16,
    "symbols": 382,
    "verdict": "structure_observed",
    "segmentation_f1": {
-    "mdl": 0.395,
-    "consensus": 0.403,
-    "branching": 0.496,
-    "unigram": 0.404
+    "mdl": 0.432,
+    "branching": 0.477,
+    "consensus": 0.418,
+    "unigram": 0.459
    },
    "vision": {
     "f1": 1.0,
-    "ari": 0.8598,
+    "ari": 0.8408,
     "class_ratio": 0.8,
     "split": 0,
     "merge": 0
@@ -8721,7 +8730,7 @@
    "input": "C",
    "style": "font",
    "condition": "clean",
-   "hypotheses": 55,
+   "hypotheses": 47,
    "gold_rules": 8,
    "gold_found": 5,
    "found": [
@@ -8731,30 +8740,30 @@
     "x は各行に1回（必須）",
     "v は各行に1回（必須）"
    ],
-   "true": 38,
-   "false": 16,
+   "true": 35,
+   "false": 10,
    "false_unmapped_symbols": 0,
-   "unverifiable": 1,
+   "unverifiable": 2,
    "tiers": {
-    "A": 18,
-    "B": 3,
-    "C": 34
+    "A": 20,
+    "B": 4,
+    "C": 23
    },
-   "mean_sampling_stability": 0.731,
-   "mean_transcription_stability": 0.428,
-   "symbol_types": 19,
+   "mean_sampling_stability": 0.777,
+   "mean_transcription_stability": 0.52,
+   "symbol_types": 18,
    "symbols": 382,
    "verdict": "structure_observed",
    "segmentation_f1": {
     "mdl": 0.461,
-    "consensus": 0.376,
-    "branching": 0.467,
-    "unigram": 0.392
+    "consensus": 0.39,
+    "branching": 0.384,
+    "unigram": 0.402
    },
    "vision": {
     "f1": 1.0,
-    "ari": 0.9258,
-    "class_ratio": 0.95,
+    "ari": 0.9483,
+    "class_ratio": 0.9,
     "split": 0,
     "merge": 0
    }
@@ -8792,7 +8801,7 @@
    "input": "C",
    "style": "font",
    "condition": "noise",
-   "hypotheses": 42,
+   "hypotheses": 47,
    "gold_rules": 8,
    "gold_found": 5,
    "found": [
@@ -8802,30 +8811,30 @@
     "x は各行に1回（必須）",
     "v は各行に1回（必須）"
    ],
-   "true": 26,
-   "false": 15,
+   "true": 35,
+   "false": 10,
    "false_unmapped_symbols": 0,
-   "unverifiable": 1,
+   "unverifiable": 2,
    "tiers": {
-    "A": 19,
-    "B": 3,
-    "C": 20
+    "A": 20,
+    "B": 4,
+    "C": 23
    },
-   "mean_sampling_stability": 0.8,
-   "mean_transcription_stability": 0.538,
-   "symbol_types": 21,
+   "mean_sampling_stability": 0.777,
+   "mean_transcription_stability": 0.52,
+   "symbol_types": 18,
    "symbols": 382,
    "verdict": "structure_observed",
    "segmentation_f1": {
-    "mdl": 0.517,
-    "branching": 0.458,
-    "consensus": 0.35,
-    "unigram": 0.341
+    "mdl": 0.461,
+    "consensus": 0.39,
+    "branching": 0.384,
+    "unigram": 0.402
    },
    "vision": {
     "f1": 1.0,
-    "ari": 0.9171,
-    "class_ratio": 1.05,
+    "ari": 0.9483,
+    "class_ratio": 0.9,
     "split": 0,
     "merge": 0
    }
@@ -8836,39 +8845,37 @@
    "input": "B",
    "style": "font",
    "condition": "size_thickness",
-   "hypotheses": 10,
+   "hypotheses": 12,
    "gold_rules": 8,
-   "gold_found": 3,
+   "gold_found": 1,
    "found": [
-    "文頭標識 S",
-    "文末標識 E",
-    "接尾辞 x/q/v が同じ枠に入る"
+    "文頭標識 S"
    ],
-   "true": 4,
-   "false": 6,
+   "true": 2,
+   "false": 9,
    "false_unmapped_symbols": 0,
-   "unverifiable": 0,
+   "unverifiable": 1,
    "tiers": {
-    "B": 3,
-    "C": 7
+    "B": 4,
+    "C": 8
    },
-   "mean_sampling_stability": 0.62,
-   "mean_transcription_stability": 0.432,
-   "symbol_types": 74,
-   "symbols": 155,
+   "mean_sampling_stability": 0.45,
+   "mean_transcription_stability": 0.639,
+   "symbol_types": 113,
+   "symbols": 293,
    "verdict": "structure_observed",
    "segmentation_f1": {
-    "branching": 0.0,
-    "unigram": 0.172,
-    "consensus": 0.17,
-    "mdl": 0.376
+    "branching": 0.067,
+    "unigram": 0.291,
+    "consensus": 0.29,
+    "mdl": 0.514
    },
    "vision": {
-    "f1": 0.4953,
-    "ari": 0.5127,
-    "class_ratio": 2.6,
+    "f1": 0.8237,
+    "ari": 0.2811,
+    "class_ratio": 4.9,
     "split": 0,
-    "merge": 23
+    "merge": 15
    }
   },
   {
@@ -8877,39 +8884,35 @@
    "input": "C",
    "style": "font",
    "condition": "size_thickness",
-   "hypotheses": 51,
+   "hypotheses": 5,
    "gold_rules": 8,
-   "gold_found": 5,
+   "gold_found": 2,
    "found": [
     "文頭標識 S",
-    "文末標識 E",
-    "動詞接尾辞 v の直後に E",
-    "x は各行に1回（必須）",
-    "v は各行に1回（必須）"
+    "文末標識 E"
    ],
-   "true": 37,
-   "false": 8,
+   "true": 4,
+   "false": 1,
    "false_unmapped_symbols": 0,
-   "unverifiable": 6,
+   "unverifiable": 0,
    "tiers": {
-    "A": 22,
     "B": 2,
-    "C": 27
+    "C": 3
    },
-   "mean_sampling_stability": 0.734,
-   "mean_transcription_stability": 0.496,
-   "symbol_types": 27,
-   "symbols": 382,
+   "mean_sampling_stability": 0.92,
+   "mean_transcription_stability": 0.532,
+   "symbol_types": 38,
+   "symbols": 296,
    "verdict": "structure_observed",
    "segmentation_f1": {
-    "mdl": 0.472,
-    "branching": 0.49,
-    "consensus": 0.432,
-    "unigram": 0.412
+    "mdl": 0.497,
+    "branching": 0.151,
+    "unigram": 0.188,
+    "consensus": 0.245
    },
    "vision": {
-    "f1": 1.0,
-    "ari": 0.8774,
+    "f1": 0.6873,
+    "ari": 0.8846,
     "class_ratio": 1.35,
     "split": 0,
     "merge": 0
@@ -8921,40 +8924,40 @@
    "input": "B",
    "style": "font",
    "condition": "spacing",
-   "hypotheses": 38,
+   "hypotheses": 51,
    "gold_rules": 8,
-   "gold_found": 3,
+   "gold_found": 4,
    "found": [
     "文頭標識 S",
     "文末標識 E",
-    "動詞接尾辞 v の直後に E"
+    "動詞接尾辞 v の直後に E",
+    "x は各行に1回（必須）"
    ],
-   "true": 15,
-   "false": 19,
-   "false_unmapped_symbols": 8,
-   "unverifiable": 4,
+   "true": 30,
+   "false": 16,
+   "false_unmapped_symbols": 5,
+   "unverifiable": 5,
    "tiers": {
-    "A": 9,
-    "B": 2,
-    "C": 27
+    "A": 11,
+    "C": 40
    },
-   "mean_sampling_stability": 0.674,
-   "mean_transcription_stability": 0.359,
-   "symbol_types": 44,
-   "symbols": 324,
+   "mean_sampling_stability": 0.671,
+   "mean_transcription_stability": 0.302,
+   "symbol_types": 35,
+   "symbols": 346,
    "verdict": "structure_observed",
    "segmentation_f1": {
-    "mdl": 0.43,
-    "consensus": 0.309,
-    "branching": 0.299,
-    "unigram": 0.221
+    "mdl": 0.474,
+    "branching": 0.341,
+    "consensus": 0.352,
+    "unigram": 0.275
    },
    "vision": {
-    "f1": 0.8074,
-    "ari": 0.8492,
-    "class_ratio": 1.1,
+    "f1": 0.8846,
+    "ari": 0.7735,
+    "class_ratio": 1.2,
     "split": 0,
-    "merge": 53
+    "merge": 34
    }
   },
   {
@@ -8963,42 +8966,41 @@
    "input": "C",
    "style": "font",
    "condition": "spacing",
-   "hypotheses": 47,
+   "hypotheses": 58,
    "gold_rules": 8,
-   "gold_found": 5,
+   "gold_found": 4,
    "found": [
     "文頭標識 S",
     "文末標識 E",
     "動詞接尾辞 v の直後に E",
-    "x は各行に1回（必須）",
-    "v は各行に1回（必須）"
+    "x は各行に1回（必須）"
    ],
-   "true": 31,
-   "false": 14,
+   "true": 46,
+   "false": 11,
    "false_unmapped_symbols": 0,
-   "unverifiable": 2,
+   "unverifiable": 1,
    "tiers": {
-    "A": 20,
+    "A": 22,
     "B": 2,
-    "C": 25
+    "C": 34
    },
-   "mean_sampling_stability": 0.761,
-   "mean_transcription_stability": 0.534,
-   "symbol_types": 23,
-   "symbols": 375,
+   "mean_sampling_stability": 0.721,
+   "mean_transcription_stability": 0.526,
+   "symbol_types": 19,
+   "symbols": 381,
    "verdict": "structure_observed",
    "segmentation_f1": {
-    "mdl": 0.45,
-    "consensus": 0.365,
-    "branching": 0.482,
-    "unigram": 0.374
+    "mdl": 0.465,
+    "consensus": 0.384,
+    "branching": 0.384,
+    "unigram": 0.404
    },
    "vision": {
-    "f1": 0.9828,
-    "ari": 0.9204,
-    "class_ratio": 1.0,
+    "f1": 0.9961,
+    "ari": 0.9478,
+    "class_ratio": 0.9,
     "split": 0,
-    "merge": 7
+    "merge": 1
    }
   },
   {
@@ -9117,7 +9119,7 @@
    "input": "C",
    "style": "stroke",
    "condition": "noise",
-   "hypotheses": 51,
+   "hypotheses": 48,
    "gold_rules": 8,
    "gold_found": 3,
    "found": [
@@ -9125,31 +9127,31 @@
     "x は各行に1回（必須）",
     "v は各行に1回（必須）"
    ],
-   "true": 22,
-   "false": 22,
-   "false_unmapped_symbols": 22,
-   "unverifiable": 7,
+   "true": 21,
+   "false": 23,
+   "false_unmapped_symbols": 23,
+   "unverifiable": 4,
    "tiers": {
     "A": 16,
-    "B": 5,
-    "C": 30
+    "B": 1,
+    "C": 31
    },
-   "mean_sampling_stability": 0.784,
-   "mean_transcription_stability": 0.495,
-   "symbol_types": 26,
-   "symbols": 428,
+   "mean_sampling_stability": 0.742,
+   "mean_transcription_stability": 0.46,
+   "symbol_types": 25,
+   "symbols": 426,
    "verdict": "structure_observed",
    "segmentation_f1": {
-    "mdl": 0.408,
-    "consensus": 0.434,
-    "branching": 0.532,
-    "unigram": 0.433
+    "mdl": 0.406,
+    "consensus": 0.39,
+    "branching": 0.488,
+    "unigram": 0.39
    },
    "vision": {
-    "f1": 0.8519,
+    "f1": 0.8564,
     "ari": 0.9981,
     "class_ratio": 1.056,
-    "split": 46,
+    "split": 44,
     "merge": 0
    }
   },
@@ -9159,32 +9161,38 @@
    "input": "B",
    "style": "stroke",
    "condition": "size_thickness",
-   "hypotheses": 0,
+   "hypotheses": 14,
    "gold_rules": 8,
-   "gold_found": 0,
-   "found": [],
-   "true": 0,
-   "false": 0,
-   "false_unmapped_symbols": 0,
+   "gold_found": 1,
+   "found": [
+    "文頭標識 S"
+   ],
+   "true": 2,
+   "false": 12,
+   "false_unmapped_symbols": 8,
    "unverifiable": 0,
-   "tiers": {},
-   "mean_sampling_stability": null,
-   "mean_transcription_stability": null,
-   "symbol_types": 13,
-   "symbols": 14,
-   "verdict": "no_structure_detected",
+   "tiers": {
+    "A": 3,
+    "B": 5,
+    "C": 6
+   },
+   "mean_sampling_stability": 0.614,
+   "mean_transcription_stability": 0.691,
+   "symbol_types": 140,
+   "symbols": 410,
+   "verdict": "structure_observed",
    "segmentation_f1": {
-    "branching": 0.0,
-    "unigram": 0.014,
-    "consensus": 0.014,
-    "mdl": 0.041
+    "branching": 0.104,
+    "unigram": 0.251,
+    "consensus": 0.256,
+    "mdl": 0.508
    },
    "vision": {
-    "f1": 0.0505,
-    "ari": 0.0,
-    "class_ratio": 1.111,
-    "split": 1,
-    "merge": 1
+    "f1": 0.9066,
+    "ari": 0.2718,
+    "class_ratio": 6.65,
+    "split": 28,
+    "merge": 0
    }
   },
   {
@@ -9193,37 +9201,37 @@
    "input": "C",
    "style": "stroke",
    "condition": "size_thickness",
-   "hypotheses": 15,
+   "hypotheses": 14,
    "gold_rules": 8,
    "gold_found": 1,
    "found": [
     "文頭標識 S"
    ],
    "true": 2,
-   "false": 13,
-   "false_unmapped_symbols": 11,
+   "false": 12,
+   "false_unmapped_symbols": 10,
    "unverifiable": 0,
    "tiers": {
     "A": 5,
-    "B": 3,
-    "C": 7
+    "B": 5,
+    "C": 4
    },
-   "mean_sampling_stability": 0.8,
-   "mean_transcription_stability": 0.621,
+   "mean_sampling_stability": 0.814,
+   "mean_transcription_stability": 0.667,
    "symbol_types": 51,
-   "symbols": 384,
+   "symbols": 383,
    "verdict": "structure_observed",
    "segmentation_f1": {
     "mdl": 0.343,
     "branching": 0.127,
-    "unigram": 0.243,
-    "consensus": 0.26
+    "unigram": 0.224,
+    "consensus": 0.242
    },
    "vision": {
-    "f1": 0.577,
-    "ari": 0.8688,
+    "f1": 0.5778,
+    "ari": 0.8706,
     "class_ratio": 1.5,
-    "split": 81,
+    "split": 80,
     "merge": 0
    }
   },
@@ -9275,10 +9283,9 @@
    "condition": "spacing",
    "hypotheses": 34,
    "gold_rules": 8,
-   "gold_found": 3,
+   "gold_found": 2,
    "found": [
     "文頭標識 S",
-    "接尾辞 x/q/v が同じ枠に入る",
     "x は各行に1回（必須）"
    ],
    "true": 10,
@@ -9325,28 +9332,28 @@
     "x は各行に1回（必須）",
     "v は各行に1回（必須）"
    ],
-   "true": 12,
-   "false": 7,
+   "true": 7,
+   "false": 12,
    "false_unmapped_symbols": 0,
    "unverifiable": 1,
    "tiers": {
-    "A": 8,
-    "C": 12
+    "A": 4,
+    "C": 16
    },
-   "mean_sampling_stability": 0.7,
-   "mean_transcription_stability": 0.47,
+   "mean_sampling_stability": 0.69,
+   "mean_transcription_stability": 0.28,
    "symbol_types": 16,
    "symbols": 183,
    "verdict": "structure_observed",
    "segmentation_f1": {
-    "mdl": 0.471,
-    "branching": 0.213,
-    "consensus": 0.248,
-    "unigram": 0.279
+    "mdl": 0.578,
+    "branching": 0.427,
+    "consensus": 0.357,
+    "unigram": 0.347
    },
    "vision": {
     "f1": 1.0,
-    "ari": 0.8143,
+    "ari": 0.7893,
     "class_ratio": 0.8,
     "split": 0,
     "merge": 0
@@ -9368,30 +9375,30 @@
     "x は各行に1回（必須）",
     "v は各行に1回（必須）"
    ],
-   "true": 16,
-   "false": 0,
+   "true": 10,
+   "false": 6,
    "false_unmapped_symbols": 0,
    "unverifiable": 1,
    "tiers": {
-    "A": 8,
+    "A": 6,
     "B": 1,
-    "C": 8
+    "C": 10
    },
-   "mean_sampling_stability": 0.718,
-   "mean_transcription_stability": 0.578,
-   "symbol_types": 19,
+   "mean_sampling_stability": 0.741,
+   "mean_transcription_stability": 0.517,
+   "symbol_types": 17,
    "symbols": 183,
    "verdict": "structure_observed",
    "segmentation_f1": {
-    "mdl": 0.491,
-    "branching": 0.289,
-    "consensus": 0.234,
-    "unigram": 0.198
+    "mdl": 0.455,
+    "branching": 0.237,
+    "consensus": 0.241,
+    "unigram": 0.264
    },
    "vision": {
     "f1": 1.0,
-    "ari": 0.9675,
-    "class_ratio": 0.95,
+    "ari": 0.9309,
+    "class_ratio": 0.85,
     "split": 0,
     "merge": 0
    }
@@ -9413,8 +9420,8 @@
    "tiers": {},
    "mean_sampling_stability": null,
    "mean_transcription_stability": null,
-   "symbol_types": 7,
-   "symbols": 7,
+   "symbol_types": 4,
+   "symbols": 4,
    "verdict": "no_structure_detected",
    "segmentation_f1": {
     "branching": 0.0,
@@ -9436,38 +9443,37 @@
    "input": "C",
    "style": "font",
    "condition": "noise",
-   "hypotheses": 18,
+   "hypotheses": 17,
    "gold_rules": 8,
-   "gold_found": 4,
+   "gold_found": 3,
    "found": [
     "文頭標識 S",
     "文末標識 E",
-    "動詞接尾辞 v の直後に E",
-    "v は各行に1回（必須）"
+    "動詞接尾辞 v の直後に E"
    ],
-   "true": 15,
-   "false": 2,
+   "true": 8,
+   "false": 8,
    "false_unmapped_symbols": 0,
    "unverifiable": 1,
    "tiers": {
-    "A": 8,
+    "A": 7,
     "C": 10
    },
-   "mean_sampling_stability": 0.722,
-   "mean_transcription_stability": 0.558,
-   "symbol_types": 20,
+   "mean_sampling_stability": 0.671,
+   "mean_transcription_stability": 0.527,
+   "symbol_types": 16,
    "symbols": 183,
    "verdict": "structure_observed",
    "segmentation_f1": {
-    "mdl": 0.54,
-    "branching": 0.292,
-    "unigram": 0.308,
-    "consensus": 0.327
+    "mdl": 0.455,
+    "branching": 0.234,
+    "consensus": 0.202,
+    "unigram": 0.198
    },
    "vision": {
     "f1": 1.0,
-    "ari": 0.9466,
-    "class_ratio": 1.0,
+    "ari": 0.9021,
+    "class_ratio": 0.8,
     "split": 0,
     "merge": 0
    }
@@ -9489,21 +9495,21 @@
    "tiers": {},
    "mean_sampling_stability": null,
    "mean_transcription_stability": null,
-   "symbol_types": 42,
-   "symbols": 88,
+   "symbol_types": 64,
+   "symbols": 109,
    "verdict": "global_only",
    "segmentation_f1": {
-    "branching": 0.088,
-    "unigram": 0.152,
+    "branching": 0.0,
+    "unigram": 0.15,
     "consensus": 0.15,
-    "mdl": 0.376
+    "mdl": 0.424
    },
    "vision": {
-    "f1": 0.6125,
-    "ari": 0.4628,
-    "class_ratio": 2.056,
+    "f1": 0.6712,
+    "ari": 0.2593,
+    "class_ratio": 2.944,
     "split": 0,
-    "merge": 5
+    "merge": 11
    }
   },
   {
@@ -9512,39 +9518,34 @@
    "input": "C",
    "style": "font",
    "condition": "size_thickness",
-   "hypotheses": 19,
+   "hypotheses": 1,
    "gold_rules": 8,
-   "gold_found": 5,
+   "gold_found": 1,
    "found": [
-    "文頭標識 S",
-    "文末標識 E",
-    "動詞接尾辞 v の直後に E",
-    "x は各行に1回（必須）",
-    "v は各行に1回（必須）"
+    "文頭標識 S"
    ],
-   "true": 18,
+   "true": 1,
    "false": 0,
    "false_unmapped_symbols": 0,
-   "unverifiable": 1,
+   "unverifiable": 0,
    "tiers": {
-    "A": 7,
-    "C": 12
+    "C": 1
    },
-   "mean_sampling_stability": 0.768,
-   "mean_transcription_stability": 0.476,
-   "symbol_types": 26,
-   "symbols": 183,
-   "verdict": "structure_observed",
+   "mean_sampling_stability": 1.0,
+   "mean_transcription_stability": 0.33,
+   "symbol_types": 31,
+   "symbols": 149,
+   "verdict": "structure_unstable",
    "segmentation_f1": {
-    "mdl": 0.503,
-    "branching": 0.289,
-    "consensus": 0.375,
-    "unigram": 0.379
+    "mdl": 0.468,
+    "branching": 0.13,
+    "unigram": 0.264,
+    "consensus": 0.253
    },
    "vision": {
-    "f1": 1.0,
-    "ari": 0.9433,
-    "class_ratio": 1.3,
+    "f1": 0.753,
+    "ari": 0.8673,
+    "class_ratio": 1.2,
     "split": 0,
     "merge": 0
    }
@@ -9555,39 +9556,39 @@
    "input": "B",
    "style": "font",
    "condition": "spacing",
-   "hypotheses": 4,
+   "hypotheses": 13,
    "gold_rules": 8,
    "gold_found": 2,
    "found": [
     "文頭標識 S",
     "文末標識 E"
    ],
-   "true": 4,
-   "false": 0,
+   "true": 6,
+   "false": 5,
    "false_unmapped_symbols": 0,
-   "unverifiable": 0,
+   "unverifiable": 2,
    "tiers": {
-    "A": 1,
-    "B": 2,
-    "C": 1
+    "A": 2,
+    "B": 1,
+    "C": 10
    },
-   "mean_sampling_stability": 0.9,
-   "mean_transcription_stability": 0.833,
-   "symbol_types": 31,
-   "symbols": 151,
+   "mean_sampling_stability": 0.623,
+   "mean_transcription_stability": 0.282,
+   "symbol_types": 30,
+   "symbols": 163,
    "verdict": "structure_observed",
    "segmentation_f1": {
-    "mdl": 0.455,
-    "branching": 0.205,
-    "unigram": 0.228,
-    "consensus": 0.318
+    "mdl": 0.543,
+    "branching": 0.264,
+    "unigram": 0.203,
+    "consensus": 0.213
    },
    "vision": {
-    "f1": 0.7425,
-    "ari": 0.8328,
-    "class_ratio": 0.833,
+    "f1": 0.8497,
+    "ari": 0.7648,
+    "class_ratio": 0.8,
     "split": 0,
-    "merge": 29
+    "merge": 17
    }
   },
   {
@@ -9596,39 +9597,42 @@
    "input": "C",
    "style": "font",
    "condition": "spacing",
-   "hypotheses": 18,
+   "hypotheses": 17,
    "gold_rules": 8,
-   "gold_found": 3,
+   "gold_found": 5,
    "found": [
     "文頭標識 S",
     "文末標識 E",
-    "動詞接尾辞 v の直後に E"
+    "動詞接尾辞 v の直後に E",
+    "x は各行に1回（必須）",
+    "v は各行に1回（必須）"
    ],
-   "true": 16,
-   "false": 1,
+   "true": 10,
+   "false": 6,
    "false_unmapped_symbols": 0,
    "unverifiable": 1,
    "tiers": {
-    "A": 7,
-    "C": 11
+    "A": 6,
+    "B": 1,
+    "C": 10
    },
-   "mean_sampling_stability": 0.689,
-   "mean_transcription_stability": 0.507,
-   "symbol_types": 22,
-   "symbols": 179,
+   "mean_sampling_stability": 0.741,
+   "mean_transcription_stability": 0.517,
+   "symbol_types": 17,
+   "symbols": 183,
    "verdict": "structure_observed",
    "segmentation_f1": {
-    "mdl": 0.484,
-    "branching": 0.298,
-    "consensus": 0.187,
-    "unigram": 0.129
+    "mdl": 0.455,
+    "branching": 0.237,
+    "consensus": 0.241,
+    "unigram": 0.264
    },
    "vision": {
-    "f1": 0.9669,
-    "ari": 0.9641,
-    "class_ratio": 0.95,
+    "f1": 1.0,
+    "ari": 0.9309,
+    "class_ratio": 0.85,
     "split": 0,
-    "merge": 4
+    "merge": 0
    }
   },
   {
@@ -9733,8 +9737,8 @@
    "tiers": {},
    "mean_sampling_stability": null,
    "mean_transcription_stability": null,
-   "symbol_types": 7,
-   "symbols": 7,
+   "symbol_types": 4,
+   "symbols": 4,
    "verdict": "no_structure_detected",
    "segmentation_f1": {
     "branching": 0.0,
@@ -9799,25 +9803,38 @@
    "input": "B",
    "style": "stroke",
    "condition": "size_thickness",
-   "hypotheses": 0,
+   "hypotheses": 2,
    "gold_rules": 8,
-   "gold_found": 0,
-   "found": [],
-   "true": 0,
+   "gold_found": 2,
+   "found": [
+    "文頭標識 S",
+    "文末標識 E"
+   ],
+   "true": 2,
    "false": 0,
    "false_unmapped_symbols": 0,
    "unverifiable": 0,
-   "tiers": {},
-   "mean_sampling_stability": null,
-   "mean_transcription_stability": null,
-   "symbol_types": 1,
-   "symbols": 1,
-   "verdict": "analysis_impossible",
-   "analysis_error": "解析には4記号以上の記号列が必要",
-   "segmentation_f1": {},
+   "tiers": {
+    "B": 1,
+    "C": 1
+   },
+   "mean_sampling_stability": 1.0,
+   "mean_transcription_stability": 0.665,
+   "symbol_types": 96,
+   "symbols": 185,
+   "verdict": "structure_observed",
+   "segmentation_f1": {
+    "branching": 0.0,
+    "unigram": 0.241,
+    "consensus": 0.241,
+    "mdl": 0.509
+   },
    "vision": {
-    "f1": 0.0,
-    "ari": null
+    "f1": 0.9837,
+    "ari": 0.2835,
+    "class_ratio": 4.895,
+    "split": 2,
+    "merge": 0
    }
   },
   {
@@ -9951,7 +9968,7 @@
    "input": "B",
    "style": "font",
    "condition": "clean",
-   "hypotheses": 39,
+   "hypotheses": 55,
    "gold_rules": 8,
    "gold_found": 5,
    "found": [
@@ -9961,29 +9978,29 @@
     "x は各行に1回（必須）",
     "v は各行に1回（必須）"
    ],
-   "true": 20,
-   "false": 18,
+   "true": 24,
+   "false": 30,
    "false_unmapped_symbols": 0,
    "unverifiable": 1,
    "tiers": {
-    "A": 17,
-    "B": 2,
-    "C": 20
+    "A": 18,
+    "B": 1,
+    "C": 36
    },
-   "mean_sampling_stability": 0.856,
-   "mean_transcription_stability": 0.491,
+   "mean_sampling_stability": 0.804,
+   "mean_transcription_stability": 0.361,
    "symbol_types": 16,
    "symbols": 419,
    "verdict": "structure_observed",
    "segmentation_f1": {
-    "mdl": 0.474,
-    "branching": 0.313,
-    "consensus": 0.359,
-    "unigram": 0.281
+    "mdl": 0.62,
+    "branching": 0.451,
+    "consensus": 0.483,
+    "unigram": 0.366
    },
    "vision": {
     "f1": 1.0,
-    "ari": 0.7988,
+    "ari": 0.809,
     "class_ratio": 0.8,
     "split": 0,
     "merge": 0
@@ -9995,7 +10012,7 @@
    "input": "C",
    "style": "font",
    "condition": "clean",
-   "hypotheses": 48,
+   "hypotheses": 51,
    "gold_rules": 8,
    "gold_found": 5,
    "found": [
@@ -10006,29 +10023,29 @@
     "v は各行に1回（必須）"
    ],
    "true": 40,
-   "false": 7,
+   "false": 10,
    "false_unmapped_symbols": 0,
    "unverifiable": 1,
    "tiers": {
-    "A": 24,
-    "B": 4,
-    "C": 20
+    "A": 28,
+    "B": 5,
+    "C": 18
    },
-   "mean_sampling_stability": 0.816,
-   "mean_transcription_stability": 0.61,
-   "symbol_types": 19,
+   "mean_sampling_stability": 0.8,
+   "mean_transcription_stability": 0.639,
+   "symbol_types": 18,
    "symbols": 419,
    "verdict": "structure_observed",
    "segmentation_f1": {
-    "mdl": 0.462,
-    "branching": 0.382,
-    "consensus": 0.339,
-    "unigram": 0.239
+    "mdl": 0.51,
+    "branching": 0.413,
+    "consensus": 0.374,
+    "unigram": 0.253
    },
    "vision": {
     "f1": 1.0,
-    "ari": 0.9523,
-    "class_ratio": 0.95,
+    "ari": 0.9686,
+    "class_ratio": 0.9,
     "split": 0,
     "merge": 0
    }
@@ -10066,7 +10083,7 @@
    "input": "C",
    "style": "font",
    "condition": "noise",
-   "hypotheses": 53,
+   "hypotheses": 51,
    "gold_rules": 8,
    "gold_found": 5,
    "found": [
@@ -10076,30 +10093,30 @@
     "x は各行に1回（必須）",
     "v は各行に1回（必須）"
    ],
-   "true": 44,
-   "false": 8,
+   "true": 40,
+   "false": 10,
    "false_unmapped_symbols": 0,
    "unverifiable": 1,
    "tiers": {
-    "A": 31,
-    "B": 7,
-    "C": 15
+    "A": 28,
+    "B": 5,
+    "C": 18
    },
-   "mean_sampling_stability": 0.795,
-   "mean_transcription_stability": 0.69,
-   "symbol_types": 20,
+   "mean_sampling_stability": 0.8,
+   "mean_transcription_stability": 0.639,
+   "symbol_types": 18,
    "symbols": 419,
    "verdict": "structure_observed",
    "segmentation_f1": {
-    "mdl": 0.532,
-    "consensus": 0.389,
-    "branching": 0.359,
-    "unigram": 0.251
+    "mdl": 0.51,
+    "branching": 0.413,
+    "consensus": 0.374,
+    "unigram": 0.253
    },
    "vision": {
     "f1": 1.0,
-    "ari": 0.9445,
-    "class_ratio": 1.0,
+    "ari": 0.9686,
+    "class_ratio": 0.9,
     "split": 0,
     "merge": 0
    }
@@ -10112,34 +10129,32 @@
    "condition": "size_thickness",
    "hypotheses": 2,
    "gold_rules": 8,
-   "gold_found": 1,
-   "found": [
-    "文末標識 E"
-   ],
-   "true": 1,
-   "false": 0,
+   "gold_found": 0,
+   "found": [],
+   "true": 0,
+   "false": 2,
    "false_unmapped_symbols": 0,
-   "unverifiable": 1,
+   "unverifiable": 0,
    "tiers": {
-    "C": 2
+    "B": 2
    },
-   "mean_sampling_stability": 0.8,
-   "mean_transcription_stability": 0.0,
-   "symbol_types": 51,
-   "symbols": 135,
-   "verdict": "structure_unstable",
+   "mean_sampling_stability": 0.6,
+   "mean_transcription_stability": 0.835,
+   "symbol_types": 113,
+   "symbols": 257,
+   "verdict": "structure_observed",
    "segmentation_f1": {
     "branching": 0.069,
-    "mdl": 0.336,
-    "unigram": 0.229,
-    "consensus": 0.229
+    "unigram": 0.234,
+    "consensus": 0.234,
+    "mdl": 0.441
    },
    "vision": {
-    "f1": 0.4621,
-    "ari": 0.4476,
-    "class_ratio": 2.316,
+    "f1": 0.6805,
+    "ari": 0.2348,
+    "class_ratio": 4.526,
     "split": 0,
-    "merge": 7
+    "merge": 27
    }
   },
   {
@@ -10148,40 +10163,36 @@
    "input": "C",
    "style": "font",
    "condition": "size_thickness",
-   "hypotheses": 53,
+   "hypotheses": 12,
    "gold_rules": 8,
-   "gold_found": 5,
+   "gold_found": 2,
    "found": [
     "文頭標識 S",
-    "文末標識 E",
-    "動詞接尾辞 v の直後に E",
-    "x は各行に1回（必須）",
-    "v は各行に1回（必須）"
+    "文末標識 E"
    ],
-   "true": 51,
-   "false": 1,
-   "false_unmapped_symbols": 0,
-   "unverifiable": 1,
+   "true": 6,
+   "false": 6,
+   "false_unmapped_symbols": 2,
+   "unverifiable": 0,
    "tiers": {
-    "A": 29,
-    "B": 3,
-    "C": 21
+    "B": 5,
+    "C": 7
    },
-   "mean_sampling_stability": 0.807,
-   "mean_transcription_stability": 0.614,
-   "symbol_types": 26,
-   "symbols": 419,
+   "mean_sampling_stability": 0.65,
+   "mean_transcription_stability": 0.417,
+   "symbol_types": 32,
+   "symbols": 331,
    "verdict": "structure_observed",
    "segmentation_f1": {
     "mdl": 0.318,
-    "consensus": 0.27,
-    "unigram": 0.233,
-    "branching": 0.336
+    "branching": 0.108,
+    "unigram": 0.151,
+    "consensus": 0.161
    },
    "vision": {
-    "f1": 1.0,
-    "ari": 0.9541,
-    "class_ratio": 1.3,
+    "f1": 0.728,
+    "ari": 0.9089,
+    "class_ratio": 1.15,
     "split": 0,
     "merge": 0
    }
@@ -10192,39 +10203,41 @@
    "input": "B",
    "style": "font",
    "condition": "spacing",
-   "hypotheses": 23,
+   "hypotheses": 28,
    "gold_rules": 8,
-   "gold_found": 3,
+   "gold_found": 4,
    "found": [
     "文頭標識 S",
     "文末標識 E",
-    "動詞接尾辞 v の直後に E"
+    "動詞接尾辞 v の直後に E",
+    "x は各行に1回（必須）"
    ],
-   "true": 14,
-   "false": 7,
-   "false_unmapped_symbols": 2,
-   "unverifiable": 2,
+   "true": 21,
+   "false": 6,
+   "false_unmapped_symbols": 1,
+   "unverifiable": 1,
    "tiers": {
     "A": 12,
-    "C": 11
+    "B": 1,
+    "C": 15
    },
-   "mean_sampling_stability": 0.826,
-   "mean_transcription_stability": 0.536,
-   "symbol_types": 48,
-   "symbols": 342,
+   "mean_sampling_stability": 0.793,
+   "mean_transcription_stability": 0.488,
+   "symbol_types": 41,
+   "symbols": 375,
    "verdict": "structure_observed",
    "segmentation_f1": {
-    "mdl": 0.455,
-    "branching": 0.201,
-    "unigram": 0.131,
-    "consensus": 0.234
+    "mdl": 0.448,
+    "branching": 0.311,
+    "consensus": 0.298,
+    "unigram": 0.276
    },
    "vision": {
-    "f1": 0.7438,
-    "ari": 0.811,
-    "class_ratio": 0.95,
+    "f1": 0.8564,
+    "ari": 0.8075,
+    "class_ratio": 1.05,
     "split": 0,
-    "merge": 65
+    "merge": 40
    }
   },
   {
@@ -10233,7 +10246,7 @@
    "input": "C",
    "style": "font",
    "condition": "spacing",
-   "hypotheses": 48,
+   "hypotheses": 49,
    "gold_rules": 8,
    "gold_found": 5,
    "found": [
@@ -10243,31 +10256,32 @@
     "x は各行に1回（必須）",
     "v は各行に1回（必須）"
    ],
-   "true": 41,
-   "false": 6,
+   "true": 38,
+   "false": 10,
    "false_unmapped_symbols": 0,
    "unverifiable": 1,
    "tiers": {
-    "A": 25,
-    "C": 23
+    "A": 29,
+    "B": 5,
+    "C": 15
    },
-   "mean_sampling_stability": 0.758,
-   "mean_transcription_stability": 0.549,
-   "symbol_types": 29,
-   "symbols": 403,
+   "mean_sampling_stability": 0.8,
+   "mean_transcription_stability": 0.7,
+   "symbol_types": 19,
+   "symbols": 418,
    "verdict": "structure_observed",
    "segmentation_f1": {
-    "mdl": 0.48,
-    "branching": 0.332,
-    "consensus": 0.306,
-    "unigram": 0.164
+    "mdl": 0.516,
+    "branching": 0.415,
+    "consensus": 0.374,
+    "unigram": 0.255
    },
    "vision": {
-    "f1": 0.944,
-    "ari": 0.95,
-    "class_ratio": 1.0,
+    "f1": 0.9964,
+    "ari": 0.9682,
+    "class_ratio": 0.9,
     "split": 0,
-    "merge": 16
+    "merge": 1
    }
   },
   {
@@ -10391,7 +10405,7 @@
    "input": "C",
    "style": "stroke",
    "condition": "noise",
-   "hypotheses": 68,
+   "hypotheses": 57,
    "gold_rules": 8,
    "gold_found": 5,
    "found": [
@@ -10401,24 +10415,24 @@
     "x は各行に1回（必須）",
     "v は各行に1回（必須）"
    ],
-   "true": 63,
-   "false": 4,
+   "true": 53,
+   "false": 3,
    "false_unmapped_symbols": 3,
    "unverifiable": 1,
    "tiers": {
     "A": 23,
     "B": 4,
-    "C": 41
+    "C": 30
    },
-   "mean_sampling_stability": 0.735,
-   "mean_transcription_stability": 0.487,
+   "mean_sampling_stability": 0.775,
+   "mean_transcription_stability": 0.553,
    "symbol_types": 29,
    "symbols": 433,
    "verdict": "structure_observed",
    "segmentation_f1": {
-    "mdl": 0.527,
-    "branching": 0.408,
-    "consensus": 0.389,
+    "mdl": 0.525,
+    "branching": 0.402,
+    "consensus": 0.387,
     "unigram": 0.273
    },
    "vision": {
@@ -10435,25 +10449,40 @@
    "input": "B",
    "style": "stroke",
    "condition": "size_thickness",
-   "hypotheses": 0,
+   "hypotheses": 15,
    "gold_rules": 8,
-   "gold_found": 0,
-   "found": [],
-   "true": 0,
-   "false": 0,
+   "gold_found": 3,
+   "found": [
+    "文頭標識 S",
+    "文末標識 E",
+    "動詞接尾辞 v の直後に E"
+   ],
+   "true": 4,
+   "false": 11,
    "false_unmapped_symbols": 0,
    "unverifiable": 0,
-   "tiers": {},
-   "mean_sampling_stability": null,
-   "mean_transcription_stability": null,
-   "symbol_types": 3,
-   "symbols": 3,
-   "verdict": "analysis_impossible",
-   "analysis_error": "解析には4記号以上の記号列が必要",
-   "segmentation_f1": {},
+   "tiers": {
+    "A": 2,
+    "B": 6,
+    "C": 7
+   },
+   "mean_sampling_stability": 0.64,
+   "mean_transcription_stability": 0.667,
+   "symbol_types": 137,
+   "symbols": 426,
+   "verdict": "structure_observed",
+   "segmentation_f1": {
+    "branching": 0.078,
+    "unigram": 0.249,
+    "consensus": 0.246,
+    "mdl": 0.496
+   },
    "vision": {
-    "f1": 0.0,
-    "ari": null
+    "f1": 0.9799,
+    "ari": 0.2926,
+    "class_ratio": 7.053,
+    "split": 7,
+    "merge": 0
    }
   },
   {
@@ -10462,7 +10491,7 @@
    "input": "C",
    "style": "stroke",
    "condition": "size_thickness",
-   "hypotheses": 12,
+   "hypotheses": 13,
    "gold_rules": 8,
    "gold_found": 2,
    "found": [
@@ -10472,28 +10501,28 @@
    "true": 5,
    "false": 7,
    "false_unmapped_symbols": 5,
-   "unverifiable": 0,
+   "unverifiable": 1,
    "tiers": {
     "A": 1,
-    "B": 8,
-    "C": 3
+    "B": 10,
+    "C": 2
    },
-   "mean_sampling_stability": 0.783,
-   "mean_transcription_stability": 0.833,
+   "mean_sampling_stability": 0.815,
+   "mean_transcription_stability": 0.847,
    "symbol_types": 52,
-   "symbols": 418,
+   "symbols": 417,
    "verdict": "structure_observed",
    "segmentation_f1": {
-    "mdl": 0.273,
-    "branching": 0.069,
+    "mdl": 0.272,
+    "branching": 0.081,
     "unigram": 0.063,
-    "consensus": 0.069
+    "consensus": 0.078
    },
    "vision": {
-    "f1": 0.497,
-    "ari": 0.896,
+    "f1": 0.5,
+    "ari": 0.8972,
     "class_ratio": 1.529,
-    "split": 91,
+    "split": 90,
     "merge": 0
    }
   },
@@ -10588,7 +10617,7 @@
    "input": "B",
    "style": "font",
    "condition": "clean",
-   "hypotheses": 28,
+   "hypotheses": 25,
    "gold_rules": 8,
    "gold_found": 5,
    "found": [
@@ -10598,29 +10627,29 @@
     "x は各行に1回（必須）",
     "v は各行に1回（必須）"
    ],
-   "true": 19,
-   "false": 7,
+   "true": 15,
+   "false": 8,
    "false_unmapped_symbols": 0,
    "unverifiable": 2,
    "tiers": {
-    "A": 8,
-    "B": 3,
-    "C": 17
+    "A": 10,
+    "B": 1,
+    "C": 14
    },
-   "mean_sampling_stability": 0.75,
-   "mean_transcription_stability": 0.453,
+   "mean_sampling_stability": 0.728,
+   "mean_transcription_stability": 0.506,
    "symbol_types": 16,
    "symbols": 173,
    "verdict": "structure_observed",
    "segmentation_f1": {
-    "mdl": 0.352,
-    "branching": 0.382,
-    "consensus": 0.255,
-    "unigram": 0.159
+    "mdl": 0.464,
+    "branching": 0.315,
+    "consensus": 0.265,
+    "unigram": 0.25
    },
    "vision": {
     "f1": 1.0,
-    "ari": 0.8625,
+    "ari": 0.7972,
     "class_ratio": 0.8,
     "split": 0,
     "merge": 0
@@ -10632,39 +10661,38 @@
    "input": "C",
    "style": "font",
    "condition": "clean",
-   "hypotheses": 29,
+   "hypotheses": 24,
    "gold_rules": 8,
-   "gold_found": 5,
+   "gold_found": 4,
    "found": [
     "文頭標識 S",
     "文末標識 E",
     "動詞接尾辞 v の直後に E",
-    "x は各行に1回（必須）",
     "v は各行に1回（必須）"
    ],
-   "true": 26,
-   "false": 1,
+   "true": 18,
+   "false": 4,
    "false_unmapped_symbols": 0,
    "unverifiable": 2,
    "tiers": {
-    "A": 7,
-    "C": 22
+    "A": 9,
+    "C": 15
    },
-   "mean_sampling_stability": 0.752,
-   "mean_transcription_stability": 0.398,
-   "symbol_types": 19,
+   "mean_sampling_stability": 0.758,
+   "mean_transcription_stability": 0.453,
+   "symbol_types": 18,
    "symbols": 173,
    "verdict": "structure_observed",
    "segmentation_f1": {
-    "mdl": 0.559,
-    "branching": 0.366,
-    "consensus": 0.283,
+    "branching": 0.352,
+    "mdl": 0.497,
+    "consensus": 0.255,
     "unigram": 0.23
    },
    "vision": {
     "f1": 1.0,
-    "ari": 0.992,
-    "class_ratio": 0.95,
+    "ari": 0.9378,
+    "class_ratio": 0.9,
     "split": 0,
     "merge": 0
    }
@@ -10686,8 +10714,8 @@
    "tiers": {},
    "mean_sampling_stability": null,
    "mean_transcription_stability": null,
-   "symbol_types": 9,
-   "symbols": 9,
+   "symbol_types": 8,
+   "symbols": 8,
    "verdict": "no_structure_detected",
    "segmentation_f1": {
     "branching": 0.0,
@@ -10709,39 +10737,38 @@
    "input": "C",
    "style": "font",
    "condition": "noise",
-   "hypotheses": 26,
+   "hypotheses": 24,
    "gold_rules": 8,
-   "gold_found": 5,
+   "gold_found": 4,
    "found": [
     "文頭標識 S",
     "文末標識 E",
     "動詞接尾辞 v の直後に E",
-    "x は各行に1回（必須）",
     "v は各行に1回（必須）"
    ],
-   "true": 24,
-   "false": 0,
+   "true": 18,
+   "false": 4,
    "false_unmapped_symbols": 0,
    "unverifiable": 2,
    "tiers": {
-    "A": 7,
-    "C": 19
+    "A": 9,
+    "C": 15
    },
-   "mean_sampling_stability": 0.754,
-   "mean_transcription_stability": 0.417,
-   "symbol_types": 20,
+   "mean_sampling_stability": 0.758,
+   "mean_transcription_stability": 0.453,
+   "symbol_types": 18,
    "symbols": 173,
    "verdict": "structure_observed",
    "segmentation_f1": {
-    "mdl": 0.523,
-    "branching": 0.358,
-    "consensus": 0.313,
-    "unigram": 0.264
+    "branching": 0.352,
+    "mdl": 0.497,
+    "consensus": 0.255,
+    "unigram": 0.23
    },
    "vision": {
     "f1": 1.0,
-    "ari": 0.9882,
-    "class_ratio": 1.0,
+    "ari": 0.9378,
+    "class_ratio": 0.9,
     "split": 0,
     "merge": 0
    }
@@ -10752,36 +10779,37 @@
    "input": "B",
    "style": "font",
    "condition": "size_thickness",
-   "hypotheses": 1,
+   "hypotheses": 2,
    "gold_rules": 8,
-   "gold_found": 1,
+   "gold_found": 2,
    "found": [
+    "文頭標識 S",
     "文末標識 E"
    ],
-   "true": 1,
+   "true": 2,
    "false": 0,
    "false_unmapped_symbols": 0,
    "unverifiable": 0,
    "tiers": {
-    "B": 1
+    "C": 2
    },
-   "mean_sampling_stability": 1.0,
-   "mean_transcription_stability": 0.67,
-   "symbol_types": 46,
-   "symbols": 52,
-   "verdict": "structure_observed",
+   "mean_sampling_stability": 0.4,
+   "mean_transcription_stability": 0.33,
+   "symbol_types": 81,
+   "symbols": 103,
+   "verdict": "structure_unstable",
    "segmentation_f1": {
     "branching": 0.0,
-    "unigram": 0.212,
-    "consensus": 0.212,
-    "mdl": 0.263
+    "unigram": 0.213,
+    "consensus": 0.213,
+    "mdl": 0.416
    },
    "vision": {
-    "f1": 0.1867,
-    "ari": 0.8786,
-    "class_ratio": 1.25,
+    "f1": 0.5362,
+    "ari": 0.2771,
+    "class_ratio": 2.737,
     "split": 0,
-    "merge": 31
+    "merge": 29
    }
   },
   {
@@ -10790,41 +10818,37 @@
    "input": "C",
    "style": "font",
    "condition": "size_thickness",
-   "hypotheses": 16,
+   "hypotheses": 4,
    "gold_rules": 8,
-   "gold_found": 5,
+   "gold_found": 2,
    "found": [
     "文頭標識 S",
-    "文末標識 E",
-    "動詞接尾辞 v の直後に E",
-    "x は各行に1回（必須）",
-    "v は各行に1回（必須）"
+    "文末標識 E"
    ],
-   "true": 14,
-   "false": 1,
-   "false_unmapped_symbols": 0,
-   "unverifiable": 1,
+   "true": 2,
+   "false": 2,
+   "false_unmapped_symbols": 1,
+   "unverifiable": 0,
    "tiers": {
-    "A": 3,
-    "B": 3,
-    "C": 10
+    "B": 1,
+    "C": 3
    },
-   "mean_sampling_stability": 0.725,
-   "mean_transcription_stability": 0.417,
-   "symbol_types": 31,
-   "symbols": 174,
+   "mean_sampling_stability": 0.85,
+   "mean_transcription_stability": 0.25,
+   "symbol_types": 32,
+   "symbols": 138,
    "verdict": "structure_observed",
    "segmentation_f1": {
-    "mdl": 0.444,
-    "branching": 0.4,
-    "unigram": 0.292,
-    "consensus": 0.462
+    "branching": 0.095,
+    "mdl": 0.488,
+    "consensus": 0.306,
+    "unigram": 0.268
    },
    "vision": {
-    "f1": 0.9914,
-    "ari": 0.926,
-    "class_ratio": 1.45,
-    "split": 1,
+    "f1": 0.7717,
+    "ari": 0.8897,
+    "class_ratio": 1.211,
+    "split": 0,
     "merge": 0
    }
   },
@@ -10834,7 +10858,7 @@
    "input": "B",
    "style": "font",
    "condition": "spacing",
-   "hypotheses": 8,
+   "hypotheses": 14,
    "gold_rules": 8,
    "gold_found": 3,
    "found": [
@@ -10842,32 +10866,31 @@
     "文末標識 E",
     "動詞接尾辞 v の直後に E"
    ],
-   "true": 5,
-   "false": 2,
+   "true": 10,
+   "false": 3,
    "false_unmapped_symbols": 0,
    "unverifiable": 1,
    "tiers": {
     "A": 3,
-    "B": 1,
-    "C": 4
+    "C": 11
    },
-   "mean_sampling_stability": 0.8,
-   "mean_transcription_stability": 0.666,
-   "symbol_types": 34,
-   "symbols": 145,
+   "mean_sampling_stability": 0.771,
+   "mean_transcription_stability": 0.451,
+   "symbol_types": 30,
+   "symbols": 154,
    "verdict": "structure_observed",
    "segmentation_f1": {
-    "branching": 0.108,
-    "mdl": 0.318,
-    "consensus": 0.167,
-    "unigram": 0.187
+    "mdl": 0.344,
+    "branching": 0.276,
+    "consensus": 0.2,
+    "unigram": 0.228
    },
    "vision": {
-    "f1": 0.7673,
-    "ari": 0.8969,
-    "class_ratio": 0.947,
+    "f1": 0.8502,
+    "ari": 0.8156,
+    "class_ratio": 0.95,
     "split": 0,
-    "merge": 26
+    "merge": 18
    }
   },
   {
@@ -10876,40 +10899,40 @@
    "input": "C",
    "style": "font",
    "condition": "spacing",
-   "hypotheses": 22,
+   "hypotheses": 24,
    "gold_rules": 8,
-   "gold_found": 3,
+   "gold_found": 4,
    "found": [
     "文頭標識 S",
     "文末標識 E",
-    "動詞接尾辞 v の直後に E"
+    "動詞接尾辞 v の直後に E",
+    "v は各行に1回（必須）"
    ],
-   "true": 20,
-   "false": 0,
+   "true": 18,
+   "false": 4,
    "false_unmapped_symbols": 0,
    "unverifiable": 2,
    "tiers": {
-    "A": 10,
-    "B": 1,
-    "C": 11
+    "A": 9,
+    "C": 15
    },
-   "mean_sampling_stability": 0.773,
-   "mean_transcription_stability": 0.49,
-   "symbol_types": 24,
-   "symbols": 166,
+   "mean_sampling_stability": 0.758,
+   "mean_transcription_stability": 0.453,
+   "symbol_types": 18,
+   "symbols": 173,
    "verdict": "structure_observed",
    "segmentation_f1": {
-    "mdl": 0.417,
-    "branching": 0.317,
-    "unigram": 0.3,
-    "consensus": 0.341
+    "branching": 0.352,
+    "mdl": 0.497,
+    "consensus": 0.255,
+    "unigram": 0.23
    },
    "vision": {
-    "f1": 0.9381,
-    "ari": 0.9905,
-    "class_ratio": 0.95,
+    "f1": 1.0,
+    "ari": 0.9378,
+    "class_ratio": 0.9,
     "split": 0,
-    "merge": 7
+    "merge": 0
    }
   },
   {
@@ -11082,32 +11105,35 @@
    "input": "B",
    "style": "stroke",
    "condition": "size_thickness",
-   "hypotheses": 0,
+   "hypotheses": 7,
    "gold_rules": 8,
    "gold_found": 0,
    "found": [],
    "true": 0,
-   "false": 0,
-   "false_unmapped_symbols": 0,
+   "false": 7,
+   "false_unmapped_symbols": 4,
    "unverifiable": 0,
-   "tiers": {},
-   "mean_sampling_stability": null,
-   "mean_transcription_stability": null,
-   "symbol_types": 6,
-   "symbols": 6,
-   "verdict": "no_structure_detected",
+   "tiers": {
+    "A": 3,
+    "C": 4
+   },
+   "mean_sampling_stability": 0.629,
+   "mean_transcription_stability": 0.714,
+   "symbol_types": 83,
+   "symbols": 207,
+   "verdict": "structure_observed",
    "segmentation_f1": {
-    "branching": 0.0,
-    "unigram": 0.0,
-    "consensus": 0.0,
-    "mdl": 0.0
+    "branching": 0.1,
+    "unigram": 0.333,
+    "consensus": 0.333,
+    "mdl": 0.433
    },
    "vision": {
-    "f1": 0.0,
-    "ari": null,
-    "class_ratio": null,
-    "split": 0,
-    "merge": 6
+    "f1": 0.8158,
+    "ari": 0.3227,
+    "class_ratio": 4.222,
+    "split": 34,
+    "merge": 0
    }
   },
   {
@@ -11235,40 +11261,39 @@
    "input": "B",
    "style": "font",
    "condition": "clean",
-   "hypotheses": 53,
+   "hypotheses": 54,
    "gold_rules": 8,
-   "gold_found": 6,
+   "gold_found": 5,
    "found": [
     "文頭標識 S",
     "文末標識 E",
     "動詞接尾辞 v の直後に E",
-    "接尾辞 x/q/v が同じ枠に入る",
     "x は各行に1回（必須）",
     "v は各行に1回（必須）"
    ],
-   "true": 33,
-   "false": 18,
+   "true": 31,
+   "false": 21,
    "false_unmapped_symbols": 0,
    "unverifiable": 2,
    "tiers": {
-    "A": 21,
-    "B": 3,
-    "C": 29
+    "A": 17,
+    "B": 2,
+    "C": 35
    },
-   "mean_sampling_stability": 0.769,
-   "mean_transcription_stability": 0.487,
+   "mean_sampling_stability": 0.759,
+   "mean_transcription_stability": 0.443,
    "symbol_types": 16,
    "symbols": 402,
    "verdict": "structure_observed",
    "segmentation_f1": {
     "mdl": 0.48,
-    "branching": 0.482,
-    "consensus": 0.353,
-    "unigram": 0.243
+    "branching": 0.528,
+    "consensus": 0.418,
+    "unigram": 0.363
    },
    "vision": {
     "f1": 1.0,
-    "ari": 0.8363,
+    "ari": 0.7922,
     "class_ratio": 0.8,
     "split": 0,
     "merge": 0
@@ -11280,7 +11305,7 @@
    "input": "C",
    "style": "font",
    "condition": "clean",
-   "hypotheses": 52,
+   "hypotheses": 55,
    "gold_rules": 8,
    "gold_found": 5,
    "found": [
@@ -11290,30 +11315,30 @@
     "x は各行に1回（必須）",
     "v は各行に1回（必須）"
    ],
-   "true": 44,
-   "false": 7,
+   "true": 42,
+   "false": 9,
    "false_unmapped_symbols": 0,
-   "unverifiable": 1,
+   "unverifiable": 4,
    "tiers": {
-    "A": 25,
+    "A": 24,
     "B": 3,
-    "C": 24
+    "C": 28
    },
-   "mean_sampling_stability": 0.75,
-   "mean_transcription_stability": 0.58,
-   "symbol_types": 19,
+   "mean_sampling_stability": 0.76,
+   "mean_transcription_stability": 0.566,
+   "symbol_types": 18,
    "symbols": 402,
    "verdict": "structure_observed",
    "segmentation_f1": {
-    "mdl": 0.397,
-    "branching": 0.468,
-    "consensus": 0.412,
-    "unigram": 0.384
+    "mdl": 0.488,
+    "branching": 0.489,
+    "consensus": 0.436,
+    "unigram": 0.417
    },
    "vision": {
     "f1": 1.0,
-    "ari": 0.957,
-    "class_ratio": 0.95,
+    "ari": 0.9263,
+    "class_ratio": 0.9,
     "split": 0,
     "merge": 0
    }
@@ -11351,7 +11376,7 @@
    "input": "C",
    "style": "font",
    "condition": "noise",
-   "hypotheses": 47,
+   "hypotheses": 55,
    "gold_rules": 8,
    "gold_found": 5,
    "found": [
@@ -11361,30 +11386,30 @@
     "x は各行に1回（必須）",
     "v は各行に1回（必須）"
    ],
-   "true": 38,
-   "false": 7,
+   "true": 42,
+   "false": 9,
    "false_unmapped_symbols": 0,
-   "unverifiable": 2,
+   "unverifiable": 4,
    "tiers": {
-    "A": 22,
-    "B": 4,
-    "C": 21
+    "A": 24,
+    "B": 3,
+    "C": 28
    },
-   "mean_sampling_stability": 0.791,
-   "mean_transcription_stability": 0.579,
-   "symbol_types": 20,
+   "mean_sampling_stability": 0.76,
+   "mean_transcription_stability": 0.566,
+   "symbol_types": 18,
    "symbols": 402,
    "verdict": "structure_observed",
    "segmentation_f1": {
-    "mdl": 0.39,
-    "branching": 0.462,
-    "consensus": 0.421,
-    "unigram": 0.384
+    "mdl": 0.488,
+    "branching": 0.489,
+    "consensus": 0.436,
+    "unigram": 0.417
    },
    "vision": {
     "f1": 1.0,
-    "ari": 0.9557,
-    "class_ratio": 1.0,
+    "ari": 0.9263,
+    "class_ratio": 0.9,
     "split": 0,
     "merge": 0
    }
@@ -11395,37 +11420,38 @@
    "input": "B",
    "style": "font",
    "condition": "size_thickness",
-   "hypotheses": 3,
+   "hypotheses": 8,
    "gold_rules": 8,
-   "gold_found": 1,
+   "gold_found": 2,
    "found": [
+    "文頭標識 S",
     "文末標識 E"
    ],
-   "true": 1,
-   "false": 2,
-   "false_unmapped_symbols": 1,
+   "true": 4,
+   "false": 4,
+   "false_unmapped_symbols": 0,
    "unverifiable": 0,
    "tiers": {
-    "B": 1,
-    "C": 2
+    "B": 5,
+    "C": 3
    },
-   "mean_sampling_stability": 0.6,
-   "mean_transcription_stability": 0.443,
-   "symbol_types": 80,
-   "symbols": 124,
+   "mean_sampling_stability": 0.775,
+   "mean_transcription_stability": 0.625,
+   "symbol_types": 138,
+   "symbols": 259,
    "verdict": "structure_observed",
    "segmentation_f1": {
     "branching": 0.015,
-    "unigram": 0.052,
-    "consensus": 0.052,
-    "mdl": 0.294
+    "unigram": 0.222,
+    "consensus": 0.222,
+    "mdl": 0.439
    },
    "vision": {
-    "f1": 0.2852,
-    "ari": 0.653,
-    "class_ratio": 1.941,
+    "f1": 0.6384,
+    "ari": 0.307,
+    "class_ratio": 4.55,
     "split": 0,
-    "merge": 49
+    "merge": 48
    }
   },
   {
@@ -11434,41 +11460,38 @@
    "input": "C",
    "style": "font",
    "condition": "size_thickness",
-   "hypotheses": 44,
+   "hypotheses": 14,
    "gold_rules": 8,
-   "gold_found": 5,
+   "gold_found": 2,
    "found": [
     "文頭標識 S",
-    "文末標識 E",
-    "動詞接尾辞 v の直後に E",
-    "x は各行に1回（必須）",
-    "v は各行に1回（必須）"
+    "文末標識 E"
    ],
-   "true": 38,
-   "false": 1,
-   "false_unmapped_symbols": 0,
-   "unverifiable": 5,
+   "true": 10,
+   "false": 3,
+   "false_unmapped_symbols": 1,
+   "unverifiable": 1,
    "tiers": {
-    "A": 22,
-    "B": 2,
-    "C": 20
+    "A": 2,
+    "B": 7,
+    "C": 5
    },
-   "mean_sampling_stability": 0.732,
+   "mean_sampling_stability": 0.771,
    "mean_transcription_stability": 0.62,
-   "symbol_types": 30,
-   "symbols": 405,
+   "symbol_types": 38,
+   "symbols": 319,
    "verdict": "structure_observed",
    "segmentation_f1": {
-    "mdl": 0.531,
-    "branching": 0.445,
-    "consensus": 0.406,
-    "unigram": 0.307
+    "mdl": 0.373,
+    "branching": 0.142,
+    "consensus": 0.207,
+    "unigram": 0.208
    },
    "vision": {
-    "f1": 0.9888,
-    "ari": 0.9531,
-    "class_ratio": 1.4,
-    "split": 3,
+    "f1": 0.7573,
+    "ari": 0.9052,
+    "class_ratio": 1.35,
+    "split": 0,
     "merge": 0
    }
   },
@@ -11478,40 +11501,40 @@
    "input": "B",
    "style": "font",
    "condition": "spacing",
-   "hypotheses": 29,
+   "hypotheses": 43,
    "gold_rules": 8,
-   "gold_found": 4,
+   "gold_found": 3,
    "found": [
     "文頭標識 S",
     "文末標識 E",
-    "動詞接尾辞 v の直後に E",
-    "v は各行に1回（必須）"
+    "動詞接尾辞 v の直後に E"
    ],
-   "true": 19,
-   "false": 8,
+   "true": 25,
+   "false": 13,
    "false_unmapped_symbols": 0,
-   "unverifiable": 2,
+   "unverifiable": 5,
    "tiers": {
     "A": 10,
-    "C": 19
+    "B": 2,
+    "C": 31
    },
-   "mean_sampling_stability": 0.697,
-   "mean_transcription_stability": 0.391,
-   "symbol_types": 52,
-   "symbols": 333,
+   "mean_sampling_stability": 0.718,
+   "mean_transcription_stability": 0.368,
+   "symbol_types": 43,
+   "symbols": 352,
    "verdict": "structure_observed",
    "segmentation_f1": {
-    "mdl": 0.368,
-    "branching": 0.195,
-    "unigram": 0.122,
-    "consensus": 0.183
+    "mdl": 0.439,
+    "branching": 0.333,
+    "consensus": 0.238,
+    "unigram": 0.194
    },
    "vision": {
-    "f1": 0.7891,
-    "ari": 0.826,
+    "f1": 0.8541,
+    "ari": 0.7746,
     "class_ratio": 1.2,
     "split": 0,
-    "merge": 56
+    "merge": 44
    }
   },
   {
@@ -11520,7 +11543,7 @@
    "input": "C",
    "style": "font",
    "condition": "spacing",
-   "hypotheses": 49,
+   "hypotheses": 55,
    "gold_rules": 8,
    "gold_found": 5,
    "found": [
@@ -11530,32 +11553,32 @@
     "x は各行に1回（必須）",
     "v は各行に1回（必須）"
    ],
-   "true": 40,
-   "false": 7,
+   "true": 42,
+   "false": 9,
    "false_unmapped_symbols": 0,
-   "unverifiable": 2,
+   "unverifiable": 4,
    "tiers": {
-    "A": 21,
-    "B": 2,
-    "C": 26
+    "A": 24,
+    "B": 3,
+    "C": 28
    },
-   "mean_sampling_stability": 0.737,
-   "mean_transcription_stability": 0.589,
-   "symbol_types": 24,
-   "symbols": 389,
+   "mean_sampling_stability": 0.76,
+   "mean_transcription_stability": 0.566,
+   "symbol_types": 18,
+   "symbols": 402,
    "verdict": "structure_observed",
    "segmentation_f1": {
-    "mdl": 0.342,
-    "branching": 0.45,
-    "consensus": 0.377,
-    "unigram": 0.348
+    "mdl": 0.488,
+    "branching": 0.489,
+    "consensus": 0.436,
+    "unigram": 0.417
    },
    "vision": {
-    "f1": 0.9507,
-    "ari": 0.9546,
-    "class_ratio": 0.95,
+    "f1": 1.0,
+    "ari": 0.9263,
+    "class_ratio": 0.9,
     "split": 0,
-    "merge": 13
+    "merge": 0
    }
   },
   {
@@ -11677,7 +11700,7 @@
    "input": "C",
    "style": "stroke",
    "condition": "noise",
-   "hypotheses": 69,
+   "hypotheses": 66,
    "gold_rules": 8,
    "gold_found": 5,
    "found": [
@@ -11687,25 +11710,25 @@
     "x は各行に1回（必須）",
     "v は各行に1回（必須）"
    ],
-   "true": 25,
-   "false": 43,
-   "false_unmapped_symbols": 42,
+   "true": 24,
+   "false": 41,
+   "false_unmapped_symbols": 41,
    "unverifiable": 1,
    "tiers": {
-    "A": 25,
+    "A": 24,
     "B": 9,
-    "C": 35
+    "C": 33
    },
-   "mean_sampling_stability": 0.774,
-   "mean_transcription_stability": 0.512,
-   "symbol_types": 25,
+   "mean_sampling_stability": 0.779,
+   "mean_transcription_stability": 0.526,
+   "symbol_types": 24,
    "symbols": 473,
    "verdict": "structure_observed",
    "segmentation_f1": {
-    "mdl": 0.453,
-    "consensus": 0.361,
-    "branching": 0.455,
-    "unigram": 0.321
+    "mdl": 0.46,
+    "consensus": 0.374,
+    "branching": 0.468,
+    "unigram": 0.371
    },
    "vision": {
     "f1": 0.8251,
@@ -11721,32 +11744,39 @@
    "input": "B",
    "style": "stroke",
    "condition": "size_thickness",
-   "hypotheses": 0,
+   "hypotheses": 31,
    "gold_rules": 8,
-   "gold_found": 0,
-   "found": [],
-   "true": 0,
-   "false": 0,
-   "false_unmapped_symbols": 0,
+   "gold_found": 2,
+   "found": [
+    "文頭標識 S",
+    "接尾辞 x/q/v が同じ枠に入る"
+   ],
+   "true": 3,
+   "false": 28,
+   "false_unmapped_symbols": 16,
    "unverifiable": 0,
-   "tiers": {},
-   "mean_sampling_stability": null,
-   "mean_transcription_stability": null,
-   "symbol_types": 24,
-   "symbols": 27,
-   "verdict": "global_only",
+   "tiers": {
+    "A": 10,
+    "B": 7,
+    "C": 14
+   },
+   "mean_sampling_stability": 0.658,
+   "mean_transcription_stability": 0.592,
+   "symbol_types": 138,
+   "symbols": 484,
+   "verdict": "structure_observed",
    "segmentation_f1": {
-    "branching": 0.0,
-    "unigram": 0.0,
-    "consensus": 0.0,
-    "mdl": 0.042
+    "branching": 0.145,
+    "mdl": 0.411,
+    "unigram": 0.369,
+    "consensus": 0.366
    },
    "vision": {
-    "f1": 0.0606,
-    "ari": 0.0,
-    "class_ratio": 1.3,
-    "split": 3,
-    "merge": 9
+    "f1": 0.8014,
+    "ari": 0.2754,
+    "class_ratio": 6.789,
+    "split": 82,
+    "merge": 0
    }
   },
   {

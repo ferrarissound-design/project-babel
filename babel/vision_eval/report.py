@@ -55,9 +55,17 @@ def build(out="docs/VISION_EVAL.md"):
     L += ["## 1. 認識方式の比較", "",
           "人工画像: 2つの描画方式（font = OpenCV のフォント、stroke = 線・弧・点で作った字形）× 8条件"
           "（clean, noise, broken, similar, size_thickness, rules, spacing, wrapped）。各画像13行、規則のある人工言語の文。",
-          "dev（シード 0〜9）で方式と閾値を選び、val（100〜109）で確かめ、test（1000〜1019）は最後に1回だけ評価した。", "",
-          "既存方式（baseline）の類似度の閾値を dev で 0.6〜0.85 に変えても、検出 F1 は 0.725 のまま、ARI は最大 0.86（0.75）で、"
-          "以下の差は閾値では埋まらない。", ""]
+          "dev（シード 0〜9）で方式と閾値を選び、val（100〜109）で確かめ、test（1000〜1019）は最終評価にだけ使った。"
+          "ただし test は2回実行している: 1回目は OpenCV 5.0（宣言した範囲外）と不具合のある評価器での実行で無効（docs/ISSUES.md #61〜#64）。"
+          "方式と閾値は変えずに、OpenCV 4.14 で評価器を直して再実行した。以下はすべて2回目の値。", "",
+          ]
+    sweep = _load("baseline-threshold-dev.json")
+    if sweep:
+        best = max(sweep["rows"], key=lambda r: r["ari"]["mean"])
+        f1s = sorted({round(r["f1"]["mean"], 3) for r in sweep["rows"]})
+        L += [f"既存方式（baseline）の類似度の閾値を dev で {sweep['rows'][0]['similarity']}〜{sweep['rows'][-1]['similarity']} に変えると、"
+              f"検出 F1 は {'〜'.join(map(str, f1s))}、ARI は最大 {best['ari']['mean']:.3f}（{best['similarity']}）"
+              "（results/vision/baseline-threshold-dev.json）。閾値の違いだけでは、以下の差は説明できない。", ""]
     for res in (test, val, dev):
         if res:
             _methods_section(res, L)
@@ -83,8 +91,21 @@ def build(out="docs/VISION_EVAL.md"):
             L.append(f"| {k} | {row[0]} | {row[1]} |")
         L += ["", "**改善候補（improved）** = 中央値フィルタ → 連結成分による切り出し（点などの小さな成分を近い記号に付け、"
               "横に重なる成分をまとめる）→ 縦横比を保ったテンプレートの正規化相互相関による平均連結クラスタリング（閾値 0.20、dev で選択）。",
-              "改善: 雑音（既存方式は F1 0）、大きさ・太さの揺れ、罫線、不均一な間隔。**悪化: 離れた部品を持つ字形（stroke）の分割が増えた**"
-              "（字の中の部品の隙間が字と字の隙間より広く、位置だけでは区別できない）。処理時間は約2倍。", ""]
+              ""]
+        better, worse = [], []
+        for k in test["summary"]["baseline"]:
+            if k == "all":
+                continue
+            b0, b1 = test["summary"]["baseline"][k], test["summary"]["improved"][k]
+            df = (b1["f1"]["mean"] if b1["f1"] else 0) - (b0["f1"]["mean"] if b0["f1"] else 0)
+            if df >= 0.02:
+                better.append(f"{k}（F1 {b0['f1']['mean']:.2f}→{b1['f1']['mean']:.2f}）")
+            elif df <= -0.02:
+                worse.append(f"{k}（F1 {b0['f1']['mean']:.2f}→{b1['f1']['mean']:.2f}）")
+        L += [f"検出 F1 が 0.02 以上良くなった条件: {'、'.join(better) or 'なし'}。",
+              f"**悪くなった条件: {'、'.join(worse) or 'なし'}。** 悪化は離れた部品を持つ字形（stroke）に集中する"
+              "（字の中の部品の隙間が字と字の隙間より広く、位置だけでは区別できない。docs/ISSUES.md #57）。"
+              "クラスの構造（ARI）は多くの条件で良くなった。処理時間は約2倍。", ""]
 
     # ------------------------------------------------------------ 2. 構造解析への影響
     if imp:
@@ -193,8 +214,15 @@ def build(out="docs/VISION_EVAL.md"):
               "| 真の字形数 | Zipf 指数 | 分けすぎの確率 | クラス数の90%範囲 | 1回だけの90%範囲 |", "|---:|---:|---:|---|---|"]
         for c in cons:
             L.append(f"| {c['true_glyphs']} | {c['zipf_s']} | {c['p_oversplit']} | {c['types_90']} | {c['hapax_90']} |")
-        L += ["", f"両立する真の字形数は {Ks[0]}〜{Ks[-1]} と幅が広い。分けすぎなし（p=0）でも K=120〜200 なら両立し、K=20 でも p≥0.75 なら両立する"
-              "（合成の劣化画像では、21字が67〜113クラスになった: docs/STRUCTURE_RESULTS.md 表7）。"
+        te = json.loads(Path("results/structure/transcription-experiment.json").read_text(encoding="utf-8")) \
+            if Path("results/structure/transcription-experiment.json").exists() else {}
+        deg = [(v["transcription_errors"]["visual_classes"], v["transcription_errors"]["true_characters"])
+               for x in te.get("T2_synthetic_image", []) if x.get("degraded") for v in x["vision"].values()]
+        degtxt = (f"（合成の劣化画像では、{min(t for _, t in deg)}〜{max(t for _, t in deg)}字が {min(c for c, _ in deg)}〜{max(c for c, _ in deg)} の"
+                  "視覚クラスになった: docs/STRUCTURE_RESULTS.md 表7）") if deg else ""
+        p0 = sorted({c["true_glyphs"] for c in cons if c["p_oversplit"] == 0})
+        L += ["", f"両立する真の字形数は {Ks[0]}〜{Ks[-1]} と幅が広い。分けすぎなし（p=0）でも K={'・'.join(map(str, p0)) or '—'} なら両立し、"
+              f"K={Ks[0]} でも分けすぎが強ければ両立する{degtxt}。"
               "**転写の統計だけでは、過剰な分割と字形の多さを区別できない。**", ""]
     if real:
         L += ["### 人が次に確認すべき箇所（優先順）", "",

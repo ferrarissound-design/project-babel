@@ -109,3 +109,28 @@ def markdown(res):
     L += ["", "ARI は、検出で正解と対応した記号だけで計算する（検出できなかった記号はクラスの評価に入らない）。"
           "検出 F1 が低い条件の ARI は少数の記号の値なので、F1 と併せて読むこと。", ""]
     return "\n".join(L) + "\n"
+
+
+def baseline_threshold_sweep(similarities=(0.6, 0.65, 0.7, 0.75, 0.8, 0.85), out="results/vision/baseline-threshold-dev.json"):
+    """既存方式の類似度の閾値を dev だけで変えたときの成績（改善が閾値の違いだけで説明できるかを確かめる）。"""
+    import cv2
+
+    from babel.vision.evaluate import evaluate
+    from babel.vision.glyphs import analyze_image
+    from babel.vision.groundtruth import validate
+    with tempfile.TemporaryDirectory() as td:
+        wd = Path(td)
+        cases = synth.build(wd, "dev")
+        rows = []
+        for s in similarities:
+            f1, ari = [], []
+            for c in cases:
+                ev = evaluate(analyze_image(wd / "images" / f"{c['name']}.png", similarity=s),
+                              validate(json.loads((wd / "gt" / f"{c['name']}.json").read_text(encoding="utf-8"))))
+                f1.append(ev["detection"]["f1"])
+                if ev["classes"].get("ari") is not None:
+                    ari.append(ev["classes"]["ari"])
+            rows.append({"similarity": s, "f1": _agg(f1), "ari": _agg(ari)})
+    res = {"split": "dev", "opencv": cv2.__version__, "rows": rows}
+    Path(out).write_text(json.dumps(res, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+    return res

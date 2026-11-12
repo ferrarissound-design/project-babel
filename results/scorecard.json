@@ -77,19 +77,19 @@
   {
    "name": "再現性・成果物の公開",
    "max": 5,
-   "points": 2.0,
+   "points": 4.0,
    "status": "一部未評価",
    "detail": [
     "同一シード再実行の出力ハッシュ一致: True",
-    "ローカルと GitHub Actions の一致: 未評価（検証記録は別の実行 8fb8902cf731b1ed のもので、今回の出力 bb842502047a827e とは照合していない）",
+    "ローカルと GitHub Actions のハッシュ一致: True（v1.1.0。ローカル bb842502047a827e = Actions run 43133332365（凍結コミット 54eee1a の full）、どちらも1855実行・失敗0）",
     "GitHub Pages の公開確認: 未評価（リポジトリ設定での有効化が必要）",
-    "評価できた配点は 2/5 点分"
+    "評価できた配点は 4/5 点分"
    ]
   }
  ],
- "internal_points": 72.76,
- "evaluated_max": 97,
- "unevaluated_max": 3,
+ "internal_points": 74.76,
+ "evaluated_max": 99,
+ "unevaluated_max": 1,
  "note": "内部テストの点数。生成器と解読器を同じAIが作っているため、未知言語への一般化の証明にはならない。",
  "seed_role": "evaluation",
  "commit": "2fd8b54774999dd1f1a5698d62eaa1ef03c34cab"

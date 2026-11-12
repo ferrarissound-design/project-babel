@@ -1,0 +1,1207 @@
+{
+ "classes": {
+  "groups": {},
+  "labels": {},
+  "verb_confidence": 0.0,
+  "verb_group": null
+ },
+ "engine": {
+  "config": {
+   "abstain": true,
+   "align_method": "em",
+   "claim_threshold": 0.5,
+   "morph_method": "paradigm",
+   "pos_constraint": true,
+   "segmentation": "transductive",
+   "use_em": true,
+   "use_metadata": true,
+   "use_morph": true,
+   "use_numeral_solver": true,
+   "use_variants": true
+  },
+  "name": "babel-decipher",
+  "version": "1.2.0"
+ },
+ "frequency": {
+  "tokens": 52,
+  "top_chars": [
+   [
+    "n",
+    16
+   ],
+   [
+    "t",
+    11
+   ],
+   [
+    "a",
+    11
+   ],
+   [
+    "m",
+    11
+   ],
+   [
+    "e",
+    11
+   ],
+   [
+    "k",
+    10
+   ],
+   [
+    "x",
+    10
+   ],
+   [
+    "i",
+    10
+   ],
+   [
+    "s",
+    8
+   ],
+   [
+    "o",
+    8
+   ],
+   [
+    "l",
+    6
+   ],
+   [
+    "r",
+    5
+   ],
+   [
+    "u",
+    5
+   ],
+   [
+    "d",
+    5
+   ],
+   [
+    "z",
+    5
+   ]
+  ],
+  "top_words": [
+   [
+    "x",
+    7
+   ],
+   [
+    "tal",
+    6
+   ],
+   [
+    "men",
+    6
+   ],
+   [
+    "sok",
+    5
+   ],
+   [
+    "mat",
+    5
+   ],
+   [
+    "zin",
+    5
+   ],
+   [
+    "ruk",
+    4
+   ],
+   [
+    "den",
+    4
+   ],
+   [
+    "vo",
+    3
+   ],
+   [
+    "pifx",
+    2
+   ],
+   [
+    "pif",
+    2
+   ],
+   [
+    "spifx",
+    1
+   ],
+   [
+    "sruk",
+    1
+   ],
+   [
+    "sden",
+    1
+   ]
+  ],
+  "types": 14,
+  "word_entropy_bits": 3.58
+ },
+ "hypotheses": [
+  {
+   "alternatives": {},
+   "confidence": 0.0,
+   "evidence": "動詞クラスが1つだけ現れる文 0 文での位置",
+   "status": "保留（判定不能）",
+   "topic": "動詞の位置",
+   "value": null
+  },
+  {
+   "alternatives": {
+    "prefix": 0,
+    "suffix": 0
+   },
+   "confidence": 0.0,
+   "evidence": "接頭辞・接尾辞として解析された語の延べ数",
+   "status": "保留（判定不能）",
+   "topic": "接辞の付く側",
+   "value": null
+  },
+  {
+   "alternatives": {},
+   "confidence": 0.0,
+   "evidence": "意味の手がかりがなく、主語と目的語を区別できない",
+   "status": "保留（判定不能）",
+   "topic": "主語と目的語の順序",
+   "value": null
+  },
+  {
+   "alternatives": {},
+   "confidence": 0.0,
+   "evidence": "意味の手がかりがなく、主語と目的語を区別できない",
+   "status": "保留（判定不能）",
+   "topic": "形容詞と名詞の順序",
+   "value": null
+  },
+  {
+   "alternatives": {},
+   "confidence": 0.0,
+   "evidence": "合計行 0 行",
+   "status": "保留（判定不能）",
+   "topic": "数詞と名詞の順序",
+   "value": null
+  },
+  {
+   "alternatives": {},
+   "confidence": 0.0,
+   "evidence": "合計の方程式 0 本（冗長 0、棄却 0）合計行を示す標識が見つからず、対訳にも数量の手がかりがない",
+   "status": "保留（判定不能）",
+   "topic": "数詞の基数",
+   "value": null
+  }
+ ],
+ "input_warnings": [],
+ "language_id": "tengu-positive-control-unspaced",
+ "level": "C",
+ "lexicon": [
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 4,
+   "evidence": 0,
+   "forms": [
+    "den"
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": "den"
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 5,
+   "evidence": 0,
+   "forms": [
+    "mat"
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": "mat"
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 6,
+   "evidence": 0,
+   "forms": [
+    "men"
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": "men"
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 2,
+   "evidence": 0,
+   "forms": [
+    "pif"
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": "pif"
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 2,
+   "evidence": 0,
+   "forms": [
+    "pifx"
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": "pifx"
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 4,
+   "evidence": 0,
+   "forms": [
+    "ruk"
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": "ruk"
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 1,
+   "evidence": 0,
+   "forms": [
+    "sden"
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": "sden"
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 5,
+   "evidence": 0,
+   "forms": [
+    "sok"
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": "sok"
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 1,
+   "evidence": 0,
+   "forms": [
+    "spifx"
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": "spifx"
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 1,
+   "evidence": 0,
+   "forms": [
+    "sruk"
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": "sruk"
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 6,
+   "evidence": 0,
+   "forms": [
+    "tal"
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": "tal"
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 3,
+   "evidence": 0,
+   "forms": [
+    "vo"
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": "vo"
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 7,
+   "evidence": 0,
+   "forms": [
+    "x"
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": "x"
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 5,
+   "evidence": 0,
+   "forms": [
+    "zin"
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": "zin"
+  }
+ ],
+ "morphology": {
+  "affixes": [],
+  "allomorph_candidates": [],
+  "compounds": 0
+ },
+ "numerals": {
+  "base": null,
+  "confidence": 0.0,
+  "equations": 0,
+  "list_documents": 0,
+  "reason": "合計行を示す標識が見つからず、対訳にも数量の手がかりがない",
+  "redundant": 0,
+  "rejected": 0,
+  "relative": null,
+  "status": "undetermined",
+  "sum_marker": null,
+  "values": {}
+ },
+ "relatedness": {
+  "mat": [
+   [
+    "x",
+    0.513
+   ],
+   [
+    "zin",
+    0.453
+   ],
+   [
+    "tal",
+    0.251
+   ]
+  ],
+  "men": [
+   [
+    "tal",
+    0.96
+   ],
+   [
+    "x",
+    0.427
+   ],
+   [
+    "mat",
+    0.25
+   ]
+  ],
+  "sok": [
+   [
+    "mat",
+    0.211
+   ],
+   [
+    "zin",
+    0.199
+   ],
+   [
+    "x",
+    0.106
+   ]
+  ],
+  "tal": [
+   [
+    "men",
+    0.96
+   ],
+   [
+    "x",
+    0.411
+   ],
+   [
+    "mat",
+    0.251
+   ]
+  ],
+  "x": [
+   [
+    "zin",
+    0.531
+   ],
+   [
+    "mat",
+    0.513
+   ],
+   [
+    "men",
+    0.427
+   ]
+  ],
+  "zin": [
+   [
+    "x",
+    0.531
+   ],
+   [
+    "mat",
+    0.453
+   ],
+   [
+    "tal",
+    0.236
+   ]
+  ]
+ },
+ "segmentation_used": "transductive",
+ "split_used": {
+  "heldout": [],
+  "status": "unspecified",
+  "train": 15
+ },
+ "structure": {
+  "adj_noun": {
+   "confidence": 0.0,
+   "n": 0,
+   "reason": "意味の手がかりがなく、主語と目的語を区別できない",
+   "value": null
+  },
+  "affix_position": {
+   "confidence": 0.0,
+   "support": {
+    "prefix": 0,
+    "suffix": 0
+   },
+   "value": null
+  },
+  "num_noun": {
+   "confidence": 0.0,
+   "n": 0,
+   "value": null
+  },
+  "numeral_base": {
+   "alternatives": {},
+   "confidence": 0.0,
+   "value": null
+  },
+  "so_order": {
+   "confidence": 0.0,
+   "n": 0,
+   "reason": "意味の手がかりがなく、主語と目的語を区別できない",
+   "value": null
+  },
+  "sum_marker": {
+   "note": "合計行を示す機能語（算術的に検証できる機能であり、実世界の意味の主張ではない）",
+   "value": null
+  },
+  "verb_position": {
+   "alternatives": {},
+   "confidence": 0.0,
+   "n": 0,
+   "value": null
+  }
+ },
+ "summary": {
+  "claim_threshold": 0.5,
+  "claimed": 0,
+  "stems": 14,
+  "undetermined": 14
+ },
+ "tokens": {
+  "p01": [
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "sok",
+     "pos": "X",
+     "s": "sok",
+     "stem": "sok"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "tal",
+     "pos": "X",
+     "s": "tal",
+     "stem": "tal"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "ruk",
+     "pos": "X",
+     "s": "ruk",
+     "stem": "ruk"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "x",
+     "pos": "X",
+     "s": "x",
+     "stem": "x"
+    }
+   ]
+  ],
+  "p02": [
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "mat",
+     "pos": "X",
+     "s": "mat",
+     "stem": "mat"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "tal",
+     "pos": "X",
+     "s": "tal",
+     "stem": "tal"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "den",
+     "pos": "X",
+     "s": "den",
+     "stem": "den"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "x",
+     "pos": "X",
+     "s": "x",
+     "stem": "x"
+    }
+   ]
+  ],
+  "p03": [
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "zin",
+     "pos": "X",
+     "s": "zin",
+     "stem": "zin"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "tal",
+     "pos": "X",
+     "s": "tal",
+     "stem": "tal"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "pifx",
+     "pos": "X",
+     "s": "pifx",
+     "stem": "pifx"
+    }
+   ]
+  ],
+  "p04": [
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "sok",
+     "pos": "X",
+     "s": "sok",
+     "stem": "sok"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "men",
+     "pos": "X",
+     "s": "men",
+     "stem": "men"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "den",
+     "pos": "X",
+     "s": "den",
+     "stem": "den"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "x",
+     "pos": "X",
+     "s": "x",
+     "stem": "x"
+    }
+   ]
+  ],
+  "p05": [
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "mat",
+     "pos": "X",
+     "s": "mat",
+     "stem": "mat"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "men",
+     "pos": "X",
+     "s": "men",
+     "stem": "men"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "pifx",
+     "pos": "X",
+     "s": "pifx",
+     "stem": "pifx"
+    }
+   ]
+  ],
+  "p06": [
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "zin",
+     "pos": "X",
+     "s": "zin",
+     "stem": "zin"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "men",
+     "pos": "X",
+     "s": "men",
+     "stem": "men"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "ruk",
+     "pos": "X",
+     "s": "ruk",
+     "stem": "ruk"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "x",
+     "pos": "X",
+     "s": "x",
+     "stem": "x"
+    }
+   ]
+  ],
+  "p07": [
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "sok",
+     "pos": "X",
+     "s": "sok",
+     "stem": "sok"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "vo",
+     "pos": "X",
+     "s": "vo",
+     "stem": "vo"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "spifx",
+     "pos": "X",
+     "s": "spifx",
+     "stem": "spifx"
+    }
+   ]
+  ],
+  "p08": [
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "mat",
+     "pos": "X",
+     "s": "mat",
+     "stem": "mat"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "vo",
+     "pos": "X",
+     "s": "vo",
+     "stem": "vo"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "sruk",
+     "pos": "X",
+     "s": "sruk",
+     "stem": "sruk"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "x",
+     "pos": "X",
+     "s": "x",
+     "stem": "x"
+    }
+   ]
+  ],
+  "p09": [
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "zin",
+     "pos": "X",
+     "s": "zin",
+     "stem": "zin"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "vo",
+     "pos": "X",
+     "s": "vo",
+     "stem": "vo"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "sden",
+     "pos": "X",
+     "s": "sden",
+     "stem": "sden"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "x",
+     "pos": "X",
+     "s": "x",
+     "stem": "x"
+    }
+   ]
+  ],
+  "p10": [
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "sok",
+     "pos": "X",
+     "s": "sok",
+     "stem": "sok"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "tal",
+     "pos": "X",
+     "s": "tal",
+     "stem": "tal"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "ruk",
+     "pos": "X",
+     "s": "ruk",
+     "stem": "ruk"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "x",
+     "pos": "X",
+     "s": "x",
+     "stem": "x"
+    }
+   ]
+  ],
+  "p11": [
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "mat",
+     "pos": "X",
+     "s": "mat",
+     "stem": "mat"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "tal",
+     "pos": "X",
+     "s": "tal",
+     "stem": "tal"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "den",
+     "pos": "X",
+     "s": "den",
+     "stem": "den"
+    }
+   ]
+  ],
+  "p12": [
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "zin",
+     "pos": "X",
+     "s": "zin",
+     "stem": "zin"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "tal",
+     "pos": "X",
+     "s": "tal",
+     "stem": "tal"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "pif",
+     "pos": "X",
+     "s": "pif",
+     "stem": "pif"
+    }
+   ]
+  ],
+  "p13": [
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "sok",
+     "pos": "X",
+     "s": "sok",
+     "stem": "sok"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "men",
+     "pos": "X",
+     "s": "men",
+     "stem": "men"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "den",
+     "pos": "X",
+     "s": "den",
+     "stem": "den"
+    }
+   ]
+  ],
+  "p14": [
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "mat",
+     "pos": "X",
+     "s": "mat",
+     "stem": "mat"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "men",
+     "pos": "X",
+     "s": "men",
+     "stem": "men"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "pif",
+     "pos": "X",
+     "s": "pif",
+     "stem": "pif"
+    }
+   ]
+  ],
+  "p15": [
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "zin",
+     "pos": "X",
+     "s": "zin",
+     "stem": "zin"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "men",
+     "pos": "X",
+     "s": "men",
+     "stem": "men"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "ruk",
+     "pos": "X",
+     "s": "ruk",
+     "stem": "ruk"
+    }
+   ]
+  ]
+ },
+ "variants": {
+  "merged_types": 0,
+  "rules": []
+ },
+ "verdict": {
+  "decipherable_structure": true,
+  "morphology": {
+   "affixed_token_share": 0.0,
+   "n_affixes": 0,
+   "present": false
+  },
+  "semantic_evidence": "none",
+  "syntax": {
+   "entropy": 1.0657,
+   "present": true,
+   "reduction": 0.4608,
+   "shuffled_mean": 1.9763,
+   "z": 26.37
+  },
+  "text": "内部構造（語形・語順・数詞）は推定できるが、実世界の意味に対応づける証拠がない。意味は判定不能。"
+ }
+}

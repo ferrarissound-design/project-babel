@@ -52,6 +52,17 @@
   "precision": 0.9,
   "wrong": 1
  },
+ "lexicon_inferred": {
+  "abstain": 214,
+  "abstain_rate_without_evidence": 1.0,
+  "claimed": 10,
+  "correct": 9,
+  "coverage": 0.0446,
+  "given_excluded": 4,
+  "note": "トークン単位の採点では、既知語は最初から lexicon の集計から除外している（lexicon と同じ値）",
+  "precision": 0.9,
+  "wrong": 1
+ },
  "null_verdict": null,
  "numerals": {
   "abstain": 1,
@@ -81,6 +92,7 @@
   "n": 150,
   "p_at_1": 0.5067
  },
+ "scoring_version": 2,
  "segmentation": {
   "f1": 0.8873,
   "precision": 0.9874,

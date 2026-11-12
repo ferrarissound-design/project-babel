@@ -1,0 +1,61 @@
+{
+ "attempt": {
+  "answer_already_public": true,
+  "attempt": 2,
+  "commit": "f4fcb5d34e9f836371c3c58e4046f99256c29552",
+  "created_utc": "2026-11-12T05:06:53+00:00",
+  "engine_fingerprint": "c7c188845a357e9b",
+  "first_attempt": false,
+  "name": "gpt6-blind-01",
+  "sha256": "b2df3f12cb5824c75ee106257ec008dc96adff3ada45cca981b52fcfc8eac9e0"
+ },
+ "blind": false,
+ "errors": [],
+ "independent": true,
+ "language_id": null,
+ "level": "A",
+ "lexicon": {
+  "abstain": 4,
+  "claimed": 26,
+  "correct": 26,
+  "coverage": 0.8667,
+  "not_found": 0,
+  "note": "既知語（意味を事前に与えた語）を含む総合値。採点方式1と同じ定義",
+  "precision": 1.0,
+  "wrong": 0
+ },
+ "lexicon_inferred": {
+  "abstain": 4,
+  "accuracy": 0.84,
+  "claimed": 21,
+  "correct": 21,
+  "coverage": 0.84,
+  "evaluated": 25,
+  "given_excluded": 5,
+  "not_found": 0,
+  "note": "既知語を除き、解読器が対訳などから推定した語だけを数えた値（採点方式2）",
+  "precision": 1.0,
+  "wrong": 0
+ },
+ "null_verdict": null,
+ "numerals": {
+  "abstain": 8,
+  "accuracy": 0.4286,
+  "correct": 6,
+  "wrong": 0
+ },
+ "overclaim": {
+  "meaning_claims": 26,
+  "overclaims": 0
+ },
+ "provenance": "Independently constructed by GPT-6 on 2026-11-12 (not by PROJECT BABEL/Fable creator), rule-based generated test corpus; 100 documents, 434 sentences. Grammar/lexicon withheld until first prediction ledger entry.",
+ "scoring_version": 2,
+ "structure": {
+  "adj_noun": "abstain",
+  "affix_position": "correct",
+  "num_noun": "abstain",
+  "numeral_base": "abstain",
+  "so_order": "correct",
+  "verb_position": "correct"
+ }
+}

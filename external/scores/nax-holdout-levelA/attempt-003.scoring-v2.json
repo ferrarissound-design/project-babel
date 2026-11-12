@@ -1,0 +1,136 @@
+{
+ "affix_inventory": {
+  "f1": 0.597,
+  "precision": 0.7143,
+  "recall": 0.5128
+ },
+ "attempt": {
+  "answer_already_public": true,
+  "attempt": 3,
+  "commit": "f4fcb5d34e9f836371c3c58e4046f99256c29552",
+  "created_utc": "2026-11-12T05:06:53+00:00",
+  "engine_fingerprint": "c7c188845a357e9b",
+  "first_attempt": false,
+  "name": "nax-holdout-levelA",
+  "sha256": "39b71f184ce74dfb9a2354def97c6ba75448900897f174d403c6a6bbb799b57b"
+ },
+ "blind": false,
+ "errors": [
+  {
+   "cause": "同音異義語・多義語",
+   "confidence": 0.643,
+   "gold": "city",
+   "predicted": "wool",
+   "stem": "hosil"
+  },
+  {
+   "cause": "証拠が1例のみ",
+   "confidence": 0.582,
+   "gold": "grain+house",
+   "predicted": "people",
+   "stem": "suhawuni"
+  },
+  {
+   "cause": "証拠が1例のみ",
+   "confidence": 0.567,
+   "gold": "bad",
+   "predicted": "write",
+   "stem": "numik"
+  },
+  {
+   "cause": "証拠が1例のみ",
+   "confidence": 0.521,
+   "gold": "write",
+   "predicted": "carry",
+   "stem": "uesiho"
+  }
+ ],
+ "gloss_heldout": {
+  "abstain": 0.7677,
+  "correct": 0.2257,
+  "feature_jaccard": 0.1554,
+  "numeral_correct": 0.9767,
+  "tokens": 762,
+  "wrong": 0.0066
+ },
+ "gloss_train": {
+  "abstain": 0.7573,
+  "correct": 0.2286,
+  "feature_jaccard": 0.1562,
+  "numeral_correct": 0.9755,
+  "tokens": 2822,
+  "wrong": 0.0142
+ },
+ "independent": false,
+ "language_id": "NAX-7001",
+ "level": "A",
+ "lexicon": {
+  "abstain": 199,
+  "abstain_rate_without_evidence": 0.993,
+  "claimed": 25,
+  "correct": 21,
+  "coverage": 0.1116,
+  "precision": 0.84,
+  "wrong": 4
+ },
+ "lexicon_inferred": {
+  "abstain": 199,
+  "abstain_rate_without_evidence": 0.993,
+  "claimed": 25,
+  "correct": 21,
+  "coverage": 0.1116,
+  "given_excluded": 4,
+  "note": "トークン単位の採点では、既知語は最初から lexicon の集計から除外している（lexicon と同じ値）",
+  "precision": 0.84,
+  "wrong": 4
+ },
+ "null_verdict": null,
+ "numerals": {
+  "abstain": 1,
+  "accuracy": 0.8824,
+  "correct": 15,
+  "false_numeral": 0,
+  "relative": false,
+  "wrong": 1
+ },
+ "oov": {
+  "claimed_anyway": 0,
+  "heldout_tokens_with_unseen_stem": 11
+ },
+ "overclaim": {
+  "meaning_claims": 29,
+  "overclaims": 0,
+  "semantic_evidence_available": true
+ },
+ "pos": {
+  "accuracy": 0.8668,
+  "accuracy_when_labelled": 0.9567,
+  "labelled": 0.906
+ },
+ "provenance": "解読器と同じAIが、解読器の凍結後（コミット c34d6db）に設計した第4系統 NAX。準初見であり独立テストではない",
+ "relatedness": {
+  "chance": 0.0636,
+  "n": 150,
+  "p_at_1": 0.5067
+ },
+ "scoring_version": 2,
+ "segmentation": {
+  "f1": 0.8873,
+  "precision": 0.9874,
+  "recall": 0.8056
+ },
+ "structure": {
+  "adj_noun": "abstain",
+  "affix_position": "correct",
+  "num_noun": "correct",
+  "numeral_base": "abstain",
+  "so_order": "correct",
+  "verb_position": "correct"
+ },
+ "variants": {
+  "f1": 0.6618,
+  "gold_pairs": 368,
+  "precision": 0.7103,
+  "recall": 0.6196
+ }
+}

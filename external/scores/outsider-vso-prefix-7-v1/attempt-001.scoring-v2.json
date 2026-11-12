@@ -1,0 +1,61 @@
+{
+ "attempt": {
+  "answer_already_public": false,
+  "attempt": 1,
+  "commit": "f4fcb5d34e9f836371c3c58e4046f99256c29552",
+  "created_utc": "2026-11-12T05:06:54+00:00",
+  "engine_fingerprint": "c7c188845a357e9b",
+  "first_attempt": true,
+  "name": "outsider-vso-prefix-7-v1",
+  "sha256": "0883f5966d68b3e2ea97a989649dae2470625de7a92a75410082b8282b14a6fa"
+ },
+ "blind": true,
+ "errors": [],
+ "independent": true,
+ "language_id": "outsider-vso-prefix-7-v1",
+ "level": "A",
+ "lexicon": {
+  "abstain": 9,
+  "claimed": 17,
+  "correct": 17,
+  "coverage": 0.4722,
+  "not_found": 10,
+  "note": "既知語（意味を事前に与えた語）を含む総合値。採点方式1と同じ定義",
+  "precision": 1.0,
+  "wrong": 0
+ },
+ "lexicon_inferred": {
+  "abstain": 9,
+  "accuracy": 0.4412,
+  "claimed": 15,
+  "correct": 15,
+  "coverage": 0.4412,
+  "evaluated": 34,
+  "given_excluded": 2,
+  "not_found": 10,
+  "note": "既知語を除き、解読器が対訳などから推定した語だけを数えた値（採点方式2）",
+  "precision": 1.0,
+  "wrong": 0
+ },
+ "null_verdict": null,
+ "numerals": {
+  "abstain": 5,
+  "accuracy": 0.6875,
+  "correct": 11,
+  "wrong": 0
+ },
+ "overclaim": {
+  "meaning_claims": 27,
+  "overclaims": 0
+ },
+ "provenance": "Constructed independently by GPT-6 on 2026-11-12, without the PROJECT BABEL generator. Gold grammar and dictionary published only after the first GitHub SHA256-ledger prediction entry (answer_already_public=false). A test of VSO prefix inflection, repeated semantic roles, no total lines, base-7 quantities, 34 heldout docs; 160 docs and 800 utterances, 83 partial parallel clues. Note VSO means predicate in initial position; S before O.",
+ "scoring_version": 2,
+ "structure": {
+  "adj_noun": "correct",
+  "affix_position": "correct",
+  "num_noun": "abstain",
+  "numeral_base": "abstain",
+  "so_order": "correct",
+  "verb_position": "wrong"
+ }
+}

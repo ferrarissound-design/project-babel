@@ -1,0 +1,4297 @@
+{
+  "language_id": "outsider-vso-prefix-7-v1",
+  "level": "A",
+  "has_word_boundaries": true,
+  "documents": [
+    {
+      "id": "d001",
+      "meta": {
+        "genre": "travel"
+      },
+      "sentences": [
+        "nuimerut ganeshil pay zhor tubekal muvereh",
+        "nuitovel gadukal ik tuboshi musahun",
+        "puarikam gagunar kar tufelen mugunar",
+        "nuirikam galiren nev ik tufelen muliren",
+        "puarikam gasahun sil sal tubekal musahun"
+      ]
+    },
+    {
+      "id": "d002",
+      "meta": {
+        "genre": "ledger"
+      },
+      "sentences": [
+        "nuisusen galomak sal tusurak mukorap",
+        "nuizarev ganeshil pay tes tubekal muneshil",
+        "puatovel gasahun zhordub tubekal muliren",
+        "nuifaver gatapel zhordub tucoven mutapel",
+        "nuikalis gafumet sal tuwanek mulomak"
+      ]
+    },
+    {
+      "id": "d003",
+      "meta": {
+        "genre": "ledger"
+      },
+      "sentences": [
+        "nuikalis gayalven zhor tusipen muedris",
+        "nuimerut gatavren sil ik tuwanek mutavren",
+        "nuitovel galiren zhorkar turitol mulomak",
+        "puarikam gafumet kar tumedri mufumet",
+        "nuisusen gafumet nev zhorsal tugavun mufumet"
+      ]
+    },
+    {
+      "id": "d004",
+      "meta": {
+        "genre": "notice"
+      },
+      "sentences": [
+        "shaikalis galiren sal tugavun mutapel",
+        "shaiburak gagunar zhorkar tuboshi mugunar",
+        "puakilon gatapel ik tubekal mutapel",
+        "shaisusen gatapel dub turitol mutapel",
+        "shaisusen gayalven sal tusipen muneshil"
+      ]
+    },
+    {
+      "id": "d005",
+      "meta": {
+        "genre": "notice"
+      },
+      "sentences": [
+        "shaizarev gayalven zhorkar tuwanek muyalven",
+        "shaitemir gayalven pay teszhor tumedri musahun",
+        "nuizarev gagunar karzhor tugavun mudukal",
+        "nuitemir ganeshil sil tes tucoven muneshil",
+        "nuirikam gafumet nev dub tucoven musahun"
+      ]
+    },
+    {
+      "id": "d006",
+      "meta": {
+        "genre": "notice"
+      },
+      "sentences": [
+        "shaimerut gasahun zhordub tubekal mugunar",
+        "nuiburak ganeshil dubzhor tumedri mutapel",
+        "shaiburak gasahun zhorkar tubekal muneshil",
+        "puarikam gafumet teszhor tufelen mufumet",
+        "shaisusen gavereh dubzhor tusurak muliren"
+      ]
+    },
+    {
+      "id": "d007",
+      "meta": {
+        "genre": "notice"
+      },
+      "sentences": [
+        "shaitovel gasahun nev zhorsal turitol musahun",
+        "puatovel galomak tes tusurak mukorap",
+        "puasusen gadukal nev zhorpum tuboshi mudukal",
+        "nuirikam gasahun nev zhordub tuwanek musahun",
+        "shaimerut ganeshil pay zhor tucoven muneshil"
+      ]
+    },
+    {
+      "id": "d008",
+      "meta": {
+        "genre": "travel"
+      },
+      "sentences": [
+        "shaizarev galiren karzhor tucoven muvereh",
+        "shaikilon ganeshil nev zhor tubekal muneshil",
+        "shaitemir gavereh teszhor tugavun muedris",
+        "nuifaver ganeshil pay zhor tufelen muyalven",
+        "nuiburak gafumet dubzhor tucoven mudukal"
+      ]
+    },
+    {
+      "id": "d009",
+      "meta": {
+        "genre": "notice"
+      },
+      "sentences": [
+        "nuikalis galiren zhorsal tufelen muliren",
+        "puaburak ganeshil sil sal tusurak mutapel",
+        "puamerut gatapel sil kar tuwanek muedris",
+        "puatemir gadukal sil zhorpum tufelen mudukal",
+        "nuitemir gatavren dub tuwanek muneshil"
+      ]
+    },
+    {
+      "id": "d010",
+      "meta": {
+        "genre": "ledger"
+      },
+      "sentences": [
+        "puasusen galomak pay dub tusipen mufumet",
+        "nuitovel ganeshil kar tusipen mutavren",
+        "nuikalis gafumet pay dubzhor tumedri mukorap",
+        "shaitemir galomak sil kar tuboshi musahun",
+        "nuisusen gatapel zhorik tumedri mufumet"
+      ]
+    },
+    {
+      "id": "d011",
+      "meta": {
+        "genre": "travel"
+      },
+      "sentences": [
+        "nuisusen galomak pum tumedri muedris",
+        "nuimerut ganeshil pay dub turitol muvereh",
+        "shaimerut gavereh zhorik tuboshi muliren",
+        "shairikam gatavren zhorpum tucoven mutavren",
+        "puakilon gatavren zhordub tubekal mutapel"
+      ]
+    },
+    {
+      "id": "d012",
+      "meta": {
+        "genre": "notice"
+      },
+      "sentences": [
+        "nuimerut galiren sil zhorpum tufelen muvereh",
+        "puasusen gatavren zhorpum turitol muneshil",
+        "nuimerut gavereh sil zhordub tusurak musahun",
+        "shaizarev gatavren pay zhorsal turitol mutavren",
+        "shaitovel gafumet nev ik tucoven mufumet"
+      ]
+    },
+    {
+      "id": "d013",
+      "meta": {
+        "genre": "notice"
+      },
+      "sentences": [
+        "nuisusen gavereh dubzhor tusipen musahun",
+        "puarikam gatavren zhordub turitol mutavren",
+        "nuitovel gakorap sil dubzhor tuboshi muliren",
+        "nuiburak gagunar ik tuwanek mugunar",
+        "nuizarev gaedris zhor tufelen mutapel"
+      ]
+    },
+    {
+      "id": "d014",
+      "meta": {
+        "genre": "notice"
+      },
+      "sentences": [
+        "nuimerut gaedris teszhor tumedri muneshil",
+        "puatovel gadukal zhorkar tusipen mulomak",
+        "nuiburak galiren zhorsal tucoven muliren",
+        "shairikam galiren zhorsal tusipen mufumet",
+        "puafaver gafumet nev kar tucoven muyalven"
+      ]
+    },
+    {
+      "id": "d015",
+      "meta": {
+        "genre": "travel"
+      },
+      "sentences": [
+        "nuitemir gavereh kar tufelen muedris",
+        "nuikalis gasahun pay teszhor tuboshi muneshil",
+        "puatemir gakorap sal tuwanek mukorap",
+        "nuizarev gaedris zhordub tusipen mugunar",
+        "nuiburak gadukal zhortes tuwanek muyalven"
+      ]
+    },
+    {
+      "id": "d016",
+      "meta": {
+        "genre": "notice"
+      },
+      "sentences": [
+        "puasusen gadukal pum tusurak muedris",
+        "puakalis gakorap karzhor tusurak muyalven",
+        "nuizarev gadukal pay zhordub tucoven muedris",
+        "nuizarev gayalven zhor tusipen muyalven",
+        "puafaver gaedris zhorsal tusurak muedris"
+      ]
+    },
+    {
+      "id": "d017",
+      "meta": {
+        "genre": "ledger"
+      },
+      "sentences": [
+        "puasusen gatapel zhorsal tufelen mutapel",
+        "shaiburak gavereh zhortes tusurak muvereh",
+        "shairikam gagunar zhortes tuwanek mutapel",
+        "shaisusen gayalven nev zhorik tufelen mudukal",
+        "nuirikam ganeshil nev zhorkar tumedri musahun"
+      ]
+    },
+    {
+      "id": "d018",
+      "meta": {
+        "genre": "notice"
+      },
+      "sentences": [
+        "puasusen gadukal pay zhor tufelen mufumet",
+        "puarikam gafumet kar tubekal mufumet",
+        "shaifaver galomak teszhor tumedri mulomak",
+        "shaifaver gagunar zhordub tuwanek mugunar",
+        "puaburak gavereh sil zhorsal tugavun musahun"
+      ]
+    },
+    {
+      "id": "d019",
+      "meta": {
+        "genre": "ledger"
+      },
+      "sentences": [
+        "puamerut gayalven nev zhorsal tubekal mulomak",
+        "shaifaver gayalven dub tusipen musahun",
+        "puaburak gaedris dubzhor tucoven muedris",
+        "puatovel gatapel pum tusurak muliren",
+        "shaiburak gayalven dubzhor tumedri mukorap"
+      ]
+    },
+    {
+      "id": "d020",
+      "meta": {
+        "genre": "travel"
+      },
+      "sentences": [
+        "nuikalis galiren karzhor tuwanek mutapel",
+        "shaiburak gatavren dubzhor tufelen mutavren",
+        "shaikilon gatapel nev pum turitol muvereh",
+        "puamerut galiren zhortes tusurak muliren",
+        "puarikam galiren sil pum tusipen muliren"
+      ]
+    },
+    {
+      "id": "d021",
+      "meta": {
+        "genre": "notice"
+      },
+      "sentences": [
+        "puakalis gatapel sil tes tugavun muyalven",
+        "nuimerut gaedris sil ik turitol muedris",
+        "shaimerut gayalven pay tes tubekal muyalven",
+        "nuikilon gagunar pay ik tugavun muvereh",
+        "nuikalis galiren tes tucoven muliren"
+      ]
+    },
+    {
+      "id": "d022",
+      "meta": {
+        "genre": "ledger"
+      },
+      "sentences": [
+        "puazarev gafumet pay dub tumedri mutapel",
+        "shaitemir gasahun dubzhor tusipen muneshil",
+        "nuikalis gadukal nev zhorsal tuwanek mudukal",
+        "puaburak gafumet ik tumedri muliren",
+        "puakilon gasahun kar tusipen musahun"
+      ]
+    },
+    {
+      "id": "d023",
+      "meta": {
+        "genre": "ledger"
+      },
+      "sentences": [
+        "shairikam gafumet pay karzhor tumedri mugunar",
+        "shaifaver gadukal teszhor tufelen mutapel",
+        "nuiburak ganeshil zhorpum tuwanek mudukal",
+        "nuisusen gasahun zhorik tusurak musahun",
+        "shaifaver gavereh zhorkar tubekal mulomak"
+      ]
+    },
+    {
+      "id": "d024",
+      "meta": {
+        "genre": "ledger"
+      },
+      "sentences": [
+        "nuitovel gakorap pum tuwanek muyalven",
+        "shaifaver gafumet zhordub turitol mulomak",
+        "puakilon gayalven nev kar tufelen muliren",
+        "puakilon gayalven pum tuwanek mutapel",
+        "puakilon gagunar zhorkar tumedri mugunar"
+      ]
+    },
+    {
+      "id": "d025",
+      "meta": {
+        "genre": "ledger"
+      },
+      "sentences": [
+        "puarikam gavereh sal tucoven mugunar",
+        "nuimerut gadukal pay ik tubekal mudukal",
+        "nuitovel gafumet zhor tugavun mufumet",
+        "nuitovel gafumet zhor tubekal muvereh",
+        "shaiburak galiren sil dub tugavun muliren"
+      ]
+    },
+    {
+      "id": "d026",
+      "meta": {
+        "genre": "ledger"
+      },
+      "sentences": [
+        "nuikalis gasahun kar tuboshi musahun",
+        "nuizarev gasahun nev tes tufelen muvereh",
+        "puatemir gaedris tes tufelen mudukal",
+        "nuizarev gagunar nev zhor tuboshi mugunar",
+        "puafaver galiren sil zhortes tubekal muliren"
+      ]
+    },
+    {
+      "id": "d027",
+      "meta": {
+        "genre": "ledger"
+      },
+      "sentences": [
+        "puakalis gadukal nev dubzhor tuwanek musahun",
+        "nuikalis gavereh teszhor tuwanek muliren",
+        "shaikilon galiren dubzhor tubekal mukorap",
+        "nuitovel galomak ik tuboshi muedris",
+        "shaitemir gaedris kar tusurak muyalven"
+      ]
+    },
+    {
+      "id": "d028",
+      "meta": {
+        "genre": "ledger"
+      },
+      "sentences": [
+        "nuikalis gaedris dub turitol muedris",
+        "nuikilon gafumet nev pum turitol muneshil",
+        "puamerut gayalven zhordub tufelen muyalven",
+        "nuikalis ganeshil sil zhortes tugavun muneshil",
+        "nuiburak gayalven zhorpum tusurak mutavren"
+      ]
+    },
+    {
+      "id": "d029",
+      "meta": {
+        "genre": "notice"
+      },
+      "sentences": [
+        "nuitemir galomak zhorik tuwanek mufumet",
+        "shaizarev gafumet zhordub tucoven mutapel",
+        "puatemir gatapel dub tumedri muvereh",
+        "nuimerut gafumet zhorpum tumedri mukorap",
+        "nuitovel gakorap pum tumedri muedris"
+      ]
+    },
+    {
+      "id": "d030",
+      "meta": {
+        "genre": "notice"
+      },
+      "sentences": [
+        "puatovel gavereh tes tufelen muyalven",
+        "nuirikam gadukal sal tucoven mudukal",
+        "shaitovel gaedris dubzhor tuboshi mudukal",
+        "shaimerut ganeshil teszhor tumedri mutavren",
+        "puatovel galomak sil zhortes tuwanek muyalven"
+      ]
+    },
+    {
+      "id": "d031",
+      "meta": {
+        "genre": "notice"
+      },
+      "sentences": [
+        "puaburak gavereh zhorik tumedri mudukal",
+        "puaburak gatavren tes tucoven muneshil",
+        "nuisusen ganeshil kar tuboshi mukorap",
+        "shaifaver gayalven zhorsal tugavun muyalven",
+        "shaikalis gatavren nev tes turitol muvereh"
+      ]
+    },
+    {
+      "id": "d032",
+      "meta": {
+        "genre": "ledger"
+      },
+      "sentences": [
+        "puarikam gadukal zhorpum tugavun mudukal",
+        "puakilon gakorap pay zhorpum tumedri muliren",
+        "nuikalis gagunar ik tubekal mugunar",
+        "shaisusen galomak nev dub tuwanek mudukal",
+        "nuitovel gadukal zhor tugavun mudukal"
+      ]
+    },
+    {
+      "id": "d033",
+      "meta": {
+        "genre": "ledger"
+      },
+      "sentences": [
+        "puatovel gafumet zhorkar tugavun mugunar",
+        "nuirikam gaedris sal turitol mutavren",
+        "puafaver galiren sil zhor tucoven muliren",
+        "nuirikam gatapel zhortes tumedri mutapel",
+        "nuikilon gadukal teszhor tusurak mudukal"
+      ]
+    },
+    {
+      "id": "d034",
+      "meta": {
+        "genre": "travel"
+      },
+      "sentences": [
+        "shaifaver gaedris pum tusipen mutapel",
+        "shaisusen gavereh teszhor tubekal muvereh",
+        "shaikilon gavereh tes tubekal mugunar",
+        "shaikalis gadukal pum tumedri mutapel",
+        "puatovel gatavren pay sal tucoven mutapel"
+      ]
+    },
+    {
+      "id": "d035",
+      "meta": {
+        "genre": "travel"
+      },
+      "sentences": [
+        "nuikalis gaedris kar turitol muneshil",
+        "nuizarev ganeshil dubzhor tuboshi muneshil",
+        "shaikilon galomak tes tuwanek mudukal",
+        "shaikalis gakorap zhorpum tumedri mufumet",
+        "puatemir gadukal nev zhor tugavun mutapel"
+      ]
+    },
+    {
+      "id": "d036",
+      "meta": {
+        "genre": "notice"
+      },
+      "sentences": [
+        "puakalis galiren zhortes tufelen muliren",
+        "shaizarev gagunar zhortes turitol mugunar",
+        "shaisusen galomak nev kar tuwanek mulomak",
+        "shaitovel galomak zhorik tuwanek mulomak",
+        "nuisusen gatapel ik tufelen muliren"
+      ]
+    },
+    {
+      "id": "d037",
+      "meta": {
+        "genre": "ledger"
+      },
+      "sentences": [
+        "nuimerut gaedris dub tubekal muedris",
+        "puasusen gagunar sil ik turitol muvereh",
+        "puasusen gakorap nev zhorik tucoven mukorap",
+        "nuitovel gayalven sil ik tugavun muyalven",
+        "shaifaver gavereh ik tusipen mutavren"
+      ]
+    },
+    {
+      "id": "d038",
+      "meta": {
+        "genre": "ledger"
+      },
+      "sentences": [
+        "shaitemir ganeshil sil zhorsal turitol mutavren",
+        "nuikalis gasahun kar tuboshi mufumet",
+        "shaitemir gasahun teszhor tugavun musahun",
+        "puatemir gayalven pay zhorpum tucoven musahun",
+        "shaisusen gayalven zhorsal tufelen mudukal"
+      ]
+    },
+    {
+      "id": "d039",
+      "meta": {
+        "genre": "notice"
+      },
+      "sentences": [
+        "nuimerut ganeshil pay sal tumedri muneshil",
+        "puakilon galomak zhortes turitol muvereh",
+        "nuizarev gaedris sil zhorpum tugavun mufumet",
+        "nuizarev galomak nev sal tubekal muvereh",
+        "shaiburak gatapel zhortes tusurak mulomak"
+      ]
+    },
+    {
+      "id": "d040",
+      "meta": {
+        "genre": "ledger"
+      },
+      "sentences": [
+        "puakilon gayalven zhorsal tucoven muyalven",
+        "nuimerut gadukal sil zhordub tugavun muedris",
+        "shaitovel galiren pay zhorsal tugavun musahun",
+        "puatovel galiren zhorik turitol mukorap",
+        "nuikilon gasahun ik tugavun mufumet"
+      ]
+    },
+    {
+      "id": "d041",
+      "meta": {
+        "genre": "travel"
+      },
+      "sentences": [
+        "shairikam galiren zhorsal turitol mutavren",
+        "nuizarev ganeshil nev tes tuwanek muyalven",
+        "shaifaver gatapel kar tuwanek mufumet",
+        "nuifaver gagunar kar tuwanek mulomak",
+        "puakilon gadukal zhorpum tusipen muvereh"
+      ]
+    },
+    {
+      "id": "d042",
+      "meta": {
+        "genre": "ledger"
+      },
+      "sentences": [
+        "nuimerut gadukal nev zhordub tusurak muliren",
+        "shaitemir gavereh pum tuboshi mukorap",
+        "puatemir gasahun sil zhortes tumedri musahun",
+        "puakalis gavereh pay zhorsal tusurak muneshil",
+        "shaitovel galomak dub tubekal mutavren"
+      ]
+    },
+    {
+      "id": "d043",
+      "meta": {
+        "genre": "travel"
+      },
+      "sentences": [
+        "nuirikam gatavren nev dub tuwanek mufumet",
+        "shairikam gayalven zhorsal tucoven muyalven",
+        "shaifaver galomak zhorsal tusurak mulomak",
+        "shaikalis galomak zhortes tusipen muvereh",
+        "shaifaver gatapel sal tuwanek muliren"
+      ]
+    },
+    {
+      "id": "d044",
+      "meta": {
+        "genre": "notice"
+      },
+      "sentences": [
+        "puasusen gavereh sil zhorik tugavun muneshil",
+        "shaimerut gagunar teszhor tusurak mugunar",
+        "shaimerut ganeshil teszhor tusurak musahun",
+        "shaisusen gatavren sil ik tubekal mutavren",
+        "shaiburak gakorap dubzhor turitol mukorap"
+      ]
+    },
+    {
+      "id": "d045",
+      "meta": {
+        "genre": "notice"
+      },
+      "sentences": [
+        "nuifaver gakorap nev pum turitol musahun",
+        "shairikam gadukal nev dubzhor tufelen muyalven",
+        "puakilon gavereh nev ik tumedri mugunar",
+        "nuitemir ganeshil ik tuwanek muneshil",
+        "shaisusen gagunar ik tusurak mutavren"
+      ]
+    },
+    {
+      "id": "d046",
+      "meta": {
+        "genre": "notice"
+      },
+      "sentences": [
+        "puaburak gaedris pay tes tusurak mugunar",
+        "shaimerut gadukal teszhor tuboshi mulomak",
+        "shaitovel gakorap pay teszhor tugavun mukorap",
+        "nuiburak gayalven teszhor tugavun muyalven",
+        "nuizarev gaedris sil zhorik tugavun muliren"
+      ]
+    },
+    {
+      "id": "d047",
+      "meta": {
+        "genre": "travel"
+      },
+      "sentences": [
+        "shaimerut ganeshil dub tugavun mutapel",
+        "nuirikam gayalven pay dubzhor tubekal muyalven",
+        "nuiburak ganeshil kar tubekal mudukal",
+        "nuikalis gakorap nev dubzhor tuwanek muliren",
+        "puakilon ganeshil pay sal tucoven muneshil"
+      ]
+    },
+    {
+      "id": "d048",
+      "meta": {
+        "genre": "travel"
+      },
+      "sentences": [
+        "puafaver gagunar teszhor tusurak muyalven",
+        "shaikalis gadukal ik tuwanek musahun",
+        "puaburak ganeshil sal tugavun muneshil",
+        "shaiburak gavereh pay dubzhor tumedri muvereh",
+        "puakalis gaedris zhorsal tuboshi mulomak"
+      ]
+    },
+    {
+      "id": "d049",
+      "meta": {
+        "genre": "ledger"
+      },
+      "sentences": [
+        "puatemir gakorap zhorik tusipen mukorap",
+        "nuiburak gadukal sil teszhor tuwanek muyalven",
+        "nuizarev gadukal teszhor tusurak muvereh",
+        "puasusen galomak sal tusurak musahun",
+        "shaikalis gatavren zhordub tuwanek mutavren"
+      ]
+    },
+    {
+      "id": "d050",
+      "meta": {
+        "genre": "notice"
+      },
+      "sentences": [
+        "puakilon gagunar karzhor turitol mukorap",
+        "nuitovel galiren nev karzhor turitol mukorap",
+        "puakilon gayalven zhortes tusurak muneshil",
+        "shaitemir gakorap nev sal tucoven muyalven",
+        "puakalis gakorap kar tubekal mutapel"
+      ]
+    },
+    {
+      "id": "d051",
+      "meta": {
+        "genre": "notice"
+      },
+      "sentences": [
+        "puatovel gaedris dub tugavun muedris",
+        "shaisusen gatapel zhordub tusurak mudukal",
+        "shaizarev gadukal zhorik tufelen mudukal",
+        "shaikalis gadukal dubzhor turitol mudukal",
+        "nuitemir gadukal zhorik tusurak mufumet"
+      ]
+    },
+    {
+      "id": "d052",
+      "meta": {
+        "genre": "notice"
+      },
+      "sentences": [
+        "puarikam gatavren teszhor tuboshi muneshil",
+        "nuimerut gayalven sil zhorpum tuboshi muneshil",
+        "shaisusen gasahun nev zhortes turitol mulomak",
+        "nuiburak gavereh karzhor tuboshi muliren",
+        "shaikilon gafumet dub tufelen mufumet"
+      ]
+    },
+    {
+      "id": "d053",
+      "meta": {
+        "genre": "ledger"
+      },
+      "sentences": [
+        "puatemir ganeshil zhor tufelen muedris",
+        "nuikilon gagunar pum tugavun mugunar",
+        "puakalis gakorap nev pum tugavun mukorap",
+        "nuisusen ganeshil tes tusipen mutavren",
+        "nuitovel gatavren zhor turitol mudukal"
+      ]
+    },
+    {
+      "id": "d054",
+      "meta": {
+        "genre": "travel"
+      },
+      "sentences": [
+        "puasusen gaedris zhorik tucoven muliren",
+        "puatemir gatapel zhorpum tucoven muneshil",
+        "nuisusen galiren zhorkar turitol muliren",
+        "nuifaver gaedris pum tumedri mufumet",
+        "nuimerut galomak zhortes tusurak mulomak"
+      ]
+    },
+    {
+      "id": "d055",
+      "meta": {
+        "genre": "ledger"
+      },
+      "sentences": [
+        "puakalis gayalven tes tuwanek mufumet",
+        "puafaver gagunar pum tufelen mufumet",
+        "shaikalis gagunar pay teszhor tucoven mugunar",
+        "shaimerut gatavren zhordub tumedri muneshil",
+        "nuirikam galiren zhortes tugavun musahun"
+      ]
+    },
+    {
+      "id": "d056",
+      "meta": {
+        "genre": "notice"
+      },
+      "sentences": [
+        "shaisusen gatavren teszhor tubekal muyalven",
+        "nuikilon gagunar zhorsal tubekal muyalven",
+        "puatovel galiren nev sal tufelen mutapel",
+        "nuikalis gadukal nev zhorkar turitol muvereh",
+        "shaitemir gadukal sal tucoven mutavren"
+      ]
+    },
+    {
+      "id": "d057",
+      "meta": {
+        "genre": "ledger"
+      },
+      "sentences": [
+        "shaimerut gadukal teszhor tusipen muliren",
+        "nuimerut gakorap pay teszhor tufelen mulomak",
+        "nuirikam gavereh sal tusipen muedris",
+        "puatemir gadukal sil zhorik tusurak mudukal",
+        "puatemir gadukal nev ik tusurak mudukal"
+      ]
+    },
+    {
+      "id": "d058",
+      "meta": {
+        "genre": "notice"
+      },
+      "sentences": [
+        "shaitovel gavereh zhortes tubekal muvereh",
+        "shaikalis galiren kar tufelen mulomak",
+        "puazarev gatapel pay zhortes tumedri muedris",
+        "nuikilon gavereh sal turitol mukorap",
+        "shairikam gadukal dubzhor tusurak mulomak"
+      ]
+    },
+    {
+      "id": "d059",
+      "meta": {
+        "genre": "travel"
+      },
+      "sentences": [
+        "puamerut ganeshil dub tufelen muneshil",
+        "nuirikam gafumet kar tucoven mudukal",
+        "nuitovel gatavren sil zhorik turitol mukorap",
+        "puasusen gayalven sil karzhor turitol muedris",
+        "shaisusen gavereh pay sal tusurak mulomak"
+      ]
+    },
+    {
+      "id": "d060",
+      "meta": {
+        "genre": "ledger"
+      },
+      "sentences": [
+        "puazarev gasahun nev pum tuboshi muliren",
+        "puakilon ganeshil zhordub tusurak mukorap",
+        "nuizarev gadukal dubzhor tucoven mudukal",
+        "shaikalis gafumet zhorik turitol mufumet",
+        "puaburak gavereh pay sal tuwanek musahun"
+      ]
+    },
+    {
+      "id": "d061",
+      "meta": {
+        "genre": "ledger"
+      },
+      "sentences": [
+        "nuiburak ganeshil nev dubzhor tucoven muneshil",
+        "shairikam gavereh pum tuwanek mufumet",
+        "puamerut gadukal sil zhorsal tusurak musahun",
+        "puarikam gafumet ik turitol mutavren",
+        "nuikalis gatavren pay teszhor tumedri mudukal"
+      ]
+    },
+    {
+      "id": "d062",
+      "meta": {
+        "genre": "ledger"
+      },
+      "sentences": [
+        "puamerut ganeshil zhorsal tuboshi mutavren",
+        "puarikam gatapel zhorik tuwanek mulomak",
+        "puafaver ganeshil dub turitol muneshil",
+        "nuikalis gagunar dubzhor tusurak mugunar",
+        "nuisusen gagunar zhorik tusipen mudukal"
+      ]
+    },
+    {
+      "id": "d063",
+      "meta": {
+        "genre": "ledger"
+      },
+      "sentences": [
+        "puaburak ganeshil tes tugavun muneshil",
+        "shaimerut gavereh nev ik tuboshi mudukal",
+        "puakalis gafumet nev zhor tugavun musahun",
+        "nuirikam ganeshil zhortes tucoven mukorap",
+        "shaitovel galiren pay zhorsal tucoven mukorap"
+      ]
+    },
+    {
+      "id": "d064",
+      "meta": {
+        "genre": "travel"
+      },
+      "sentences": [
+        "puatovel ganeshil zhordub tumedri muyalven",
+        "shaisusen gaedris pay karzhor tuboshi muliren",
+        "nuizarev gayalven nev zhortes tumedri muyalven",
+        "puarikam ganeshil nev karzhor tucoven mulomak",
+        "puamerut gasahun sil tes tubekal muedris"
+      ]
+    },
+    {
+      "id": "d065",
+      "meta": {
+        "genre": "travel"
+      },
+      "sentences": [
+        "puatemir gaedris zhortes tugavun mufumet",
+        "nuisusen gakorap sil tes tuboshi mukorap",
+        "shaitemir gafumet zhor tufelen mufumet",
+        "puaburak gavereh karzhor tusurak mugunar",
+        "puamerut ganeshil kar tufelen muedris"
+      ]
+    },
+    {
+      "id": "d066",
+      "meta": {
+        "genre": "notice"
+      },
+      "sentences": [
+        "nuitemir gafumet zhorkar tubekal muliren",
+        "nuisusen gayalven zhortes tufelen muyalven",
+        "puasusen gayalven pum tucoven mutavren",
+        "shaimerut gagunar zhorpum tusipen mulomak",
+        "nuitovel gadukal sal turitol muneshil"
+      ]
+    },
+    {
+      "id": "d067",
+      "meta": {
+        "genre": "notice"
+      },
+      "sentences": [
+        "shaisusen gakorap nev teszhor tuwanek muyalven",
+        "shaizarev galiren ik tuwanek muliren",
+        "nuirikam galiren sil zhorik tuwanek mukorap",
+        "puatemir gasahun nev teszhor tubekal muyalven",
+        "shaimerut gasahun nev zhordub turitol mutavren"
+      ]
+    },
+    {
+      "id": "d068",
+      "meta": {
+        "genre": "ledger"
+      },
+      "sentences": [
+        "nuiburak gayalven pay dubzhor tumedri muliren",
+        "puasusen gadukal zhorkar tugavun mulomak",
+        "nuitovel gayalven zhor turitol mutavren",
+        "nuikalis gagunar nev zhorsal turitol mugunar",
+        "shaifaver gagunar dubzhor tumedri muliren"
+      ]
+    },
+    {
+      "id": "d069",
+      "meta": {
+        "genre": "ledger"
+      },
+      "sentences": [
+        "shairikam gatavren zhortes tubekal muvereh",
+        "shaikilon galomak pay ik tucoven mulomak",
+        "shaimerut gaedris pay zhorsal tugavun mutavren",
+        "shaiburak gagunar dub tumedri mutavren",
+        "puakilon gatapel zhorik tuboshi mutapel"
+      ]
+    },
+    {
+      "id": "d070",
+      "meta": {
+        "genre": "ledger"
+      },
+      "sentences": [
+        "puasusen galiren zhorik tusurak muliren",
+        "nuitovel galomak pay ik tubekal muliren",
+        "nuizarev ganeshil nev dub tumedri mudukal",
+        "nuimerut gayalven zhor turitol muyalven",
+        "puakalis gatavren nev kar tusurak mudukal"
+      ]
+    },
+    {
+      "id": "d071",
+      "meta": {
+        "genre": "ledger"
+      },
+      "sentences": [
+        "shaikalis ganeshil sil dubzhor tusipen mulomak",
+        "nuikalis gakorap pum tufelen mukorap",
+        "shaikalis gasahun karzhor tusurak musahun",
+        "shaitemir gaedris zhorsal tufelen muyalven",
+        "puaburak gakorap zhortes tugavun muedris"
+      ]
+    },
+    {
+      "id": "d072",
+      "meta": {
+        "genre": "notice"
+      },
+      "sentences": [
+        "nuifaver gasahun pay zhorsal tufelen muneshil",
+        "nuikalis gatavren kar tumedri muvereh",
+        "puamerut gagunar nev zhortes tucoven mugunar",
+        "shaizarev gatapel pum tusurak mutapel",
+        "nuisusen gatapel sil ik tumedri muvereh"
+      ]
+    },
+    {
+      "id": "d073",
+      "meta": {
+        "genre": "notice"
+      },
+      "sentences": [
+        "nuikilon ganeshil zhorik tubekal muvereh",
+        "nuirikam gadukal pay ik tucoven mutapel",
+        "puasusen gakorap zhorik tusurak mukorap",
+        "puasusen gagunar zhorik tusipen muneshil",
+        "puakalis gafumet zhortes tufelen muvereh"
+      ]
+    },
+    {
+      "id": "d074",
+      "meta": {
+        "genre": "notice"
+      },
+      "sentences": [
+        "shaitovel gafumet sil dubzhor tuboshi mukorap",
+        "puazarev gafumet sil zhorik tumedri mufumet",
+        "shaikilon ganeshil pum tumedri muneshil",
+        "puaburak gasahun pay dub tuboshi musahun",
+        "shaikalis gasahun nev zhorpum tubekal musahun"
+      ]
+    },
+    {
+      "id": "d075",
+      "meta": {
+        "genre": "travel"
+      },
+      "sentences": [
+        "puasusen ganeshil nev dubzhor tucoven muneshil",
+        "puazarev gafumet nev zhorkar tucoven mutavren",
+        "nuitemir gatapel pay zhor tufelen muliren",
+        "nuiburak gagunar zhortes tugavun mugunar",
+        "puafaver gasahun sil pum tusurak musahun"
+      ]
+    },
+    {
+      "id": "d076",
+      "meta": {
+        "genre": "travel"
+      },
+      "sentences": [
+        "puazarev gatavren zhorsal tuboshi mufumet",
+        "nuirikam gaedris pay dubzhor tusurak mutapel",
+        "nuitovel gaedris dub tubekal muedris",
+        "puafaver gatapel pay ik tucoven mufumet",
+        "shaikalis gadukal sal turitol muvereh"
+      ]
+    },
+    {
+      "id": "d077",
+      "meta": {
+        "genre": "ledger"
+      },
+      "sentences": [
+        "puakilon gakorap sil zhorsal tugavun muyalven",
+        "nuitovel ganeshil pay dub tuboshi muneshil",
+        "puatovel ganeshil sil tes turitol muneshil",
+        "nuitovel ganeshil nev zhorpum tugavun muedris",
+        "puakalis gadukal zhordub tusurak muvereh"
+      ]
+    },
+    {
+      "id": "d078",
+      "meta": {
+        "genre": "notice"
+      },
+      "sentences": [
+        "puamerut gadukal sal turitol mutapel",
+        "shaikilon gatapel pum tucoven muvereh",
+        "nuitemir gatavren zhorsal tusipen muedris",
+        "shaimerut ganeshil zhorpum tuwanek mutapel",
+        "nuitovel galomak dub tuboshi muyalven"
+      ]
+    },
+    {
+      "id": "d079",
+      "meta": {
+        "genre": "notice"
+      },
+      "sentences": [
+        "nuirikam gatavren pay kar tusipen muedris",
+        "nuizarev gasahun nev zhorsal tugavun muliren",
+        "nuiburak gadukal sal tumedri mutapel",
+        "nuiburak ganeshil sil ik tusurak mutapel",
+        "nuitovel gatavren ik tusipen mutapel"
+      ]
+    },
+    {
+      "id": "d080",
+      "meta": {
+        "genre": "travel"
+      },
+      "sentences": [
+        "nuizarev gatavren zhorpum tusipen mutavren",
+        "nuifaver gafumet nev zhortes tumedri mufumet",
+        "nuiburak gadukal pay zhor tusipen mutapel",
+        "puaburak gakorap dubzhor tuboshi muliren",
+        "nuizarev gakorap nev dub tufelen muliren"
+      ]
+    },
+    {
+      "id": "d081",
+      "meta": {
+        "genre": "ledger"
+      },
+      "sentences": [
+        "nuitemir ganeshil zhorpum tufelen muneshil",
+        "shaikilon gasahun pay zhorpum tuwanek muliren",
+        "shairikam gadukal zhordub turitol muvereh",
+        "nuirikam gadukal nev zhordub tusipen mudukal",
+        "nuikilon gatavren sal turitol mutavren"
+      ]
+    },
+    {
+      "id": "d082",
+      "meta": {
+        "genre": "ledger"
+      },
+      "sentences": [
+        "shaifaver gaedris pum tuboshi muliren",
+        "nuikalis gaedris zhortes tuwanek muedris",
+        "shaimerut gagunar zhordub tusipen muedris",
+        "shaifaver gasahun sil zhorpum turitol muliren",
+        "puakalis gatavren nev dubzhor tubekal muliren"
+      ]
+    },
+    {
+      "id": "d083",
+      "meta": {
+        "genre": "ledger"
+      },
+      "sentences": [
+        "puatemir ganeshil nev zhortes tugavun muneshil",
+        "puazarev gatapel sil zhorsal tusurak mutapel",
+        "shaiburak gaedris pum tusurak muvereh",
+        "puarikam gakorap pay zhorsal turitol muyalven",
+        "nuimerut galomak sil sal tucoven mulomak"
+      ]
+    },
+    {
+      "id": "d084",
+      "meta": {
+        "genre": "notice"
+      },
+      "sentences": [
+        "puasusen gagunar pum tucoven musahun",
+        "shaiburak gatavren nev sal tusurak muyalven",
+        "shairikam gakorap sil zhorkar tusipen mudukal",
+        "nuitovel ganeshil ik tugavun muedris",
+        "shaizarev gadukal nev dubzhor tuwanek muliren"
+      ]
+    },
+    {
+      "id": "d085",
+      "meta": {
+        "genre": "notice"
+      },
+      "sentences": [
+        "puasusen gatavren dub tusurak mutapel",
+        "puasusen galomak sil ik tuboshi musahun",
+        "puatovel gasahun sil zhordub tuwanek musahun",
+        "shaifaver gagunar zhordub tusurak mugunar",
+        "shaitovel gatapel karzhor tufelen mutapel"
+      ]
+    },
+    {
+      "id": "d086",
+      "meta": {
+        "genre": "ledger"
+      },
+      "sentences": [
+        "shaizarev gatavren sil sal tuboshi muedris",
+        "nuitemir gayalven nev dubzhor tusipen muvereh",
+        "puatemir gafumet pay pum tubekal mulomak",
+        "nuimerut gaedris sil sal tuwanek muedris",
+        "puatemir galiren tes tufelen mutapel"
+      ]
+    },
+    {
+      "id": "d087",
+      "meta": {
+        "genre": "travel"
+      },
+      "sentences": [
+        "puasusen galomak tes tuwanek muvereh",
+        "nuifaver ganeshil tes turitol mulomak",
+        "nuiburak gayalven zhordub tugavun mutavren",
+        "nuisusen gafumet pum tucoven mufumet",
+        "nuirikam gatapel teszhor tusurak mutapel"
+      ]
+    },
+    {
+      "id": "d088",
+      "meta": {
+        "genre": "notice"
+      },
+      "sentences": [
+        "nuiburak gakorap sil dubzhor tusurak mukorap",
+        "shaimerut ganeshil dubzhor turitol mutavren",
+        "shaimerut gatavren sil zhordub tusurak muneshil",
+        "puatemir galomak nev zhorpum tumedri muyalven",
+        "puakalis galiren zhordub tuboshi mufumet"
+      ]
+    },
+    {
+      "id": "d089",
+      "meta": {
+        "genre": "travel"
+      },
+      "sentences": [
+        "nuisusen gavereh dubzhor tumedri mutapel",
+        "nuikalis galiren pay sal tufelen muyalven",
+        "puakilon ganeshil sil dub tucoven mutapel",
+        "shairikam gagunar nev sal tuwanek mufumet",
+        "shaitovel ganeshil ik tuwanek mutavren"
+      ]
+    },
+    {
+      "id": "d090",
+      "meta": {
+        "genre": "ledger"
+      },
+      "sentences": [
+        "shaikilon gayalven zhorpum tuwanek mutavren",
+        "shaikilon gadukal sil zhortes tugavun mudukal",
+        "shaimerut gatapel pay pum tuwanek muliren",
+        "shaikalis gatavren pum tucoven mugunar",
+        "puafaver galiren nev zhorsal tucoven musahun"
+      ]
+    },
+    {
+      "id": "d091",
+      "meta": {
+        "genre": "ledger"
+      },
+      "sentences": [
+        "puakilon gadukal pay dub tuwanek mufumet",
+        "nuisusen gasahun kar tusurak musahun",
+        "shaizarev gavereh teszhor turitol mutavren",
+        "puafaver galiren zhorik tuwanek musahun",
+        "puafaver gagunar pay teszhor tugavun muvereh"
+      ]
+    },
+    {
+      "id": "d092",
+      "meta": {
+        "genre": "ledger"
+      },
+      "sentences": [
+        "puakilon ganeshil dubzhor tuboshi mukorap",
+        "shaikilon galiren kar tucoven muvereh",
+        "nuitovel ganeshil sil karzhor tuwanek muneshil",
+        "puatovel galomak sil zhorpum tumedri mulomak",
+        "shairikam gasahun pum turitol musahun"
+      ]
+    },
+    {
+      "id": "d093",
+      "meta": {
+        "genre": "ledger"
+      },
+      "sentences": [
+        "shaikilon gatavren pum tugavun muedris",
+        "puafaver gakorap zhorpum tuwanek mukorap",
+        "puamerut gaedris pay teszhor tumedri mugunar",
+        "shaiburak gatavren nev zhorsal tufelen muyalven",
+        "shaimerut galomak sil dubzhor tusipen musahun"
+      ]
+    },
+    {
+      "id": "d094",
+      "meta": {
+        "genre": "ledger"
+      },
+      "sentences": [
+        "nuitemir gayalven zhorkar tumedri mufumet",
+        "nuizarev gayalven sal tubekal muyalven",
+        "nuitemir gayalven tes tubekal musahun",
+        "shaikilon gayalven sil zhordub tugavun muyalven",
+        "shaimerut gayalven pay zhortes tucoven muedris"
+      ]
+    },
+    {
+      "id": "d095",
+      "meta": {
+        "genre": "ledger"
+      },
+      "sentences": [
+        "shaitemir gafumet zhorik tuboshi muvereh",
+        "shaitovel galiren ik tufelen mufumet",
+        "puarikam gafumet zhorsal tusipen muvereh",
+        "puazarev gagunar sal tufelen mutavren",
+        "nuisusen gatavren karzhor tumedri mutavren"
+      ]
+    },
+    {
+      "id": "d096",
+      "meta": {
+        "genre": "travel"
+      },
+      "sentences": [
+        "puarikam galiren pay zhorpum tugavun mufumet",
+        "puasusen gafumet pay zhortes tusurak muyalven",
+        "shaitemir gagunar tes tuboshi muedris",
+        "puarikam gatapel ik tubekal mudukal",
+        "shaimerut gasahun nev zhorpum tubekal mudukal"
+      ]
+    },
+    {
+      "id": "d097",
+      "meta": {
+        "genre": "travel"
+      },
+      "sentences": [
+        "puatemir gayalven dubzhor tubekal muyalven",
+        "puazarev galiren zhorpum tugavun mutapel",
+        "nuikilon gafumet sil kar tusipen muedris",
+        "shaifaver gasahun zhorsal tugavun musahun",
+        "shaikilon gadukal sil zhorik tusurak muedris"
+      ]
+    },
+    {
+      "id": "d098",
+      "meta": {
+        "genre": "travel"
+      },
+      "sentences": [
+        "nuikilon gakorap sal tusurak musahun",
+        "puafaver gatapel dub tuwanek mutapel",
+        "shaifaver gafumet zhor tucoven muvereh",
+        "puakilon gavereh sil dubzhor tufelen muneshil",
+        "nuizarev gagunar pay zhorpum tucoven mufumet"
+      ]
+    },
+    {
+      "id": "d099",
+      "meta": {
+        "genre": "travel"
+      },
+      "sentences": [
+        "shaitemir galiren zhorsal tufelen muliren",
+        "nuifaver gaedris pum tuwanek mutavren",
+        "shaimerut gaedris zhor tuwanek muyalven",
+        "nuifaver gadukal nev karzhor tugavun mudukal",
+        "nuikalis gagunar nev zhorsal tusurak mugunar"
+      ]
+    },
+    {
+      "id": "d100",
+      "meta": {
+        "genre": "travel"
+      },
+      "sentences": [
+        "nuitovel gakorap zhorkar turitol mukorap",
+        "nuiburak gavereh sal tufelen muvereh",
+        "shaitovel gadukal nev teszhor tuboshi mutapel",
+        "puarikam galomak zhorik tucoven muyalven",
+        "puatovel gayalven sil kar tucoven mutapel"
+      ]
+    },
+    {
+      "id": "d101",
+      "meta": {
+        "genre": "notice"
+      },
+      "sentences": [
+        "shaifaver gaedris karzhor tusurak muedris",
+        "puarikam gatavren tes tuboshi mutavren",
+        "puakalis gavereh ik tucoven muedris",
+        "puaburak ganeshil ik tubekal mugunar",
+        "shaisusen gadukal kar tuwanek mulomak"
+      ]
+    },
+    {
+      "id": "d102",
+      "meta": {
+        "genre": "notice"
+      },
+      "sentences": [
+        "nuisusen gagunar nev dubzhor tufelen mugunar",
+        "shaizarev ganeshil nev zhorpum tumedri mutavren",
+        "puarikam gaedris sil pum tuboshi muedris",
+        "puarikam gagunar pay zhorpum tucoven muliren",
+        "nuitovel galiren pay teszhor tumedri mutapel"
+      ]
+    },
+    {
+      "id": "d103",
+      "meta": {
+        "genre": "ledger"
+      },
+      "sentences": [
+        "shaizarev gasahun tes tugavun muliren",
+        "puatemir gaedris sil sal tusipen mukorap",
+        "puaburak gayalven ik tuwanek mudukal",
+        "nuitovel galiren karzhor tusurak muliren",
+        "puakilon gatapel karzhor tusurak mutavren"
+      ]
+    },
+    {
+      "id": "d104",
+      "meta": {
+        "genre": "ledger"
+      },
+      "sentences": [
+        "puasusen gatavren pum tusurak mutapel",
+        "nuikalis gatapel zhorsal tusipen muliren",
+        "puafaver ganeshil sal tugavun muneshil",
+        "shaizarev gaedris karzhor tuboshi mudukal",
+        "shairikam galomak zhortes tusipen mutapel"
+      ]
+    },
+    {
+      "id": "d105",
+      "meta": {
+        "genre": "travel"
+      },
+      "sentences": [
+        "shaitovel gatavren ik tufelen mutavren",
+        "puazarev gadukal sil karzhor tugavun mudukal",
+        "nuimerut gavereh zhorik tugavun muvereh",
+        "nuifaver gavereh zhor tuboshi musahun",
+        "puatemir gafumet dubzhor tuboshi mufumet"
+      ]
+    },
+    {
+      "id": "d106",
+      "meta": {
+        "genre": "notice"
+      },
+      "sentences": [
+        "shaizarev gayalven sil sal tugavun muedris",
+        "nuikalis gaedris zhortes turitol mufumet",
+        "shaimerut gatapel ik tumedri muvereh",
+        "nuifaver galiren nev tes tugavun muedris",
+        "puaburak gakorap zhorpum tumedri mukorap"
+      ]
+    },
+    {
+      "id": "d107",
+      "meta": {
+        "genre": "notice"
+      },
+      "sentences": [
+        "shaisusen gatavren zhortes tusurak muvereh",
+        "puazarev gafumet nev pum tumedri mutavren",
+        "nuitovel gagunar zhorpum tucoven muliren",
+        "puakilon gafumet zhorsal tusurak muliren",
+        "nuikalis galiren kar tugavun mutapel"
+      ]
+    },
+    {
+      "id": "d108",
+      "meta": {
+        "genre": "ledger"
+      },
+      "sentences": [
+        "nuikalis gakorap dub tuboshi muyalven",
+        "nuitovel gatavren zhorik tuwanek musahun",
+        "nuikalis gafumet zhorkar tufelen mufumet",
+        "nuiburak gatavren nev zhorpum tusipen muneshil",
+        "puaburak galiren zhordub tumedri muliren"
+      ]
+    },
+    {
+      "id": "d109",
+      "meta": {
+        "genre": "notice"
+      },
+      "sentences": [
+        "shaizarev gatapel tes tubekal mutavren",
+        "nuitemir ganeshil sil sal turitol muneshil",
+        "shaizarev gasahun zhortes tumedri mugunar",
+        "puarikam gadukal pay zhor tuboshi muliren",
+        "shaitovel gatavren karzhor tusurak muneshil"
+      ]
+    },
+    {
+      "id": "d110",
+      "meta": {
+        "genre": "notice"
+      },
+      "sentences": [
+        "nuimerut galiren nev pum tubekal muedris",
+        "puafaver ganeshil tes tuwanek mulomak",
+        "puarikam gafumet sil zhordub tusurak mufumet",
+        "puakalis gakorap kar tuwanek mudukal",
+        "nuizarev gayalven zhor tubekal muliren"
+      ]
+    },
+    {
+      "id": "d111",
+      "meta": {
+        "genre": "travel"
+      },
+      "sentences": [
+        "puakilon gagunar nev zhordub tubekal mudukal",
+        "nuimerut gadukal ik tucoven muyalven",
+        "nuitemir gaedris ik turitol muedris",
+        "puamerut gagunar zhortes tuwanek mugunar",
+        "shaisusen galomak nev teszhor tubekal mulomak"
+      ]
+    },
+    {
+      "id": "d112",
+      "meta": {
+        "genre": "ledger"
+      },
+      "sentences": [
+        "puaburak gadukal sil zhorpum tusipen musahun",
+        "nuitovel gakorap pay pum tucoven mukorap",
+        "shaikilon gadukal sil zhordub tugavun mudukal",
+        "nuizarev gafumet pay karzhor tucoven muneshil",
+        "nuirikam gasahun nev dub turitol musahun"
+      ]
+    },
+    {
+      "id": "d113",
+      "meta": {
+        "genre": "notice"
+      },
+      "sentences": [
+        "shaikilon gasahun zhortes tuwanek mulomak",
+        "shaiburak gadukal nev karzhor turitol muliren",
+        "puamerut gayalven pay pum tubekal muedris",
+        "shaizarev gafumet sil zhorsal tufelen mufumet",
+        "shaiburak gatavren zhorkar tusipen muvereh"
+      ]
+    },
+    {
+      "id": "d114",
+      "meta": {
+        "genre": "notice"
+      },
+      "sentences": [
+        "shaikilon gadukal nev ik tuboshi mutavren",
+        "puatovel gatapel pay dubzhor tuboshi mutapel",
+        "shaitemir ganeshil zhorpum tugavun muvereh",
+        "puaburak gagunar nev sal tuboshi mutavren",
+        "nuitemir gadukal sil sal tubekal mudukal"
+      ]
+    },
+    {
+      "id": "d115",
+      "meta": {
+        "genre": "ledger"
+      },
+      "sentences": [
+        "nuifaver gasahun kar tucoven mutapel",
+        "nuisusen gagunar sil teszhor tumedri musahun",
+        "shaitemir gafumet dubzhor tuboshi mugunar",
+        "puasusen galiren pay kar tuwanek mutavren",
+        "puatovel gadukal sil zhorsal tumedri muneshil"
+      ]
+    },
+    {
+      "id": "d116",
+      "meta": {
+        "genre": "travel"
+      },
+      "sentences": [
+        "shaikalis gadukal karzhor tucoven mudukal",
+        "puaburak galiren pay ik turitol muliren",
+        "nuitemir galomak sil zhordub turitol mulomak",
+        "nuirikam gatavren zhorik turitol mutavren",
+        "shaitovel gadukal pay zhorkar tuboshi mulomak"
+      ]
+    },
+    {
+      "id": "d117",
+      "meta": {
+        "genre": "travel"
+      },
+      "sentences": [
+        "shairikam gakorap ik tugavun muliren",
+        "nuisusen gasahun zhorsal turitol musahun",
+        "puatovel galomak sil zhordub tugavun mulomak",
+        "shaiburak gaedris zhortes tucoven muliren",
+        "nuizarev gagunar pum tubekal mugunar"
+      ]
+    },
+    {
+      "id": "d118",
+      "meta": {
+        "genre": "notice"
+      },
+      "sentences": [
+        "shaikalis gatapel zhor tusurak mudukal",
+        "nuikilon gavereh nev zhor tuboshi muvereh",
+        "puakalis gafumet kar tubekal mufumet",
+        "nuisusen gafumet pay zhorpum tusurak muneshil",
+        "nuikilon ganeshil zhor tusipen mugunar"
+      ]
+    },
+    {
+      "id": "d119",
+      "meta": {
+        "genre": "travel"
+      },
+      "sentences": [
+        "shaisusen gadukal kar tusipen muedris",
+        "puazarev gadukal karzhor tusurak mudukal",
+        "nuitovel ganeshil ik tugavun muneshil",
+        "puatemir gavereh dub tugavun muvereh",
+        "puamerut ganeshil kar tusurak mukorap"
+      ]
+    },
+    {
+      "id": "d120",
+      "meta": {
+        "genre": "notice"
+      },
+      "sentences": [
+        "shaikalis galiren nev zhordub tuwanek muliren",
+        "puatemir gagunar pay sal tubekal muneshil",
+        "nuifaver galomak zhorkar tubekal muyalven",
+        "puasusen gakorap karzhor tufelen mukorap",
+        "shaiburak gakorap zhor turitol mukorap"
+      ]
+    },
+    {
+      "id": "d121",
+      "meta": {
+        "genre": "travel"
+      },
+      "sentences": [
+        "nuirikam ganeshil pay zhortes tubekal muvereh",
+        "puakalis ganeshil zhorsal tuwanek mufumet",
+        "shaizarev gatapel dubzhor turitol mutapel",
+        "nuisusen gakorap pay zhorsal tucoven mugunar",
+        "puafaver gagunar zhorpum tucoven mugunar"
+      ]
+    },
+    {
+      "id": "d122",
+      "meta": {
+        "genre": "travel"
+      },
+      "sentences": [
+        "shairikam gavereh sil zhorpum tuwanek mutapel",
+        "nuitovel gayalven nev pum turitol mugunar",
+        "shaimerut gavereh zhor turitol mutavren",
+        "shaifaver gaedris sal tuwanek muvereh",
+        "puasusen gatapel zhorkar tusipen muedris"
+      ]
+    },
+    {
+      "id": "d123",
+      "meta": {
+        "genre": "travel"
+      },
+      "sentences": [
+        "puafaver galomak sil zhordub tuboshi mudukal",
+        "nuifaver gaedris zhor tumedri muyalven",
+        "nuitovel gaedris pay pum tucoven muedris",
+        "shaitovel galiren pum tugavun mudukal",
+        "shaikilon gagunar pay dubzhor tuboshi mugunar"
+      ]
+    },
+    {
+      "id": "d124",
+      "meta": {
+        "genre": "notice"
+      },
+      "sentences": [
+        "shaikilon gayalven karzhor tuwanek muliren",
+        "nuizarev galomak sil sal tufelen mudukal",
+        "puakalis gagunar pay zhorsal tugavun muvereh",
+        "nuikalis ganeshil pay zhordub tugavun muneshil",
+        "puakilon gasahun zhorsal tuboshi mukorap"
+      ]
+    },
+    {
+      "id": "d125",
+      "meta": {
+        "genre": "notice"
+      },
+      "sentences": [
+        "shaimerut gagunar dub tumedri mulomak",
+        "puarikam ganeshil pay dubzhor tubekal muliren",
+        "nuisusen gayalven nev teszhor tuboshi muyalven",
+        "puaburak gasahun sal tubekal musahun",
+        "shaikalis gayalven sil zhortes tugavun muyalven"
+      ]
+    },
+    {
+      "id": "d126",
+      "meta": {
+        "genre": "ledger"
+      },
+      "sentences": [
+        "puazarev gatapel zhordub tuwanek mufumet",
+        "shaizarev gagunar teszhor tuwanek mukorap",
+        "nuitemir gakorap pay zhordub tusipen mukorap",
+        "puamerut ganeshil karzhor tusipen mukorap",
+        "nuimerut gavereh zhorpum tugavun muvereh"
+      ]
+    },
+    {
+      "id": "d127",
+      "meta": {
+        "genre": "travel"
+      },
+      "sentences": [
+        "shairikam gatapel pum tusipen muliren",
+        "puakilon gakorap teszhor tugavun mulomak",
+        "nuirikam gasahun pum tubekal muyalven",
+        "nuimerut gatavren sal tuboshi mutavren",
+        "puakilon gaedris sil zhor turitol muliren"
+      ]
+    },
+    {
+      "id": "d128",
+      "meta": {
+        "genre": "notice"
+      },
+      "sentences": [
+        "nuizarev gasahun sil pum tuboshi muyalven",
+        "puazarev ganeshil nev tes tuboshi muneshil",
+        "shaifaver gadukal tes tucoven mudukal",
+        "nuizarev galiren nev zhortes tucoven mulomak",
+        "puatemir gafumet zhorkar tuwanek muvereh"
+      ]
+    },
+    {
+      "id": "d129",
+      "meta": {
+        "genre": "notice"
+      },
+      "sentences": [
+        "puatemir gavereh nev karzhor tufelen muedris",
+        "shaikalis gayalven zhorpum tusurak muyalven",
+        "shaiburak gaedris zhorkar tuboshi muedris",
+        "puatemir gakorap sal tucoven mutavren",
+        "puasusen galiren sil teszhor tugavun muliren"
+      ]
+    },
+    {
+      "id": "d130",
+      "meta": {
+        "genre": "notice"
+      },
+      "sentences": [
+        "shaitovel gatapel dub tuwanek mukorap",
+        "puakilon galomak nev dub tuboshi mutapel",
+        "shaiburak galiren pay zhorsal tumedri mudukal",
+        "shaizarev gaedris dubzhor tumedri muedris",
+        "puamerut gaedris dubzhor tucoven muedris"
+      ]
+    },
+    {
+      "id": "d131",
+      "meta": {
+        "genre": "travel"
+      },
+      "sentences": [
+        "puasusen gavereh pay zhordub tufelen muvereh",
+        "nuikalis gakorap sil tes tuwanek muyalven",
+        "puamerut gadukal zhortes tuwanek muedris",
+        "nuiburak galomak pum tumedri muvereh",
+        "nuiburak gatapel pay sal tusipen muedris"
+      ]
+    },
+    {
+      "id": "d132",
+      "meta": {
+        "genre": "notice"
+      },
+      "sentences": [
+        "nuiburak gagunar nev zhorkar tusurak mugunar",
+        "puazarev gaedris sil dubzhor turitol muedris",
+        "shaiburak gayalven sal tufelen mutavren",
+        "puaburak galiren teszhor turitol mudukal",
+        "nuikalis ganeshil nev zhordub tuboshi mufumet"
+      ]
+    },
+    {
+      "id": "d133",
+      "meta": {
+        "genre": "travel"
+      },
+      "sentences": [
+        "shaikalis gaedris kar tuwanek muedris",
+        "shaikilon gadukal nev teszhor tusurak mudukal",
+        "puamerut gasahun ik tubekal mugunar",
+        "nuisusen gafumet pay kar tucoven mudukal",
+        "puazarev gavereh nev zhorkar tusipen muyalven"
+      ]
+    },
+    {
+      "id": "d134",
+      "meta": {
+        "genre": "ledger"
+      },
+      "sentences": [
+        "puarikam gadukal pay teszhor tuboshi muliren",
+        "puamerut gayalven karzhor turitol muyalven",
+        "shaizarev gayalven nev zhor tugavun muyalven",
+        "nuifaver gaedris zhorik tusurak muedris",
+        "shaitemir gagunar nev zhorpum turitol mufumet"
+      ]
+    },
+    {
+      "id": "d135",
+      "meta": {
+        "genre": "notice"
+      },
+      "sentences": [
+        "puakalis galiren zhor tucoven muliren",
+        "nuifaver gayalven kar tucoven muyalven",
+        "nuisusen ganeshil pay tes tufelen muedris",
+        "shaisusen gadukal pay zhorkar tusipen muliren",
+        "shaitemir gavereh sal tumedri muyalven"
+      ]
+    },
+    {
+      "id": "d136",
+      "meta": {
+        "genre": "ledger"
+      },
+      "sentences": [
+        "nuifaver gatavren pay zhorsal tuboshi mutavren",
+        "puafaver gatavren nev zhorpum tugavun musahun",
+        "shairikam galiren zhorkar turitol muyalven",
+        "shaifaver galiren zhordub tusurak muliren",
+        "puamerut gayalven sal tufelen mulomak"
+      ]
+    },
+    {
+      "id": "d137",
+      "meta": {
+        "genre": "ledger"
+      },
+      "sentences": [
+        "shaikalis gagunar pay karzhor tufelen muneshil",
+        "nuitemir gavereh pay zhorik tubekal muliren",
+        "shaiburak gakorap dub tuwanek muneshil",
+        "shaitemir galiren sal tumedri muliren",
+        "nuifaver galomak nev kar tugavun mutapel"
+      ]
+    },
+    {
+      "id": "d138",
+      "meta": {
+        "genre": "ledger"
+      },
+      "sentences": [
+        "shaifaver galomak pay sal tuwanek muyalven",
+        "shaimerut gatapel zhorkar tuwanek musahun",
+        "shaitovel ganeshil kar tugavun musahun",
+        "puakalis gaedris zhorkar tucoven mukorap",
+        "shaizarev gatapel dubzhor tucoven mutavren"
+      ]
+    },
+    {
+      "id": "d139",
+      "meta": {
+        "genre": "travel"
+      },
+      "sentences": [
+        "nuisusen gaedris zhorkar turitol mugunar",
+        "puakalis gavereh nev teszhor tumedri musahun",
+        "puazarev galomak sil zhor tumedri mukorap",
+        "shaizarev gadukal sil dubzhor tuwanek muneshil",
+        "shaitovel gatapel nev sal tumedri muliren"
+      ]
+    },
+    {
+      "id": "d140",
+      "meta": {
+        "genre": "notice"
+      },
+      "sentences": [
+        "nuitovel gagunar tes tusurak mulomak",
+        "puazarev ganeshil sil teszhor tusurak musahun",
+        "puaburak gadukal zhortes tubekal mudukal",
+        "shaikalis gadukal karzhor tusurak mulomak",
+        "puakilon gakorap nev zhorik tubekal mudukal"
+      ]
+    },
+    {
+      "id": "d141",
+      "meta": {
+        "genre": "ledger"
+      },
+      "sentences": [
+        "nuikilon gadukal karzhor tufelen mufumet",
+        "shaifaver gasahun sal tuwanek mudukal",
+        "nuitemir gafumet teszhor tubekal muedris",
+        "shaifaver gayalven zhorik tucoven muvereh",
+        "shaikalis gatapel dub tusipen mutapel"
+      ]
+    },
+    {
+      "id": "d142",
+      "meta": {
+        "genre": "ledger"
+      },
+      "sentences": [
+        "puaburak gayalven zhorpum tusipen mulomak",
+        "nuizarev gakorap sal tusurak mudukal",
+        "puafaver galiren sal tufelen mulomak",
+        "puatovel gakorap pay ik tumedri muneshil",
+        "puazarev gadukal pay sal tuwanek mutapel"
+      ]
+    },
+    {
+      "id": "d143",
+      "meta": {
+        "genre": "notice"
+      },
+      "sentences": [
+        "nuikilon ganeshil sil dubzhor tusipen muneshil",
+        "nuitemir gasahun nev zhorpum turitol musahun",
+        "nuizarev gadukal pay dub tusurak mulomak",
+        "shaisusen ganeshil zhorkar tusipen muneshil",
+        "puasusen gasahun zhorkar tuwanek muyalven"
+      ]
+    },
+    {
+      "id": "d144",
+      "meta": {
+        "genre": "travel"
+      },
+      "sentences": [
+        "puakalis ganeshil zhortes tusipen muliren",
+        "nuizarev gatapel dub tubekal mutapel",
+        "puakilon gatapel zhorik tuwanek mukorap",
+        "shaimerut gayalven dubzhor tusurak muvereh",
+        "nuifaver gatavren sal tumedri mutapel"
+      ]
+    },
+    {
+      "id": "d145",
+      "meta": {
+        "genre": "notice"
+      },
+      "sentences": [
+        "puafaver gagunar zhorik tufelen mutavren",
+        "shaifaver gadukal zhorsal tumedri muedris",
+        "nuimerut gafumet dubzhor tumedri muneshil",
+        "nuizarev gatapel teszhor tusurak mutapel",
+        "puasusen gagunar zhorsal tusipen muedris"
+      ]
+    },
+    {
+      "id": "d146",
+      "meta": {
+        "genre": "ledger"
+      },
+      "sentences": [
+        "shaitovel gafumet nev ik tusipen mufumet",
+        "nuiburak gafumet zhor tugavun mutavren",
+        "shaikalis galiren kar tuwanek muliren",
+        "shaisusen galomak pum turitol mulomak",
+        "nuizarev gatavren zhorik tugavun musahun"
+      ]
+    },
+    {
+      "id": "d147",
+      "meta": {
+        "genre": "travel"
+      },
+      "sentences": [
+        "nuitovel ganeshil dubzhor tufelen muneshil",
+        "puakalis gaedris teszhor tusipen musahun",
+        "puatemir gagunar nev karzhor tufelen mugunar",
+        "puatovel galiren sil pum tuwanek muliren",
+        "shaizarev gakorap sil zhor tusurak muedris"
+      ]
+    },
+    {
+      "id": "d148",
+      "meta": {
+        "genre": "notice"
+      },
+      "sentences": [
+        "puafaver gavereh zhorkar tusipen muedris",
+        "shaiburak gasahun zhorkar tucoven mulomak",
+        "puaburak ganeshil karzhor tumedri muneshil",
+        "shairikam gagunar sil zhorik tufelen mugunar",
+        "shairikam galiren nev zhor tubekal muliren"
+      ]
+    },
+    {
+      "id": "d149",
+      "meta": {
+        "genre": "travel"
+      },
+      "sentences": [
+        "nuikalis gakorap pay dub turitol muedris",
+        "nuitemir gafumet karzhor tuboshi muliren",
+        "puarikam gavereh zhorpum turitol mukorap",
+        "shaisusen ganeshil nev pum tucoven muneshil",
+        "puafaver gatavren pay teszhor tuboshi mufumet"
+      ]
+    },
+    {
+      "id": "d150",
+      "meta": {
+        "genre": "travel"
+      },
+      "sentences": [
+        "shaitovel gatavren sal tuwanek mukorap",
+        "shairikam galiren nev tes turitol mudukal",
+        "puaburak gafumet zhordub tusipen musahun",
+        "shaisusen galiren nev zhordub tumedri mufumet",
+        "nuiburak gakorap nev kar turitol mutapel"
+      ]
+    },
+    {
+      "id": "d151",
+      "meta": {
+        "genre": "notice"
+      },
+      "sentences": [
+        "nuizarev gadukal karzhor tumedri mufumet",
+        "nuizarev galiren nev tes tusurak muvereh",
+        "puaburak galiren nev dub tucoven muliren",
+        "shaikalis gavereh pay karzhor tuwanek mudukal",
+        "shaizarev gaedris pay tes tubekal muedris"
+      ]
+    },
+    {
+      "id": "d152",
+      "meta": {
+        "genre": "notice"
+      },
+      "sentences": [
+        "nuiburak gadukal sil karzhor tucoven muliren",
+        "puaburak galiren zhorik tufelen mudukal",
+        "nuifaver gayalven zhorsal tugavun mutapel",
+        "puazarev gadukal nev zhorkar tufelen muneshil",
+        "shaikilon gakorap zhorpum tubekal muliren"
+      ]
+    },
+    {
+      "id": "d153",
+      "meta": {
+        "genre": "travel"
+      },
+      "sentences": [
+        "puamerut gavereh nev zhor tusurak muneshil",
+        "nuikalis ganeshil pay ik tusipen muvereh",
+        "puakalis galomak pay zhordub turitol muliren",
+        "puamerut galiren sil zhortes tuwanek mukorap",
+        "nuifaver gakorap nev zhordub tusipen muedris"
+      ]
+    },
+    {
+      "id": "d154",
+      "meta": {
+        "genre": "ledger"
+      },
+      "sentences": [
+        "nuikilon galiren nev zhorsal tufelen muyalven",
+        "nuisusen galomak pay teszhor tusipen muneshil",
+        "shaitovel gakorap pum tugavun mukorap",
+        "shaimerut gatapel ik tucoven mutapel",
+        "nuimerut gatapel nev ik tufelen muneshil"
+      ]
+    },
+    {
+      "id": "d155",
+      "meta": {
+        "genre": "notice"
+      },
+      "sentences": [
+        "puakilon gafumet dub tufelen mufumet",
+        "puazarev gafumet nev dub tugavun muvereh",
+        "shairikam gafumet pum turitol mufumet",
+        "shairikam gavereh pay zhorkar tufelen mulomak",
+        "shaifaver galomak zhorpum turitol muedris"
+      ]
+    },
+    {
+      "id": "d156",
+      "meta": {
+        "genre": "ledger"
+      },
+      "sentences": [
+        "shaimerut gavereh pay zhorik tubekal muvereh",
+        "shaisusen gavereh nev zhorkar tuwanek muneshil",
+        "shaikilon gasahun pum tuboshi mudukal",
+        "puafaver galiren tes tuwanek mudukal",
+        "puazarev ganeshil tes tuboshi mugunar"
+      ]
+    },
+    {
+      "id": "d157",
+      "meta": {
+        "genre": "travel"
+      },
+      "sentences": [
+        "nuitovel galomak sil zhorpum tumedri mulomak",
+        "nuitemir gasahun kar tucoven muliren",
+        "puazarev gakorap kar tuboshi mukorap",
+        "shaimerut gayalven teszhor tugavun mugunar",
+        "shaikilon gadukal zhorkar tugavun mutavren"
+      ]
+    },
+    {
+      "id": "d158",
+      "meta": {
+        "genre": "travel"
+      },
+      "sentences": [
+        "nuiburak gasahun karzhor tufelen musahun",
+        "puafaver galiren sil zhorpum tuboshi mukorap",
+        "shaitemir gasahun karzhor tubekal muneshil",
+        "nuifaver gadukal sil dubzhor tuboshi mukorap",
+        "puasusen galiren zhorsal tuboshi muliren"
+      ]
+    },
+    {
+      "id": "d159",
+      "meta": {
+        "genre": "travel"
+      },
+      "sentences": [
+        "nuikilon gakorap nev sal turitol mutapel",
+        "shairikam ganeshil ik tusurak mutavren",
+        "shaiburak gaedris zhorkar tufelen muedris",
+        "puafaver gagunar dub turitol mulomak",
+        "nuimerut gasahun nev zhorik tusipen musahun"
+      ]
+    },
+    {
+      "id": "d160",
+      "meta": {
+        "genre": "ledger"
+      },
+      "sentences": [
+        "shaikilon gatavren pay zhorsal tusurak mutavren",
+        "nuizarev gakorap nev teszhor tugavun mutapel",
+        "nuirikam ganeshil sil zhorkar turitol mulomak",
+        "shaitemir gayalven zhorpum tusurak muliren",
+        "shaikalis gafumet nev dub tumedri muvereh"
+      ]
+    }
+  ],
+  "known": [
+    {
+      "form": "gafumet",
+      "meaning": "merchant"
+    },
+    {
+      "form": "tumedri",
+      "meaning": "grain"
+    },
+    {
+      "form": "shaiburak",
+      "meaning": "give"
+    },
+    {
+      "form": "ik",
+      "meaning": "#1"
+    },
+    {
+      "form": "dub",
+      "meaning": "#2"
+    }
+  ],
+  "parallel": [
+    {
+      "doc": "d001",
+      "sent": 0,
+      "translation": {
+        "kind": "clause",
+        "pred": "buy",
+        "tense": "PRES",
+        "args": [
+          {
+            "role": "subject",
+            "head": "farmer"
+          },
+          {
+            "role": "object",
+            "head": "stone",
+            "count": 7,
+            "adj": "large"
+          },
+          {
+            "role": "recipient",
+            "head": "child"
+          }
+        ]
+      }
+    },
+    {
+      "doc": "d002",
+      "sent": 1,
+      "translation": {
+        "kind": "clause",
+        "pred": "carry",
+        "tense": "PRES",
+        "args": [
+          {
+            "role": "subject",
+            "head": "farmer"
+          },
+          {
+            "role": "object",
+            "head": "stone",
+            "count": 3,
+            "adj": "large"
+          },
+          {
+            "role": "recipient",
+            "head": "farmer"
+          }
+        ]
+      }
+    },
+    {
+      "doc": "d003",
+      "sent": 0,
+      "translation": {
+        "kind": "clause",
+        "pred": "store",
+        "tense": "PRES",
+        "args": [
+          {
+            "role": "subject",
+            "head": "king"
+          },
+          {
+            "role": "object",
+            "head": "fish",
+            "count": 7
+          },
+          {
+            "role": "recipient",
+            "head": "potter"
+          }
+        ]
+      }
+    },
+    {
+      "doc": "d005",
+      "sent": 1,
+      "translation": {
+        "kind": "clause",
+        "pred": "count",
+        "tense": "PAST",
+        "args": [
+          {
+            "role": "subject",
+            "head": "king"
+          },
+          {
+            "role": "object",
+            "head": "grain",
+            "count": 21,
+            "adj": "large"
+          },
+          {
+            "role": "recipient",
+            "head": "healer"
+          }
+        ]
+      }
+    },
+    {
+      "doc": "d009",
+      "sent": 0,
+      "translation": {
+        "kind": "clause",
+        "pred": "store",
+        "tense": "PRES",
+        "args": [
+          {
+            "role": "subject",
+            "head": "weaver"
+          },
+          {
+            "role": "object",
+            "head": "cloth",
+            "count": 13
+          },
+          {
+            "role": "recipient",
+            "head": "weaver"
+          }
+        ]
+      }
+    },
+    {
+      "doc": "d010",
+      "sent": 1,
+      "translation": {
+        "kind": "clause",
+        "pred": "return",
+        "tense": "PRES",
+        "args": [
+          {
+            "role": "subject",
+            "head": "farmer"
+          },
+          {
+            "role": "object",
+            "head": "fish",
+            "count": 4
+          },
+          {
+            "role": "recipient",
+            "head": "scribe"
+          }
+        ]
+      }
+    },
+    {
+      "doc": "d013",
+      "sent": 0,
+      "translation": {
+        "kind": "clause",
+        "pred": "borrow",
+        "tense": "PRES",
+        "args": [
+          {
+            "role": "subject",
+            "head": "child"
+          },
+          {
+            "role": "object",
+            "head": "fish",
+            "count": 14
+          },
+          {
+            "role": "recipient",
+            "head": "healer"
+          }
+        ]
+      }
+    },
+    {
+      "doc": "d013",
+      "sent": 1,
+      "translation": {
+        "kind": "clause",
+        "pred": "inspect",
+        "tense": "FUT",
+        "args": [
+          {
+            "role": "subject",
+            "head": "scribe"
+          },
+          {
+            "role": "object",
+            "head": "bread",
+            "count": 9
+          },
+          {
+            "role": "recipient",
+            "head": "scribe"
+          }
+        ]
+      }
+    },
+    {
+      "doc": "d014",
+      "sent": 0,
+      "translation": {
+        "kind": "clause",
+        "pred": "buy",
+        "tense": "PRES",
+        "args": [
+          {
+            "role": "subject",
+            "head": "potter"
+          },
+          {
+            "role": "object",
+            "head": "grain",
+            "count": 21
+          },
+          {
+            "role": "recipient",
+            "head": "farmer"
+          }
+        ]
+      }
+    },
+    {
+      "doc": "d015",
+      "sent": 0,
+      "translation": {
+        "kind": "clause",
+        "pred": "count",
+        "tense": "PRES",
+        "args": [
+          {
+            "role": "subject",
+            "head": "child"
+          },
+          {
+            "role": "object",
+            "head": "cloth",
+            "count": 4
+          },
+          {
+            "role": "recipient",
+            "head": "potter"
+          }
+        ]
+      }
+    },
+    {
+      "doc": "d016",
+      "sent": 0,
+      "translation": {
+        "kind": "clause",
+        "pred": "borrow",
+        "tense": "FUT",
+        "args": [
+          {
+            "role": "subject",
+            "head": "fisher"
+          },
+          {
+            "role": "object",
+            "head": "salt",
+            "count": 5
+          },
+          {
+            "role": "recipient",
+            "head": "potter"
+          }
+        ]
+      }
+    },
+    {
+      "doc": "d016",
+      "sent": 1,
+      "translation": {
+        "kind": "clause",
+        "pred": "store",
+        "tense": "FUT",
+        "args": [
+          {
+            "role": "subject",
+            "head": "guard"
+          },
+          {
+            "role": "object",
+            "head": "salt",
+            "count": 28
+          },
+          {
+            "role": "recipient",
+            "head": "king"
+          }
+        ]
+      }
+    },
+    {
+      "doc": "d017",
+      "sent": 0,
+      "translation": {
+        "kind": "clause",
+        "pred": "borrow",
+        "tense": "FUT",
+        "args": [
+          {
+            "role": "subject",
+            "head": "mason"
+          },
+          {
+            "role": "object",
+            "head": "cloth",
+            "count": 13
+          },
+          {
+            "role": "recipient",
+            "head": "mason"
+          }
+        ]
+      }
+    },
+    {
+      "doc": "d018",
+      "sent": 1,
+      "translation": {
+        "kind": "clause",
+        "pred": "inspect",
+        "tense": "FUT",
+        "args": [
+          {
+            "role": "subject",
+            "head": "merchant"
+          },
+          {
+            "role": "object",
+            "head": "stone",
+            "count": 4
+          },
+          {
+            "role": "recipient",
+            "head": "merchant"
+          }
+        ]
+      }
+    },
+    {
+      "doc": "d020",
+      "sent": 1,
+      "translation": {
+        "kind": "clause",
+        "pred": "give",
+        "tense": "PAST",
+        "args": [
+          {
+            "role": "subject",
+            "head": "scribe"
+          },
+          {
+            "role": "object",
+            "head": "cloth",
+            "count": 14
+          },
+          {
+            "role": "recipient",
+            "head": "scribe"
+          }
+        ]
+      }
+    },
+    {
+      "doc": "d023",
+      "sent": 0,
+      "translation": {
+        "kind": "clause",
+        "pred": "inspect",
+        "tense": "PAST",
+        "args": [
+          {
+            "role": "subject",
+            "head": "merchant"
+          },
+          {
+            "role": "object",
+            "head": "grain",
+            "count": 28,
+            "adj": "large"
+          },
+          {
+            "role": "recipient",
+            "head": "elder"
+          }
+        ]
+      }
+    },
+    {
+      "doc": "d024",
+      "sent": 0,
+      "translation": {
+        "kind": "clause",
+        "pred": "return",
+        "tense": "PRES",
+        "args": [
+          {
+            "role": "subject",
+            "head": "guard"
+          },
+          {
+            "role": "object",
+            "head": "oil",
+            "count": 5
+          },
+          {
+            "role": "recipient",
+            "head": "king"
+          }
+        ]
+      }
+    },
+    {
+      "doc": "d025",
+      "sent": 0,
+      "translation": {
+        "kind": "clause",
+        "pred": "inspect",
+        "tense": "FUT",
+        "args": [
+          {
+            "role": "subject",
+            "head": "child"
+          },
+          {
+            "role": "object",
+            "head": "water",
+            "count": 6
+          },
+          {
+            "role": "recipient",
+            "head": "elder"
+          }
+        ]
+      }
+    },
+    {
+      "doc": "d027",
+      "sent": 0,
+      "translation": {
+        "kind": "clause",
+        "pred": "store",
+        "tense": "FUT",
+        "args": [
+          {
+            "role": "subject",
+            "head": "fisher"
+          },
+          {
+            "role": "object",
+            "head": "oil",
+            "count": 14,
+            "adj": "red"
+          },
+          {
+            "role": "recipient",
+            "head": "healer"
+          }
+        ]
+      }
+    },
+    {
+      "doc": "d028",
+      "sent": 1,
+      "translation": {
+        "kind": "clause",
+        "pred": "trade",
+        "tense": "PRES",
+        "args": [
+          {
+            "role": "subject",
+            "head": "merchant"
+          },
+          {
+            "role": "object",
+            "head": "bread",
+            "count": 5,
+            "adj": "red"
+          },
+          {
+            "role": "recipient",
+            "head": "farmer"
+          }
+        ]
+      }
+    },
+    {
+      "doc": "d029",
+      "sent": 1,
+      "translation": {
+        "kind": "clause",
+        "pred": "carry",
+        "tense": "PAST",
+        "args": [
+          {
+            "role": "subject",
+            "head": "merchant"
+          },
+          {
+            "role": "object",
+            "head": "water",
+            "count": 9
+          },
+          {
+            "role": "recipient",
+            "head": "mason"
+          }
+        ]
+      }
+    },
+    {
+      "doc": "d031",
+      "sent": 0,
+      "translation": {
+        "kind": "clause",
+        "pred": "give",
+        "tense": "FUT",
+        "args": [
+          {
+            "role": "subject",
+            "head": "child"
+          },
+          {
+            "role": "object",
+            "head": "grain",
+            "count": 8
+          },
+          {
+            "role": "recipient",
+            "head": "fisher"
+          }
+        ]
+      }
+    },
+    {
+      "doc": "d033",
+      "sent": 0,
+      "translation": {
+        "kind": "clause",
+        "pred": "return",
+        "tense": "FUT",
+        "args": [
+          {
+            "role": "subject",
+            "head": "merchant"
+          },
+          {
+            "role": "object",
+            "head": "iron",
+            "count": 11
+          },
+          {
+            "role": "recipient",
+            "head": "elder"
+          }
+        ]
+      }
+    },
+    {
+      "doc": "d033",
+      "sent": 1,
+      "translation": {
+        "kind": "clause",
+        "pred": "inspect",
+        "tense": "PRES",
+        "args": [
+          {
+            "role": "subject",
+            "head": "potter"
+          },
+          {
+            "role": "object",
+            "head": "bread",
+            "count": 6
+          },
+          {
+            "role": "recipient",
+            "head": "scribe"
+          }
+        ]
+      }
+    },
+    {
+      "doc": "d034",
+      "sent": 0,
+      "translation": {
+        "kind": "clause",
+        "pred": "sell",
+        "tense": "PAST",
+        "args": [
+          {
+            "role": "subject",
+            "head": "potter"
+          },
+          {
+            "role": "object",
+            "head": "fish",
+            "count": 5
+          },
+          {
+            "role": "recipient",
+            "head": "mason"
+          }
+        ]
+      }
+    },
+    {
+      "doc": "d036",
+      "sent": 1,
+      "translation": {
+        "kind": "clause",
+        "pred": "carry",
+        "tense": "PAST",
+        "args": [
+          {
+            "role": "subject",
+            "head": "elder"
+          },
+          {
+            "role": "object",
+            "head": "bread",
+            "count": 10
+          },
+          {
+            "role": "recipient",
+            "head": "elder"
+          }
+        ]
+      }
+    },
+    {
+      "doc": "d037",
+      "sent": 1,
+      "translation": {
+        "kind": "clause",
+        "pred": "borrow",
+        "tense": "FUT",
+        "args": [
+          {
+            "role": "subject",
+            "head": "elder"
+          },
+          {
+            "role": "object",
+            "head": "bread",
+            "count": 1,
+            "adj": "wet"
+          },
+          {
+            "role": "recipient",
+            "head": "child"
+          }
+        ]
+      }
+    },
+    {
+      "doc": "d038",
+      "sent": 0,
+      "translation": {
+        "kind": "clause",
+        "pred": "count",
+        "tense": "PAST",
+        "args": [
+          {
+            "role": "subject",
+            "head": "farmer"
+          },
+          {
+            "role": "object",
+            "head": "bread",
+            "count": 13,
+            "adj": "wet"
+          },
+          {
+            "role": "recipient",
+            "head": "scribe"
+          }
+        ]
+      }
+    },
+    {
+      "doc": "d042",
+      "sent": 0,
+      "translation": {
+        "kind": "clause",
+        "pred": "buy",
+        "tense": "PRES",
+        "args": [
+          {
+            "role": "subject",
+            "head": "fisher"
+          },
+          {
+            "role": "object",
+            "head": "salt",
+            "count": 9,
+            "adj": "red"
+          },
+          {
+            "role": "recipient",
+            "head": "weaver"
+          }
+        ]
+      }
+    },
+    {
+      "doc": "d042",
+      "sent": 1,
+      "translation": {
+        "kind": "clause",
+        "pred": "count",
+        "tense": "PAST",
+        "args": [
+          {
+            "role": "subject",
+            "head": "child"
+          },
+          {
+            "role": "object",
+            "head": "timber",
+            "count": 5
+          },
+          {
+            "role": "recipient",
+            "head": "guard"
+          }
+        ]
+      }
+    },
+    {
+      "doc": "d044",
+      "sent": 0,
+      "translation": {
+        "kind": "clause",
+        "pred": "borrow",
+        "tense": "FUT",
+        "args": [
+          {
+            "role": "subject",
+            "head": "child"
+          },
+          {
+            "role": "object",
+            "head": "iron",
+            "count": 8,
+            "adj": "wet"
+          },
+          {
+            "role": "recipient",
+            "head": "farmer"
+          }
+        ]
+      }
+    },
+    {
+      "doc": "d045",
+      "sent": 0,
+      "translation": {
+        "kind": "clause",
+        "pred": "sell",
+        "tense": "PRES",
+        "args": [
+          {
+            "role": "subject",
+            "head": "guard"
+          },
+          {
+            "role": "object",
+            "head": "bread",
+            "count": 5,
+            "adj": "red"
+          },
+          {
+            "role": "recipient",
+            "head": "healer"
+          }
+        ]
+      }
+    },
+    {
+      "doc": "d046",
+      "sent": 1,
+      "translation": {
+        "kind": "clause",
+        "pred": "buy",
+        "tense": "PAST",
+        "args": [
+          {
+            "role": "subject",
+            "head": "fisher"
+          },
+          {
+            "role": "object",
+            "head": "timber",
+            "count": 21
+          },
+          {
+            "role": "recipient",
+            "head": "sailor"
+          }
+        ]
+      }
+    },
+    {
+      "doc": "d047",
+      "sent": 0,
+      "translation": {
+        "kind": "clause",
+        "pred": "buy",
+        "tense": "PAST",
+        "args": [
+          {
+            "role": "subject",
+            "head": "farmer"
+          },
+          {
+            "role": "object",
+            "head": "iron",
+            "count": 2
+          },
+          {
+            "role": "recipient",
+            "head": "mason"
+          }
+        ]
+      }
+    },
+    {
+      "doc": "d048",
+      "sent": 1,
+      "translation": {
+        "kind": "clause",
+        "pred": "store",
+        "tense": "PAST",
+        "args": [
+          {
+            "role": "subject",
+            "head": "fisher"
+          },
+          {
+            "role": "object",
+            "head": "oil",
+            "count": 1
+          },
+          {
+            "role": "recipient",
+            "head": "healer"
+          }
+        ]
+      }
+    },
+    {
+      "doc": "d049",
+      "sent": 1,
+      "translation": {
+        "kind": "clause",
+        "pred": "give",
+        "tense": "PRES",
+        "args": [
+          {
+            "role": "subject",
+            "head": "fisher"
+          },
+          {
+            "role": "object",
+            "head": "oil",
+            "count": 21,
+            "adj": "wet"
+          },
+          {
+            "role": "recipient",
+            "head": "king"
+          }
+        ]
+      }
+    },
+    {
+      "doc": "d053",
+      "sent": 0,
+      "translation": {
+        "kind": "clause",
+        "pred": "count",
+        "tense": "FUT",
+        "args": [
+          {
+            "role": "subject",
+            "head": "farmer"
+          },
+          {
+            "role": "object",
+            "head": "cloth",
+            "count": 7
+          },
+          {
+            "role": "recipient",
+            "head": "potter"
+          }
+        ]
+      }
+    },
+    {
+      "doc": "d053",
+      "sent": 1,
+      "translation": {
+        "kind": "clause",
+        "pred": "trade",
+        "tense": "PRES",
+        "args": [
+          {
+            "role": "subject",
+            "head": "elder"
+          },
+          {
+            "role": "object",
+            "head": "iron",
+            "count": 5
+          },
+          {
+            "role": "recipient",
+            "head": "elder"
+          }
+        ]
+      }
+    },
+    {
+      "doc": "d054",
+      "sent": 1,
+      "translation": {
+        "kind": "clause",
+        "pred": "count",
+        "tense": "FUT",
+        "args": [
+          {
+            "role": "subject",
+            "head": "mason"
+          },
+          {
+            "role": "object",
+            "head": "water",
+            "count": 12
+          },
+          {
+            "role": "recipient",
+            "head": "farmer"
+          }
+        ]
+      }
+    },
+    {
+      "doc": "d056",
+      "sent": 0,
+      "translation": {
+        "kind": "clause",
+        "pred": "borrow",
+        "tense": "PAST",
+        "args": [
+          {
+            "role": "subject",
+            "head": "scribe"
+          },
+          {
+            "role": "object",
+            "head": "stone",
+            "count": 21
+          },
+          {
+            "role": "recipient",
+            "head": "king"
+          }
+        ]
+      }
+    },
+    {
+      "doc": "d056",
+      "sent": 1,
+      "translation": {
+        "kind": "clause",
+        "pred": "trade",
+        "tense": "PRES",
+        "args": [
+          {
+            "role": "subject",
+            "head": "elder"
+          },
+          {
+            "role": "object",
+            "head": "stone",
+            "count": 13
+          },
+          {
+            "role": "recipient",
+            "head": "king"
+          }
+        ]
+      }
+    },
+    {
+      "doc": "d059",
+      "sent": 1,
+      "translation": {
+        "kind": "clause",
+        "pred": "inspect",
+        "tense": "PRES",
+        "args": [
+          {
+            "role": "subject",
+            "head": "merchant"
+          },
+          {
+            "role": "object",
+            "head": "water",
+            "count": 4
+          },
+          {
+            "role": "recipient",
+            "head": "fisher"
+          }
+        ]
+      }
+    },
+    {
+      "doc": "d064",
+      "sent": 0,
+      "translation": {
+        "kind": "clause",
+        "pred": "return",
+        "tense": "FUT",
+        "args": [
+          {
+            "role": "subject",
+            "head": "farmer"
+          },
+          {
+            "role": "object",
+            "head": "grain",
+            "count": 9
+          },
+          {
+            "role": "recipient",
+            "head": "king"
+          }
+        ]
+      }
+    },
+    {
+      "doc": "d064",
+      "sent": 1,
+      "translation": {
+        "kind": "clause",
+        "pred": "borrow",
+        "tense": "PAST",
+        "args": [
+          {
+            "role": "subject",
+            "head": "potter"
+          },
+          {
+            "role": "object",
+            "head": "timber",
+            "count": 28,
+            "adj": "large"
+          },
+          {
+            "role": "recipient",
+            "head": "weaver"
+          }
+        ]
+      }
+    },
+    {
+      "doc": "d066",
+      "sent": 1,
+      "translation": {
+        "kind": "clause",
+        "pred": "borrow",
+        "tense": "PRES",
+        "args": [
+          {
+            "role": "subject",
+            "head": "king"
+          },
+          {
+            "role": "object",
+            "head": "cloth",
+            "count": 10
+          },
+          {
+            "role": "recipient",
+            "head": "king"
+          }
+        ]
+      }
+    },
+    {
+      "doc": "d067",
+      "sent": 0,
+      "translation": {
+        "kind": "clause",
+        "pred": "borrow",
+        "tense": "PAST",
+        "args": [
+          {
+            "role": "subject",
+            "head": "guard"
+          },
+          {
+            "role": "object",
+            "head": "oil",
+            "count": 21,
+            "adj": "red"
+          },
+          {
+            "role": "recipient",
+            "head": "king"
+          }
+        ]
+      }
+    },
+    {
+      "doc": "d068",
+      "sent": 1,
+      "translation": {
+        "kind": "clause",
+        "pred": "borrow",
+        "tense": "FUT",
+        "args": [
+          {
+            "role": "subject",
+            "head": "fisher"
+          },
+          {
+            "role": "object",
+            "head": "iron",
+            "count": 11
+          },
+          {
+            "role": "recipient",
+            "head": "sailor"
+          }
+        ]
+      }
+    },
+    {
+      "doc": "d071",
+      "sent": 1,
+      "translation": {
+        "kind": "clause",
+        "pred": "store",
+        "tense": "PRES",
+        "args": [
+          {
+            "role": "subject",
+            "head": "guard"
+          },
+          {
+            "role": "object",
+            "head": "cloth",
+            "count": 5
+          },
+          {
+            "role": "recipient",
+            "head": "guard"
+          }
+        ]
+      }
+    },
+    {
+      "doc": "d078",
+      "sent": 1,
+      "translation": {
+        "kind": "clause",
+        "pred": "trade",
+        "tense": "PAST",
+        "args": [
+          {
+            "role": "subject",
+            "head": "mason"
+          },
+          {
+            "role": "object",
+            "head": "water",
+            "count": 5
+          },
+          {
+            "role": "recipient",
+            "head": "child"
+          }
+        ]
+      }
+    },
+    {
+      "doc": "d079",
+      "sent": 1,
+      "translation": {
+        "kind": "clause",
+        "pred": "carry",
+        "tense": "PRES",
+        "args": [
+          {
+            "role": "subject",
+            "head": "healer"
+          },
+          {
+            "role": "object",
+            "head": "iron",
+            "count": 13,
+            "adj": "red"
+          },
+          {
+            "role": "recipient",
+            "head": "weaver"
+          }
+        ]
+      }
+    },
+    {
+      "doc": "d080",
+      "sent": 1,
+      "translation": {
+        "kind": "clause",
+        "pred": "sell",
+        "tense": "PRES",
+        "args": [
+          {
+            "role": "subject",
+            "head": "merchant"
+          },
+          {
+            "role": "object",
+            "head": "grain",
+            "count": 10,
+            "adj": "red"
+          },
+          {
+            "role": "recipient",
+            "head": "merchant"
+          }
+        ]
+      }
+    },
+    {
+      "doc": "d081",
+      "sent": 0,
+      "translation": {
+        "kind": "clause",
+        "pred": "count",
+        "tense": "PRES",
+        "args": [
+          {
+            "role": "subject",
+            "head": "farmer"
+          },
+          {
+            "role": "object",
+            "head": "cloth",
+            "count": 12
+          },
+          {
+            "role": "recipient",
+            "head": "farmer"
+          }
+        ]
+      }
+    },
+    {
+      "doc": "d082",
+      "sent": 1,
+      "translation": {
+        "kind": "clause",
+        "pred": "store",
+        "tense": "PRES",
+        "args": [
+          {
+            "role": "subject",
+            "head": "potter"
+          },
+          {
+            "role": "object",
+            "head": "oil",
+            "count": 10
+          },
+          {
+            "role": "recipient",
+            "head": "potter"
+          }
+        ]
+      }
+    },
+    {
+      "doc": "d083",
+      "sent": 0,
+      "translation": {
+        "kind": "clause",
+        "pred": "count",
+        "tense": "FUT",
+        "args": [
+          {
+            "role": "subject",
+            "head": "farmer"
+          },
+          {
+            "role": "object",
+            "head": "iron",
+            "count": 10,
+            "adj": "red"
+          },
+          {
+            "role": "recipient",
+            "head": "farmer"
+          }
+        ]
+      }
+    },
+    {
+      "doc": "d084",
+      "sent": 1,
+      "translation": {
+        "kind": "clause",
+        "pred": "give",
+        "tense": "PAST",
+        "args": [
+          {
+            "role": "subject",
+            "head": "scribe"
+          },
+          {
+            "role": "object",
+            "head": "salt",
+            "count": 6,
+            "adj": "red"
+          },
+          {
+            "role": "recipient",
+            "head": "king"
+          }
+        ]
+      }
+    },
+    {
+      "doc": "d086",
+      "sent": 1,
+      "translation": {
+        "kind": "clause",
+        "pred": "count",
+        "tense": "PRES",
+        "args": [
+          {
+            "role": "subject",
+            "head": "king"
+          },
+          {
+            "role": "object",
+            "head": "fish",
+            "count": 14,
+            "adj": "red"
+          },
+          {
+            "role": "recipient",
+            "head": "child"
+          }
+        ]
+      }
+    },
+    {
+      "doc": "d088",
+      "sent": 1,
+      "translation": {
+        "kind": "clause",
+        "pred": "buy",
+        "tense": "PAST",
+        "args": [
+          {
+            "role": "subject",
+            "head": "farmer"
+          },
+          {
+            "role": "object",
+            "head": "bread",
+            "count": 14
+          },
+          {
+            "role": "recipient",
+            "head": "scribe"
+          }
+        ]
+      }
+    },
+    {
+      "doc": "d089",
+      "sent": 1,
+      "translation": {
+        "kind": "clause",
+        "pred": "store",
+        "tense": "PRES",
+        "args": [
+          {
+            "role": "subject",
+            "head": "weaver"
+          },
+          {
+            "role": "object",
+            "head": "cloth",
+            "count": 6,
+            "adj": "large"
+          },
+          {
+            "role": "recipient",
+            "head": "king"
+          }
+        ]
+      }
+    },
+    {
+      "doc": "d090",
+      "sent": 1,
+      "translation": {
+        "kind": "clause",
+        "pred": "trade",
+        "tense": "PAST",
+        "args": [
+          {
+            "role": "subject",
+            "head": "fisher"
+          },
+          {
+            "role": "object",
+            "head": "iron",
+            "count": 10,
+            "adj": "wet"
+          },
+          {
+            "role": "recipient",
+            "head": "fisher"
+          }
+        ]
+      }
+    },
+    {
+      "doc": "d092",
+      "sent": 0,
+      "translation": {
+        "kind": "clause",
+        "pred": "trade",
+        "tense": "FUT",
+        "args": [
+          {
+            "role": "subject",
+            "head": "farmer"
+          },
+          {
+            "role": "object",
+            "head": "timber",
+            "count": 14
+          },
+          {
+            "role": "recipient",
+            "head": "guard"
+          }
+        ]
+      }
+    },
+    {
+      "doc": "d095",
+      "sent": 0,
+      "translation": {
+        "kind": "clause",
+        "pred": "count",
+        "tense": "PAST",
+        "args": [
+          {
+            "role": "subject",
+            "head": "merchant"
+          },
+          {
+            "role": "object",
+            "head": "timber",
+            "count": 8
+          },
+          {
+            "role": "recipient",
+            "head": "child"
+          }
+        ]
+      }
+    },
+    {
+      "doc": "d097",
+      "sent": 0,
+      "translation": {
+        "kind": "clause",
+        "pred": "count",
+        "tense": "FUT",
+        "args": [
+          {
+            "role": "subject",
+            "head": "king"
+          },
+          {
+            "role": "object",
+            "head": "stone",
+            "count": 14
+          },
+          {
+            "role": "recipient",
+            "head": "king"
+          }
+        ]
+      }
+    },
+    {
+      "doc": "d098",
+      "sent": 0,
+      "translation": {
+        "kind": "clause",
+        "pred": "trade",
+        "tense": "PRES",
+        "args": [
+          {
+            "role": "subject",
+            "head": "guard"
+          },
+          {
+            "role": "object",
+            "head": "salt",
+            "count": 6
+          },
+          {
+            "role": "recipient",
+            "head": "healer"
+          }
+        ]
+      }
+    },
+    {
+      "doc": "d099",
+      "sent": 0,
+      "translation": {
+        "kind": "clause",
+        "pred": "count",
+        "tense": "PAST",
+        "args": [
+          {
+            "role": "subject",
+            "head": "weaver"
+          },
+          {
+            "role": "object",
+            "head": "cloth",
+            "count": 13
+          },
+          {
+            "role": "recipient",
+            "head": "weaver"
+          }
+        ]
+      }
+    },
+    {
+      "doc": "d099",
+      "sent": 1,
+      "translation": {
+        "kind": "clause",
+        "pred": "sell",
+        "tense": "PRES",
+        "args": [
+          {
+            "role": "subject",
+            "head": "potter"
+          },
+          {
+            "role": "object",
+            "head": "oil",
+            "count": 5
+          },
+          {
+            "role": "recipient",
+            "head": "scribe"
+          }
+        ]
+      }
+    },
+    {
+      "doc": "d100",
+      "sent": 1,
+      "translation": {
+        "kind": "clause",
+        "pred": "give",
+        "tense": "PRES",
+        "args": [
+          {
+            "role": "subject",
+            "head": "child"
+          },
+          {
+            "role": "object",
+            "head": "cloth",
+            "count": 6
+          },
+          {
+            "role": "recipient",
+            "head": "child"
+          }
+        ]
+      }
+    },
+    {
+      "doc": "d102",
+      "sent": 0,
+      "translation": {
+        "kind": "clause",
+        "pred": "borrow",
+        "tense": "PRES",
+        "args": [
+          {
+            "role": "subject",
+            "head": "elder"
+          },
+          {
+            "role": "object",
+            "head": "cloth",
+            "count": 14,
+            "adj": "red"
+          },
+          {
+            "role": "recipient",
+            "head": "elder"
+          }
+        ]
+      }
+    },
+    {
+      "doc": "d104",
+      "sent": 1,
+      "translation": {
+        "kind": "clause",
+        "pred": "store",
+        "tense": "PRES",
+        "args": [
+          {
+            "role": "subject",
+            "head": "mason"
+          },
+          {
+            "role": "object",
+            "head": "fish",
+            "count": 13
+          },
+          {
+            "role": "recipient",
+            "head": "weaver"
+          }
+        ]
+      }
+    },
+    {
+      "doc": "d105",
+      "sent": 1,
+      "translation": {
+        "kind": "clause",
+        "pred": "carry",
+        "tense": "FUT",
+        "args": [
+          {
+            "role": "subject",
+            "head": "fisher"
+          },
+          {
+            "role": "object",
+            "head": "iron",
+            "count": 28,
+            "adj": "wet"
+          },
+          {
+            "role": "recipient",
+            "head": "fisher"
+          }
+        ]
+      }
+    },
+    {
+      "doc": "d107",
+      "sent": 0,
+      "translation": {
+        "kind": "clause",
+        "pred": "borrow",
+        "tense": "PAST",
+        "args": [
+          {
+            "role": "subject",
+            "head": "scribe"
+          },
+          {
+            "role": "object",
+            "head": "salt",
+            "count": 10
+          },
+          {
+            "role": "recipient",
+            "head": "child"
+          }
+        ]
+      }
+    },
+    {
+      "doc": "d108",
+      "sent": 0,
+      "translation": {
+        "kind": "clause",
+        "pred": "store",
+        "tense": "PRES",
+        "args": [
+          {
+            "role": "subject",
+            "head": "guard"
+          },
+          {
+            "role": "object",
+            "head": "timber",
+            "count": 2
+          },
+          {
+            "role": "recipient",
+            "head": "king"
+          }
+        ]
+      }
+    },
+    {
+      "doc": "d108",
+      "sent": 1,
+      "translation": {
+        "kind": "clause",
+        "pred": "return",
+        "tense": "PRES",
+        "args": [
+          {
+            "role": "subject",
+            "head": "scribe"
+          },
+          {
+            "role": "object",
+            "head": "oil",
+            "count": 8
+          },
+          {
+            "role": "recipient",
+            "head": "healer"
+          }
+        ]
+      }
+    },
+    {
+      "doc": "d110",
+      "sent": 1,
+      "translation": {
+        "kind": "clause",
+        "pred": "sell",
+        "tense": "FUT",
+        "args": [
+          {
+            "role": "subject",
+            "head": "farmer"
+          },
+          {
+            "role": "object",
+            "head": "oil",
+            "count": 3
+          },
+          {
+            "role": "recipient",
+            "head": "sailor"
+          }
+        ]
+      }
+    },
+    {
+      "doc": "d112",
+      "sent": 1,
+      "translation": {
+        "kind": "clause",
+        "pred": "return",
+        "tense": "PRES",
+        "args": [
+          {
+            "role": "subject",
+            "head": "guard"
+          },
+          {
+            "role": "object",
+            "head": "water",
+            "count": 5,
+            "adj": "large"
+          },
+          {
+            "role": "recipient",
+            "head": "guard"
+          }
+        ]
+      }
+    },
+    {
+      "doc": "d114",
+      "sent": 0,
+      "translation": {
+        "kind": "clause",
+        "pred": "trade",
+        "tense": "PAST",
+        "args": [
+          {
+            "role": "subject",
+            "head": "fisher"
+          },
+          {
+            "role": "object",
+            "head": "timber",
+            "count": 1,
+            "adj": "red"
+          },
+          {
+            "role": "recipient",
+            "head": "scribe"
+          }
+        ]
+      }
+    },
+    {
+      "doc": "d115",
+      "sent": 1,
+      "translation": {
+        "kind": "clause",
+        "pred": "borrow",
+        "tense": "PRES",
+        "args": [
+          {
+            "role": "subject",
+            "head": "elder"
+          },
+          {
+            "role": "object",
+            "head": "grain",
+            "count": 21,
+            "adj": "wet"
+          },
+          {
+            "role": "recipient",
+            "head": "healer"
+          }
+        ]
+      }
+    },
+    {
+      "doc": "d116",
+      "sent": 0,
+      "translation": {
+        "kind": "clause",
+        "pred": "store",
+        "tense": "PAST",
+        "args": [
+          {
+            "role": "subject",
+            "head": "fisher"
+          },
+          {
+            "role": "object",
+            "head": "water",
+            "count": 28
+          },
+          {
+            "role": "recipient",
+            "head": "fisher"
+          }
+        ]
+      }
+    },
+    {
+      "doc": "d117",
+      "sent": 1,
+      "translation": {
+        "kind": "clause",
+        "pred": "borrow",
+        "tense": "PRES",
+        "args": [
+          {
+            "role": "subject",
+            "head": "healer"
+          },
+          {
+            "role": "object",
+            "head": "bread",
+            "count": 13
+          },
+          {
+            "role": "recipient",
+            "head": "healer"
+          }
+        ]
+      }
+    },
+    {
+      "doc": "d119",
+      "sent": 1,
+      "translation": {
+        "kind": "clause",
+        "pred": "carry",
+        "tense": "FUT",
+        "args": [
+          {
+            "role": "subject",
+            "head": "fisher"
+          },
+          {
+            "role": "object",
+            "head": "salt",
+            "count": 28
+          },
+          {
+            "role": "recipient",
+            "head": "fisher"
+          }
+        ]
+      }
+    },
+    {
+      "doc": "d120",
+      "sent": 0,
+      "translation": {
+        "kind": "clause",
+        "pred": "store",
+        "tense": "PAST",
+        "args": [
+          {
+            "role": "subject",
+            "head": "weaver"
+          },
+          {
+            "role": "object",
+            "head": "oil",
+            "count": 9,
+            "adj": "red"
+          },
+          {
+            "role": "recipient",
+            "head": "weaver"
+          }
+        ]
+      }
+    },
+    {
+      "doc": "d121",
+      "sent": 1,
+      "translation": {
+        "kind": "clause",
+        "pred": "store",
+        "tense": "FUT",
+        "args": [
+          {
+            "role": "subject",
+            "head": "farmer"
+          },
+          {
+            "role": "object",
+            "head": "oil",
+            "count": 13
+          },
+          {
+            "role": "recipient",
+            "head": "merchant"
+          }
+        ]
+      }
+    },
+    {
+      "doc": "d123",
+      "sent": 1,
+      "translation": {
+        "kind": "clause",
+        "pred": "sell",
+        "tense": "PRES",
+        "args": [
+          {
+            "role": "subject",
+            "head": "potter"
+          },
+          {
+            "role": "object",
+            "head": "grain",
+            "count": 7
+          },
+          {
+            "role": "recipient",
+            "head": "king"
+          }
+        ]
+      }
+    },
+    {
+      "doc": "d124",
+      "sent": 1,
+      "translation": {
+        "kind": "clause",
+        "pred": "carry",
+        "tense": "PRES",
+        "args": [
+          {
+            "role": "subject",
+            "head": "sailor"
+          },
+          {
+            "role": "object",
+            "head": "cloth",
+            "count": 6,
+            "adj": "wet"
+          },
+          {
+            "role": "recipient",
+            "head": "fisher"
+          }
+        ]
+      }
+    }
+  ],
+  "split": {
+    "train": [
+      "d001",
+      "d002",
+      "d003",
+      "d004",
+      "d005",
+      "d006",
+      "d007",
+      "d008",
+      "d009",
+      "d010",
+      "d011",
+      "d012",
+      "d013",
+      "d014",
+      "d015",
+      "d016",
+      "d017",
+      "d018",
+      "d019",
+      "d020",
+      "d021",
+      "d022",
+      "d023",
+      "d024",
+      "d025",
+      "d026",
+      "d027",
+      "d028",
+      "d029",
+      "d030",
+      "d031",
+      "d032",
+      "d033",
+      "d034",
+      "d035",
+      "d036",
+      "d037",
+      "d038",
+      "d039",
+      "d040",
+      "d041",
+      "d042",
+      "d043",
+      "d044",
+      "d045",
+      "d046",
+      "d047",
+      "d048",
+      "d049",
+      "d050",
+      "d051",
+      "d052",
+      "d053",
+      "d054",
+      "d055",
+      "d056",
+      "d057",
+      "d058",
+      "d059",
+      "d060",
+      "d061",
+      "d062",
+      "d063",
+      "d064",
+      "d065",
+      "d066",
+      "d067",
+      "d068",
+      "d069",
+      "d070",
+      "d071",
+      "d072",
+      "d073",
+      "d074",
+      "d075",
+      "d076",
+      "d077",
+      "d078",
+      "d079",
+      "d080",
+      "d081",
+      "d082",
+      "d083",
+      "d084",
+      "d085",
+      "d086",
+      "d087",
+      "d088",
+      "d089",
+      "d090",
+      "d091",
+      "d092",
+      "d093",
+      "d094",
+      "d095",
+      "d096",
+      "d097",
+      "d098",
+      "d099",
+      "d100",
+      "d101",
+      "d102",
+      "d103",
+      "d104",
+      "d105",
+      "d106",
+      "d107",
+      "d108",
+      "d109",
+      "d110",
+      "d111",
+      "d112",
+      "d113",
+      "d114",
+      "d115",
+      "d116",
+      "d117",
+      "d118",
+      "d119",
+      "d120",
+      "d121",
+      "d122",
+      "d123",
+      "d124",
+      "d125",
+      "d126"
+    ],
+    "heldout": [
+      "d127",
+      "d128",
+      "d129",
+      "d130",
+      "d131",
+      "d132",
+      "d133",
+      "d134",
+      "d135",
+      "d136",
+      "d137",
+      "d138",
+      "d139",
+      "d140",
+      "d141",
+      "d142",
+      "d143",
+      "d144",
+      "d145",
+      "d146",
+      "d147",
+      "d148",
+      "d149",
+      "d150",
+      "d151",
+      "d152",
+      "d153",
+      "d154",
+      "d155",
+      "d156",
+      "d157",
+      "d158",
+      "d159",
+      "d160"
+    ]
+  }
+}

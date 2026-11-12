@@ -155,8 +155,24 @@ def report_markdown(results, card, ext_scores, limits):
     keys2 = ["lexicon_precision", "lexicon_claimed", "gloss_correct", "gloss_wrong", "gloss_abstain", "overclaims"]
     names2 = ["語彙主張の適合率", "主張語数", "語釈 正解", "語釈 誤答", "語釈 判定不能", "過剰主張(件)"]
     L += tab(main_rows, keys2, names2) + [""]
-    L += ["語釈は、対訳が与えられていない held-out 文書の内容語（数詞を除く）について、正解・誤答・判定不能の割合。", "",
-          "## 3. 単純な方法との比較（LEVEL A）", ""]
+    L += ["語釈は、対訳が与えられていない held-out 文書の内容語（数詞を除く）について、正解・誤答・判定不能の割合。", ""]
+    prev_p = Path("results/v1.0.1-on-eval-200-219.json")
+    if prev_p.exists():
+        prev = {c["label"]: c for c in json.loads(prev_p.read_text(encoding="utf-8"))["conditions"]}
+
+        def mv(table, label, key):
+            x = table.get(label, {}).get("metrics", {}).get(key, {})
+            return "–" if x.get("mean") is None else f"{x['mean']:.3f}"
+        ks = [("numeral_accuracy", "数詞値 正解"), ("numeral_wrong_rate", "数詞値 誤答"), ("lexicon_precision", "語彙適合率"),
+              ("lexicon_claimed", "主張語数"), ("gloss_correct", "語釈 正解"), ("gloss_wrong", "語釈 誤答"), ("pos_accuracy", "品詞")]
+        L += ["### 旧版との比較（同じ評価シード、v1.0.1 → v1.1）", "",
+              "v1.1 の凍結後に、旧版 v1.0.1 の解読器を同じ評価シードで実行した。シードの違いによる差を除いた比較になる。", "",
+              "| 条件 | " + " | ".join(n for _, n in ks) + " |", "|---|" + "---|" * len(ks)]
+        for lab, name in main_rows:
+            if lab in conds:
+                L.append(f"| {name} | " + " | ".join(f"{mv(prev, lab, k)} → {mv(conds, lab, k)}" for k, _ in ks) + " |")
+        L.append("")
+    L += ["## 3. 単純な方法との比較（LEVEL A）", ""]
     k3 = ["seg_f1", "lexicon_precision", "lexicon_claimed", "gloss_correct", "gloss_wrong"]
     n3 = ["形態素境界F1", "語彙適合率", "主張語数", "語釈 正解", "語釈 誤答"]
     L += tab([("levelA", "解読エンジン"), ("levelA:baseline_freq", "頻度法"), ("levelA:baseline_ngram", "n-gram法")], k3, n3) + [""]

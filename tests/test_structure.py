@@ -428,3 +428,40 @@ def test_uncertain_marks_inside_linepair_evidence_are_reported():
     lp = [h for h in a["hypotheses"] if h["family"] == "linepair"]
     assert lp
     assert all(any("不確か" in x for x in h["limits"]) for h in lp)
+
+
+# --- Codex レビュー（PR #8、マージ後）の指摘の回帰テスト ---
+
+def _abc_report(n=8, classes=(0, 1, 2)):
+    rows, glyphs = [], []
+    for li in range(n):
+        idx = []
+        for k, cl in enumerate(classes):
+            idx.append(len(glyphs))
+            glyphs.append({"box": [10 * k, 20 * li, 10 * k + 8, 20 * li + 15], "class_id": cl, "match_iou": 1.0})
+        rows.append({"region": "p", "box": [0, 0, 1, 1], "classes": list(classes), "glyph_indices": idx})
+    return sc.from_glyph_report({"schema": "babel-glyph-pilot-v1", "rows": rows, "glyphs": glyphs})
+
+
+def test_pair_hypotheses_need_both_members_to_match_in_the_image():
+    from babel.structure.hypotheses import Builder
+    c = _abc_report()
+    shifted = _abc_report(classes=(50, 51, 52))           # 同じ画像、クラス番号だけ違う
+    b, bs = Builder(c), Builder(shifted)
+    A, B, C = (c.symbols.index(x) for x in ("g0", "g1", "g2"))
+    A2, B2 = shifted.symbols.index("g50"), shifted.symbols.index("g51")
+    for fam in ("cooccurrence", "substitution"):
+        ab = {"family": fam, "key": {"family": fam, "symbols": ["g0", "g1"]}, **getattr(b, fam)((A, B))}
+        ac = {"family": fam, "key": {"family": fam, "symbols": ["g0", "g2"]}, **getattr(b, fam)((A, C))}
+        ab2 = {"family": fam, "key": {"family": fam, "symbols": ["g50", "g51"]}, **getattr(bs, fam)((A2, B2))}
+        assert not same_hypothesis(ab, ac), fam           # 片方の記号（A）だけが共通な別の組
+        assert same_hypothesis(ab, ab2), fam              # クラス番号が変わっても同じ組は一致
+
+
+def test_linepair_needs_both_lines_to_match_in_the_image():
+    box = lambda li: [0, 20 * li, 80, 20 * li + 15]      # noqa: E731
+    def lp(i, j):
+        return {"family": "linepair", "key": {"family": "linepair", "lines": [i, j]},
+                "evidence": [{"line_a": {"image_box": box(i)}, "line_b": {"image_box": box(j)}}]}
+    assert not same_hypothesis(lp(0, 1), lp(0, 5))
+    assert same_hypothesis(lp(0, 1), lp(0, 1)) and same_hypothesis(lp(0, 1), lp(1, 0))

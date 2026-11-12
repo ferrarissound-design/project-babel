@@ -429,8 +429,8 @@
    "reproduced_across_settings": {
     "hypotheses_in_main": 24,
     "reproduced_in_all": 18,
-    "reproduced_in_none": 3,
-    "only_in_alternatives": 10
+    "reproduced_in_none": 2,
+    "only_in_alternatives": 9
    }
   },
   {
@@ -512,9 +512,9 @@
    },
    "reproduced_across_settings": {
     "hypotheses_in_main": 2,
-    "reproduced_in_all": 0,
-    "reproduced_in_none": 2,
-    "only_in_alternatives": 6
+    "reproduced_in_all": 1,
+    "reproduced_in_none": 1,
+    "only_in_alternatives": 4
    }
   },
   {
@@ -614,8 +614,8 @@
    "reproduced_across_settings": {
     "hypotheses_in_main": 22,
     "reproduced_in_all": 16,
-    "reproduced_in_none": 3,
-    "only_in_alternatives": 5
+    "reproduced_in_none": 2,
+    "only_in_alternatives": 4
    }
   },
   {
@@ -705,5 +705,5 @@
    }
   }
  ],
- "seconds": 207.7
+ "seconds": 216.6
 }

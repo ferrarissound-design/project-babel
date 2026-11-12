@@ -239,3 +239,12 @@ def test_substitution_collapsed_by_renaming_is_not_a_discovery():
     rule = {"family": "substitution", "symbols": ["x", "q", "v"], "label": "x/q/v"}
     assert not match_gold(rule, {"family": "substitution", "symbols": ["v", "v"]})
     assert match_gold(rule, {"family": "substitution", "symbols": ["x", "v"]})
+
+
+def test_unverified_hollow_frame_only_ignores_its_border():
+    """未確認の中空の枠でも、除外するのは縁の上の予測だけ（Codex レビュー、PR #10）。"""
+    for verified in (False, True):
+        gt = _gt([_it(1, [10, 10, 20, 20], "A"),
+                  {"id": "f", "box": [1, 1, 99, 99], "kind": "decoration", "verified": verified, "outline": True}])
+        d = evaluate(_report([([10, 10, 20, 20], 1), ([40, 40, 45, 45], 2)]), gt)["detection"]
+        assert d["fp"] == 1 and d["f1"] == 0.6667, verified       # 確認の有無で結果が変わらない

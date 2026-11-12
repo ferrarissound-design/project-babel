@@ -160,7 +160,7 @@ def evaluate(report: dict, gt: dict, iou_thr=0.5) -> dict:
     U = [it for it in gt["items"] if not it["verified"]]
     um = {j for _, j, _ in match([u["box"] for u in U], [pb[j] for j in range(len(P))], iou_thr)} if U else set()
     ignored = {j for j in range(len(P)) if j not in matched_p and
-               (j in um or any(_inter(pb[j], u["box"]) >= 0.5 * _area(pb[j]) for u in U))}
+               (j in um or any(_on_non_glyph(pb[j], u) for u in U))}      # 中空の要素（outline）は縁だけ
     # 文字以外（罫線・装飾・雑音）を記号として検出したもの
     nonglyph_hits = sum(1 for j, p in enumerate(P) if j not in matched_p and j not in ignored and
                         any(_on_non_glyph(p["box"], n) for n in N))

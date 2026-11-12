@@ -8,6 +8,7 @@
 - 研究報告書（結果から自動生成）: [docs/RESEARCH_REPORT.md](docs/RESEARCH_REPORT.md)
 - 発見した問題と対応: [docs/ISSUES.md](docs/ISSUES.md)
 - 初見言語の投入方法: [external/README.md](external/README.md)
+- API不要の画像→記号候補・反復パターン解析: [docs/VISION.md](docs/VISION.md)
 
 ## 重要な注意
 
@@ -30,7 +31,7 @@ results/            実験結果
 tests/              テスト
 ```
 
-外部ライブラリ・外部API・LLM は使わない（Python 標準ライブラリのみ。開発時に ruff と pytest）。
+コアの解読器は Python 標準ライブラリのみで動く（外部API・LLM不要）。オプションの画像解析のみ OpenCV/NumPy をローカルにインストールする。
 
 ## 実行方法
 

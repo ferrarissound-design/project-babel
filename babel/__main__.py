@@ -34,6 +34,15 @@ def main(argv=None):
     r.add_argument("--no-showcase", action="store_true")
     t = sub.add_parser("external", help="初見コーパスの予測・採点・台帳検証")
     t.add_argument("action", choices=["predict", "score", "verify"])
+    v = sub.add_parser("vision", help="API不要: 画像から記号候補・反復パターンを抽出")
+    v.add_argument("image", help="入力画像のパス")
+    v.add_argument("--out-dir", default="vision-output", help="分析結果の保存先")
+    v.add_argument("--region", action="append", default=[], metavar="ID:X1,Y1,X2,Y2",
+                   help="画像の文字領域を指定（複数指定可、右下座標は含まない）")
+    v.add_argument("--threshold", type=int, help="二値化のしきい値（省略すると自動）")
+    v.add_argument("--similarity", type=float, default=0.7, help="同一形状とみなすIoU閾値")
+    v.add_argument("--keep-rules", action="store_true",
+                   help="罫線除去をしない（文字の線が切り出し領域の大部分を占める場合）")
     a = ap.parse_args(argv)
 
     if a.cmd == "generate":
@@ -87,6 +96,24 @@ def main(argv=None):
         print(f"内部テスト: {card['internal_points']} / {card['evaluated_max']} 点（未評価 {card['unevaluated_max']} 点分）")
         for i in card["items"]:
             print(f"  {i['name']}: {i['points']} / {i['max']} [{i['status']}]")
+    elif a.cmd == "vision":
+        from babel.vision import save_analysis
+        regions = []
+        for spec in a.region:
+            try:
+                name, coords = spec.split(":", 1)
+                if not name:
+                    raise ValueError("empty id")
+                box = [int(t) for t in coords.split(",")]
+                if len(box) != 4:
+                    raise ValueError("expected four integers")
+            except ValueError:
+                ap.error("--region は ID:X1,Y1,X2,Y2 の形式で指定してください")
+            regions.append({"id": name, "box": box})
+        data = save_analysis(a.image, a.out_dir, regions=regions or None,
+                             threshold=a.threshold, similarity=a.similarity,
+                             remove_rules=not a.keep_rules)
+        print(json.dumps({"out_dir": a.out_dir, **data["stats"]}, ensure_ascii=False))
     elif a.cmd == "external":
         from babel import external
         from babel.experiments.run import git_commit

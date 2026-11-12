@@ -1,8 +1,15 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
 [project]
 name = "project-babel"
 version = "1.0.0"
 description = "未知言語解読の研究システム（生成器・解読器・採点器を分離）"
 requires-python = ">=3.11"
+
+[project.optional-dependencies]
+vision = ["opencv-python-headless>=4.8,<5", "numpy>=1.26"]
 
 [tool.ruff]
 line-length = 160
@@ -15,3 +22,6 @@ ignore = ["B007", "B023", "B905", "E741"]
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 addopts = "-q"
+
+[tool.setuptools.packages.find]
+include = ["babel*"]

@@ -18,6 +18,8 @@ jobs:
         with:
           python-version: "3.13"
       - run: pip install ruff pytest
+      - name: 任意の画像解析依存関係（外部API不要）
+        run: pip install '.[vision]'
       - name: 静的検査
         run: ruff check .
       - name: 基本テスト

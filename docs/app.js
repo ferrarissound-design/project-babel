@@ -112,12 +112,14 @@ ${b9 ? `<h3>単語境界のない連続書記</h3>${table(["手法", { t: "単�
     const e = D.external;
     const led = e.ledger.map((l) => [esc(l.name), l.attempt, `<code>${esc(l.sha256.slice(0, 12))}</code>`, `<code>${esc((l.commit || "").slice(0, 8))}</code>`, esc(l.created_utc), l.answer_already_public ? '<span class="bad">正解公開後</span>' : '<span class="ok">正解公開前</span>']);
     const sc = e.scores.map((s) => [esc(s.attempt.name) + " #" + s.attempt.attempt, s.independent ? '<span class="ok">独立</span>' : '<span class="hold">独立でない</span>', esc(s.provenance),
-      Object.entries(s.structure || {}).map(([k, v]) => `<span class="tag ${v === "correct" ? "ok" : v === "wrong" ? "bad" : "hold"}">${esc(STRUCT[k] || k)}</span>`).join(""), s.lexicon ? `${s.lexicon.correct}/${s.lexicon.wrong}/${s.lexicon.abstain}` : "–", s.numerals ? `${s.numerals.correct}/${s.numerals.wrong}/${s.numerals.abstain}` : "–"]);
+      Object.entries(s.structure || {}).map(([k, v]) => `<span class="tag ${v === "correct" ? "ok" : v === "wrong" ? "bad" : "hold"}">${esc(STRUCT[k] || k)}</span>`).join(""), s.lexicon_inferred ? `${s.lexicon_inferred.correct}/${s.lexicon_inferred.wrong}/${s.lexicon_inferred.abstain}（既知語 ${s.lexicon_inferred.given_excluded ?? 0} 語を除外）` : "–", s.lexicon ? `${s.lexicon.correct}/${s.lexicon.wrong}/${s.lexicon.abstain}` : "–", s.numerals ? `${s.numerals.correct}/${s.numerals.wrong}/${s.numerals.abstain}` : "–"]);
     return `<h2>初見言語テスト</h2><p class="note">最も重要なテスト。解読器を固定した後に、第三者が作った未知言語を投入する。予測は台帳に SHA-256 で記録され、後から書き換えると CI が検出する。</p>
 <div class="card"><p>解読器の指紋 <code>${esc(e.engine_fingerprint)}</code>／台帳の整合性: ${e.problems.length ? `<span class="bad">問題 ${e.problems.length} 件</span>` : '<span class="ok">問題なし</span>'}</p>
 <p class="muted">投入方法: <code>external/inbox/名前/corpus.txt</code>（1行1文、空行で文書区切り）を GitHub に追加 → 予測が自動保存 → その後 <code>external/answers/名前/answer.json</code> を追加 → 採点。</p></div>
 <h3>予測台帳</h3>${led.length ? table(["名前", { t: "試行", n: 1 }, "予測のハッシュ", "コミット", "日時 (UTC)", "時点"], led) : '<p class="hold">まだ投入されていない。</p>'}
-<h3>採点結果</h3>${sc.length ? table(["コーパス", "独立性", "出所", "構造", "語彙 正/誤/保留", "数詞 正/誤/保留"], sc) : '<p class="hold">未評価（正解が追加されたコーパスがない）。</p>'}`;
+<h3>採点結果</h3>${sc.length ? table(["コーパス", "独立性", "出所", "構造", "推定した語 正/誤/保留", "総合（既知語を含む）", "数詞 正/誤/保留"], sc) +
+  '<p class="muted">採点方式2: 「推定した語」は、事前に意味を与えた既知語を除いて数える。「総合」は既知語も含めた値で、変更前の採点方式1と同じ定義。</p>'
+  : '<p class="hold">未評価（正解が追加されたコーパスがない）。</p>'}`;
   },
   history() {
     const m = D.results.meta, runs = D.results.runs || [];

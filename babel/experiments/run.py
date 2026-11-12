@@ -14,7 +14,7 @@ from statistics import mean, pstdev
 
 from babel.decipher.baselines import CONFIGS
 from babel.decipher.engine import VERSION, decipher
-from babel.decipher.segment import transition_segment, unigram_segment
+from babel.decipher.segment import inductive_segment, inductive_transition, transition_segment, unigram_segment
 from babel.evaluate.score import score
 from babel.generator.corpus import build_corpus, null_corpus
 from babel.generator.languages import FAMILIES
@@ -45,6 +45,10 @@ def conditions():
     for la in (0.0, 0.08):
         out.append(("E5_noise", f"levelA:lacuna={la}", "A", "engine", {"lacuna": la}))
     out.append(("E6_unseen", "levelA:heldout=late_era", "A", "engine", {"split": "era"}))
+    # 同じ概念が1つの文に複数の役割で出る（「商人が商人に魚を渡した」）。対訳を多めにして役割の扱いを測る
+    out.append(("E11_same_concept", "levelA:parallel=0.15", "A", "engine", {"parallel_frac": 0.15}))
+    out.append(("E11_same_concept", "levelA:parallel=0.15:same_concept=0.4", "A", "engine",
+                {"parallel_frac": 0.15, "same_concept_rate": 0.4}))
     for a in ("no_variants", "no_morph", "no_em", "no_numeral_solver", "no_abstain", "no_pos_constraint"):
         out.append(("E8_ablation", f"levelA:{a}", "A", a, {}))
     out.append(("E8_ablation", "levelB:no_metadata", "B", "no_metadata", {}))
@@ -142,11 +146,36 @@ def run_boundary(task):
     t0 = time.time()
     try:
         public, secret = build_corpus(family, seed, "C", boundaries=False, lacuna=0.0, n_docs=65)
-        lines = [s for d in public["documents"] for s in d["sentences"]]
-        gold = [[t["s"] for t in s] for d in public["documents"] for s in secret["tokens"][d["id"]]]
+        held = set(public["split"]["heldout"])
+        docs = public["documents"]
+        lines = [s for d in docs for s in d["sentences"]]
+        gold = [[t["s"] for t in s] for d in docs for s in secret["tokens"][d["id"]]]
+        part = ["heldout" if d["id"] in held else "train" for d in docs for _ in d["sentences"]]
+        tr_l = [x for x, p in zip(lines, part) if p == "train"]
+        he_l = [x for x, p in zip(lines, part) if p == "heldout"]
+        tr_g = [x for x, p in zip(gold, part) if p == "train"]
+        he_g = [x for x, p in zip(gold, part) if p == "heldout"]
+
+        def split_f1(seg):      # 全文書をまとめて分割した結果を、train と heldout の文に分けて採点する
+            return (_boundary_prf([x for x, p in zip(seg, part) if p == "train"], tr_g),
+                    _boundary_prf([x for x, p in zip(seg, part) if p == "heldout"], he_g))
+
+        uni_all, tra_all = unigram_segment(lines), transition_segment(lines)
+        uni_tr, uni_he = split_f1(uni_all)
+        tra_tr, tra_he = split_f1(tra_all)
+        ind_tr, ind_he = inductive_segment(tr_l, he_l)
+        itr_tr, itr_he = inductive_transition(tr_l, he_l)
         return {"experiment": "E9_boundary", "label": "no_word_boundaries", "family": family, "seed": seed, "ok": True,
-                "metrics": {"word_boundary_f1_engine": _boundary_prf(unigram_segment(lines), gold),
-                            "word_boundary_f1_ngram_baseline": _boundary_prf(transition_segment(lines), gold)},
+                "metrics": {
+                    # 従来の指標（全文書をまとめて学習・分割・採点）。トランスダクティブ評価
+                    "word_boundary_f1_engine": _boundary_prf(uni_all, gold),
+                    "word_boundary_f1_ngram_baseline": _boundary_prf(tra_all, gold),
+                    # トランスダクティブ（heldout の文字列も分割の学習に使う）を train / heldout に分けて採点
+                    "wb_f1_transductive_train": uni_tr, "wb_f1_transductive_heldout": uni_he,
+                    "wb_f1_ngram_transductive_heldout": tra_he,
+                    # インダクティブ（train だけで学習し、heldout には凍結したモデルを適用）
+                    "wb_f1_inductive_train": _boundary_prf(ind_tr, tr_g), "wb_f1_inductive_heldout": _boundary_prf(ind_he, he_g),
+                    "wb_f1_ngram_inductive_heldout": _boundary_prf(itr_he, he_g)},
                 "seconds": round(time.time() - t0, 3)}
     except Exception as e:
         return {"experiment": "E9_boundary", "label": "no_word_boundaries", "family": family, "seed": seed,

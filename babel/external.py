@@ -132,7 +132,9 @@ def score_all(root: Path = ROOT):
         ans = root / "answers" / e["name"] / "answer.json"
         if not ans.exists():
             continue
-        dst = root / "scores" / e["name"] / f"attempt-{e['attempt']:03d}.json"
+        # 採点方式ごとに別ファイルにする。過去の方式の採点ファイルは上書きしない（attempt-NNN.json は方式1のまま残る）
+        from babel.evaluate.score import SCORING_VERSION
+        dst = root / "scores" / e["name"] / f"attempt-{e['attempt']:03d}.scoring-v{SCORING_VERSION}.json"
         pred = json.loads((root / e["file"]).read_text(encoding="utf-8"))
         gold = json.loads(ans.read_text(encoding="utf-8"))
         folder = root / "inbox" / e["name"]

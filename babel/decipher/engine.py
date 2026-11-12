@@ -10,7 +10,7 @@ from .align import Aligner, flatten
 from .morph import Morphology
 from .variants import LACUNA, Normalizer
 
-VERSION = "1.1.1"
+VERSION = "1.2.0"
 DEFAULT_CONFIG = {
     "use_variants": True,        # 表記揺れの正規化
     "use_morph": True,           # 形態素解析
@@ -22,6 +22,7 @@ DEFAULT_CONFIG = {
     "morph_method": "paradigm",  # paradigm / freq / successor（後2つは比較用ベースライン）
     "align_method": "em",        # em / count / dice（後2つは比較用ベースライン）
     "pos_constraint": True,      # 推定した品詞で対応付けの候補を絞る（v1.1）
+    "segmentation": "transductive",  # 単語境界のない文章の分割: transductive（全文書で学習）/ inductive（train のみ）
 }
 
 
@@ -42,15 +43,58 @@ def sanitize_public(public: dict):
             d["meta"] = {}
         d["sentences"] = [str(x) for x in (d.get("sentences") or [])]
         docs.append(d)
+    # 重複した文書IDは名前を付け直して両方の中身を残す（後の文書で前の文書が黙って上書きされていた）
+    # 付け直す名前は、元からあるIDとも、すでに付けた名前とも衝突しないものにする
+    seen, alias_of, taken = Counter(), {}, {d["id"] for d in docs}
+    for d in docs:
+        seen[d["id"]] += 1
+        if seen[d["id"]] > 1:
+            k = seen[d["id"]] - 1
+            while f"{d['id']}#dup{k}" in taken:
+                k += 1
+            new = f"{d['id']}#dup{k}"
+            taken.add(new)
+            warnings.append(f"文書ID {d['id']} が重複していたので、{seen[d['id']]} 番目を {new} とした（分割上は元のIDと同じ側に置く）")
+            alias_of[new] = d["id"]
+            d["id"] = new
     pub["documents"] = docs
-    ids = {d["id"] for d in docs}
+    ids = [d["id"] for d in docs]
+    idset = set(ids)
     split = pub.get("split") or {}
-    tr = [x for x in (split.get("train") or []) if x in ids]
-    he = [x for x in (split.get("heldout") or []) if x in ids and x not in set(tr)]
-    dropped = len(split.get("train") or []) + len(split.get("heldout") or []) - len(tr) - len(he)
-    if dropped:
-        warnings.append(f"split にある存在しない（または重複した）文書ID {dropped} 件を無視した")
-    pub["split"] = {"train": tr, "heldout": he} if tr else {}
+    given_tr, given_he = list(split.get("train") or []), list(split.get("heldout") or [])
+
+    def expand(lst):        # 元のIDで指定された文書と、その重複（名前を付け直したもの）
+        out = [x for x in dict.fromkeys(lst) if x in idset]
+        return out + [a for a, o in alias_of.items() if o in out and a not in out]
+
+    # 評価用に指定された文書は、どんな指定の組み合わせでも学習に入れない
+    he = expand(given_he)
+    tr_valid = expand(given_tr)
+    both = [x for x in tr_valid if x in set(he)]
+    if both:
+        warnings.append(f"train と heldout の両方に指定された文書 {len(both)} 件（{', '.join(both[:5])}）は評価用として扱い、学習に使わない")
+    tr = [x for x in tr_valid if x not in set(he)]
+    missing = [x for x in dict.fromkeys(given_tr + given_he) if x not in idset]
+    if missing:
+        warnings.append(f"split にある存在しない文書ID {len(missing)} 件（{', '.join(map(str, missing[:5]))}）を無視した")
+    if not split:
+        status = "unspecified"          # 分割の指定なし: 全文書で学習し、held-out の評価はしない
+        pub["split"] = {}
+    elif tr:
+        status = "given"
+        pub["split"] = {"train": tr, "heldout": he}
+    elif he:
+        # train が空・未指定・すべて無効で、heldout だけ有効: 全文書で学習に切り替えず、評価用を除いた残りで学習する
+        status = "train_derived_from_heldout"
+        tr = [x for x in ids if x not in set(he)]
+        warnings.append(f"有効な train の指定がないので、heldout {len(he)} 件を除いた残り {len(tr)} 件を学習に使う"
+                        "（全文書での学習には切り替えていない）")
+        pub["split"] = {"train": tr, "heldout": he}
+    else:
+        status = "invalid"              # 指定はあるが、有効なIDが1つもない
+        warnings.append("split が指定されたが有効な文書IDが1つもないので、分割なし（全文書で学習、held-out の評価なし）として扱う")
+        pub["split"] = {}
+    pub["_split_status"] = status
     n_sent = {d["id"]: len(d["sentences"]) for d in docs}
     par = []
     for p in pub.get("parallel") or []:
@@ -89,11 +133,30 @@ class Decipherer:
         if self.boundaries:
             for d in public["documents"]:
                 self.tokens[d["id"]] = [s.split() for s in d["sentences"]]
-        else:   # 連続書記: 全文書をまとめて分割する（教師なし・トランスダクティブ）
+        else:
+            # 連続書記の単語分割。
+            # transductive（既定・従来）: 全文書（train と heldout）をまとめて分割モデルを作る。教師なしなので
+            #   正解は使っていないが、heldout の文字列も分割モデルの学習に入る。
+            # inductive: train の文書だけで分割モデルを作り、heldout には凍結したモデルを当てる。
+            mode = self.cfg["segmentation"]
+            held = set(self.heldout_ids)
             lines = [(d["id"], s) for d in public["documents"] for s in d["sentences"]]
-            segs = segment.unigram_segment([s for _, s in lines])
-            for (did, _), words in zip(lines, segs):
+            if mode == "inductive" and held:
+                # 分割の学習は解読器の学習対象（train_ids）と同じ文書だけ。heldout と、どちらにも割り当てられて
+                # いない文書には、凍結したモデルを当てる
+                train = set(self.train_ids)
+                tr_lines = [x for x in lines if x[0] in train]
+                he_lines = [x for x in lines if x[0] not in train]
+                tr_seg, he_seg = segment.inductive_segment([s for _, s in tr_lines], [s for _, s in he_lines])
+                pairs = list(zip(tr_lines, tr_seg)) + list(zip(he_lines, he_seg))
+                order = {id(x): k for k, x in enumerate(lines)}
+                pairs.sort(key=lambda p: order[id(p[0])])
+            else:
+                pairs = list(zip(lines, segment.unigram_segment([s for _, s in lines])))
+            for (did, _), words in pairs:
                 self.tokens.setdefault(did, []).append(words)
+        self.segmentation_used = None if self.boundaries else (
+            "inductive" if self.cfg["segmentation"] == "inductive" and self.heldout_ids else "transductive")
         self.fitted = False
 
     # ------------------------------------------------------------------ fit
@@ -121,6 +184,7 @@ class Decipherer:
         self.affix_fn: dict[str, dict] = {}
         self.slot_pos: dict[str, str] = {}
         self.order_counts = {"so": Counter(), "adj": Counter(), "verb": Counter()}
+        self.role_stats = Counter()
         self.aligner = None
         if self.pub.get("parallel"):
             self._fit_alignment()
@@ -242,25 +306,25 @@ class Decipherer:
         self.aligner = al = Aligner(items, mode=mode, constraint=constraint)
         thr = self.cfg["claim_threshold"]
         slot_votes = defaultdict(Counter)
+        aligned = []        # 文ごとの [(語の位置, 語幹単位, 概念, その概念が対訳で取る役割の一覧)]
         for it, link in zip(items, al.links):
-            pos_of = {}
-            slot_of = dict(it["concepts"])
+            # 同じ概念が1つの文に複数の役割で現れることがある（「商人が商人に魚を渡した」）。
+            # 概念名 → 役割を1対1の辞書にすると後の役割で上書きされるので、役割の一覧として持つ
+            slots_of = defaultdict(list)
+            for c, slot in it["concepts"]:
+                slots_of[c].append(slot)
+            row = []
             for u, i in it["units"]:
                 if not u.startswith("S:"):
                     continue
                 best = max(((a, c) for (s, c), a in link.items() if s == u and c.startswith("C:")), default=None)
                 if best and best[0] >= 0.25:
-                    slot = slot_of.get(best[1][2:], "")
-                    slot_votes[u[2:]][slot.split(":")[0]] += 1
-                    pos_of.setdefault(slot, i)
-            if "head:subject" in pos_of and "head:object" in pos_of:
-                self.order_counts["so"]["SO" if pos_of["head:subject"] < pos_of["head:object"] else "OS"] += 1
-            for role in ("subject", "object", "recipient", "location"):
-                if "adj:" + role in pos_of and "head:" + role in pos_of:
-                    self.order_counts["adj"]["AN" if pos_of["adj:" + role] < pos_of["head:" + role] else "NA"] += 1
-            if "pred" in pos_of and len(it["sent"]) >= 3:
-                i = pos_of["pred"]
-                self.order_counts["verb"]["initial" if i == 0 else "final" if i == len(it["sent"]) - 1 else "medial"] += 1
+                    slots = slots_of.get(best[1][2:], [])
+                    kinds = {s.split(":")[0] for s in slots}
+                    if len(kinds) == 1:             # 品詞の票は役割の種類（head / adj / pred …）が一意なら入れる
+                        slot_votes[u[2:]][kinds.pop()] += 1
+                    row.append((i, u, best[1][2:], slots))
+            aligned.append((it, row))
         for u in sorted(al.n):
             if u.startswith("A:"):
                 fn = al.functions(u)
@@ -280,6 +344,43 @@ class Decipherer:
             if slot_votes[stem]:
                 slot = slot_votes[stem].most_common(1)[0][0]
                 self.slot_pos[stem] = {"pred": "V", "head": "N", "title": "N", "adj": "ADJ", "func": "FUNC"}.get(slot, "X")
+        self._count_orders(aligned)
+
+    def _count_orders(self, aligned):
+        """対訳で役割の分かった語の位置から、語順（主語と目的語・形容詞と名詞・動詞の位置）を数える。
+
+        概念の役割が1つなら、それを使う。同じ概念が複数の役割で現れて曖昧な場合は、その語に付いた格接辞の
+        学習済みの機能（R:subject など）で役割が1つに絞れるときだけ使い、絞れなければ数えない（推測しない）。
+        """
+        self.role_stats = Counter()
+        for it, row in aligned:
+            feats_at = defaultdict(set)
+            for u, i in it["units"]:
+                if u.startswith("A:"):
+                    feats_at[i].update(self.affix_fn.get(u[2:], {}))
+            pos_of = {}
+            for i, u, concept, slots in row:
+                uniq = sorted(set(slots))
+                if len(uniq) == 1:
+                    slot = uniq[0]
+                else:
+                    self.role_stats["ambiguous"] += 1
+                    cues = {f[2:] for f in feats_at[i] if f.startswith("R:")}
+                    hits = [s for s in uniq if s.split(":")[-1] in cues]
+                    if len(hits) != 1:
+                        self.role_stats["ambiguous_skipped"] += 1
+                        continue
+                    slot = hits[0]
+                    self.role_stats["ambiguous_resolved_by_case"] += 1
+                pos_of.setdefault(slot, i)
+            if "head:subject" in pos_of and "head:object" in pos_of:
+                self.order_counts["so"]["SO" if pos_of["head:subject"] < pos_of["head:object"] else "OS"] += 1
+            for role in ("subject", "object", "recipient", "location"):
+                if "adj:" + role in pos_of and "head:" + role in pos_of:
+                    self.order_counts["adj"]["AN" if pos_of["adj:" + role] < pos_of["head:" + role] else "NA"] += 1
+            if "pred" in pos_of and len(it["sent"]) >= 3:
+                i = pos_of["pred"]
+                self.order_counts["verb"]["initial" if i == 0 else "final" if i == len(it["sent"]) - 1 else "medial"] += 1
 
     def _pos_constraint(self, items):
         """意味の手がかりなしで推定した品詞（パラダイムの型）で、語幹が対応できる概念を絞る。
@@ -523,6 +624,9 @@ class Decipherer:
         return {
             "engine": {"name": "babel-decipher", "version": VERSION, "config": self.cfg},
             "input_warnings": self.input_warnings,
+            "split_used": {"status": self.pub.get("_split_status", "unspecified"), "train": len(self.train_ids),
+                           "heldout": list(self.heldout_ids)},
+            "segmentation_used": self.segmentation_used,
             "language_id": self.pub.get("language_id"), "level": self.level,
             "verdict": self._verdict(),
             "frequency": {"tokens": n_tok, "types": len(self.counts), "word_entropy_bits": round(ent, 3),

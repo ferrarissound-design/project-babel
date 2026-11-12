@@ -68,7 +68,10 @@ def run(split="dev", methods=None, styles=synth.STYLES, conditions=synth.CONDITI
             for cond in conditions:
                 sub = [r for r in rs if r["style"] == st and r["condition"] == cond]
                 summary[m][f"{st}/{cond}"] = {k: _agg([r[k] for r in sub]) for k in METRICS}
+    import cv2
+    import numpy
     res = {"meta": {"split": split, "seeds": synth.SPLITS[split], "methods": methods, "styles": list(styles),
+                    "opencv": cv2.__version__, "numpy": numpy.__version__,
                     "conditions": list(conditions), "images": len(cases), "seconds": round(time.time() - t0, 1)},
            "summary": summary, "runs": runs}
     if out:

@@ -421,3 +421,10 @@
 - 原因: 正解転写がない。記号の画像上の位置も転写に残っていない
 - 対応: 未対応。画像の提供を受けて、annotate で人が正解転写を作る手順と、確認の優先順位を docs/VISION_EVAL.md 第4節に示した
 - 検証: results/vision/real-img4494/inventory.json
+
+## 61. 画像認識の評価の数値が OpenCV の版に依存した（人工画像の行の隙間がぎりぎりだった）（修正済み（再評価））
+
+- 発見: PR #10 の GitHub Actions（OpenCV 4.14）で、tests/test_vision_eval.py の proj+combined が検出 F1 0.023 で失敗した。手元では OpenCV 5.0.0（pyproject.toml の指定 <5 の範囲外）で通っていた
+- 原因: 人工画像の行の間隔 34 画素では、font の下に伸びる字形のある行の隙間がちょうど6画素になった。既存方式（投影法）は6画素までの隙間を橋渡しするので、OpenCV 4.14 では全行が1行につながり、5.0 では7画素になってつながらなかった。最初の評価の数値（検出 F1 baseline 0.724、improved 0.913 など）は範囲外の版で作ったもので、宣言した環境で再現しない
+- 対応: 人工画像の行の間隔を 40 画素にした（通常の条件で行の隙間 12 画素以上）。評価の記録に OpenCV と NumPy の版を残す。方式と閾値（dev で選んだもの）は変えずに、OpenCV 4.14 で dev・val・test、構造解析への影響、転写の誤差の実験（T2）を再実行した
+- 検証: tests/test_vision_eval.py が OpenCV 4.14 で通ることを確認（修正前は proj+combined が失敗）。results/vision/*.json の meta.opencv

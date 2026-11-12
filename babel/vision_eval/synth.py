@@ -110,7 +110,9 @@ def render(lines_symbols, style, condition, seed, n_classes=None):
         if n_classes > len(FONT_CHARS):
             raise ValueError("font の字形が足りない")
         chars = FONT_CHARS[:n_classes]
-    H0, margin, line_h = 20, 12, 34
+    # 行の間隔: 34 では font の下に伸びる字形で行の隙間がちょうど6画素になり、OpenCV の版によって
+    # 既存方式の行の橋渡し（6画素まで）に入ったり外れたりした（docs/ISSUES.md #61）。版に依存しない余裕をとる
+    H0, margin, line_h = 20, 12, 40
     # 文を行に配置する（wrapped は行幅で折り返し、それ以外は1文1行）
     width_limit = 520 if condition == "wrapped" else 10 ** 9
     rows, cont = [], []

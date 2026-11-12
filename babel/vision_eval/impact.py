@@ -285,7 +285,9 @@ def run(out="results/vision/impact.json", jobs=4, seeds=SEEDS, sizes=SIZES, cond
     with ProcessPoolExecutor(jobs) as ex:
         runs = [r for rs in ex.map(run_text, text_tasks) for r in rs]
         runs += [r for rs in ex.map(run_image, img_tasks) for r in rs]
+    import cv2
     res = {"meta": {"seeds": seeds, "sizes": sizes, "conditions": conditions, "styles": list(styles), "config": CFG,
+                    "opencv": cv2.__version__,
                     "seconds": round(time.time() - t0, 1)}, "summary": summarize(runs), "runs": runs}
     Path(out).parent.mkdir(parents=True, exist_ok=True)
     Path(out).write_text(json.dumps(res, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")

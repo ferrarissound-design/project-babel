@@ -477,3 +477,17 @@
 - 原因: 連結成分による切り出しは、横に重なる部品と小さな部品しかまとめない。離れた部品が字の幅の中で横に並ぶ字は分割される
 - 対応: 分割された字の部品をまとめた幅はほぼ1字の幅（0.95H 以下）に収まり、隣り合う2字を合わせた幅はそれより広い、という性質を使い、隣り合う候補をまとめた幅が α·H 以下・隙間が β·H 以下なら結合する。dev で α・β を選び（0.95・0.5）、val で確かめて improved-v2 として追加した。improved は変えずに残す。字の幅が高さより大きい文字体系では結合しきれず、細い字が密に並ぶ文字体系では隣の字を結合しうる（限界）
 - 検証: results/vision/join-sweep-dev.json・join-sweep-val.json（選択）、methods-test-v2.json（最終評価、1回だけ）、docs/VISION_EVAL_V2.md
+
+## 69. 実画像の評価: 行の分け方の診断に、未確認の行に属する記号が入った（修正済み）（修正済み）
+
+- 発見: Codex の独立レビュー（PR #11）。確認済みの2記号が未確認の1行に属し、それぞれ別の予測行に対応すると、確認済みの行に分割がなくても gt_lines_split_into_several_rows が1になった
+- 原因: babel/vision/study.py の _line_split が、記号が確認済みかだけを見て、所属する行が確認済みかを見ていなかった
+- 対応: 所属する行が確認済みの記号だけを対応付けに使う（evaluate の行割り当てと同じ規則）
+- 検証: tests/test_image_study.py の test_line_split_ignores_glyphs_on_unverified_gt_lines（修正前は失敗）
+
+## 70. 実画像の評価: 同じ study に別の画像を指定すると、旧画像の正解転写を新画像の認識結果と比べられた（修正済み）（修正済み）
+
+- 発見: Codex の独立レビュー（PR #11）。prepare を別の画像で再実行すると認識結果と study.json は上書きされ、gt.json は旧画像のまま残り、evaluate・structure は不一致を検出しなかった
+- 原因: study.json に画像の sha256 を記録していたが、照合していなかった。gt.json には画像のハッシュがなかった
+- 対応: prepare は何かを書く前に、既存の study.json・gt.json の sha256（と gt.json の画像の大きさ）を新しい画像と照合し、違えば何も変えずに止める。下書きの gt.json に image_sha256 を記録し、evaluate・structure は gt.json と study.json のハッシュ・大きさが違えば評価しない（CLI は終了コード 2）
+- 検証: tests/test_image_study.py の test_prepare_refuses_a_different_image_without_touching_the_study・test_evaluate_and_structure_refuse_ground_truth_of_another_image（修正前は失敗）

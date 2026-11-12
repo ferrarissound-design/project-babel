@@ -46,6 +46,38 @@ def _read(path):
     return json.loads(Path(path).read_text(encoding="utf-8"))
 
 
+class StudyImageMismatch(ValueError):
+    """study ディレクトリの記録（study.json・gt.json）と別の画像を使おうとした。"""
+
+
+def _check_same_image(out, sha, size):
+    """既存の study.json・gt.json が同じ画像のものか。違えば何も書かずに止める（Codex レビュー、PR #11）。"""
+    sp, gp = out / "study.json", out / "gt.json"
+    if sp.exists():
+        old = _read(sp).get("image_sha256")
+        if old != sha:
+            raise StudyImageMismatch(f"{sp} は別の画像（sha256 {old}）の記録。新しい画像（{sha}）で上書きしない。"
+                                     "別の study ディレクトリを使う")
+    if gp.exists():
+        g = _read(gp)
+        if g.get("image_sha256") not in (None, sha):
+            raise StudyImageMismatch(f"{gp} は別の画像（sha256 {g.get('image_sha256')}）の正解転写。上書きしない")
+        if g.get("image_size") and list(g["image_size"]) != list(size):
+            raise StudyImageMismatch(f"{gp} の画像の大きさ {g['image_size']} が新しい画像 {list(size)} と違う。上書きしない")
+
+
+def check_study_consistency(study_dir):
+    """評価の前に、正解転写と認識結果が同じ画像のものかを確かめる（gt.json に記録したハッシュと study.json）。"""
+    st = _study(study_dir)
+    g = _read(Path(study_dir) / "gt.json")
+    if g.get("image_sha256") not in (None, st.get("image_sha256")):
+        raise StudyImageMismatch(f"gt.json（sha256 {g.get('image_sha256')}）と認識結果（study.json の sha256 "
+                                 f"{st.get('image_sha256')}）が別の画像。評価しない")
+    if g.get("image_size") and st.get("image_size") and list(g["image_size"]) != list(st["image_size"]):
+        raise StudyImageMismatch(f"gt.json の画像の大きさ {g['image_size']} と認識結果 {st['image_size']} が違う。評価しない")
+    return st
+
+
 def _study(study_dir):
     p = Path(study_dir) / "study.json"
     if not p.exists():
@@ -91,6 +123,12 @@ def prepare(image, study_dir, regions=None):
     if not image.exists():
         raise FileNotFoundError(f"画像がない: {image}（画像なしで処理を続けない）")
     out = Path(study_dir)
+    sha = _sha256(image)
+    gray = cv2.imread(str(image), cv2.IMREAD_GRAYSCALE)
+    if gray is None:
+        raise ValueError(f"画像を読めない: {image}")
+    h, w = gray.shape[:2]
+    _check_same_image(out, sha, (w, h))             # 何かを書き始める前に照合する
     out.mkdir(parents=True, exist_ok=True)
     reports = {}
     for m in METHODS:
@@ -106,6 +144,7 @@ def prepare(image, study_dir, regions=None):
     created = False
     if not gt_path.exists():
         draft = G.draft_from_report(reports["improved"], image.name)
+        draft["image_sha256"] = sha                 # 正解転写がどの画像のものか（評価の前に照合する）
         # 既存方式の案も proposed に残す（どちらも正解ではない）
         from .evaluate import match
         base = reports["baseline"]["glyphs"]
@@ -116,8 +155,7 @@ def prepare(image, study_dir, regions=None):
                               "by": "babel-vision（どちらも未確認の案）"}
         G.save(draft, gt_path)
         created = True
-    h, w = cv2.imread(str(image), cv2.IMREAD_GRAYSCALE).shape[:2]
-    st = {"schema": "babel-image-study-v1", "image": image.name, "image_sha256": _sha256(image), "image_size": [w, h],
+    st = {"schema": "babel-image-study-v1", "image": image.name, "image_sha256": sha, "image_size": [w, h],
           "regions": regions, "methods": list(METHODS), "prepared_utc": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
           "gt_created_by_prepare": created, "opencv": cv2.__version__}
     _write(out / "study.json", st)
@@ -146,6 +184,7 @@ def status(study_dir):
 
 def evaluate_study(study_dir):
     from .evaluate import evaluate
+    check_study_consistency(study_dir)
     gt = G.load(Path(study_dir) / "gt.json")
     out = {"status": status(study_dir), "methods": {}}
     for m in METHODS:
@@ -188,9 +227,11 @@ def _translation(rep, gt):
 
 
 def _line_split(rep, gt):
-    """予測の行と、確認済みの正解の行の対応（行の分け方の違い）。"""
+    """予測の行と、確認済みの正解の行の対応（行の分け方の違い）。
+    所属する行が確認済みの記号だけを使う（未確認の行の分け方は編集途中なので数えない。Codex レビュー、PR #11）。"""
     from .evaluate import match
-    V = [i for i in gt["items"] if i["verified"] and i["kind"] == "glyph" and i["line"]]
+    vlines = {ln["id"] for ln in gt["lines"] if ln["verified"]}
+    V = [i for i in gt["items"] if i["verified"] and i["kind"] == "glyph" and i["line"] in vlines]
     line_of = {}
     pairs = match([v["box"] for v in V], [g["box"] for g in rep["glyphs"]])
     for i, j, _ in pairs:
@@ -252,6 +293,7 @@ def structure_study(study_dir, cfg=None):
     from babel.structure.corpus import from_glyph_report
     from babel.structure.transcription import same_hypothesis
     cfg = dict(STRUCTURE_CFG, **(cfg or {}))
+    check_study_consistency(study_dir)
     gt = G.load(Path(study_dir) / "gt.json")
     stt = status(study_dir)
     if stt["state"] == "not_started":

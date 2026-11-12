@@ -83,3 +83,56 @@ def test_cli_image_study(tmp_path, capsys):
     assert main(["image-study", "prepare", str(tmp_path / "s"), "--image", str(p)]) == 0
     assert main(["image-study", "status", str(tmp_path / "s")]) == 0
     assert json.loads(capsys.readouterr().out.split("\n}\n")[-2] + "\n}")["state"] == "not_started"
+
+
+def test_line_split_ignores_glyphs_on_unverified_gt_lines():
+    """確認済みの記号でも、所属行が未確認なら行の分け方の診断に入れない（Codex レビュー、PR #11）。"""
+    gt = G.validate({"schema": G.SCHEMA, "image_size": [200, 100], "lines": [
+        {"id": "L1", "box": [0, 0, 200, 30], "verified": True},
+        {"id": "L2", "box": [0, 50, 200, 80], "verified": False}],
+        "items": [
+        {"id": "a", "box": [10, 5, 30, 25], "line": "L1", "label": "A", "verified": True},
+        {"id": "b", "box": [40, 5, 60, 25], "line": "L1", "label": "B", "verified": True},
+        {"id": "c", "box": [10, 55, 30, 75], "line": "L2", "label": "A", "verified": True},
+        {"id": "d", "box": [40, 55, 60, 75], "line": "L2", "label": "B", "verified": True}]})
+    boxes = [[10, 5, 30, 25], [40, 5, 60, 25], [10, 55, 30, 75], [40, 55, 60, 75]]
+    rep = {"glyphs": [{"box": b, "class_id": k % 2} for k, b in enumerate(boxes)],
+           "rows": [{"box": [0, 0, 200, 30], "glyph_indices": [0, 1]},
+                    {"box": [0, 50, 100, 80], "glyph_indices": [2]},          # 未確認の行が2つの予測行に分かれている
+                    {"box": [35, 50, 200, 80], "glyph_indices": [3]}]}
+    ls = S._line_split(rep, gt)
+    assert ls["gt_lines_split_into_several_rows"] == 0 and ls["rows_spanning_several_gt_lines"] == 0
+    gt["lines"][1]["verified"] = True                           # 確認済みにすれば分割として数える
+    assert S._line_split(rep, gt)["gt_lines_split_into_several_rows"] == 1
+
+
+def _snapshot(d):
+    return {str(f.relative_to(d)): f.read_bytes() for f in sorted(d.rglob("*")) if f.is_file()}
+
+
+def test_prepare_refuses_a_different_image_without_touching_the_study(tmp_path):
+    """同じ study に別の画像を指定したら、何も上書きせずに止める（Codex レビュー、PR #11）。"""
+    p, _ = _page(tmp_path)
+    S.prepare(p, tmp_path / "study")
+    other = tmp_path / "other"
+    other.mkdir()
+    q, _ = _page(other, style="stroke")
+    before = _snapshot(tmp_path / "study")
+    with pytest.raises(S.StudyImageMismatch):
+        S.prepare(q, tmp_path / "study")
+    assert _snapshot(tmp_path / "study") == before
+    S.prepare(p, tmp_path / "study")                             # 同じ画像なら続けられる（gt.json は上書きしない）
+    assert G.load(tmp_path / "study" / "gt.json")["image_sha256"] == S._study(tmp_path / "study")["image_sha256"]
+
+
+def test_evaluate_and_structure_refuse_ground_truth_of_another_image(tmp_path):
+    p, _ = _page(tmp_path)
+    S.prepare(p, tmp_path / "study")
+    g = json.loads((tmp_path / "study" / "gt.json").read_text(encoding="utf-8"))
+    g["image_sha256"] = "0" * 64
+    (tmp_path / "study" / "gt.json").write_text(json.dumps(g), encoding="utf-8")
+    with pytest.raises(S.StudyImageMismatch):
+        S.evaluate_study(tmp_path / "study")
+    with pytest.raises(S.StudyImageMismatch):
+        S.structure_study(tmp_path / "study", FAST)
+    assert not (tmp_path / "study" / "evaluation.json").exists()

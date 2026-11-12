@@ -184,24 +184,27 @@ def main(argv=None):
         print(text)
     elif a.cmd == "image-study":
         from babel.vision import study as S
-        if a.action == "prepare":
-            if not a.image:
-                ap.error("prepare には --image が必要")
-            res = S.prepare(a.image, a.study, regions=_parse_regions(a.region, ap))
-            print(json.dumps({"gt": res["gt"], "gt_created": res["gt_created"], "methods": res["methods"]}, ensure_ascii=False, indent=1))
-        elif a.action == "status":
-            print(json.dumps(S.status(a.study), ensure_ascii=False, indent=1))
-        elif a.action == "evaluate":
-            res = S.evaluate_study(a.study)
-            print(json.dumps({m: {k: v.get(k) for k in ("status", "detection", "classes", "lines")} for m, v in res["methods"].items()},
-                             ensure_ascii=False, indent=1))
-        else:
-            res = S.structure_study(a.study, {"permutations": a.permutations} if a.permutations else None)
-            print(json.dumps({"status": res["status"], "reason": res.get("reason"),
-                              "comparison": {k: {x: (len(v[x]) if isinstance(v.get(x), list) else v.get(x))
-                                                 for x in ("A_hypotheses", "auto_hypotheses", "reproduced_from_A", "missed_from_A",
-                                                           "only_in_auto")} for k, v in res.get("comparison", {}).items()
-                                             if "error" not in v}}, ensure_ascii=False, indent=1))
+        try:
+            if a.action == "prepare":
+                if not a.image:
+                    ap.error("prepare には --image が必要")
+                res = S.prepare(a.image, a.study, regions=_parse_regions(a.region, ap))
+                print(json.dumps({"gt": res["gt"], "gt_created": res["gt_created"], "methods": res["methods"]}, ensure_ascii=False, indent=1))
+            elif a.action == "status":
+                print(json.dumps(S.status(a.study), ensure_ascii=False, indent=1))
+            elif a.action == "evaluate":
+                res = S.evaluate_study(a.study)
+                print(json.dumps({m: {k: v.get(k) for k in ("status", "detection", "classes", "lines")} for m, v in res["methods"].items()},
+                                 ensure_ascii=False, indent=1))
+            else:
+                res = S.structure_study(a.study, {"permutations": a.permutations} if a.permutations else None)
+                print(json.dumps({"status": res["status"], "reason": res.get("reason"),
+                                  "comparison": {k: {x: (len(v[x]) if isinstance(v.get(x), list) else v.get(x))
+                                                     for x in ("A_hypotheses", "auto_hypotheses", "reproduced_from_A", "missed_from_A",
+                                                               "only_in_auto")} for k, v in res.get("comparison", {}).items()
+                                                 if "error" not in v}}, ensure_ascii=False, indent=1))
+        except S.StudyImageMismatch as e:
+            ap.exit(2, f"babel image-study: {e}\n")
     elif a.cmd == "vision-benchmark":
         from babel.vision_eval.benchmark import run as vrun
         res = vrun(a.split, a.methods.split(",") if a.methods else None, out=a.out or f"results/vision/methods-{a.split}.json")

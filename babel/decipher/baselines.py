@@ -10,15 +10,16 @@ from collections import Counter, defaultdict
 
 CONFIGS = {
     "engine": {},
-    "baseline_freq": {"use_variants": False, "morph_method": "freq", "align_method": "count",
+    "baseline_freq": {"use_variants": False, "morph_method": "freq", "align_method": "count", "pos_constraint": False,
                       "use_numeral_solver": False, "abstain": False, "use_metadata": False},
-    "baseline_ngram": {"use_variants": False, "morph_method": "successor", "align_method": "dice",
+    "baseline_ngram": {"use_variants": False, "morph_method": "successor", "align_method": "dice", "pos_constraint": False,
                        "use_numeral_solver": False, "use_metadata": False},
     "no_variants": {"use_variants": False},
     "no_morph": {"use_morph": False},
     "no_em": {"align_method": "count"},
     "no_numeral_solver": {"use_numeral_solver": False},
     "no_abstain": {"abstain": False},
+    "no_pos_constraint": {"pos_constraint": False},
     "no_metadata": {"use_metadata": False},
 }
 

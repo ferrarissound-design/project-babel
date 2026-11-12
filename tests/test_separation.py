@@ -41,3 +41,13 @@ def test_level_c_public_has_no_semantic_clues_and_engine_claims_no_meaning():
             for t in s:
                 c = t.get("concept")
                 assert c is None or c.startswith("#")       # 数詞の相対値（内部構造）だけが許される
+
+
+def test_evaluation_seeds_do_not_run_on_working_branch_pushes():
+    """開発中のコードで評価シードを走らせない（v1.0・v1.1 で実際に起きた汚染の再発防止）。"""
+    from pathlib import Path
+    wf = Path(__file__).parents[1] / ".github/workflows"
+    ev = (wf / "evaluate.yml").read_text(encoding="utf-8")
+    assert 'branches: [main]' in ev and '"claude/**"' not in ev
+    ex = (wf / "experiment.yml").read_text(encoding="utf-8")
+    assert "fromJSON('[\"quick\"]')" in ex and "fromJSON('[\"quick\",\"full\"]')" not in ex

@@ -97,8 +97,9 @@ def all_concepts():
 class World:
     """1つの文明の記録（文書→命題列）を作る。"""
 
-    def __init__(self, rng: random.Random):
+    def __init__(self, rng: random.Random, totals: bool = True):
         self.rng = rng
+        self.totals = totals    # False: 会計記録に合計行を書かない（独立初見テストで外れた仮定の再現用）
         c = all_concepts()
         self.persons, self.places, self.gods = c["persons"], c["places"], c["gods"]
         self.sites = [f"S{i}" for i in range(1, N_SITES + 1)]
@@ -195,8 +196,9 @@ class World:
                 if rec:
                     c["args"].append({"role": "recipient", "np": rec})
                 props.append(c)
-            props.append({"kind": "total", "pred": None, "tense": None, "neg": False, "cond": False,
-                          "args": [{"role": "theme", "np": self.np(item, pl=total > 1, count=total)}]})
+            if self.totals:
+                props.append({"kind": "total", "pred": None, "tense": None, "neg": False, "cond": False,
+                              "args": [{"role": "theme", "np": self.np(item, pl=total > 1, count=total)}]})
         elif genre == "chronicle":
             king = self.np(self.kings[era], title="king")
             props.append({"kind": "heading", "pred": None, "tense": None, "neg": False, "cond": False,

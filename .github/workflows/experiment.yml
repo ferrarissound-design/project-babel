@@ -21,7 +21,9 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        mode: ${{ github.event_name == 'workflow_dispatch' && fromJSON(format('["{0}"]', inputs.mode)) || fromJSON('["quick","full"]') }}
+        # push では開発シードの quick だけ。評価シード（full）は手動実行のときだけ走らせる。
+        # 開発中のコードで評価シードを走らせると、評価用のデータが汚れる（v1.0・v1.1 で実際に起きた）
+        mode: ${{ github.event_name == 'workflow_dispatch' && fromJSON(format('["{0}"]', inputs.mode)) || fromJSON('["quick"]') }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5

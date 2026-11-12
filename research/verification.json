@@ -1,10 +1,18 @@
 {
  "cross_env": {
   "match": true,
-  "local_digest": "8fb8902cf731b1ed",
-  "actions_digest": "8fb8902cf731b1ed",
-  "actions_run": "https://github.com/ferrarissound-design/project-babel/actions/runs/43019828061",
-  "commit": "c34d6dbccd49cfd14ea628d5335e7570e510c4c1",
-  "note": "ローカル 8fb8902cf731b1ed = Actions run 43019828061 の 8fb8902cf731b1ed、どちらも1675実行・失敗0"
- }
+  "local_digest": "bb842502047a827e",
+  "actions_digest": "bb842502047a827e",
+  "actions_run": "https://github.com/ferrarissound-design/project-babel/actions/runs/43133332365",
+  "commit": "54eee1a9e5e0a284af209a6fcc22fc5a6feae495",
+  "note": "v1.1.0。ローカル bb842502047a827e = Actions run 43133332365（凍結コミット 54eee1a の full）、どちらも1855実行・失敗0"
+ },
+ "history": [
+  {
+   "version": "1.0.0",
+   "digest": "8fb8902cf731b1ed",
+   "actions_run": "https://github.com/ferrarissound-design/project-babel/actions/runs/43019828061",
+   "match": true
+  }
+ ]
 }

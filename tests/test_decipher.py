@@ -103,3 +103,29 @@ def test_oov_count_does_not_depend_on_document_order():
     rev = dict(secret, tokens=dict(reversed(list(secret["tokens"].items()))))
     b = score(pred, rev, public)["oov"]
     assert a == b
+
+
+def test_numerals_from_parallel_when_no_total_lines():
+    """合計行のない会計記録（独立初見テストで外れた仮定）でも、対訳の数量から一部の数詞を正しく解く。"""
+    from babel.evaluate.score import score as _score
+    ok = wrong = 0
+    for fam, seed in (("KES", 1), ("UMB", 4), ("SOT", 2)):
+        public, secret = build_corpus(fam, seed, "A", totals=False)
+        r = _score(decipher(public), secret, public)["numerals"]
+        ok, wrong = ok + r["correct"], wrong + r["wrong"]
+    assert ok >= 10 and wrong <= 1
+
+
+def test_base_is_not_claimed_from_few_values():
+    assert numerals.infer_base([1, 2, 4, 6])[0] is None
+
+
+def test_parallel_equations_use_consensus_not_first_come():
+    """Codex レビュー（PR #3）の例: 誤った式1本と正しい式10本なら、正しい方が採られる。
+
+    対訳の式を固定順で入れると、最初に入った誤った式が値を決めてしまっていた。
+    """
+    seed = {"alpha", "beta", "gamma", "delta"}
+    extra = [(["alpha"], 9)] + [(["alpha"], 2)] * 10 + [(["gamma"], 3), (["delta"], 4)]
+    r = numerals.solve_numerals([], lambda w: False, {}, [("beta", 1)], extra, True, seed_variables=seed)
+    assert r["status"] == "solved" and r["values"]["alpha"] == 2

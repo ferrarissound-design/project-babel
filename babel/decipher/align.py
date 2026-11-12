@@ -85,7 +85,7 @@ def posterior(t, src, tgt):
 
 
 class Aligner:
-    def __init__(self, items, mode="em", kappa=0.7):
+    def __init__(self, items, mode="em", kappa=0.7, constraint=None):
         """items: [{'units': [(unit, word_index)], 'concepts': [(token, slot)], 'feats': [...]}]"""
         self.items = items
         self.kappa = kappa
@@ -96,7 +96,9 @@ class Aligner:
                 sorted({"C:" + c for c, _ in it["concepts"]} | {"F:" + f for f in it["feats"]})) for it in items]
 
         def allowed(s, c):       # 接辞は文法素性にだけ対応できる（語幹はどちらにも対応できる）
-            return not (s.startswith("A:") and c.startswith("C:"))
+            if s.startswith("A:") and c.startswith("C:"):
+                return False
+            return constraint is None or s == NULL or constraint(s, c)
 
         self.A = defaultdict(lambda: defaultdict(float))
         self.joint = defaultdict(Counter)

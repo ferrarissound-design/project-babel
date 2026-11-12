@@ -10,7 +10,7 @@ from .align import Aligner, flatten
 from .morph import Morphology
 from .variants import LACUNA, Normalizer
 
-VERSION = "1.0.1"
+VERSION = "1.1.1"
 DEFAULT_CONFIG = {
     "use_variants": True,        # 表記揺れの正規化
     "use_morph": True,           # 形態素解析
@@ -21,6 +21,7 @@ DEFAULT_CONFIG = {
     "claim_threshold": 0.5,
     "morph_method": "paradigm",  # paradigm / freq / successor（後2つは比較用ベースライン）
     "align_method": "em",        # em / count / dice（後2つは比較用ベースライン）
+    "pos_constraint": True,      # 推定した品詞で対応付けの候補を絞る（v1.1）
 }
 
 
@@ -169,10 +170,51 @@ class Decipherer:
                         extra.append((ws, counts[0][0]))
             if extra:
                 res = numerals.solve_numerals(docs, self._is_inflected, self.counts, anchors, extra, True)
+        if solver and res["status"] != "solved" and res.get("sum_marker") is None and self.pub.get("parallel"):
+            res2 = self._numerals_from_parallel(docs, anchors)
+            if res2 is not None:
+                res = res2
         self.num = res
         self.num_values = dict(res["values"])
         for w, v in anchors:
             self.num_values.setdefault(w, v)
+
+    def _numerals_from_parallel(self, docs, anchors):
+        """合計行がない場合: 対訳の数量を概念 #NUM として対応付けに混ぜ、#NUM に結び付く語を数詞候補にする。
+
+        数詞語は「数量のある文」にだけ規則的に現れるので、EM の対応付けで #NUM に吸着される。
+        候補が決まれば、対訳の文ごとに「数詞語の値の和＝数量」という方程式が立つ。
+        """
+        items, counted = [], []
+        for p in self.pub["parallel"]:
+            if p["doc"] not in self.norm_docs:
+                continue
+            sent = self.norm_docs[p["doc"]][p["sent"]]
+            concepts, feats, counts = flatten(p["translation"])
+            if counts:
+                concepts = concepts + [("#NUM", "num")]
+            units = []
+            for i, w in enumerate(sent):
+                if w != LACUNA:
+                    units.append(("S:" + w, i))      # 数詞は屈折しないことが多いので、語形全体を単位にする
+            items.append({"units": units, "concepts": concepts, "feats": [], "sent": sent, "counts": counts})
+            if len(counts) == 1 and LACUNA not in sent:
+                counted.append((sent, counts[0][0]))
+        if len(counted) < 3:
+            return None
+        al = Aligner(items, mode="em")
+        cand = set()
+        for u in al.n:
+            meaning, conf, _ = al.best(u, "C:")
+            if meaning == "#NUM" and al.joint[u]["C:#NUM"] >= 1:
+                cand.add(u[2:])
+        cand |= {w for w, _ in anchors}
+        if len(cand) < 2:
+            return None
+        extra = [([w for w in sent if w != LACUNA], n) for sent, n in counted]   # 絞り込みはソルバーが候補拡張の後に行う
+        res = numerals.solve_numerals(docs, self._is_inflected, self.counts, anchors, extra, True, seed_variables=cand)
+        res["parallel_candidates"] = len(cand)
+        return res
 
     def _units(self, sent):
         """文 → [(unit, 語の位置)]。数詞と欠損は除く。"""
@@ -196,7 +238,8 @@ class Decipherer:
             items.append({"units": self._units(sent), "concepts": concepts, "feats": feats, "sent": sent,
                           "counts": counts})
         mode = self.cfg["align_method"] if self.cfg["use_em"] else "count"
-        self.aligner = al = Aligner(items, mode=mode)
+        constraint = self._pos_constraint(items) if self.cfg["pos_constraint"] else None
+        self.aligner = al = Aligner(items, mode=mode, constraint=constraint)
         thr = self.cfg["claim_threshold"]
         slot_votes = defaultdict(Counter)
         for it, link in zip(items, al.links):
@@ -237,6 +280,31 @@ class Decipherer:
             if slot_votes[stem]:
                 slot = slot_votes[stem].most_common(1)[0][0]
                 self.slot_pos[stem] = {"pred": "V", "head": "N", "title": "N", "adj": "ADJ", "func": "FUNC"}.get(slot, "X")
+
+    def _pos_constraint(self, items):
+        """意味の手がかりなしで推定した品詞（パラダイムの型）で、語幹が対応できる概念を絞る。
+
+        動詞型の語幹は対訳で述語になる概念にだけ、名詞型の語幹は述語以外の概念にだけ対応できる。
+        品詞が不明（X）の語幹と、述語にも項にもなる概念には制約をかけない。
+        """
+        slots = defaultdict(set)
+        for it in items:
+            for c, slot in it["concepts"]:
+                slots["C:" + c].add("pred" if slot == "pred" else "arg")
+
+        def ok(unit, concept):
+            if not unit.startswith("S:") or not concept.startswith("C:"):
+                return True
+            sl = slots.get(concept)
+            if not sl or len(sl) > 1:
+                return True
+            pos = self.stem_pos.get(unit[2:], "X")
+            if pos == "V":
+                return "pred" in sl
+            if pos == "N":
+                return "arg" in sl
+            return True
+        return ok
 
     def _stem_of_form(self, form):
         return self.morph.analyze(self.nz.norm(form)[0])[1]

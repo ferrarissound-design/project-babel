@@ -51,14 +51,47 @@ def old_babel_diagnosis(seeds=(1000, 1001, 1002, 1003, 1004)):
     return out
 
 
+def _family_table(data):
+    fam = defaultdict(Counter)
+    for r in data["runs"]:
+        grp = "固定コーパス" if r["generator"] in FIXED else "生成器"
+        for f, v in r["score"]["per_family"].items():
+            for k, n in v.items():
+                fam[(f, grp)][k] += n
+    L = ["| 族 | 生成器: 仮説 | 偽 | 偽の率 | 固定コーパス: 仮説 | 偽 | 検証不能 | 偽の率 |", "|---|---:|---:|---:|---:|---:|---:|---:|"]
+    for f in sorted({k[0] for k in fam}):
+        a, b = fam[(f, "生成器")], fam[(f, "固定コーパス")]
+        ra = a["false"] / (a["true"] + a["false"]) if a["true"] + a["false"] else None
+        rb = b["false"] / (b["true"] + b["false"]) if b["true"] + b["false"] else None
+        L.append(f"| {f} | {sum(a.values())} | {a['false']} | {_f(ra)} | {sum(b.values())} | {b['false']} | {b['unverifiable']} | {_f(rb)} |")
+    return L
+
+
+def _rate(group):
+    t = f_ = 0
+    for r in group:
+        for f, v in r["score"]["per_family"].items():
+            if f != "affix":
+                t += v.get("true", 0)
+                f_ += v.get("false", 0)
+    return f_ / (t + f_) if t + f_ else None
+
+
 def build(out="docs/STRUCTURE_RESULTS.md"):
     ev, dev, te = _load("benchmark-eval.json"), _load("benchmark-dev.json"), _load("transcription-experiment.json")
+    ev0 = _load("benchmark-eval-v0.1.0-8dd39ac.json")      # 評価前に凍結した版での評価（最初の記録）
     L = ["# 構造発見モジュールの評価結果", "",
          "このファイルは `python -m babel.structure_eval.results_doc` が results/structure/*.json から生成する。",
          "方法は [STRUCTURE.md](STRUCTURE.md)、事前登録は [RESEARCH_PLAN.md](RESEARCH_PLAN.md) の「構造発見モジュール」。", ""]
     m = ev["meta"]
-    L += [f"評価: シード {m['seeds'][0]}〜{m['seeds'][-1]}（開発に使っていない）、コミット {m['commit']}（評価前に凍結）、"
-          f"{len(ev['runs'])} 実行、{m['seconds']} 秒（{m['jobs']} 並列）。設定 `{m['config']}`。", ""]
+    L += ["評価は2回ある。どちらも評価シード（開発に使っていない）で、判定基準は事前登録のまま変えていない。", "",
+          f"1. **凍結版 v0.1.0**（コミット {ev0['meta']['commit'] if ev0 else '—'}、評価前に凍結）: 最初の記録。"
+          "`results/structure/benchmark-eval-v0.1.0-8dd39ac.json`",
+          f"2. **再評価 v0.1.2**（コミット {m['commit']}）: Codex の独立レビュー（PR #7）で見つかった妥当性の不具合2件"
+          "（共起の帰無モデルが行の長さを無視していた、採点が行の組の真を過大に数えていた）と、評価後に接辞を仮説から外した変更を含む。"
+          "閾値の調整ではないが、評価シードの結果を見た後の再実行であることに注意。`results/structure/benchmark-eval.json`", "",
+          f"以下の表は特に断りがなければ再評価 v0.1.2（シード {m['seeds'][0]}〜{m['seeds'][-1]}、{len(ev['runs'])} 実行、"
+          f"{m['seconds']} 秒、{m['jobs']} 並列、設定 `{m['config']}`）。", ""]
 
     # ---------------------------------------------------------------- 1. まとめ
     L += ["## 1. 行数ごとのまとめ（評価シード）", "",
@@ -73,6 +106,17 @@ def build(out="docs/STRUCTURE_RESULTS.md"):
     L += ["", "- 「無作為で偽の仮説」は仮説が1件でも出たコーパスの数（族単位の誤り率の実測）。「構造あり」は大域検定だけが陽性のものも含む。",
           "- 偽の率は母集団オラクル（分析に使っていない行）で成り立たなかった仮説の割合。固定コーパス（実在の英語・第三者・BABEL 生成器）では"
           "母集団が残りの半分しかなく、特定の話題の句の反復（例: 創世記の “the firmament”）が残りに現れないと偽になる。", ""]
+
+    if ev0:
+        L += ["### 凍結版 v0.1.0 との比較（同じシード）", "",
+              "| 行数 | 無作為で偽の仮説: v0.1.0 → v0.1.2 | 設計した規則の発見: v0.1.0 → v0.1.2 | 偽の率 A: v0.1.0 → v0.1.2 | 偽の率 C: v0.1.0 → v0.1.2 |",
+              "|---:|---:|---:|---:|---:|"]
+        for o0, o in zip(ev0["overall"], ev["overall"]):
+            L.append(f"| {o['size']} | {o0['null_corpora_with_false_hypothesis']}/{o0['null_corpora']} → "
+                     f"{o['null_corpora_with_false_hypothesis']}/{o['null_corpora']} | {o0['designed_rules_found']} → {o['designed_rules_found']} "
+                     f"（/{o['designed_rules']}） | {_f(o0['false_rate_by_tier']['A'])} → {_f(o['false_rate_by_tier']['A'])} | "
+                     f"{_f(o0['false_rate_by_tier']['C'])} → {_f(o['false_rate_by_tier']['C'])} |")
+        L += ["", "v0.1.2 の偽の率は、採点の修正（行の組の真を語境界で判定）で v0.1.0 より厳しく数えている。", ""]
 
     # ---------------------------------------------------------------- 2. 変更前後
     L += ["## 2. 変更前（既存 BABEL v1.2.0 の構造判定）と変更後（構造発見）の比較", "",
@@ -96,40 +140,23 @@ def build(out="docs/STRUCTURE_RESULTS.md"):
     L.append("")
 
     # ---------------------------------------------------------------- 3. 族ごと
-    fam = defaultdict(Counter)
-    for r in ev["runs"]:
-        grp = "固定コーパス" if r["generator"] in FIXED else "生成器"
-        for f, v in r["score"]["per_family"].items():
-            for k, n in v.items():
-                fam[(f, grp)][k] += n
-    L += ["## 3. 仮説の族ごとの偽の率（評価シード、全行数）", "",
-          "| 族 | 生成器: 仮説 | 偽 | 偽の率 | 固定コーパス: 仮説 | 偽 | 検証不能 | 偽の率 |", "|---|---:|---:|---:|---:|---:|---:|---:|"]
-    for f in sorted({k[0] for k in fam}):
-        a, b = fam[(f, "生成器")], fam[(f, "固定コーパス")]
-        ta, tb = sum(a.values()), sum(b.values())
-        ra = a["false"] / (a["true"] + a["false"]) if a["true"] + a["false"] else None
-        rb = b["false"] / (b["true"] + b["false"]) if b["true"] + b["false"] else None
-        L.append(f"| {f} | {ta} | {a['false']} | {_f(ra)} | {tb} | {b['false']} | {b['unverifiable']} | {_f(rb)} |")
-    L += ["", "**接辞の族は偽の率が 94% で、機能していない。** 評価後の変更（v0.1.1）で仮説から外し「実験的な観察」に移した。"
-          "族の数（多重検定の閾値）は変えていないので、他の族の判定は評価時と同じ（下の表4）。", ""]
+    L += ["## 3. 仮説の族ごとの偽の率（評価シード、全行数）", ""]
+    for label, data in (("再評価 v0.1.2", ev), ("凍結版 v0.1.0（接辞を含む）", ev0)):
+        if data:
+            L += [f"**{label}**", ""] + _family_table(data) + [""]
+    L += ["**接辞の族は凍結版で偽の率が 94% で、機能していない。** 評価後の変更（v0.1.1）で仮説から外し「実験的な観察」に移した。"
+          "族の数（多重検定の閾値）は変えていない。", ""]
+    ev_frozen = ev0 or ev
 
     # ---------------------------------------------------------------- 4. 接辞を除いた事後集計
-    L += ["## 4. 事後集計: 接辞の仮説を除いた場合（評価の記録から機械的に再計算、追加実行なし）", "",
+    L += ["## 4. 事後集計: 凍結版の記録から接辞の仮説を除いた場合（機械的に再計算、追加実行なし）", "",
           "| 行数 | 無作為で偽の仮説を出したコーパス | 生成器コーパスの偽の率 | 固定コーパスの偽の率 |", "|---:|---:|---:|---:|"]
-    for n in sorted({r["size_requested"] for r in ev["runs"]}):
-        rs = [r for r in ev["runs"] if r["size_requested"] == n]
+    for n in sorted({r["size_requested"] for r in ev_frozen["runs"]}):
+        rs = [r for r in ev_frozen["runs"] if r["size_requested"] == n]
         nullbad = sum(1 for r in rs if r["generator"] in NULL and
                       sum(v.get("false", 0) for f, v in r["score"]["per_family"].items() if f != "affix") > 0)
-        def rate(group):
-            t = f_ = 0
-            for r in group:
-                for f, v in r["score"]["per_family"].items():
-                    if f != "affix":
-                        t += v.get("true", 0)
-                        f_ += v.get("false", 0)
-            return f_ / (t + f_) if t + f_ else None
         L.append(f"| {n} | {nullbad}/{sum(1 for r in rs if r['generator'] in NULL)} | "
-                 f"{_f(rate([r for r in rs if r['generator'] not in FIXED]))} | {_f(rate([r for r in rs if r['generator'] in FIXED]))} |")
+                 f"{_f(_rate([r for r in rs if r['generator'] not in FIXED]))} | {_f(_rate([r for r in rs if r['generator'] in FIXED]))} |")
     L.append("")
 
     # ---------------------------------------------------------------- 5. 規則ごとの発見

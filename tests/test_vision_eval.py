@@ -151,7 +151,7 @@ def test_baseline_collapses_on_noise_but_improved_does_not(tmp_path):
     assert base < 0.2 and imp > 0.9
 
 
-@pytest.mark.parametrize("method", ["cc+iou", "cc+template", "cc+shape", "cc+combined", "proj+combined", "improved"])
+@pytest.mark.parametrize("method", ["cc+iou", "cc+template", "cc+shape", "cc+combined", "proj+combined", "improved", "improved-v2"])
 def test_every_method_returns_a_valid_report(tmp_path, method):
     from babel.structure.corpus import from_glyph_report
     from babel.vision.recognizers import recognize

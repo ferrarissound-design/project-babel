@@ -34,7 +34,23 @@ def binarize(image, method="otsu"):
 
 # ------------------------------------------------------------------------------------------------ 切り出し
 
-def segment_components(mask, remove_rules=True, min_area=3, small_ratio=0.35, join_gap_ratio=0.35, join_overlap=0.0):
+def _width_join(glyphs, H, alpha, beta):
+    """隣り合う候補を、まとめた幅が字1つ分（alpha × 字の高さ H）以下で、隙間が beta × H 以下ならまとめる。
+    離れた部品からなる字は、まとめても1字の幅に収まるが、隣り合う別の字を2つ合わせると1字の幅を超える、という仮定。"""
+    out = []
+    for g in glyphs:
+        if out:
+            p = out[-1]
+            gap = g[0] - p[2]
+            if gap <= beta * H and (max(p[2], g[2]) - min(p[0], g[0])) <= alpha * H:
+                out[-1] = [min(p[0], g[0]), min(p[1], g[1]), max(p[2], g[2]), max(p[3], g[3])] + p[4:]
+                continue
+        out.append(list(g))
+    return out
+
+
+def segment_components(mask, remove_rules=True, min_area=3, small_ratio=0.35, join_gap_ratio=0.35, join_overlap=0.0,
+                       join_width=None, join_width_gap=0.5):
     """戻り値: rows = [[box, ...], ...]（行ごとに左から）"""
     cv2, np = _dependencies()
     m = _without_rules(mask) if remove_rules else mask
@@ -86,6 +102,11 @@ def segment_components(mask, remove_rules=True, min_area=3, small_ratio=0.35, jo
                     continue
             glyphs.append(list(c))
         out.append([g[:4] for g in glyphs])
+    if join_width:
+        # 字の高さ: 候補の高さの上位半分の中央値（分割された破片は字より低いので除く）
+        hs = sorted((b[3] - b[1] for r in out for b in r), reverse=True)
+        H = hs[len(hs) // 4] if hs else med_h
+        out = [[g[:4] for g in _width_join(r, H, join_width, join_width_gap)] for r in out]
     return out
 
 
@@ -196,6 +217,10 @@ DEV_THRESHOLDS = {"template": 0.20, "combined": 0.25, "shape": 0.15}
 
 METHODS = {
     "improved":          {"preprocess": "median", "segment": "components", "classify": "template"},
+    # improved-v2: improved に、まとめた幅が字1つ分に収まる隣の部品の結合を加えたもの（離れた部品を持つ字の分割を減らす）。
+    # join_width・join_width_gap は dev だけで選び（0.95, 0.5）、val で確かめた。test では変えない（docs/ISSUES.md #68）
+    "improved-v2":       {"preprocess": "median", "segment": "components", "classify": "template",
+                          "seg": {"join_width": 0.95, "join_width_gap": 0.5}},
     "baseline":          {"preprocess": "otsu",   "segment": "projection", "classify": "iou"},
     "proj+combined":     {"preprocess": "otsu",   "segment": "projection", "classify": "combined"},
     "cc+iou":            {"preprocess": "otsu",   "segment": "components", "classify": "iou"},
@@ -206,12 +231,17 @@ METHODS = {
 }
 
 
-def recognize(path, method="baseline", threshold=None, **seg_kwargs):
-    """画像のパスだけを受け取り、glyph-report 互換の dict を返す。"""
+def recognize(path, method="baseline", threshold=None, regions=None, **seg_kwargs):
+    """画像のパスだけを受け取り、glyph-report 互換の dict を返す。
+
+    regions: [{"id": "left", "box": [x1, y1, x2, y2]}]（右下は含まない）。指定すると、領域ごとに切り出し
+    （罫線の除去も領域ごと）、記号の座標は画像全体の座標で返す。分類は全領域の記号をまとめて行う。
+    """
+    from .glyphs import _rectangles
     cv2, np = _dependencies()
     t0 = time.time()
     if method == "baseline":
-        rep = analyze_image(path)
+        rep = analyze_image(path, regions=regions)
         rep["settings"]["method"] = "baseline"
         rep["seconds"] = round(time.time() - t0, 4)
         return rep
@@ -220,12 +250,21 @@ def recognize(path, method="baseline", threshold=None, **seg_kwargs):
     if image is None:
         raise ValueError(f"画像を読めない: {path}")
     mask = binarize(image, cfg["preprocess"])
-    rows_boxes = segment_components(mask, **seg_kwargs) if cfg["segment"] == "components" else segment_projection(mask)
-    clean = _without_rules(mask)
-    boxes = [b for r in rows_boxes for b in r]
+    selected = _rectangles(image.shape, regions)
+    clean = np.zeros_like(mask)
+    region_rows = []                                   # [(領域 ID, [記号の枠, ...]), ...]
+    for reg in selected:
+        x1, y1, x2, y2 = reg["box"]
+        m = mask[y1:y2, x1:x2]
+        clean[y1:y2, x1:x2] = _without_rules(m)
+        kw = {**cfg.get("seg", {}), **seg_kwargs}
+        rb = segment_components(m, **kw) if cfg["segment"] == "components" else segment_projection(m)
+        for r in rb:
+            region_rows.append((reg["id"], [[b[0] + x1, b[1] + y1, b[2] + x1, b[3] + y1] for b in r]))
+    boxes = [b for _, r in region_rows for b in r]
     labels = classify(clean, boxes, cfg["classify"], threshold) if boxes else []
     glyphs, rows, k = [], [], 0
-    for r in rows_boxes:
+    for rid, r in region_rows:
         idx = []
         for b in r:
             glyphs.append({"box": [int(v) for v in b], "class_id": int(labels[k]), "match_iou": None})
@@ -234,9 +273,9 @@ def recognize(path, method="baseline", threshold=None, **seg_kwargs):
         if idx:
             rb = [min(glyphs[i]["box"][0] for i in idx), min(glyphs[i]["box"][1] for i in idx),
                   max(glyphs[i]["box"][2] for i in idx), max(glyphs[i]["box"][3] for i in idx)]
-            rows.append({"region": "page", "box": rb, "classes": [glyphs[i]["class_id"] for i in idx], "glyph_indices": idx})
+            rows.append({"region": rid, "box": rb, "classes": [glyphs[i]["class_id"] for i in idx], "glyph_indices": idx})
     return {"schema": "babel-glyph-pilot-v1", "source_image": Path(path).name,
-            "image_size": [int(image.shape[1]), int(image.shape[0])], "rows": rows, "glyphs": glyphs,
-            "settings": {"method": method, **cfg, "threshold": threshold, **seg_kwargs},
+            "image_size": [int(image.shape[1]), int(image.shape[0])], "regions": selected, "rows": rows, "glyphs": glyphs,
+            "settings": {"method": method, **cfg, "threshold": threshold, "seg_overrides": seg_kwargs},
             "stats": {"rows": len(rows), "glyph_candidates": len(glyphs), "visual_classes": len(set(labels))},
             "seconds": round(time.time() - t0, 4)}

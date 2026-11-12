@@ -134,3 +134,74 @@ def baseline_threshold_sweep(similarities=(0.6, 0.65, 0.7, 0.75, 0.8, 0.85), out
     res = {"split": "dev", "opencv": cv2.__version__, "rows": rows}
     Path(out).write_text(json.dumps(res, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
     return res
+
+
+def diagnose_multipart(split="dev", method="improved", out="results/vision/multipart-diagnosis-dev.json"):
+    """分割・結合の誤りの幾何: 1つの字の中の部品の隙間、隣り合う字の隙間、分割された字の部品をまとめた幅（字の高さ H に対する比）。"""
+    import statistics as st
+    from collections import defaultdict as dd
+
+    from babel.vision.evaluate import _area, _inter
+    from babel.vision.groundtruth import validate
+    from babel.vision.recognizers import recognize
+    with tempfile.TemporaryDirectory() as td:
+        wd = Path(td)
+        cases = synth.build(wd, split)
+        within, between, union_w, width = dd(list), dd(list), dd(list), dd(list)
+        for c in cases:
+            gt = validate(json.loads((wd / "gt" / f"{c['name']}.json").read_text(encoding="utf-8")))
+            P = [g["box"] for g in recognize(wd / "images" / f"{c['name']}.png", method)["glyphs"]]
+            Gs = [i for i in gt["items"] if i["kind"] == "glyph"]
+            H = st.median(g["box"][3] - g["box"][1] for g in Gs)
+            by = dd(list)
+            for g in Gs:
+                width[c["style"]].append((g["box"][2] - g["box"][0]) / H)
+                by[g["line"]].append(g["box"])
+                ins = sorted(p for p in P if _inter(p, g["box"]) >= 0.5 * _area(p))
+                if len(ins) >= 2:
+                    within[c["style"]] += [(b[0] - a[2]) / H for a, b in zip(ins, ins[1:])]
+                    union_w[c["style"]].append((max(x[2] for x in ins) - min(x[0] for x in ins)) / H)
+            for bs in by.values():
+                bs.sort()
+                between[c["style"]] += [(b[0] - a[2]) / H for a, b in zip(bs, bs[1:])]
+
+    def q(v):
+        return {"n": len(v), "deciles": [round(x, 3) for x in st.quantiles(v, n=10)]} if len(v) > 9 else {"n": len(v)}
+    res = {"split": split, "method": method, "unit": "字の高さ H に対する比",
+           "within_glyph_part_gap": {k: q(v) for k, v in within.items()},
+           "between_adjacent_glyphs_gap": {k: q(v) for k, v in between.items()},
+           "split_glyph_union_width": {k: q(v) for k, v in union_w.items()},
+           "glyph_width": {k: q(v) for k, v in width.items()}}
+    Path(out).write_text(json.dumps(res, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+    return res
+
+
+def join_sweep(split="dev", grid=((None, None), (0.85, 0.3), (0.85, 0.5), (0.95, 0.3), (0.95, 0.5), (1.05, 0.3), (1.05, 0.5)),
+               out=None):
+    """improved に「まとめた幅が字1つ分に収まる隣の部品の結合」を加えたときの成績（dev で選び val で確かめる。test では使わない）。"""
+    if split == "test":
+        raise ValueError("test は閾値の選択に使わない")
+    from babel.vision.evaluate import evaluate
+    from babel.vision.groundtruth import validate
+    from babel.vision.recognizers import recognize
+    rows = []
+    with tempfile.TemporaryDirectory() as td:
+        wd = Path(td)
+        cases = synth.build(wd, split)
+        gts = {c["name"]: validate(json.loads((wd / "gt" / f"{c['name']}.json").read_text(encoding="utf-8"))) for c in cases}
+        for a, b in grid:
+            acc = defaultdict(list)
+            for c in cases:
+                kw = {} if a is None else {"join_width": a, "join_width_gap": b}
+                ev = evaluate(recognize(wd / "images" / f"{c['name']}.png", "improved", **kw), gts[c["name"]])
+                for k in ("all", c["style"]):
+                    acc[(k, "f1")].append(ev["detection"]["f1"])
+                    acc[(k, "ari")].append(ev["classes"].get("ari"))
+                    acc[(k, "split")].append(ev["segmentation_errors"]["split_glyphs"])
+                    acc[(k, "merge")].append(ev["segmentation_errors"]["merged_predictions"])
+            rows.append({"join_width": a, "join_width_gap": b,
+                         **{f"{k}_{m}": _agg(v) for (k, m), v in acc.items()}})
+    res = {"split": split, "rows": rows}
+    if out:
+        Path(out).write_text(json.dumps(res, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+    return res

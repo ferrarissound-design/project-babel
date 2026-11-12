@@ -601,5 +601,14 @@
   "cause": "予測の行を確認済みの行とだけ対応付けていたので、未確認の行を正しく検出した予測も偽陽性になった。行割り当て精度も、未確認の行に属する記号を含めていた",
   "fix": "予測の行を確認済みと未確認の両方の行に1対1で対応付け、未確認の行に対応した予測は分母に入れず件数（ignored_rows_on_unverified_lines）を報告する。どの行にも対応しない余分な予測は偽陽性のまま。行割り当て精度は確認済みの行に属する記号だけで計算する。分母が0なら precision と F1 は「測定不能」",
   "verified": "tests/test_vision_eval.py の test_unverified_line_does_not_lower_line_scores・test_line_precision_unmeasurable_when_all_rows_fall_on_unverified_lines（修正前は失敗）"
+ },
+ {
+  "id": 68,
+  "title": "離れた部品を持つ字の分割: 隙間ではなく、まとめた幅で部品を結合する（improved-v2、改善を確認）",
+  "status": "一部対応（新しい方式として追加）",
+  "found": "#57 の調査（dev、improved）。分割された字の部品の隙間（stroke の中央値 約0.26H）と、隣り合う字の隙間（中央値 約0.25H）がほぼ同じで、隙間だけでは区別できなかった（H は字の高さ）",
+  "cause": "連結成分による切り出しは、横に重なる部品と小さな部品しかまとめない。離れた部品が字の幅の中で横に並ぶ字は分割される",
+  "fix": "分割された字の部品をまとめた幅はほぼ1字の幅（0.95H 以下）に収まり、隣り合う2字を合わせた幅はそれより広い、という性質を使い、隣り合う候補をまとめた幅が α·H 以下・隙間が β·H 以下なら結合する。dev で α・β を選び（0.95・0.5）、val で確かめて improved-v2 として追加した。improved は変えずに残す。字の幅が高さより大きい文字体系では結合しきれず、細い字が密に並ぶ文字体系では隣の字を結合しうる（限界）",
+  "verified": "results/vision/join-sweep-dev.json・join-sweep-val.json（選択）、methods-test-v2.json（最終評価、1回だけ）、docs/VISION_EVAL_V2.md"
  }
 ]

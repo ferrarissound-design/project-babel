@@ -25,6 +25,7 @@ from pathlib import Path
 SEEDS = [1000, 1001, 1002, 1003, 1004, 1005]
 SIZES = [13, 30]
 CONDITIONS = ["clean", "noise", "size_thickness", "spacing"]
+IMAGE_INPUTS = (("B", "baseline"), ("C", "improved"))
 CFG = {"permutations": 199, "subsamples": 5, "subsample_permutations": 99, "perturbations": 3,
        "perturbation_permutations": 199, "compression_reps": 19, "affix_permutations": 99}
 
@@ -172,7 +173,8 @@ def run_text(args):
 
 def run_image(args):
     """B と C（画像を認識した転写）。"""
-    seed, n, style, cond = args
+    seed, n, style, cond = args[:4]
+    inputs = args[4] if len(args) > 4 else IMAGE_INPUTS
     import cv2
 
     from babel.structure import corpus as sc
@@ -192,7 +194,7 @@ def run_image(args):
     with tempfile.TemporaryDirectory() as td:
         path = Path(td) / "page.png"
         cv2.imwrite(str(path), img)
-        for inp, method in (("B", "baseline"), ("C", "improved")):
+        for inp, method in inputs:
             rep = recognize(path, method)                     # 認識器には画像のパスだけ
             ev = evaluate(rep, gt)
             corpus = sc.from_glyph_report(rep)
@@ -278,15 +280,17 @@ def summarize(runs):
     return out
 
 
-def run(out="results/vision/impact.json", jobs=4, seeds=SEEDS, sizes=SIZES, conditions=CONDITIONS, styles=("font", "stroke")):
+def run(out="results/vision/impact.json", jobs=4, seeds=SEEDS, sizes=SIZES, conditions=CONDITIONS, styles=("font", "stroke"),
+        inputs=IMAGE_INPUTS, text_inputs=True):
     t0 = time.time()
     text_tasks = [(s, n) for s in seeds for n in sizes]
-    img_tasks = [(s, n, st, c) for s in seeds for n in sizes for st in styles for c in conditions]
+    img_tasks = [(s, n, st, c, tuple(inputs)) for s in seeds for n in sizes for st in styles for c in conditions]
     with ProcessPoolExecutor(jobs) as ex:
-        runs = [r for rs in ex.map(run_text, text_tasks) for r in rs]
+        runs = [r for rs in ex.map(run_text, text_tasks) for r in rs] if text_inputs else []
         runs += [r for rs in ex.map(run_image, img_tasks) for r in rs]
     import cv2
     res = {"meta": {"seeds": seeds, "sizes": sizes, "conditions": conditions, "styles": list(styles), "config": CFG,
+                    "inputs": [list(x) for x in inputs],
                     "opencv": cv2.__version__,
                     "seconds": round(time.time() - t0, 1)}, "summary": summarize(runs), "runs": runs}
     Path(out).parent.mkdir(parents=True, exist_ok=True)

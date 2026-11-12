@@ -1,0 +1,2921 @@
+{
+ "classes": {
+  "groups": {},
+  "labels": {},
+  "verb_confidence": 0.0,
+  "verb_group": null
+ },
+ "engine": {
+  "config": {
+   "abstain": true,
+   "align_method": "em",
+   "claim_threshold": 0.5,
+   "morph_method": "paradigm",
+   "pos_constraint": true,
+   "segmentation": "transductive",
+   "use_em": true,
+   "use_metadata": true,
+   "use_morph": true,
+   "use_numeral_solver": true,
+   "use_variants": true
+  },
+  "name": "babel-decipher",
+  "version": "1.2.0"
+ },
+ "frequency": {
+  "tokens": 117,
+  "top_chars": [
+   [
+    "",
+    5
+   ],
+   [
+    "",
+    4
+   ],
+   [
+    "",
+    4
+   ],
+   [
+    "",
+    3
+   ],
+   [
+    "",
+    3
+   ],
+   [
+    "",
+    3
+   ],
+   [
+    "",
+    3
+   ],
+   [
+    "",
+    3
+   ],
+   [
+    "",
+    2
+   ],
+   [
+    "",
+    2
+   ],
+   [
+    "",
+    2
+   ],
+   [
+    "",
+    2
+   ],
+   [
+    "",
+    2
+   ],
+   [
+    "",
+    2
+   ],
+   [
+    "",
+    2
+   ]
+  ],
+  "top_words": [
+   [
+    "",
+    5
+   ],
+   [
+    "",
+    4
+   ],
+   [
+    "",
+    4
+   ],
+   [
+    "",
+    3
+   ],
+   [
+    "",
+    3
+   ],
+   [
+    "",
+    3
+   ],
+   [
+    "",
+    3
+   ],
+   [
+    "",
+    3
+   ],
+   [
+    "",
+    2
+   ],
+   [
+    "",
+    2
+   ],
+   [
+    "",
+    2
+   ],
+   [
+    "",
+    2
+   ],
+   [
+    "",
+    2
+   ],
+   [
+    "",
+    2
+   ],
+   [
+    "",
+    2
+   ]
+  ],
+  "types": 83,
+  "word_entropy_bits": 6.192
+ },
+ "hypotheses": [
+  {
+   "alternatives": {},
+   "confidence": 0.0,
+   "evidence": "動詞クラスが1つだけ現れる文 0 文での位置",
+   "status": "保留（判定不能）",
+   "topic": "動詞の位置",
+   "value": null
+  },
+  {
+   "alternatives": {
+    "prefix": 0,
+    "suffix": 0
+   },
+   "confidence": 0.0,
+   "evidence": "接頭辞・接尾辞として解析された語の延べ数",
+   "status": "保留（判定不能）",
+   "topic": "接辞の付く側",
+   "value": null
+  },
+  {
+   "alternatives": {},
+   "confidence": 0.0,
+   "evidence": "意味の手がかりがなく、主語と目的語を区別できない",
+   "status": "保留（判定不能）",
+   "topic": "主語と目的語の順序",
+   "value": null
+  },
+  {
+   "alternatives": {},
+   "confidence": 0.0,
+   "evidence": "意味の手がかりがなく、主語と目的語を区別できない",
+   "status": "保留（判定不能）",
+   "topic": "形容詞と名詞の順序",
+   "value": null
+  },
+  {
+   "alternatives": {},
+   "confidence": 0.0,
+   "evidence": "合計行 0 行",
+   "status": "保留（判定不能）",
+   "topic": "数詞と名詞の順序",
+   "value": null
+  },
+  {
+   "alternatives": {},
+   "confidence": 0.0,
+   "evidence": "合計の方程式 0 本（冗長 0、棄却 0）合計行を示す標識が見つからず、対訳にも数量の手がかりがない",
+   "status": "保留（判定不能）",
+   "topic": "数詞の基数",
+   "value": null
+  }
+ ],
+ "input_warnings": [],
+ "language_id": "mfa-image-glyphpilot-20261112-spaced",
+ "level": "C",
+ "lexicon": [
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 1,
+   "evidence": 0,
+   "forms": [
+    ""
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": ""
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 3,
+   "evidence": 0,
+   "forms": [
+    ""
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": ""
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 5,
+   "evidence": 0,
+   "forms": [
+    ""
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": ""
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 3,
+   "evidence": 0,
+   "forms": [
+    ""
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": ""
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 2,
+   "evidence": 0,
+   "forms": [
+    ""
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": ""
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 1,
+   "evidence": 0,
+   "forms": [
+    ""
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": ""
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 1,
+   "evidence": 0,
+   "forms": [
+    ""
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": ""
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 1,
+   "evidence": 0,
+   "forms": [
+    ""
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": ""
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 1,
+   "evidence": 0,
+   "forms": [
+    ""
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": ""
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 1,
+   "evidence": 0,
+   "forms": [
+    ""
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": ""
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 1,
+   "evidence": 0,
+   "forms": [
+    ""
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": ""
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 1,
+   "evidence": 0,
+   "forms": [
+    ""
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": ""
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 1,
+   "evidence": 0,
+   "forms": [
+    ""
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": ""
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 1,
+   "evidence": 0,
+   "forms": [
+    ""
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": ""
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 3,
+   "evidence": 0,
+   "forms": [
+    ""
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": ""
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 1,
+   "evidence": 0,
+   "forms": [
+    ""
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": ""
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 1,
+   "evidence": 0,
+   "forms": [
+    ""
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": ""
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 1,
+   "evidence": 0,
+   "forms": [
+    ""
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": ""
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 4,
+   "evidence": 0,
+   "forms": [
+    ""
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": ""
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 3,
+   "evidence": 0,
+   "forms": [
+    ""
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": ""
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 1,
+   "evidence": 0,
+   "forms": [
+    ""
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": ""
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 1,
+   "evidence": 0,
+   "forms": [
+    ""
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": ""
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 4,
+   "evidence": 0,
+   "forms": [
+    ""
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": ""
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 1,
+   "evidence": 0,
+   "forms": [
+    ""
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": ""
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 2,
+   "evidence": 0,
+   "forms": [
+    ""
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": ""
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 1,
+   "evidence": 0,
+   "forms": [
+    ""
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": ""
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 1,
+   "evidence": 0,
+   "forms": [
+    ""
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": ""
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 1,
+   "evidence": 0,
+   "forms": [
+    ""
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": ""
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 2,
+   "evidence": 0,
+   "forms": [
+    ""
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": ""
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 1,
+   "evidence": 0,
+   "forms": [
+    ""
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": ""
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 1,
+   "evidence": 0,
+   "forms": [
+    ""
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": ""
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 1,
+   "evidence": 0,
+   "forms": [
+    ""
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": ""
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 1,
+   "evidence": 0,
+   "forms": [
+    ""
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": ""
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 1,
+   "evidence": 0,
+   "forms": [
+    ""
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": ""
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 1,
+   "evidence": 0,
+   "forms": [
+    ""
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": ""
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 2,
+   "evidence": 0,
+   "forms": [
+    ""
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": ""
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 1,
+   "evidence": 0,
+   "forms": [
+    ""
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": ""
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 1,
+   "evidence": 0,
+   "forms": [
+    ""
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": ""
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 1,
+   "evidence": 0,
+   "forms": [
+    ""
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": ""
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 1,
+   "evidence": 0,
+   "forms": [
+    ""
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": ""
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 2,
+   "evidence": 0,
+   "forms": [
+    ""
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": ""
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 1,
+   "evidence": 0,
+   "forms": [
+    ""
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": ""
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 1,
+   "evidence": 0,
+   "forms": [
+    ""
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": ""
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 2,
+   "evidence": 0,
+   "forms": [
+    ""
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": ""
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 1,
+   "evidence": 0,
+   "forms": [
+    ""
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": ""
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 2,
+   "evidence": 0,
+   "forms": [
+    ""
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": ""
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 2,
+   "evidence": 0,
+   "forms": [
+    ""
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": ""
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 2,
+   "evidence": 0,
+   "forms": [
+    ""
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": ""
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 2,
+   "evidence": 0,
+   "forms": [
+    ""
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": ""
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 3,
+   "evidence": 0,
+   "forms": [
+    ""
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": ""
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 1,
+   "evidence": 0,
+   "forms": [
+    ""
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": ""
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 2,
+   "evidence": 0,
+   "forms": [
+    ""
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": ""
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 2,
+   "evidence": 0,
+   "forms": [
+    ""
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": ""
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 1,
+   "evidence": 0,
+   "forms": [
+    ""
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": ""
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 1,
+   "evidence": 0,
+   "forms": [
+    ""
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": ""
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 1,
+   "evidence": 0,
+   "forms": [
+    ""
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": ""
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 1,
+   "evidence": 0,
+   "forms": [
+    ""
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": ""
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 1,
+   "evidence": 0,
+   "forms": [
+    ""
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": ""
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 1,
+   "evidence": 0,
+   "forms": [
+    ""
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": ""
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 1,
+   "evidence": 0,
+   "forms": [
+    ""
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": ""
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 2,
+   "evidence": 0,
+   "forms": [
+    ""
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": ""
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 1,
+   "evidence": 0,
+   "forms": [
+    ""
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": ""
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 1,
+   "evidence": 0,
+   "forms": [
+    ""
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": ""
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 2,
+   "evidence": 0,
+   "forms": [
+    ""
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": ""
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 1,
+   "evidence": 0,
+   "forms": [
+    ""
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": ""
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 1,
+   "evidence": 0,
+   "forms": [
+    ""
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": ""
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 1,
+   "evidence": 0,
+   "forms": [
+    ""
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": ""
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 1,
+   "evidence": 0,
+   "forms": [
+    ""
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": ""
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 1,
+   "evidence": 0,
+   "forms": [
+    ""
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": ""
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 1,
+   "evidence": 0,
+   "forms": [
+    ""
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": ""
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 1,
+   "evidence": 0,
+   "forms": [
+    ""
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": ""
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 1,
+   "evidence": 0,
+   "forms": [
+    ""
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": ""
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 1,
+   "evidence": 0,
+   "forms": [
+    ""
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": ""
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 1,
+   "evidence": 0,
+   "forms": [
+    ""
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": ""
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 1,
+   "evidence": 0,
+   "forms": [
+    ""
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": ""
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 1,
+   "evidence": 0,
+   "forms": [
+    ""
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": ""
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 1,
+   "evidence": 0,
+   "forms": [
+    ""
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": ""
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 1,
+   "evidence": 0,
+   "forms": [
+    ""
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": ""
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 1,
+   "evidence": 0,
+   "forms": [
+    ""
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": ""
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 1,
+   "evidence": 0,
+   "forms": [
+    ""
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": ""
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 1,
+   "evidence": 0,
+   "forms": [
+    ""
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": ""
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 1,
+   "evidence": 0,
+   "forms": [
+    ""
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": ""
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 1,
+   "evidence": 0,
+   "forms": [
+    ""
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "X",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": ""
+  }
+ ],
+ "morphology": {
+  "affixes": [],
+  "allomorph_candidates": [],
+  "compounds": 0
+ },
+ "numerals": {
+  "base": null,
+  "confidence": 0.0,
+  "equations": 0,
+  "list_documents": 0,
+  "reason": "合計行を示す標識が見つからず、対訳にも数量の手がかりがない",
+  "redundant": 0,
+  "rejected": 0,
+  "relative": null,
+  "status": "undetermined",
+  "sum_marker": null,
+  "values": {}
+ },
+ "relatedness": {
+  "": []
+ },
+ "segmentation_used": null,
+ "split_used": {
+  "heldout": [],
+  "status": "unspecified",
+  "train": 2
+ },
+ "structure": {
+  "adj_noun": {
+   "confidence": 0.0,
+   "n": 0,
+   "reason": "意味の手がかりがなく、主語と目的語を区別できない",
+   "value": null
+  },
+  "affix_position": {
+   "confidence": 0.0,
+   "support": {
+    "prefix": 0,
+    "suffix": 0
+   },
+   "value": null
+  },
+  "num_noun": {
+   "confidence": 0.0,
+   "n": 0,
+   "value": null
+  },
+  "numeral_base": {
+   "alternatives": {},
+   "confidence": 0.0,
+   "value": null
+  },
+  "so_order": {
+   "confidence": 0.0,
+   "n": 0,
+   "reason": "意味の手がかりがなく、主語と目的語を区別できない",
+   "value": null
+  },
+  "sum_marker": {
+   "note": "合計行を示す機能語（算術的に検証できる機能であり、実世界の意味の主張ではない）",
+   "value": null
+  },
+  "verb_position": {
+   "alternatives": {},
+   "confidence": 0.0,
+   "n": 0,
+   "value": null
+  }
+ },
+ "summary": {
+  "claim_threshold": 0.5,
+  "claimed": 0,
+  "stems": 83,
+  "undetermined": 83
+ },
+ "tokens": {
+  "L": [
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "",
+     "pos": "X",
+     "s": "",
+     "stem": ""
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "",
+     "pos": "X",
+     "s": "",
+     "stem": ""
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "",
+     "pos": "X",
+     "s": "",
+     "stem": ""
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "",
+     "pos": "X",
+     "s": "",
+     "stem": ""
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "",
+     "pos": "X",
+     "s": "",
+     "stem": ""
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "",
+     "pos": "X",
+     "s": "",
+     "stem": ""
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "",
+     "pos": "X",
+     "s": "",
+     "stem": ""
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "",
+     "pos": "X",
+     "s": "",
+     "stem": ""
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "",
+     "pos": "X",
+     "s": "",
+     "stem": ""
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "",
+     "pos": "X",
+     "s": "",
+     "stem": ""
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "",
+     "pos": "X",
+     "s": "",
+     "stem": ""
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "",
+     "pos": "X",
+     "s": "",
+     "stem": ""
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "",
+     "pos": "X",
+     "s": "",
+     "stem": ""
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "",
+     "pos": "X",
+     "s": "",
+     "stem": ""
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "",
+     "pos": "X",
+     "s": "",
+     "stem": ""
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "",
+     "pos": "X",
+     "s": "",
+     "stem": ""
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "",
+     "pos": "X",
+     "s": "",
+     "stem": ""
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "",
+     "pos": "X",
+     "s": "",
+     "stem": ""
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "",
+     "pos": "X",
+     "s": "",
+     "stem": ""
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "",
+     "pos": "X",
+     "s": "",
+     "stem": ""
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "",
+     "pos": "X",
+     "s": "",
+     "stem": ""
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "",
+     "pos": "X",
+     "s": "",
+     "stem": ""
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "",
+     "pos": "X",
+     "s": "",
+     "stem": ""
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "",
+     "pos": "X",
+     "s": "",
+     "stem": ""
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "",
+     "pos": "X",
+     "s": "",
+     "stem": ""
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "",
+     "pos": "X",
+     "s": "",
+     "stem": ""
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "",
+     "pos": "X",
+     "s": "",
+     "stem": ""
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "",
+     "pos": "X",
+     "s": "",
+     "stem": ""
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "",
+     "pos": "X",
+     "s": "",
+     "stem": ""
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "",
+     "pos": "X",
+     "s": "",
+     "stem": ""
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "",
+     "pos": "X",
+     "s": "",
+     "stem": ""
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "",
+     "pos": "X",
+     "s": "",
+     "stem": ""
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "",
+     "pos": "X",
+     "s": "",
+     "stem": ""
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "",
+     "pos": "X",
+     "s": "",
+     "stem": ""
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "",
+     "pos": "X",
+     "s": "",
+     "stem": ""
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "",
+     "pos": "X",
+     "s": "",
+     "stem": ""
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "",
+     "pos": "X",
+     "s": "",
+     "stem": ""
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "",
+     "pos": "X",
+     "s": "",
+     "stem": ""
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "",
+     "pos": "X",
+     "s": "",
+     "stem": ""
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "",
+     "pos": "X",
+     "s": "",
+     "stem": ""
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "",
+     "pos": "X",
+     "s": "",
+     "stem": ""
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "",
+     "pos": "X",
+     "s": "",
+     "stem": ""
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "",
+     "pos": "X",
+     "s": "",
+     "stem": ""
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "",
+     "pos": "X",
+     "s": "",
+     "stem": ""
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "",
+     "pos": "X",
+     "s": "",
+     "stem": ""
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "",
+     "pos": "X",
+     "s": "",
+     "stem": ""
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "",
+     "pos": "X",
+     "s": "",
+     "stem": ""
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "",
+     "pos": "X",
+     "s": "",
+     "stem": ""
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "",
+     "pos": "X",
+     "s": "",
+     "stem": ""
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "",
+     "pos": "X",
+     "s": "",
+     "stem": ""
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "",
+     "pos": "X",
+     "s": "",
+     "stem": ""
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "",
+     "pos": "X",
+     "s": "",
+     "stem": ""
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "",
+     "pos": "X",
+     "s": "",
+     "stem": ""
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "",
+     "pos": "X",
+     "s": "",
+     "stem": ""
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "",
+     "pos": "X",
+     "s": "",
+     "stem": ""
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "",
+     "pos": "X",
+     "s": "",
+     "stem": ""
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "",
+     "pos": "X",
+     "s": "",
+     "stem": ""
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "",
+     "pos": "X",
+     "s": "",
+     "stem": ""
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "",
+     "pos": "X",
+     "s": "",
+     "stem": ""
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "",
+     "pos": "X",
+     "s": "",
+     "stem": ""
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "",
+     "pos": "X",
+     "s": "",
+     "stem": ""
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "",
+     "pos": "X",
+     "s": "",
+     "stem": ""
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "",
+     "pos": "X",
+     "s": "",
+     "stem": ""
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "",
+     "pos": "X",
+     "s": "",
+     "stem": ""
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "",
+     "pos": "X",
+     "s": "",
+     "stem": ""
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "",
+     "pos": "X",
+     "s": "",
+     "stem": ""
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "",
+     "pos": "X",
+     "s": "",
+     "stem": ""
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "",
+     "pos": "X",
+     "s": "",
+     "stem": ""
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "",
+     "pos": "X",
+     "s": "",
+     "stem": ""
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "",
+     "pos": "X",
+     "s": "",
+     "stem": ""
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "",
+     "pos": "X",
+     "s": "",
+     "stem": ""
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "",
+     "pos": "X",
+     "s": "",
+     "stem": ""
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "",
+     "pos": "X",
+     "s": "",
+     "stem": ""
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "",
+     "pos": "X",
+     "s": "",
+     "stem": ""
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "",
+     "pos": "X",
+     "s": "",
+     "stem": ""
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "",
+     "pos": "X",
+     "s": "",
+     "stem": ""
+    }
+   ]
+  ],
+  "R": [
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "",
+     "pos": "X",
+     "s": "",
+     "stem": ""
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "",
+     "pos": "X",
+     "s": "",
+     "stem": ""
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "",
+     "pos": "X",
+     "s": "",
+     "stem": ""
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "",
+     "pos": "X",
+     "s": "",
+     "stem": ""
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "",
+     "pos": "X",
+     "s": "",
+     "stem": ""
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "",
+     "pos": "X",
+     "s": "",
+     "stem": ""
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "",
+     "pos": "X",
+     "s": "",
+     "stem": ""
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "",
+     "pos": "X",
+     "s": "",
+     "stem": ""
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "",
+     "pos": "X",
+     "s": "",
+     "stem": ""
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "",
+     "pos": "X",
+     "s": "",
+     "stem": ""
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "",
+     "pos": "X",
+     "s": "",
+     "stem": ""
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "",
+     "pos": "X",
+     "s": "",
+     "stem": ""
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "",
+     "pos": "X",
+     "s": "",
+     "stem": ""
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "",
+     "pos": "X",
+     "s": "",
+     "stem": ""
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "",
+     "pos": "X",
+     "s": "",
+     "stem": ""
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "",
+     "pos": "X",
+     "s": "",
+     "stem": ""
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "",
+     "pos": "X",
+     "s": "",
+     "stem": ""
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "",
+     "pos": "X",
+     "s": "",
+     "stem": ""
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "",
+     "pos": "X",
+     "s": "",
+     "stem": ""
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "",
+     "pos": "X",
+     "s": "",
+     "stem": ""
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "",
+     "pos": "X",
+     "s": "",
+     "stem": ""
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "",
+     "pos": "X",
+     "s": "",
+     "stem": ""
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "",
+     "pos": "X",
+     "s": "",
+     "stem": ""
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "",
+     "pos": "X",
+     "s": "",
+     "stem": ""
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "",
+     "pos": "X",
+     "s": "",
+     "stem": ""
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "",
+     "pos": "X",
+     "s": "",
+     "stem": ""
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "",
+     "pos": "X",
+     "s": "",
+     "stem": ""
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "",
+     "pos": "X",
+     "s": "",
+     "stem": ""
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "",
+     "pos": "X",
+     "s": "",
+     "stem": ""
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "",
+     "pos": "X",
+     "s": "",
+     "stem": ""
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "",
+     "pos": "X",
+     "s": "",
+     "stem": ""
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "",
+     "pos": "X",
+     "s": "",
+     "stem": ""
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "",
+     "pos": "X",
+     "s": "",
+     "stem": ""
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "",
+     "pos": "X",
+     "s": "",
+     "stem": ""
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "",
+     "pos": "X",
+     "s": "",
+     "stem": ""
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "",
+     "pos": "X",
+     "s": "",
+     "stem": ""
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "",
+     "pos": "X",
+     "s": "",
+     "stem": ""
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "",
+     "pos": "X",
+     "s": "",
+     "stem": ""
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "",
+     "pos": "X",
+     "s": "",
+     "stem": ""
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "",
+     "pos": "X",
+     "s": "",
+     "stem": ""
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "",
+     "pos": "X",
+     "s": "",
+     "stem": ""
+    }
+   ]
+  ]
+ },
+ "variants": {
+  "merged_types": 0,
+  "rules": []
+ },
+ "verdict": {
+  "decipherable_structure": false,
+  "morphology": {
+   "affixed_token_share": 0.0,
+   "n_affixes": 0,
+   "present": false
+  },
+  "semantic_evidence": "none",
+  "syntax": {
+   "entropy": 0.2441,
+   "present": false,
+   "reduction": 0.0081,
+   "shuffled_mean": 0.2461,
+   "z": 0.42
+  },
+  "text": "言語的な構造が検出されない。解読不能と判定する。"
+ }
+}

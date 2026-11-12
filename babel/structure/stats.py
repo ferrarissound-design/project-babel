@@ -303,32 +303,44 @@ def hypergeom_logsf(k, N, K, n):
     return min(0.0, m + math.log(sum(math.exp(t - m) for t in terms)))
 
 
-def shuffle_presence(lines, rng):
-    """各記号について「その記号を含む行の数」を保ったまま、含む行を無作為に選び直す（記号どうしは独立）。"""
-    where = defaultdict(int)
-    for ln in lines:
-        for x in set(ln):
-            where[x] += 1
+def length_strata(lines, per_stratum=8, max_strata=4):
+    """行を長さの順に並べて、ほぼ同じ数の行からなる層に分ける（短いコーパスでは1層）。"""
+    n = len(lines)
+    k = max(1, min(max_strata, n // per_stratum))
+    order = sorted(range(n), key=lambda i: (len(lines[i]), i))
+    return [order[j * n // k:(j + 1) * n // k] for j in range(k)]
+
+
+def shuffle_presence(lines, rng, strata=None):
+    """各記号について「その記号を含む行の数」を層（行の長さの近い行の集まり）ごとに保ったまま、
+    含む行を層の中で無作為に選び直す（記号どうしは独立）。長い行ほどどの記号も含みやすいことによる
+    見かけの共起を、層に分けることで帰無モデルに含める。"""
+    strata = strata or [list(range(len(lines)))]
     out = [set() for _ in lines]
-    idx = list(range(len(lines)))
-    for x, k in where.items():
-        for i in rng.sample(idx, k):
-            out[i].add(x)
+    for idx in strata:
+        where = defaultdict(int)
+        for i in idx:
+            for x in set(lines[i]):
+                where[x] += 1
+        for x, k in where.items():
+            for i in rng.sample(idx, k):
+                out[i].add(x)
     return out
 
 
 class CooccurrenceFamily(Family):
-    """同じ行に現れやすい記号の組。帰無モデル: 各記号を含む行の数を保ち、記号どうしは独立（超幾何）。
-    「どちらもほぼ全ての行に出る」組は、この帰無モデルでは有意にならない（それは分散の族で扱う）。"""
+    """同じ行に現れやすい記号の組。帰無モデル: 行の長さの近い層ごとに、各記号を含む行の数を保ち、
+    記号どうしは独立に配置する。「どちらもほぼ全ての行に出る」組は有意にならない（分散の族で扱う）。
+    長さの違う行が混ざると、長い行ほど多くの記号を含むので、層に分けないと見かけの共起が生じる
+    （Codex レビュー、PR #7。docs/ISSUES.md #49）。層ごとの超幾何の和は解析的に扱いにくいので、置換分布で標準化する。"""
     name = "cooccurrence"
     null = "presence"
+    scale = "studentized"
 
     def __init__(self, lines, cfg):
         super().__init__(lines, cfg)
-        self.N = len(lines)
-        self.nlines = Counter(x for ln in lines for x in set(ln))
-        self.eligible = {x for x, k in self.nlines.items() if k >= 3}
-        self.memo = {}
+        nlines = Counter(x for ln in lines for x in set(ln))
+        self.eligible = {x for x, k in nlines.items() if k >= 3}
 
     def compute(self, lines):
         c = Counter()
@@ -337,15 +349,7 @@ class CooccurrenceFamily(Family):
             for a in range(len(ss)):
                 for b in range(a + 1, len(ss)):
                     c[(ss[a], ss[b])] += 1
-        out = {}
-        for (a, b), k in c.items():
-            if k >= 2:
-                key = (self.nlines[a], self.nlines[b], k)
-                m = self.memo.get(key)
-                if m is None:
-                    m = self.memo[key] = -hypergeom_logsf(k, self.N, key[0], key[1]) / math.log(10)
-                out[(a, b)] = m
-        return out
+        return {k: v for k, v in c.items() if v >= 2}
 
 
 class DispersionFamily(Family):
@@ -545,10 +549,11 @@ def run_tests(lines, cfg, rng_seed=0, with_global=True):
     stud_samples = {f.name: [] for f in fams if f.scale == "studentized"}
     g_ge = Counter()
     g_null = defaultdict(list)
+    strata = length_strata(lines) if any(f.null == "presence" for f in fams) else None
     for _ in range(B):
         w = shuffle_within(lines, rng)
         gl = shuffle_global(lines, rng)
-        pr = shuffle_presence(lines, rng) if any(f.null == "presence" for f in fams) else None
+        pr = shuffle_presence(lines, rng, strata) if strata else None
         rep = repeated_ngrams(w, 2, 64)
         for f in fams:
             data = w if f.null == "within" else gl if f.null == "global" else pr

@@ -309,12 +309,12 @@ def _support_of(fam, key, v, corpus):
 
 
 STAT_KIND = {"ngram": "-log10 Poisson 上側確率（行内シャッフルでの期待値）", "position": "-log10 Poisson 上側確率（行内シャッフルでの期待値）",
-             "gap": "-log10 Poisson 上側確率（行内シャッフルでの期待値）", "cooccurrence": "-log10 超幾何の上側確率",
+             "gap": "-log10 Poisson 上側確率（行内シャッフルでの期待値）", "cooccurrence": "同じ行に現れる回数を置換分布で標準化した z",
              "dispersion": "置換分布で標準化した z", "substitution": "文脈の残差コサインを置換分布で標準化した z",
              "linepair": "共有する2〜4記号列の数を置換分布で標準化した z（行の組の最良値）",
              "affix": "別の形とも現れる語幹の数を置換分布で標準化した z"}
 NULL_TEXT = {"ngram": "行内シャッフル", "position": "行内シャッフル", "gap": "行内シャッフル", "substitution": "行内シャッフル",
-             "cooccurrence": "各記号を含む行の数を保った独立配置", "dispersion": "全体シャッフル", "linepair": "全体シャッフル",
+             "cooccurrence": "行の長さの層ごとに、各記号を含む行の数を保った独立配置", "dispersion": "全体シャッフル", "linepair": "全体シャッフル",
              "affix": "語の型ごとの並べ替え"}
 
 

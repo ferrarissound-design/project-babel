@@ -13,7 +13,7 @@ import math
 import random
 from collections import Counter
 
-from babel.structure.stats import Expectation, SubstitutionFamily, hypergeom_logsf, shuffle_within, surprise
+from babel.structure.stats import Expectation, SubstitutionFamily, length_strata, shuffle_within, surprise
 
 STRICT_P = 3.0          # オラクルで「成り立つ」とみなす強さ: -log10 p ≥ 3
 MIN_RATIO = 1.5         # 期待値の何倍以上か
@@ -34,6 +34,8 @@ class Oracle:
         pop = generator.sample(2000, which="population") if generator.max_lines is None else generator.sample(0, "population")
         self.lines, self.sym = _ids(pop)
         self.exp = Expectation(self.lines)
+        self.sets = [set(ln) for ln in self.lines]
+        self._strata = length_strata(self.lines, per_stratum=50, max_strata=8)
         self.rexp = Expectation([ln[::-1] for ln in self.lines])
         self.gold_words = generator.gold_words()
         self.gold_affixes = {(r["side"], tuple(r["symbols"])) for r in generator.gold_rules() if r["family"] == "affix"}
@@ -81,13 +83,19 @@ class Oracle:
             k = sum(1 for ln in self.lines for i in range(len(ln) - d) if ln[i] == a and ln[i + d] == a)
             return self._strong(k, self.exp.gap(a, d))
         if fam == "cooccurrence":
+            # 行の長さの層ごとの超幾何の和（解析器の帰無モデルと同じく、長い行ほど記号を含みやすいことを差し引く）
             a, b = s
-            N = len(self.lines)
-            na = sum(1 for ln in self.lines if a in ln)
-            nb = sum(1 for ln in self.lines if b in ln)
-            both = sum(1 for ln in self.lines if a in ln and b in ln)
-            mu = na * nb / N
-            return both >= 1.3 * mu and -hypergeom_logsf(both, N, na, nb) / math.log(10) >= STRICT_P
+            mu = var = 0.0
+            both = 0
+            for idx in self._strata:
+                N = len(idx)
+                na = sum(1 for i in idx if a in self.sets[i])
+                nb = sum(1 for i in idx if b in self.sets[i])
+                both += sum(1 for i in idx if a in self.sets[i] and b in self.sets[i])
+                if N > 1:
+                    mu += na * nb / N
+                    var += na * nb * (N - na) * (N - nb) / (N * N * (N - 1))
+            return both >= 1.3 * mu and (both - mu) / math.sqrt(max(var, 1e-9)) >= 3
         if fam == "dispersion":
             x = s[0]
             tot = sum(len(ln) for ln in self.lines)
@@ -107,12 +115,14 @@ class Oracle:
         """2行が、設計上の語（または同じ文型）を共有するか。語の内部にある3記号以上の共通部分列も認める（形態素の共有）。"""
         if ri[1] is not None and ri[1] == rj[1]:
             return True
-        si, sj = "".join(ri[0]), "".join(rj[0])
-        for w in self.gold_words:
-            if len(w) >= 2 and w in si and w in sj:
-                return True
         if not self.gen.has_words:
-            return False
+            # 語のない生成器（埋め込んだ反復など）: 設計した記号列が両方の行に現れるか
+            si, sj = "".join(ri[0]), "".join(rj[0])
+            return any(len(w) >= 2 and w in si and w in sj for w in self.gold_words)
+        # 語のある生成器: 語境界を保ったまま、同じ設計上の語を共有するか（連結した文字列での部分一致は使わない。
+        # 「be」が「better」の中にあるだけで真になっていた: Codex レビュー、PR #7）
+        if {w for w in ri[0] if len(w) >= 2} & {w for w in rj[0] if len(w) >= 2} & self.gold_words:
+            return True
 
         def inner(ws, n=3):
             out = set()

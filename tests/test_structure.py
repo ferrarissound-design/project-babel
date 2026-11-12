@@ -344,3 +344,43 @@ def test_cli_image_input_compares_vision_settings(tmp_path):
     pos = [h for h in data["hypotheses"] if h["family"] == "position"]
     assert pos and all("image_box" in e for e in pos[0]["evidence"])
     assert "across_transcriptions" in pos[0]["stability"]
+
+
+# --- Codex レビュー（PR #7）の指摘の回帰テスト（修正前の 289c904 では失敗する） ---
+
+def test_cooccurrence_null_accounts_for_line_length():
+    """独立・同分布の記号でも、長さ2の行と長さ100の行が混ざると、長い行どうしで全組が共起して見えていた。"""
+    r = random.Random(0)
+    lines = [tuple(r.randrange(20) for _ in range(2)) for _ in range(50)] + \
+            [tuple(r.randrange(20) for _ in range(100)) for _ in range(50)]
+    res = stats.run_tests(lines, {"max_n": 8, "max_gap": 8, "permutations": 199, "families": ["cooccurrence"]},
+                          with_global=False)
+    assert sum(v["p_family"] <= 0.05 / 8 for v in res["cooccurrence"]["keys"].values()) == 0
+
+
+def test_oracle_linepair_truth_keeps_word_boundaries():
+    from babel.structure_eval.generators import RealEnglish
+    from babel.structure_eval.score import Oracle
+    o = Oracle(RealEnglish(1000))
+    a = (["complex", "is", "better", "than", "complicated"], None)
+    b = (["and", "god", "said", "let", "there", "be", "light"], None)
+    assert not o._pair_true(a, b)                      # 「be」は「better」の中にあるだけ
+    assert o._pair_true((["let", "there", "be"], None), b)
+
+
+def test_transcription_matching_uses_family_keys():
+    def hyp(fam, key, boxes=()):
+        return {"family": fam, "key": dict(key, family=fam), "evidence": [{"image_box": b} for b in boxes]}
+    assert not same_hypothesis(hyp("gap", {"symbols": ["P"], "distance": 4}), hyp("gap", {"symbols": ["P"], "distance": 7}))
+    assert same_hypothesis(hyp("gap", {"symbols": ["P"], "distance": 4}), hyp("gap", {"symbols": ["P"], "distance": 4}))
+    l1 = hyp("linepair", {"lines": [0, 1], "pairs": [[0, 1]]})
+    l2 = hyp("linepair", {"lines": [8, 9], "pairs": [[8, 9]]})
+    assert not same_hypothesis(l1, l2) and same_hypothesis(l1, l1)
+    box = [0, 0, 10, 10]
+    a = hyp("position", {"side": "^", "symbols": ["g1"]}, [box])
+    b = hyp("position", {"side": "$", "symbols": ["g7"]}, [box])
+    assert not same_hypothesis(a, b)                   # 位置が重なっても行頭と行末は別の仮説
+    lp = {"family": "linepair", "key": {"family": "linepair", "lines": [0, 1]},
+          "evidence": [{"line_a": {"image_box": box}, "line_b": {"image_box": [0, 20, 10, 30]}}]}
+    from babel.structure.transcription import _boxes
+    assert _boxes(lp) == [box, [0, 20, 10, 30]]

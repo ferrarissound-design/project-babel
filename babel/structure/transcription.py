@@ -18,17 +18,37 @@ def _iou(a, b):
 
 
 def _boxes(h):
-    return [e["image_box"] for e in h.get("evidence", []) if isinstance(e, dict) and e.get("image_box")]
+    out = []
+    for e in h.get("evidence", []):
+        if not isinstance(e, dict):
+            continue
+        if e.get("image_box"):
+            out.append(e["image_box"])
+        for side in ("line_a", "line_b"):          # 行の組の根拠は、両方の行の位置を持つ
+            if isinstance(e.get(side), dict) and e[side].get("image_box"):
+                out.append(e[side]["image_box"])
+    return out
+
+
+def _params(h):
+    """記号名以外の、族ごとの仮説の鍵（間隔・行頭か行末か・均等か集中かなど）。記号名は転写ごとに変わりうる。"""
+    return {k: v for k, v in (h.get("key") or {}).items() if k not in ("symbols", "lines", "pairs", "family")}
 
 
 def same_hypothesis(h, g, iou=0.5):
-    if h["family"] != g["family"]:
+    """同じ族で、族ごとの鍵（距離など）が同じで、根拠の画像上の位置が重なるか。
+    位置がない場合は、記号名と鍵がすべて同じか（行の組は対象の行が半分以上重なるか）で照合する。"""
+    if h["family"] != g["family"] or _params(h) != _params(g):
         return False
     bh, bg = _boxes(h), _boxes(g)
     if bh and bg:
         hit = sum(1 for x in bh if any(_iou(x, y) >= iou for y in bg))
         return hit >= max(1, len(bh) // 2)
-    return h.get("symbols") == g.get("symbols") and h.get("side") == g.get("side")
+    kh, kg = h.get("key") or {}, g.get("key") or {}
+    if h["family"] == "linepair":
+        a, b = set(kh.get("lines") or []), set(kg.get("lines") or [])
+        return bool(a and b) and len(a & b) / len(a | b) >= 0.5
+    return kh.get("symbols") == kg.get("symbols") and bool(kh)
 
 
 def compare(main: dict, alternatives: list[tuple[str, dict]]):

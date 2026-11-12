@@ -456,3 +456,45 @@
 - 原因: #62 の「未確認の位置の予測を除外する」判定が、#63 で入れた outline（中空）を考慮せず、外接矩形の内部全体を使っていた
 - 対応: 未確認の項目による除外でも、中空の要素は縁の帯だけを見る（文字以外の判定と同じ関数を使う）
 - 検証: tests/test_vision_eval.py::test_unverified_hollow_frame_only_ignores_its_border（修正前は失敗）。人工画像はすべて確認済みなので、評価の数値には影響しない
+
+## 66. 評価器: 未確認の項目の same_as が、確認済みの正解クラスを統合した（修正済み）（修正済み）
+
+- 発見: Codex の独立レビュー（PR #10 マージ後）。確認済みの A/B/A/B を正しく2クラスに分けた予測でも、未確認の項目に label=B, same_as=A を足すだけで ARI・NMI が 1.0 から 0.0 になった
+- 原因: 評価用の別名の辞書（aliases）が、未確認の項目の same_as も取り込んでいた。評価する記号は確認済みに限っていたが、統合の関係は限っていなかった
+- 対応: 評価用の統合は、確認済みの文字の項目の same_as だけで作る（alias_resolution）。和集合でまとめ、代表は辞書順で最小の名前にする（循環 A→B→A も1つのクラス）。1つの名前に複数の統合先がある矛盾は統合したうえで conflicts として報告する。評価に使った範囲と、無視した未確認の same_as の件数を evaluation_scope に出す
+- 検証: tests/test_vision_eval.py の test_unverified_same_as_does_not_merge_verified_classes・test_alias_cycles_and_conflicts_are_resolved_deterministically（修正前は失敗）。人工画像は same_as を使わないので評価の数値は変わらない
+
+## 67. 評価器: 未確認の行に対応する予測の行を、行の precision の分母に入れた（修正済み）（修正済み）
+
+- 発見: Codex の独立レビュー（PR #10 マージ後）。2行を完全に検出した画像で片方の行だけを確認済みにすると、行 precision 0.5・F1 0.667、行割り当て精度 0.5 になった
+- 原因: 予測の行を確認済みの行とだけ対応付けていたので、未確認の行を正しく検出した予測も偽陽性になった。行割り当て精度も、未確認の行に属する記号を含めていた
+- 対応: 予測の行を確認済みと未確認の両方の行に1対1で対応付け、未確認の行に対応した予測は分母に入れず件数（ignored_rows_on_unverified_lines）を報告する。どの行にも対応しない余分な予測は偽陽性のまま。行割り当て精度は確認済みの行に属する記号だけで計算する。分母が0なら precision と F1 は「測定不能」
+- 検証: tests/test_vision_eval.py の test_unverified_line_does_not_lower_line_scores・test_line_precision_unmeasurable_when_all_rows_fall_on_unverified_lines（修正前は失敗）
+
+## 68. 離れた部品を持つ字の分割: 隙間ではなく、まとめた幅で部品を結合する（improved-v2、改善を確認）（一部対応（新しい方式として追加））
+
+- 発見: #57 の調査（dev、improved）。分割された字の部品の隙間（stroke の中央値 約0.26H）と、隣り合う字の隙間（中央値 約0.25H）がほぼ同じで、隙間だけでは区別できなかった（H は字の高さ）
+- 原因: 連結成分による切り出しは、横に重なる部品と小さな部品しかまとめない。離れた部品が字の幅の中で横に並ぶ字は分割される
+- 対応: 分割された字の部品をまとめた幅はほぼ1字の幅（0.95H 以下）に収まり、隣り合う2字を合わせた幅はそれより広い、という性質を使い、隣り合う候補をまとめた幅が α·H 以下・隙間が β·H 以下なら結合する。dev で α・β を選び（0.95・0.5）、val で確かめて improved-v2 として追加した。improved は変えずに残す。字の幅が高さより大きい文字体系では結合しきれず、細い字が密に並ぶ文字体系では隣の字を結合しうる（限界）
+- 検証: results/vision/join-sweep-dev.json・join-sweep-val.json（選択）、methods-test-v2.json（最終評価、1回だけ）、docs/VISION_EVAL_V2.md
+
+## 69. 実画像の評価: 行の分け方の診断に、未確認の行に属する記号が入った（修正済み）（修正済み）
+
+- 発見: Codex の独立レビュー（PR #11）。確認済みの2記号が未確認の1行に属し、それぞれ別の予測行に対応すると、確認済みの行に分割がなくても gt_lines_split_into_several_rows が1になった
+- 原因: babel/vision/study.py の _line_split が、記号が確認済みかだけを見て、所属する行が確認済みかを見ていなかった
+- 対応: 所属する行が確認済みの記号だけを対応付けに使う（evaluate の行割り当てと同じ規則）
+- 検証: tests/test_image_study.py の test_line_split_ignores_glyphs_on_unverified_gt_lines（修正前は失敗）
+
+## 70. 実画像の評価: 同じ study に別の画像を指定すると、旧画像の正解転写を新画像の認識結果と比べられた（修正済み）（修正済み）
+
+- 発見: Codex の独立レビュー（PR #11）。prepare を別の画像で再実行すると認識結果と study.json は上書きされ、gt.json は旧画像のまま残り、evaluate・structure は不一致を検出しなかった
+- 原因: study.json に画像の sha256 を記録していたが、照合していなかった。gt.json には画像のハッシュがなかった
+- 対応: prepare は何かを書く前に、既存の study.json・gt.json の sha256（と gt.json の画像の大きさ）を新しい画像と照合し、違えば何も変えずに止める。下書きの gt.json に image_sha256 を記録し、evaluate・structure は gt.json と study.json のハッシュ・大きさが違えば評価しない（CLI は終了コード 2）
+- 検証: tests/test_image_study.py の test_prepare_refuses_a_different_image_without_touching_the_study・test_evaluate_and_structure_refuse_ground_truth_of_another_image（修正前は失敗）
+
+## 71. 評価器: 予測の行が1つもない画像の行 F1 が「測定不能」になり、集計の平均から消えた（修正済み）。baseline の ARI の平均も、検出0の画像を除いていたことを明記（修正済み）
+
+- 発見: Codex の独立レビュー（PR #11）。#67 の修正で、確認済みの行があるのに予測の行が0件の画像も行 F1 が「測定不能」になり、_agg が文字列を除くため、行の検出に完全に失敗した画像が平均の分母から消えて方式の比較が過大評価になりうる。調べたところ、記録済みの結果（methods-test-v2・val-v2 など）は #67 の修正前に作ったもので、行 F1 は全画像（test 320 枚・val 160 枚）で数えられており影響はなかった。一方、同じ仕組みで baseline の ARI が noise 条件の検出0の画像（test 40 枚・val 20 枚）を除いた平均（0.775、280 枚）になっていて、報告書の表に枚数が出ていなかった
+- 原因: 未確認の行に対応した予測を除いて分母が0になる場合と、そもそも予測の行がない場合を区別していなかった。ARI は対応した記号がないと定義できない
+- 対応: 予測の行が0件なら precision 0・F1 0（PR #10 以前と同じ）。予測の行がすべて未確認の行に対応したときは precision を「測定不能」、F1 は確認済みの行の再現率が0なので0（F1 ≤ 2R/(1+R)）。docs/VISION_EVAL_V2.md の方式の比較表で、ARI を平均した枚数が画像の数より少ないときは枚数と注意書きを出す（結果の JSON は変えない）。同じ画像どうしの比較（ARI、280 枚）でも improved-v2 は baseline より良い画像が多い（202 対 69）
+- 検証: tests/test_vision_eval.py の test_no_predicted_rows_keeps_line_f1_zero・test_line_precision_unmeasurable_when_all_rows_fall_on_unverified_lines（F1 0 の確認、修正前は失敗）

@@ -13,7 +13,7 @@ from __future__ import annotations
 import math
 from collections import Counter, defaultdict
 
-from .groundtruth import aliases, canonical_label
+from .groundtruth import aliases, canonical_label, evaluation_view
 
 UNMEASURABLE = "測定不能"
 
@@ -140,13 +140,14 @@ def _pred_glyphs(report):
 
 
 def evaluate(report: dict, gt: dict, iou_thr=0.5) -> dict:
-    al = aliases(gt)
+    view = evaluation_view(gt)
+    al = view["aliases"]
     G = [it for it in gt["items"] if it["kind"] == "glyph" and it["verified"]]
     N = [it for it in gt["items"] if it["kind"] != "glyph" and it["verified"]]
     unverified = sum(1 for it in gt["items"] if not it["verified"])
     P = _pred_glyphs(report)
     out = {"gt_verified_glyphs": len(G), "gt_unverified_items": unverified, "predicted_glyphs": len(P),
-           "iou_threshold": iou_thr}
+           "iou_threshold": iou_thr, "evaluation_scope": view["scope"]}
     if not G:
         out["status"] = UNMEASURABLE
         out["reason"] = "人が確認した正解の記号がない（verified=true の glyph が0）"
@@ -196,30 +197,50 @@ def evaluate(report: dict, gt: dict, iou_thr=0.5) -> dict:
                for i, j, _ in pairs]
         out["localization"] = {"mean_iou": round(sum(v for _, _, v in pairs) / tp, 4),
                                "mean_center_offset_px": round(sum(cen) / tp, 3), "max_center_offset_px": round(max(cen), 3)}
-    # 行
+    # 行: 予測の行を、確認済みの行と未確認の行の両方に1対1で対応付ける。未確認の行に対応した予測は
+    # 正しいか判断できないので precision の分母に入れない（どの行とも対応しない余分な予測は偽陽性のまま）。
+    # 行割り当ての精度は、確認済みの行に属する記号だけで計算する（Codex レビュー、PR #10）
     L = [ln for ln in gt["lines"] if ln["verified"]]
+    UL = [ln for ln in gt["lines"] if not ln["verified"]]
     rows = report.get("rows") or []
     if L:
         def yiou(a, b):
             inter = max(0, min(a[3], b[3]) - max(a[1], b[1]))
             u = (a[3] - a[1]) + (b[3] - b[1]) - inter
             return inter / u if u else 0.0
-        cand = sorted(((yiou(ln["box"], r["box"]), i, j) for i, ln in enumerate(L) for j, r in enumerate(rows)
+        allL = L + UL
+        cand = sorted(((yiou(ln["box"], r["box"]), i, j) for i, ln in enumerate(allL) for j, r in enumerate(rows)
                        if min(ln["box"][2], r["box"][2]) > max(ln["box"][0], r["box"][0])), reverse=True)
-        used_l, used_r, lm = set(), set(), {}
+        used_l, used_r, lm, ignored_rows = set(), set(), {}, set()
         for v, i, j in cand:
             if v >= 0.5 and i not in used_l and j not in used_r:
                 used_l.add(i)
                 used_r.add(j)
-                lm[j] = L[i]["id"]
-        lp = len(lm) / len(rows) if rows else 0.0
+                if i < len(L):
+                    lm[j] = L[i]["id"]
+                else:
+                    ignored_rows.add(j)
+        n_rows = len(rows) - len(ignored_rows)
+        verified_ids = {ln["id"] for ln in L}
+        assign = [lm.get(P[j]["row"]) == G[i]["line"] for i, j, _ in pairs if G[i]["line"] in verified_ids]
+        res = {"gt_lines": len(L), "unverified_gt_lines": len(UL), "predicted_rows": len(rows),
+               "ignored_rows_on_unverified_lines": len(ignored_rows), "matched": len(lm),
+               "glyph_line_assignment_accuracy": round(sum(assign) / len(assign), 4) if assign else None,
+               "line_breaks_not_sentence_ends": sum(1 for ln in L if ln["continues_sentence"]),
+               "note": "babel vision は1行を1文として出力するので、continues_sentence の行はすべて文の区切りの誤認になる"}
         lr = len(lm) / len(L)
-        assign = [lm.get(P[j]["row"]) == G[i]["line"] for i, j, _ in pairs if G[i]["line"]]
-        out["lines"] = {"gt_lines": len(L), "predicted_rows": len(rows), "matched": len(lm), "precision": round(lp, 4),
-                        "recall": round(lr, 4), "f1": round(2 * lp * lr / (lp + lr), 4) if lp + lr else 0.0,
-                        "glyph_line_assignment_accuracy": round(sum(assign) / len(assign), 4) if assign else None,
-                        "line_breaks_not_sentence_ends": sum(1 for ln in L if ln["continues_sentence"]),
-                        "note": "babel vision は1行を1文として出力するので、continues_sentence の行はすべて文の区切りの誤認になる"}
+        # n_rows == 0 なら確認済みの行はどれも検出されていない（recall 0）。F1 ≤ 2R/(1+R) なので precision によらず F1 は0。
+        # 「測定不能」にすると集計（_agg）の分母から消え、行の検出に失敗した画像が平均に入らない（Codex レビュー、PR #11）
+        if not rows:
+            res.update(precision=0.0, recall=round(lr, 4), f1=0.0, reason="予測の行が1つもない")
+        elif n_rows == 0:
+            res.update(recall=round(lr, 4), precision=UNMEASURABLE, f1=0.0,
+                       reason="確認済みの行に対応しうる予測の行がない（予測の行はすべて未確認の行に対応した）。"
+                              "precision は測定不能、確認済みの行の再現率が0なので F1 は0")
+        else:
+            lp = len(lm) / n_rows
+            res.update(precision=round(lp, 4), recall=round(lr, 4), f1=round(2 * lp * lr / (lp + lr), 4) if lp + lr else 0.0)
+        out["lines"] = res
     else:
         out["lines"] = {"status": UNMEASURABLE, "reason": "人が確認した行がない"}
     out["status"] = "measured"

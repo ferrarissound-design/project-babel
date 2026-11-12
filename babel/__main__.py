@@ -45,7 +45,7 @@ def main(argv=None):
                    help="罫線除去をしない（文字の線が切り出し領域の大部分を占める場合）")
     v.add_argument("--method", default="baseline",
                    help="認識の方式（baseline = 従来、improved など。babel/vision/recognizers.py の METHODS）。"
-                        "baseline 以外は --region / --threshold / --similarity を使わない")
+                        "baseline 以外は --threshold / --similarity を使わない（--region は使う）")
     an = sub.add_parser("annotate", help="正解転写を作る・直すローカルの UI（127.0.0.1 のみ）")
     an.add_argument("image")
     an.add_argument("--gt", required=True, help="正解転写 JSON（babel-glyph-gt-v1）。なければ作る")
@@ -57,6 +57,12 @@ def main(argv=None):
     ve.add_argument("gt")
     ve.add_argument("--iou", type=float, default=0.5)
     ve.add_argument("--out")
+    st = sub.add_parser("image-study", help="実画像の評価（両方式で認識 → 人が正解転写を作る → 評価 → 構造解析の比較）")
+    st.add_argument("action", choices=["prepare", "status", "evaluate", "structure"])
+    st.add_argument("study", help="研究のディレクトリ（画像はここに複写しない）")
+    st.add_argument("--image", help="prepare のときの画像")
+    st.add_argument("--region", action="append", default=[], metavar="ID:X1,Y1,X2,Y2", help="prepare のときの文字領域")
+    st.add_argument("--permutations", type=int, help="structure のときの置換回数（既定 999）")
     vb = sub.add_parser("vision-benchmark", help="人工画像で認識方式を比べる（results/vision/）")
     vb.add_argument("--split", choices=["dev", "val", "test"], default="dev")
     vb.add_argument("--methods", help="カンマ区切り（省略時はすべて）")
@@ -157,12 +163,12 @@ def main(argv=None):
         else:
             from babel.vision.glyphs import _corpus
             from babel.vision.recognizers import recognize
-            data = recognize(a.image, a.method)
+            data = recognize(a.image, a.method, regions=regions or None)
             out = Path(a.out_dir)
             out.mkdir(parents=True, exist_ok=True)
             (out / "glyph-report.json").write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
             for spaced, fn in ((False, "corpus-continuous.json"), (True, "corpus-glyph-tokens.json")):
-                (out / fn).write_text(json.dumps(_corpus({**data, "regions": [{"id": "page"}]}, spaced), ensure_ascii=False,
+                (out / fn).write_text(json.dumps(_corpus(data, spaced), ensure_ascii=False,
                                                  indent=2) + "\n", encoding="utf-8")
         print(json.dumps({"out_dir": a.out_dir, **data["stats"]}, ensure_ascii=False))
     elif a.cmd == "annotate":
@@ -176,6 +182,29 @@ def main(argv=None):
         if a.out:
             Path(a.out).write_text(text + "\n", encoding="utf-8")
         print(text)
+    elif a.cmd == "image-study":
+        from babel.vision import study as S
+        try:
+            if a.action == "prepare":
+                if not a.image:
+                    ap.error("prepare には --image が必要")
+                res = S.prepare(a.image, a.study, regions=_parse_regions(a.region, ap))
+                print(json.dumps({"gt": res["gt"], "gt_created": res["gt_created"], "methods": res["methods"]}, ensure_ascii=False, indent=1))
+            elif a.action == "status":
+                print(json.dumps(S.status(a.study), ensure_ascii=False, indent=1))
+            elif a.action == "evaluate":
+                res = S.evaluate_study(a.study)
+                print(json.dumps({m: {k: v.get(k) for k in ("status", "detection", "classes", "lines")} for m, v in res["methods"].items()},
+                                 ensure_ascii=False, indent=1))
+            else:
+                res = S.structure_study(a.study, {"permutations": a.permutations} if a.permutations else None)
+                print(json.dumps({"status": res["status"], "reason": res.get("reason"),
+                                  "comparison": {k: {x: (len(v[x]) if isinstance(v.get(x), list) else v.get(x))
+                                                     for x in ("A_hypotheses", "auto_hypotheses", "reproduced_from_A", "missed_from_A",
+                                                               "only_in_auto")} for k, v in res.get("comparison", {}).items()
+                                                 if "error" not in v}}, ensure_ascii=False, indent=1))
+        except S.StudyImageMismatch as e:
+            ap.exit(2, f"babel image-study: {e}\n")
     elif a.cmd == "vision-benchmark":
         from babel.vision_eval.benchmark import run as vrun
         res = vrun(a.split, a.methods.split(",") if a.methods else None, out=a.out or f"results/vision/methods-{a.split}.json")

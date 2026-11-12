@@ -1,0 +1,133 @@
+{
+ "split": "val",
+ "rows": [
+  {
+   "join_width": null,
+   "join_width_gap": null,
+   "all_f1": {
+    "mean": 0.8887,
+    "sd": 0.1489,
+    "n": 160
+   },
+   "all_ari": {
+    "mean": 0.8963,
+    "sd": 0.0743,
+    "n": 160
+   },
+   "all_split": {
+    "mean": 9.8125,
+    "sd": 21.6227,
+    "n": 160
+   },
+   "all_merge": {
+    "mean": 2.4312,
+    "sd": 6.4028,
+    "n": 160
+   },
+   "font_f1": {
+    "mean": 0.9638,
+    "sd": 0.0856,
+    "n": 80
+   },
+   "font_ari": {
+    "mean": 0.8932,
+    "sd": 0.0496,
+    "n": 80
+   },
+   "font_split": {
+    "mean": 0.75,
+    "sd": 2.1477,
+    "n": 80
+   },
+   "font_merge": {
+    "mean": 0.1,
+    "sd": 0.4359,
+    "n": 80
+   },
+   "stroke_f1": {
+    "mean": 0.8136,
+    "sd": 0.1604,
+    "n": 80
+   },
+   "stroke_ari": {
+    "mean": 0.8995,
+    "sd": 0.0925,
+    "n": 80
+   },
+   "stroke_split": {
+    "mean": 18.875,
+    "sd": 27.6805,
+    "n": 80
+   },
+   "stroke_merge": {
+    "mean": 4.7625,
+    "sd": 8.4221,
+    "n": 80
+   }
+  },
+  {
+   "join_width": 0.95,
+   "join_width_gap": 0.5,
+   "all_f1": {
+    "mean": 0.9101,
+    "sd": 0.1411,
+    "n": 160
+   },
+   "all_ari": {
+    "mean": 0.8971,
+    "sd": 0.0742,
+    "n": 160
+   },
+   "all_split": {
+    "mean": 5.6875,
+    "sd": 18.78,
+    "n": 160
+   },
+   "all_merge": {
+    "mean": 2.4562,
+    "sd": 6.3971,
+    "n": 160
+   },
+   "font_f1": {
+    "mean": 0.9661,
+    "sd": 0.086,
+    "n": 80
+   },
+   "font_ari": {
+    "mean": 0.8955,
+    "sd": 0.05,
+    "n": 80
+   },
+   "font_split": {
+    "mean": 0.1625,
+    "sd": 0.5349,
+    "n": 80
+   },
+   "font_merge": {
+    "mean": 0.1125,
+    "sd": 0.4742,
+    "n": 80
+   },
+   "stroke_f1": {
+    "mean": 0.854,
+    "sd": 0.1616,
+    "n": 80
+   },
+   "stroke_ari": {
+    "mean": 0.8988,
+    "sd": 0.0921,
+    "n": 80
+   },
+   "stroke_split": {
+    "mean": 11.2125,
+    "sd": 25.378,
+    "n": 80
+   },
+   "stroke_merge": {
+    "mean": 4.8,
+    "sd": 8.4045,
+    "n": 80
+   }
+  }
+ ]
+}

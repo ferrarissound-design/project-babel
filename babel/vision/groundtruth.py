@@ -86,18 +86,78 @@ def validate(gt: dict) -> dict:
     return out
 
 
+def alias_resolution(gt):
+    """評価に使う字形の統合（same_as）。**人が確認した文字の項目の same_as だけ**を使う。
+
+    未確認の項目の same_as は編集途中の案なので、確認済みの正解クラスを統合しない（Codex レビュー、PR #10）。
+    統合は和集合（union-find）で行い、代表は辞書順で最小の名前にする。循環（A→B→A）は1つのクラスにまとまり、
+    1つの名前に複数の統合先がある矛盾は統合したうえで conflicts として報告する（人が見直すため）。
+    戻り値: {"map": {名前: 代表}, "conflicts": [...], "cycles": [...], "ignored_unverified": 件数}
+    """
+    parent = {}
+
+    def find(x):
+        parent.setdefault(x, x)
+        while parent[x] != x:
+            parent[x] = parent[parent[x]]
+            x = parent[x]
+        return x
+
+    def union(a, b):
+        ra, rb = find(a), find(b)
+        if ra != rb:
+            lo, hi = sorted((ra, rb))
+            parent[hi] = lo
+    targets, edges, ignored = {}, {}, 0
+    for it in gt["items"]:
+        if not (it.get("label") and it.get("same_as")):
+            continue
+        if not (it.get("verified") and it.get("kind", "glyph") == "glyph"):
+            ignored += 1
+            continue
+        targets.setdefault(it["label"], set()).add(it["same_as"])
+        edges.setdefault(it["label"], set()).add(it["same_as"])
+        union(it["label"], it["same_as"])
+    conflicts = [{"label": k, "same_as": sorted(v)} for k, v in sorted(targets.items()) if len(v) > 1]
+    cycles = []
+    for start in sorted(edges):                 # 確認済みの統合指定が自分に戻ってくるか
+        stack, seen = list(edges[start]), set()
+        while stack:
+            x = stack.pop()
+            if x == start:
+                cycles.append(start)
+                break
+            if x in seen:
+                continue
+            seen.add(x)
+            stack.extend(edges.get(x, ()))
+    mapping = {k: find(k) for k in list(parent)}
+    return {"map": {k: v for k, v in mapping.items() if k != v}, "conflicts": conflicts, "cycles": cycles,
+            "ignored_unverified": ignored}
+
+
 def canonical_label(item, aliases=None):
-    """same_as を辿った字形の名前（別名で付けた同じ形を1つにまとめる）。"""
-    lab = item.get("same_as") or item.get("label")
-    seen = set()
-    while aliases and lab in aliases and lab not in seen:
-        seen.add(lab)
-        lab = aliases[lab]
-    return lab
+    """統合後の字形の名前。aliases は alias_resolution の map（確認済みの統合だけ）。項目自身の same_as は見ない
+    （確認済みの項目の same_as は map に入っている。未確認の項目の same_as は使わない）。"""
+    lab = item.get("label")
+    return (aliases or {}).get(lab, lab)
 
 
 def aliases(gt):
-    return {it["label"]: it["same_as"] for it in gt["items"] if it.get("label") and it.get("same_as")}
+    """評価用の別名の辞書（確認済みの統合だけ）。"""
+    return alias_resolution(gt)["map"]
+
+
+def evaluation_view(gt):
+    """評価に使う部分（人が確認した項目と行）と、使わない部分（編集途中）の件数を分けて返す。"""
+    ar = alias_resolution(gt)
+    items_v = [i for i in gt["items"] if i["verified"]]
+    lines_v = [ln for ln in gt["lines"] if ln["verified"]]
+    return {"items": items_v, "lines": lines_v, "aliases": ar["map"],
+            "scope": {"verified_items": len(items_v), "unverified_items": len(gt["items"]) - len(items_v),
+                      "verified_lines": len(lines_v), "unverified_lines": len(gt["lines"]) - len(lines_v),
+                      "alias_merges": len(ar["map"]), "alias_conflicts": ar["conflicts"], "alias_cycles": ar["cycles"],
+                      "unverified_same_as_ignored": ar["ignored_unverified"]}}
 
 
 def load(path) -> dict:

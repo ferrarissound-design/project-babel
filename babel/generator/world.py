@@ -68,6 +68,13 @@ ROLE_TAG = {"agent": "subject", "theme": "subject", "patient": "object", "recipi
 GENRES = [("account", 0.35), ("chronicle", 0.20), ("law", 0.12), ("letter", 0.18), ("ritual", 0.15)]
 
 
+def sem_class_of(concept: str) -> str:
+    """人名（P..）も人として扱う意味クラス。"""
+    if concept[0] == "P" and concept[1:].isdigit():
+        return "human"
+    return next((k for k, v in NOUN_CLASSES.items() if concept in v), "")
+
+
 def sem_class(concept: str) -> str:
     for k, v in NOUN_CLASSES.items():
         if concept in v:
@@ -97,8 +104,11 @@ def all_concepts():
 class World:
     """1つの文明の記録（文書→命題列）を作る。"""
 
-    def __init__(self, rng: random.Random, totals: bool = True):
+    def __init__(self, rng: random.Random, totals: bool = True, same_concept_rate: float = 0.0):
         self.rng = rng
+        # >0: 行為者と同じ概念を、受け手・目的語（人を取れる場合）にも使う（「商人が商人に魚を渡した」）。
+        # 0 のときは乱数を余分に消費しないので、既存のコーパスは変わらない
+        self.same_concept_rate = same_concept_rate
         self.totals = totals    # False: 会計記録に合計行を書かない（独立初見テストで外れた仮定の再現用）
         c = all_concepts()
         self.persons, self.places, self.gods = c["persons"], c["places"], c["gods"]
@@ -164,6 +174,13 @@ class World:
         if takes_loc and r.random() < 0.35:
             loc = self.place(site) if r.random() < 0.6 else self.np(r.choice(["city", "field", "temple", "river", "mountain", "gate"]))
             args.append(("location", loc))
+        if self.same_concept_rate > 0 and r.random() < self.same_concept_rate:
+            head = args[0][1]["head"]
+            if "+" not in head and sem_class_of(head) == "human":
+                for i, (role, np) in enumerate(args):
+                    if role == "recipient" or (role == "patient" and "human" in (p_cls or [])):
+                        args[i] = (role, self.np(head, pl=r.random() < 0.2))
+                        break
         return {"kind": "clause", "pred": verb, "tense": tense, "neg": neg, "cond": cond,
                 "args": [{"role": k, "np": v} for k, v in args]}
 

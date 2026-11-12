@@ -121,7 +121,7 @@ def issues_markdown(issues):
     return "\n".join(lines)
 
 
-def report_markdown(results, card, ext_scores, limits):
+def report_markdown(results, card, ext_scores, limits, legacy_scores=()):
     """研究報告書（Markdown）。数値はすべて results から機械的に埋める（手書きの転記をしない）。"""
     conds = {c["label"]: c for c in results["conditions"]}
     m = results["meta"]
@@ -214,13 +214,25 @@ def report_markdown(results, card, ext_scores, limits):
     L += ["", "原因の内訳（抽出した誤答例）: " + "、".join(f"{k} {n}件" for k, n in causes.most_common()), "",
           "## 8. 初見言語テスト", ""]
     if ext_scores:
-        L += ["| コーパス | 試行 | 独立性 | 構造（正/誤/保留） | 語彙主張（正/誤） | 数詞（正/誤/保留） | 語釈 正解/誤答 |", "|---|---|---|---|---|---|---|"]
+        L += ["採点方式2: 語彙は、事前に既知語として与えた語を除き、解読器が推定した語だけで数える。"
+              "「総合」は既知語も含めた値で、採点方式1と同じ定義。", "",
+              "| コーパス | 試行 | 独立性 | 構造（正/誤/保留） | 推定した語（正/誤/対象） | 推定の適合率・被覆率 "
+              "| 総合（既知語を含む 正/誤） | 数詞（正/誤/保留） | 語釈 正解/誤答 |",
+              "|---|---|---|---|---|---|---|---|---|"]
         for s_ in ext_scores:
             st = Counter(s_.get("structure", {}).values())
             lx, nm, gh = s_.get("lexicon", {}), s_.get("numerals", {}), s_.get("gloss_heldout", {})
+            li = s_.get("lexicon_inferred") or {}
             L.append(f"| {s_['attempt']['name']} | {s_['attempt']['attempt']} | {'独立' if s_['independent'] else '独立でない（準初見）'} | "
-                     f"{st['correct']}/{st['wrong']}/{st['abstain']} | {lx.get('correct')}/{lx.get('wrong')} | "
+                     f"{st['correct']}/{st['wrong']}/{st['abstain']} | {li.get('correct')}/{li.get('wrong')}/{li.get('evaluated', '–')} | "
+                     f"{li.get('precision')}・{li.get('coverage')} | {lx.get('correct')}/{lx.get('wrong')} | "
                      f"{nm.get('correct')}/{nm.get('wrong')}/{nm.get('abstain')} | {gh.get('correct', '–')}/{gh.get('wrong', '–')} |")
+        if legacy_scores:
+            L += ["", "参考・採点方式1（既知語を語彙の正解に含めていた、変更前の記録）:", ""]
+            for o in legacy_scores:
+                ol = o.get("lexicon", {})
+                L.append(f"- {o['attempt']['name']} #{o['attempt']['attempt']}: 語彙 {ol.get('correct')}/{ol.get('claimed')} 正解、"
+                         f"適合率 {ol.get('precision')}、被覆率 {ol.get('coverage')}")
         L += ["", "構造の内訳:", ""]
         for s_ in ext_scores:
             L.append(f"- {s_['attempt']['name']}: " + "、".join(f"{k}={x}" for k, x in s_.get("structure", {}).items()))
@@ -247,18 +259,26 @@ def build(results_path="results/latest.json", out_dir="docs/data", with_showcase
     extras = json.loads(extras_p.read_text(encoding="utf-8")) if extras_p.exists() else {}
     ext_scores = []
     sdir = external.ROOT / "scores"
+    legacy_scores = []     # 採点方式1（既知語を語彙の正解に含めていた）。過去の記録として残す
     for f in sorted(sdir.rglob("attempt-*.json")) if sdir.exists() else []:
-        ext_scores.append(json.loads(f.read_text(encoding="utf-8")))
+        (ext_scores if ".scoring-v" in f.name else legacy_scores).append(json.loads(f.read_text(encoding="utf-8")))
     indep = [s for s in ext_scores if s.get("independent") and s.get("blind") and s["attempt"]["first_attempt"]]
     if indep:
         pts, detail = [], []
         for s in indep:
-            lx, nm = s.get("lexicon", {}), s.get("numerals", {})
+            lx, nm = s.get("lexicon_inferred") or s.get("lexicon", {}), s.get("numerals", {})
+            old = next((o for o in legacy_scores if o["attempt"]["name"] == s["attempt"]["name"]
+                        and o["attempt"]["attempt"] == s["attempt"]["attempt"]), None)
             st = [v for v in s.get("structure", {}).values()]
             acc = sum(v == "correct" for v in st) / len(st) if st else 0.0
             p = 10 * (0.5 * acc + 0.25 * (lx.get("precision") or 0.0) + 0.25 * nm.get("accuracy", 0.0))
             pts.append(p)
-            detail.append(f"{s['attempt']['name']}: 構造 {acc:.2f}, 語彙適合率 {lx.get('precision')}, 数詞 {nm.get('accuracy')}")
+            detail.append(f"{s['attempt']['name']}（採点方式2）: 構造 {acc:.2f}, 推定した語の適合率 {lx.get('precision')} "
+                          f"（{lx.get('correct')}/{lx.get('claimed')}、既知語 {lx.get('given_excluded')} 語は除外）, "
+                          f"推定対象の語の正解率 {lx.get('accuracy')}, 数詞 {nm.get('accuracy')}")
+            if old:
+                ol = old.get("lexicon", {})
+                detail.append(f"  参考・採点方式1（既知語を含む）: 語彙 {ol.get('correct')}/{ol.get('claimed')} 正解、適合率 {ol.get('precision')}")
         extras["external_independent"] = {"points": sum(pts) / len(pts), "detail": detail}
     card = scorecard.build(results, issues, extras)
     slim = dict(results)
@@ -267,7 +287,7 @@ def build(results_path="results/latest.json", out_dir="docs/data", with_showcase
     _dump(out / "results.json", slim)
     _dump(out / "scorecard.json", card)
     _dump(out / "issues.json", {"issues": issues, "limitations": limits})
-    _dump(out / "external.json", {"ledger": external.read_ledger(), "scores": ext_scores,
+    _dump(out / "external.json", {"ledger": external.read_ledger(), "scores": ext_scores, "legacy_scores": legacy_scores,
                                   "problems": external.verify(),
                                   "engine_fingerprint": external.engine_fingerprint()})
     hist_p = Path("results/history.jsonl")
@@ -276,6 +296,7 @@ def build(results_path="results/latest.json", out_dir="docs/data", with_showcase
     if with_showcase:
         _dump(out / "showcase.json", showcase())
     Path("docs/ISSUES.md").write_text(issues_markdown(issues), encoding="utf-8")
-    Path("docs/RESEARCH_REPORT.md").write_text(report_markdown(results, card, ext_scores, limits), encoding="utf-8")
+    Path("docs/RESEARCH_REPORT.md").write_text(report_markdown(results, card, ext_scores, limits, legacy_scores),
+                                               encoding="utf-8")
     Path("results/scorecard.json").write_text(json.dumps(card, ensure_ascii=False, indent=1), encoding="utf-8")
     return card

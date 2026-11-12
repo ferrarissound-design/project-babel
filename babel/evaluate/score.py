@@ -56,7 +56,7 @@ def score(pred: dict, gold: dict, public: dict | None = None) -> dict:
     held = set((public or {}).get("split", {}).get("heldout", []))
     parallel = {(p["doc"], p["sent"]) for p in (public or {}).get("parallel", [])}
     if not gtoks:
-        return _score_tables(pred, gold, out, calib)
+        return _score_tables(pred, gold, out, calib, public)
     # ---- トークン単位 ----
     seg_tp = seg_fp = seg_fn = 0
     seen_types = set()
@@ -217,6 +217,9 @@ def score(pred: dict, gold: dict, public: dict | None = None) -> dict:
                       "coverage": round(claimed / max(1, claimed + lres["abstain"]), 4),
                       "abstain_rate_without_evidence": round(lres["abstain_no_evidence"] / lres["no_evidence_total"], 4)
                       if lres["no_evidence_total"] else None}
+    out["lexicon_inferred"] = dict(out["lexicon"], given_excluded=len(known_stems),
+                                   note="トークン単位の採点では、既知語は最初から lexicon の集計から除外している（lexicon と同じ値）")
+    out["scoring_version"] = SCORING_VERSION
     out["errors"] = sorted(errors, key=lambda e: -e["confidence"])[:12]
     for part in ("train", "heldout"):
         c = gloss[part]
@@ -259,8 +262,16 @@ def score(pred: dict, gold: dict, public: dict | None = None) -> dict:
     return out
 
 
-def _score_tables(pred, gold, out, calib):
-    """トークン単位の正解がない場合: 語彙表・数詞表だけで採点する（外部コーパス用）。"""
+SCORING_VERSION = 2   # 2: 外部コーパスの語彙で、事前に与えた既知語と解読器が推定した語を分けて数える
+
+
+def _score_tables(pred, gold, out, calib, public=None):
+    """トークン単位の正解がない場合: 語彙表・数詞表だけで採点する（外部コーパス用）。
+
+    lexicon は従来どおり既知語も含めた総合値（採点方式1と同じ定義）。既知語は意味を事前に与えたものなので、
+    解読器の推定能力は lexicon_inferred（既知語を除いた語だけ）で測る。
+    """
+    known_forms = {k["form"] for k in (public or {}).get("known", []) if not str(k.get("meaning", "")).startswith("#")}
     by_form = {}
     for e in pred.get("lexicon", []):
         by_form.setdefault(e["stem"], e)
@@ -268,16 +279,25 @@ def _score_tables(pred, gold, out, calib):
             by_form.setdefault(f, e)
     res, errors = Counter(), []
     aliases = gold.get("aliases", {})
+    inf = Counter()     # 既知語を除いた、解読器が推定した語だけの集計
     for g in gold.get("lexicon", []):
         e = by_form.get(g["form"])
+        given = g["form"] in known_forms or bool(e and e.get("reason") == "既知語として与えられた")
+        tgt = Counter() if given else inf
+        if given:
+            inf["given"] += 1
         if e is None:
             res["not_found"] += 1
+            tgt["not_found"] += 1
         elif e["status"] != "claimed":
             res["abstain"] += 1
+            tgt["abstain"] += 1
         else:
             ok = _same_concept(e["meaning"], g["meaning"], aliases)
             res["correct" if ok else "wrong"] += 1
-            calib.append([round(e["confidence"], 3), int(ok), "lexicon"])
+            tgt["correct" if ok else "wrong"] += 1
+            if not given:
+                calib.append([round(e["confidence"], 3), int(ok), "lexicon"])
             if not ok:
                 errors.append({"stem": e["stem"], "predicted": e["meaning"], "gold": g["meaning"],
                                "confidence": e["confidence"], "cause": "未分類"})
@@ -285,7 +305,18 @@ def _score_tables(pred, gold, out, calib):
     out["lexicon"] = {"claimed": claimed, "correct": res["correct"], "wrong": res["wrong"],
                       "abstain": res["abstain"], "not_found": res["not_found"],
                       "precision": round(res["correct"] / claimed, 4) if claimed else None,
-                      "coverage": round(claimed / max(1, len(gold.get("lexicon", []))), 4)}
+                      "coverage": round(claimed / max(1, len(gold.get("lexicon", []))), 4),
+                      "note": "既知語（意味を事前に与えた語）を含む総合値。採点方式1と同じ定義"}
+    ic = inf["correct"] + inf["wrong"]
+    n_unknown = len(gold.get("lexicon", [])) - inf["given"]
+    out["lexicon_inferred"] = {
+        "given_excluded": inf["given"], "evaluated": n_unknown, "claimed": ic, "correct": inf["correct"],
+        "wrong": inf["wrong"], "abstain": inf["abstain"], "not_found": inf["not_found"],
+        "precision": round(inf["correct"] / ic, 4) if ic else None,           # 主張した語のうち正しい割合
+        "accuracy": round(inf["correct"] / n_unknown, 4) if n_unknown else None,   # 推定対象の語のうち正しく当てた割合
+        "coverage": round(ic / n_unknown, 4) if n_unknown else None,          # 推定対象の語のうち主張した割合
+        "note": "既知語を除き、解読器が対訳などから推定した語だけを数えた値（採点方式2）"}
+    out["scoring_version"] = SCORING_VERSION
     pnum = pred.get("numerals", {}).get("values") or {}
     nres = Counter()
     for g in gold.get("numerals", []):

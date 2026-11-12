@@ -21,11 +21,11 @@ def _pick(rng, weighted):
 
 def build_corpus(family: str, seed: int, level: str = "A", n_docs: int = 130, parallel_frac: float = 0.05,
                  dropout: float = 0.3, var_rate: float = 0.45, lacuna: float = 0.02, boundaries: bool = True,
-                 split: str = "random", n_known: int = 6, totals: bool = True):
+                 split: str = "random", n_known: int = 6, totals: bool = True, same_concept_rate: float = 0.0):
     """(public, secret) を返す。level は A / B / C。"""
     lang = make_language(family, seed)
     rng = random.Random(f"corpus-{family}-{seed}")
-    world = World(rng, totals=totals)
+    world = World(rng, totals=totals, same_concept_rate=same_concept_rate)
     scribes = [[r for r in lang.scribe_rules if rng.random() < var_rate] for _ in range(N_SCRIBES)]
     docs, gold_docs, props_by_sent, eras = [], {}, {}, {}
     for i in range(n_docs):

@@ -149,10 +149,12 @@ def report_markdown(results, card, ext_scores, limits):
     keys = ["seg_f1", "affix_f1", "pos_accuracy", "verb_position_correct", "affix_position_correct", "numeral_base_correct",
             "numeral_accuracy", "numeral_wrong_rate"]
     names = ["形態素境界F1", "接辞目録F1", "品詞", "動詞位置", "接辞側", "基数", "数詞値 正解", "数詞値 誤答"]
-    L += tab([("levelA", "LEVEL A"), ("levelB", "LEVEL B"), ("levelC", "LEVEL C")], keys, names) + [""]
+    main_rows = [("levelA", "LEVEL A"), ("levelB", "LEVEL B"), ("levelC", "LEVEL C"),
+                 ("levelA:no_totals", "LEVEL A 合計行なし"), ("levelC:no_totals", "LEVEL C 合計行なし")]
+    L += tab(main_rows, keys, names) + [""]
     keys2 = ["lexicon_precision", "lexicon_claimed", "gloss_correct", "gloss_wrong", "gloss_abstain", "overclaims"]
     names2 = ["語彙主張の適合率", "主張語数", "語釈 正解", "語釈 誤答", "語釈 判定不能", "過剰主張(件)"]
-    L += tab([("levelA", "LEVEL A"), ("levelB", "LEVEL B"), ("levelC", "LEVEL C")], keys2, names2) + [""]
+    L += tab(main_rows, keys2, names2) + [""]
     L += ["語釈は、対訳が与えられていない held-out 文書の内容語（数詞を除く）について、正解・誤答・判定不能の割合。", "",
           "## 3. 単純な方法との比較（LEVEL A）", ""]
     k3 = ["seg_f1", "lexicon_precision", "lexicon_claimed", "gloss_correct", "gloss_wrong"]
@@ -160,7 +162,8 @@ def report_markdown(results, card, ext_scores, limits):
     L += tab([("levelA", "解読エンジン"), ("levelA:baseline_freq", "頻度法"), ("levelA:baseline_ngram", "n-gram法")], k3, n3) + [""]
     L += ["## 4. アブレーション（LEVEL A）", ""]
     L += tab([("levelA", "全機能"), ("levelA:no_variants", "表記揺れ正規化なし"), ("levelA:no_morph", "形態素解析なし"),
-              ("levelA:no_em", "EMなし"), ("levelA:no_numeral_solver", "数詞ソルバーなし"), ("levelA:no_abstain", "保留なし")],
+              ("levelA:no_em", "EMなし"), ("levelA:no_numeral_solver", "数詞ソルバーなし"), ("levelA:no_abstain", "保留なし"),
+              ("levelA:no_pos_constraint", "品詞制約なし")],
              k3 + ["numeral_accuracy"], n3 + ["数詞値"]) + [""]
     L += ["## 5. データ量・対訳量・ノイズ", ""]
     k5 = ["seg_f1", "numeral_accuracy", "lexicon_precision", "gloss_correct", "gloss_wrong"]

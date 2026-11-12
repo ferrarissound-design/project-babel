@@ -21,6 +21,7 @@ DEFAULT_CONFIG = {
     "claim_threshold": 0.5,
     "morph_method": "paradigm",  # paradigm / freq / successor（後2つは比較用ベースライン）
     "align_method": "em",        # em / count / dice（後2つは比較用ベースライン）
+    "pos_constraint": True,      # 推定した品詞で対応付けの候補を絞る（v1.1）
 }
 
 
@@ -237,7 +238,8 @@ class Decipherer:
             items.append({"units": self._units(sent), "concepts": concepts, "feats": feats, "sent": sent,
                           "counts": counts})
         mode = self.cfg["align_method"] if self.cfg["use_em"] else "count"
-        self.aligner = al = Aligner(items, mode=mode)
+        constraint = self._pos_constraint(items) if self.cfg["pos_constraint"] else None
+        self.aligner = al = Aligner(items, mode=mode, constraint=constraint)
         thr = self.cfg["claim_threshold"]
         slot_votes = defaultdict(Counter)
         for it, link in zip(items, al.links):
@@ -278,6 +280,31 @@ class Decipherer:
             if slot_votes[stem]:
                 slot = slot_votes[stem].most_common(1)[0][0]
                 self.slot_pos[stem] = {"pred": "V", "head": "N", "title": "N", "adj": "ADJ", "func": "FUNC"}.get(slot, "X")
+
+    def _pos_constraint(self, items):
+        """意味の手がかりなしで推定した品詞（パラダイムの型）で、語幹が対応できる概念を絞る。
+
+        動詞型の語幹は対訳で述語になる概念にだけ、名詞型の語幹は述語以外の概念にだけ対応できる。
+        品詞が不明（X）の語幹と、述語にも項にもなる概念には制約をかけない。
+        """
+        slots = defaultdict(set)
+        for it in items:
+            for c, slot in it["concepts"]:
+                slots["C:" + c].add("pred" if slot == "pred" else "arg")
+
+        def ok(unit, concept):
+            if not unit.startswith("S:") or not concept.startswith("C:"):
+                return True
+            sl = slots.get(concept)
+            if not sl or len(sl) > 1:
+                return True
+            pos = self.stem_pos.get(unit[2:], "X")
+            if pos == "V":
+                return "pred" in sl
+            if pos == "N":
+                return "arg" in sl
+            return True
+        return ok
 
     def _stem_of_form(self, form):
         return self.morph.analyze(self.nz.norm(form)[0])[1]

@@ -45,7 +45,7 @@ def conditions():
     for la in (0.0, 0.08):
         out.append(("E5_noise", f"levelA:lacuna={la}", "A", "engine", {"lacuna": la}))
     out.append(("E6_unseen", "levelA:heldout=late_era", "A", "engine", {"split": "era"}))
-    for a in ("no_variants", "no_morph", "no_em", "no_numeral_solver", "no_abstain"):
+    for a in ("no_variants", "no_morph", "no_em", "no_numeral_solver", "no_abstain", "no_pos_constraint"):
         out.append(("E8_ablation", f"levelA:{a}", "A", a, {}))
     out.append(("E8_ablation", "levelB:no_metadata", "B", "no_metadata", {}))
     out.append(("E8_ablation", "levelC:no_numeral_solver", "C", "no_numeral_solver", {}))

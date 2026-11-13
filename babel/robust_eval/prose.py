@@ -49,9 +49,10 @@ def render(c):
     w(f"3. **複数の認識方式で転写し、{k}/3 以上の切り出し群で有意な規則だけを採る**（この種類の規則＝行の組の類似について）。"
       f"仕込みのない画像での報告率 {trio(vk, 'fwer', 3)}、仕込んだ組の発見率 {trio(vk, 'recall', 2)}"
       f"（既存の方式 {trio('ngram:v3', 'recall', 2)}、正解の転写での上限 {trio('oracle-lcs', 'recall', 2)}）、報告のうち真 {trio(vk, 'precision', 2)}。"
-      f"値は実行済みの {splits_present} の順。未実行の holdout は閾値固定後に評価する")
+      f"値は実行済みの {splits_present} の順。未実行の分割はこの結論に含めない")
     if c["checks"]:
-        w(f"4. holdout の結果を見る前に書いた予測 {len(c['checks'])} 件のうち、" +
+        evaluated = "・".join(n for n in ("holdout-synth", "holdout-font") if S.get(n))
+        w(f"4. holdout の結果を見る前に書いた予測 {len(c['checks'])} 件について、**{evaluated} で検証した範囲では**" +
           ("すべて当たった" if held_all else f"{len(c['checks']) - len(failed)} 件が当たり、**{'・'.join(failed)} が外れた**") + "（第6節）")
     w("\n**測っていないこと（仮説のまま）**\n")
     w("- IMG_4494 の2組（行 0・1、行 3・4）が画像に本当にあるか。**画像がリポジトリにないので、方式の集まりを実画像に使えていない。**"
@@ -249,6 +250,8 @@ def render(c):
     if hs or hf:
         w("## 6. 結果: holdout（閾値を固定してから1回だけ）\n")
         w("### 6.1 結果を見る前に書いた予測（results/robust/predictions-v2.json、holdout v2 の結果より前のコミット）\n")
+        if not hs or not hf:
+            w("予測の成否は実行済みの分割だけの暫定判定。未実行の分割を通過したとは扱わない。\n")
         if not c["checks"]:
             w("旧設計（8方式の生票）の予測は、新設計（3切り出し群の票）の検証に転用しない。再設計後の予測を別途固定する必要がある。\n")
         claims = {p["id"]: p for p in c["preds"]["predictions"]}

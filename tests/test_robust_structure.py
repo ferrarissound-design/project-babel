@@ -54,13 +54,13 @@ def test_planted_pairs_are_found_and_reported_with_alignment():
 
 
 def test_family_wise_error_is_controlled_on_structureless_text():
-    """仕込みのない文で、1つでも有意な組が出る割合が有意水準の近くに収まる（60 件、上限は二項分布の 99.9% 点より上）。"""
+    """仕込みのない100文を、実評価と同じ999置換で検定する。13件以上は二項(100, .05)で稀。"""
     hits = 0
-    for seed in range(60):
+    for seed in range(100):
         rows, planted, _ = texts.planted_text(1000 + seed, vocab=(30, 80, 250)[seed % 3], n_pairs=0)
         assert planted == []
-        hits += bool(rowsim.significant_pairs(rowsim.row_similarity(rows, cfg={"permutations": 199, "seed": seed})))
-    assert hits <= 10
+        hits += bool(rowsim.significant_pairs(rowsim.row_similarity(rows, cfg={"permutations": 999, "seed": seed})))
+    assert hits <= 12
 
 
 def test_one_misread_symbol_breaks_ngram_sharing_but_not_lcs():

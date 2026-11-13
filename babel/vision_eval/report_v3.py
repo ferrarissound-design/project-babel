@@ -64,6 +64,96 @@ def _breakdown(res, metric, prefix, d=2, methods=None):
     return L
 
 
+def _conclusions(diag, mdev, mval, hold, old, imp):
+    h = {k: v["all"] for k, v in hold["summary"].items()}
+    v2, v3 = h["improved-v2"], h["improved-v3"]
+    tight = hold["summary"]["improved-v3"]["condition:tight"]
+    S = {(s["lines"], s["input"]): s for s in imp["summary"]}
+    pm = _paired(hold["runs"], "improved-v3", "improved-v2", "merged_predictions", True)
+    pa = _paired(hold["runs"], "improved-v3", "improved-v2", "ari")
+    e = {k: v["all"] for k, v in mdev["summary"].items()}
+    ev = {k: v["all"] for k, v in mval["summary"].items()}
+    ap = next(k for k in e if k.startswith("A'"))
+    ee = next(k for k in e if k.startswith("E"))
+
+    def err(a):
+        return a["oversplit_extra_rows"]["mean"] + a["merged_rows"]["mean"]
+    L = ["## 8. 問いへの答え", "",
+         "### BABEL が行を過剰に分割する原因は何か", "",
+         "- **人工画像で再現し、確かめたこと**: improved・improved-v2 の行のまとめ方は、尺度に「すべての成分の高さの中央値」を使い、"
+         "その 0.6 倍より縦の中心が離れた成分で新しい行を始める。字が複数の部品からなると尺度が字の高さより小さくなり"
+         f"（dev の平均で {_m(diag['groups']['all']['median_height_over_true'])} 倍）、同じ行の上の部品と下の部品が別の行になる。"
+         "尺度だけを正解の字の高さに替えると余分な行の約8割が消える（第1節）",
+         "- **実画像（IMG_4494）について**: 画像がないので確かめていない。25行 ≒ 13行 × 2 という数は上の仕組みと矛盾しないが、仮説のまま", "",
+         "### その誤りを直すと、構造解析は本当に改善するのか", "",
+         "**人工画像では、改善する。ただし正解の転写には届かず、行を詰めた画像では直りきっていない。**", "",
+         f"- 行認識（holdout、開発に使っていない字の作りと劣化）: 余分な行 {_m(v2['oversplit_extra_rows'])} → {_m(v3['oversplit_extra_rows'])}/枚、"
+         f"誤結合 {_m(v2['merged_rows'])} → {_m(v3['merged_rows'])}/枚、行 F1 {_m(v2['line_f1'], 3)} → {_m(v3['line_f1'], 3)}",
+         f"- 記号の検出（holdout）: F1 {_m(v2['f1'], 3)} → {_m(v3['f1'], 3)}。行が正しくまとまると、同じ行に入った上下の部品が1つの字に結合されるため。"
+         f"字の分割は {_m(v2['split_glyphs'], 1)} → {_m(v3['split_glyphs'], 1)}/枚"]
+    for n in imp["meta"]["sizes"]:
+        a, c2, d, ls, lm = S[(n, "A")], S[(n, "C2")], S[(n, "D")], S[(n, "L-split")], S[(n, "L-merge")]
+        L.append(f"- 構造解析（{n}行）: 発見した規則は improved-v2 {_m(c2['gold_found'])} → improved-v3 {_m(d['gold_found'])}（正解の転写 {_m(a['gold_found'])}、/8）。"  # noqa: E501
+                 f"偽の仮説は {_m(c2['false'], 1)} → {_m(d['false'], 1)}（正解の転写 {_m(a['false'], 1)}）。"
+                 f"仮説の数は {_m(c2['hypotheses'], 1)} → {_m(d['hypotheses'], 1)} に**減った**（増えたのは正しい仮説 {_m(c2['true'], 1)} → {_m(d['true'], 1)}）")  # noqa: E501
+        L.append(f"  - 行境界の誤りだけを正解の転写に加えると（{n}行）: 各行を2つに分けると発見 {_m(a['gold_found'])} → {_m(ls['gold_found'])}"
+                 f"（行境界に依存する規則 {_m(a['gold_found_line_rules'])} → {_m(ls['gold_found_line_rules'])}）、偽の仮説 {_m(a['false'], 1)} → {_m(ls['false'], 1)}。"  # noqa: E501
+                 f"2行を1つにまとめると発見 {_m(lm['gold_found'])}、偽の仮説 {_m(lm['false'], 1)}")
+    p = imp["paired"]["D-C2/gold_found"]
+    L += [f"- 同じ画像での比較（{p['n']} 枚）: improved-v3 の方が発見した規則が多い画像 {p['better']}、少ない画像 {p['worse']}、同じ {p['same']}",
+          "- 改善の中身は2つが混ざっている: 行境界が正しくなったこと（行境界に依存する規則が増えた）と、上下の部品が1つの字にまとまって"
+          "記号そのものが正しくなったこと（それ以外の規則も増え、対応しない記号を含む偽の仮説が減った）。"
+          "正解の転写の行だけを壊す実験（L-split）での低下は発見 1 件前後なので、improved-v2 の低下の大部分は、行の分割に伴って"
+          "字が破片になることによると考えられる（2つを完全に分ける実験はしていないので、推測）",
+          "- 単語境界（合議）の F1 は " + "、".join(f"{n}行で {_m(S[(n, 'C2')]['seg_f1_consensus'], 3)} → {_m(S[(n, 'D')]['seg_f1_consensus'], 3)}"
+                                              f"（正解の転写 {_m(S[(n, 'A')]['seg_f1_consensus'], 3)}）" for n in imp["meta"]["sizes"]),
+          "- 仮説の安定性（部分標本・転写の攪乱での再現率）は、方式の間でほとんど変わらない（表）。安定性は、仮説が正しいかどうかを区別していない", "",
+          "### 副作用", "",
+          f"- **字の誤結合が少し増えた**（holdout、同じ画像で improved-v2 より多い {pm['worse']} 枚・少ない {pm['better']} 枚、平均 {pm['mean']:+.2f}/枚）。"
+          "同じ行に入った別の字が、横に重なると1つにまとめられる",
+          f"- **クラスの構造（ARI）は改善していない**（holdout、差の平均 {pa['mean']:+.3f}、良い {pa['better']} 枚・悪い {pa['worse']} 枚）。"
+          "ARI は検出で対応した記号だけで計算するので、検出が増えた分だけ難しい記号が評価に入る。分類の方式は変えていない",
+          f"- **行を詰めた画像（tight）では誤結合が残る**: holdout で誤結合 {_m(tight['merged_rows'])}/枚、行 F1 {_m(tight['line_f1'])}、"
+          f"検出 F1 {_m(tight['f1'])}。隣の行と上下の範囲が重なると、投影の谷が浅くなって行が切れない",
+          f"- 処理時間は improved-v2 と同程度（holdout で {_m(v2['seconds'], 3)} → {_m(v3['seconds'], 3)} 秒/枚、既存の test で "
+          f"{_m(old['test']['summary']['improved-v2']['all']['seconds'], 3)} → {_m(old['test']['summary']['improved-v3']['all']['seconds'], 3)} 秒/枚）",
+          "- 既存の評価画像（行の間隔が一定）では悪化なし。改善も小さい（第5節）。**行の作りが単純な画像では、v2 と v3 の差はほとんどない**", "",
+          "### 単純な修正で足りるか", "",
+          f"- 現行方式の尺度を S に替え、許容幅を広げるだけ（A'）で、行の誤り（余分な行＋誤結合）は dev で {err(e[next(k for k in e if k.startswith('A '))]):.2f} → "  # noqa: E501
+          f"{err(e[ap]):.2f}/枚、val で {err(ev[ap]):.2f}/枚になる。複合方式（E）は dev {err(e[ee]):.2f}・val {err(ev[ee]):.2f}/枚",
+          "- 過剰分割の大部分は単純な修正で直る。複合方式を選んだのは、同じ基準（行の誤りの合計）で dev・val とも最も良かったから。"
+          "A' は誤結合と字の結合が多い（第3節の表）", "",
+          "## 9. 限界と残る問題", "",
+          "- **実画像では何も測っていない。** 人工画像の字の作り・劣化は5種類の生成方法によるもので、実際の筆写・写真・画面の写しを代表しない。"
+          "holdout も同じ生成器の別の設定で、行の並べ方の規則は dev と共通",
+          "- holdout の improved-v2 の過剰分割（行数が正解の 3.7 倍）は、依頼にあった実画像の値（約 1.9 倍）より大きい。"
+          "holdout の字は部品が多いためで、**改善の大きさは字の作りに依存する**。実画像での改善の大きさは分からない",
+          "- 新方式は「行と行の間の空きが、1つの字の中の部品の上下の隙間より大きい」ことを前提にする（join_gap × S が境目）。"
+          "行の間が字の部品の隙間と同じくらい詰まった文字体系では、別の行をまとめる。逆に、部品の隙間が大きい字は分かれる",
+          "- 字の大きさ S は、上下に分かれた字では字の高さの 0.4〜0.8 倍になる。S に対する比で決めた閾値は、字の作りによって実質の値が変わる",
+          "- 行が傾いている・曲がっている画像は、横向きの投影を使うので弱いはず。photo の傾きは 0.3〜0.8 度だけで、それ以上は試していない",
+          "- 縦書き、行の途中で字の大きさが大きく変わる画像、領域の指定なしで段組みを分けることは扱っていない"
+          "（two_column は領域の枠を認識器に渡している。実画像の評価でも領域は人が指定する）",
+          "- 小さな部品（点・短い線）だけでできた字は、近い行の字に付けられる。小さな部品だけの行は検出できない",
+          "- 構造解析の採点は人工言語 regular の設計した8規則だけ。実際の未知言語の規則がこれに似ている保証はない。"
+          "正解の転写でも 13 行で 4.5/8 しか見つからない（データ量と構造解析の限界: docs/ISSUES.md #41・#45）",
+          "- improved-v3 でも偽の仮説は正解の転写より多い（13行で 4.0 対 0.5）。認識の誤りが残る限り、仮説は画像と照合して確かめる必要がある", "",
+          "## 10. 再現手順", "",
+          "```bash",
+          "python -m pip install -e '.[vision]'",
+          "python -m babel.vision_eval.lines_diagnose --split dev          # 原因の切り分け",
+          "python -m babel.vision_eval.lines_bench --split dev             # 4方式の比較（dev。val も同じ）",
+          "python -m babel.vision_eval.lines_bench --split holdout --final # 最終評価（方式・閾値を変えたら使わない）",
+          "python -m babel vision-benchmark --split test --methods baseline,improved-v2,improved-v3 --out results/vision/v3/methods-test-v3.json",
+          "python -m babel.vision_eval.impact_v3                           # 構造解析への影響",
+          "python -m babel.vision_eval.lines_figure --split dev            # 比較画像",
+          "python -m babel.vision_eval.report_v3                           # この文書",
+          "```", "",
+          "方式ごとの閾値の試行（lines_bench.sweep）と、A〜E を並べた比較（lines-methods-dev/val.json）は、"
+          "results/vision/v3/selected-params.json の値を lines_bench.run の variants に渡して作った。", ""]
+    return L
+
+
 def build(out="docs/VISION_EVAL_V3.md"):
     diag = _load("oversplit-diagnosis-dev.json")
     sel = _load("selected-params.json")
@@ -123,7 +213,8 @@ def build(out="docs/VISION_EVAL_V3.md"):
               f"{a['partly_torn_rows']['mean']:.2f}（{100 * a['partly_torn_rows']['mean'] / tot:.0f}%）、"
               f"字が丸ごと別の行になったもの {a['whole_glyph_rows']['mean']:.2f}（{100 * a['whole_glyph_rows']['mean'] / tot:.0f}%）",
               f"- 尺度を字の大きさ S（成分の max(幅, 高さ) の、インク量で重みを付けた中央値）に替えるだけでは {ss:.2f}/枚 が残る"
-              "（S も、上下に分かれた字では字の高さより小さい）。閾値・尺度の調整だけでは直りきらない（第3節の A'）", "",
+              "（S も、上下に分かれた字では字の高さより小さい）。さらに行の中心からの許容幅も広げると大きく減るが、"
+              "誤結合が増え、複合方式の誤りの約2〜3倍が残る（第3節の A'）", "",
               "**結論（人工画像での再現の範囲で）**: 原因は「縦の中心だけで行を決めること」単独ではなく、"
               "**小さな部品に引きずられた尺度（成分の高さの中央値）と、縦の中心による行の開始の組み合わせ**。"
               "依頼にあった仮説（縦の中心だけを重視する処理）は、半分だけ当たっている。", "",
@@ -147,7 +238,10 @@ def build(out="docs/VISION_EVAL_V3.md"):
           "- v1・v2 の test（シード 1000〜1019）は improved・improved-v2 の評価に使用済みなので、未見データとしては扱わず、"
           "退行の確認にだけ使う（第5節）",
           "- 生成器は、方式を作る途中で2回直した: tight の行の詰め方（上下の字のインクが入り組んで人にも行が読めなかった）と、"
-          "diacritic の行の間隔（上下の記号の分だけ行を離す）。どちらも dev の画像を見て決めたもので、holdout は見ていない", ""]
+          "diacritic の行の間隔（上下の記号の分だけ行を離す）。どちらも dev の画像と dev での認識結果を見て決めた。"
+          "生成器は共通なので、この変更は holdout の画像の作りにも及ぶ",
+          "- **holdout について開発中に見たもの**: 生成器が正しく描けているかを確かめるために、方式を作る前に radical・curve の画像"
+          "（シード 7000 の数枚）を目で見た。認識器は走らせていない。holdout での認識結果を見たのは最終評価の1回だけ", ""]
 
     # ------------------------------------------------------------ 3. 方式の比較
     L += ["## 3. 行認識の方式の比較（dev で選び、val で確かめた）", "",
@@ -164,7 +258,10 @@ def build(out="docs/VISION_EVAL_V3.md"):
         L += ["dev で選んだ閾値: " + "、".join(f"{k} {json.dumps(v, ensure_ascii=False)}" for k, v in sel["params"].items()), ""]
     if mdev:
         L += [f"### dev（画像 {mdev['meta']['images']} 枚）", ""] + _lines_table(mdev) + [""]
-        L += ["過剰分割（余分な行/枚）、行の作りごと:", ""] + _breakdown(mdev, "oversplit_extra_rows", "condition:") + [""]
+        L += ["B（投影）は、選択の基準では「つなぐ隙間を大きくして全部の行を1つにまとめる」設定が選ばれた（誤結合は1枚に1行としか"
+              "数えられないため）。行 F1 と検出 F1 が低いのはそのため。隙間を小さくすると過剰分割が増え、どの設定でも合計は E より多い"
+              "（results/vision/v3/sweep-dev-projection*.json）。", "",
+              "過剰分割（余分な行/枚）、行の作りごと:", ""] + _breakdown(mdev, "oversplit_extra_rows", "condition:") + [""]
         L += ["誤結合（行/枚）、行の作りごと:", ""] + _breakdown(mdev, "merged_rows", "condition:") + [""]
         L += ["過剰分割（余分な行/枚）、字の作りごと:", ""] + _breakdown(mdev, "oversplit_extra_rows", "family:") + [""]
     if mval:
@@ -334,9 +431,8 @@ def build(out="docs/VISION_EVAL_V3.md"):
                     for k in ("baseline", "improved-v2", "improved-v3")) + " |")
         L.append("")
 
-    extra = Path("docs/VISION_EVAL_V3_conclusions.md")
-    if extra.exists():
-        L += [extra.read_text(encoding="utf-8").rstrip(), ""]
+    if hold and imp and mdev and mval:
+        L += _conclusions(diag, mdev, mval, hold, old, imp)
     Path(out).write_text("\n".join(L) + "\n", encoding="utf-8")
     return out
 

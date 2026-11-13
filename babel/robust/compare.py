@@ -25,6 +25,19 @@ def compare(path_a, path_b, extra=(), cfg=None):
     cfg = {**CFG, **(cfg or {})}
     A, info_a = load_rows(path_a)
     B, _ = load_rows(path_b)
+    out = compare_rows(A, B, info_a, cfg)
+    out["a"], out["b"] = str(path_a), str(path_b)
+    for path in extra:
+        X, _ = load_rows(path)
+        r = rowsim.row_similarity(X, cfg=cfg)
+        out["extra"][str(path)] = {"stats": _stats(X), "top": _top(r), "pairs": [p for p in r["pairs"] if p["significant"]]}
+    return out
+
+
+def compare_rows(A, B, info_a=None, cfg=None):
+    """compare の本体（行ごとのクラス番号の列を直接受け取る）。"""
+    cfg = {**CFG, **(cfg or {})}
+    info_a = info_a or [{} for _ in A]
     al = crossalign.align(A, B)
     br = crossalign.bracket(A, B, al)
     tests = {"a": rowsim.row_similarity(A, cfg=cfg), "b": rowsim.row_similarity(B, cfg=cfg),
@@ -39,7 +52,7 @@ def compare(path_a, path_b, extra=(), cfg=None):
                          "column_null": [k for k in ("a", "b") if p in set(rowsim.significant_pairs(column[k]))],
                          "class": "どの転写でも有意" if len(where) == 4 else "両方の転写で有意" if {"a", "b"} <= set(where)
                          else "一方の転写だけで有意"})
-    out = {"schema": "babel-transcription-compare-v1", "a": str(path_a), "b": str(path_b), "config": cfg,
+    out = {"schema": "babel-transcription-compare-v1", "a": None, "b": None, "config": cfg,
            "stats": {"a": _stats(A), "b": _stats(B), "fine_classes": br["fine_classes"], "coarse_classes": br["coarse_classes"]},
            "alignment": {"anchor_rows": al["anchor_rows"],
                          "columns": [[[list(pa), list(pb)] for pa, pb in cs] for cs in al["columns"]],
@@ -51,10 +64,6 @@ def compare(path_a, path_b, extra=(), cfg=None):
                          "top": _top(v), "pairs": [p for p in v["pairs"] if p["significant"]]} for k, v in tests.items()},
            "sensitivity_column_null": {k: {"top": _top(v), "pairs": [p for p in v["pairs"] if p["significant"]]} for k, v in column.items()},
            "verdicts": verdicts, "pair_details": [pair_detail(A, B, al, *v["rows"]) for v in verdicts], "extra": {}}
-    for path in extra:
-        X, _ = load_rows(path)
-        r = rowsim.row_similarity(X, cfg=cfg)
-        out["extra"][str(path)] = {"stats": _stats(X), "top": _top(r), "pairs": [p for p in r["pairs"] if p["significant"]]}
     return out
 
 

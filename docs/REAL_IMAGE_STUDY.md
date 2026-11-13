@@ -22,8 +22,9 @@ python -m babel image-study prepare study-img4494 --image IMG_4494.jpeg \
 
 | ファイル | 内容 |
 |---|---|
-| `baseline/`、`improved/`、`improved-v2/` | 各方式の `glyph-report.json`（記号の座標とクラス）と `annotated.png` |
-| `comparison.png` | 3方式の認識結果を縦に並べた画像（人が見比べるため） |
+| `baseline/`、`improved/`、`improved-v2/`、`improved-v3/` | 各方式の `glyph-report.json`（記号の座標とクラス）と `annotated.png` |
+| `comparison.png` | 各方式の認識結果を縦に並べた画像（人が見比べるため） |
+| `rows-comparison.png` | 各方式の**行の分け方**を横に並べた画像。同じ行の記号は同じ色の枠、左に行の番号。行が分かれた・つながった場所を目で確かめる（docs/VISION_EVAL_V3.md） |
 | `methods-comparison.json` | 方式どうしの一致（枠の対応・クラスの ARI）。**正しさではない** |
 | `gt.json` | 正解転写の下書き。**すべて未確認（verified=false）・字形名なし**。各記号の `proposed` に両方式のクラスを参考として残す。既にあれば上書きしない |
 | `study.json` | 画像の sha256・大きさ・領域・OpenCV の版 |

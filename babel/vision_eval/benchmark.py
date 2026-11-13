@@ -16,7 +16,8 @@ from pathlib import Path
 from . import synth
 
 METRICS = ["f1", "precision", "recall", "ari", "nmi", "split_glyphs", "merged_predictions", "class_ratio",
-           "oversplit_extra_clusters", "mismerged_extra_labels", "line_f1", "non_glyph", "seconds", "peak_kib"]
+           "oversplit_extra_clusters", "mismerged_extra_labels", "line_f1", "line_oversplit_extra_rows", "line_merged_rows",
+           "non_glyph", "seconds", "peak_kib"]
 
 
 def _row(ev):
@@ -26,6 +27,8 @@ def _row(ev):
             "merged_predictions": s.get("merged_predictions"), "class_ratio": c.get("class_ratio_predicted_per_true"),
             "oversplit_extra_clusters": c.get("oversplit_extra_clusters"),
             "mismerged_extra_labels": c.get("mismerged_extra_labels"), "line_f1": ln.get("f1"),
+            "line_oversplit_extra_rows": (ln.get("errors") or {}).get("oversplit_extra_rows"),
+            "line_merged_rows": (ln.get("errors") or {}).get("merged_rows"),
             "non_glyph": d.get("non_glyph_detected_as_glyph")}
 
 

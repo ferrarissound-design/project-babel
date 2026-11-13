@@ -2,12 +2,13 @@
 
 画像を受け取ったときにすぐ始められるように、次の手順を1つのディレクトリ（STUDY_DIR）にまとめる。
 
-1. prepare   画像を既存方式（baseline）と改善方式（improved, improved-v2）で認識し、比較の画像と JSON を作る。
+1. prepare   画像を既存方式（baseline）と改善方式（improved, improved-v2, improved-v3）で認識し、比較の画像と JSON を作る。
+             rows-comparison.png は、方式ごとに「同じ行の記号は同じ色の枠」で描いて並べたもの（行の分け方の違いを見る）。
              人が直すための正解転写の下書き（gt.json、すべて未確認・label なし）を作る。既にあれば上書きしない
 2. （人）    python -m babel annotate IMG --gt STUDY_DIR/gt.json で、枠・分割・結合・字形名を直し、確認済みにする
 3. status    正解転写の確認の進み具合（評価できる範囲）
 4. evaluate  両方式の認識結果を正解転写と比べる（F1・分割・結合・ARI・NMI・行）。確認済みがなければ「測定不能」
-5. structure 正解転写（A）・既存方式（B）・改善方式（C = improved、C2 = improved-v2）を同じ設定の構造解析にかけ、
+5. structure 正解転写（A）・既存方式（B）・改善方式（C = improved、C2 = improved-v2、D = improved-v3）を同じ設定の構造解析にかけ、
              仮説を画像上の位置で照合して比べる。
              確認済みの正解がなければ「評価待ち」として結果を作らない
 
@@ -23,8 +24,9 @@ from pathlib import Path
 
 from . import groundtruth as G
 
-METHODS = ("baseline", "improved", "improved-v2")
-LETTERS = {"baseline": "B", "improved": "C", "improved-v2": "C2"}
+METHODS = ("baseline", "improved", "improved-v2", "improved-v3")
+LETTERS = {"baseline": "B", "improved": "C", "improved-v2": "C2", "improved-v3": "D"}
+ROW_COLORS = [(200, 60, 30), (30, 140, 30), (40, 40, 210), (170, 30, 160), (20, 150, 170), (120, 90, 20), (90, 20, 220), (10, 100, 240)]
 PENDING = "評価待ち"
 STRUCTURE_CFG = {"permutations": 999, "subsamples": 10, "perturbations": 6, "seed": 0}
 
@@ -99,6 +101,30 @@ def _draw(image, report, path, title):
     return img
 
 
+def draw_rows(image, report, title, scale=2):
+    """認識結果を、行ごとに色を変えた枠で描く（行の分け方を目で確かめるため）。image は BGR の配列。"""
+    import cv2
+    img = cv2.resize(image, None, fx=scale, fy=scale, interpolation=cv2.INTER_NEAREST)
+    pad = 26
+    img = cv2.copyMakeBorder(img, 18, 2, pad, 2, cv2.BORDER_CONSTANT, value=(255, 255, 255))
+    for k, row in enumerate(report["rows"]):
+        col = ROW_COLORS[k % len(ROW_COLORS)]
+        for gi in row["glyph_indices"]:
+            x1, y1, x2, y2 = (v * scale for v in report["glyphs"][gi]["box"])
+            cv2.rectangle(img, (x1 + pad, y1 + 18), (x2 - 1 + pad, y2 - 1 + 18), col, 1)
+        y = (row["box"][1] + row["box"][3]) * scale // 2 + 18
+        cv2.putText(img, str(k + 1), (2, y + 4), cv2.FONT_HERSHEY_SIMPLEX, 0.38, col, 1, cv2.LINE_AA)
+    cv2.putText(img, title, (4, 12), cv2.FONT_HERSHEY_SIMPLEX, 0.4, (0, 0, 0), 1, cv2.LINE_AA)
+    return img
+
+
+def side_by_side(images):
+    import cv2
+    import numpy as np
+    h = max(i.shape[0] for i in images)
+    return np.hstack([cv2.copyMakeBorder(i, 0, h - i.shape[0], 0, 6, cv2.BORDER_CONSTANT, value=(255, 255, 255)) for i in images])
+
+
 def compare_methods(rep_a, rep_b):
     """2つの認識結果の一致（枠の1対1の対応と、対応した記号どうしのクラスの構造）。正解は使わない。"""
     from .evaluate import adjusted_rand, match, nmi
@@ -137,8 +163,13 @@ def prepare(image, study_dir, regions=None):
         reports[m] = rep
     imgs = [_draw(image, reports[m], out / m / "annotated.png", m) for m in METHODS]
     cv2.imwrite(str(out / "comparison.png"), np.vstack(imgs))
+    color = cv2.imread(str(image), cv2.IMREAD_COLOR)
+    scale = 2 if max(h, w) <= 1200 else 1
+    cv2.imwrite(str(out / "rows-comparison.png"),
+                side_by_side([draw_rows(color, reports[m], f"{m}: {len(reports[m]['rows'])} rows", scale) for m in METHODS]))
     cmp = {f"{x}_vs_{y}": compare_methods(reports[x], reports[y])
-           for x, y in (("baseline", "improved"), ("baseline", "improved-v2"), ("improved", "improved-v2"))}
+           for x, y in (("baseline", "improved"), ("baseline", "improved-v2"), ("improved", "improved-v2"),
+                        ("baseline", "improved-v3"), ("improved-v2", "improved-v3"))}
     _write(out / "methods-comparison.json", cmp)
     gt_path = out / "gt.json"
     created = False

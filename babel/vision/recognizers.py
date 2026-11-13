@@ -6,6 +6,8 @@
     projection  既存の babel vision（行の投影 → 列の投影）
     components  連結成分。行は成分の縦の中心でまとめ、点などの小さな成分は近い記号に付け、
                 横方向に少しでも重なる成分は1つの記号にまとめる（開発用データで選択）
+                行のまとめ方は line_method で選べる（babel/vision/lines.py）。improved・improved-v2 は従来の "center"、
+                improved-v3 は "hybrid"
 - 分類:
     iou         既存と同じ（32×32 に引き伸ばした形の IoU と大きさの近さ、先着の代表と比較）
     template    縦横比を保って 32×32 に収め、ぼかした画像の正規化相互相関（平均連結の階層クラスタリング）
@@ -50,8 +52,11 @@ def _width_join(glyphs, H, alpha, beta):
 
 
 def segment_components(mask, remove_rules=True, min_area=3, small_ratio=0.35, join_gap_ratio=0.35, join_overlap=0.0,
-                       join_width=None, join_width_gap=0.5):
-    """戻り値: rows = [[box, ...], ...]（行ごとに左から）"""
+                       join_width=None, join_width_gap=0.5, line_method="center", line_kw=None):
+    """戻り値: rows = [[box, ...], ...]（行ごとに左から）
+
+    line_method: 成分を行にまとめる方式（babel/vision/lines.py）。"center" は従来の処理（improved・improved-v2）で、
+    この関数の中の元のコードをそのまま通る。それ以外は行のまとめ方だけを差し替え、行の中の部品の結合は同じ。"""
     cv2, np = _dependencies()
     m = _without_rules(mask) if remove_rules else mask
     n, lab, stats, _ = cv2.connectedComponentsWithStats((m > 0).astype(np.uint8), connectivity=8)
@@ -66,26 +71,30 @@ def segment_components(mask, remove_rules=True, min_area=3, small_ratio=0.35, jo
     med_h = hs[len(hs) // 2]
     big = [c for c in comps if (c[3] - c[1]) >= small_ratio * med_h]
     small = [c for c in comps if (c[3] - c[1]) < small_ratio * med_h]
-    # 行: 大きな成分を縦の中心の順に並べ、前の行の中心から離れたら新しい行
-    big.sort(key=lambda c: (c[1] + c[3]) / 2)
-    rows = []
-    for c in big:
-        cy = (c[1] + c[3]) / 2
-        if rows:
-            r = rows[-1]
-            rcy = sum((d[1] + d[3]) / 2 for d in r) / len(r)
-            if abs(cy - rcy) <= 0.6 * med_h:
-                r.append(c)
-                continue
-        rows.append([c])
-    # 小さな成分（点など）: 縦に最も近い行の、横に最も近い成分の記号に付ける（近すぎなければ単独の記号）
-    for c in small:
-        cy = (c[1] + c[3]) / 2
-        best = min(range(len(rows)), key=lambda k: min(abs(cy - (d[1] + d[3]) / 2) for d in rows[k])) if rows else None
-        if best is None:
+    if line_method != "center":
+        from .lines import group_rows
+        rows = group_rows(comps, m, line_method, **(line_kw or {}))
+    else:
+        # 行: 大きな成分を縦の中心の順に並べ、前の行の中心から離れたら新しい行
+        big.sort(key=lambda c: (c[1] + c[3]) / 2)
+        rows = []
+        for c in big:
+            cy = (c[1] + c[3]) / 2
+            if rows:
+                r = rows[-1]
+                rcy = sum((d[1] + d[3]) / 2 for d in r) / len(r)
+                if abs(cy - rcy) <= 0.6 * med_h:
+                    r.append(c)
+                    continue
             rows.append([c])
-            continue
-        rows[best].append(c)
+        # 小さな成分（点など）: 縦に最も近い行の、横に最も近い成分の記号に付ける（近すぎなければ単独の記号）
+        for c in small:
+            cy = (c[1] + c[3]) / 2
+            best = min(range(len(rows)), key=lambda k: min(abs(cy - (d[1] + d[3]) / 2) for d in rows[k])) if rows else None
+            if best is None:
+                rows.append([c])
+                continue
+            rows[best].append(c)
     out = []
     for r in rows:
         r.sort(key=lambda c: c[0])
@@ -221,6 +230,12 @@ METHODS = {
     # join_width・join_width_gap は dev だけで選び（0.95, 0.5）、val で確かめた。test では変えない（docs/ISSUES.md #68）
     "improved-v2":       {"preprocess": "median", "segment": "components", "classify": "template",
                           "seg": {"join_width": 0.95, "join_width_gap": 0.5}},
+    # improved-v3: improved-v2 の行のまとめ方だけを替えたもの（babel/vision/lines.py の hybrid）。前処理・部品の結合・分類は同じ。
+    # 行の方式と閾値は、行の作りを変えた人工画像（babel/vision_eval/layout.py）の dev で選び、val で確かめた。
+    # holdout（別の字の作り・別の劣化）は最終評価に1回だけ使った（docs/VISION_EVAL_V3.md、docs/ISSUES.md #72）
+    "improved-v3":       {"preprocess": "median", "segment": "components", "classify": "template",
+                          "seg": {"join_width": 0.95, "join_width_gap": 0.5, "line_method": "hybrid",
+                                  "line_kw": {"small": 0.5, "depth": 0.3, "join_gap": 0.4}}},
     "baseline":          {"preprocess": "otsu",   "segment": "projection", "classify": "iou"},
     "proj+combined":     {"preprocess": "otsu",   "segment": "projection", "classify": "combined"},
     "cc+iou":            {"preprocess": "otsu",   "segment": "components", "classify": "iou"},

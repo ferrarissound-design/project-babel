@@ -1,0 +1,39 @@
+{
+ "split": "dev",
+ "images": 216,
+ "base": "improved-v2",
+ "line_method": "projection",
+ "grid": {
+  "bridge": [
+   0.4,
+   0.5
+  ]
+ },
+ "criterion": "過剰分割（余分な行）と誤結合（行）の合計が最小（同点は行 F1）",
+ "rows": [
+  {
+   "params": {
+    "bridge": 0.5
+   },
+   "line_f1": 0.3742,
+   "oversplit_extra_rows": 0,
+   "merged_rows": 1.2269,
+   "line_errors": 1.2269,
+   "f1": 0.3203,
+   "ari": 0.9105,
+   "images_without_line_error": 49
+  },
+  {
+   "params": {
+    "bridge": 0.4
+   },
+   "line_f1": 0.463,
+   "oversplit_extra_rows": 0.037,
+   "merged_rows": 1.1944,
+   "line_errors": 1.2314,
+   "f1": 0.3909,
+   "ari": 0.9248,
+   "images_without_line_error": 58
+  }
+ ]
+}

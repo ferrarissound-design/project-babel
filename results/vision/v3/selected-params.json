@@ -1,0 +1,42 @@
+{
+ "selected_on": "dev",
+ "criterion": "過剰分割（余分な行）と誤結合（行）の合計が最小",
+ "params": {
+  "center_scaled": {
+   "tol": 1.2
+  },
+  "projection": {
+   "bridge": 0.3
+  },
+  "overlap": {
+   "attach": 1.0,
+   "tau": 0.3
+  },
+  "baseline": {
+   "seed_ratio": 0.5,
+   "tol": 0.7
+  },
+  "hybrid": {
+   "depth": 0.3,
+   "join_gap": 0.4,
+   "small": 0.5
+  }
+ },
+ "hybrid_best_on_dev_with_corrected_metric": {
+  "depth": 0.2,
+  "join_gap": 0.45,
+  "small": 0.4
+ },
+ "hybrid_frozen": {
+  "params": {
+   "depth": 0.3,
+   "join_gap": 0.4,
+   "small": 0.5
+  },
+  "rank_on_dev_with_corrected_metric": 5,
+  "of": 30,
+  "line_errors": 0.787,
+  "best_line_errors": 0.7315,
+  "note": "評価器の修正（docs/ISSUES.md #75）の前の指標で dev から選んだ値。holdout を2回使わないために変えていない"
+ }
+}

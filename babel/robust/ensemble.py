@@ -34,7 +34,9 @@ MEMBERS = [
     {"name": "baseline", "base": "baseline"},
 ]
 
-SOFT_TAU = 0.3      # 字形の類似度の重み: max(0, 1 - 距離 / tau)。dev で選んだ値（docs/ROBUST_STRUCTURE.md 第3節）
+# 字形の類似度の重み: max(0, 1 - 距離 / tau)。dev では tau = 0.2・0.3・0.45 のどれも、クラス番号の一致による検定より良くならず、
+# 選択の基準（仕込みのない画像での誤発見が 0.05 以下）を満たさなかった。判定には使わず、参考として出すだけ（docs/ROBUST_STRUCTURE.md）
+SOFT_TAU = 0.3
 
 
 def _clean_mask(path, regions, preprocess="median"):

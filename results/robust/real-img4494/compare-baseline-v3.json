@@ -3472,6 +3472,625 @@
    "class": "一方の転写だけで有意"
   }
  ],
+ "pair_details": [
+  {
+   "rows": [
+    0,
+    1
+   ],
+   "a_matches": [
+    {
+     "positions": [
+      0,
+      0
+     ],
+     "class": 0,
+     "other": "same",
+     "other_classes": [
+      [
+       0
+      ],
+      [
+       0
+      ]
+     ]
+    },
+    {
+     "positions": [
+      1,
+      1
+     ],
+     "class": 1,
+     "other": "same",
+     "other_classes": [
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    },
+    {
+     "positions": [
+      3,
+      3
+     ],
+     "class": 3,
+     "other": "same",
+     "other_classes": [
+      [
+       3
+      ],
+      [
+       3
+      ]
+     ]
+    }
+   ],
+   "b_matches": [
+    {
+     "positions": [
+      0,
+      0
+     ],
+     "class": 0,
+     "other": "same",
+     "other_classes": [
+      [
+       0
+      ],
+      [
+       0
+      ]
+     ]
+    },
+    {
+     "positions": [
+      1,
+      1
+     ],
+     "class": 1,
+     "other": "same",
+     "other_classes": [
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    },
+    {
+     "positions": [
+      2,
+      2
+     ],
+     "class": 2,
+     "other": "different",
+     "other_classes": [
+      [
+       2
+      ],
+      [
+       7
+      ]
+     ]
+    },
+    {
+     "positions": [
+      3,
+      3
+     ],
+     "class": 3,
+     "other": "same",
+     "other_classes": [
+      [
+       3
+      ],
+      [
+       3
+      ]
+     ]
+    }
+   ],
+   "shared_ngrams_a": 1,
+   "shared_ngrams_b": 6,
+   "row_a": [
+    [
+     0,
+     1,
+     2,
+     3,
+     4,
+     5,
+     6
+    ],
+    [
+     0,
+     1,
+     7,
+     3,
+     8,
+     9,
+     10
+    ]
+   ],
+   "row_b": [
+    [
+     0,
+     1,
+     2,
+     3,
+     2,
+     4,
+     5
+    ],
+    [
+     0,
+     1,
+     2,
+     3,
+     6,
+     7,
+     8
+    ]
+   ]
+  },
+  {
+   "rows": [
+    0,
+    9
+   ],
+   "a_matches": [
+    {
+     "positions": [
+      1,
+      0
+     ],
+     "class": 1,
+     "other": "same",
+     "other_classes": [
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    },
+    {
+     "positions": [
+      2,
+      1
+     ],
+     "class": 2,
+     "other": "same",
+     "other_classes": [
+      [
+       2
+      ],
+      [
+       2
+      ]
+     ]
+    },
+    {
+     "positions": [
+      3,
+      3
+     ],
+     "class": 3,
+     "other": "same",
+     "other_classes": [
+      [
+       3
+      ],
+      [
+       3
+      ]
+     ]
+    },
+    {
+     "positions": [
+      5,
+      7
+     ],
+     "class": 5,
+     "other": "split_or_merged",
+     "other_classes": [
+      [
+       4
+      ],
+      [
+       61,
+       62
+      ]
+     ]
+    }
+   ],
+   "b_matches": [
+    {
+     "positions": [
+      1,
+      0
+     ],
+     "class": 1,
+     "other": "same",
+     "other_classes": [
+      [
+       1
+      ],
+      [
+       1
+      ]
+     ]
+    },
+    {
+     "positions": [
+      2,
+      1
+     ],
+     "class": 2,
+     "other": "same",
+     "other_classes": [
+      [
+       2
+      ],
+      [
+       2
+      ]
+     ]
+    },
+    {
+     "positions": [
+      3,
+      3
+     ],
+     "class": 3,
+     "other": "same",
+     "other_classes": [
+      [
+       3
+      ],
+      [
+       3
+      ]
+     ]
+    }
+   ],
+   "shared_ngrams_a": 1,
+   "shared_ngrams_b": 1,
+   "row_a": [
+    [
+     0,
+     1,
+     2,
+     3,
+     4,
+     5,
+     6
+    ],
+    [
+     1,
+     2,
+     53,
+     3,
+     54,
+     55,
+     56,
+     5,
+     57
+    ]
+   ],
+   "row_b": [
+    [
+     0,
+     1,
+     2,
+     3,
+     2,
+     4,
+     5
+    ],
+    [
+     1,
+     2,
+     57,
+     3,
+     58,
+     59,
+     60,
+     61,
+     62,
+     63
+    ]
+   ]
+  },
+  {
+   "rows": [
+    3,
+    4
+   ],
+   "a_matches": [
+    {
+     "positions": [
+      1,
+      1
+     ],
+     "class": 19,
+     "other": "same",
+     "other_classes": [
+      [
+       20
+      ],
+      [
+       20
+      ]
+     ]
+    },
+    {
+     "positions": [
+      3,
+      3
+     ],
+     "class": 21,
+     "other": "same",
+     "other_classes": [
+      [
+       22
+      ],
+      [
+       22
+      ]
+     ]
+    },
+    {
+     "positions": [
+      4,
+      4
+     ],
+     "class": 22,
+     "other": "different",
+     "other_classes": [
+      [
+       23
+      ],
+      [
+       29
+      ]
+     ]
+    },
+    {
+     "positions": [
+      5,
+      5
+     ],
+     "class": 23,
+     "other": "same",
+     "other_classes": [
+      [
+       24
+      ],
+      [
+       24
+      ]
+     ]
+    }
+   ],
+   "b_matches": [
+    {
+     "positions": [
+      1,
+      1
+     ],
+     "class": 20,
+     "other": "same",
+     "other_classes": [
+      [
+       19
+      ],
+      [
+       19
+      ]
+     ]
+    },
+    {
+     "positions": [
+      3,
+      4
+     ],
+     "class": 22,
+     "other": "same",
+     "other_classes": [
+      [
+       21
+      ],
+      [
+       21
+      ]
+     ]
+    },
+    {
+     "positions": [
+      5,
+      6
+     ],
+     "class": 24,
+     "other": "same",
+     "other_classes": [
+      [
+       23
+      ],
+      [
+       23
+      ]
+     ]
+    },
+    {
+     "positions": [
+      7,
+      7
+     ],
+     "class": 26,
+     "other": "different",
+     "other_classes": [
+      [
+       25
+      ],
+      [
+       28
+      ]
+     ]
+    }
+   ],
+   "shared_ngrams_a": 3,
+   "shared_ngrams_b": 0,
+   "row_a": [
+    [
+     18,
+     19,
+     20,
+     21,
+     22,
+     23,
+     24,
+     25
+    ],
+    [
+     26,
+     19,
+     27,
+     21,
+     22,
+     23,
+     28
+    ]
+   ],
+   "row_b": [
+    [
+     19,
+     20,
+     21,
+     22,
+     23,
+     24,
+     25,
+     26
+    ],
+    [
+     27,
+     20,
+     28,
+     28,
+     22,
+     29,
+     24,
+     26
+    ]
+   ]
+  },
+  {
+   "rows": [
+    4,
+    6
+   ],
+   "a_matches": [
+    {
+     "positions": [
+      1,
+      0
+     ],
+     "class": 19,
+     "other": "split_or_merged",
+     "other_classes": [
+      [
+       20
+      ],
+      [
+       36,
+       37
+      ]
+     ]
+    },
+    {
+     "positions": [
+      3,
+      4
+     ],
+     "class": 21,
+     "other": "split_or_merged",
+     "other_classes": [
+      [
+       22
+      ],
+      [
+       40
+      ]
+     ]
+    },
+    {
+     "positions": [
+      6,
+      7
+     ],
+     "class": 28,
+     "other": "missing",
+     "other_classes": [
+      [
+       26
+      ],
+      []
+     ]
+    }
+   ],
+   "b_matches": [],
+   "shared_ngrams_a": 0,
+   "shared_ngrams_b": 0,
+   "row_a": [
+    [
+     26,
+     19,
+     27,
+     21,
+     22,
+     23,
+     28
+    ],
+    [
+     19,
+     35,
+     36,
+     37,
+     21,
+     38,
+     38,
+     28
+    ]
+   ],
+   "row_b": [
+    [
+     27,
+     20,
+     28,
+     28,
+     22,
+     29,
+     24,
+     26
+    ],
+    [
+     36,
+     37,
+     38,
+     39,
+     40,
+     41,
+     42
+    ]
+   ]
+  }
+ ],
  "extra": {
   "results/robust/real-img4494/inputs/v2-continuous.json": {
    "stats": {

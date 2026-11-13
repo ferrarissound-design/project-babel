@@ -50,12 +50,50 @@ def compare(path_a, path_b, extra=(), cfg=None):
            "tests": {k: {**{x: v[x] for x in ("statistic", "null", "correction", "permutations", "alpha", "min_score", "n_pairs")},
                          "top": _top(v), "pairs": [p for p in v["pairs"] if p["significant"]]} for k, v in tests.items()},
            "sensitivity_column_null": {k: {"top": _top(v), "pairs": [p for p in v["pairs"] if p["significant"]]} for k, v in column.items()},
-           "verdicts": verdicts, "extra": {}}
+           "verdicts": verdicts, "pair_details": [pair_detail(A, B, al, *v["rows"]) for v in verdicts], "extra": {}}
     for path in extra:
         X, _ = load_rows(path)
         r = rowsim.row_similarity(X, cfg=cfg)
         out["extra"][str(path)] = {"stats": _stats(X), "top": _top(r), "pairs": [p for p in r["pairs"] if p["significant"]]}
     return out
+
+
+def _shared_ngrams(a, b, sizes=(2, 3, 4)):
+    """2つの行が共有する 2〜4 記号列の種類の数（既存の linepair 族が数えるもの）。"""
+    def grams(r):
+        return {tuple(r[k:k + n]) for n in sizes for k in range(len(r) - n + 1)}
+    return len(grams(a) & grams(b))
+
+
+def pair_detail(A, B, al, i, j):
+    """行 i と行 j の対応する記号を、もう一方の転写がどう見たか（同じ／別のクラス／分割・結合）。"""
+    def eq(x, y):
+        return 1.0 if x == y else 0.0
+
+    def view(X, Y, side):
+        maps = []
+        for row in (i, j):
+            m = {}
+            for pa, pb in al["columns"][row]:
+                src, dst = (pa, pb) if side == "a" else (pb, pa)
+                for q in src:
+                    m[q] = (dst, len(src))
+            maps.append(m)
+        out = []
+        for pi, pj, _ in rowsim.lcs_alignment(X[i], X[j], eq):
+            (di, ni), (dj, nj) = maps[0].get(pi, ((), 1)), maps[1].get(pj, ((), 1))
+            if len(di) == 1 and len(dj) == 1 and ni == 1 and nj == 1:
+                other = "same" if Y[i][di[0]] == Y[j][dj[0]] else "different"
+            elif not di or not dj:
+                other = "missing"
+            else:
+                other = "split_or_merged"
+            out.append({"positions": [pi, pj], "class": X[i][pi], "other": other,
+                        "other_classes": [[Y[i][q] for q in di], [Y[j][q] for q in dj]]})
+        return out
+    return {"rows": [i, j], "a_matches": view(A, B, "a"), "b_matches": view(B, A, "b"),
+            "shared_ngrams_a": _shared_ngrams(A[i], A[j]), "shared_ngrams_b": _shared_ngrams(B[i], B[j]),
+            "row_a": [A[i], A[j]], "row_b": [B[i], B[j]]}
 
 
 def _stats(rows):
@@ -122,7 +160,18 @@ def compare_markdown(res, name_a="A", name_b="B"):
           f"| {'、'.join(names[k] for k in v['column_null']) or '—'} |")
     w("\n位置を保つ帰無モデル（感度分析）: 行の先頭から数えた位置が同じ記号どうしだけを入れ替える。"
       "「どの行も同じ書き出しで始まる」ような位置の決まりだけで行が似て見える場合は、このモデルでは有意にならない。")
-    w("\n- 「どの転写でも有意」な組は、2つの方式の分類の食い違いをどちらに倒しても残る。ただし2つの方式に共通する誤りが作った可能性は、"
+    w("\n### 行の組ごとの内訳: 一方の転写で対応した記号を、もう一方はどう見たか\n")
+    word = {"same": "同じクラス", "different": "**別のクラス**", "split_or_merged": "**分割・結合**", "missing": "相手なし"}
+    for d in res["pair_details"]:
+        i, j = d["rows"]
+        w(f"**行 ({i}, {j})** — 共有する 2〜4 記号列（既存の検定が数えるもの）: {name_a} {d['shared_ngrams_a']} 種、{name_b} {d['shared_ngrams_b']} 種\n")
+        w(f"- {name_a}: 行 {i} `{' '.join(map(str, d['row_a'][0]))}` / 行 {j} `{' '.join(map(str, d['row_a'][1]))}`")
+        w(f"- {name_b}: 行 {i} `{' '.join(map(str, d['row_b'][0]))}` / 行 {j} `{' '.join(map(str, d['row_b'][1]))}`")
+        for side, nm, other in (("a_matches", name_a, name_b), ("b_matches", name_b, name_a)):
+            cells = [f"{m['class']}→{word[m['other']]}" for m in d[side]]
+            w(f"- {nm} で対応した記号（{len(cells)} 個）を {other} で見ると: {'、'.join(cells) or '—'}")
+        w("")
+    w("- 「どの転写でも有意」な組は、2つの方式の分類の食い違いをどちらに倒しても残る。ただし2つの方式に共通する誤りが作った可能性は、"
       "画像か正解の転写がないと除けない")
     w("- 細かい側・粗い側は、2つの転写の「同じ／違う」の食い違いを挟む2つの極。切り出し（記号の区切り）は A のまま")
     return "\n".join(L) + "\n"

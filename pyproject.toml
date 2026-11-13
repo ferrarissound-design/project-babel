@@ -21,6 +21,7 @@ ignore = ["B007", "B023", "B905", "E741"]
 
 [tool.ruff.lint.per-file-ignores]
 "babel/vision/annotate.py" = ["E501"]   # 埋め込みの HTML / JavaScript
+"babel/robust_eval/prose.py" = ["E501"]   # 報告書の本文（長い文と表の見出し）
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

@@ -110,13 +110,14 @@ def build():
             S_all[name]["opencv"] = res.get("opencv")
             (R / f"summary-{name}.json").write_text(json.dumps(S_all[name], ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
     inv = {name: _load(f"inventory-{name}.json") for name in SPLIT_NAMES}
+    cb = {name: _load(f"compare-bench-{name}.json") for name in SPLIT_NAMES}
     cmp_ = _load("real-img4494/compare-baseline-v3.json")
     preds = _load("predictions.json")
     checks = check_predictions(S_all, k)
     (R / "prediction-check.json").write_text(json.dumps([{"id": i, "held": ok, "observed": obs} for i, ok, obs in checks],
                                                         ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
     from . import prose
-    text = prose.render({"S": S_all, "sel": sel, "k": k, "vk": vk, "inv": inv, "cmp": cmp_, "preds": preds, "checks": checks,
+    text = prose.render({"S": S_all, "sel": sel, "k": k, "vk": vk, "inv": inv, "cb": cb, "cmp": cmp_, "preds": preds, "checks": checks,
                          "method_table": method_table, "group_table": group_table, "vote_table": vote_table, "f": _f, "label": _label,
                          "MAIN": MAIN})
     Path("docs/ROBUST_STRUCTURE.md").write_text(text, encoding="utf-8")

@@ -148,6 +148,27 @@ def render(c):
       "統計量の妥当性（誤報告の率）と検出力は、この転写と無関係な人工データで測った（第5・6節）")
     w("- 言えない: 2組の意味。同じ書き出しの2行、同じ枠の2行という以上のことは分からない\n")
 
+    if any(c["cb"].values()):
+        w("### 2.6 この手順（転写2本だけの比較）は、正解つきの画像でどれだけ当たるか\n")
+        w("第2.3節の判定は、記号の位置を使わず、2本の転写のクラス番号の列だけから出した。同じ手順を正解つきの画像に使った（babel/robust_eval/compare_bench.py）。"
+          "対象は、baseline と improved-v3 の行数が同じ画像だけ（IMG_4494 と同じ条件）。\n")
+        w("| 分割 | 画像 | 行数が同じ画像 | 判定 | 仕込みのない画像で1つでも報告（95% 区間） | 仕込んだ組の発見率 | 真 / 偽 | 報告のうち真 |\n|---|---:|---:|---|---:|---:|---|---:|")
+        for n in ("dev", "holdout-synth", "holdout-font"):
+            b = c["cb"].get(n)
+            if not b:
+                continue
+            o = b["summary"]["overall"]
+            for key, lab in (("all_four", "どの転写でも有意（4つとも）"), ("one_only", "一方の転写だけで有意")):
+                if key not in o:
+                    continue
+                x = o[key]
+                ci = x["fwer_ci95"] or [None, None]
+                w(f"| {n} | {o['images']} | {o['eligible']} | {lab} | {f(x['fwer'])}（{f(ci[0], 2)}〜{f(ci[1], 2)}） | {f(x['recall'], 2)} | {x['true']} / {x['false']} "
+                  f"| {f(x['precision'], 2)} |")
+        w("")
+        w("- 行数が同じになる画像は、baseline の行認識が崩れない画像に偏る（行の作りが素直な画像）。IMG_4494 がそれに当たるかは分からない")
+        w("- 「どの転写でも有意」は、この表の範囲では、仕込んだ組にほぼ当たる。「一方の転写だけで有意」は当たる割合が下がる。"
+          "IMG_4494 の行 (0, 9)・(4, 6) を規則として扱わない根拠は、この差\n")
     # ------------------------------------------------------------------ 3
     w("## 3. 方法\n")
     w("### 3.1 行の組の類似の検定（babel/robust/rowsim.py）\n")
@@ -408,6 +429,7 @@ def render(c):
       "python -m babel.robust_eval.bench --split holdout-synth --out results/robust/bench-holdout-synth.json\n"
       "python -m babel.robust_eval.bench --split holdout-font --out results/robust/bench-holdout-font.json\n"
       "python -m babel.robust_eval.inventory --split dev --out results/robust/inventory-dev.json      # holdout-synth・holdout-font も同じ\n"
+      "python -m babel.robust_eval.compare_bench --split dev --out results/robust/compare-bench-dev.json  # 転写だけの比較の検証\n"
       "python -m babel.robust_eval.report\n```\n")
     w("- 画像の比較では、行の番号は基準の方式（improved-v3）の行。票が 5 以下の組は「保留」、1 の組は認識の誤りとして扱う")
     w("- 結果の JSON には、画像ごとの各方式の発見・票・認識の指標が入っている（results/robust/bench-*.json）。集計は summary-*.json")

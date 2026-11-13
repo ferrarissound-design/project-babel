@@ -1,0 +1,98 @@
+{
+ "split": "dev",
+ "images": 216,
+ "base": "improved-v2",
+ "line_method": "baseline",
+ "grid": {
+  "tol": [
+   0.4,
+   0.5,
+   0.7
+  ],
+  "seed_ratio": [
+   0.4,
+   0.5
+  ]
+ },
+ "criterion": "過剰分割（余分な行）と誤結合（行）の合計が最小（同点は行 F1）",
+ "rows": [
+  {
+   "params": {
+    "seed_ratio": 0.5,
+    "tol": 0.7
+   },
+   "line_f1": 0.8833,
+   "oversplit_extra_rows": 2.5556,
+   "merged_rows": 0.3889,
+   "line_errors": 2.9445,
+   "f1": 0.8143,
+   "ari": 0.9268,
+   "images_without_line_error": 148
+  },
+  {
+   "params": {
+    "seed_ratio": 0.4,
+    "tol": 0.7
+   },
+   "line_f1": 0.8962,
+   "oversplit_extra_rows": 2.9769,
+   "merged_rows": 0.4398,
+   "line_errors": 3.4167,
+   "f1": 0.8108,
+   "ari": 0.9251,
+   "images_without_line_error": 138
+  },
+  {
+   "params": {
+    "seed_ratio": 0.5,
+    "tol": 0.5
+   },
+   "line_f1": 0.8224,
+   "oversplit_extra_rows": 4.5602,
+   "merged_rows": 0.5648,
+   "line_errors": 5.125,
+   "f1": 0.7521,
+   "ari": 0.9201,
+   "images_without_line_error": 96
+  },
+  {
+   "params": {
+    "seed_ratio": 0.4,
+    "tol": 0.5
+   },
+   "line_f1": 0.7992,
+   "oversplit_extra_rows": 5.4259,
+   "merged_rows": 0.6157,
+   "line_errors": 6.0416,
+   "f1": 0.7219,
+   "ari": 0.9199,
+   "images_without_line_error": 90
+  },
+  {
+   "params": {
+    "seed_ratio": 0.5,
+    "tol": 0.4
+   },
+   "line_f1": 0.7632,
+   "oversplit_extra_rows": 6.625,
+   "merged_rows": 0.662,
+   "line_errors": 7.287,
+   "f1": 0.7126,
+   "ari": 0.9169,
+   "images_without_line_error": 57
+  },
+  {
+   "params": {
+    "seed_ratio": 0.4,
+    "tol": 0.4
+   },
+   "line_f1": 0.7478,
+   "oversplit_extra_rows": 7.2778,
+   "merged_rows": 0.7546,
+   "line_errors": 8.0324,
+   "f1": 0.6964,
+   "ari": 0.9164,
+   "images_without_line_error": 54
+  }
+ ]
+}

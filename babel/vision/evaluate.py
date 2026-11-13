@@ -5,6 +5,8 @@
 - 結合の誤り: 1つの予測が、面積の半分以上を覆う正解の記号を2つ以上含む
 - クラス: クラス番号は任意なので、番号の一致ではなく分類の構造を比べる（ARI・NMI・過剰分割・誤統合・純度）
 - 行: 行の枠を縦方向の IoU で1対1に対応付ける。改行が文の区切りでない行（continues_sentence）の数も数える
+- 行の分け方の誤り: 予測の各記号を、最も重なる正解の記号の行に対応させ、1つの正解の行が複数の予測の行に分かれた数
+  （過剰分割）と、1つの予測の行が複数の正解の行にまたがった数（誤結合）を数える。行の枠の一致（F1）とは別に測る
 - 位置: 対応した組の IoU・中心のずれ
 - 正解のうち人が確認していない項目（verified=false）は使わない。使える正解がなければ「測定不能」
 """
@@ -125,6 +127,38 @@ def class_structure(true, pred):
             "class_ratio_predicted_per_true": round(len(by_pred) / len(by_true), 3)}
 
 
+# ------------------------------------------------------------------------------------------------ 行の分け方
+
+def line_errors(report: dict, gt: dict) -> dict:
+    """行の過剰分割と誤結合（確認済みの行と、その行に属する確認済みの記号だけを使う）。
+
+    予測の記号は、枠が最も大きく重なる正解の記号の行に属するとみなす（どの正解の記号にも重ならない予測は数えない）。
+    行の枠の IoU による対応（行 F1）と違い、行の高さが少し違うだけでは誤りにならず、行のまとめ方だけを測る。
+    """
+    vlines = [ln["id"] for ln in gt["lines"] if ln["verified"]]
+    G = [it for it in gt["items"] if it["kind"] == "glyph" and it["verified"] and it["line"] in set(vlines)]
+    P = _pred_glyphs(report)
+    rows_of = defaultdict(set)                      # 正解の行 → その行の記号を含む予測の行
+    lines_of = defaultdict(set)                     # 予測の行 → 含まれる正解の行
+    for p in P:
+        if p["row"] is None:
+            continue
+        best, area = None, 0
+        for g in G:
+            a = _inter(p["box"], g["box"])
+            if a > area:
+                best, area = g, a
+        if best is not None:
+            rows_of[best["line"]].add(p["row"])
+            lines_of[p["row"]].add(best["line"])
+    return {"oversplit_lines": sum(1 for v in rows_of.values() if len(v) > 1),
+            "oversplit_extra_rows": sum(len(v) - 1 for v in rows_of.values()),
+            "merged_rows": sum(1 for v in lines_of.values() if len(v) > 1),
+            "merged_extra_lines": sum(len(v) - 1 for v in lines_of.values()),
+            "rows_without_gt_glyph": len(report.get("rows") or []) - len(lines_of),
+            "lines_without_prediction": len(vlines) - len(rows_of)}
+
+
 # ------------------------------------------------------------------------------------------------ 本体
 
 def _pred_glyphs(report):
@@ -240,6 +274,7 @@ def evaluate(report: dict, gt: dict, iou_thr=0.5) -> dict:
         else:
             lp = len(lm) / n_rows
             res.update(precision=round(lp, 4), recall=round(lr, 4), f1=round(2 * lp * lr / (lp + lr), 4) if lp + lr else 0.0)
+        res["errors"] = line_errors(report, gt)
         out["lines"] = res
     else:
         out["lines"] = {"status": UNMEASURABLE, "reason": "人が確認した行がない"}

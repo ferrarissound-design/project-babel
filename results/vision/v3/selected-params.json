@@ -1,0 +1,25 @@
+{
+ "selected_on": "dev",
+ "criterion": "過剰分割（余分な行）と誤結合（行）の合計が最小",
+ "params": {
+  "center_scaled": {
+   "tol": 1.2
+  },
+  "projection": {
+   "bridge": 0.5
+  },
+  "overlap": {
+   "attach": 1.0,
+   "tau": 0.3
+  },
+  "baseline": {
+   "seed_ratio": 0.5,
+   "tol": 0.7
+  },
+  "hybrid": {
+   "depth": 0.3,
+   "join_gap": 0.4,
+   "small": 0.5
+  }
+ }
+}

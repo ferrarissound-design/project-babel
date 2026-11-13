@@ -1,0 +1,65 @@
+{
+ "split": "dev",
+ "images": 216,
+ "base": "improved-v2",
+ "line_method": "center_scaled",
+ "grid": {
+  "tol": [
+   0.4,
+   0.6,
+   0.8,
+   1.0
+  ]
+ },
+ "criterion": "過剰分割（余分な行）と誤結合（行）の合計が最小（同点は行 F1）",
+ "rows": [
+  {
+   "params": {
+    "tol": 1.0
+   },
+   "line_f1": 0.9742,
+   "oversplit_extra_rows": 0.9167,
+   "merged_rows": 0.5046,
+   "line_errors": 1.4213,
+   "f1": 0.9281,
+   "ari": 0.9096,
+   "images_without_line_error": 167
+  },
+  {
+   "params": {
+    "tol": 0.8
+   },
+   "line_f1": 0.935,
+   "oversplit_extra_rows": 1.9861,
+   "merged_rows": 0.6435,
+   "line_errors": 2.6296,
+   "f1": 0.8912,
+   "ari": 0.9102,
+   "images_without_line_error": 150
+  },
+  {
+   "params": {
+    "tol": 0.6
+   },
+   "line_f1": 0.8594,
+   "oversplit_extra_rows": 3.875,
+   "merged_rows": 0.9352,
+   "line_errors": 4.8102,
+   "f1": 0.8037,
+   "ari": 0.911,
+   "images_without_line_error": 126
+  },
+  {
+   "params": {
+    "tol": 0.4
+   },
+   "line_f1": 0.7647,
+   "oversplit_extra_rows": 7.213,
+   "merged_rows": 1.1944,
+   "line_errors": 8.4074,
+   "f1": 0.7092,
+   "ari": 0.9137,
+   "images_without_line_error": 83
+  }
+ ]
+}

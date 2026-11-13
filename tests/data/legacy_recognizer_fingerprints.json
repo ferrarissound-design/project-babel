@@ -1,0 +1,125 @@
+{
+ "opencv": "4.14.0",
+ "cases": {
+  "font/clean/3/baseline": {
+   "rows": 8,
+   "glyphs": 113,
+   "sha256": "fc172f6aba3cce2e6b9722e57b0ace313d4e4cd7b9d29c07aa46ec0dc5dd432b"
+  },
+  "font/clean/3/improved": {
+   "rows": 8,
+   "glyphs": 113,
+   "sha256": "3a084379a66b7efe55e2583bb060fe4c1a10f7a54cf45f389da2652e67e41c20"
+  },
+  "font/clean/3/improved-v2": {
+   "rows": 8,
+   "glyphs": 113,
+   "sha256": "3a084379a66b7efe55e2583bb060fe4c1a10f7a54cf45f389da2652e67e41c20"
+  },
+  "stroke/clean/3/baseline": {
+   "rows": 8,
+   "glyphs": 116,
+   "sha256": "7929ffeaf90fb6aebcee22a8914c0cf2bb7be631788b31950ea7ff95d62af2dd"
+  },
+  "stroke/clean/3/improved": {
+   "rows": 8,
+   "glyphs": 113,
+   "sha256": "a6b780c8b489cf157e2427a4985f944f2748f7936b1adcfe652594eb3b1c3eba"
+  },
+  "stroke/clean/3/improved-v2": {
+   "rows": 8,
+   "glyphs": 111,
+   "sha256": "e3a055452818ad8e051e423add4178a93d493def09c67ec9c161db55b0cf3901"
+  },
+  "stroke/size_thickness/4/baseline": {
+   "rows": 8,
+   "glyphs": 103,
+   "sha256": "a07800b26672a0a4f71434230f1247f7316451fdd37c8fcda7c476eca85b002d"
+  },
+  "stroke/size_thickness/4/improved": {
+   "rows": 8,
+   "glyphs": 86,
+   "sha256": "1c8392d8c9aa94b2cd561d83fa4d44264416eae37f20c966455d89de4a5913ed"
+  },
+  "stroke/size_thickness/4/improved-v2": {
+   "rows": 8,
+   "glyphs": 83,
+   "sha256": "e9fb235a847f4ab90b05f3517e7178fcf28e600a6d9dca20b6d5834c01b22282"
+  },
+  "font/rules/5/baseline": {
+   "rows": 8,
+   "glyphs": 114,
+   "sha256": "8ea7837bd6f21d7624792ed35b4cd9af12398b294362f2c74214189201bd77ba"
+  },
+  "font/rules/5/improved": {
+   "rows": 8,
+   "glyphs": 113,
+   "sha256": "9c11c28d7632fbbbef8acd0b4fb8089d9bbfe1317acbd1c9e32ab09062291961"
+  },
+  "font/rules/5/improved-v2": {
+   "rows": 8,
+   "glyphs": 113,
+   "sha256": "9c11c28d7632fbbbef8acd0b4fb8089d9bbfe1317acbd1c9e32ab09062291961"
+  },
+  "stroke/noise/6/baseline": {
+   "rows": 1,
+   "glyphs": 7,
+   "sha256": "7280b632ff58f94d2fc0b35486fe734dbd5e4072aa65e6e70c68bdb402bbfe94"
+  },
+  "stroke/noise/6/improved": {
+   "rows": 11,
+   "glyphs": 115,
+   "sha256": "23b34942cc53fd3c99d3077d5dbabecc0b65eaee77a14490f561326ed94a4c00"
+  },
+  "stroke/noise/6/improved-v2": {
+   "rows": 11,
+   "glyphs": 109,
+   "sha256": "5507bb0abfc0507d33c1cd77b2c8e66cff9b040318246d0f858ab7f426f26a4d"
+  },
+  "stroke/spacing/7/baseline": {
+   "rows": 8,
+   "glyphs": 91,
+   "sha256": "796fa624a7e31564edf4146b2abe6e1a02c69223f8f12f20d9b7ff5655c6c593"
+  },
+  "stroke/spacing/7/improved": {
+   "rows": 8,
+   "glyphs": 105,
+   "sha256": "2b43beff0a06a20da28e3b388d48e6367db943638b2401e142e748ab27e24959"
+  },
+  "stroke/spacing/7/improved-v2": {
+   "rows": 8,
+   "glyphs": 103,
+   "sha256": "1c5924b05c286d3322c5c7a1f25925a38f0f58e88c5a71954b146a881faf02a2"
+  },
+  "font/wrapped/8/baseline": {
+   "rows": 8,
+   "glyphs": 105,
+   "sha256": "d7b4716bdfa7efb190513e917d85e84ea247538eb4ed8ba5267e9f94a6f11b9c"
+  },
+  "font/wrapped/8/improved": {
+   "rows": 8,
+   "glyphs": 105,
+   "sha256": "c1892654d8a04f54a68c844d71562424da3d89677f7387590723add505c5be33"
+  },
+  "font/wrapped/8/improved-v2": {
+   "rows": 8,
+   "glyphs": 105,
+   "sha256": "c1892654d8a04f54a68c844d71562424da3d89677f7387590723add505c5be33"
+  },
+  "stroke/similar/9/baseline": {
+   "rows": 8,
+   "glyphs": 117,
+   "sha256": "77d233f27cd77248bd0ec43c2eeeb66cf5c19b26dd28acff5f0aa994185b682d"
+  },
+  "stroke/similar/9/improved": {
+   "rows": 8,
+   "glyphs": 120,
+   "sha256": "dbd28b3608ec7c9eafc7d35d98edec68b3ba3973056148942d1fe962d9f71d4d"
+  },
+  "stroke/similar/9/improved-v2": {
+   "rows": 8,
+   "glyphs": 110,
+   "sha256": "81c734df210ce61110cbd4c55ad3092dbb15ee17dac3602e9bae1ece59494f0d"
+  }
+ }
+}

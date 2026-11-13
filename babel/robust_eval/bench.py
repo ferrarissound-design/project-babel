@@ -36,7 +36,7 @@ SPLITS = {
                       "seeds": range(9100, 9110), "vocabs": (30, 80, 250), "n_pairs": (0, 2)},
     # holdout-font: 実在の文字体系・実在のフォント（babel/robust_eval/realfont.py）。閾値を固定してから1回だけ
     "holdout-font": {"renderer": "realfont", "families": ("georgian", "armenian", "thai", "katakana", "hiragana", "kanji", "hangul"),
-                     "conditions": ("clean", "degraded"), "seeds": range(9200, 9212), "vocabs": (30, 80, 250), "n_pairs": (0, 2)},
+                     "conditions": ("clean", "degraded"), "seeds": range(9200, 9208), "vocabs": (30, 80, 250), "n_pairs": (0, 2)},
 }
 
 

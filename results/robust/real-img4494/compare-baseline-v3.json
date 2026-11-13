@@ -3099,6 +3099,317 @@
    ]
   }
  },
+ "sensitivity_column_null": {
+  "a": {
+   "top": [
+    {
+     "rows": [
+      3,
+      4
+     ],
+     "score": 4.0,
+     "z": 5.49,
+     "p_raw": 0.0006,
+     "p_adj": 0.0024,
+     "significant": true
+    },
+    {
+     "rows": [
+      0,
+      9
+     ],
+     "score": 4.0,
+     "z": 5.479,
+     "p_raw": 0.0002,
+     "p_adj": 0.0028,
+     "significant": true
+    },
+    {
+     "rows": [
+      0,
+      1
+     ],
+     "score": 3.0,
+     "z": 4.251,
+     "p_raw": 0.0022,
+     "p_adj": 0.0404,
+     "significant": true
+    },
+    {
+     "rows": [
+      4,
+      6
+     ],
+     "score": 3.0,
+     "z": 3.944,
+     "p_raw": 0.0046,
+     "p_adj": 0.0682,
+     "significant": false
+    },
+    {
+     "rows": [
+      1,
+      9
+     ],
+     "score": 2.0,
+     "z": 2.336,
+     "p_raw": 0.0676,
+     "p_adj": 0.8682,
+     "significant": false
+    },
+    {
+     "rows": [
+      3,
+      6
+     ],
+     "score": 2.0,
+     "z": 2.197,
+     "p_raw": 0.0818,
+     "p_adj": 0.938,
+     "significant": false
+    }
+   ],
+   "pairs": [
+    {
+     "rows": [
+      3,
+      4
+     ],
+     "score": 4.0,
+     "z": 5.49,
+     "null_mean": 0.513,
+     "p_raw": 0.0006,
+     "p_adj": 0.0024,
+     "significant": true,
+     "alignment": [
+      [
+       1,
+       1,
+       1.0
+      ],
+      [
+       3,
+       3,
+       1.0
+      ],
+      [
+       4,
+       4,
+       1.0
+      ],
+      [
+       5,
+       5,
+       1.0
+      ]
+     ]
+    },
+    {
+     "rows": [
+      0,
+      9
+     ],
+     "score": 4.0,
+     "z": 5.479,
+     "null_mean": 0.511,
+     "p_raw": 0.0002,
+     "p_adj": 0.0028,
+     "significant": true,
+     "alignment": [
+      [
+       1,
+       0,
+       1.0
+      ],
+      [
+       2,
+       1,
+       1.0
+      ],
+      [
+       3,
+       3,
+       1.0
+      ],
+      [
+       5,
+       7,
+       1.0
+      ]
+     ]
+    },
+    {
+     "rows": [
+      0,
+      1
+     ],
+     "score": 3.0,
+     "z": 4.251,
+     "null_mean": 0.447,
+     "p_raw": 0.0022,
+     "p_adj": 0.0404,
+     "significant": true,
+     "alignment": [
+      [
+       0,
+       0,
+       1.0
+      ],
+      [
+       1,
+       1,
+       1.0
+      ],
+      [
+       3,
+       3,
+       1.0
+      ]
+     ]
+    }
+   ]
+  },
+  "b": {
+   "top": [
+    {
+     "rows": [
+      0,
+      1
+     ],
+     "score": 4.0,
+     "z": 5.338,
+     "p_raw": 0.0002,
+     "p_adj": 0.0014,
+     "significant": true
+    },
+    {
+     "rows": [
+      3,
+      4
+     ],
+     "score": 4.0,
+     "z": 4.799,
+     "p_raw": 0.0004,
+     "p_adj": 0.0058,
+     "significant": true
+    },
+    {
+     "rows": [
+      0,
+      9
+     ],
+     "score": 3.0,
+     "z": 3.378,
+     "p_raw": 0.0096,
+     "p_adj": 0.1654,
+     "significant": false
+    },
+    {
+     "rows": [
+      1,
+      9
+     ],
+     "score": 3.0,
+     "z": 3.358,
+     "p_raw": 0.0096,
+     "p_adj": 0.1846,
+     "significant": false
+    },
+    {
+     "rows": [
+      5,
+      12
+     ],
+     "score": 3.0,
+     "z": 2.683,
+     "p_raw": 0.0258,
+     "p_adj": 0.6508,
+     "significant": false
+    },
+    {
+     "rows": [
+      0,
+      11
+     ],
+     "score": 2.0,
+     "z": 2.024,
+     "p_raw": 0.0992,
+     "p_adj": 0.8886,
+     "significant": false
+    }
+   ],
+   "pairs": [
+    {
+     "rows": [
+      0,
+      1
+     ],
+     "score": 4.0,
+     "z": 5.338,
+     "null_mean": 0.577,
+     "p_raw": 0.0002,
+     "p_adj": 0.0014,
+     "significant": true,
+     "alignment": [
+      [
+       0,
+       0,
+       1.0
+      ],
+      [
+       1,
+       1,
+       1.0
+      ],
+      [
+       2,
+       2,
+       1.0
+      ],
+      [
+       3,
+       3,
+       1.0
+      ]
+     ]
+    },
+    {
+     "rows": [
+      3,
+      4
+     ],
+     "score": 4.0,
+     "z": 4.799,
+     "null_mean": 0.685,
+     "p_raw": 0.0004,
+     "p_adj": 0.0058,
+     "significant": true,
+     "alignment": [
+      [
+       1,
+       1,
+       1.0
+      ],
+      [
+       3,
+       4,
+       1.0
+      ],
+      [
+       5,
+       6,
+       1.0
+      ],
+      [
+       7,
+       7,
+       1.0
+      ]
+     ]
+    }
+   ]
+  }
+ },
  "verdicts": [
   {
    "rows": [
@@ -3111,6 +3422,10 @@
     "fine",
     "coarse"
    ],
+   "column_null": [
+    "a",
+    "b"
+   ],
    "class": "どの転写でも有意"
   },
   {
@@ -3122,6 +3437,9 @@
     "a",
     "fine",
     "coarse"
+   ],
+   "column_null": [
+    "a"
    ],
    "class": "一方の転写だけで有意"
   },
@@ -3136,6 +3454,10 @@
     "fine",
     "coarse"
    ],
+   "column_null": [
+    "a",
+    "b"
+   ],
    "class": "どの転写でも有意"
   },
   {
@@ -3146,6 +3468,7 @@
    "significant_in": [
     "a"
    ],
+   "column_null": [],
    "class": "一方の転写だけで有意"
   }
  ],

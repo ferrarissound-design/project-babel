@@ -17,7 +17,7 @@ from __future__ import annotations
 import itertools
 import random
 
-DEFAULTS = {"permutations": 999, "alpha": 0.05, "min_score": 3.0, "seed": 0, "sd_floor": 0.25}
+DEFAULTS = {"permutations": 999, "alpha": 0.05, "min_score": 3.0, "seed": 0, "sd_floor": 0.25, "null": "global"}
 
 
 def lcs_score(a, b, weight):
@@ -53,13 +53,37 @@ def lcs_alignment(a, b, weight):
     return out[::-1]
 
 
-def _permutations(n_items, n_perm, seed):
+def _permutations(rows, n_perm, seed, null="global"):
+    """位置の入れ替え（置換ごとに、位置 → 元の位置）。
+
+    global: すべての位置を入れ替える。
+    column: 行の先頭から数えた位置が同じ記号どうしだけを入れ替える（「行の何番目にどの記号が来やすいか」は保つ）。
+            どの行も同じ書き出しで始まるような、位置の決まりだけで行が似て見える場合を除くための感度分析に使う。
+    """
     rng = random.Random(f"rowsim-{seed}")
-    order = list(range(n_items))
+    n_items = sum(len(r) for r in rows)
+    if null == "global":
+        order, out = list(range(n_items)), []
+        for _ in range(n_perm):
+            rng.shuffle(order)
+            out.append(list(order))
+        return out
+    if null != "column":
+        raise ValueError(f"帰無モデル {null}")
+    by_col, k = {}, 0
+    for r in rows:
+        for c in range(len(r)):
+            by_col.setdefault(c, []).append(k)
+            k += 1
     out = []
     for _ in range(n_perm):
-        rng.shuffle(order)
-        out.append(list(order))
+        order = list(range(n_items))
+        for c in sorted(by_col):
+            sh = list(by_col[c])
+            rng.shuffle(sh)
+            for dst, src in zip(by_col[c], sh):
+                order[dst] = src
+        out.append(order)
     return out
 
 
@@ -125,7 +149,7 @@ def row_similarity(rows, weight=None, weight_matrix=None, cfg=None, use_numpy=Tr
     rows = [list(r) for r in rows]
     pairs = [(i, j) for i, j in itertools.combinations(range(len(rows)), 2) if rows[i] and rows[j]]
     n_items = sum(len(r) for r in rows)
-    base = {"statistic": "lcs", "null": "global-shuffle", "correction": "maxT-studentized", "permutations": cfg["permutations"],
+    base = {"statistic": "lcs", "null": cfg["null"] + "-shuffle", "correction": "maxT-studentized", "permutations": cfg["permutations"],
             "alpha": cfg["alpha"], "min_score": cfg["min_score"], "seed": cfg["seed"], "rows": len(rows), "items": n_items}
     if not pairs:
         return {**base, "pairs": [], "n_pairs": 0}
@@ -136,7 +160,7 @@ def row_similarity(rows, weight=None, weight_matrix=None, cfg=None, use_numpy=Tr
         def weight(x, y):
             return 1.0 if x == y else 0.0
     obs = [lcs_score(rows[i], rows[j], weight) for i, j in pairs]
-    perms = _permutations(n_items, cfg["permutations"], cfg["seed"])
+    perms = _permutations(rows, cfg["permutations"], cfg["seed"], cfg["null"])
     null = None
     np = None
     if use_numpy:

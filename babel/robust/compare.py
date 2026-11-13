@@ -29,12 +29,14 @@ def compare(path_a, path_b, extra=(), cfg=None):
     br = crossalign.bracket(A, B, al)
     tests = {"a": rowsim.row_similarity(A, cfg=cfg), "b": rowsim.row_similarity(B, cfg=cfg),
              "fine": rowsim.row_similarity(br["fine"], cfg=cfg), "coarse": rowsim.row_similarity(br["coarse"], cfg=cfg)}
+    column = {k: rowsim.row_similarity(X, cfg={**cfg, "null": "column"}) for k, X in (("a", A), ("b", B))}
     sig = {k: set(rowsim.significant_pairs(v)) for k, v in tests.items()}
     union = sorted(set().union(*sig.values()))
     verdicts = []
     for p in union:
         where = [k for k in ("a", "b", "fine", "coarse") if p in sig[k]]
         verdicts.append({"rows": list(p), "significant_in": where,
+                         "column_null": [k for k in ("a", "b") if p in set(rowsim.significant_pairs(column[k]))],
                          "class": "どの転写でも有意" if len(where) == 4 else "両方の転写で有意" if {"a", "b"} <= set(where)
                          else "一方の転写だけで有意"})
     out = {"schema": "babel-transcription-compare-v1", "a": str(path_a), "b": str(path_b), "config": cfg,
@@ -47,6 +49,7 @@ def compare(path_a, path_b, extra=(), cfg=None):
            "hapax": crossalign.hapax_check(A, B, al),
            "tests": {k: {**{x: v[x] for x in ("statistic", "null", "correction", "permutations", "alpha", "min_score", "n_pairs")},
                          "top": _top(v), "pairs": [p for p in v["pairs"] if p["significant"]]} for k, v in tests.items()},
+           "sensitivity_column_null": {k: {"top": _top(v), "pairs": [p for p in v["pairs"] if p["significant"]]} for k, v in column.items()},
            "verdicts": verdicts, "extra": {}}
     for path in extra:
         X, _ = load_rows(path)
@@ -112,10 +115,13 @@ def compare_markdown(res, name_a="A", name_b="B"):
     for path, x in res["extra"].items():
         w(f"| {Path(path).stem}（行の分け方が違う。単独） | {x['stats']['classes']} | {_fmt_pairs(x['top'][:5])} |")
     w("\n### 判定\n")
-    w("| 行の組 | 有意だった転写 | 分類 |\n|---|---|---|")
+    w("| 行の組 | 有意だった転写 | 分類 | 位置を保つ帰無モデルでも有意な転写 |\n|---|---|---|---|")
     names = {"a": name_a, "b": name_b, "fine": "細かい側", "coarse": "粗い側"}
     for v in res["verdicts"]:
-        w(f"| ({v['rows'][0]}, {v['rows'][1]}) | {'、'.join(names[k] for k in v['significant_in'])} | {v['class']} |")
+        w(f"| ({v['rows'][0]}, {v['rows'][1]}) | {'、'.join(names[k] for k in v['significant_in'])} | {v['class']} "
+          f"| {'、'.join(names[k] for k in v['column_null']) or '—'} |")
+    w("\n位置を保つ帰無モデル（感度分析）: 行の先頭から数えた位置が同じ記号どうしだけを入れ替える。"
+      "「どの行も同じ書き出しで始まる」ような位置の決まりだけで行が似て見える場合は、このモデルでは有意にならない。")
     w("\n- 「どの転写でも有意」な組は、2つの方式の分類の食い違いをどちらに倒しても残る。ただし2つの方式に共通する誤りが作った可能性は、"
       "画像か正解の転写がないと除けない")
     w("- 細かい側・粗い側は、2つの転写の「同じ／違う」の食い違いを挟む2つの極。切り出し（記号の区切り）は A のまま")

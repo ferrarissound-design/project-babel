@@ -1,0 +1,34 @@
+name: IMG4494 real-image v2 v3 structure analysis (unmerged)
+on:
+  push:
+    branches: [experiment/img4494-v3-structure-20261113]
+    paths:
+      - ".github/workflows/img4494-v3-structure.yml"
+      - "experiments/img4494/v2-continuous.json"
+      - "experiments/img4494/v3-continuous.json"
+permissions:
+  contents: read
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Analyze v2 and v3
+        run: |
+          python -m babel analyze experiments/img4494/v2-continuous.json --out /tmp/v2.json --permutations 999 --subsamples 10 --perturbations 6 --seed 0
+          python -m babel analyze experiments/img4494/v3-continuous.json --out /tmp/v3.json --permutations 999 --subsamples 10 --perturbations 6 --seed 0
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          for name in ('v2', 'v3'):
+              d=json.loads(Path(f'/tmp/{name}.json').read_text())
+              print('BEGIN_RESULT_'+name)
+              result={k:d.get(k) for k in ('version','mode','statistics','verdict','global_tests','data_limits','review_points')}
+              result['hypotheses']=[{k:h.get(k) for k in ('id','family','tier','observation','statistics','stability','key','limits')} for h in d.get('hypotheses',[])]
+              result['descriptive_observations']=[{k:h.get(k) for k in ('family','observation','p_family_corrected','p_raw','support','key')} for h in d.get('descriptive_observations',[])]
+              print(json.dumps(result,ensure_ascii=False))
+              print('END_RESULT_'+name)
+          PY

@@ -171,7 +171,8 @@ def build(out="docs/VISION_EVAL_V3.md"):
         L += [f"### val（画像 {mval['meta']['images']} 枚、閾値は dev のまま）", ""] + _lines_table(mval) + [""]
     if sw2:
         L += ["### E（複合）の閾値の試行（dev）", "",
-              "| depth | join_gap | small | 余分な行/枚 | 誤結合/枚 | 合計 | 行 F1 | 検出 F1 | 行の誤りのない画像 |", "|---:|---:|---:|---:|---:|---:|---:|---:|---:|"]
+              "| depth | join_gap | small | 余分な行/枚 | 誤結合/枚 | 合計 | 行 F1 | 検出 F1 | 行の誤りのない画像 |",
+              "|---:|---:|---:|---:|---:|---:|---:|---:|---:|"]
         for r in sw2["rows"][:8] + sw2["rows"][-2:]:
             p = r["params"]
             L.append(f"| {p['depth']} | {p['join_gap']} | {p['small']} | {r['oversplit_extra_rows']:.2f} | {r['merged_rows']:.2f} | "

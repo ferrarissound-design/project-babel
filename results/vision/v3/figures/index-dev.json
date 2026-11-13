@@ -1,0 +1,86 @@
+[
+ {
+  "image": "dev-stack-plain-200.png",
+  "gt_lines": 6,
+  "methods": {
+   "baseline": {
+    "rows": 6,
+    "oversplit_extra_rows": 0,
+    "merged_rows": 0
+   },
+   "improved-v2": {
+    "rows": 12,
+    "oversplit_extra_rows": 6,
+    "merged_rows": 0
+   },
+   "improved-v3": {
+    "rows": 6,
+    "oversplit_extra_rows": 0,
+    "merged_rows": 0
+   }
+  }
+ },
+ {
+  "image": "dev-stack-mixed-202.png",
+  "gt_lines": 14,
+  "methods": {
+   "baseline": {
+    "rows": 5,
+    "oversplit_extra_rows": 0,
+    "merged_rows": 2
+   },
+   "improved-v2": {
+    "rows": 81,
+    "oversplit_extra_rows": 74,
+    "merged_rows": 7
+   },
+   "improved-v3": {
+    "rows": 14,
+    "oversplit_extra_rows": 0,
+    "merged_rows": 0
+   }
+  }
+ },
+ {
+  "image": "dev-font-diacritic-204.png",
+  "gt_lines": 11,
+  "methods": {
+   "baseline": {
+    "rows": 7,
+    "oversplit_extra_rows": 0,
+    "merged_rows": 3
+   },
+   "improved-v2": {
+    "rows": 33,
+    "oversplit_extra_rows": 25,
+    "merged_rows": 3
+   },
+   "improved-v3": {
+    "rows": 11,
+    "oversplit_extra_rows": 0,
+    "merged_rows": 0
+   }
+  }
+ },
+ {
+  "image": "dev-stroke-tight-205.png",
+  "gt_lines": 13,
+  "methods": {
+   "baseline": {
+    "rows": 1,
+    "oversplit_extra_rows": 0,
+    "merged_rows": 1
+   },
+   "improved-v2": {
+    "rows": 26,
+    "oversplit_extra_rows": 21,
+    "merged_rows": 8
+   },
+   "improved-v3": {
+    "rows": 13,
+    "oversplit_extra_rows": 2,
+    "merged_rows": 2
+   }
+  }
+ }
+]

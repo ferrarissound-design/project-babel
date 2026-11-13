@@ -1,0 +1,128 @@
+[
+ {
+  "image": "holdout-radical-plain-7000.png",
+  "gt_lines": 6,
+  "methods": {
+   "baseline": {
+    "rows": 6,
+    "oversplit_extra_rows": 0,
+    "merged_rows": 0
+   },
+   "improved-v2": {
+    "rows": 16,
+    "oversplit_extra_rows": 10,
+    "merged_rows": 0
+   },
+   "improved-v3": {
+    "rows": 6,
+    "oversplit_extra_rows": 0,
+    "merged_rows": 0
+   }
+  }
+ },
+ {
+  "image": "holdout-radical-mixed-7003.png",
+  "gt_lines": 7,
+  "methods": {
+   "baseline": {
+    "rows": 7,
+    "oversplit_extra_rows": 0,
+    "merged_rows": 0
+   },
+   "improved-v2": {
+    "rows": 29,
+    "oversplit_extra_rows": 22,
+    "merged_rows": 0
+   },
+   "improved-v3": {
+    "rows": 7,
+    "oversplit_extra_rows": 0,
+    "merged_rows": 0
+   }
+  }
+ },
+ {
+  "image": "holdout-curve-diacritic-7001.png",
+  "gt_lines": 5,
+  "methods": {
+   "baseline": {
+    "rows": 1,
+    "oversplit_extra_rows": 0,
+    "merged_rows": 1
+   },
+   "improved-v2": {
+    "rows": 51,
+    "oversplit_extra_rows": 47,
+    "merged_rows": 1
+   },
+   "improved-v3": {
+    "rows": 6,
+    "oversplit_extra_rows": 1,
+    "merged_rows": 0
+   }
+  }
+ },
+ {
+  "image": "holdout-curve-photo-7005.png",
+  "gt_lines": 5,
+  "methods": {
+   "baseline": {
+    "rows": 5,
+    "oversplit_extra_rows": 0,
+    "merged_rows": 0
+   },
+   "improved-v2": {
+    "rows": 33,
+    "oversplit_extra_rows": 28,
+    "merged_rows": 0
+   },
+   "improved-v3": {
+    "rows": 5,
+    "oversplit_extra_rows": 0,
+    "merged_rows": 0
+   }
+  }
+ },
+ {
+  "image": "holdout-radical-tight-7002.png",
+  "gt_lines": 13,
+  "methods": {
+   "baseline": {
+    "rows": 1,
+    "oversplit_extra_rows": 0,
+    "merged_rows": 0
+   },
+   "improved-v2": {
+    "rows": 48,
+    "oversplit_extra_rows": 45,
+    "merged_rows": 10
+   },
+   "improved-v3": {
+    "rows": 9,
+    "oversplit_extra_rows": 1,
+    "merged_rows": 4
+   }
+  }
+ },
+ {
+  "image": "holdout-curve-two_column-7004.png",
+  "gt_lines": 11,
+  "methods": {
+   "baseline": {
+    "rows": 10,
+    "oversplit_extra_rows": 0,
+    "merged_rows": 1
+   },
+   "improved-v2": {
+    "rows": 95,
+    "oversplit_extra_rows": 84,
+    "merged_rows": 0
+   },
+   "improved-v3": {
+    "rows": 11,
+    "oversplit_extra_rows": 0,
+    "merged_rows": 0
+   }
+  }
+ }
+]

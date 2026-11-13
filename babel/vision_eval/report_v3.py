@@ -267,9 +267,8 @@ def build(out="docs/VISION_EVAL_V3.md"):
                   "（比較相手に不利にならないように）。", ""]
     if mdev:
         L += [f"### dev（画像 {mdev['meta']['images']} 枚）", ""] + _lines_table(mdev) + [""]
-        L += ["B（投影）は、選択の基準では「つなぐ隙間を大きくして全部の行を1つにまとめる」設定が選ばれた（誤結合は1枚に1行としか"
-              "数えられないため）。行 F1 と検出 F1 が低いのはそのため。隙間を小さくすると過剰分割が増え、どの設定でも合計は E より多い"
-              "（results/vision/v3/sweep-dev-projection*.json）。", "",
+        L += ["B（投影）は、つなぐ隙間を大きくすると行をまとめすぎ（行 F1 と検出 F1 が下がる）、小さくすると過剰分割が増える。"
+              "どの設定でも行の誤りの合計は E より多い（results/vision/v3/sweep-dev-projection*.json）。", "",
               "過剰分割（余分な行/枚）、行の作りごと:", ""] + _breakdown(mdev, "oversplit_extra_rows", "condition:") + [""]
         L += ["誤結合（行/枚）、行の作りごと:", ""] + _breakdown(mdev, "merged_rows", "condition:") + [""]
         L += ["過剰分割（余分な行/枚）、字の作りごと:", ""] + _breakdown(mdev, "oversplit_extra_rows", "family:") + [""]

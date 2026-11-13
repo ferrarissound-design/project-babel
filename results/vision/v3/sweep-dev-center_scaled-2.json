@@ -17,36 +17,36 @@
     "tol": 1.2
    },
    "line_f1": 0.9662,
-   "oversplit_extra_rows": 0.4815,
-   "merged_rows": 0.6481,
-   "line_errors": 1.1296,
+   "oversplit_extra_rows": 0.6481,
+   "merged_rows": 0.7963,
+   "line_errors": 1.4444,
    "f1": 0.8813,
    "ari": 0.9026,
-   "images_without_line_error": 162
+   "images_without_line_error": 161
   },
   {
    "params": {
     "tol": 1.4
    },
    "line_f1": 0.8563,
-   "oversplit_extra_rows": 0.3796,
-   "merged_rows": 1.3935,
-   "line_errors": 1.7731,
+   "oversplit_extra_rows": 0.625,
+   "merged_rows": 1.6435,
+   "line_errors": 2.2685,
    "f1": 0.7158,
    "ari": 0.8827,
-   "images_without_line_error": 113
+   "images_without_line_error": 110
   },
   {
    "params": {
     "tol": 1.7
    },
    "line_f1": 0.5639,
-   "oversplit_extra_rows": 0.3056,
-   "merged_rows": 3.0741,
-   "line_errors": 3.3797,
+   "oversplit_extra_rows": 0.5324,
+   "merged_rows": 3.3194,
+   "line_errors": 3.8518,
    "f1": 0.3852,
    "ari": 0.8833,
-   "images_without_line_error": 41
+   "images_without_line_error": 40
   }
  ]
 }

@@ -519,3 +519,17 @@
 - 原因: 行の評価が枠の一致だけで、記号がどの行に入ったかを見ていなかった
 - 対応: evaluate の lines.errors に、予測の各記号を最も重なる正解の記号の行に対応させて数えた過剰分割（oversplit_lines・oversplit_extra_rows）と誤結合（merged_rows・merged_extra_lines）を追加した（確認済みの行だけを使う）。既存の指標の値は変えていない。限界: 誤結合は予測の行の数で数えるので、全部の行を1つにまとめると1件にしかならない。方式の選択で、投影方式ではこの設定が選ばれた（行 F1 と検出 F1 を併せて読むこと）
 - 検証: tests/test_line_recognition.py の test_line_errors_count_split_and_merge_separately・test_line_errors_ignore_unverified_lines、docs/VISION_EVAL_V3.md 第3節の注
+
+## 75. 評価器: 複数の行を覆う予測の記号を1つの行にしか対応させず、行の誤結合を数え落とした（修正済み、数値を再計算）（修正済み）
+
+- 発見: Codex の独立レビュー（PR #12）。同じ x 座標に字が並ぶ2行を、各列で上下を覆う記号からなる1行として予測すると、merged_rows・merged_extra_lines が 0 になった（再現した）。行をまとめた後に上下の字が1つの記号に結合されると起きる
+- 原因: line_errors が、予測の記号を「最も重なる正解の記号1つ」の行にだけ対応させていた
+- 対応: 予測の記号が正解の記号の面積の半分以上を覆うなら、その記号の行にも属するとみなす。この指標は閾値の選択に使っていたので、dev の試行をやり直した。行の誤り（余分な行＋誤結合）は、improved-v3 の dev で 0.41 → 0.79/枚に増えた（数え落としていた誤結合の分）。修正後の指標では、選んでいた閾値（depth 0.3・join_gap 0.4・small 0.5）は dev の 30 通り中 5 位（最良 0.73/枚との差 0.06）。閾値を選び直すと holdout を2回走らせることになるので、improved-v3 の閾値は変えず、holdout の同じ認識結果を修正後の指標で採点し直した。比較相手（A'・B・C・D）の閾値は修正後の指標で選び直した。docs/VISION_EVAL_V3.md の数値はすべて修正後
+- 検証: tests/test_line_recognition.py の test_line_errors_count_a_prediction_covering_glyphs_of_two_lines（修正前は失敗）、results/vision/v3/selected-params.json
+
+## 76. 行認識の評価: 画像のキャッシュを、分割を確かめずに再利用できた（holdout の画像で閾値を選べた）（修正済み）（修正済み）
+
+- 発見: Codex の独立レビュー（PR #12）。lines_bench.run の workdir に cases.json があると、要求した分割・シード・字の作りを確かめずに使っていた。holdout の画像を置いたディレクトリを sweep("dev", workdir=...) に渡すと、holdout 禁止の検査を通って holdout の画像で閾値を試せた（再現した）
+- 原因: キャッシュに生成条件を記録していなかった
+- 対応: キャッシュに生成条件（分割・字の作り・行の作り・シード）を記録し、要求と違えば止める。条件の記録のない画像があるディレクトリも使わない。holdout は workdir を指定できない（画像を残さない）。この PR の記録済みの結果は、dev・val で別々のディレクトリを使い、holdout はキャッシュなしで走らせたので、影響はない（修正後に全部を作り直した）
+- 検証: tests/test_line_recognition.py の test_image_cache_is_not_reused_for_another_split・test_holdout_cannot_be_used_for_selection（修正前は失敗）

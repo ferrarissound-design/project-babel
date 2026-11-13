@@ -195,6 +195,17 @@ def test_line_errors_count_split_and_merge_separately():
     assert evaluate(split, gt)["lines"]["errors"] == line_errors(split, gt)
 
 
+def test_line_errors_count_a_prediction_covering_glyphs_of_two_lines():
+    """上下の行の字が1つの記号に結合されると、予測の枠が2つの行を覆う。その行は誤結合として数える（Codex レビュー、PR #12）。"""
+    gt = _gt([("L1", [0, 0, 50, 20]), ("L2", [0, 30, 50, 50])],
+             [([0, 0, 20, 20], "L1"), ([30, 0, 50, 20], "L1"), ([0, 30, 20, 50], "L2"), ([30, 30, 50, 50], "L2")])
+    e = line_errors(_rep([[[0, 0, 20, 50], [30, 0, 50, 50]]]), gt)             # 各列で上下を覆う記号からなる1行
+    assert (e["merged_rows"], e["merged_extra_lines"], e["lines_without_prediction"]) == (1, 1, 0)
+    # 隣の行の字に少し掛かるだけ（面積の半分未満）なら、誤結合にしない
+    e = line_errors(_rep([[[0, 0, 20, 36], [30, 0, 50, 20]], [[0, 38, 20, 50], [30, 30, 50, 50]]]), gt)
+    assert e["merged_rows"] == 0
+
+
 def test_line_errors_ignore_unverified_lines():
     gt = _gt([("L1", [0, 0, 50, 20]), ("L2", [0, 30, 50, 50])], [([0, 0, 20, 20], "L1"), ([0, 30, 20, 50], "L2")])
     gt["lines"][1]["verified"] = False
@@ -222,6 +233,8 @@ def test_holdout_cannot_be_used_for_selection():
         lines_bench.run("holdout", final=True, variants={"x": ("improved-v2", {"line_method": "hybrid"})})
     with pytest.raises(ValueError):
         lines_bench.sweep("holdout")
+    with pytest.raises(ValueError):
+        lines_bench.run("holdout", final=True, workdir="anywhere")             # holdout の画像をキャッシュに残さない
     from babel.vision_eval import lines_diagnose, lines_figure
     with pytest.raises(ValueError):
         lines_diagnose.diagnose("holdout")
@@ -251,3 +264,25 @@ def test_line_recognition_code_has_no_image_specific_constants():
     nums = {n.value for n in ast.walk(ast.parse(src)) if isinstance(n, ast.Constant) and isinstance(n.value, int)
             and not isinstance(n.value, bool)}
     assert not (nums & {13, 25, 17, 9})
+
+
+def test_image_cache_is_not_reused_for_another_split(tmp_path):
+    """キャッシュした画像を、別の分割・別の条件として使わない（Codex レビュー、PR #12）。"""
+    kw = dict(families=("font",), conditions=("plain",), measure_memory=False, methods=["improved-v3"])
+    lines_bench.run("dev", seeds=[200], workdir=tmp_path / "c", **kw)
+    r = lines_bench.run("dev", seeds=[200], workdir=tmp_path / "c", **kw)      # 同じ条件なら再利用できる
+    assert r["meta"]["images"] == 1 and all(x["split"] == "dev" for x in r["runs"])
+    with pytest.raises(ValueError):
+        lines_bench.run("val", seeds=[200], workdir=tmp_path / "c", **kw)      # 別の分割
+    with pytest.raises(ValueError):
+        lines_bench.run("dev", seeds=[201], workdir=tmp_path / "c", **kw)      # 別のシード
+    with pytest.raises(ValueError):
+        lines_bench.sweep("dev", workdir=tmp_path / "c")                       # 条件（字の作りなど）が違う
+    # holdout の画像と、生成条件の記録のない cases.json を置いたディレクトリは、dev として使えない
+    cases = layout.build(tmp_path / "h", "holdout", ("radical",), ("plain",), [7000])
+    (tmp_path / "h" / "cases.json").write_text(json.dumps(cases), encoding="utf-8")
+    with pytest.raises(ValueError):
+        lines_bench.run("dev", workdir=tmp_path / "h", variants={"x": ("improved-v2", {"line_method": "hybrid"})}, methods=[])
+    (tmp_path / "h" / "cases.json").unlink()
+    with pytest.raises(ValueError):
+        lines_bench.sweep("dev", workdir=tmp_path / "h")

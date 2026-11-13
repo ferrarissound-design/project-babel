@@ -90,7 +90,7 @@
    "baseline": {
     "rows": 1,
     "oversplit_extra_rows": 0,
-    "merged_rows": 0
+    "merged_rows": 1
    },
    "improved-v2": {
     "rows": 48,
@@ -99,8 +99,8 @@
    },
    "improved-v3": {
     "rows": 9,
-    "oversplit_extra_rows": 1,
-    "merged_rows": 4
+    "oversplit_extra_rows": 4,
+    "merged_rows": 5
    }
   }
  },

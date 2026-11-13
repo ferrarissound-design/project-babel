@@ -27,7 +27,7 @@
    "baseline": {
     "rows": 5,
     "oversplit_extra_rows": 0,
-    "merged_rows": 2
+    "merged_rows": 3
    },
    "improved-v2": {
     "rows": 81,
@@ -78,8 +78,8 @@
    },
    "improved-v3": {
     "rows": 13,
-    "oversplit_extra_rows": 2,
-    "merged_rows": 2
+    "oversplit_extra_rows": 3,
+    "merged_rows": 3
    }
   }
  }

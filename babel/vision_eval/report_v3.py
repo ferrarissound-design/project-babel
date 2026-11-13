@@ -256,6 +256,15 @@ def build(out="docs/VISION_EVAL_V3.md"):
           "選択の基準は、どの方式も同じ: **過剰分割（余分な行）と誤結合（行）の 1 枚あたりの合計が最小**（同点は行 F1）。", ""]
     if sel:
         L += ["dev で選んだ閾値: " + "、".join(f"{k} {json.dumps(v, ensure_ascii=False)}" for k, v in sel["params"].items()), ""]
+        fz = sel.get("hybrid_frozen")
+        if fz:
+            L += [f"**E（hybrid）の閾値について**: 上の値は、評価器の修正（docs/ISSUES.md #75: 複数の行を覆う予測の記号の誤結合を数えていなかった）"
+                  f"の前の指標で dev から選んだ。修正後の指標では、dev の {fz['of']} 通り中 {fz['rank_on_dev_with_corrected_metric']} 位"
+                  f"（行の誤り {fz['line_errors']:.2f}/枚、最良は "
+                  f"{json.dumps(sel['hybrid_best_on_dev_with_corrected_metric'], ensure_ascii=False)} の {fz['best_line_errors']:.2f}/枚）。"
+                  "閾値を選び直すと holdout を2回走らせることになるので、**閾値は変えていない**。holdout の認識結果は最初の1回と同じで、"
+                  "修正後の指標で採点し直した。以下の表はすべて修正後の指標による。A'・B・C・D の閾値は修正後の指標で選び直した"
+                  "（比較相手に不利にならないように）。", ""]
     if mdev:
         L += [f"### dev（画像 {mdev['meta']['images']} 枚）", ""] + _lines_table(mdev) + [""]
         L += ["B（投影）は、選択の基準では「つなぐ隙間を大きくして全部の行を1つにまとめる」設定が選ばれた（誤結合は1枚に1行としか"
@@ -293,7 +302,8 @@ def build(out="docs/VISION_EVAL_V3.md"):
         L += ["### 試して採用しなかったもの", "",
               "- **字の列がそろっているかで帯をまとめる条件**: 上下に分かれた字の上の部品と下の部品は同じ列にあるので、"
               "帯どうしの列のそろい方を条件に加えた。dev では、条件を外しても（align 0.0）結果が同じだった"
-              "（results/vision/v3/hybrid-sweep-dev-1-alignment.json。この試行のときの閾値の名前は gap_aligned・align）。"
+              "（results/vision/v3/hybrid-sweep-dev-1-alignment.json。この試行のときの閾値の名前は gap_aligned・align。"
+              "評価器の修正 #75 の前の指標による記録で、条件を外したコードなので再計算していない）。"
               "同じ書き出しの行が続くと別々の行でも列がそろうので、区別に使えなかった。条件は入れていない",
               "- **上下の範囲の重なりで帯を作る（C を E の第1段に使う）**: 字が上下にずれる画像で帯が細かく割れ、"
               "別の行の破片どうしがまとまった。投影の谷で分ける方法に替えた", ""]
@@ -302,7 +312,9 @@ def build(out="docs/VISION_EVAL_V3.md"):
     if hold:
         m = hold["meta"]
         L += [f"## 4. 最終評価（holdout、シード {m['seeds'][0]}〜{m['seeds'][-1]}、画像 {m['images']} 枚、OpenCV {m['opencv']}）", "",
-              "方式と閾値を固定してから1回だけ実行した。字の作り（radical・curve）も photo の劣化も、開発では使っていない。", ""]
+              "方式と閾値を固定してから認識器を1回だけ走らせた。字の作り（radical・curve）も photo の劣化も、開発では使っていない。"
+              "その後、Codex レビューで行の誤結合の数え方の不備が見つかったので（#75）、**同じ認識結果を修正後の指標で採点し直した**"
+              "（方式・閾値は変えていない。修正前の指標では誤結合 0.41/枚・余分な行 0.60/枚だった）。", ""]
         L += _lines_table(hold, extra=True) + [""]
         t = {k: v["totals"] for k, v in hold["summary"].items()}
         L += ["行数の合計（正解 " + str(next(iter(t.values()))["gt_lines"]) + " 行）: "

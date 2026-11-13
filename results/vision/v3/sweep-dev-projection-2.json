@@ -17,23 +17,23 @@
    },
    "line_f1": 0.3742,
    "oversplit_extra_rows": 0,
-   "merged_rows": 0.9491,
-   "line_errors": 0.9491,
+   "merged_rows": 1.2269,
+   "line_errors": 1.2269,
    "f1": 0.3203,
    "ari": 0.9105,
-   "images_without_line_error": 97
+   "images_without_line_error": 49
   },
   {
    "params": {
     "bridge": 0.4
    },
    "line_f1": 0.463,
-   "oversplit_extra_rows": 0.0231,
-   "merged_rows": 0.9583,
-   "line_errors": 0.9814,
+   "oversplit_extra_rows": 0.037,
+   "merged_rows": 1.1944,
+   "line_errors": 1.2314,
    "f1": 0.3909,
    "ari": 0.9248,
-   "images_without_line_error": 96
+   "images_without_line_error": 58
   }
  ]
 }

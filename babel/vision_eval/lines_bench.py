@@ -54,18 +54,33 @@ def run(split="dev", methods=None, out=None, families=None, conditions=None, see
         raise ValueError("holdout は最終評価にだけ使う（--final を付ける）。方式・閾値の選択には dev と val を使う")
     if split == "holdout" and variants:
         raise ValueError("holdout で閾値を変えた試行はしない")
+    if split == "holdout" and workdir:
+        raise ValueError("holdout の画像はキャッシュに残さない（別の分割として再利用されないように）")
     spec = {m: (m, {}) for m in (["baseline", "improved", "improved-v2", "improved-v3"] if methods is None else methods)}
     spec.update(variants or {})
     t0 = time.time()
     runs = []
     with tempfile.TemporaryDirectory() as td:
         wd = Path(workdir or td)
-        if workdir and (wd / "cases.json").exists():        # 同じ画像で閾値の試行を繰り返すとき、画像を作り直さない
-            cases = json.loads((wd / "cases.json").read_text(encoding="utf-8"))
+        # 同じ画像で閾値の試行を繰り返すとき、画像を作り直さない。キャッシュには生成条件を記録し、要求と違えば使わない
+        # （holdout の画像を置いたディレクトリを dev として渡すと、holdout で閾値を選べてしまう: Codex レビュー、PR #12）
+        want = {"split": split, "families": list(families or layout.FAMILIES[split]),
+                "conditions": list(conditions or layout.conditions_for(split)), "seeds": list(seeds or layout.SPLITS[split])}
+        cache = wd / "cases.json"
+        if workdir and cache.exists():
+            saved = json.loads(cache.read_text(encoding="utf-8"))
+            if not isinstance(saved, dict) or saved.get("spec") != want:
+                raise ValueError(f"{cache} は別の条件で作った画像のキャッシュ（{saved.get('spec') if isinstance(saved, dict) else '条件の記録なし'}）。"
+                                 f"要求は {want}。別のディレクトリを使う")
+            cases = saved["cases"]
         else:
+            if workdir and any(wd.glob("images/*")):
+                raise ValueError(f"{wd} に生成条件の記録のない画像がある。空のディレクトリを使う")
             cases = layout.build(wd, split, families, conditions, seeds)
             if workdir:
-                (wd / "cases.json").write_text(json.dumps(cases), encoding="utf-8")
+                cache.write_text(json.dumps({"spec": want, "cases": cases}), encoding="utf-8")
+        if any(c["split"] != split for c in cases):
+            raise ValueError("画像の分割が要求と違う")
         for c in cases:
             img = wd / "images" / f"{c['name']}.png"
             gt = validate(json.loads((wd / "gt" / f"{c['name']}.json").read_text(encoding="utf-8")))

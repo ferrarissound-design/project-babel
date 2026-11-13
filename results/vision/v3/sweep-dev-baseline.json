@@ -22,12 +22,12 @@
     "tol": 0.7
    },
    "line_f1": 0.8833,
-   "oversplit_extra_rows": 2.5556,
-   "merged_rows": 0.3889,
-   "line_errors": 2.9445,
+   "oversplit_extra_rows": 2.5972,
+   "merged_rows": 0.4306,
+   "line_errors": 3.0278,
    "f1": 0.8143,
    "ari": 0.9268,
-   "images_without_line_error": 148
+   "images_without_line_error": 145
   },
   {
    "params": {
@@ -35,12 +35,12 @@
     "tol": 0.7
    },
    "line_f1": 0.8962,
-   "oversplit_extra_rows": 2.9769,
-   "merged_rows": 0.4398,
-   "line_errors": 3.4167,
+   "oversplit_extra_rows": 3.0139,
+   "merged_rows": 0.4769,
+   "line_errors": 3.4908,
    "f1": 0.8108,
    "ari": 0.9251,
-   "images_without_line_error": 138
+   "images_without_line_error": 136
   },
   {
    "params": {
@@ -48,9 +48,9 @@
     "tol": 0.5
    },
    "line_f1": 0.8224,
-   "oversplit_extra_rows": 4.5602,
-   "merged_rows": 0.5648,
-   "line_errors": 5.125,
+   "oversplit_extra_rows": 4.5926,
+   "merged_rows": 0.5972,
+   "line_errors": 5.1898,
    "f1": 0.7521,
    "ari": 0.9201,
    "images_without_line_error": 96
@@ -61,9 +61,9 @@
     "tol": 0.5
    },
    "line_f1": 0.7992,
-   "oversplit_extra_rows": 5.4259,
-   "merged_rows": 0.6157,
-   "line_errors": 6.0416,
+   "oversplit_extra_rows": 5.4583,
+   "merged_rows": 0.6481,
+   "line_errors": 6.1064,
    "f1": 0.7219,
    "ari": 0.9199,
    "images_without_line_error": 90
@@ -74,9 +74,9 @@
     "tol": 0.4
    },
    "line_f1": 0.7632,
-   "oversplit_extra_rows": 6.625,
-   "merged_rows": 0.662,
-   "line_errors": 7.287,
+   "oversplit_extra_rows": 6.6528,
+   "merged_rows": 0.6898,
+   "line_errors": 7.3426,
    "f1": 0.7126,
    "ari": 0.9169,
    "images_without_line_error": 57
@@ -87,9 +87,9 @@
     "tol": 0.4
    },
    "line_f1": 0.7478,
-   "oversplit_extra_rows": 7.2778,
-   "merged_rows": 0.7546,
-   "line_errors": 8.0324,
+   "oversplit_extra_rows": 7.3056,
+   "merged_rows": 0.7824,
+   "line_errors": 8.088,
    "f1": 0.6964,
    "ari": 0.9164,
    "images_without_line_error": 54

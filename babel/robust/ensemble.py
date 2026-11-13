@@ -174,7 +174,8 @@ def soft_pairs(path, report, regions=None, cfg=None, tau=SOFT_TAU):
 def vote(reports, results, reference=REFERENCE):
     """方式ごとの有意な行の組を、基準の方式の行の組に対応させて数える。
 
-    戻り値: [{"rows": [i, j], "votes": n, "members": [...], "fraction": n / 方式の数}, ...]（基準の行の番号、票の多い順）
+    A reclassification of the same segmentation is one evidence group.  Keep
+    raw_votes for diagnostics, but thresholds use distinct segmentation bases.
     """
     ref = reports[reference]
     tally = {}
@@ -190,8 +191,13 @@ def vote(reports, results, reference=REFERENCE):
             seen.add((min(a, b), max(a, b)))
         for k in seen:
             tally.setdefault(k, []).append(name)
-    n = len(results)
-    out = [{"rows": list(k), "votes": len(v), "members": sorted(v), "fraction": round(len(v) / n, 4)} for k, v in tally.items()]
+    bases = {m["name"]: m["base"] for m in MEMBERS}
+    groups = {bases.get(name, name) for name in results}
+    n = len(groups)
+    out = [{"rows": list(k), "votes": len({bases.get(name, name) for name in v}),
+            "raw_votes": len(v), "groups": sorted({bases.get(name, name) for name in v}),
+            "members": sorted(v), "fraction": round(len({bases.get(name, name) for name in v}) / n, 4)}
+           for k, v in tally.items()]
     out.sort(key=lambda r: (-r["votes"], r["rows"]))
     return out
 

@@ -15,16 +15,22 @@ LIMIT = 0.05
 
 
 def select(dev):
+    if dev.get("schema") != "babel-robust-bench-v2":
+        raise ValueError("再設計前の dev 結果は閾値選択に使えない。v2 の dev を再実行する")
     runs = dev["runs"]
     votes = {k: summary.score(runs, f"vote>={k}") for k in range(1, summary.N_MEMBERS + 1)}
-    k_star = next((k for k in range(1, summary.N_MEMBERS + 1) if votes[k]["fwer"] <= LIMIT), None)
+    k_star = next((k for k in range(1, summary.N_MEMBERS + 1)
+                   if votes[k]["fwer_ci95"] and votes[k]["fwer_ci95"][1] <= LIMIT), None)
     soft = {tau: summary.score(runs, f"soft@{tau}") for tau in bench.SOFT_TAUS}
-    ok = [tau for tau in bench.SOFT_TAUS if soft[tau]["fwer"] <= LIMIT]
+    ok = [tau for tau in bench.SOFT_TAUS if soft[tau]["fwer_ci95"] and soft[tau]["fwer_ci95"][1] <= LIMIT]
     tau_star = max(ok, key=lambda t: (soft[t]["recall"], -t)) if ok else None
-    return {"rule": {"limit": LIMIT, "vote": "FWER <= limit となる最小の k", "tau": "FWER <= limit の候補で recall が最大"},
+    keys = ("fwer", "fwer_ci95", "oracle_quiet_rate", "recall", "precision", "false_per_positive_image")
+    return {"bench_schema": dev["schema"],
+            "rule": {"limit": LIMIT, "vote": "陰性画像の報告率の Wilson 95% 上限 <= limit となる最小の k",
+                     "tau": "同じ上限を満たす候補で recall が最大"},
             "vote_threshold": k_star, "soft_tau": tau_star,
-            "dev_votes": {str(k): {x: v[x] for x in ("fwer", "recall", "precision", "false_per_positive_image")} for k, v in votes.items()},
-            "dev_soft": {str(t): {x: v[x] for x in ("fwer", "recall", "precision", "false_per_positive_image")} for t, v in soft.items()},
+            "dev_votes": {str(k): {x: v[x] for x in keys} for k, v in votes.items()},
+            "dev_soft": {str(t): {x: v[x] for x in keys} for t, v in soft.items()},
             "dev_cases": len(runs)}
 
 

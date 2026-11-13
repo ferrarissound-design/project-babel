@@ -85,7 +85,7 @@ def run(split, out, jobs=4):
     t0 = time.time()
     with ProcessPoolExecutor(jobs) as ex:
         runs = list(ex.map(run_case, cs, chunksize=8))
-    res = {"schema": "babel-robust-inventory-v1", "split": split, "cases": len(runs), "seconds": round(time.time() - t0, 1),
+    res = {"schema": "babel-robust-inventory-v2", "split": split, "cases": len(runs), "seconds": round(time.time() - t0, 1),
            "summary": {"overall": summarize(runs), "by_family": summarize(runs, "family"), "by_vocab": summarize(runs, "vocab"),
                        "by_condition": summarize(runs, "condition")}, "runs": runs}
     Path(out).parent.mkdir(parents=True, exist_ok=True)

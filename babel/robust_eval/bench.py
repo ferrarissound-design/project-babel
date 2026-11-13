@@ -14,6 +14,7 @@
 """
 from __future__ import annotations
 
+import hashlib
 import json
 import tempfile
 import time
@@ -53,6 +54,16 @@ def cases(split, limit=None):
     return out[:limit] if limit else out
 
 
+def text_seed(case):
+    """Give each evaluated image its own text, including negative/positive counterparts.
+
+    The renderer seed stays fixed for paired rendering comparisons; it must not
+    also make all conditions/families share an identical text realization.
+    """
+    key = [case[k] for k in ("split", "renderer", "family", "condition", "seed", "vocab", "n_pairs")]
+    return int.from_bytes(hashlib.sha256(json.dumps(key, ensure_ascii=False).encode()).digest()[:8], "big")
+
+
 def _vocab_for(case):
     """字の種類が足りない描き方では語彙を詰める（記録に残す）。"""
     if case["renderer"] == "layout":
@@ -67,7 +78,7 @@ def render_case(case):
 
     from . import texts
     vocab = _vocab_for(case)
-    rows, planted, detail = texts.planted_text(case["seed"], vocab=vocab, n_pairs=case["n_pairs"])
+    rows, planted, detail = texts.planted_text(text_seed(case), vocab=vocab, n_pairs=case["n_pairs"])
     if case["renderer"] == "layout":
         from babel.vision_eval import layout
         img, gt = layout.render(rows, case["family"], case["condition"], case["seed"], n_classes=vocab)
@@ -147,7 +158,7 @@ def run_case(case):
     t0 = time.time()
     rows, planted, detail, img, gt, vocab = render_case(case)
     planted = set(planted)
-    rec = {**case, "vocab_used": vocab, "planted": [list(p) for p in sorted(planted)], "planted_detail": detail["planted"],
+    rec = {**case, "text_seed": text_seed(case), "vocab_used": vocab, "planted": [list(p) for p in sorted(planted)], "planted_detail": detail["planted"],
            "tokens": sum(len(r) for r in rows), "types": len({s for r in rows for s in r}),
            "hapax": sum(1 for v in Counter(s for r in rows for s in r).values() if v == 1), "methods": {}, "vision": {}}
     ident = list(range(len(rows)))
@@ -197,10 +208,17 @@ def run_case(case):
                                                    row_lines[ensemble.REFERENCE], planted)
         votes = ensemble.vote(reports, results)
         ref_line = row_lines[ensemble.REFERENCE]
-        rec["votes"] = []
+        judged_votes = {}
         for v in votes:
             j = _judge([(tuple(v["rows"]), None)], ref_line, planted)[0]
-            rec["votes"].append({"gt": j["gt"], "kind": j["kind"], "votes": v["votes"], "members": v["members"]})
+            # Multiple reference fragments can map to the same gold pair.
+            # Count that claim once, taking its strongest independent support.
+            key = tuple(j["gt"]) if j["gt"] else tuple(v["rows"])
+            old = judged_votes.get(key)
+            if old is None or v["votes"] > old["votes"]:
+                judged_votes[key] = {"gt": j["gt"], "kind": j["kind"], "votes": v["votes"],
+                                     "raw_votes": v["raw_votes"], "groups": v["groups"], "members": v["members"]}
+        rec["votes"] = list(judged_votes.values())
         # 同じ切り出しを使う方式どうしの、分類の一致（正解を使わない）
         same_seg = [m["name"] for m in ensemble.MEMBERS if m["base"] == "improved-v3" and not m.get("scale")]
         agree = []
@@ -221,7 +239,7 @@ def run(split, out, jobs=4, limit=None):
     with ProcessPoolExecutor(jobs) as ex:
         runs = list(ex.map(run_case, cs, chunksize=4))
     import cv2
-    res = {"schema": "babel-robust-bench-v1", "split": split, "config": {k: (list(v) if not isinstance(v, str) else v) for k, v in SPLITS[split].items()},
+    res = {"schema": "babel-robust-bench-v2", "split": split, "config": {k: (list(v) if not isinstance(v, str) else v) for k, v in SPLITS[split].items()},
            "analyze_cfg": ANALYZE_CFG, "row_cfg": ROW_CFG, "opencv": cv2.__version__, "cases": len(runs), "seconds": round(time.time() - t0, 1),
            "runs": runs}
     Path(out).parent.mkdir(parents=True, exist_ok=True)

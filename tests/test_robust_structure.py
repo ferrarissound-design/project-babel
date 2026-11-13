@@ -190,6 +190,7 @@ def test_summary_counts_false_discoveries_by_kind():
              "votes": [{"gt": [0, 1], "kind": "planted", "votes": 8, "members": []}, {"gt": [4, 5], "kind": "unplanted", "votes": 2, "members": []}]}]
     s = summary.score(runs, "m")
     assert s["fwer"] == 0.5 and s["recall"] == 0.5 and s["precision"] == round(1 / 3, 4) and s["false_kinds"]["same_line"] == 1
+    assert s["oracle_quiet_negative_images"] == 2 and s["oracle_quiet_with_any"] == 1
     v = summary.score(runs, "vote>=3")
     assert v["fwer"] == 0.0 and v["recall"] == 0.5 and v["precision"] == 1.0
     d = summary.vote_discrimination(runs)
@@ -204,6 +205,40 @@ def test_dev_and_holdout_cases_do_not_overlap():
     assert not keys["dev"] & keys["holdout-synth"] and not keys["dev"] & keys["holdout-font"]
     fam = {s: set(bench.SPLITS[s]["families"]) for s in bench.SPLITS}
     assert not fam["dev"] & fam["holdout-synth"] and not fam["dev"] & fam["holdout-font"]
+    all_cases = [case for split in bench.SPLITS for case in bench.cases(split)]
+    assert len({bench.text_seed(case) for case in all_cases}) == len(all_cases)
+    a = bench.cases("dev")[0]
+    assert bench.text_seed(a) != bench.text_seed({**a, "n_pairs": 2})
+
+
+def test_vote_counts_segmentation_bases_once():
+    from babel.robust import ensemble
+    def row(y):
+        return {"box": [0, y, 10, y + 8], "region": None}
+    rep = {"rows": [row(0), row(20)]}
+    reports = {n: rep for n in ("v3", "v3-fine", "v3-shape", "baseline", "v2")}
+    pair = {"pairs": [{"rows": [0, 1], "significant": True}]}
+    votes = ensemble.vote(reports, {n: pair for n in reports})
+    assert votes[0]["votes"] == 3 and votes[0]["raw_votes"] == 5
+    assert ensemble.vote(reports, {"v3": pair, "v3-fine": pair, "v3-shape": pair})[0]["votes"] == 1
+
+
+def test_threshold_selection_uses_uncertainty_and_rejects_old_bench():
+    from babel.robust_eval import select
+    negatives = [{"n_pairs": 0, "planted": [], "methods": {"oracle-lcs": []}, "votes": []} for _ in range(20)]
+    dev = {"schema": "babel-robust-bench-v2", "runs": negatives}
+    # Zero hits in only twenty images is insufficient evidence for a <=5% rate.
+    assert select.select(dev)["vote_threshold"] is None
+    with pytest.raises(ValueError):
+        select.select({**dev, "schema": "babel-robust-bench-v1"})
+    dev["runs"] = negatives * 5
+    assert select.select(dev)["vote_threshold"] == 1
+
+
+def test_old_predictions_are_not_scored_against_new_vote_definition():
+    from babel.robust_eval import report
+    old = {"frozen": {"vote_threshold": 6, "members": 8}}
+    assert report.check_predictions({"holdout-synth": {}}, 2, old) == []
 
 
 def test_robust_package_does_not_import_answers_or_evaluators():
@@ -246,12 +281,12 @@ def test_ensemble_votes_for_planted_pairs(tmp_path):
     from babel.robust_eval import bench
     case, path, gt, planted = _image_case(tmp_path)
     res = ensemble.analyze_image(path, regions=gt.get("regions"), cfg={"permutations": 299})
-    assert res["members"] == [m["name"] for m in ensemble.MEMBERS] and len(res["members"]) == summary.N_MEMBERS
+    assert res["members"] == [m["name"] for m in ensemble.MEMBERS]
     ref_line = bench._row_lines({"rows": [{"glyph_indices": list(range(k, k + 1))} for k in range(0)], "glyphs": []}, gt)
     assert ref_line == []
     reports = ensemble.transcribe_all(path, gt.get("regions"))
     line = bench._row_lines(reports["v3"], gt)
-    strong = {tuple(sorted((line[v["rows"][0]], line[v["rows"][1]]))) for v in res["votes"] if v["votes"] >= 5}
+    strong = {tuple(sorted((line[v["rows"][0]], line[v["rows"][1]]))) for v in res["votes"] if v["votes"] >= 2}
     assert strong == set(planted)
     json.dumps(res)                                           # JSON にできる
     assert "方式をまたいで再現する行の組" in compare.image_markdown(res)

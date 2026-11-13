@@ -3,7 +3,7 @@ from __future__ import annotations
 
 from collections import defaultdict
 
-N_MEMBERS = 8
+N_MEMBERS = 3  # independent segmentation bases; reclassifications are correlated
 FALSE_KINDS = ("unplanted", "same_line", "unmapped")
 
 
@@ -40,8 +40,15 @@ def score(runs, method):
     hit = sum(sum(1 for f in found(r, method) if f["kind"] == "planted") for r in pos)
     false_pos = sum(sum(1 for f in found(r, method) if f["kind"] in FALSE_KINDS) for r in pos)
     false_all = false_pos + neg_n
+    # An unplanted image can contain coincidental structure. Report the oracle
+    # signal separately; the unconditional rate is not a pure false-alarm rate.
+    oracle_quiet = [r for r in neg if not r["methods"].get("oracle-lcs")]
+    quiet_any = sum(bool(found(r, method)) for r in oracle_quiet)
     return {"negative_images": len(neg), "negative_with_any": neg_any, "fwer": round(neg_any / len(neg), 4) if neg else None,
             "fwer_ci95": _wilson(neg_any, len(neg)), "false_per_negative_image": round(neg_n / len(neg), 4) if neg else None,
+            "oracle_quiet_negative_images": len(oracle_quiet), "oracle_quiet_with_any": quiet_any,
+            "oracle_quiet_rate": round(quiet_any / len(oracle_quiet), 4) if oracle_quiet else None,
+            "oracle_quiet_ci95": _wilson(quiet_any, len(oracle_quiet)),
             "positive_images": len(pos), "planted": planted, "planted_found": hit, "recall": round(hit / planted, 4) if planted else None,
             "false_per_positive_image": round(false_pos / len(pos), 4) if pos else None,
             "precision": round(hit / (hit + false_all), 4) if hit + false_all else None,
@@ -179,6 +186,8 @@ def agreement_vs_truth(runs):
 
 
 def summarize(res):
+    if res.get("schema") != "babel-robust-bench-v2":
+        raise ValueError("旧評価設計の集計を拒否。bench v2 を再実行する")
     runs = res["runs"]
     main = ["oracle-ngram", "oracle-lcs", "ngram:baseline", "ngram:v2", "ngram:v3", "lcs:baseline", "lcs:v2", "lcs:v3", "soft@0.2", "soft@0.3",
             "soft@0.45"] + [f"vote>={k}" for k in range(2, N_MEMBERS + 1)]

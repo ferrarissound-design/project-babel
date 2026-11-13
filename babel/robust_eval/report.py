@@ -27,7 +27,7 @@ def _load(name):
 
 def _label(m):
     if m.startswith("vote>="):
-        return f"方式の集まり: {m.split('>=')[1]}/8 以上で有意"
+        return f"独立した切り出し群: {m.split('>=')[1]}/{summary.N_MEMBERS} 以上で有意"
     return METHOD_LABELS.get(m, m)
 
 
@@ -36,13 +36,16 @@ def _f(v, nd=3):
 
 
 def method_table(S, methods):
-    L = ["| 判定 | 仕込みのない画像で1つでも報告（95% 区間） | 仕込みのない画像1枚あたりの報告 | 仕込んだ組の発見率 "
-         "| 仕込みのある画像1枚あたりの偽の報告 | 報告のうち真 |",
-         "|---|---:|---:|---:|---:|---:|"]
+    L = ["| 判定 | 仕込みなし画像の報告率（95% 区間） | 正解転写では検出なしの画像の報告率（95% 区間） | 仕込みなし画像1枚あたりの報告 | 仕込んだ組の発見率 "
+         "| 仕込みのある画像1枚あたりの非仕込み報告 | 報告のうち仕込んだ組 |",
+         "|---|---:|---:|---:|---:|---:|---:|"]
     for m in methods:
         s = S["overall"][m]
         ci = s["fwer_ci95"]
-        L.append(f"| {_label(m)} | {_f(s['fwer'])}（{_f(ci[0], 2)}〜{_f(ci[1], 2)}） | {_f(s['false_per_negative_image'])} | {_f(s['recall'])} "
+        qi = s["oracle_quiet_ci95"] or [None, None]
+        L.append(f"| {_label(m)} | {_f(s['fwer'])}（{_f(ci[0], 2)}〜{_f(ci[1], 2)}） "
+                 f"| {_f(s['oracle_quiet_rate'])}（{_f(qi[0], 2)}〜{_f(qi[1], 2)}） "
+                 f"| {_f(s['false_per_negative_image'])} | {_f(s['recall'])} "
                  f"| {_f(s['false_per_positive_image'])} | {_f(s['precision'])} |")
     return "\n".join(L)
 
@@ -57,15 +60,17 @@ def group_table(S, key, methods, metric):
 
 def vote_table(S):
     d = S["vote_discrimination"]
-    L = ["| 有意だった方式の数 | 真（仕込んだ組） | 偽 | 真の割合（95% 区間） |", "|---:|---:|---:|---:|"]
+    L = ["| 有意だった切り出し群の数 | 仕込んだ組 | 非仕込み | 仕込んだ組の割合（95% 区間） |", "|---:|---:|---:|---:|"]
     for k, v in d["by_votes"].items():
         L.append(f"| {k} | {v['true']} | {v['false']} | {_f(v['p_true'], 2)}（{_f(v['ci95'][0], 2)}〜{_f(v['ci95'][1], 2)}） |")
     return "\n".join(L)
 
 
-def check_predictions(S_all, k):
+def check_predictions(S_all, k, preds=None):
     """holdout の結果を見る前に書いた予測（results/robust/predictions.json）を、結果と照らす。"""
     out = []
+    if not preds or preds.get("frozen", {}).get("vote_threshold") != k or preds["frozen"].get("members") != summary.N_MEMBERS:
+        return out  # historical predictions for the 8-member design are not claims about the new 3-group design
     hs = {n: S_all[n] for n in ("holdout-synth", "holdout-font") if S_all.get(n)}
     if not hs:
         return out
@@ -99,21 +104,31 @@ def check_predictions(S_all, k):
 
 def build():
     sel = _load("selected.json")
+    if not sel or sel.get("bench_schema") != "babel-robust-bench-v2":
+        raise ValueError("旧閾値は使用不可。v2 の dev 評価と選択を再実行する")
     k = sel["vote_threshold"]
+    if k is None:
+        raise ValueError("95% 上限 <= 0.05 を満たす票の閾値はない。採用判定の報告を生成できない")
     vk = f"vote>={k}"
     S_all = {}
     for name in SPLIT_NAMES:
         res = _load(f"bench-{name}.json")
         if res:
+            if res.get("schema") != sel["bench_schema"]:
+                raise ValueError(f"{name} は旧評価設計の結果。v2 を再実行する")
             S_all[name] = summary.summarize(res)
             S_all[name]["config"] = res["config"]
             S_all[name]["opencv"] = res.get("opencv")
             (R / f"summary-{name}.json").write_text(json.dumps(S_all[name], ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
-    inv = {name: _load(f"inventory-{name}.json") for name in SPLIT_NAMES}
-    cb = {name: _load(f"compare-bench-{name}.json") for name in SPLIT_NAMES}
+    def current(name, schema):
+        data = _load(name)
+        return data if data and data.get("schema") == schema else None
+
+    inv = {name: current(f"inventory-{name}.json", "babel-robust-inventory-v2") for name in SPLIT_NAMES}
+    cb = {name: current(f"compare-bench-{name}.json", "babel-robust-compare-bench-v2") for name in SPLIT_NAMES}
     cmp_ = _load("real-img4494/compare-baseline-v3.json")
     preds = _load("predictions.json")
-    checks = check_predictions(S_all, k)
+    checks = check_predictions(S_all, k, preds)
     (R / "prediction-check.json").write_text(json.dumps([{"id": i, "held": ok, "observed": obs} for i, ok, obs in checks],
                                                         ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
     from . import prose

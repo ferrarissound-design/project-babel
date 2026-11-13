@@ -82,7 +82,7 @@ def run(split, out, jobs=4):
     with ProcessPoolExecutor(jobs) as ex:
         runs = list(ex.map(run_case, cs, chunksize=8))
     fams = sorted({r["family"] for r in runs})
-    res = {"schema": "babel-robust-compare-bench-v1", "split": split, "cfg": CFG, "seconds": round(time.time() - t0, 1),
+    res = {"schema": "babel-robust-compare-bench-v2", "split": split, "cfg": CFG, "seconds": round(time.time() - t0, 1),
            "summary": {"overall": summarize(runs), "by_family": {f: summarize([r for r in runs if r["family"] == f]) for f in fams}}, "runs": runs}
     Path(out).write_text(json.dumps(res, ensure_ascii=False, indent=1), encoding="utf-8")
     return res

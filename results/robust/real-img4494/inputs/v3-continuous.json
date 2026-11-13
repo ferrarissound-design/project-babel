@@ -1,0 +1,35 @@
+{
+  "language_id": "img4494-v3-unverified",
+  "level": "C",
+  "has_word_boundaries": false,
+  "known": [],
+  "parallel": [],
+  "documents": [
+    {
+      "id": "left",
+      "meta": {},
+      "sentences": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "right",
+      "meta": {},
+      "sentences": [
+        "",
+        "",
+        "",
+        ""
+      ]
+    }
+  ],
+  "notes": "IMG_4494 visual glyph class transcription, unverified. Derived from 2026-11-13 local reproduction of BABEL vision improved-v2/v3. Row breaks provisional; no ground truth."
+}

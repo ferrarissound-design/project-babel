@@ -1,0 +1,12 @@
+{
+  "note": "独立レビュー後の設計と dev v2 の結果に基づき、holdout v2 の結果を見る前に固定した予測。旧 predictions.json の8方式の生票の予測とは別物。外れた予測は外れたまま報告する。",
+  "frozen": {"vote_threshold": 3, "members": 3, "bench_schema": "babel-robust-bench-v2"},
+  "predictions": [
+    {"id": "P1", "claim": "正解転写の仕込みなし画像の報告率は各 holdout で0.02〜0.10", "refuted_if": "いずれかで範囲外"},
+    {"id": "P2", "claim": "3/3切り出し群の仕込みなし画像の報告率は各 holdout で0.05以下", "refuted_if": "いずれかで0.05超"},
+    {"id": "P3", "claim": "3/3切り出し群の仕込んだ組の発見率は各 holdout で0.10以上", "refuted_if": "いずれかで0.10未満"},
+    {"id": "P4", "claim": "群票の真偽AUCは0.65以上、3群票の仕込み組率は0.85以上、1群票の仕込み組率は0.5以下", "refuted_if": "いずれかで1つでも満たさない"},
+    {"id": "P5", "claim": "improved-v2単独の仕込みなし画像の報告率はholdout-synthで0.20以上", "refuted_if": "0.20未満"},
+    {"id": "P6", "claim": "improved-v3単独の仕込みなし画像の報告率は3/3切り出し群より高い", "refuted_if": "いずれかで同じか低い"}
+  ]
+}

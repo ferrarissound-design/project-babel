@@ -1,79 +1,80 @@
 {
+ "bench_schema": "babel-robust-bench-v2",
  "rule": {
   "limit": 0.05,
-  "vote": "FWER <= limit となる最小の k",
-  "tau": "FWER <= limit の候補で recall が最大"
+  "vote": "陰性画像の報告率の Wilson 95% 上限 <= limit となる最小の k",
+  "tau": "同じ上限を満たす候補で recall が最大"
  },
- "vote_threshold": 6,
+ "vote_threshold": 3,
  "soft_tau": null,
  "dev_votes": {
   "1": {
-   "fwer": 0.5625,
-   "recall": 0.6736,
-   "precision": 0.3089,
-   "false_per_positive_image": 1.3438
+   "fwer": 0.5347,
+   "fwer_ci95": [
+    0.477,
+    0.5915
+   ],
+   "oracle_quiet_rate": 0.5182,
+   "recall": 0.684,
+   "precision": 0.2951,
+   "false_per_positive_image": 1.6007
   },
   "2": {
-   "fwer": 0.0938,
-   "recall": 0.5312,
-   "precision": 0.8315,
-   "false_per_positive_image": 0.0694
+   "fwer": 0.0451,
+   "fwer_ci95": [
+    0.0266,
+    0.0757
+   ],
+   "oracle_quiet_rate": 0.0292,
+   "recall": 0.4635,
+   "precision": 0.9207,
+   "false_per_positive_image": 0.0347
   },
   "3": {
-   "fwer": 0.0799,
-   "recall": 0.5069,
-   "precision": 0.8665,
-   "false_per_positive_image": 0.0347
-  },
-  "4": {
-   "fwer": 0.0694,
-   "recall": 0.4948,
-   "precision": 0.8769,
-   "false_per_positive_image": 0.0347
-  },
-  "5": {
-   "fwer": 0.0625,
-   "recall": 0.4809,
-   "precision": 0.8878,
-   "false_per_positive_image": 0.0278
-  },
-  "6": {
-   "fwer": 0.0417,
-   "recall": 0.4601,
-   "precision": 0.9431,
-   "false_per_positive_image": 0.0104
-  },
-  "7": {
-   "fwer": 0.0208,
-   "recall": 0.3542,
-   "precision": 0.9714,
-   "false_per_positive_image": 0.0
-  },
-  "8": {
-   "fwer": 0.0069,
-   "recall": 0.1545,
-   "precision": 0.978,
-   "false_per_positive_image": 0.0
+   "fwer": 0.0035,
+   "fwer_ci95": [
+    0.0006,
+    0.0194
+   ],
+   "oracle_quiet_rate": 0.0,
+   "recall": 0.1806,
+   "precision": 0.9811,
+   "false_per_positive_image": 0.0035
   }
  },
  "dev_soft": {
   "0.2": {
-   "fwer": 0.0833,
-   "recall": 0.4861,
-   "precision": 0.8615,
-   "false_per_positive_image": 0.0417
+   "fwer": 0.0556,
+   "fwer_ci95": [
+    0.0345,
+    0.0883
+   ],
+   "oracle_quiet_rate": 0.0328,
+   "recall": 0.5,
+   "precision": 0.8972,
+   "false_per_positive_image": 0.0556
   },
   "0.3": {
-   "fwer": 0.0764,
-   "recall": 0.4878,
-   "precision": 0.8646,
-   "false_per_positive_image": 0.0382
+   "fwer": 0.0521,
+   "fwer_ci95": [
+    0.0318,
+    0.0841
+   ],
+   "oracle_quiet_rate": 0.0292,
+   "recall": 0.5104,
+   "precision": 0.8909,
+   "false_per_positive_image": 0.0694
   },
   "0.45": {
-   "fwer": 0.0799,
-   "recall": 0.4983,
-   "precision": 0.8593,
-   "false_per_positive_image": 0.0451
+   "fwer": 0.059,
+   "fwer_ci95": [
+    0.0372,
+    0.0925
+   ],
+   "oracle_quiet_rate": 0.0365,
+   "recall": 0.5191,
+   "precision": 0.8872,
+   "false_per_positive_image": 0.0694
   }
  },
  "dev_cases": 576

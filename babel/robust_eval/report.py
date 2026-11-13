@@ -81,9 +81,9 @@ def check_predictions(S_all, k, preds=None):
     v = each(lambda S: S["overall"]["oracle-lcs"]["fwer"])
     out.append(("P1", all(0.02 <= x <= 0.10 for x in v.values()), "、".join(f"{n} {_f(x)}" for n, x in v.items())))
     v = each(lambda S: S["overall"][vk]["fwer"])
-    out.append(("P2", all(x <= 0.08 for x in v.values()), "、".join(f"{n} {_f(x)}" for n, x in v.items())))
-    v = each(lambda S: (S["overall"][vk]["recall"], S["overall"]["ngram:v3"]["recall"]))
-    out.append(("P3", all(a > b for a, b in v.values()), "、".join(f"{n} {_f(a)} 対 {_f(b)}" for n, (a, b) in v.items())))
+    out.append(("P2", all(x <= 0.05 for x in v.values()), "、".join(f"{n} {_f(x)}" for n, x in v.items())))
+    v = each(lambda S: S["overall"][vk]["recall"])
+    out.append(("P3", all(x >= 0.10 for x in v.values()), "、".join(f"{n} {_f(x)}" for n, x in v.items())))
 
     def p4(S):
         d = S["vote_discrimination"]
@@ -92,7 +92,7 @@ def check_predictions(S_all, k, preds=None):
         one = d["by_votes"].get("1", {"true": 0, "false": 0})
         return d["auc"], hi_t / max(1, hi_t + hi_f), one["true"] / max(1, one["true"] + one["false"])
     v = each(p4)
-    out.append(("P4", all(a is not None and a >= 0.8 and h >= 0.85 and o <= 0.3 for a, h, o in v.values()),
+    out.append(("P4", all(a is not None and a >= 0.65 and h >= 0.85 and o <= 0.5 for a, h, o in v.values()),
                 "、".join(f"{n} AUC {_f(a)}・票 {k} 以上 {_f(h, 2)}・票 1 {_f(o, 2)}" for n, (a, h, o) in v.items())))
     if "holdout-synth" in hs:
         x = hs["holdout-synth"]["overall"]["lcs:v2"]["fwer"]
@@ -127,7 +127,7 @@ def build():
     inv = {name: current(f"inventory-{name}.json", "babel-robust-inventory-v2") for name in SPLIT_NAMES}
     cb = {name: current(f"compare-bench-{name}.json", "babel-robust-compare-bench-v2") for name in SPLIT_NAMES}
     cmp_ = _load("real-img4494/compare-baseline-v3.json")
-    preds = _load("predictions.json")
+    preds = _load("predictions-v2.json")
     checks = check_predictions(S_all, k, preds)
     (R / "prediction-check.json").write_text(json.dumps([{"id": i, "held": ok, "observed": obs} for i, ok, obs in checks],
                                                         ensure_ascii=False, indent=1) + "\n", encoding="utf-8")

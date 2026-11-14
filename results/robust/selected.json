@@ -1,5 +1,5 @@
 {
- "bench_schema": "babel-robust-bench-v3",
+ "bench_schema": "babel-robust-bench-v4",
  "rule": {
   "limit": 0.05,
   "vote": "陰性画像の報告率の Wilson 95% 上限 <= limit となる最小の k",
@@ -15,9 +15,9 @@
     0.5915
    ],
    "oracle_quiet_rate": 0.5182,
-   "recall": 0.625,
-   "precision": 0.2697,
-   "false_per_positive_image": 1.7188
+   "recall": 0.6146,
+   "precision": 0.265,
+   "false_per_positive_image": 1.7396
   },
   "2": {
    "fwer": 0.0451,
@@ -26,9 +26,9 @@
     0.0757
    ],
    "oracle_quiet_rate": 0.0292,
-   "recall": 0.4514,
-   "precision": 0.8966,
-   "false_per_positive_image": 0.059
+   "recall": 0.4479,
+   "precision": 0.8897,
+   "false_per_positive_image": 0.066
   },
   "3": {
    "fwer": 0.0035,

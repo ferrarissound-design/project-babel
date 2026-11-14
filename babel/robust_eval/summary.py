@@ -187,7 +187,7 @@ def agreement_vs_truth(runs):
 
 def summarize(res):
     if res.get("schema") != "babel-robust-bench-v4":
-        raise ValueError("旧評価設計の集計を拒否。bench v3 を再実行する")
+        raise ValueError("旧評価設計の集計を拒否。bench v4 を再実行する")
     runs = res["runs"]
     main = ["oracle-ngram", "oracle-lcs", "ngram:baseline", "ngram:v2", "ngram:v3", "lcs:baseline", "lcs:v2", "lcs:v3", "soft@0.2", "soft@0.3",
             "soft@0.45"] + [f"vote>={k}" for k in range(2, N_MEMBERS + 1)]

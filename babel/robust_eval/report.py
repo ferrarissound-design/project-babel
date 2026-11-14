@@ -107,7 +107,7 @@ def check_predictions(S_all, k, preds=None, bench_schema="babel-robust-bench-v4"
 def build():
     sel = _load("selected.json")
     if not sel or sel.get("bench_schema") != "babel-robust-bench-v4":
-        raise ValueError("旧閾値は使用不可。v3 の dev 評価と選択を再実行する")
+        raise ValueError("旧閾値は使用不可。v4 の dev 評価と選択を再実行する")
     k = sel["vote_threshold"]
     if k is None:
         raise ValueError("95% 上限 <= 0.05 を満たす票の閾値はない。採用判定の報告を生成できない")
@@ -117,7 +117,7 @@ def build():
         res = _load(f"bench-{name}.json")
         if res:
             if res.get("schema") != sel["bench_schema"]:
-                raise ValueError(f"{name} は旧評価設計の結果。v3 を再実行する")
+                raise ValueError(f"{name} は旧評価設計の結果。v4 を再実行する")
             S_all[name] = summary.summarize(res)
             S_all[name]["config"] = res["config"]
             S_all[name]["opencv"] = res.get("opencv")

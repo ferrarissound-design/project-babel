@@ -1,0 +1,9868 @@
+{
+ "schema": "babel-robust-compare-bench-v2",
+ "split": "dev",
+ "cfg": {
+  "permutations": 999
+ },
+ "seconds": 96.0,
+ "summary": {
+  "overall": {
+   "images": 576,
+   "eligible": 129,
+   "all_four": {
+    "negative_images": 63,
+    "fwer": 0.0317,
+    "fwer_ci95": [
+     0.0087,
+     0.1086
+    ],
+    "positive_images": 66,
+    "recall": 0.6667,
+    "true": 88,
+    "false": 5,
+    "precision": 0.9462
+   },
+   "both_transcriptions": {
+    "negative_images": 63,
+    "fwer": 0.0317,
+    "fwer_ci95": [
+     0.0087,
+     0.1086
+    ],
+    "positive_images": 66,
+    "recall": 0.6742,
+    "true": 89,
+    "false": 6,
+    "precision": 0.9368
+   },
+   "any": {
+    "negative_images": 63,
+    "fwer": 0.1429,
+    "fwer_ci95": [
+     0.077,
+     0.2497
+    ],
+    "positive_images": 66,
+    "recall": 0.7727,
+    "true": 102,
+    "false": 36,
+    "precision": 0.7391
+   },
+   "one_only": {
+    "negative_images": 63,
+    "fwer": 0.1111,
+    "fwer_ci95": [
+     0.0549,
+     0.212
+    ],
+    "positive_images": 66,
+    "recall": 0.0985,
+    "true": 13,
+    "false": 30,
+    "precision": 0.3023
+   }
+  },
+  "by_family": {
+   "font": {
+    "images": 192,
+    "eligible": 25,
+    "all_four": {
+     "negative_images": 12,
+     "fwer": 0.0,
+     "fwer_ci95": [
+      0.0,
+      0.2425
+     ],
+     "positive_images": 13,
+     "recall": 0.5,
+     "true": 13,
+     "false": 0,
+     "precision": 1.0
+    },
+    "both_transcriptions": {
+     "negative_images": 12,
+     "fwer": 0.0,
+     "fwer_ci95": [
+      0.0,
+      0.2425
+     ],
+     "positive_images": 13,
+     "recall": 0.5,
+     "true": 13,
+     "false": 0,
+     "precision": 1.0
+    },
+    "any": {
+     "negative_images": 12,
+     "fwer": 0.0833,
+     "fwer_ci95": [
+      0.0149,
+      0.3539
+     ],
+     "positive_images": 13,
+     "recall": 0.6538,
+     "true": 17,
+     "false": 9,
+     "precision": 0.6538
+    },
+    "one_only": {
+     "negative_images": 12,
+     "fwer": 0.0833,
+     "fwer_ci95": [
+      0.0149,
+      0.3539
+     ],
+     "positive_images": 13,
+     "recall": 0.1538,
+     "true": 4,
+     "false": 9,
+     "precision": 0.3077
+    }
+   },
+   "stack": {
+    "images": 192,
+    "eligible": 50,
+    "all_four": {
+     "negative_images": 25,
+     "fwer": 0.04,
+     "fwer_ci95": [
+      0.0071,
+      0.1954
+     ],
+     "positive_images": 25,
+     "recall": 0.72,
+     "true": 36,
+     "false": 4,
+     "precision": 0.9
+    },
+    "both_transcriptions": {
+     "negative_images": 25,
+     "fwer": 0.04,
+     "fwer_ci95": [
+      0.0071,
+      0.1954
+     ],
+     "positive_images": 25,
+     "recall": 0.72,
+     "true": 36,
+     "false": 4,
+     "precision": 0.9
+    },
+    "any": {
+     "negative_images": 25,
+     "fwer": 0.12,
+     "fwer_ci95": [
+      0.0417,
+      0.2996
+     ],
+     "positive_images": 25,
+     "recall": 0.78,
+     "true": 39,
+     "false": 9,
+     "precision": 0.8125
+    },
+    "one_only": {
+     "negative_images": 25,
+     "fwer": 0.08,
+     "fwer_ci95": [
+      0.0222,
+      0.2497
+     ],
+     "positive_images": 25,
+     "recall": 0.06,
+     "true": 3,
+     "false": 5,
+     "precision": 0.375
+    }
+   },
+   "stroke": {
+    "images": 192,
+    "eligible": 54,
+    "all_four": {
+     "negative_images": 26,
+     "fwer": 0.0385,
+     "fwer_ci95": [
+      0.0068,
+      0.1889
+     ],
+     "positive_images": 28,
+     "recall": 0.6964,
+     "true": 39,
+     "false": 1,
+     "precision": 0.975
+    },
+    "both_transcriptions": {
+     "negative_images": 26,
+     "fwer": 0.0385,
+     "fwer_ci95": [
+      0.0068,
+      0.1889
+     ],
+     "positive_images": 28,
+     "recall": 0.7143,
+     "true": 40,
+     "false": 2,
+     "precision": 0.9524
+    },
+    "any": {
+     "negative_images": 26,
+     "fwer": 0.1923,
+     "fwer_ci95": [
+      0.0851,
+      0.3788
+     ],
+     "positive_images": 28,
+     "recall": 0.8214,
+     "true": 46,
+     "false": 18,
+     "precision": 0.7188
+    },
+    "one_only": {
+     "negative_images": 26,
+     "fwer": 0.1538,
+     "fwer_ci95": [
+      0.0615,
+      0.3353
+     ],
+     "positive_images": 28,
+     "recall": 0.1071,
+     "true": 6,
+     "false": 16,
+     "precision": 0.2727
+    }
+   }
+  }
+ },
+ "runs": [
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "plain",
+   "seed": 100,
+   "vocab": 30,
+   "n_pairs": 0,
+   "rows": [
+    13,
+    13
+   ],
+   "eligible": true,
+   "verdicts": [],
+   "pair_agreement_ari": 1.0
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "plain",
+   "seed": 100,
+   "vocab": 30,
+   "n_pairs": 2,
+   "rows": [
+    13,
+    13
+   ],
+   "eligible": true,
+   "verdicts": [
+    {
+     "gt": [
+      2,
+      3
+     ],
+     "kind": "planted",
+     "class": "どの転写でも有意",
+     "significant_in": [
+      "a",
+      "b",
+      "fine",
+      "coarse"
+     ]
+    }
+   ],
+   "pair_agreement_ari": 0.8659
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "plain",
+   "seed": 100,
+   "vocab": 80,
+   "n_pairs": 0,
+   "rows": [
+    13,
+    13
+   ],
+   "eligible": true,
+   "verdicts": [],
+   "pair_agreement_ari": 0.8888
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "plain",
+   "seed": 100,
+   "vocab": 80,
+   "n_pairs": 2,
+   "rows": [
+    13,
+    13
+   ],
+   "eligible": true,
+   "verdicts": [
+    {
+     "gt": [
+      4,
+      10
+     ],
+     "kind": "planted",
+     "class": "どの転写でも有意",
+     "significant_in": [
+      "a",
+      "b",
+      "fine",
+      "coarse"
+     ]
+    }
+   ],
+   "pair_agreement_ari": 0.9859
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "plain",
+   "seed": 100,
+   "vocab": 250,
+   "n_pairs": 0,
+   "rows": [
+    13,
+    13
+   ],
+   "eligible": true,
+   "verdicts": [],
+   "pair_agreement_ari": 0.9921
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "plain",
+   "seed": 100,
+   "vocab": 250,
+   "n_pairs": 2,
+   "rows": [
+    13,
+    13
+   ],
+   "eligible": true,
+   "verdicts": [
+    {
+     "gt": [
+      5,
+      12
+     ],
+     "kind": "planted",
+     "class": "どの転写でも有意",
+     "significant_in": [
+      "a",
+      "b",
+      "fine",
+      "coarse"
+     ]
+    },
+    {
+     "gt": [
+      8,
+      9
+     ],
+     "kind": "planted",
+     "class": "一方の転写だけで有意",
+     "significant_in": [
+      "b",
+      "fine"
+     ]
+    }
+   ],
+   "pair_agreement_ari": 0.886
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "diacritic",
+   "seed": 100,
+   "vocab": 30,
+   "n_pairs": 0,
+   "rows": [
+    2,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "diacritic",
+   "seed": 100,
+   "vocab": 30,
+   "n_pairs": 2,
+   "rows": [
+    4,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "diacritic",
+   "seed": 100,
+   "vocab": 80,
+   "n_pairs": 0,
+   "rows": [
+    3,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "diacritic",
+   "seed": 100,
+   "vocab": 80,
+   "n_pairs": 2,
+   "rows": [
+    1,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "diacritic",
+   "seed": 100,
+   "vocab": 250,
+   "n_pairs": 0,
+   "rows": [
+    1,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "diacritic",
+   "seed": 100,
+   "vocab": 250,
+   "n_pairs": 2,
+   "rows": [
+    2,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "tight",
+   "seed": 100,
+   "vocab": 30,
+   "n_pairs": 0,
+   "rows": [
+    1,
+    11
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "tight",
+   "seed": 100,
+   "vocab": 30,
+   "n_pairs": 2,
+   "rows": [
+    1,
+    10
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "tight",
+   "seed": 100,
+   "vocab": 80,
+   "n_pairs": 0,
+   "rows": [
+    1,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "tight",
+   "seed": 100,
+   "vocab": 80,
+   "n_pairs": 2,
+   "rows": [
+    1,
+    11
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "tight",
+   "seed": 100,
+   "vocab": 250,
+   "n_pairs": 0,
+   "rows": [
+    1,
+    8
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "tight",
+   "seed": 100,
+   "vocab": 250,
+   "n_pairs": 2,
+   "rows": [
+    1,
+    12
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "mixed",
+   "seed": 100,
+   "vocab": 30,
+   "n_pairs": 0,
+   "rows": [
+    13,
+    13
+   ],
+   "eligible": true,
+   "verdicts": [],
+   "pair_agreement_ari": 0.6587
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "mixed",
+   "seed": 100,
+   "vocab": 30,
+   "n_pairs": 2,
+   "rows": [
+    13,
+    13
+   ],
+   "eligible": true,
+   "verdicts": [
+    {
+     "gt": null,
+     "kind": "unmapped",
+     "class": "一方の転写だけで有意",
+     "significant_in": [
+      "b"
+     ]
+    },
+    {
+     "gt": [
+      3,
+      11
+     ],
+     "kind": "unplanted",
+     "class": "一方の転写だけで有意",
+     "significant_in": [
+      "fine"
+     ]
+    }
+   ],
+   "pair_agreement_ari": 0.7437
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "mixed",
+   "seed": 100,
+   "vocab": 80,
+   "n_pairs": 0,
+   "rows": [
+    12,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "mixed",
+   "seed": 100,
+   "vocab": 80,
+   "n_pairs": 2,
+   "rows": [
+    13,
+    13
+   ],
+   "eligible": true,
+   "verdicts": [
+    {
+     "gt": [
+      5,
+      8
+     ],
+     "kind": "planted",
+     "class": "一方の転写だけで有意",
+     "significant_in": [
+      "a"
+     ]
+    },
+    {
+     "gt": [
+      6,
+      9
+     ],
+     "kind": "unplanted",
+     "class": "一方の転写だけで有意",
+     "significant_in": [
+      "b"
+     ]
+    },
+    {
+     "gt": [
+      11,
+      12
+     ],
+     "kind": "planted",
+     "class": "どの転写でも有意",
+     "significant_in": [
+      "a",
+      "b",
+      "fine",
+      "coarse"
+     ]
+    }
+   ],
+   "pair_agreement_ari": 0.2352
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "mixed",
+   "seed": 100,
+   "vocab": 250,
+   "n_pairs": 0,
+   "rows": [
+    16,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "mixed",
+   "seed": 100,
+   "vocab": 250,
+   "n_pairs": 2,
+   "rows": [
+    13,
+    13
+   ],
+   "eligible": true,
+   "verdicts": [
+    {
+     "gt": null,
+     "kind": "unmapped",
+     "class": "一方の転写だけで有意",
+     "significant_in": [
+      "b"
+     ]
+    },
+    {
+     "gt": [
+      2,
+      11
+     ],
+     "kind": "unplanted",
+     "class": "一方の転写だけで有意",
+     "significant_in": [
+      "b"
+     ]
+    },
+    {
+     "gt": [
+      3,
+      11
+     ],
+     "kind": "planted",
+     "class": "一方の転写だけで有意",
+     "significant_in": [
+      "a",
+      "coarse"
+     ]
+    },
+    {
+     "gt": [
+      9,
+      11
+     ],
+     "kind": "unplanted",
+     "class": "一方の転写だけで有意",
+     "significant_in": [
+      "a",
+      "fine"
+     ]
+    }
+   ],
+   "pair_agreement_ari": 0.8706
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "plain",
+   "seed": 100,
+   "vocab": 30,
+   "n_pairs": 0,
+   "rows": [
+    13,
+    13
+   ],
+   "eligible": true,
+   "verdicts": [],
+   "pair_agreement_ari": 0.9611
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "plain",
+   "seed": 100,
+   "vocab": 30,
+   "n_pairs": 2,
+   "rows": [
+    13,
+    13
+   ],
+   "eligible": true,
+   "verdicts": [
+    {
+     "gt": [
+      6,
+      7
+     ],
+     "kind": "planted",
+     "class": "どの転写でも有意",
+     "significant_in": [
+      "a",
+      "b",
+      "fine",
+      "coarse"
+     ]
+    }
+   ],
+   "pair_agreement_ari": 0.9217
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "plain",
+   "seed": 100,
+   "vocab": 80,
+   "n_pairs": 0,
+   "rows": [
+    13,
+    13
+   ],
+   "eligible": true,
+   "verdicts": [],
+   "pair_agreement_ari": 0.9976
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "plain",
+   "seed": 100,
+   "vocab": 80,
+   "n_pairs": 2,
+   "rows": [
+    13,
+    13
+   ],
+   "eligible": true,
+   "verdicts": [
+    {
+     "gt": [
+      3,
+      5
+     ],
+     "kind": "planted",
+     "class": "どの転写でも有意",
+     "significant_in": [
+      "a",
+      "b",
+      "fine",
+      "coarse"
+     ]
+    },
+    {
+     "gt": [
+      9,
+      11
+     ],
+     "kind": "planted",
+     "class": "どの転写でも有意",
+     "significant_in": [
+      "a",
+      "b",
+      "fine",
+      "coarse"
+     ]
+    }
+   ],
+   "pair_agreement_ari": 0.9687
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "plain",
+   "seed": 100,
+   "vocab": 250,
+   "n_pairs": 0,
+   "rows": [
+    13,
+    13
+   ],
+   "eligible": true,
+   "verdicts": [],
+   "pair_agreement_ari": 0.8878
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "plain",
+   "seed": 100,
+   "vocab": 250,
+   "n_pairs": 2,
+   "rows": [
+    13,
+    13
+   ],
+   "eligible": true,
+   "verdicts": [
+    {
+     "gt": [
+      7,
+      11
+     ],
+     "kind": "planted",
+     "class": "どの転写でも有意",
+     "significant_in": [
+      "a",
+      "b",
+      "fine",
+      "coarse"
+     ]
+    },
+    {
+     "gt": [
+      8,
+      10
+     ],
+     "kind": "planted",
+     "class": "どの転写でも有意",
+     "significant_in": [
+      "a",
+      "b",
+      "fine",
+      "coarse"
+     ]
+    }
+   ],
+   "pair_agreement_ari": 1.0
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "diacritic",
+   "seed": 100,
+   "vocab": 30,
+   "n_pairs": 0,
+   "rows": [
+    6,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "diacritic",
+   "seed": 100,
+   "vocab": 30,
+   "n_pairs": 2,
+   "rows": [
+    8,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "diacritic",
+   "seed": 100,
+   "vocab": 80,
+   "n_pairs": 0,
+   "rows": [
+    10,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "diacritic",
+   "seed": 100,
+   "vocab": 80,
+   "n_pairs": 2,
+   "rows": [
+    4,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "diacritic",
+   "seed": 100,
+   "vocab": 250,
+   "n_pairs": 0,
+   "rows": [
+    8,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "diacritic",
+   "seed": 100,
+   "vocab": 250,
+   "n_pairs": 2,
+   "rows": [
+    11,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "tight",
+   "seed": 100,
+   "vocab": 30,
+   "n_pairs": 0,
+   "rows": [
+    1,
+    10
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "tight",
+   "seed": 100,
+   "vocab": 30,
+   "n_pairs": 2,
+   "rows": [
+    1,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "tight",
+   "seed": 100,
+   "vocab": 80,
+   "n_pairs": 0,
+   "rows": [
+    1,
+    9
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "tight",
+   "seed": 100,
+   "vocab": 80,
+   "n_pairs": 2,
+   "rows": [
+    1,
+    10
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "tight",
+   "seed": 100,
+   "vocab": 250,
+   "n_pairs": 0,
+   "rows": [
+    2,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "tight",
+   "seed": 100,
+   "vocab": 250,
+   "n_pairs": 2,
+   "rows": [
+    1,
+    12
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "mixed",
+   "seed": 100,
+   "vocab": 30,
+   "n_pairs": 0,
+   "rows": [
+    7,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "mixed",
+   "seed": 100,
+   "vocab": 30,
+   "n_pairs": 2,
+   "rows": [
+    4,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "mixed",
+   "seed": 100,
+   "vocab": 80,
+   "n_pairs": 0,
+   "rows": [
+    8,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "mixed",
+   "seed": 100,
+   "vocab": 80,
+   "n_pairs": 2,
+   "rows": [
+    8,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "mixed",
+   "seed": 100,
+   "vocab": 250,
+   "n_pairs": 0,
+   "rows": [
+    6,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "mixed",
+   "seed": 100,
+   "vocab": 250,
+   "n_pairs": 2,
+   "rows": [
+    4,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "plain",
+   "seed": 100,
+   "vocab": 30,
+   "n_pairs": 0,
+   "rows": [
+    13,
+    13
+   ],
+   "eligible": true,
+   "verdicts": [],
+   "pair_agreement_ari": 1.0
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "plain",
+   "seed": 100,
+   "vocab": 30,
+   "n_pairs": 2,
+   "rows": [
+    13,
+    13
+   ],
+   "eligible": true,
+   "verdicts": [
+    {
+     "gt": [
+      0,
+      1
+     ],
+     "kind": "unplanted",
+     "class": "どの転写でも有意",
+     "significant_in": [
+      "a",
+      "b",
+      "fine",
+      "coarse"
+     ]
+    },
+    {
+     "gt": [
+      1,
+      9
+     ],
+     "kind": "planted",
+     "class": "一方の転写だけで有意",
+     "significant_in": [
+      "a",
+      "fine",
+      "coarse"
+     ]
+    },
+    {
+     "gt": [
+      3,
+      12
+     ],
+     "kind": "unplanted",
+     "class": "どの転写でも有意",
+     "significant_in": [
+      "a",
+      "b",
+      "fine",
+      "coarse"
+     ]
+    },
+    {
+     "gt": [
+      6,
+      7
+     ],
+     "kind": "planted",
+     "class": "一方の転写だけで有意",
+     "significant_in": [
+      "a",
+      "fine",
+      "coarse"
+     ]
+    }
+   ],
+   "pair_agreement_ari": 1.0
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "plain",
+   "seed": 100,
+   "vocab": 80,
+   "n_pairs": 0,
+   "rows": [
+    13,
+    13
+   ],
+   "eligible": true,
+   "verdicts": [],
+   "pair_agreement_ari": 0.9962
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "plain",
+   "seed": 100,
+   "vocab": 80,
+   "n_pairs": 2,
+   "rows": [
+    13,
+    13
+   ],
+   "eligible": true,
+   "verdicts": [
+    {
+     "gt": [
+      0,
+      11
+     ],
+     "kind": "planted",
+     "class": "どの転写でも有意",
+     "significant_in": [
+      "a",
+      "b",
+      "fine",
+      "coarse"
+     ]
+    },
+    {
+     "gt": [
+      1,
+      5
+     ],
+     "kind": "planted",
+     "class": "どの転写でも有意",
+     "significant_in": [
+      "a",
+      "b",
+      "fine",
+      "coarse"
+     ]
+    }
+   ],
+   "pair_agreement_ari": 1.0
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "plain",
+   "seed": 100,
+   "vocab": 250,
+   "n_pairs": 0,
+   "rows": [
+    13,
+    13
+   ],
+   "eligible": true,
+   "verdicts": [],
+   "pair_agreement_ari": 0.9807
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "plain",
+   "seed": 100,
+   "vocab": 250,
+   "n_pairs": 2,
+   "rows": [
+    13,
+    13
+   ],
+   "eligible": true,
+   "verdicts": [
+    {
+     "gt": [
+      2,
+      7
+     ],
+     "kind": "planted",
+     "class": "どの転写でも有意",
+     "significant_in": [
+      "a",
+      "b",
+      "fine",
+      "coarse"
+     ]
+    },
+    {
+     "gt": [
+      3,
+      4
+     ],
+     "kind": "planted",
+     "class": "どの転写でも有意",
+     "significant_in": [
+      "a",
+      "b",
+      "fine",
+      "coarse"
+     ]
+    }
+   ],
+   "pair_agreement_ari": 0.9984
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "diacritic",
+   "seed": 100,
+   "vocab": 30,
+   "n_pairs": 0,
+   "rows": [
+    3,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "diacritic",
+   "seed": 100,
+   "vocab": 30,
+   "n_pairs": 2,
+   "rows": [
+    12,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "diacritic",
+   "seed": 100,
+   "vocab": 80,
+   "n_pairs": 0,
+   "rows": [
+    11,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "diacritic",
+   "seed": 100,
+   "vocab": 80,
+   "n_pairs": 2,
+   "rows": [
+    5,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "diacritic",
+   "seed": 100,
+   "vocab": 250,
+   "n_pairs": 0,
+   "rows": [
+    5,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "diacritic",
+   "seed": 100,
+   "vocab": 250,
+   "n_pairs": 2,
+   "rows": [
+    3,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "tight",
+   "seed": 100,
+   "vocab": 30,
+   "n_pairs": 0,
+   "rows": [
+    1,
+    12
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "tight",
+   "seed": 100,
+   "vocab": 30,
+   "n_pairs": 2,
+   "rows": [
+    1,
+    7
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "tight",
+   "seed": 100,
+   "vocab": 80,
+   "n_pairs": 0,
+   "rows": [
+    1,
+    11
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "tight",
+   "seed": 100,
+   "vocab": 80,
+   "n_pairs": 2,
+   "rows": [
+    2,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "tight",
+   "seed": 100,
+   "vocab": 250,
+   "n_pairs": 0,
+   "rows": [
+    1,
+    7
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "tight",
+   "seed": 100,
+   "vocab": 250,
+   "n_pairs": 2,
+   "rows": [
+    1,
+    8
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "mixed",
+   "seed": 100,
+   "vocab": 30,
+   "n_pairs": 0,
+   "rows": [
+    6,
+    14
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "mixed",
+   "seed": 100,
+   "vocab": 30,
+   "n_pairs": 2,
+   "rows": [
+    9,
+    22
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "mixed",
+   "seed": 100,
+   "vocab": 80,
+   "n_pairs": 0,
+   "rows": [
+    7,
+    14
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "mixed",
+   "seed": 100,
+   "vocab": 80,
+   "n_pairs": 2,
+   "rows": [
+    9,
+    17
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "mixed",
+   "seed": 100,
+   "vocab": 250,
+   "n_pairs": 0,
+   "rows": [
+    4,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "mixed",
+   "seed": 100,
+   "vocab": 250,
+   "n_pairs": 2,
+   "rows": [
+    5,
+    21
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "plain",
+   "seed": 101,
+   "vocab": 30,
+   "n_pairs": 0,
+   "rows": [
+    13,
+    13
+   ],
+   "eligible": true,
+   "verdicts": [],
+   "pair_agreement_ari": 0.9765
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "plain",
+   "seed": 101,
+   "vocab": 30,
+   "n_pairs": 2,
+   "rows": [
+    13,
+    13
+   ],
+   "eligible": true,
+   "verdicts": [
+    {
+     "gt": [
+      3,
+      11
+     ],
+     "kind": "planted",
+     "class": "どの転写でも有意",
+     "significant_in": [
+      "a",
+      "b",
+      "fine",
+      "coarse"
+     ]
+    },
+    {
+     "gt": [
+      5,
+      7
+     ],
+     "kind": "planted",
+     "class": "どの転写でも有意",
+     "significant_in": [
+      "a",
+      "b",
+      "fine",
+      "coarse"
+     ]
+    }
+   ],
+   "pair_agreement_ari": 1.0
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "plain",
+   "seed": 101,
+   "vocab": 80,
+   "n_pairs": 0,
+   "rows": [
+    13,
+    13
+   ],
+   "eligible": true,
+   "verdicts": [],
+   "pair_agreement_ari": 0.9746
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "plain",
+   "seed": 101,
+   "vocab": 80,
+   "n_pairs": 2,
+   "rows": [
+    13,
+    13
+   ],
+   "eligible": true,
+   "verdicts": [
+    {
+     "gt": [
+      4,
+      8
+     ],
+     "kind": "planted",
+     "class": "どの転写でも有意",
+     "significant_in": [
+      "a",
+      "b",
+      "fine",
+      "coarse"
+     ]
+    }
+   ],
+   "pair_agreement_ari": 0.9737
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "plain",
+   "seed": 101,
+   "vocab": 250,
+   "n_pairs": 0,
+   "rows": [
+    13,
+    13
+   ],
+   "eligible": true,
+   "verdicts": [],
+   "pair_agreement_ari": 0.9664
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "plain",
+   "seed": 101,
+   "vocab": 250,
+   "n_pairs": 2,
+   "rows": [
+    13,
+    13
+   ],
+   "eligible": true,
+   "verdicts": [
+    {
+     "gt": [
+      2,
+      5
+     ],
+     "kind": "planted",
+     "class": "どの転写でも有意",
+     "significant_in": [
+      "a",
+      "b",
+      "fine",
+      "coarse"
+     ]
+    },
+    {
+     "gt": [
+      3,
+      8
+     ],
+     "kind": "planted",
+     "class": "どの転写でも有意",
+     "significant_in": [
+      "a",
+      "b",
+      "fine",
+      "coarse"
+     ]
+    }
+   ],
+   "pair_agreement_ari": 0.9644
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "diacritic",
+   "seed": 101,
+   "vocab": 30,
+   "n_pairs": 0,
+   "rows": [
+    4,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "diacritic",
+   "seed": 101,
+   "vocab": 30,
+   "n_pairs": 2,
+   "rows": [
+    1,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "diacritic",
+   "seed": 101,
+   "vocab": 80,
+   "n_pairs": 0,
+   "rows": [
+    1,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "diacritic",
+   "seed": 101,
+   "vocab": 80,
+   "n_pairs": 2,
+   "rows": [
+    3,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "diacritic",
+   "seed": 101,
+   "vocab": 250,
+   "n_pairs": 0,
+   "rows": [
+    1,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "diacritic",
+   "seed": 101,
+   "vocab": 250,
+   "n_pairs": 2,
+   "rows": [
+    1,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "tight",
+   "seed": 101,
+   "vocab": 30,
+   "n_pairs": 0,
+   "rows": [
+    1,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "tight",
+   "seed": 101,
+   "vocab": 30,
+   "n_pairs": 2,
+   "rows": [
+    1,
+    12
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "tight",
+   "seed": 101,
+   "vocab": 80,
+   "n_pairs": 0,
+   "rows": [
+    1,
+    12
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "tight",
+   "seed": 101,
+   "vocab": 80,
+   "n_pairs": 2,
+   "rows": [
+    3,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "tight",
+   "seed": 101,
+   "vocab": 250,
+   "n_pairs": 0,
+   "rows": [
+    6,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "tight",
+   "seed": 101,
+   "vocab": 250,
+   "n_pairs": 2,
+   "rows": [
+    1,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "mixed",
+   "seed": 101,
+   "vocab": 30,
+   "n_pairs": 0,
+   "rows": [
+    7,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "mixed",
+   "seed": 101,
+   "vocab": 30,
+   "n_pairs": 2,
+   "rows": [
+    8,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "mixed",
+   "seed": 101,
+   "vocab": 80,
+   "n_pairs": 0,
+   "rows": [
+    10,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "mixed",
+   "seed": 101,
+   "vocab": 80,
+   "n_pairs": 2,
+   "rows": [
+    8,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "mixed",
+   "seed": 101,
+   "vocab": 250,
+   "n_pairs": 0,
+   "rows": [
+    9,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "mixed",
+   "seed": 101,
+   "vocab": 250,
+   "n_pairs": 2,
+   "rows": [
+    8,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "plain",
+   "seed": 101,
+   "vocab": 30,
+   "n_pairs": 0,
+   "rows": [
+    13,
+    13
+   ],
+   "eligible": true,
+   "verdicts": [],
+   "pair_agreement_ari": 1.0
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "plain",
+   "seed": 101,
+   "vocab": 30,
+   "n_pairs": 2,
+   "rows": [
+    13,
+    13
+   ],
+   "eligible": true,
+   "verdicts": [
+    {
+     "gt": [
+      0,
+      10
+     ],
+     "kind": "planted",
+     "class": "どの転写でも有意",
+     "significant_in": [
+      "a",
+      "b",
+      "fine",
+      "coarse"
+     ]
+    },
+    {
+     "gt": [
+      6,
+      11
+     ],
+     "kind": "planted",
+     "class": "どの転写でも有意",
+     "significant_in": [
+      "a",
+      "b",
+      "fine",
+      "coarse"
+     ]
+    }
+   ],
+   "pair_agreement_ari": 1.0
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "plain",
+   "seed": 101,
+   "vocab": 80,
+   "n_pairs": 0,
+   "rows": [
+    13,
+    13
+   ],
+   "eligible": true,
+   "verdicts": [],
+   "pair_agreement_ari": 0.9696
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "plain",
+   "seed": 101,
+   "vocab": 80,
+   "n_pairs": 2,
+   "rows": [
+    13,
+    13
+   ],
+   "eligible": true,
+   "verdicts": [
+    {
+     "gt": [
+      0,
+      10
+     ],
+     "kind": "planted",
+     "class": "どの転写でも有意",
+     "significant_in": [
+      "a",
+      "b",
+      "fine",
+      "coarse"
+     ]
+    },
+    {
+     "gt": [
+      1,
+      3
+     ],
+     "kind": "planted",
+     "class": "どの転写でも有意",
+     "significant_in": [
+      "a",
+      "b",
+      "fine",
+      "coarse"
+     ]
+    },
+    {
+     "gt": [
+      4,
+      9
+     ],
+     "kind": "unplanted",
+     "class": "一方の転写だけで有意",
+     "significant_in": [
+      "b"
+     ]
+    }
+   ],
+   "pair_agreement_ari": 0.9983
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "plain",
+   "seed": 101,
+   "vocab": 250,
+   "n_pairs": 0,
+   "rows": [
+    13,
+    13
+   ],
+   "eligible": true,
+   "verdicts": [],
+   "pair_agreement_ari": 0.9855
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "plain",
+   "seed": 101,
+   "vocab": 250,
+   "n_pairs": 2,
+   "rows": [
+    13,
+    13
+   ],
+   "eligible": true,
+   "verdicts": [
+    {
+     "gt": [
+      0,
+      4
+     ],
+     "kind": "planted",
+     "class": "一方の転写だけで有意",
+     "significant_in": [
+      "a",
+      "coarse"
+     ]
+    },
+    {
+     "gt": [
+      3,
+      11
+     ],
+     "kind": "planted",
+     "class": "どの転写でも有意",
+     "significant_in": [
+      "a",
+      "b",
+      "fine",
+      "coarse"
+     ]
+    }
+   ],
+   "pair_agreement_ari": 0.9107
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "diacritic",
+   "seed": 101,
+   "vocab": 30,
+   "n_pairs": 0,
+   "rows": [
+    10,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "diacritic",
+   "seed": 101,
+   "vocab": 30,
+   "n_pairs": 2,
+   "rows": [
+    11,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "diacritic",
+   "seed": 101,
+   "vocab": 80,
+   "n_pairs": 0,
+   "rows": [
+    15,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "diacritic",
+   "seed": 101,
+   "vocab": 80,
+   "n_pairs": 2,
+   "rows": [
+    13,
+    13
+   ],
+   "eligible": true,
+   "verdicts": [
+    {
+     "gt": null,
+     "kind": "unmapped",
+     "class": "両方の転写で有意",
+     "significant_in": [
+      "a",
+      "b",
+      "coarse"
+     ]
+    },
+    {
+     "gt": [
+      2,
+      4
+     ],
+     "kind": "unplanted",
+     "class": "一方の転写だけで有意",
+     "significant_in": [
+      "a"
+     ]
+    },
+    {
+     "gt": [
+      2,
+      6
+     ],
+     "kind": "unplanted",
+     "class": "一方の転写だけで有意",
+     "significant_in": [
+      "a"
+     ]
+    },
+    {
+     "gt": [
+      4,
+      6
+     ],
+     "kind": "unplanted",
+     "class": "一方の転写だけで有意",
+     "significant_in": [
+      "a"
+     ]
+    },
+    {
+     "gt": [
+      5,
+      12
+     ],
+     "kind": "unplanted",
+     "class": "一方の転写だけで有意",
+     "significant_in": [
+      "fine"
+     ]
+    }
+   ],
+   "pair_agreement_ari": 0.7107
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "diacritic",
+   "seed": 101,
+   "vocab": 250,
+   "n_pairs": 0,
+   "rows": [
+    11,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "diacritic",
+   "seed": 101,
+   "vocab": 250,
+   "n_pairs": 2,
+   "rows": [
+    11,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "tight",
+   "seed": 101,
+   "vocab": 30,
+   "n_pairs": 0,
+   "rows": [
+    1,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "tight",
+   "seed": 101,
+   "vocab": 30,
+   "n_pairs": 2,
+   "rows": [
+    2,
+    12
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "tight",
+   "seed": 101,
+   "vocab": 80,
+   "n_pairs": 0,
+   "rows": [
+    1,
+    12
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "tight",
+   "seed": 101,
+   "vocab": 80,
+   "n_pairs": 2,
+   "rows": [
+    1,
+    12
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "tight",
+   "seed": 101,
+   "vocab": 250,
+   "n_pairs": 0,
+   "rows": [
+    1,
+    12
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "tight",
+   "seed": 101,
+   "vocab": 250,
+   "n_pairs": 2,
+   "rows": [
+    2,
+    8
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "mixed",
+   "seed": 101,
+   "vocab": 30,
+   "n_pairs": 0,
+   "rows": [
+    12,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "mixed",
+   "seed": 101,
+   "vocab": 30,
+   "n_pairs": 2,
+   "rows": [
+    11,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "mixed",
+   "seed": 101,
+   "vocab": 80,
+   "n_pairs": 0,
+   "rows": [
+    12,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "mixed",
+   "seed": 101,
+   "vocab": 80,
+   "n_pairs": 2,
+   "rows": [
+    14,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "mixed",
+   "seed": 101,
+   "vocab": 250,
+   "n_pairs": 0,
+   "rows": [
+    13,
+    13
+   ],
+   "eligible": true,
+   "verdicts": [],
+   "pair_agreement_ari": 0.0
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "mixed",
+   "seed": 101,
+   "vocab": 250,
+   "n_pairs": 2,
+   "rows": [
+    16,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "plain",
+   "seed": 101,
+   "vocab": 30,
+   "n_pairs": 0,
+   "rows": [
+    13,
+    13
+   ],
+   "eligible": true,
+   "verdicts": [],
+   "pair_agreement_ari": 0.9817
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "plain",
+   "seed": 101,
+   "vocab": 30,
+   "n_pairs": 2,
+   "rows": [
+    13,
+    13
+   ],
+   "eligible": true,
+   "verdicts": [
+    {
+     "gt": [
+      0,
+      4
+     ],
+     "kind": "planted",
+     "class": "どの転写でも有意",
+     "significant_in": [
+      "a",
+      "b",
+      "fine",
+      "coarse"
+     ]
+    },
+    {
+     "gt": [
+      6,
+      12
+     ],
+     "kind": "planted",
+     "class": "どの転写でも有意",
+     "significant_in": [
+      "a",
+      "b",
+      "fine",
+      "coarse"
+     ]
+    },
+    {
+     "gt": [
+      7,
+      11
+     ],
+     "kind": "unplanted",
+     "class": "一方の転写だけで有意",
+     "significant_in": [
+      "a",
+      "coarse"
+     ]
+    },
+    {
+     "gt": [
+      10,
+      11
+     ],
+     "kind": "unplanted",
+     "class": "一方の転写だけで有意",
+     "significant_in": [
+      "a",
+      "coarse"
+     ]
+    }
+   ],
+   "pair_agreement_ari": 0.9732
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "plain",
+   "seed": 101,
+   "vocab": 80,
+   "n_pairs": 0,
+   "rows": [
+    13,
+    13
+   ],
+   "eligible": true,
+   "verdicts": [],
+   "pair_agreement_ari": 0.9922
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "plain",
+   "seed": 101,
+   "vocab": 80,
+   "n_pairs": 2,
+   "rows": [
+    13,
+    13
+   ],
+   "eligible": true,
+   "verdicts": [
+    {
+     "gt": [
+      2,
+      8
+     ],
+     "kind": "unplanted",
+     "class": "一方の転写だけで有意",
+     "significant_in": [
+      "b",
+      "fine"
+     ]
+    },
+    {
+     "gt": [
+      4,
+      7
+     ],
+     "kind": "planted",
+     "class": "どの転写でも有意",
+     "significant_in": [
+      "a",
+      "b",
+      "fine",
+      "coarse"
+     ]
+    },
+    {
+     "gt": [
+      8,
+      12
+     ],
+     "kind": "planted",
+     "class": "どの転写でも有意",
+     "significant_in": [
+      "a",
+      "b",
+      "fine",
+      "coarse"
+     ]
+    }
+   ],
+   "pair_agreement_ari": 0.9317
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "plain",
+   "seed": 101,
+   "vocab": 250,
+   "n_pairs": 0,
+   "rows": [
+    13,
+    13
+   ],
+   "eligible": true,
+   "verdicts": [],
+   "pair_agreement_ari": 0.904
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "plain",
+   "seed": 101,
+   "vocab": 250,
+   "n_pairs": 2,
+   "rows": [
+    13,
+    13
+   ],
+   "eligible": true,
+   "verdicts": [
+    {
+     "gt": [
+      1,
+      8
+     ],
+     "kind": "planted",
+     "class": "どの転写でも有意",
+     "significant_in": [
+      "a",
+      "b",
+      "fine",
+      "coarse"
+     ]
+    },
+    {
+     "gt": [
+      2,
+      5
+     ],
+     "kind": "planted",
+     "class": "どの転写でも有意",
+     "significant_in": [
+      "a",
+      "b",
+      "fine",
+      "coarse"
+     ]
+    }
+   ],
+   "pair_agreement_ari": 0.9785
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "diacritic",
+   "seed": 101,
+   "vocab": 30,
+   "n_pairs": 0,
+   "rows": [
+    7,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "diacritic",
+   "seed": 101,
+   "vocab": 30,
+   "n_pairs": 2,
+   "rows": [
+    3,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "diacritic",
+   "seed": 101,
+   "vocab": 80,
+   "n_pairs": 0,
+   "rows": [
+    1,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "diacritic",
+   "seed": 101,
+   "vocab": 80,
+   "n_pairs": 2,
+   "rows": [
+    1,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "diacritic",
+   "seed": 101,
+   "vocab": 250,
+   "n_pairs": 0,
+   "rows": [
+    1,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "diacritic",
+   "seed": 101,
+   "vocab": 250,
+   "n_pairs": 2,
+   "rows": [
+    2,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "tight",
+   "seed": 101,
+   "vocab": 30,
+   "n_pairs": 0,
+   "rows": [
+    1,
+    9
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "tight",
+   "seed": 101,
+   "vocab": 30,
+   "n_pairs": 2,
+   "rows": [
+    1,
+    10
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "tight",
+   "seed": 101,
+   "vocab": 80,
+   "n_pairs": 0,
+   "rows": [
+    1,
+    9
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "tight",
+   "seed": 101,
+   "vocab": 80,
+   "n_pairs": 2,
+   "rows": [
+    1,
+    8
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "tight",
+   "seed": 101,
+   "vocab": 250,
+   "n_pairs": 0,
+   "rows": [
+    1,
+    7
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "tight",
+   "seed": 101,
+   "vocab": 250,
+   "n_pairs": 2,
+   "rows": [
+    1,
+    10
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "mixed",
+   "seed": 101,
+   "vocab": 30,
+   "n_pairs": 0,
+   "rows": [
+    10,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "mixed",
+   "seed": 101,
+   "vocab": 30,
+   "n_pairs": 2,
+   "rows": [
+    8,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "mixed",
+   "seed": 101,
+   "vocab": 80,
+   "n_pairs": 0,
+   "rows": [
+    10,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "mixed",
+   "seed": 101,
+   "vocab": 80,
+   "n_pairs": 2,
+   "rows": [
+    12,
+    14
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "mixed",
+   "seed": 101,
+   "vocab": 250,
+   "n_pairs": 0,
+   "rows": [
+    11,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "mixed",
+   "seed": 101,
+   "vocab": 250,
+   "n_pairs": 2,
+   "rows": [
+    10,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "plain",
+   "seed": 102,
+   "vocab": 30,
+   "n_pairs": 0,
+   "rows": [
+    13,
+    13
+   ],
+   "eligible": true,
+   "verdicts": [],
+   "pair_agreement_ari": 0.667
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "plain",
+   "seed": 102,
+   "vocab": 30,
+   "n_pairs": 2,
+   "rows": [
+    13,
+    13
+   ],
+   "eligible": true,
+   "verdicts": [
+    {
+     "gt": [
+      3,
+      7
+     ],
+     "kind": "planted",
+     "class": "どの転写でも有意",
+     "significant_in": [
+      "a",
+      "b",
+      "fine",
+      "coarse"
+     ]
+    }
+   ],
+   "pair_agreement_ari": 0.9897
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "plain",
+   "seed": 102,
+   "vocab": 80,
+   "n_pairs": 0,
+   "rows": [
+    13,
+    13
+   ],
+   "eligible": true,
+   "verdicts": [],
+   "pair_agreement_ari": 0.9988
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "plain",
+   "seed": 102,
+   "vocab": 80,
+   "n_pairs": 2,
+   "rows": [
+    13,
+    13
+   ],
+   "eligible": true,
+   "verdicts": [
+    {
+     "gt": [
+      5,
+      6
+     ],
+     "kind": "planted",
+     "class": "どの転写でも有意",
+     "significant_in": [
+      "a",
+      "b",
+      "fine",
+      "coarse"
+     ]
+    }
+   ],
+   "pair_agreement_ari": 0.9498
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "plain",
+   "seed": 102,
+   "vocab": 250,
+   "n_pairs": 0,
+   "rows": [
+    13,
+    13
+   ],
+   "eligible": true,
+   "verdicts": [],
+   "pair_agreement_ari": 0.9942
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "plain",
+   "seed": 102,
+   "vocab": 250,
+   "n_pairs": 2,
+   "rows": [
+    13,
+    13
+   ],
+   "eligible": true,
+   "verdicts": [
+    {
+     "gt": [
+      1,
+      6
+     ],
+     "kind": "planted",
+     "class": "どの転写でも有意",
+     "significant_in": [
+      "a",
+      "b",
+      "fine",
+      "coarse"
+     ]
+    },
+    {
+     "gt": [
+      9,
+      11
+     ],
+     "kind": "planted",
+     "class": "どの転写でも有意",
+     "significant_in": [
+      "a",
+      "b",
+      "fine",
+      "coarse"
+     ]
+    }
+   ],
+   "pair_agreement_ari": 0.955
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "diacritic",
+   "seed": 102,
+   "vocab": 30,
+   "n_pairs": 0,
+   "rows": [
+    1,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "diacritic",
+   "seed": 102,
+   "vocab": 30,
+   "n_pairs": 2,
+   "rows": [
+    5,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "diacritic",
+   "seed": 102,
+   "vocab": 80,
+   "n_pairs": 0,
+   "rows": [
+    3,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "diacritic",
+   "seed": 102,
+   "vocab": 80,
+   "n_pairs": 2,
+   "rows": [
+    4,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "diacritic",
+   "seed": 102,
+   "vocab": 250,
+   "n_pairs": 0,
+   "rows": [
+    1,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "diacritic",
+   "seed": 102,
+   "vocab": 250,
+   "n_pairs": 2,
+   "rows": [
+    2,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "tight",
+   "seed": 102,
+   "vocab": 30,
+   "n_pairs": 0,
+   "rows": [
+    3,
+    12
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "tight",
+   "seed": 102,
+   "vocab": 30,
+   "n_pairs": 2,
+   "rows": [
+    1,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "tight",
+   "seed": 102,
+   "vocab": 80,
+   "n_pairs": 0,
+   "rows": [
+    1,
+    8
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "tight",
+   "seed": 102,
+   "vocab": 80,
+   "n_pairs": 2,
+   "rows": [
+    1,
+    10
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "tight",
+   "seed": 102,
+   "vocab": 250,
+   "n_pairs": 0,
+   "rows": [
+    1,
+    8
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "tight",
+   "seed": 102,
+   "vocab": 250,
+   "n_pairs": 2,
+   "rows": [
+    1,
+    9
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "mixed",
+   "seed": 102,
+   "vocab": 30,
+   "n_pairs": 0,
+   "rows": [
+    8,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "mixed",
+   "seed": 102,
+   "vocab": 30,
+   "n_pairs": 2,
+   "rows": [
+    9,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "mixed",
+   "seed": 102,
+   "vocab": 80,
+   "n_pairs": 0,
+   "rows": [
+    9,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "mixed",
+   "seed": 102,
+   "vocab": 80,
+   "n_pairs": 2,
+   "rows": [
+    10,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "mixed",
+   "seed": 102,
+   "vocab": 250,
+   "n_pairs": 0,
+   "rows": [
+    10,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "mixed",
+   "seed": 102,
+   "vocab": 250,
+   "n_pairs": 2,
+   "rows": [
+    8,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "plain",
+   "seed": 102,
+   "vocab": 30,
+   "n_pairs": 0,
+   "rows": [
+    13,
+    13
+   ],
+   "eligible": true,
+   "verdicts": [],
+   "pair_agreement_ari": 0.9899
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "plain",
+   "seed": 102,
+   "vocab": 30,
+   "n_pairs": 2,
+   "rows": [
+    13,
+    13
+   ],
+   "eligible": true,
+   "verdicts": [
+    {
+     "gt": [
+      3,
+      12
+     ],
+     "kind": "planted",
+     "class": "どの転写でも有意",
+     "significant_in": [
+      "a",
+      "b",
+      "fine",
+      "coarse"
+     ]
+    }
+   ],
+   "pair_agreement_ari": 0.9616
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "plain",
+   "seed": 102,
+   "vocab": 80,
+   "n_pairs": 0,
+   "rows": [
+    13,
+    13
+   ],
+   "eligible": true,
+   "verdicts": [],
+   "pair_agreement_ari": 0.9742
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "plain",
+   "seed": 102,
+   "vocab": 80,
+   "n_pairs": 2,
+   "rows": [
+    13,
+    13
+   ],
+   "eligible": true,
+   "verdicts": [
+    {
+     "gt": [
+      0,
+      11
+     ],
+     "kind": "planted",
+     "class": "どの転写でも有意",
+     "significant_in": [
+      "a",
+      "b",
+      "fine",
+      "coarse"
+     ]
+    }
+   ],
+   "pair_agreement_ari": 0.9378
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "plain",
+   "seed": 102,
+   "vocab": 250,
+   "n_pairs": 0,
+   "rows": [
+    13,
+    13
+   ],
+   "eligible": true,
+   "verdicts": [],
+   "pair_agreement_ari": 0.9957
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "plain",
+   "seed": 102,
+   "vocab": 250,
+   "n_pairs": 2,
+   "rows": [
+    13,
+    13
+   ],
+   "eligible": true,
+   "verdicts": [
+    {
+     "gt": [
+      4,
+      12
+     ],
+     "kind": "planted",
+     "class": "どの転写でも有意",
+     "significant_in": [
+      "a",
+      "b",
+      "fine",
+      "coarse"
+     ]
+    },
+    {
+     "gt": [
+      5,
+      9
+     ],
+     "kind": "planted",
+     "class": "どの転写でも有意",
+     "significant_in": [
+      "a",
+      "b",
+      "fine",
+      "coarse"
+     ]
+    }
+   ],
+   "pair_agreement_ari": 0.9927
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "diacritic",
+   "seed": 102,
+   "vocab": 30,
+   "n_pairs": 0,
+   "rows": [
+    14,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "diacritic",
+   "seed": 102,
+   "vocab": 30,
+   "n_pairs": 2,
+   "rows": [
+    14,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "diacritic",
+   "seed": 102,
+   "vocab": 80,
+   "n_pairs": 0,
+   "rows": [
+    9,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "diacritic",
+   "seed": 102,
+   "vocab": 80,
+   "n_pairs": 2,
+   "rows": [
+    14,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "diacritic",
+   "seed": 102,
+   "vocab": 250,
+   "n_pairs": 0,
+   "rows": [
+    8,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "diacritic",
+   "seed": 102,
+   "vocab": 250,
+   "n_pairs": 2,
+   "rows": [
+    6,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "tight",
+   "seed": 102,
+   "vocab": 30,
+   "n_pairs": 0,
+   "rows": [
+    1,
+    10
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "tight",
+   "seed": 102,
+   "vocab": 30,
+   "n_pairs": 2,
+   "rows": [
+    1,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "tight",
+   "seed": 102,
+   "vocab": 80,
+   "n_pairs": 0,
+   "rows": [
+    1,
+    11
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "tight",
+   "seed": 102,
+   "vocab": 80,
+   "n_pairs": 2,
+   "rows": [
+    1,
+    7
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "tight",
+   "seed": 102,
+   "vocab": 250,
+   "n_pairs": 0,
+   "rows": [
+    1,
+    9
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "tight",
+   "seed": 102,
+   "vocab": 250,
+   "n_pairs": 2,
+   "rows": [
+    1,
+    8
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "mixed",
+   "seed": 102,
+   "vocab": 30,
+   "n_pairs": 0,
+   "rows": [
+    13,
+    13
+   ],
+   "eligible": true,
+   "verdicts": [
+    {
+     "gt": [
+      2,
+      3
+     ],
+     "kind": "unplanted",
+     "class": "一方の転写だけで有意",
+     "significant_in": [
+      "coarse"
+     ]
+    }
+   ],
+   "pair_agreement_ari": 0.7715
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "mixed",
+   "seed": 102,
+   "vocab": 30,
+   "n_pairs": 2,
+   "rows": [
+    14,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "mixed",
+   "seed": 102,
+   "vocab": 80,
+   "n_pairs": 0,
+   "rows": [
+    6,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "mixed",
+   "seed": 102,
+   "vocab": 80,
+   "n_pairs": 2,
+   "rows": [
+    10,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "mixed",
+   "seed": 102,
+   "vocab": 250,
+   "n_pairs": 0,
+   "rows": [
+    12,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "mixed",
+   "seed": 102,
+   "vocab": 250,
+   "n_pairs": 2,
+   "rows": [
+    10,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "plain",
+   "seed": 102,
+   "vocab": 30,
+   "n_pairs": 0,
+   "rows": [
+    13,
+    13
+   ],
+   "eligible": true,
+   "verdicts": [],
+   "pair_agreement_ari": 0.9977
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "plain",
+   "seed": 102,
+   "vocab": 30,
+   "n_pairs": 2,
+   "rows": [
+    13,
+    13
+   ],
+   "eligible": true,
+   "verdicts": [
+    {
+     "gt": [
+      0,
+      6
+     ],
+     "kind": "planted",
+     "class": "どの転写でも有意",
+     "significant_in": [
+      "a",
+      "b",
+      "fine",
+      "coarse"
+     ]
+    }
+   ],
+   "pair_agreement_ari": 1.0
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "plain",
+   "seed": 102,
+   "vocab": 80,
+   "n_pairs": 0,
+   "rows": [
+    13,
+    13
+   ],
+   "eligible": true,
+   "verdicts": [],
+   "pair_agreement_ari": 0.9984
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "plain",
+   "seed": 102,
+   "vocab": 80,
+   "n_pairs": 2,
+   "rows": [
+    13,
+    13
+   ],
+   "eligible": true,
+   "verdicts": [
+    {
+     "gt": [
+      0,
+      10
+     ],
+     "kind": "planted",
+     "class": "どの転写でも有意",
+     "significant_in": [
+      "a",
+      "b",
+      "fine",
+      "coarse"
+     ]
+    },
+    {
+     "gt": [
+      4,
+      6
+     ],
+     "kind": "planted",
+     "class": "どの転写でも有意",
+     "significant_in": [
+      "a",
+      "b",
+      "fine",
+      "coarse"
+     ]
+    }
+   ],
+   "pair_agreement_ari": 0.9904
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "plain",
+   "seed": 102,
+   "vocab": 250,
+   "n_pairs": 0,
+   "rows": [
+    13,
+    13
+   ],
+   "eligible": true,
+   "verdicts": [],
+   "pair_agreement_ari": 1.0
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "plain",
+   "seed": 102,
+   "vocab": 250,
+   "n_pairs": 2,
+   "rows": [
+    13,
+    13
+   ],
+   "eligible": true,
+   "verdicts": [
+    {
+     "gt": [
+      1,
+      10
+     ],
+     "kind": "planted",
+     "class": "どの転写でも有意",
+     "significant_in": [
+      "a",
+      "b",
+      "fine",
+      "coarse"
+     ]
+    },
+    {
+     "gt": [
+      4,
+      7
+     ],
+     "kind": "planted",
+     "class": "どの転写でも有意",
+     "significant_in": [
+      "a",
+      "b",
+      "fine",
+      "coarse"
+     ]
+    }
+   ],
+   "pair_agreement_ari": 0.9936
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "diacritic",
+   "seed": 102,
+   "vocab": 30,
+   "n_pairs": 0,
+   "rows": [
+    1,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "diacritic",
+   "seed": 102,
+   "vocab": 30,
+   "n_pairs": 2,
+   "rows": [
+    4,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "diacritic",
+   "seed": 102,
+   "vocab": 80,
+   "n_pairs": 0,
+   "rows": [
+    1,
+    18
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "diacritic",
+   "seed": 102,
+   "vocab": 80,
+   "n_pairs": 2,
+   "rows": [
+    1,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "diacritic",
+   "seed": 102,
+   "vocab": 250,
+   "n_pairs": 0,
+   "rows": [
+    1,
+    17
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "diacritic",
+   "seed": 102,
+   "vocab": 250,
+   "n_pairs": 2,
+   "rows": [
+    1,
+    18
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "tight",
+   "seed": 102,
+   "vocab": 30,
+   "n_pairs": 0,
+   "rows": [
+    2,
+    12
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "tight",
+   "seed": 102,
+   "vocab": 30,
+   "n_pairs": 2,
+   "rows": [
+    2,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "tight",
+   "seed": 102,
+   "vocab": 80,
+   "n_pairs": 0,
+   "rows": [
+    1,
+    15
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "tight",
+   "seed": 102,
+   "vocab": 80,
+   "n_pairs": 2,
+   "rows": [
+    2,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "tight",
+   "seed": 102,
+   "vocab": 250,
+   "n_pairs": 0,
+   "rows": [
+    1,
+    15
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "tight",
+   "seed": 102,
+   "vocab": 250,
+   "n_pairs": 2,
+   "rows": [
+    1,
+    15
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "mixed",
+   "seed": 102,
+   "vocab": 30,
+   "n_pairs": 0,
+   "rows": [
+    10,
+    14
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "mixed",
+   "seed": 102,
+   "vocab": 30,
+   "n_pairs": 2,
+   "rows": [
+    11,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "mixed",
+   "seed": 102,
+   "vocab": 80,
+   "n_pairs": 0,
+   "rows": [
+    13,
+    19
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "mixed",
+   "seed": 102,
+   "vocab": 80,
+   "n_pairs": 2,
+   "rows": [
+    11,
+    19
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "mixed",
+   "seed": 102,
+   "vocab": 250,
+   "n_pairs": 0,
+   "rows": [
+    10,
+    17
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "mixed",
+   "seed": 102,
+   "vocab": 250,
+   "n_pairs": 2,
+   "rows": [
+    11,
+    23
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "plain",
+   "seed": 103,
+   "vocab": 30,
+   "n_pairs": 0,
+   "rows": [
+    3,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "plain",
+   "seed": 103,
+   "vocab": 30,
+   "n_pairs": 2,
+   "rows": [
+    3,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "plain",
+   "seed": 103,
+   "vocab": 80,
+   "n_pairs": 0,
+   "rows": [
+    9,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "plain",
+   "seed": 103,
+   "vocab": 80,
+   "n_pairs": 2,
+   "rows": [
+    4,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "plain",
+   "seed": 103,
+   "vocab": 250,
+   "n_pairs": 0,
+   "rows": [
+    5,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "plain",
+   "seed": 103,
+   "vocab": 250,
+   "n_pairs": 2,
+   "rows": [
+    8,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "diacritic",
+   "seed": 103,
+   "vocab": 30,
+   "n_pairs": 0,
+   "rows": [
+    1,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "diacritic",
+   "seed": 103,
+   "vocab": 30,
+   "n_pairs": 2,
+   "rows": [
+    1,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "diacritic",
+   "seed": 103,
+   "vocab": 80,
+   "n_pairs": 0,
+   "rows": [
+    1,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "diacritic",
+   "seed": 103,
+   "vocab": 80,
+   "n_pairs": 2,
+   "rows": [
+    1,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "diacritic",
+   "seed": 103,
+   "vocab": 250,
+   "n_pairs": 0,
+   "rows": [
+    1,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "diacritic",
+   "seed": 103,
+   "vocab": 250,
+   "n_pairs": 2,
+   "rows": [
+    1,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "tight",
+   "seed": 103,
+   "vocab": 30,
+   "n_pairs": 0,
+   "rows": [
+    1,
+    12
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "tight",
+   "seed": 103,
+   "vocab": 30,
+   "n_pairs": 2,
+   "rows": [
+    1,
+    7
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "tight",
+   "seed": 103,
+   "vocab": 80,
+   "n_pairs": 0,
+   "rows": [
+    1,
+    6
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "tight",
+   "seed": 103,
+   "vocab": 80,
+   "n_pairs": 2,
+   "rows": [
+    1,
+    11
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "tight",
+   "seed": 103,
+   "vocab": 250,
+   "n_pairs": 0,
+   "rows": [
+    1,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "tight",
+   "seed": 103,
+   "vocab": 250,
+   "n_pairs": 2,
+   "rows": [
+    1,
+    10
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "mixed",
+   "seed": 103,
+   "vocab": 30,
+   "n_pairs": 0,
+   "rows": [
+    6,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "mixed",
+   "seed": 103,
+   "vocab": 30,
+   "n_pairs": 2,
+   "rows": [
+    7,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "mixed",
+   "seed": 103,
+   "vocab": 80,
+   "n_pairs": 0,
+   "rows": [
+    7,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "mixed",
+   "seed": 103,
+   "vocab": 80,
+   "n_pairs": 2,
+   "rows": [
+    7,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "mixed",
+   "seed": 103,
+   "vocab": 250,
+   "n_pairs": 0,
+   "rows": [
+    6,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "mixed",
+   "seed": 103,
+   "vocab": 250,
+   "n_pairs": 2,
+   "rows": [
+    6,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "plain",
+   "seed": 103,
+   "vocab": 30,
+   "n_pairs": 0,
+   "rows": [
+    13,
+    13
+   ],
+   "eligible": true,
+   "verdicts": [],
+   "pair_agreement_ari": 0.9787
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "plain",
+   "seed": 103,
+   "vocab": 30,
+   "n_pairs": 2,
+   "rows": [
+    13,
+    13
+   ],
+   "eligible": true,
+   "verdicts": [
+    {
+     "gt": [
+      0,
+      1
+     ],
+     "kind": "planted",
+     "class": "どの転写でも有意",
+     "significant_in": [
+      "a",
+      "b",
+      "fine",
+      "coarse"
+     ]
+    },
+    {
+     "gt": [
+      7,
+      12
+     ],
+     "kind": "planted",
+     "class": "両方の転写で有意",
+     "significant_in": [
+      "a",
+      "b",
+      "fine"
+     ]
+    }
+   ],
+   "pair_agreement_ari": 0.8606
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "plain",
+   "seed": 103,
+   "vocab": 80,
+   "n_pairs": 0,
+   "rows": [
+    13,
+    13
+   ],
+   "eligible": true,
+   "verdicts": [],
+   "pair_agreement_ari": 0.894
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "plain",
+   "seed": 103,
+   "vocab": 80,
+   "n_pairs": 2,
+   "rows": [
+    13,
+    13
+   ],
+   "eligible": true,
+   "verdicts": [
+    {
+     "gt": [
+      2,
+      11
+     ],
+     "kind": "planted",
+     "class": "どの転写でも有意",
+     "significant_in": [
+      "a",
+      "b",
+      "fine",
+      "coarse"
+     ]
+    },
+    {
+     "gt": [
+      4,
+      7
+     ],
+     "kind": "planted",
+     "class": "どの転写でも有意",
+     "significant_in": [
+      "a",
+      "b",
+      "fine",
+      "coarse"
+     ]
+    }
+   ],
+   "pair_agreement_ari": 0.7634
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "plain",
+   "seed": 103,
+   "vocab": 250,
+   "n_pairs": 0,
+   "rows": [
+    13,
+    13
+   ],
+   "eligible": true,
+   "verdicts": [
+    {
+     "gt": [
+      3,
+      7
+     ],
+     "kind": "unplanted",
+     "class": "どの転写でも有意",
+     "significant_in": [
+      "a",
+      "b",
+      "fine",
+      "coarse"
+     ]
+    }
+   ],
+   "pair_agreement_ari": 0.8264
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "plain",
+   "seed": 103,
+   "vocab": 250,
+   "n_pairs": 2,
+   "rows": [
+    13,
+    13
+   ],
+   "eligible": true,
+   "verdicts": [
+    {
+     "gt": [
+      5,
+      6
+     ],
+     "kind": "planted",
+     "class": "どの転写でも有意",
+     "significant_in": [
+      "a",
+      "b",
+      "fine",
+      "coarse"
+     ]
+    },
+    {
+     "gt": [
+      8,
+      11
+     ],
+     "kind": "planted",
+     "class": "どの転写でも有意",
+     "significant_in": [
+      "a",
+      "b",
+      "fine",
+      "coarse"
+     ]
+    }
+   ],
+   "pair_agreement_ari": 0.8196
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "diacritic",
+   "seed": 103,
+   "vocab": 30,
+   "n_pairs": 0,
+   "rows": [
+    5,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "diacritic",
+   "seed": 103,
+   "vocab": 30,
+   "n_pairs": 2,
+   "rows": [
+    8,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "diacritic",
+   "seed": 103,
+   "vocab": 80,
+   "n_pairs": 0,
+   "rows": [
+    10,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "diacritic",
+   "seed": 103,
+   "vocab": 80,
+   "n_pairs": 2,
+   "rows": [
+    5,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "diacritic",
+   "seed": 103,
+   "vocab": 250,
+   "n_pairs": 0,
+   "rows": [
+    10,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "diacritic",
+   "seed": 103,
+   "vocab": 250,
+   "n_pairs": 2,
+   "rows": [
+    9,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "tight",
+   "seed": 103,
+   "vocab": 30,
+   "n_pairs": 0,
+   "rows": [
+    2,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "tight",
+   "seed": 103,
+   "vocab": 30,
+   "n_pairs": 2,
+   "rows": [
+    5,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "tight",
+   "seed": 103,
+   "vocab": 80,
+   "n_pairs": 0,
+   "rows": [
+    1,
+    7
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "tight",
+   "seed": 103,
+   "vocab": 80,
+   "n_pairs": 2,
+   "rows": [
+    1,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "tight",
+   "seed": 103,
+   "vocab": 250,
+   "n_pairs": 0,
+   "rows": [
+    1,
+    12
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "tight",
+   "seed": 103,
+   "vocab": 250,
+   "n_pairs": 2,
+   "rows": [
+    1,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "mixed",
+   "seed": 103,
+   "vocab": 30,
+   "n_pairs": 0,
+   "rows": [
+    9,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "mixed",
+   "seed": 103,
+   "vocab": 30,
+   "n_pairs": 2,
+   "rows": [
+    9,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "mixed",
+   "seed": 103,
+   "vocab": 80,
+   "n_pairs": 0,
+   "rows": [
+    11,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "mixed",
+   "seed": 103,
+   "vocab": 80,
+   "n_pairs": 2,
+   "rows": [
+    7,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "mixed",
+   "seed": 103,
+   "vocab": 250,
+   "n_pairs": 0,
+   "rows": [
+    9,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "mixed",
+   "seed": 103,
+   "vocab": 250,
+   "n_pairs": 2,
+   "rows": [
+    9,
+    14
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "plain",
+   "seed": 103,
+   "vocab": 30,
+   "n_pairs": 0,
+   "rows": [
+    13,
+    13
+   ],
+   "eligible": true,
+   "verdicts": [],
+   "pair_agreement_ari": 1.0
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "plain",
+   "seed": 103,
+   "vocab": 30,
+   "n_pairs": 2,
+   "rows": [
+    13,
+    13
+   ],
+   "eligible": true,
+   "verdicts": [
+    {
+     "gt": [
+      3,
+      6
+     ],
+     "kind": "planted",
+     "class": "どの転写でも有意",
+     "significant_in": [
+      "a",
+      "b",
+      "fine",
+      "coarse"
+     ]
+    },
+    {
+     "gt": [
+      5,
+      7
+     ],
+     "kind": "planted",
+     "class": "どの転写でも有意",
+     "significant_in": [
+      "a",
+      "b",
+      "fine",
+      "coarse"
+     ]
+    }
+   ],
+   "pair_agreement_ari": 0.9975
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "plain",
+   "seed": 103,
+   "vocab": 80,
+   "n_pairs": 0,
+   "rows": [
+    13,
+    13
+   ],
+   "eligible": true,
+   "verdicts": [],
+   "pair_agreement_ari": 0.9984
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "plain",
+   "seed": 103,
+   "vocab": 80,
+   "n_pairs": 2,
+   "rows": [
+    13,
+    13
+   ],
+   "eligible": true,
+   "verdicts": [
+    {
+     "gt": [
+      7,
+      9
+     ],
+     "kind": "planted",
+     "class": "どの転写でも有意",
+     "significant_in": [
+      "a",
+      "b",
+      "fine",
+      "coarse"
+     ]
+    }
+   ],
+   "pair_agreement_ari": 0.9396
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "plain",
+   "seed": 103,
+   "vocab": 250,
+   "n_pairs": 0,
+   "rows": [
+    13,
+    13
+   ],
+   "eligible": true,
+   "verdicts": [],
+   "pair_agreement_ari": 1.0
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "plain",
+   "seed": 103,
+   "vocab": 250,
+   "n_pairs": 2,
+   "rows": [
+    13,
+    13
+   ],
+   "eligible": true,
+   "verdicts": [
+    {
+     "gt": [
+      0,
+      12
+     ],
+     "kind": "planted",
+     "class": "どの転写でも有意",
+     "significant_in": [
+      "a",
+      "b",
+      "fine",
+      "coarse"
+     ]
+    },
+    {
+     "gt": [
+      4,
+      6
+     ],
+     "kind": "planted",
+     "class": "どの転写でも有意",
+     "significant_in": [
+      "a",
+      "b",
+      "fine",
+      "coarse"
+     ]
+    }
+   ],
+   "pair_agreement_ari": 0.9948
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "diacritic",
+   "seed": 103,
+   "vocab": 30,
+   "n_pairs": 0,
+   "rows": [
+    2,
+    18
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "diacritic",
+   "seed": 103,
+   "vocab": 30,
+   "n_pairs": 2,
+   "rows": [
+    7,
+    18
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "diacritic",
+   "seed": 103,
+   "vocab": 80,
+   "n_pairs": 0,
+   "rows": [
+    1,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "diacritic",
+   "seed": 103,
+   "vocab": 80,
+   "n_pairs": 2,
+   "rows": [
+    6,
+    16
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "diacritic",
+   "seed": 103,
+   "vocab": 250,
+   "n_pairs": 0,
+   "rows": [
+    3,
+    15
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "diacritic",
+   "seed": 103,
+   "vocab": 250,
+   "n_pairs": 2,
+   "rows": [
+    6,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "tight",
+   "seed": 103,
+   "vocab": 30,
+   "n_pairs": 0,
+   "rows": [
+    1,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "tight",
+   "seed": 103,
+   "vocab": 30,
+   "n_pairs": 2,
+   "rows": [
+    1,
+    16
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "tight",
+   "seed": 103,
+   "vocab": 80,
+   "n_pairs": 0,
+   "rows": [
+    1,
+    14
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "tight",
+   "seed": 103,
+   "vocab": 80,
+   "n_pairs": 2,
+   "rows": [
+    2,
+    14
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "tight",
+   "seed": 103,
+   "vocab": 250,
+   "n_pairs": 0,
+   "rows": [
+    1,
+    11
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "tight",
+   "seed": 103,
+   "vocab": 250,
+   "n_pairs": 2,
+   "rows": [
+    1,
+    14
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "mixed",
+   "seed": 103,
+   "vocab": 30,
+   "n_pairs": 0,
+   "rows": [
+    6,
+    17
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "mixed",
+   "seed": 103,
+   "vocab": 30,
+   "n_pairs": 2,
+   "rows": [
+    7,
+    15
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "mixed",
+   "seed": 103,
+   "vocab": 80,
+   "n_pairs": 0,
+   "rows": [
+    10,
+    15
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "mixed",
+   "seed": 103,
+   "vocab": 80,
+   "n_pairs": 2,
+   "rows": [
+    10,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "mixed",
+   "seed": 103,
+   "vocab": 250,
+   "n_pairs": 0,
+   "rows": [
+    9,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "mixed",
+   "seed": 103,
+   "vocab": 250,
+   "n_pairs": 2,
+   "rows": [
+    9,
+    27
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "plain",
+   "seed": 104,
+   "vocab": 30,
+   "n_pairs": 0,
+   "rows": [
+    7,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "plain",
+   "seed": 104,
+   "vocab": 30,
+   "n_pairs": 2,
+   "rows": [
+    6,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "plain",
+   "seed": 104,
+   "vocab": 80,
+   "n_pairs": 0,
+   "rows": [
+    12,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "plain",
+   "seed": 104,
+   "vocab": 80,
+   "n_pairs": 2,
+   "rows": [
+    8,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "plain",
+   "seed": 104,
+   "vocab": 250,
+   "n_pairs": 0,
+   "rows": [
+    10,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "plain",
+   "seed": 104,
+   "vocab": 250,
+   "n_pairs": 2,
+   "rows": [
+    2,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "diacritic",
+   "seed": 104,
+   "vocab": 30,
+   "n_pairs": 0,
+   "rows": [
+    6,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "diacritic",
+   "seed": 104,
+   "vocab": 30,
+   "n_pairs": 2,
+   "rows": [
+    9,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "diacritic",
+   "seed": 104,
+   "vocab": 80,
+   "n_pairs": 0,
+   "rows": [
+    4,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "diacritic",
+   "seed": 104,
+   "vocab": 80,
+   "n_pairs": 2,
+   "rows": [
+    6,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "diacritic",
+   "seed": 104,
+   "vocab": 250,
+   "n_pairs": 0,
+   "rows": [
+    2,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "diacritic",
+   "seed": 104,
+   "vocab": 250,
+   "n_pairs": 2,
+   "rows": [
+    10,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "tight",
+   "seed": 104,
+   "vocab": 30,
+   "n_pairs": 0,
+   "rows": [
+    1,
+    12
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "tight",
+   "seed": 104,
+   "vocab": 30,
+   "n_pairs": 2,
+   "rows": [
+    1,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "tight",
+   "seed": 104,
+   "vocab": 80,
+   "n_pairs": 0,
+   "rows": [
+    1,
+    10
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "tight",
+   "seed": 104,
+   "vocab": 80,
+   "n_pairs": 2,
+   "rows": [
+    1,
+    9
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "tight",
+   "seed": 104,
+   "vocab": 250,
+   "n_pairs": 0,
+   "rows": [
+    1,
+    8
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "tight",
+   "seed": 104,
+   "vocab": 250,
+   "n_pairs": 2,
+   "rows": [
+    1,
+    6
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "mixed",
+   "seed": 104,
+   "vocab": 30,
+   "n_pairs": 0,
+   "rows": [
+    7,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "mixed",
+   "seed": 104,
+   "vocab": 30,
+   "n_pairs": 2,
+   "rows": [
+    7,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "mixed",
+   "seed": 104,
+   "vocab": 80,
+   "n_pairs": 0,
+   "rows": [
+    5,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "mixed",
+   "seed": 104,
+   "vocab": 80,
+   "n_pairs": 2,
+   "rows": [
+    7,
+    14
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "mixed",
+   "seed": 104,
+   "vocab": 250,
+   "n_pairs": 0,
+   "rows": [
+    6,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "mixed",
+   "seed": 104,
+   "vocab": 250,
+   "n_pairs": 2,
+   "rows": [
+    5,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "plain",
+   "seed": 104,
+   "vocab": 30,
+   "n_pairs": 0,
+   "rows": [
+    13,
+    13
+   ],
+   "eligible": true,
+   "verdicts": [],
+   "pair_agreement_ari": 0.9966
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "plain",
+   "seed": 104,
+   "vocab": 30,
+   "n_pairs": 2,
+   "rows": [
+    13,
+    13
+   ],
+   "eligible": true,
+   "verdicts": [
+    {
+     "gt": [
+      0,
+      9
+     ],
+     "kind": "planted",
+     "class": "どの転写でも有意",
+     "significant_in": [
+      "a",
+      "b",
+      "fine",
+      "coarse"
+     ]
+    },
+    {
+     "gt": [
+      1,
+      3
+     ],
+     "kind": "planted",
+     "class": "どの転写でも有意",
+     "significant_in": [
+      "a",
+      "b",
+      "fine",
+      "coarse"
+     ]
+    },
+    {
+     "gt": [
+      2,
+      3
+     ],
+     "kind": "unplanted",
+     "class": "一方の転写だけで有意",
+     "significant_in": [
+      "a",
+      "coarse"
+     ]
+    },
+    {
+     "gt": [
+      2,
+      5
+     ],
+     "kind": "unplanted",
+     "class": "一方の転写だけで有意",
+     "significant_in": [
+      "fine"
+     ]
+    }
+   ],
+   "pair_agreement_ari": 0.9127
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "plain",
+   "seed": 104,
+   "vocab": 80,
+   "n_pairs": 0,
+   "rows": [
+    13,
+    13
+   ],
+   "eligible": true,
+   "verdicts": [
+    {
+     "gt": [
+      6,
+      11
+     ],
+     "kind": "unplanted",
+     "class": "一方の転写だけで有意",
+     "significant_in": [
+      "a",
+      "coarse"
+     ]
+    }
+   ],
+   "pair_agreement_ari": 0.9948
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "plain",
+   "seed": 104,
+   "vocab": 80,
+   "n_pairs": 2,
+   "rows": [
+    13,
+    13
+   ],
+   "eligible": true,
+   "verdicts": [
+    {
+     "gt": [
+      4,
+      6
+     ],
+     "kind": "planted",
+     "class": "どの転写でも有意",
+     "significant_in": [
+      "a",
+      "b",
+      "fine",
+      "coarse"
+     ]
+    },
+    {
+     "gt": [
+      7,
+      10
+     ],
+     "kind": "planted",
+     "class": "どの転写でも有意",
+     "significant_in": [
+      "a",
+      "b",
+      "fine",
+      "coarse"
+     ]
+    }
+   ],
+   "pair_agreement_ari": 0.9769
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "plain",
+   "seed": 104,
+   "vocab": 250,
+   "n_pairs": 0,
+   "rows": [
+    13,
+    13
+   ],
+   "eligible": true,
+   "verdicts": [],
+   "pair_agreement_ari": 0.9952
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "plain",
+   "seed": 104,
+   "vocab": 250,
+   "n_pairs": 2,
+   "rows": [
+    13,
+    13
+   ],
+   "eligible": true,
+   "verdicts": [
+    {
+     "gt": [
+      3,
+      10
+     ],
+     "kind": "planted",
+     "class": "どの転写でも有意",
+     "significant_in": [
+      "a",
+      "b",
+      "fine",
+      "coarse"
+     ]
+    },
+    {
+     "gt": [
+      7,
+      12
+     ],
+     "kind": "planted",
+     "class": "どの転写でも有意",
+     "significant_in": [
+      "a",
+      "b",
+      "fine",
+      "coarse"
+     ]
+    }
+   ],
+   "pair_agreement_ari": 0.9895
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "diacritic",
+   "seed": 104,
+   "vocab": 30,
+   "n_pairs": 0,
+   "rows": [
+    2,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "diacritic",
+   "seed": 104,
+   "vocab": 30,
+   "n_pairs": 2,
+   "rows": [
+    1,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "diacritic",
+   "seed": 104,
+   "vocab": 80,
+   "n_pairs": 0,
+   "rows": [
+    3,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "diacritic",
+   "seed": 104,
+   "vocab": 80,
+   "n_pairs": 2,
+   "rows": [
+    2,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "diacritic",
+   "seed": 104,
+   "vocab": 250,
+   "n_pairs": 0,
+   "rows": [
+    2,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "diacritic",
+   "seed": 104,
+   "vocab": 250,
+   "n_pairs": 2,
+   "rows": [
+    2,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "tight",
+   "seed": 104,
+   "vocab": 30,
+   "n_pairs": 0,
+   "rows": [
+    2,
+    10
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "tight",
+   "seed": 104,
+   "vocab": 30,
+   "n_pairs": 2,
+   "rows": [
+    1,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "tight",
+   "seed": 104,
+   "vocab": 80,
+   "n_pairs": 0,
+   "rows": [
+    2,
+    12
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "tight",
+   "seed": 104,
+   "vocab": 80,
+   "n_pairs": 2,
+   "rows": [
+    1,
+    8
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "tight",
+   "seed": 104,
+   "vocab": 250,
+   "n_pairs": 0,
+   "rows": [
+    1,
+    8
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "tight",
+   "seed": 104,
+   "vocab": 250,
+   "n_pairs": 2,
+   "rows": [
+    1,
+    8
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "mixed",
+   "seed": 104,
+   "vocab": 30,
+   "n_pairs": 0,
+   "rows": [
+    6,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "mixed",
+   "seed": 104,
+   "vocab": 30,
+   "n_pairs": 2,
+   "rows": [
+    10,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "mixed",
+   "seed": 104,
+   "vocab": 80,
+   "n_pairs": 0,
+   "rows": [
+    7,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "mixed",
+   "seed": 104,
+   "vocab": 80,
+   "n_pairs": 2,
+   "rows": [
+    9,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "mixed",
+   "seed": 104,
+   "vocab": 250,
+   "n_pairs": 0,
+   "rows": [
+    8,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "mixed",
+   "seed": 104,
+   "vocab": 250,
+   "n_pairs": 2,
+   "rows": [
+    10,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "plain",
+   "seed": 104,
+   "vocab": 30,
+   "n_pairs": 0,
+   "rows": [
+    13,
+    13
+   ],
+   "eligible": true,
+   "verdicts": [
+    {
+     "gt": [
+      3,
+      4
+     ],
+     "kind": "unplanted",
+     "class": "一方の転写だけで有意",
+     "significant_in": [
+      "b"
+     ]
+    }
+   ],
+   "pair_agreement_ari": 0.9613
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "plain",
+   "seed": 104,
+   "vocab": 30,
+   "n_pairs": 2,
+   "rows": [
+    13,
+    13
+   ],
+   "eligible": true,
+   "verdicts": [
+    {
+     "gt": [
+      6,
+      7
+     ],
+     "kind": "planted",
+     "class": "どの転写でも有意",
+     "significant_in": [
+      "a",
+      "b",
+      "fine",
+      "coarse"
+     ]
+    },
+    {
+     "gt": [
+      11,
+      12
+     ],
+     "kind": "planted",
+     "class": "どの転写でも有意",
+     "significant_in": [
+      "a",
+      "b",
+      "fine",
+      "coarse"
+     ]
+    }
+   ],
+   "pair_agreement_ari": 0.9947
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "plain",
+   "seed": 104,
+   "vocab": 80,
+   "n_pairs": 0,
+   "rows": [
+    13,
+    13
+   ],
+   "eligible": true,
+   "verdicts": [],
+   "pair_agreement_ari": 0.9349
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "plain",
+   "seed": 104,
+   "vocab": 80,
+   "n_pairs": 2,
+   "rows": [
+    13,
+    13
+   ],
+   "eligible": true,
+   "verdicts": [
+    {
+     "gt": [
+      2,
+      4
+     ],
+     "kind": "planted",
+     "class": "どの転写でも有意",
+     "significant_in": [
+      "a",
+      "b",
+      "fine",
+      "coarse"
+     ]
+    }
+   ],
+   "pair_agreement_ari": 0.999
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "plain",
+   "seed": 104,
+   "vocab": 250,
+   "n_pairs": 0,
+   "rows": [
+    13,
+    13
+   ],
+   "eligible": true,
+   "verdicts": [
+    {
+     "gt": [
+      5,
+      9
+     ],
+     "kind": "unplanted",
+     "class": "一方の転写だけで有意",
+     "significant_in": [
+      "b",
+      "coarse"
+     ]
+    }
+   ],
+   "pair_agreement_ari": 0.8022
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "plain",
+   "seed": 104,
+   "vocab": 250,
+   "n_pairs": 2,
+   "rows": [
+    13,
+    13
+   ],
+   "eligible": true,
+   "verdicts": [
+    {
+     "gt": [
+      1,
+      12
+     ],
+     "kind": "planted",
+     "class": "どの転写でも有意",
+     "significant_in": [
+      "a",
+      "b",
+      "fine",
+      "coarse"
+     ]
+    },
+    {
+     "gt": [
+      6,
+      10
+     ],
+     "kind": "planted",
+     "class": "どの転写でも有意",
+     "significant_in": [
+      "a",
+      "b",
+      "fine",
+      "coarse"
+     ]
+    }
+   ],
+   "pair_agreement_ari": 0.9942
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "diacritic",
+   "seed": 104,
+   "vocab": 30,
+   "n_pairs": 0,
+   "rows": [
+    10,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "diacritic",
+   "seed": 104,
+   "vocab": 30,
+   "n_pairs": 2,
+   "rows": [
+    3,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "diacritic",
+   "seed": 104,
+   "vocab": 80,
+   "n_pairs": 0,
+   "rows": [
+    6,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "diacritic",
+   "seed": 104,
+   "vocab": 80,
+   "n_pairs": 2,
+   "rows": [
+    4,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "diacritic",
+   "seed": 104,
+   "vocab": 250,
+   "n_pairs": 0,
+   "rows": [
+    8,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "diacritic",
+   "seed": 104,
+   "vocab": 250,
+   "n_pairs": 2,
+   "rows": [
+    1,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "tight",
+   "seed": 104,
+   "vocab": 30,
+   "n_pairs": 0,
+   "rows": [
+    1,
+    6
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "tight",
+   "seed": 104,
+   "vocab": 30,
+   "n_pairs": 2,
+   "rows": [
+    1,
+    10
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "tight",
+   "seed": 104,
+   "vocab": 80,
+   "n_pairs": 0,
+   "rows": [
+    3,
+    11
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "tight",
+   "seed": 104,
+   "vocab": 80,
+   "n_pairs": 2,
+   "rows": [
+    1,
+    12
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "tight",
+   "seed": 104,
+   "vocab": 250,
+   "n_pairs": 0,
+   "rows": [
+    3,
+    11
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "tight",
+   "seed": 104,
+   "vocab": 250,
+   "n_pairs": 2,
+   "rows": [
+    1,
+    9
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "mixed",
+   "seed": 104,
+   "vocab": 30,
+   "n_pairs": 0,
+   "rows": [
+    12,
+    14
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "mixed",
+   "seed": 104,
+   "vocab": 30,
+   "n_pairs": 2,
+   "rows": [
+    13,
+    13
+   ],
+   "eligible": true,
+   "verdicts": [],
+   "pair_agreement_ari": 1.0
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "mixed",
+   "seed": 104,
+   "vocab": 80,
+   "n_pairs": 0,
+   "rows": [
+    12,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "mixed",
+   "seed": 104,
+   "vocab": 80,
+   "n_pairs": 2,
+   "rows": [
+    11,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "mixed",
+   "seed": 104,
+   "vocab": 250,
+   "n_pairs": 0,
+   "rows": [
+    10,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "mixed",
+   "seed": 104,
+   "vocab": 250,
+   "n_pairs": 2,
+   "rows": [
+    7,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "plain",
+   "seed": 105,
+   "vocab": 30,
+   "n_pairs": 0,
+   "rows": [
+    4,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "plain",
+   "seed": 105,
+   "vocab": 30,
+   "n_pairs": 2,
+   "rows": [
+    5,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "plain",
+   "seed": 105,
+   "vocab": 80,
+   "n_pairs": 0,
+   "rows": [
+    2,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "plain",
+   "seed": 105,
+   "vocab": 80,
+   "n_pairs": 2,
+   "rows": [
+    5,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "plain",
+   "seed": 105,
+   "vocab": 250,
+   "n_pairs": 0,
+   "rows": [
+    8,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "plain",
+   "seed": 105,
+   "vocab": 250,
+   "n_pairs": 2,
+   "rows": [
+    3,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "diacritic",
+   "seed": 105,
+   "vocab": 30,
+   "n_pairs": 0,
+   "rows": [
+    5,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "diacritic",
+   "seed": 105,
+   "vocab": 30,
+   "n_pairs": 2,
+   "rows": [
+    2,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "diacritic",
+   "seed": 105,
+   "vocab": 80,
+   "n_pairs": 0,
+   "rows": [
+    2,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "diacritic",
+   "seed": 105,
+   "vocab": 80,
+   "n_pairs": 2,
+   "rows": [
+    5,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "diacritic",
+   "seed": 105,
+   "vocab": 250,
+   "n_pairs": 0,
+   "rows": [
+    1,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "diacritic",
+   "seed": 105,
+   "vocab": 250,
+   "n_pairs": 2,
+   "rows": [
+    2,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "tight",
+   "seed": 105,
+   "vocab": 30,
+   "n_pairs": 0,
+   "rows": [
+    1,
+    8
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "tight",
+   "seed": 105,
+   "vocab": 30,
+   "n_pairs": 2,
+   "rows": [
+    1,
+    12
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "tight",
+   "seed": 105,
+   "vocab": 80,
+   "n_pairs": 0,
+   "rows": [
+    1,
+    8
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "tight",
+   "seed": 105,
+   "vocab": 80,
+   "n_pairs": 2,
+   "rows": [
+    1,
+    11
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "tight",
+   "seed": 105,
+   "vocab": 250,
+   "n_pairs": 0,
+   "rows": [
+    2,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "tight",
+   "seed": 105,
+   "vocab": 250,
+   "n_pairs": 2,
+   "rows": [
+    1,
+    12
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "mixed",
+   "seed": 105,
+   "vocab": 30,
+   "n_pairs": 0,
+   "rows": [
+    13,
+    13
+   ],
+   "eligible": true,
+   "verdicts": [],
+   "pair_agreement_ari": 0.9847
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "mixed",
+   "seed": 105,
+   "vocab": 30,
+   "n_pairs": 2,
+   "rows": [
+    18,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "mixed",
+   "seed": 105,
+   "vocab": 80,
+   "n_pairs": 0,
+   "rows": [
+    13,
+    13
+   ],
+   "eligible": true,
+   "verdicts": [
+    {
+     "gt": [
+      1,
+      9
+     ],
+     "kind": "unplanted",
+     "class": "一方の転写だけで有意",
+     "significant_in": [
+      "fine"
+     ]
+    },
+    {
+     "gt": [
+      4,
+      5
+     ],
+     "kind": "unplanted",
+     "class": "一方の転写だけで有意",
+     "significant_in": [
+      "coarse"
+     ]
+    }
+   ],
+   "pair_agreement_ari": 0.7566
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "mixed",
+   "seed": 105,
+   "vocab": 80,
+   "n_pairs": 2,
+   "rows": [
+    12,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "mixed",
+   "seed": 105,
+   "vocab": 250,
+   "n_pairs": 0,
+   "rows": [
+    15,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "mixed",
+   "seed": 105,
+   "vocab": 250,
+   "n_pairs": 2,
+   "rows": [
+    13,
+    13
+   ],
+   "eligible": true,
+   "verdicts": [
+    {
+     "gt": [
+      4,
+      8
+     ],
+     "kind": "unplanted",
+     "class": "一方の転写だけで有意",
+     "significant_in": [
+      "a",
+      "fine"
+     ]
+    },
+    {
+     "gt": [
+      4,
+      10
+     ],
+     "kind": "planted",
+     "class": "一方の転写だけで有意",
+     "significant_in": [
+      "b"
+     ]
+    }
+   ],
+   "pair_agreement_ari": 0.833
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "plain",
+   "seed": 105,
+   "vocab": 30,
+   "n_pairs": 0,
+   "rows": [
+    13,
+    13
+   ],
+   "eligible": true,
+   "verdicts": [],
+   "pair_agreement_ari": 0.9479
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "plain",
+   "seed": 105,
+   "vocab": 30,
+   "n_pairs": 2,
+   "rows": [
+    13,
+    13
+   ],
+   "eligible": true,
+   "verdicts": [
+    {
+     "gt": [
+      0,
+      3
+     ],
+     "kind": "planted",
+     "class": "一方の転写だけで有意",
+     "significant_in": [
+      "a",
+      "fine",
+      "coarse"
+     ]
+    }
+   ],
+   "pair_agreement_ari": 0.9833
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "plain",
+   "seed": 105,
+   "vocab": 80,
+   "n_pairs": 0,
+   "rows": [
+    13,
+    13
+   ],
+   "eligible": true,
+   "verdicts": [
+    {
+     "gt": [
+      6,
+      11
+     ],
+     "kind": "unplanted",
+     "class": "一方の転写だけで有意",
+     "significant_in": [
+      "fine"
+     ]
+    }
+   ],
+   "pair_agreement_ari": 0.9272
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "plain",
+   "seed": 105,
+   "vocab": 80,
+   "n_pairs": 2,
+   "rows": [
+    13,
+    13
+   ],
+   "eligible": true,
+   "verdicts": [
+    {
+     "gt": [
+      0,
+      1
+     ],
+     "kind": "planted",
+     "class": "一方の転写だけで有意",
+     "significant_in": [
+      "a",
+      "fine"
+     ]
+    },
+    {
+     "gt": [
+      2,
+      11
+     ],
+     "kind": "unplanted",
+     "class": "一方の転写だけで有意",
+     "significant_in": [
+      "a"
+     ]
+    },
+    {
+     "gt": [
+      4,
+      12
+     ],
+     "kind": "planted",
+     "class": "一方の転写だけで有意",
+     "significant_in": [
+      "fine"
+     ]
+    },
+    {
+     "gt": [
+      6,
+      8
+     ],
+     "kind": "unplanted",
+     "class": "一方の転写だけで有意",
+     "significant_in": [
+      "a"
+     ]
+    },
+    {
+     "gt": [
+      8,
+      11
+     ],
+     "kind": "unplanted",
+     "class": "一方の転写だけで有意",
+     "significant_in": [
+      "a"
+     ]
+    }
+   ],
+   "pair_agreement_ari": 0.673
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "plain",
+   "seed": 105,
+   "vocab": 250,
+   "n_pairs": 0,
+   "rows": [
+    13,
+    13
+   ],
+   "eligible": true,
+   "verdicts": [],
+   "pair_agreement_ari": 0.9768
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "plain",
+   "seed": 105,
+   "vocab": 250,
+   "n_pairs": 2,
+   "rows": [
+    13,
+    13
+   ],
+   "eligible": true,
+   "verdicts": [
+    {
+     "gt": [
+      4,
+      8
+     ],
+     "kind": "planted",
+     "class": "どの転写でも有意",
+     "significant_in": [
+      "a",
+      "b",
+      "fine",
+      "coarse"
+     ]
+    },
+    {
+     "gt": [
+      10,
+      11
+     ],
+     "kind": "planted",
+     "class": "どの転写でも有意",
+     "significant_in": [
+      "a",
+      "b",
+      "fine",
+      "coarse"
+     ]
+    }
+   ],
+   "pair_agreement_ari": 0.9462
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "diacritic",
+   "seed": 105,
+   "vocab": 30,
+   "n_pairs": 0,
+   "rows": [
+    1,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "diacritic",
+   "seed": 105,
+   "vocab": 30,
+   "n_pairs": 2,
+   "rows": [
+    1,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "diacritic",
+   "seed": 105,
+   "vocab": 80,
+   "n_pairs": 0,
+   "rows": [
+    1,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "diacritic",
+   "seed": 105,
+   "vocab": 80,
+   "n_pairs": 2,
+   "rows": [
+    2,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "diacritic",
+   "seed": 105,
+   "vocab": 250,
+   "n_pairs": 0,
+   "rows": [
+    3,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "diacritic",
+   "seed": 105,
+   "vocab": 250,
+   "n_pairs": 2,
+   "rows": [
+    1,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "tight",
+   "seed": 105,
+   "vocab": 30,
+   "n_pairs": 0,
+   "rows": [
+    1,
+    8
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "tight",
+   "seed": 105,
+   "vocab": 30,
+   "n_pairs": 2,
+   "rows": [
+    1,
+    10
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "tight",
+   "seed": 105,
+   "vocab": 80,
+   "n_pairs": 0,
+   "rows": [
+    1,
+    10
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "tight",
+   "seed": 105,
+   "vocab": 80,
+   "n_pairs": 2,
+   "rows": [
+    1,
+    9
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "tight",
+   "seed": 105,
+   "vocab": 250,
+   "n_pairs": 0,
+   "rows": [
+    1,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "tight",
+   "seed": 105,
+   "vocab": 250,
+   "n_pairs": 2,
+   "rows": [
+    1,
+    9
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "mixed",
+   "seed": 105,
+   "vocab": 30,
+   "n_pairs": 0,
+   "rows": [
+    12,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "mixed",
+   "seed": 105,
+   "vocab": 30,
+   "n_pairs": 2,
+   "rows": [
+    13,
+    13
+   ],
+   "eligible": true,
+   "verdicts": [],
+   "pair_agreement_ari": 1.0
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "mixed",
+   "seed": 105,
+   "vocab": 80,
+   "n_pairs": 0,
+   "rows": [
+    9,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "mixed",
+   "seed": 105,
+   "vocab": 80,
+   "n_pairs": 2,
+   "rows": [
+    9,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "mixed",
+   "seed": 105,
+   "vocab": 250,
+   "n_pairs": 0,
+   "rows": [
+    12,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "mixed",
+   "seed": 105,
+   "vocab": 250,
+   "n_pairs": 2,
+   "rows": [
+    13,
+    13
+   ],
+   "eligible": true,
+   "verdicts": [
+    {
+     "gt": [
+      0,
+      9
+     ],
+     "kind": "planted",
+     "class": "どの転写でも有意",
+     "significant_in": [
+      "a",
+      "b",
+      "fine",
+      "coarse"
+     ]
+    },
+    {
+     "gt": [
+      1,
+      8
+     ],
+     "kind": "planted",
+     "class": "どの転写でも有意",
+     "significant_in": [
+      "a",
+      "b",
+      "fine",
+      "coarse"
+     ]
+    }
+   ],
+   "pair_agreement_ari": 1.0
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "plain",
+   "seed": 105,
+   "vocab": 30,
+   "n_pairs": 0,
+   "rows": [
+    13,
+    13
+   ],
+   "eligible": true,
+   "verdicts": [],
+   "pair_agreement_ari": 1.0
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "plain",
+   "seed": 105,
+   "vocab": 30,
+   "n_pairs": 2,
+   "rows": [
+    13,
+    13
+   ],
+   "eligible": true,
+   "verdicts": [
+    {
+     "gt": [
+      0,
+      3
+     ],
+     "kind": "planted",
+     "class": "どの転写でも有意",
+     "significant_in": [
+      "a",
+      "b",
+      "fine",
+      "coarse"
+     ]
+    },
+    {
+     "gt": [
+      5,
+      7
+     ],
+     "kind": "planted",
+     "class": "一方の転写だけで有意",
+     "significant_in": [
+      "a",
+      "fine",
+      "coarse"
+     ]
+    }
+   ],
+   "pair_agreement_ari": 0.9968
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "plain",
+   "seed": 105,
+   "vocab": 80,
+   "n_pairs": 0,
+   "rows": [
+    13,
+    13
+   ],
+   "eligible": true,
+   "verdicts": [],
+   "pair_agreement_ari": 0.9519
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "plain",
+   "seed": 105,
+   "vocab": 80,
+   "n_pairs": 2,
+   "rows": [
+    13,
+    13
+   ],
+   "eligible": true,
+   "verdicts": [
+    {
+     "gt": [
+      2,
+      7
+     ],
+     "kind": "planted",
+     "class": "どの転写でも有意",
+     "significant_in": [
+      "a",
+      "b",
+      "fine",
+      "coarse"
+     ]
+    }
+   ],
+   "pair_agreement_ari": 1.0
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "plain",
+   "seed": 105,
+   "vocab": 250,
+   "n_pairs": 0,
+   "rows": [
+    13,
+    13
+   ],
+   "eligible": true,
+   "verdicts": [],
+   "pair_agreement_ari": 0.9981
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "plain",
+   "seed": 105,
+   "vocab": 250,
+   "n_pairs": 2,
+   "rows": [
+    13,
+    13
+   ],
+   "eligible": true,
+   "verdicts": [
+    {
+     "gt": [
+      0,
+      6
+     ],
+     "kind": "planted",
+     "class": "どの転写でも有意",
+     "significant_in": [
+      "a",
+      "b",
+      "fine",
+      "coarse"
+     ]
+    }
+   ],
+   "pair_agreement_ari": 0.9926
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "diacritic",
+   "seed": 105,
+   "vocab": 30,
+   "n_pairs": 0,
+   "rows": [
+    1,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "diacritic",
+   "seed": 105,
+   "vocab": 30,
+   "n_pairs": 2,
+   "rows": [
+    1,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "diacritic",
+   "seed": 105,
+   "vocab": 80,
+   "n_pairs": 0,
+   "rows": [
+    1,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "diacritic",
+   "seed": 105,
+   "vocab": 80,
+   "n_pairs": 2,
+   "rows": [
+    1,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "diacritic",
+   "seed": 105,
+   "vocab": 250,
+   "n_pairs": 0,
+   "rows": [
+    1,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "diacritic",
+   "seed": 105,
+   "vocab": 250,
+   "n_pairs": 2,
+   "rows": [
+    1,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "tight",
+   "seed": 105,
+   "vocab": 30,
+   "n_pairs": 0,
+   "rows": [
+    1,
+    12
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "tight",
+   "seed": 105,
+   "vocab": 30,
+   "n_pairs": 2,
+   "rows": [
+    1,
+    9
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "tight",
+   "seed": 105,
+   "vocab": 80,
+   "n_pairs": 0,
+   "rows": [
+    1,
+    10
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "tight",
+   "seed": 105,
+   "vocab": 80,
+   "n_pairs": 2,
+   "rows": [
+    1,
+    11
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "tight",
+   "seed": 105,
+   "vocab": 250,
+   "n_pairs": 0,
+   "rows": [
+    2,
+    9
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "tight",
+   "seed": 105,
+   "vocab": 250,
+   "n_pairs": 2,
+   "rows": [
+    1,
+    11
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "mixed",
+   "seed": 105,
+   "vocab": 30,
+   "n_pairs": 0,
+   "rows": [
+    8,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "mixed",
+   "seed": 105,
+   "vocab": 30,
+   "n_pairs": 2,
+   "rows": [
+    7,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "mixed",
+   "seed": 105,
+   "vocab": 80,
+   "n_pairs": 0,
+   "rows": [
+    7,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "mixed",
+   "seed": 105,
+   "vocab": 80,
+   "n_pairs": 2,
+   "rows": [
+    5,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "mixed",
+   "seed": 105,
+   "vocab": 250,
+   "n_pairs": 0,
+   "rows": [
+    8,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "mixed",
+   "seed": 105,
+   "vocab": 250,
+   "n_pairs": 2,
+   "rows": [
+    7,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "plain",
+   "seed": 106,
+   "vocab": 30,
+   "n_pairs": 0,
+   "rows": [
+    4,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "plain",
+   "seed": 106,
+   "vocab": 30,
+   "n_pairs": 2,
+   "rows": [
+    7,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "plain",
+   "seed": 106,
+   "vocab": 80,
+   "n_pairs": 0,
+   "rows": [
+    5,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "plain",
+   "seed": 106,
+   "vocab": 80,
+   "n_pairs": 2,
+   "rows": [
+    2,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "plain",
+   "seed": 106,
+   "vocab": 250,
+   "n_pairs": 0,
+   "rows": [
+    3,
+    12
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "plain",
+   "seed": 106,
+   "vocab": 250,
+   "n_pairs": 2,
+   "rows": [
+    8,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "diacritic",
+   "seed": 106,
+   "vocab": 30,
+   "n_pairs": 0,
+   "rows": [
+    1,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "diacritic",
+   "seed": 106,
+   "vocab": 30,
+   "n_pairs": 2,
+   "rows": [
+    1,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "diacritic",
+   "seed": 106,
+   "vocab": 80,
+   "n_pairs": 0,
+   "rows": [
+    1,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "diacritic",
+   "seed": 106,
+   "vocab": 80,
+   "n_pairs": 2,
+   "rows": [
+    1,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "diacritic",
+   "seed": 106,
+   "vocab": 250,
+   "n_pairs": 0,
+   "rows": [
+    1,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "diacritic",
+   "seed": 106,
+   "vocab": 250,
+   "n_pairs": 2,
+   "rows": [
+    1,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "tight",
+   "seed": 106,
+   "vocab": 30,
+   "n_pairs": 0,
+   "rows": [
+    1,
+    7
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "tight",
+   "seed": 106,
+   "vocab": 30,
+   "n_pairs": 2,
+   "rows": [
+    1,
+    12
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "tight",
+   "seed": 106,
+   "vocab": 80,
+   "n_pairs": 0,
+   "rows": [
+    2,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "tight",
+   "seed": 106,
+   "vocab": 80,
+   "n_pairs": 2,
+   "rows": [
+    1,
+    11
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "tight",
+   "seed": 106,
+   "vocab": 250,
+   "n_pairs": 0,
+   "rows": [
+    1,
+    11
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "tight",
+   "seed": 106,
+   "vocab": 250,
+   "n_pairs": 2,
+   "rows": [
+    1,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "mixed",
+   "seed": 106,
+   "vocab": 30,
+   "n_pairs": 0,
+   "rows": [
+    12,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "mixed",
+   "seed": 106,
+   "vocab": 30,
+   "n_pairs": 2,
+   "rows": [
+    11,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "mixed",
+   "seed": 106,
+   "vocab": 80,
+   "n_pairs": 0,
+   "rows": [
+    9,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "mixed",
+   "seed": 106,
+   "vocab": 80,
+   "n_pairs": 2,
+   "rows": [
+    9,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "mixed",
+   "seed": 106,
+   "vocab": 250,
+   "n_pairs": 0,
+   "rows": [
+    6,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "mixed",
+   "seed": 106,
+   "vocab": 250,
+   "n_pairs": 2,
+   "rows": [
+    8,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "plain",
+   "seed": 106,
+   "vocab": 30,
+   "n_pairs": 0,
+   "rows": [
+    13,
+    13
+   ],
+   "eligible": true,
+   "verdicts": [],
+   "pair_agreement_ari": 1.0
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "plain",
+   "seed": 106,
+   "vocab": 30,
+   "n_pairs": 2,
+   "rows": [
+    13,
+    13
+   ],
+   "eligible": true,
+   "verdicts": [
+    {
+     "gt": [
+      1,
+      10
+     ],
+     "kind": "planted",
+     "class": "一方の転写だけで有意",
+     "significant_in": [
+      "a",
+      "coarse"
+     ]
+    },
+    {
+     "gt": [
+      6,
+      7
+     ],
+     "kind": "planted",
+     "class": "どの転写でも有意",
+     "significant_in": [
+      "a",
+      "b",
+      "fine",
+      "coarse"
+     ]
+    }
+   ],
+   "pair_agreement_ari": 1.0
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "plain",
+   "seed": 106,
+   "vocab": 80,
+   "n_pairs": 0,
+   "rows": [
+    13,
+    13
+   ],
+   "eligible": true,
+   "verdicts": [
+    {
+     "gt": [
+      2,
+      12
+     ],
+     "kind": "unplanted",
+     "class": "一方の転写だけで有意",
+     "significant_in": [
+      "fine"
+     ]
+    }
+   ],
+   "pair_agreement_ari": 0.9689
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "plain",
+   "seed": 106,
+   "vocab": 80,
+   "n_pairs": 2,
+   "rows": [
+    13,
+    13
+   ],
+   "eligible": true,
+   "verdicts": [
+    {
+     "gt": [
+      1,
+      12
+     ],
+     "kind": "planted",
+     "class": "どの転写でも有意",
+     "significant_in": [
+      "a",
+      "b",
+      "fine",
+      "coarse"
+     ]
+    },
+    {
+     "gt": [
+      5,
+      6
+     ],
+     "kind": "planted",
+     "class": "どの転写でも有意",
+     "significant_in": [
+      "a",
+      "b",
+      "fine",
+      "coarse"
+     ]
+    }
+   ],
+   "pair_agreement_ari": 1.0
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "plain",
+   "seed": 106,
+   "vocab": 250,
+   "n_pairs": 0,
+   "rows": [
+    13,
+    13
+   ],
+   "eligible": true,
+   "verdicts": [],
+   "pair_agreement_ari": 0.6451
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "plain",
+   "seed": 106,
+   "vocab": 250,
+   "n_pairs": 2,
+   "rows": [
+    13,
+    13
+   ],
+   "eligible": true,
+   "verdicts": [
+    {
+     "gt": [
+      2,
+      3
+     ],
+     "kind": "planted",
+     "class": "一方の転写だけで有意",
+     "significant_in": [
+      "b"
+     ]
+    },
+    {
+     "gt": [
+      4,
+      9
+     ],
+     "kind": "planted",
+     "class": "どの転写でも有意",
+     "significant_in": [
+      "a",
+      "b",
+      "fine",
+      "coarse"
+     ]
+    }
+   ],
+   "pair_agreement_ari": 0.9824
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "diacritic",
+   "seed": 106,
+   "vocab": 30,
+   "n_pairs": 0,
+   "rows": [
+    10,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "diacritic",
+   "seed": 106,
+   "vocab": 30,
+   "n_pairs": 2,
+   "rows": [
+    15,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "diacritic",
+   "seed": 106,
+   "vocab": 80,
+   "n_pairs": 0,
+   "rows": [
+    17,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "diacritic",
+   "seed": 106,
+   "vocab": 80,
+   "n_pairs": 2,
+   "rows": [
+    16,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "diacritic",
+   "seed": 106,
+   "vocab": 250,
+   "n_pairs": 0,
+   "rows": [
+    12,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "diacritic",
+   "seed": 106,
+   "vocab": 250,
+   "n_pairs": 2,
+   "rows": [
+    16,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "tight",
+   "seed": 106,
+   "vocab": 30,
+   "n_pairs": 0,
+   "rows": [
+    1,
+    10
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "tight",
+   "seed": 106,
+   "vocab": 30,
+   "n_pairs": 2,
+   "rows": [
+    1,
+    10
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "tight",
+   "seed": 106,
+   "vocab": 80,
+   "n_pairs": 0,
+   "rows": [
+    1,
+    8
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "tight",
+   "seed": 106,
+   "vocab": 80,
+   "n_pairs": 2,
+   "rows": [
+    1,
+    9
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "tight",
+   "seed": 106,
+   "vocab": 250,
+   "n_pairs": 0,
+   "rows": [
+    1,
+    8
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "tight",
+   "seed": 106,
+   "vocab": 250,
+   "n_pairs": 2,
+   "rows": [
+    1,
+    10
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "mixed",
+   "seed": 106,
+   "vocab": 30,
+   "n_pairs": 0,
+   "rows": [
+    5,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "mixed",
+   "seed": 106,
+   "vocab": 30,
+   "n_pairs": 2,
+   "rows": [
+    8,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "mixed",
+   "seed": 106,
+   "vocab": 80,
+   "n_pairs": 0,
+   "rows": [
+    8,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "mixed",
+   "seed": 106,
+   "vocab": 80,
+   "n_pairs": 2,
+   "rows": [
+    9,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "mixed",
+   "seed": 106,
+   "vocab": 250,
+   "n_pairs": 0,
+   "rows": [
+    9,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "mixed",
+   "seed": 106,
+   "vocab": 250,
+   "n_pairs": 2,
+   "rows": [
+    9,
+    17
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "plain",
+   "seed": 106,
+   "vocab": 30,
+   "n_pairs": 0,
+   "rows": [
+    13,
+    13
+   ],
+   "eligible": true,
+   "verdicts": [],
+   "pair_agreement_ari": 1.0
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "plain",
+   "seed": 106,
+   "vocab": 30,
+   "n_pairs": 2,
+   "rows": [
+    13,
+    13
+   ],
+   "eligible": true,
+   "verdicts": [
+    {
+     "gt": [
+      2,
+      9
+     ],
+     "kind": "planted",
+     "class": "どの転写でも有意",
+     "significant_in": [
+      "a",
+      "b",
+      "fine",
+      "coarse"
+     ]
+    },
+    {
+     "gt": [
+      8,
+      10
+     ],
+     "kind": "planted",
+     "class": "どの転写でも有意",
+     "significant_in": [
+      "a",
+      "b",
+      "fine",
+      "coarse"
+     ]
+    }
+   ],
+   "pair_agreement_ari": 1.0
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "plain",
+   "seed": 106,
+   "vocab": 80,
+   "n_pairs": 0,
+   "rows": [
+    13,
+    13
+   ],
+   "eligible": true,
+   "verdicts": [],
+   "pair_agreement_ari": 1.0
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "plain",
+   "seed": 106,
+   "vocab": 80,
+   "n_pairs": 2,
+   "rows": [
+    13,
+    13
+   ],
+   "eligible": true,
+   "verdicts": [
+    {
+     "gt": [
+      4,
+      6
+     ],
+     "kind": "planted",
+     "class": "どの転写でも有意",
+     "significant_in": [
+      "a",
+      "b",
+      "fine",
+      "coarse"
+     ]
+    }
+   ],
+   "pair_agreement_ari": 1.0
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "plain",
+   "seed": 106,
+   "vocab": 250,
+   "n_pairs": 0,
+   "rows": [
+    13,
+    13
+   ],
+   "eligible": true,
+   "verdicts": [
+    {
+     "gt": [
+      5,
+      6
+     ],
+     "kind": "unplanted",
+     "class": "どの転写でも有意",
+     "significant_in": [
+      "a",
+      "b",
+      "fine",
+      "coarse"
+     ]
+    }
+   ],
+   "pair_agreement_ari": 0.997
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "plain",
+   "seed": 106,
+   "vocab": 250,
+   "n_pairs": 2,
+   "rows": [
+    13,
+    13
+   ],
+   "eligible": true,
+   "verdicts": [],
+   "pair_agreement_ari": 0.7888
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "diacritic",
+   "seed": 106,
+   "vocab": 30,
+   "n_pairs": 0,
+   "rows": [
+    1,
+    27
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "diacritic",
+   "seed": 106,
+   "vocab": 30,
+   "n_pairs": 2,
+   "rows": [
+    2,
+    15
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "diacritic",
+   "seed": 106,
+   "vocab": 80,
+   "n_pairs": 0,
+   "rows": [
+    1,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "diacritic",
+   "seed": 106,
+   "vocab": 80,
+   "n_pairs": 2,
+   "rows": [
+    1,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "diacritic",
+   "seed": 106,
+   "vocab": 250,
+   "n_pairs": 0,
+   "rows": [
+    1,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "diacritic",
+   "seed": 106,
+   "vocab": 250,
+   "n_pairs": 2,
+   "rows": [
+    1,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "tight",
+   "seed": 106,
+   "vocab": 30,
+   "n_pairs": 0,
+   "rows": [
+    1,
+    12
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "tight",
+   "seed": 106,
+   "vocab": 30,
+   "n_pairs": 2,
+   "rows": [
+    1,
+    12
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "tight",
+   "seed": 106,
+   "vocab": 80,
+   "n_pairs": 0,
+   "rows": [
+    1,
+    11
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "tight",
+   "seed": 106,
+   "vocab": 80,
+   "n_pairs": 2,
+   "rows": [
+    1,
+    8
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "tight",
+   "seed": 106,
+   "vocab": 250,
+   "n_pairs": 0,
+   "rows": [
+    1,
+    9
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "tight",
+   "seed": 106,
+   "vocab": 250,
+   "n_pairs": 2,
+   "rows": [
+    1,
+    10
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "mixed",
+   "seed": 106,
+   "vocab": 30,
+   "n_pairs": 0,
+   "rows": [
+    9,
+    16
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "mixed",
+   "seed": 106,
+   "vocab": 30,
+   "n_pairs": 2,
+   "rows": [
+    6,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "mixed",
+   "seed": 106,
+   "vocab": 80,
+   "n_pairs": 0,
+   "rows": [
+    9,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "mixed",
+   "seed": 106,
+   "vocab": 80,
+   "n_pairs": 2,
+   "rows": [
+    8,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "mixed",
+   "seed": 106,
+   "vocab": 250,
+   "n_pairs": 0,
+   "rows": [
+    10,
+    23
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "mixed",
+   "seed": 106,
+   "vocab": 250,
+   "n_pairs": 2,
+   "rows": [
+    11,
+    19
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "plain",
+   "seed": 107,
+   "vocab": 30,
+   "n_pairs": 0,
+   "rows": [
+    9,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "plain",
+   "seed": 107,
+   "vocab": 30,
+   "n_pairs": 2,
+   "rows": [
+    5,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "plain",
+   "seed": 107,
+   "vocab": 80,
+   "n_pairs": 0,
+   "rows": [
+    6,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "plain",
+   "seed": 107,
+   "vocab": 80,
+   "n_pairs": 2,
+   "rows": [
+    1,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "plain",
+   "seed": 107,
+   "vocab": 250,
+   "n_pairs": 0,
+   "rows": [
+    1,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "plain",
+   "seed": 107,
+   "vocab": 250,
+   "n_pairs": 2,
+   "rows": [
+    5,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "diacritic",
+   "seed": 107,
+   "vocab": 30,
+   "n_pairs": 0,
+   "rows": [
+    7,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "diacritic",
+   "seed": 107,
+   "vocab": 30,
+   "n_pairs": 2,
+   "rows": [
+    8,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "diacritic",
+   "seed": 107,
+   "vocab": 80,
+   "n_pairs": 0,
+   "rows": [
+    2,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "diacritic",
+   "seed": 107,
+   "vocab": 80,
+   "n_pairs": 2,
+   "rows": [
+    3,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "diacritic",
+   "seed": 107,
+   "vocab": 250,
+   "n_pairs": 0,
+   "rows": [
+    3,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "diacritic",
+   "seed": 107,
+   "vocab": 250,
+   "n_pairs": 2,
+   "rows": [
+    5,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "tight",
+   "seed": 107,
+   "vocab": 30,
+   "n_pairs": 0,
+   "rows": [
+    1,
+    7
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "tight",
+   "seed": 107,
+   "vocab": 30,
+   "n_pairs": 2,
+   "rows": [
+    1,
+    8
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "tight",
+   "seed": 107,
+   "vocab": 80,
+   "n_pairs": 0,
+   "rows": [
+    1,
+    6
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "tight",
+   "seed": 107,
+   "vocab": 80,
+   "n_pairs": 2,
+   "rows": [
+    1,
+    8
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "tight",
+   "seed": 107,
+   "vocab": 250,
+   "n_pairs": 0,
+   "rows": [
+    2,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "tight",
+   "seed": 107,
+   "vocab": 250,
+   "n_pairs": 2,
+   "rows": [
+    1,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "mixed",
+   "seed": 107,
+   "vocab": 30,
+   "n_pairs": 0,
+   "rows": [
+    8,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "mixed",
+   "seed": 107,
+   "vocab": 30,
+   "n_pairs": 2,
+   "rows": [
+    8,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "mixed",
+   "seed": 107,
+   "vocab": 80,
+   "n_pairs": 0,
+   "rows": [
+    8,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "mixed",
+   "seed": 107,
+   "vocab": 80,
+   "n_pairs": 2,
+   "rows": [
+    10,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "mixed",
+   "seed": 107,
+   "vocab": 250,
+   "n_pairs": 0,
+   "rows": [
+    10,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "font",
+   "condition": "mixed",
+   "seed": 107,
+   "vocab": 250,
+   "n_pairs": 2,
+   "rows": [
+    9,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "plain",
+   "seed": 107,
+   "vocab": 30,
+   "n_pairs": 0,
+   "rows": [
+    13,
+    13
+   ],
+   "eligible": true,
+   "verdicts": [],
+   "pair_agreement_ari": 0.9982
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "plain",
+   "seed": 107,
+   "vocab": 30,
+   "n_pairs": 2,
+   "rows": [
+    13,
+    13
+   ],
+   "eligible": true,
+   "verdicts": [
+    {
+     "gt": [
+      2,
+      7
+     ],
+     "kind": "planted",
+     "class": "どの転写でも有意",
+     "significant_in": [
+      "a",
+      "b",
+      "fine",
+      "coarse"
+     ]
+    },
+    {
+     "gt": [
+      3,
+      9
+     ],
+     "kind": "planted",
+     "class": "どの転写でも有意",
+     "significant_in": [
+      "a",
+      "b",
+      "fine",
+      "coarse"
+     ]
+    }
+   ],
+   "pair_agreement_ari": 1.0
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "plain",
+   "seed": 107,
+   "vocab": 80,
+   "n_pairs": 0,
+   "rows": [
+    13,
+    13
+   ],
+   "eligible": true,
+   "verdicts": [],
+   "pair_agreement_ari": 0.9676
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "plain",
+   "seed": 107,
+   "vocab": 80,
+   "n_pairs": 2,
+   "rows": [
+    13,
+    13
+   ],
+   "eligible": true,
+   "verdicts": [
+    {
+     "gt": [
+      0,
+      3
+     ],
+     "kind": "planted",
+     "class": "どの転写でも有意",
+     "significant_in": [
+      "a",
+      "b",
+      "fine",
+      "coarse"
+     ]
+    },
+    {
+     "gt": [
+      2,
+      7
+     ],
+     "kind": "planted",
+     "class": "どの転写でも有意",
+     "significant_in": [
+      "a",
+      "b",
+      "fine",
+      "coarse"
+     ]
+    }
+   ],
+   "pair_agreement_ari": 0.999
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "plain",
+   "seed": 107,
+   "vocab": 250,
+   "n_pairs": 0,
+   "rows": [
+    13,
+    13
+   ],
+   "eligible": true,
+   "verdicts": [],
+   "pair_agreement_ari": 1.0
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "plain",
+   "seed": 107,
+   "vocab": 250,
+   "n_pairs": 2,
+   "rows": [
+    13,
+    13
+   ],
+   "eligible": true,
+   "verdicts": [
+    {
+     "gt": [
+      1,
+      8
+     ],
+     "kind": "planted",
+     "class": "どの転写でも有意",
+     "significant_in": [
+      "a",
+      "b",
+      "fine",
+      "coarse"
+     ]
+    },
+    {
+     "gt": [
+      7,
+      11
+     ],
+     "kind": "planted",
+     "class": "どの転写でも有意",
+     "significant_in": [
+      "a",
+      "b",
+      "fine",
+      "coarse"
+     ]
+    }
+   ],
+   "pair_agreement_ari": 0.9282
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "diacritic",
+   "seed": 107,
+   "vocab": 30,
+   "n_pairs": 0,
+   "rows": [
+    10,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "diacritic",
+   "seed": 107,
+   "vocab": 30,
+   "n_pairs": 2,
+   "rows": [
+    8,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "diacritic",
+   "seed": 107,
+   "vocab": 80,
+   "n_pairs": 0,
+   "rows": [
+    16,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "diacritic",
+   "seed": 107,
+   "vocab": 80,
+   "n_pairs": 2,
+   "rows": [
+    12,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "diacritic",
+   "seed": 107,
+   "vocab": 250,
+   "n_pairs": 0,
+   "rows": [
+    11,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "diacritic",
+   "seed": 107,
+   "vocab": 250,
+   "n_pairs": 2,
+   "rows": [
+    13,
+    13
+   ],
+   "eligible": true,
+   "verdicts": [
+    {
+     "gt": null,
+     "kind": "unmapped",
+     "class": "一方の転写だけで有意",
+     "significant_in": [
+      "b"
+     ]
+    },
+    {
+     "gt": [
+      8,
+      12
+     ],
+     "kind": "unplanted",
+     "class": "一方の転写だけで有意",
+     "significant_in": [
+      "a",
+      "fine",
+      "coarse"
+     ]
+    }
+   ],
+   "pair_agreement_ari": 0.9074
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "tight",
+   "seed": 107,
+   "vocab": 30,
+   "n_pairs": 0,
+   "rows": [
+    3,
+    10
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "tight",
+   "seed": 107,
+   "vocab": 30,
+   "n_pairs": 2,
+   "rows": [
+    1,
+    10
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "tight",
+   "seed": 107,
+   "vocab": 80,
+   "n_pairs": 0,
+   "rows": [
+    2,
+    12
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "tight",
+   "seed": 107,
+   "vocab": 80,
+   "n_pairs": 2,
+   "rows": [
+    2,
+    12
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "tight",
+   "seed": 107,
+   "vocab": 250,
+   "n_pairs": 0,
+   "rows": [
+    1,
+    8
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "tight",
+   "seed": 107,
+   "vocab": 250,
+   "n_pairs": 2,
+   "rows": [
+    1,
+    11
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "mixed",
+   "seed": 107,
+   "vocab": 30,
+   "n_pairs": 0,
+   "rows": [
+    7,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "mixed",
+   "seed": 107,
+   "vocab": 30,
+   "n_pairs": 2,
+   "rows": [
+    12,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "mixed",
+   "seed": 107,
+   "vocab": 80,
+   "n_pairs": 0,
+   "rows": [
+    9,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "mixed",
+   "seed": 107,
+   "vocab": 80,
+   "n_pairs": 2,
+   "rows": [
+    5,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "mixed",
+   "seed": 107,
+   "vocab": 250,
+   "n_pairs": 0,
+   "rows": [
+    14,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stroke",
+   "condition": "mixed",
+   "seed": 107,
+   "vocab": 250,
+   "n_pairs": 2,
+   "rows": [
+    11,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "plain",
+   "seed": 107,
+   "vocab": 30,
+   "n_pairs": 0,
+   "rows": [
+    13,
+    13
+   ],
+   "eligible": true,
+   "verdicts": [],
+   "pair_agreement_ari": 1.0
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "plain",
+   "seed": 107,
+   "vocab": 30,
+   "n_pairs": 2,
+   "rows": [
+    13,
+    13
+   ],
+   "eligible": true,
+   "verdicts": [
+    {
+     "gt": [
+      7,
+      8
+     ],
+     "kind": "planted",
+     "class": "どの転写でも有意",
+     "significant_in": [
+      "a",
+      "b",
+      "fine",
+      "coarse"
+     ]
+    }
+   ],
+   "pair_agreement_ari": 1.0
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "plain",
+   "seed": 107,
+   "vocab": 80,
+   "n_pairs": 0,
+   "rows": [
+    13,
+    13
+   ],
+   "eligible": true,
+   "verdicts": [],
+   "pair_agreement_ari": 0.9587
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "plain",
+   "seed": 107,
+   "vocab": 80,
+   "n_pairs": 2,
+   "rows": [
+    13,
+    13
+   ],
+   "eligible": true,
+   "verdicts": [
+    {
+     "gt": [
+      2,
+      10
+     ],
+     "kind": "unplanted",
+     "class": "どの転写でも有意",
+     "significant_in": [
+      "a",
+      "b",
+      "fine",
+      "coarse"
+     ]
+    },
+    {
+     "gt": [
+      3,
+      5
+     ],
+     "kind": "planted",
+     "class": "どの転写でも有意",
+     "significant_in": [
+      "a",
+      "b",
+      "fine",
+      "coarse"
+     ]
+    },
+    {
+     "gt": [
+      6,
+      12
+     ],
+     "kind": "planted",
+     "class": "どの転写でも有意",
+     "significant_in": [
+      "a",
+      "b",
+      "fine",
+      "coarse"
+     ]
+    }
+   ],
+   "pair_agreement_ari": 0.9723
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "plain",
+   "seed": 107,
+   "vocab": 250,
+   "n_pairs": 0,
+   "rows": [
+    13,
+    13
+   ],
+   "eligible": true,
+   "verdicts": [],
+   "pair_agreement_ari": 0.9724
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "plain",
+   "seed": 107,
+   "vocab": 250,
+   "n_pairs": 2,
+   "rows": [
+    13,
+    13
+   ],
+   "eligible": true,
+   "verdicts": [
+    {
+     "gt": [
+      0,
+      4
+     ],
+     "kind": "planted",
+     "class": "どの転写でも有意",
+     "significant_in": [
+      "a",
+      "b",
+      "fine",
+      "coarse"
+     ]
+    },
+    {
+     "gt": [
+      5,
+      7
+     ],
+     "kind": "planted",
+     "class": "どの転写でも有意",
+     "significant_in": [
+      "a",
+      "b",
+      "fine",
+      "coarse"
+     ]
+    }
+   ],
+   "pair_agreement_ari": 0.9353
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "diacritic",
+   "seed": 107,
+   "vocab": 30,
+   "n_pairs": 0,
+   "rows": [
+    15,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "diacritic",
+   "seed": 107,
+   "vocab": 30,
+   "n_pairs": 2,
+   "rows": [
+    6,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "diacritic",
+   "seed": 107,
+   "vocab": 80,
+   "n_pairs": 0,
+   "rows": [
+    9,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "diacritic",
+   "seed": 107,
+   "vocab": 80,
+   "n_pairs": 2,
+   "rows": [
+    12,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "diacritic",
+   "seed": 107,
+   "vocab": 250,
+   "n_pairs": 0,
+   "rows": [
+    13,
+    13
+   ],
+   "eligible": true,
+   "verdicts": [],
+   "pair_agreement_ari": 0.9822
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "diacritic",
+   "seed": 107,
+   "vocab": 250,
+   "n_pairs": 2,
+   "rows": [
+    14,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "tight",
+   "seed": 107,
+   "vocab": 30,
+   "n_pairs": 0,
+   "rows": [
+    2,
+    8
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "tight",
+   "seed": 107,
+   "vocab": 30,
+   "n_pairs": 2,
+   "rows": [
+    3,
+    6
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "tight",
+   "seed": 107,
+   "vocab": 80,
+   "n_pairs": 0,
+   "rows": [
+    1,
+    8
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "tight",
+   "seed": 107,
+   "vocab": 80,
+   "n_pairs": 2,
+   "rows": [
+    1,
+    8
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "tight",
+   "seed": 107,
+   "vocab": 250,
+   "n_pairs": 0,
+   "rows": [
+    1,
+    7
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "tight",
+   "seed": 107,
+   "vocab": 250,
+   "n_pairs": 2,
+   "rows": [
+    1,
+    10
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "mixed",
+   "seed": 107,
+   "vocab": 30,
+   "n_pairs": 0,
+   "rows": [
+    8,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "mixed",
+   "seed": 107,
+   "vocab": 30,
+   "n_pairs": 2,
+   "rows": [
+    7,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "mixed",
+   "seed": 107,
+   "vocab": 80,
+   "n_pairs": 0,
+   "rows": [
+    12,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "mixed",
+   "seed": 107,
+   "vocab": 80,
+   "n_pairs": 2,
+   "rows": [
+    11,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "mixed",
+   "seed": 107,
+   "vocab": 250,
+   "n_pairs": 0,
+   "rows": [
+    9,
+    13
+   ],
+   "eligible": false
+  },
+  {
+   "split": "dev",
+   "family": "stack",
+   "condition": "mixed",
+   "seed": 107,
+   "vocab": 250,
+   "n_pairs": 2,
+   "rows": [
+    10,
+    13
+   ],
+   "eligible": false
+  }
+ ]
+}

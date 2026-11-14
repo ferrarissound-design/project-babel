@@ -11,6 +11,7 @@
 - API不要の画像→記号候補・反復パターン解析: [docs/VISION.md](docs/VISION.md)
 - 画像認識の定量評価・正解転写の作り方: [docs/VISION_EVAL.md](docs/VISION_EVAL.md)（v1）、[docs/VISION_EVAL_V2.md](docs/VISION_EVAL_V2.md)（v2）、[docs/VISION_EVAL_V3.md](docs/VISION_EVAL_V3.md)（v3: 行の過剰分割の原因と improved-v3）、[docs/GROUND_TRUTH.md](docs/GROUND_TRUTH.md)
 - 実画像の評価手順（画像を受け取ったら）: [docs/REAL_IMAGE_STUDY.md](docs/REAL_IMAGE_STUDY.md)
+- 本当にある構造と、認識の誤りが作った構造の区別（認識方式をまたぐ検証、転写の比較）: [docs/ROBUST_STRUCTURE.md](docs/ROBUST_STRUCTURE.md)
 - 意味を使わない構造発見（反復・境界・文法的な規則の仮説）: [docs/STRUCTURE.md](docs/STRUCTURE.md)、評価結果: [docs/STRUCTURE_RESULTS.md](docs/STRUCTURE_RESULTS.md)
 
 ## 重要な注意
@@ -58,6 +59,8 @@ python -m babel annotate page.png --gt page.gt.json --report v/glyph-report.json
 python -m babel vision-eval v/glyph-report.json page.gt.json  # 認識結果を正解転写と比べる
 python -m babel vision-benchmark --split test            # 人工画像で認識方式を比べる（results/vision/）
 python -m babel image-study prepare study --image IMG.png # 実画像の評価（prepare → annotate → status → evaluate → structure）
+python -m babel robust-structure IMG.png --out study/robust.json   # 複数の認識方式で転写し、方式をまたいで再現する行の組を出す
+python -m babel transcription-compare a.json b.json --out cmp.json # 同じ画像の2つの転写を、クラス番号に頼らずに突き合わせる
 ```
 
 ## GitHub Actions

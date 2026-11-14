@@ -67,6 +67,19 @@ def main(argv=None):
     vb.add_argument("--split", choices=["dev", "val", "test"], default="dev")
     vb.add_argument("--methods", help="カンマ区切り（省略時はすべて）")
     vb.add_argument("--out")
+    rs = sub.add_parser("robust-structure", help="画像を複数の認識方式で転写し、行の組の類似が方式をまたいで再現するかを調べる")
+    rs.add_argument("image")
+    rs.add_argument("--out", required=True, help="結果 JSON（同じ名前の .md も書く）")
+    rs.add_argument("--region", action="append", default=[], metavar="ID:X1,Y1,X2,Y2", help="文字領域（複数可）")
+    rs.add_argument("--permutations", type=int, default=4999)
+    tc = sub.add_parser("transcription-compare", help="同じ画像の2つの転写を、クラス番号に頼らずに突き合わせる（画像は不要）")
+    tc.add_argument("a")
+    tc.add_argument("b")
+    tc.add_argument("--extra", action="append", default=[], help="行の分け方が違う転写（単独の検定だけ。複数可）")
+    tc.add_argument("--out", required=True, help="結果 JSON（同じ名前の .md も書く）")
+    tc.add_argument("--name-a", default="A")
+    tc.add_argument("--name-b", default="B")
+    tc.add_argument("--permutations", type=int, default=4999)
     s = sub.add_parser("analyze", help="意味を使わない構造発見（反復・境界・文法的な規則の仮説）。翻訳はしない")
     s.add_argument("corpus", help="BABEL コーパス JSON / glyph-report.json / .txt / 画像（画像なら vision を内部で実行）")
     s.add_argument("--out", required=True, help="解析結果 JSON（同じ名前の .md も書く）")
@@ -211,6 +224,23 @@ def main(argv=None):
         print(json.dumps(res["meta"], ensure_ascii=False))
     elif a.cmd == "analyze":
         return _analyze(a, ap)
+    elif a.cmd in ("robust-structure", "transcription-compare") and a.permutations < 999:
+        # 置換が少ないと、標準化の作りのために誤って有意とする率が名目を超える（199 回で 0.07 前後。docs/ISSUES.md #81）
+        ap.exit(2, f"babel {a.cmd}: --permutations は 999 以上にしてください（少ないと誤報告が増える。docs/ISSUES.md #81）\n")
+    elif a.cmd == "robust-structure":
+        from babel.robust import compare as rc
+        from babel.robust import ensemble
+        res = ensemble.analyze_image(a.image, regions=_parse_regions(a.region, ap), cfg={"permutations": a.permutations})
+        rc.write(res, a.out, rc.image_markdown(res))
+        print(json.dumps({"votes": res["votes"], "out": a.out}, ensure_ascii=False, indent=1))
+    elif a.cmd == "transcription-compare":
+        from babel.robust import compare as rc
+        try:
+            res = rc.compare(a.a, a.b, extra=a.extra, cfg={"permutations": a.permutations})
+        except ValueError as e:
+            ap.exit(2, f"babel transcription-compare: {e}\n")
+        rc.write(res, a.out, rc.compare_markdown(res, a.name_a, a.name_b))
+        print(json.dumps({"verdicts": res["verdicts"], "out": a.out}, ensure_ascii=False, indent=1))
     elif a.cmd == "structure-benchmark":
         from babel.structure_eval.benchmark import run
         res = run(a.split, [int(x) for x in a.seeds.split(",")] if a.seeds else None,

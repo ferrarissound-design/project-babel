@@ -1,0 +1,30 @@
+{
+ "note": "holdout-font は v4 のコードで初めて走らせた（初見）。predictions-v2.json はその前に固定した",
+ "checks": [
+  {
+   "id": "P1",
+   "held": true,
+   "observed": "0.042"
+  },
+  {
+   "id": "P2",
+   "held": true,
+   "observed": "0.048（95% 区間 0.03〜0.08）"
+  },
+  {
+   "id": "P3",
+   "held": true,
+   "observed": "0.622"
+  },
+  {
+   "id": "P4",
+   "held": true,
+   "observed": "AUC 0.912・票 3 0.92・票 1 0.09"
+  },
+  {
+   "id": "P6",
+   "held": true,
+   "observed": "0.107 対 0.048"
+  }
+ ]
+}

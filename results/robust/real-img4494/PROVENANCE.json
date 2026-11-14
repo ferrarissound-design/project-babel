@@ -1,0 +1,22 @@
+{
+ "note": "IMG_4494 の転写（未検証）。画像本体はリポジトリにない。v2・v3 の転写は、マージされていない実験ブランチ experiment/img4494-v3-structure-20261113 から、内容を変えずに写した",
+ "branch": "experiment/img4494-v3-structure-20261113",
+ "commit": "c4cadd04e54e7ffe8c7b08adff994c034052b5ef",
+ "files": [
+  {
+   "path": "results/robust/real-img4494/inputs/v3-continuous.json",
+   "source": "c4cadd04e54e7ffe8c7b08adff994c034052b5ef:experiments/img4494/v3-continuous.json",
+   "sha256": "2d6a9b2932079effc7b495162fa55a5aead1fba156fc688a30ef811c3bd17fca"
+  },
+  {
+   "path": "results/robust/real-img4494/inputs/v2-continuous.json",
+   "source": "c4cadd04e54e7ffe8c7b08adff994c034052b5ef:experiments/img4494/v2-continuous.json",
+   "sha256": "8510abf4c7890455e1bc3d18b2924a76db68ebac56415a5b735cf3908a21dab5"
+  },
+  {
+   "path": "results/vision/real-img4494/corpus-continuous.json",
+   "source": "main（PR #10、519b162）",
+   "sha256": "ce20e4d115f981025f825cc96574e8ac9d5e849cfc09e601b4422b9cc5226861"
+  }
+ ]
+}

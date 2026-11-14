@@ -1,0 +1,41 @@
+{
+ "note": "holdout の結果を見る前に書いた予測。外れたら、その主張は未知のデータでは成り立たないと報告する（docs/ROBUST_STRUCTURE.md）。このファイルは holdout の結果より前のコミットに入れる",
+ "written_after": "dev の結果（results/robust/bench-dev.json、コミット c406273）",
+ "frozen": {
+  "vote_threshold": 6,
+  "members": 8,
+  "soft": "不採用"
+ },
+ "predictions": [
+  {
+   "id": "P1",
+   "claim": "正解の転写での検定（oracle-lcs）は、仕込みのない文で、1つでも組を報告する割合が 0.02〜0.10 に入る",
+   "refuted_if": "どちらかの holdout で範囲の外"
+  },
+  {
+   "id": "P2",
+   "claim": "票 6/8 以上の組だけを採ると、仕込みのない画像で1つでも組を報告する割合は 0.08 以下",
+   "refuted_if": "どちらかの holdout で 0.08 を超える"
+  },
+  {
+   "id": "P3",
+   "claim": "票 6/8 以上は、既存の方式（ngram:v3）より多くの仕込んだ組を見つける",
+   "refuted_if": "どちらかの holdout で recall が ngram:v3 以下"
+  },
+  {
+   "id": "P4",
+   "claim": "票の数は仮説の真偽を分ける: AUC 0.8 以上、票 6 以上の組が真である割合 0.85 以上、票 1 の組が真である割合 0.3 以下",
+   "refuted_if": "どちらかの holdout で1つでも満たさない"
+  },
+  {
+   "id": "P5",
+   "claim": "行を過剰に分割する方式（improved-v2）の転写は、仕込みのない画像の 2 割以上で有意な組を作る（認識の誤りが作る見かけの構造）",
+   "refuted_if": "holdout-synth で 0.2 未満"
+  },
+  {
+   "id": "P6",
+   "claim": "単一の転写（lcs:v3）は、仕込みのない画像で1つでも組を報告する割合が、票 6/8 以上より高い",
+   "refuted_if": "どちらかの holdout で票 6/8 以上と同じか低い"
+  }
+ ]
+}

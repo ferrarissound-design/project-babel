@@ -1,0 +1,4505 @@
+{
+ "split": "dev",
+ "cases": 576,
+ "overall": {
+  "oracle-lcs": {
+   "negative_images": 288,
+   "negative_with_any": 14,
+   "fwer": 0.0486,
+   "fwer_ci95": [
+    0.0292,
+    0.0799
+   ],
+   "false_per_negative_image": 0.0486,
+   "oracle_quiet_negative_images": 274,
+   "oracle_quiet_with_any": 0,
+   "oracle_quiet_rate": 0.0,
+   "oracle_quiet_ci95": [
+    0.0,
+    0.0138
+   ],
+   "positive_images": 288,
+   "planted": 576,
+   "planted_found": 424,
+   "recall": 0.7361,
+   "false_per_positive_image": 0.0382,
+   "precision": 0.9443,
+   "false_total": 25,
+   "false_kinds": {
+    "unplanted": 25,
+    "same_line": 0,
+    "unmapped": 0
+   }
+  },
+  "oracle-ngram": {
+   "negative_images": 288,
+   "negative_with_any": 0,
+   "fwer": 0.0,
+   "fwer_ci95": [
+    0.0,
+    0.0132
+   ],
+   "false_per_negative_image": 0.0,
+   "oracle_quiet_negative_images": 274,
+   "oracle_quiet_with_any": 0,
+   "oracle_quiet_rate": 0.0,
+   "oracle_quiet_ci95": [
+    0.0,
+    0.0138
+   ],
+   "positive_images": 288,
+   "planted": 576,
+   "planted_found": 183,
+   "recall": 0.3177,
+   "false_per_positive_image": 0.0,
+   "precision": 1.0,
+   "false_total": 0,
+   "false_kinds": {
+    "unplanted": 0,
+    "same_line": 0,
+    "unmapped": 0
+   }
+  },
+  "lcs:v3": {
+   "negative_images": 288,
+   "negative_with_any": 20,
+   "fwer": 0.0694,
+   "fwer_ci95": [
+    0.0454,
+    0.1048
+   ],
+   "false_per_negative_image": 0.0729,
+   "oracle_quiet_negative_images": 274,
+   "oracle_quiet_with_any": 12,
+   "oracle_quiet_rate": 0.0438,
+   "oracle_quiet_ci95": [
+    0.0252,
+    0.075
+   ],
+   "positive_images": 288,
+   "planted": 576,
+   "planted_found": 288,
+   "recall": 0.5,
+   "false_per_positive_image": 0.0799,
+   "precision": 0.8675,
+   "false_total": 44,
+   "false_kinds": {
+    "unplanted": 34,
+    "same_line": 0,
+    "unmapped": 10
+   }
+  },
+  "lcs:v3-fine": {
+   "negative_images": 288,
+   "negative_with_any": 19,
+   "fwer": 0.066,
+   "fwer_ci95": [
+    0.0426,
+    0.1007
+   ],
+   "false_per_negative_image": 0.0694,
+   "oracle_quiet_negative_images": 274,
+   "oracle_quiet_with_any": 11,
+   "oracle_quiet_rate": 0.0401,
+   "oracle_quiet_ci95": [
+    0.0226,
+    0.0704
+   ],
+   "positive_images": 288,
+   "planted": 576,
+   "planted_found": 285,
+   "recall": 0.4948,
+   "false_per_positive_image": 0.0833,
+   "precision": 0.8663,
+   "false_total": 44,
+   "false_kinds": {
+    "unplanted": 34,
+    "same_line": 0,
+    "unmapped": 10
+   }
+  },
+  "lcs:v3-coarse": {
+   "negative_images": 288,
+   "negative_with_any": 23,
+   "fwer": 0.0799,
+   "fwer_ci95": [
+    0.0538,
+    0.117
+   ],
+   "false_per_negative_image": 0.0833,
+   "oracle_quiet_negative_images": 274,
+   "oracle_quiet_with_any": 15,
+   "oracle_quiet_rate": 0.0547,
+   "oracle_quiet_ci95": [
+    0.0335,
+    0.0883
+   ],
+   "positive_images": 288,
+   "planted": 576,
+   "planted_found": 279,
+   "recall": 0.4844,
+   "false_per_positive_image": 0.0938,
+   "precision": 0.8455,
+   "false_total": 51,
+   "false_kinds": {
+    "unplanted": 41,
+    "same_line": 0,
+    "unmapped": 10
+   }
+  },
+  "lcs:v3-shape": {
+   "negative_images": 288,
+   "negative_with_any": 20,
+   "fwer": 0.0694,
+   "fwer_ci95": [
+    0.0454,
+    0.1048
+   ],
+   "false_per_negative_image": 0.0764,
+   "oracle_quiet_negative_images": 274,
+   "oracle_quiet_with_any": 14,
+   "oracle_quiet_rate": 0.0511,
+   "oracle_quiet_ci95": [
+    0.0307,
+    0.0839
+   ],
+   "positive_images": 288,
+   "planted": 576,
+   "planted_found": 267,
+   "recall": 0.4635,
+   "false_per_positive_image": 0.0799,
+   "precision": 0.8558,
+   "false_total": 45,
+   "false_kinds": {
+    "unplanted": 37,
+    "same_line": 0,
+    "unmapped": 8
+   }
+  },
+  "lcs:v3-iou": {
+   "negative_images": 288,
+   "negative_with_any": 22,
+   "fwer": 0.0764,
+   "fwer_ci95": [
+    0.051,
+    0.1129
+   ],
+   "false_per_negative_image": 0.0799,
+   "oracle_quiet_negative_images": 274,
+   "oracle_quiet_with_any": 14,
+   "oracle_quiet_rate": 0.0511,
+   "oracle_quiet_ci95": [
+    0.0307,
+    0.0839
+   ],
+   "positive_images": 288,
+   "planted": 576,
+   "planted_found": 283,
+   "recall": 0.4913,
+   "false_per_positive_image": 0.0833,
+   "precision": 0.8576,
+   "false_total": 47,
+   "false_kinds": {
+    "unplanted": 37,
+    "same_line": 0,
+    "unmapped": 10
+   }
+  },
+  "lcs:v3-scaled": {
+   "negative_images": 288,
+   "negative_with_any": 16,
+   "fwer": 0.0556,
+   "fwer_ci95": [
+    0.0345,
+    0.0883
+   ],
+   "false_per_negative_image": 0.059,
+   "oracle_quiet_negative_images": 274,
+   "oracle_quiet_with_any": 10,
+   "oracle_quiet_rate": 0.0365,
+   "oracle_quiet_ci95": [
+    0.0199,
+    0.0659
+   ],
+   "positive_images": 288,
+   "planted": 576,
+   "planted_found": 270,
+   "recall": 0.4688,
+   "false_per_positive_image": 0.0799,
+   "precision": 0.871,
+   "false_total": 40,
+   "false_kinds": {
+    "unplanted": 31,
+    "same_line": 0,
+    "unmapped": 9
+   }
+  },
+  "lcs:v2": {
+   "negative_images": 288,
+   "negative_with_any": 139,
+   "fwer": 0.4826,
+   "fwer_ci95": [
+    0.4255,
+    0.5402
+   ],
+   "false_per_negative_image": 1.6389,
+   "oracle_quiet_negative_images": 274,
+   "oracle_quiet_with_any": 128,
+   "oracle_quiet_rate": 0.4672,
+   "oracle_quiet_ci95": [
+    0.4089,
+    0.5263
+   ],
+   "positive_images": 288,
+   "planted": 576,
+   "planted_found": 327,
+   "recall": 0.5677,
+   "false_per_positive_image": 1.5139,
+   "precision": 0.2648,
+   "false_total": 908,
+   "false_kinds": {
+    "unplanted": 513,
+    "same_line": 5,
+    "unmapped": 390
+   }
+  },
+  "lcs:baseline": {
+   "negative_images": 288,
+   "negative_with_any": 14,
+   "fwer": 0.0486,
+   "fwer_ci95": [
+    0.0292,
+    0.0799
+   ],
+   "false_per_negative_image": 0.0556,
+   "oracle_quiet_negative_images": 274,
+   "oracle_quiet_with_any": 10,
+   "oracle_quiet_rate": 0.0365,
+   "oracle_quiet_ci95": [
+    0.0199,
+    0.0659
+   ],
+   "positive_images": 288,
+   "planted": 576,
+   "planted_found": 130,
+   "recall": 0.2257,
+   "false_per_positive_image": 0.1215,
+   "precision": 0.7182,
+   "false_total": 51,
+   "false_kinds": {
+    "unplanted": 43,
+    "same_line": 0,
+    "unmapped": 8
+   }
+  },
+  "ngram:v3": {
+   "negative_images": 288,
+   "negative_with_any": 1,
+   "fwer": 0.0035,
+   "fwer_ci95": [
+    0.0006,
+    0.0194
+   ],
+   "false_per_negative_image": 0.0035,
+   "oracle_quiet_negative_images": 274,
+   "oracle_quiet_with_any": 1,
+   "oracle_quiet_rate": 0.0036,
+   "oracle_quiet_ci95": [
+    0.0006,
+    0.0204
+   ],
+   "positive_images": 288,
+   "planted": 576,
+   "planted_found": 136,
+   "recall": 0.2361,
+   "false_per_positive_image": 0.0174,
+   "precision": 0.9577,
+   "false_total": 6,
+   "false_kinds": {
+    "unplanted": 2,
+    "same_line": 0,
+    "unmapped": 4
+   }
+  },
+  "ngram:v2": {
+   "negative_images": 288,
+   "negative_with_any": 25,
+   "fwer": 0.0868,
+   "fwer_ci95": [
+    0.0595,
+    0.125
+   ],
+   "false_per_negative_image": 0.1458,
+   "oracle_quiet_negative_images": 274,
+   "oracle_quiet_with_any": 23,
+   "oracle_quiet_rate": 0.0839,
+   "oracle_quiet_ci95": [
+    0.0566,
+    0.1228
+   ],
+   "positive_images": 288,
+   "planted": 576,
+   "planted_found": 122,
+   "recall": 0.2118,
+   "false_per_positive_image": 0.1319,
+   "precision": 0.604,
+   "false_total": 80,
+   "false_kinds": {
+    "unplanted": 31,
+    "same_line": 0,
+    "unmapped": 49
+   }
+  },
+  "ngram:baseline": {
+   "negative_images": 288,
+   "negative_with_any": 3,
+   "fwer": 0.0104,
+   "fwer_ci95": [
+    0.0035,
+    0.0302
+   ],
+   "false_per_negative_image": 0.0174,
+   "oracle_quiet_negative_images": 274,
+   "oracle_quiet_with_any": 3,
+   "oracle_quiet_rate": 0.0109,
+   "oracle_quiet_ci95": [
+    0.0037,
+    0.0317
+   ],
+   "positive_images": 288,
+   "planted": 576,
+   "planted_found": 71,
+   "recall": 0.1233,
+   "false_per_positive_image": 0.0208,
+   "precision": 0.8659,
+   "false_total": 11,
+   "false_kinds": {
+    "unplanted": 6,
+    "same_line": 0,
+    "unmapped": 5
+   }
+  },
+  "soft@0.2": {
+   "negative_images": 288,
+   "negative_with_any": 16,
+   "fwer": 0.0556,
+   "fwer_ci95": [
+    0.0345,
+    0.0883
+   ],
+   "false_per_negative_image": 0.0625,
+   "oracle_quiet_negative_images": 274,
+   "oracle_quiet_with_any": 9,
+   "oracle_quiet_rate": 0.0328,
+   "oracle_quiet_ci95": [
+    0.0174,
+    0.0612
+   ],
+   "positive_images": 288,
+   "planted": 576,
+   "planted_found": 283,
+   "recall": 0.4913,
+   "false_per_positive_image": 0.0729,
+   "precision": 0.8789,
+   "false_total": 39,
+   "false_kinds": {
+    "unplanted": 30,
+    "same_line": 0,
+    "unmapped": 9
+   }
+  },
+  "soft@0.3": {
+   "negative_images": 288,
+   "negative_with_any": 15,
+   "fwer": 0.0521,
+   "fwer_ci95": [
+    0.0318,
+    0.0841
+   ],
+   "false_per_negative_image": 0.059,
+   "oracle_quiet_negative_images": 274,
+   "oracle_quiet_with_any": 8,
+   "oracle_quiet_rate": 0.0292,
+   "oracle_quiet_ci95": [
+    0.0149,
+    0.0565
+   ],
+   "positive_images": 288,
+   "planted": 576,
+   "planted_found": 289,
+   "recall": 0.5017,
+   "false_per_positive_image": 0.0868,
+   "precision": 0.8731,
+   "false_total": 42,
+   "false_kinds": {
+    "unplanted": 33,
+    "same_line": 0,
+    "unmapped": 9
+   }
+  },
+  "soft@0.45": {
+   "negative_images": 288,
+   "negative_with_any": 17,
+   "fwer": 0.059,
+   "fwer_ci95": [
+    0.0372,
+    0.0925
+   ],
+   "false_per_negative_image": 0.066,
+   "oracle_quiet_negative_images": 274,
+   "oracle_quiet_with_any": 10,
+   "oracle_quiet_rate": 0.0365,
+   "oracle_quiet_ci95": [
+    0.0199,
+    0.0659
+   ],
+   "positive_images": 288,
+   "planted": 576,
+   "planted_found": 294,
+   "recall": 0.5104,
+   "false_per_positive_image": 0.0868,
+   "precision": 0.8698,
+   "false_total": 44,
+   "false_kinds": {
+    "unplanted": 35,
+    "same_line": 0,
+    "unmapped": 9
+   }
+  },
+  "vote>=2": {
+   "negative_images": 288,
+   "negative_with_any": 13,
+   "fwer": 0.0451,
+   "fwer_ci95": [
+    0.0266,
+    0.0757
+   ],
+   "false_per_negative_image": 0.0451,
+   "oracle_quiet_negative_images": 274,
+   "oracle_quiet_with_any": 8,
+   "oracle_quiet_rate": 0.0292,
+   "oracle_quiet_ci95": [
+    0.0149,
+    0.0565
+   ],
+   "positive_images": 288,
+   "planted": 576,
+   "planted_found": 258,
+   "recall": 0.4479,
+   "false_per_positive_image": 0.066,
+   "precision": 0.8897,
+   "false_total": 32,
+   "false_kinds": {
+    "unplanted": 23,
+    "same_line": 0,
+    "unmapped": 9
+   }
+  },
+  "vote>=3": {
+   "negative_images": 288,
+   "negative_with_any": 1,
+   "fwer": 0.0035,
+   "fwer_ci95": [
+    0.0006,
+    0.0194
+   ],
+   "false_per_negative_image": 0.0035,
+   "oracle_quiet_negative_images": 274,
+   "oracle_quiet_with_any": 0,
+   "oracle_quiet_rate": 0.0,
+   "oracle_quiet_ci95": [
+    0.0,
+    0.0138
+   ],
+   "positive_images": 288,
+   "planted": 576,
+   "planted_found": 104,
+   "recall": 0.1806,
+   "false_per_positive_image": 0.0035,
+   "precision": 0.9811,
+   "false_total": 2,
+   "false_kinds": {
+    "unplanted": 2,
+    "same_line": 0,
+    "unmapped": 0
+   }
+  }
+ },
+ "by_family": {
+  "font": {
+   "oracle-ngram": {
+    "negative_images": 96,
+    "negative_with_any": 0,
+    "fwer": 0.0,
+    "fwer_ci95": [
+     0.0,
+     0.0385
+    ],
+    "false_per_negative_image": 0.0,
+    "oracle_quiet_negative_images": 93,
+    "oracle_quiet_with_any": 0,
+    "oracle_quiet_rate": 0.0,
+    "oracle_quiet_ci95": [
+     0.0,
+     0.0397
+    ],
+    "positive_images": 96,
+    "planted": 192,
+    "planted_found": 38,
+    "recall": 0.1979,
+    "false_per_positive_image": 0.0,
+    "precision": 1.0,
+    "false_total": 0,
+    "false_kinds": {
+     "unplanted": 0,
+     "same_line": 0,
+     "unmapped": 0
+    }
+   },
+   "oracle-lcs": {
+    "negative_images": 96,
+    "negative_with_any": 3,
+    "fwer": 0.0312,
+    "fwer_ci95": [
+     0.0107,
+     0.0879
+    ],
+    "false_per_negative_image": 0.0312,
+    "oracle_quiet_negative_images": 93,
+    "oracle_quiet_with_any": 0,
+    "oracle_quiet_rate": 0.0,
+    "oracle_quiet_ci95": [
+     0.0,
+     0.0397
+    ],
+    "positive_images": 96,
+    "planted": 192,
+    "planted_found": 130,
+    "recall": 0.6771,
+    "false_per_positive_image": 0.0208,
+    "precision": 0.963,
+    "false_total": 5,
+    "false_kinds": {
+     "unplanted": 5,
+     "same_line": 0,
+     "unmapped": 0
+    }
+   },
+   "ngram:baseline": {
+    "negative_images": 96,
+    "negative_with_any": 2,
+    "fwer": 0.0208,
+    "fwer_ci95": [
+     0.0057,
+     0.0728
+    ],
+    "false_per_negative_image": 0.0208,
+    "oracle_quiet_negative_images": 93,
+    "oracle_quiet_with_any": 2,
+    "oracle_quiet_rate": 0.0215,
+    "oracle_quiet_ci95": [
+     0.0059,
+     0.0751
+    ],
+    "positive_images": 96,
+    "planted": 192,
+    "planted_found": 11,
+    "recall": 0.0573,
+    "false_per_positive_image": 0.0417,
+    "precision": 0.6471,
+    "false_total": 6,
+    "false_kinds": {
+     "unplanted": 4,
+     "same_line": 0,
+     "unmapped": 2
+    }
+   },
+   "ngram:v2": {
+    "negative_images": 96,
+    "negative_with_any": 8,
+    "fwer": 0.0833,
+    "fwer_ci95": [
+     0.0428,
+     0.1559
+    ],
+    "false_per_negative_image": 0.1042,
+    "oracle_quiet_negative_images": 93,
+    "oracle_quiet_with_any": 8,
+    "oracle_quiet_rate": 0.086,
+    "oracle_quiet_ci95": [
+     0.0442,
+     0.1607
+    ],
+    "positive_images": 96,
+    "planted": 192,
+    "planted_found": 31,
+    "recall": 0.1615,
+    "false_per_positive_image": 0.1562,
+    "precision": 0.5536,
+    "false_total": 25,
+    "false_kinds": {
+     "unplanted": 7,
+     "same_line": 0,
+     "unmapped": 18
+    }
+   },
+   "ngram:v3": {
+    "negative_images": 96,
+    "negative_with_any": 0,
+    "fwer": 0.0,
+    "fwer_ci95": [
+     0.0,
+     0.0385
+    ],
+    "false_per_negative_image": 0.0,
+    "oracle_quiet_negative_images": 93,
+    "oracle_quiet_with_any": 0,
+    "oracle_quiet_rate": 0.0,
+    "oracle_quiet_ci95": [
+     0.0,
+     0.0397
+    ],
+    "positive_images": 96,
+    "planted": 192,
+    "planted_found": 33,
+    "recall": 0.1719,
+    "false_per_positive_image": 0.0,
+    "precision": 1.0,
+    "false_total": 0,
+    "false_kinds": {
+     "unplanted": 0,
+     "same_line": 0,
+     "unmapped": 0
+    }
+   },
+   "lcs:baseline": {
+    "negative_images": 96,
+    "negative_with_any": 3,
+    "fwer": 0.0312,
+    "fwer_ci95": [
+     0.0107,
+     0.0879
+    ],
+    "false_per_negative_image": 0.0312,
+    "oracle_quiet_negative_images": 93,
+    "oracle_quiet_with_any": 3,
+    "oracle_quiet_rate": 0.0323,
+    "oracle_quiet_ci95": [
+     0.011,
+     0.0906
+    ],
+    "positive_images": 96,
+    "planted": 192,
+    "planted_found": 22,
+    "recall": 0.1146,
+    "false_per_positive_image": 0.0938,
+    "precision": 0.6471,
+    "false_total": 12,
+    "false_kinds": {
+     "unplanted": 11,
+     "same_line": 0,
+     "unmapped": 1
+    }
+   },
+   "lcs:v2": {
+    "negative_images": 96,
+    "negative_with_any": 39,
+    "fwer": 0.4062,
+    "fwer_ci95": [
+     0.3135,
+     0.5063
+    ],
+    "false_per_negative_image": 1.3958,
+    "oracle_quiet_negative_images": 93,
+    "oracle_quiet_with_any": 37,
+    "oracle_quiet_rate": 0.3978,
+    "oracle_quiet_ci95": [
+     0.3043,
+     0.4995
+    ],
+    "positive_images": 96,
+    "planted": 192,
+    "planted_found": 106,
+    "recall": 0.5521,
+    "false_per_positive_image": 1.5417,
+    "precision": 0.2732,
+    "false_total": 282,
+    "false_kinds": {
+     "unplanted": 115,
+     "same_line": 0,
+     "unmapped": 167
+    }
+   },
+   "lcs:v3": {
+    "negative_images": 96,
+    "negative_with_any": 3,
+    "fwer": 0.0312,
+    "fwer_ci95": [
+     0.0107,
+     0.0879
+    ],
+    "false_per_negative_image": 0.0312,
+    "oracle_quiet_negative_images": 93,
+    "oracle_quiet_with_any": 1,
+    "oracle_quiet_rate": 0.0108,
+    "oracle_quiet_ci95": [
+     0.0019,
+     0.0584
+    ],
+    "positive_images": 96,
+    "planted": 192,
+    "planted_found": 90,
+    "recall": 0.4688,
+    "false_per_positive_image": 0.0312,
+    "precision": 0.9375,
+    "false_total": 6,
+    "false_kinds": {
+     "unplanted": 6,
+     "same_line": 0,
+     "unmapped": 0
+    }
+   },
+   "soft@0.2": {
+    "negative_images": 96,
+    "negative_with_any": 3,
+    "fwer": 0.0312,
+    "fwer_ci95": [
+     0.0107,
+     0.0879
+    ],
+    "false_per_negative_image": 0.0312,
+    "oracle_quiet_negative_images": 93,
+    "oracle_quiet_with_any": 1,
+    "oracle_quiet_rate": 0.0108,
+    "oracle_quiet_ci95": [
+     0.0019,
+     0.0584
+    ],
+    "positive_images": 96,
+    "planted": 192,
+    "planted_found": 91,
+    "recall": 0.474,
+    "false_per_positive_image": 0.0312,
+    "precision": 0.9381,
+    "false_total": 6,
+    "false_kinds": {
+     "unplanted": 6,
+     "same_line": 0,
+     "unmapped": 0
+    }
+   },
+   "soft@0.3": {
+    "negative_images": 96,
+    "negative_with_any": 3,
+    "fwer": 0.0312,
+    "fwer_ci95": [
+     0.0107,
+     0.0879
+    ],
+    "false_per_negative_image": 0.0312,
+    "oracle_quiet_negative_images": 93,
+    "oracle_quiet_with_any": 1,
+    "oracle_quiet_rate": 0.0108,
+    "oracle_quiet_ci95": [
+     0.0019,
+     0.0584
+    ],
+    "positive_images": 96,
+    "planted": 192,
+    "planted_found": 91,
+    "recall": 0.474,
+    "false_per_positive_image": 0.0417,
+    "precision": 0.9286,
+    "false_total": 7,
+    "false_kinds": {
+     "unplanted": 7,
+     "same_line": 0,
+     "unmapped": 0
+    }
+   },
+   "soft@0.45": {
+    "negative_images": 96,
+    "negative_with_any": 2,
+    "fwer": 0.0208,
+    "fwer_ci95": [
+     0.0057,
+     0.0728
+    ],
+    "false_per_negative_image": 0.0208,
+    "oracle_quiet_negative_images": 93,
+    "oracle_quiet_with_any": 1,
+    "oracle_quiet_rate": 0.0108,
+    "oracle_quiet_ci95": [
+     0.0019,
+     0.0584
+    ],
+    "positive_images": 96,
+    "planted": 192,
+    "planted_found": 95,
+    "recall": 0.4948,
+    "false_per_positive_image": 0.0312,
+    "precision": 0.95,
+    "false_total": 5,
+    "false_kinds": {
+     "unplanted": 5,
+     "same_line": 0,
+     "unmapped": 0
+    }
+   },
+   "vote>=2": {
+    "negative_images": 96,
+    "negative_with_any": 2,
+    "fwer": 0.0208,
+    "fwer_ci95": [
+     0.0057,
+     0.0728
+    ],
+    "false_per_negative_image": 0.0208,
+    "oracle_quiet_negative_images": 93,
+    "oracle_quiet_with_any": 1,
+    "oracle_quiet_rate": 0.0108,
+    "oracle_quiet_ci95": [
+     0.0019,
+     0.0584
+    ],
+    "positive_images": 96,
+    "planted": 192,
+    "planted_found": 79,
+    "recall": 0.4115,
+    "false_per_positive_image": 0.0208,
+    "precision": 0.9518,
+    "false_total": 4,
+    "false_kinds": {
+     "unplanted": 3,
+     "same_line": 0,
+     "unmapped": 1
+    }
+   },
+   "vote>=3": {
+    "negative_images": 96,
+    "negative_with_any": 0,
+    "fwer": 0.0,
+    "fwer_ci95": [
+     0.0,
+     0.0385
+    ],
+    "false_per_negative_image": 0.0,
+    "oracle_quiet_negative_images": 93,
+    "oracle_quiet_with_any": 0,
+    "oracle_quiet_rate": 0.0,
+    "oracle_quiet_ci95": [
+     0.0,
+     0.0397
+    ],
+    "positive_images": 96,
+    "planted": 192,
+    "planted_found": 20,
+    "recall": 0.1042,
+    "false_per_positive_image": 0.0,
+    "precision": 1.0,
+    "false_total": 0,
+    "false_kinds": {
+     "unplanted": 0,
+     "same_line": 0,
+     "unmapped": 0
+    }
+   }
+  },
+  "stack": {
+   "oracle-ngram": {
+    "negative_images": 96,
+    "negative_with_any": 0,
+    "fwer": 0.0,
+    "fwer_ci95": [
+     0.0,
+     0.0385
+    ],
+    "false_per_negative_image": 0.0,
+    "oracle_quiet_negative_images": 89,
+    "oracle_quiet_with_any": 0,
+    "oracle_quiet_rate": 0.0,
+    "oracle_quiet_ci95": [
+     0.0,
+     0.0414
+    ],
+    "positive_images": 96,
+    "planted": 192,
+    "planted_found": 68,
+    "recall": 0.3542,
+    "false_per_positive_image": 0.0,
+    "precision": 1.0,
+    "false_total": 0,
+    "false_kinds": {
+     "unplanted": 0,
+     "same_line": 0,
+     "unmapped": 0
+    }
+   },
+   "oracle-lcs": {
+    "negative_images": 96,
+    "negative_with_any": 7,
+    "fwer": 0.0729,
+    "fwer_ci95": [
+     0.0358,
+     0.1429
+    ],
+    "false_per_negative_image": 0.0729,
+    "oracle_quiet_negative_images": 89,
+    "oracle_quiet_with_any": 0,
+    "oracle_quiet_rate": 0.0,
+    "oracle_quiet_ci95": [
+     0.0,
+     0.0414
+    ],
+    "positive_images": 96,
+    "planted": 192,
+    "planted_found": 139,
+    "recall": 0.724,
+    "false_per_positive_image": 0.0729,
+    "precision": 0.9085,
+    "false_total": 14,
+    "false_kinds": {
+     "unplanted": 14,
+     "same_line": 0,
+     "unmapped": 0
+    }
+   },
+   "ngram:baseline": {
+    "negative_images": 96,
+    "negative_with_any": 0,
+    "fwer": 0.0,
+    "fwer_ci95": [
+     0.0,
+     0.0385
+    ],
+    "false_per_negative_image": 0.0,
+    "oracle_quiet_negative_images": 89,
+    "oracle_quiet_with_any": 0,
+    "oracle_quiet_rate": 0.0,
+    "oracle_quiet_ci95": [
+     0.0,
+     0.0414
+    ],
+    "positive_images": 96,
+    "planted": 192,
+    "planted_found": 25,
+    "recall": 0.1302,
+    "false_per_positive_image": 0.0104,
+    "precision": 0.9615,
+    "false_total": 1,
+    "false_kinds": {
+     "unplanted": 0,
+     "same_line": 0,
+     "unmapped": 1
+    }
+   },
+   "ngram:v2": {
+    "negative_images": 96,
+    "negative_with_any": 7,
+    "fwer": 0.0729,
+    "fwer_ci95": [
+     0.0358,
+     0.1429
+    ],
+    "false_per_negative_image": 0.1771,
+    "oracle_quiet_negative_images": 89,
+    "oracle_quiet_with_any": 6,
+    "oracle_quiet_rate": 0.0674,
+    "oracle_quiet_ci95": [
+     0.0313,
+     0.1394
+    ],
+    "positive_images": 96,
+    "planted": 192,
+    "planted_found": 48,
+    "recall": 0.25,
+    "false_per_positive_image": 0.1146,
+    "precision": 0.6316,
+    "false_total": 28,
+    "false_kinds": {
+     "unplanted": 11,
+     "same_line": 0,
+     "unmapped": 17
+    }
+   },
+   "ngram:v3": {
+    "negative_images": 96,
+    "negative_with_any": 0,
+    "fwer": 0.0,
+    "fwer_ci95": [
+     0.0,
+     0.0385
+    ],
+    "false_per_negative_image": 0.0,
+    "oracle_quiet_negative_images": 89,
+    "oracle_quiet_with_any": 0,
+    "oracle_quiet_rate": 0.0,
+    "oracle_quiet_ci95": [
+     0.0,
+     0.0414
+    ],
+    "positive_images": 96,
+    "planted": 192,
+    "planted_found": 47,
+    "recall": 0.2448,
+    "false_per_positive_image": 0.0208,
+    "precision": 0.9592,
+    "false_total": 2,
+    "false_kinds": {
+     "unplanted": 1,
+     "same_line": 0,
+     "unmapped": 1
+    }
+   },
+   "lcs:baseline": {
+    "negative_images": 96,
+    "negative_with_any": 1,
+    "fwer": 0.0104,
+    "fwer_ci95": [
+     0.0018,
+     0.0567
+    ],
+    "false_per_negative_image": 0.0104,
+    "oracle_quiet_negative_images": 89,
+    "oracle_quiet_with_any": 0,
+    "oracle_quiet_rate": 0.0,
+    "oracle_quiet_ci95": [
+     0.0,
+     0.0414
+    ],
+    "positive_images": 96,
+    "planted": 192,
+    "planted_found": 52,
+    "recall": 0.2708,
+    "false_per_positive_image": 0.0938,
+    "precision": 0.8387,
+    "false_total": 10,
+    "false_kinds": {
+     "unplanted": 9,
+     "same_line": 0,
+     "unmapped": 1
+    }
+   },
+   "lcs:v2": {
+    "negative_images": 96,
+    "negative_with_any": 54,
+    "fwer": 0.5625,
+    "fwer_ci95": [
+     0.4628,
+     0.6574
+    ],
+    "false_per_negative_image": 2.0312,
+    "oracle_quiet_negative_images": 89,
+    "oracle_quiet_with_any": 48,
+    "oracle_quiet_rate": 0.5393,
+    "oracle_quiet_ci95": [
+     0.4363,
+     0.6391
+    ],
+    "positive_images": 96,
+    "planted": 192,
+    "planted_found": 111,
+    "recall": 0.5781,
+    "false_per_positive_image": 1.25,
+    "precision": 0.2606,
+    "false_total": 315,
+    "false_kinds": {
+     "unplanted": 209,
+     "same_line": 2,
+     "unmapped": 104
+    }
+   },
+   "lcs:v3": {
+    "negative_images": 96,
+    "negative_with_any": 10,
+    "fwer": 0.1042,
+    "fwer_ci95": [
+     0.0576,
+     0.1812
+    ],
+    "false_per_negative_image": 0.1146,
+    "oracle_quiet_negative_images": 89,
+    "oracle_quiet_with_any": 6,
+    "oracle_quiet_rate": 0.0674,
+    "oracle_quiet_ci95": [
+     0.0313,
+     0.1394
+    ],
+    "positive_images": 96,
+    "planted": 192,
+    "planted_found": 89,
+    "recall": 0.4635,
+    "false_per_positive_image": 0.1354,
+    "precision": 0.7876,
+    "false_total": 24,
+    "false_kinds": {
+     "unplanted": 20,
+     "same_line": 0,
+     "unmapped": 4
+    }
+   },
+   "soft@0.2": {
+    "negative_images": 96,
+    "negative_with_any": 8,
+    "fwer": 0.0833,
+    "fwer_ci95": [
+     0.0428,
+     0.1559
+    ],
+    "false_per_negative_image": 0.0938,
+    "oracle_quiet_negative_images": 89,
+    "oracle_quiet_with_any": 4,
+    "oracle_quiet_rate": 0.0449,
+    "oracle_quiet_ci95": [
+     0.0176,
+     0.1099
+    ],
+    "positive_images": 96,
+    "planted": 192,
+    "planted_found": 85,
+    "recall": 0.4427,
+    "false_per_positive_image": 0.125,
+    "precision": 0.8019,
+    "false_total": 21,
+    "false_kinds": {
+     "unplanted": 18,
+     "same_line": 0,
+     "unmapped": 3
+    }
+   },
+   "soft@0.3": {
+    "negative_images": 96,
+    "negative_with_any": 7,
+    "fwer": 0.0729,
+    "fwer_ci95": [
+     0.0358,
+     0.1429
+    ],
+    "false_per_negative_image": 0.0833,
+    "oracle_quiet_negative_images": 89,
+    "oracle_quiet_with_any": 3,
+    "oracle_quiet_rate": 0.0337,
+    "oracle_quiet_ci95": [
+     0.0115,
+     0.0945
+    ],
+    "positive_images": 96,
+    "planted": 192,
+    "planted_found": 90,
+    "recall": 0.4688,
+    "false_per_positive_image": 0.1354,
+    "precision": 0.8108,
+    "false_total": 21,
+    "false_kinds": {
+     "unplanted": 18,
+     "same_line": 0,
+     "unmapped": 3
+    }
+   },
+   "soft@0.45": {
+    "negative_images": 96,
+    "negative_with_any": 9,
+    "fwer": 0.0938,
+    "fwer_ci95": [
+     0.0501,
+     0.1687
+    ],
+    "false_per_negative_image": 0.1042,
+    "oracle_quiet_negative_images": 89,
+    "oracle_quiet_with_any": 5,
+    "oracle_quiet_rate": 0.0562,
+    "oracle_quiet_ci95": [
+     0.0242,
+     0.1249
+    ],
+    "positive_images": 96,
+    "planted": 192,
+    "planted_found": 89,
+    "recall": 0.4635,
+    "false_per_positive_image": 0.1354,
+    "precision": 0.7946,
+    "false_total": 23,
+    "false_kinds": {
+     "unplanted": 20,
+     "same_line": 0,
+     "unmapped": 3
+    }
+   },
+   "vote>=2": {
+    "negative_images": 96,
+    "negative_with_any": 4,
+    "fwer": 0.0417,
+    "fwer_ci95": [
+     0.0163,
+     0.1023
+    ],
+    "false_per_negative_image": 0.0417,
+    "oracle_quiet_negative_images": 89,
+    "oracle_quiet_with_any": 2,
+    "oracle_quiet_rate": 0.0225,
+    "oracle_quiet_ci95": [
+     0.0062,
+     0.0783
+    ],
+    "positive_images": 96,
+    "planted": 192,
+    "planted_found": 91,
+    "recall": 0.474,
+    "false_per_positive_image": 0.0938,
+    "precision": 0.875,
+    "false_total": 13,
+    "false_kinds": {
+     "unplanted": 9,
+     "same_line": 0,
+     "unmapped": 4
+    }
+   },
+   "vote>=3": {
+    "negative_images": 96,
+    "negative_with_any": 0,
+    "fwer": 0.0,
+    "fwer_ci95": [
+     0.0,
+     0.0385
+    ],
+    "false_per_negative_image": 0.0,
+    "oracle_quiet_negative_images": 89,
+    "oracle_quiet_with_any": 0,
+    "oracle_quiet_rate": 0.0,
+    "oracle_quiet_ci95": [
+     0.0,
+     0.0414
+    ],
+    "positive_images": 96,
+    "planted": 192,
+    "planted_found": 34,
+    "recall": 0.1771,
+    "false_per_positive_image": 0.0104,
+    "precision": 0.9714,
+    "false_total": 1,
+    "false_kinds": {
+     "unplanted": 1,
+     "same_line": 0,
+     "unmapped": 0
+    }
+   }
+  },
+  "stroke": {
+   "oracle-ngram": {
+    "negative_images": 96,
+    "negative_with_any": 0,
+    "fwer": 0.0,
+    "fwer_ci95": [
+     0.0,
+     0.0385
+    ],
+    "false_per_negative_image": 0.0,
+    "oracle_quiet_negative_images": 92,
+    "oracle_quiet_with_any": 0,
+    "oracle_quiet_rate": 0.0,
+    "oracle_quiet_ci95": [
+     0.0,
+     0.0401
+    ],
+    "positive_images": 96,
+    "planted": 192,
+    "planted_found": 77,
+    "recall": 0.401,
+    "false_per_positive_image": 0.0,
+    "precision": 1.0,
+    "false_total": 0,
+    "false_kinds": {
+     "unplanted": 0,
+     "same_line": 0,
+     "unmapped": 0
+    }
+   },
+   "oracle-lcs": {
+    "negative_images": 96,
+    "negative_with_any": 4,
+    "fwer": 0.0417,
+    "fwer_ci95": [
+     0.0163,
+     0.1023
+    ],
+    "false_per_negative_image": 0.0417,
+    "oracle_quiet_negative_images": 92,
+    "oracle_quiet_with_any": 0,
+    "oracle_quiet_rate": 0.0,
+    "oracle_quiet_ci95": [
+     0.0,
+     0.0401
+    ],
+    "positive_images": 96,
+    "planted": 192,
+    "planted_found": 155,
+    "recall": 0.8073,
+    "false_per_positive_image": 0.0208,
+    "precision": 0.9627,
+    "false_total": 6,
+    "false_kinds": {
+     "unplanted": 6,
+     "same_line": 0,
+     "unmapped": 0
+    }
+   },
+   "ngram:baseline": {
+    "negative_images": 96,
+    "negative_with_any": 1,
+    "fwer": 0.0104,
+    "fwer_ci95": [
+     0.0018,
+     0.0567
+    ],
+    "false_per_negative_image": 0.0312,
+    "oracle_quiet_negative_images": 92,
+    "oracle_quiet_with_any": 1,
+    "oracle_quiet_rate": 0.0109,
+    "oracle_quiet_ci95": [
+     0.0019,
+     0.059
+    ],
+    "positive_images": 96,
+    "planted": 192,
+    "planted_found": 35,
+    "recall": 0.1823,
+    "false_per_positive_image": 0.0104,
+    "precision": 0.8974,
+    "false_total": 4,
+    "false_kinds": {
+     "unplanted": 2,
+     "same_line": 0,
+     "unmapped": 2
+    }
+   },
+   "ngram:v2": {
+    "negative_images": 96,
+    "negative_with_any": 10,
+    "fwer": 0.1042,
+    "fwer_ci95": [
+     0.0576,
+     0.1812
+    ],
+    "false_per_negative_image": 0.1562,
+    "oracle_quiet_negative_images": 92,
+    "oracle_quiet_with_any": 9,
+    "oracle_quiet_rate": 0.0978,
+    "oracle_quiet_ci95": [
+     0.0523,
+     0.1756
+    ],
+    "positive_images": 96,
+    "planted": 192,
+    "planted_found": 43,
+    "recall": 0.224,
+    "false_per_positive_image": 0.125,
+    "precision": 0.6143,
+    "false_total": 27,
+    "false_kinds": {
+     "unplanted": 13,
+     "same_line": 0,
+     "unmapped": 14
+    }
+   },
+   "ngram:v3": {
+    "negative_images": 96,
+    "negative_with_any": 1,
+    "fwer": 0.0104,
+    "fwer_ci95": [
+     0.0018,
+     0.0567
+    ],
+    "false_per_negative_image": 0.0104,
+    "oracle_quiet_negative_images": 92,
+    "oracle_quiet_with_any": 1,
+    "oracle_quiet_rate": 0.0109,
+    "oracle_quiet_ci95": [
+     0.0019,
+     0.059
+    ],
+    "positive_images": 96,
+    "planted": 192,
+    "planted_found": 56,
+    "recall": 0.2917,
+    "false_per_positive_image": 0.0312,
+    "precision": 0.9333,
+    "false_total": 4,
+    "false_kinds": {
+     "unplanted": 1,
+     "same_line": 0,
+     "unmapped": 3
+    }
+   },
+   "lcs:baseline": {
+    "negative_images": 96,
+    "negative_with_any": 10,
+    "fwer": 0.1042,
+    "fwer_ci95": [
+     0.0576,
+     0.1812
+    ],
+    "false_per_negative_image": 0.125,
+    "oracle_quiet_negative_images": 92,
+    "oracle_quiet_with_any": 7,
+    "oracle_quiet_rate": 0.0761,
+    "oracle_quiet_ci95": [
+     0.0373,
+     0.1488
+    ],
+    "positive_images": 96,
+    "planted": 192,
+    "planted_found": 56,
+    "recall": 0.2917,
+    "false_per_positive_image": 0.1771,
+    "precision": 0.6588,
+    "false_total": 29,
+    "false_kinds": {
+     "unplanted": 23,
+     "same_line": 0,
+     "unmapped": 6
+    }
+   },
+   "lcs:v2": {
+    "negative_images": 96,
+    "negative_with_any": 46,
+    "fwer": 0.4792,
+    "fwer_ci95": [
+     0.382,
+     0.578
+    ],
+    "false_per_negative_image": 1.4896,
+    "oracle_quiet_negative_images": 92,
+    "oracle_quiet_with_any": 43,
+    "oracle_quiet_rate": 0.4674,
+    "oracle_quiet_ci95": [
+     0.3688,
+     0.5686
+    ],
+    "positive_images": 96,
+    "planted": 192,
+    "planted_found": 110,
+    "recall": 0.5729,
+    "false_per_positive_image": 1.75,
+    "precision": 0.2613,
+    "false_total": 311,
+    "false_kinds": {
+     "unplanted": 189,
+     "same_line": 3,
+     "unmapped": 119
+    }
+   },
+   "lcs:v3": {
+    "negative_images": 96,
+    "negative_with_any": 7,
+    "fwer": 0.0729,
+    "fwer_ci95": [
+     0.0358,
+     0.1429
+    ],
+    "false_per_negative_image": 0.0729,
+    "oracle_quiet_negative_images": 92,
+    "oracle_quiet_with_any": 5,
+    "oracle_quiet_rate": 0.0543,
+    "oracle_quiet_ci95": [
+     0.0234,
+     0.121
+    ],
+    "positive_images": 96,
+    "planted": 192,
+    "planted_found": 109,
+    "recall": 0.5677,
+    "false_per_positive_image": 0.0729,
+    "precision": 0.8862,
+    "false_total": 14,
+    "false_kinds": {
+     "unplanted": 8,
+     "same_line": 0,
+     "unmapped": 6
+    }
+   },
+   "soft@0.2": {
+    "negative_images": 96,
+    "negative_with_any": 5,
+    "fwer": 0.0521,
+    "fwer_ci95": [
+     0.0224,
+     0.1162
+    ],
+    "false_per_negative_image": 0.0625,
+    "oracle_quiet_negative_images": 92,
+    "oracle_quiet_with_any": 4,
+    "oracle_quiet_rate": 0.0435,
+    "oracle_quiet_ci95": [
+     0.017,
+     0.1065
+    ],
+    "positive_images": 96,
+    "planted": 192,
+    "planted_found": 107,
+    "recall": 0.5573,
+    "false_per_positive_image": 0.0625,
+    "precision": 0.8992,
+    "false_total": 12,
+    "false_kinds": {
+     "unplanted": 6,
+     "same_line": 0,
+     "unmapped": 6
+    }
+   },
+   "soft@0.3": {
+    "negative_images": 96,
+    "negative_with_any": 5,
+    "fwer": 0.0521,
+    "fwer_ci95": [
+     0.0224,
+     0.1162
+    ],
+    "false_per_negative_image": 0.0625,
+    "oracle_quiet_negative_images": 92,
+    "oracle_quiet_with_any": 4,
+    "oracle_quiet_rate": 0.0435,
+    "oracle_quiet_ci95": [
+     0.017,
+     0.1065
+    ],
+    "positive_images": 96,
+    "planted": 192,
+    "planted_found": 108,
+    "recall": 0.5625,
+    "false_per_positive_image": 0.0833,
+    "precision": 0.8852,
+    "false_total": 14,
+    "false_kinds": {
+     "unplanted": 8,
+     "same_line": 0,
+     "unmapped": 6
+    }
+   },
+   "soft@0.45": {
+    "negative_images": 96,
+    "negative_with_any": 6,
+    "fwer": 0.0625,
+    "fwer_ci95": [
+     0.029,
+     0.1297
+    ],
+    "false_per_negative_image": 0.0729,
+    "oracle_quiet_negative_images": 92,
+    "oracle_quiet_with_any": 4,
+    "oracle_quiet_rate": 0.0435,
+    "oracle_quiet_ci95": [
+     0.017,
+     0.1065
+    ],
+    "positive_images": 96,
+    "planted": 192,
+    "planted_found": 110,
+    "recall": 0.5729,
+    "false_per_positive_image": 0.0938,
+    "precision": 0.873,
+    "false_total": 16,
+    "false_kinds": {
+     "unplanted": 10,
+     "same_line": 0,
+     "unmapped": 6
+    }
+   },
+   "vote>=2": {
+    "negative_images": 96,
+    "negative_with_any": 7,
+    "fwer": 0.0729,
+    "fwer_ci95": [
+     0.0358,
+     0.1429
+    ],
+    "false_per_negative_image": 0.0729,
+    "oracle_quiet_negative_images": 92,
+    "oracle_quiet_with_any": 5,
+    "oracle_quiet_rate": 0.0543,
+    "oracle_quiet_ci95": [
+     0.0234,
+     0.121
+    ],
+    "positive_images": 96,
+    "planted": 192,
+    "planted_found": 88,
+    "recall": 0.4583,
+    "false_per_positive_image": 0.0833,
+    "precision": 0.8544,
+    "false_total": 15,
+    "false_kinds": {
+     "unplanted": 11,
+     "same_line": 0,
+     "unmapped": 4
+    }
+   },
+   "vote>=3": {
+    "negative_images": 96,
+    "negative_with_any": 1,
+    "fwer": 0.0104,
+    "fwer_ci95": [
+     0.0018,
+     0.0567
+    ],
+    "false_per_negative_image": 0.0104,
+    "oracle_quiet_negative_images": 92,
+    "oracle_quiet_with_any": 0,
+    "oracle_quiet_rate": 0.0,
+    "oracle_quiet_ci95": [
+     0.0,
+     0.0401
+    ],
+    "positive_images": 96,
+    "planted": 192,
+    "planted_found": 50,
+    "recall": 0.2604,
+    "false_per_positive_image": 0.0,
+    "precision": 0.9804,
+    "false_total": 1,
+    "false_kinds": {
+     "unplanted": 1,
+     "same_line": 0,
+     "unmapped": 0
+    }
+   }
+  }
+ },
+ "by_condition": {
+  "diacritic": {
+   "oracle-ngram": {
+    "negative_images": 72,
+    "negative_with_any": 0,
+    "fwer": 0.0,
+    "fwer_ci95": [
+     0.0,
+     0.0507
+    ],
+    "false_per_negative_image": 0.0,
+    "oracle_quiet_negative_images": 65,
+    "oracle_quiet_with_any": 0,
+    "oracle_quiet_rate": 0.0,
+    "oracle_quiet_ci95": [
+     0.0,
+     0.0558
+    ],
+    "positive_images": 72,
+    "planted": 144,
+    "planted_found": 45,
+    "recall": 0.3125,
+    "false_per_positive_image": 0.0,
+    "precision": 1.0,
+    "false_total": 0,
+    "false_kinds": {
+     "unplanted": 0,
+     "same_line": 0,
+     "unmapped": 0
+    }
+   },
+   "oracle-lcs": {
+    "negative_images": 72,
+    "negative_with_any": 7,
+    "fwer": 0.0972,
+    "fwer_ci95": [
+     0.0479,
+     0.1874
+    ],
+    "false_per_negative_image": 0.0972,
+    "oracle_quiet_negative_images": 65,
+    "oracle_quiet_with_any": 0,
+    "oracle_quiet_rate": 0.0,
+    "oracle_quiet_ci95": [
+     0.0,
+     0.0558
+    ],
+    "positive_images": 72,
+    "planted": 144,
+    "planted_found": 106,
+    "recall": 0.7361,
+    "false_per_positive_image": 0.0694,
+    "precision": 0.8983,
+    "false_total": 12,
+    "false_kinds": {
+     "unplanted": 12,
+     "same_line": 0,
+     "unmapped": 0
+    }
+   },
+   "ngram:baseline": {
+    "negative_images": 72,
+    "negative_with_any": 0,
+    "fwer": 0.0,
+    "fwer_ci95": [
+     0.0,
+     0.0507
+    ],
+    "false_per_negative_image": 0.0,
+    "oracle_quiet_negative_images": 65,
+    "oracle_quiet_with_any": 0,
+    "oracle_quiet_rate": 0.0,
+    "oracle_quiet_ci95": [
+     0.0,
+     0.0558
+    ],
+    "positive_images": 72,
+    "planted": 144,
+    "planted_found": 6,
+    "recall": 0.0417,
+    "false_per_positive_image": 0.0278,
+    "precision": 0.75,
+    "false_total": 2,
+    "false_kinds": {
+     "unplanted": 1,
+     "same_line": 0,
+     "unmapped": 1
+    }
+   },
+   "ngram:v2": {
+    "negative_images": 72,
+    "negative_with_any": 18,
+    "fwer": 0.25,
+    "fwer_ci95": [
+     0.1644,
+     0.3609
+    ],
+    "false_per_negative_image": 0.3889,
+    "oracle_quiet_negative_images": 65,
+    "oracle_quiet_with_any": 16,
+    "oracle_quiet_rate": 0.2462,
+    "oracle_quiet_ci95": [
+     0.1576,
+     0.3631
+    ],
+    "positive_images": 72,
+    "planted": 144,
+    "planted_found": 26,
+    "recall": 0.1806,
+    "false_per_positive_image": 0.2083,
+    "precision": 0.3768,
+    "false_total": 43,
+    "false_kinds": {
+     "unplanted": 12,
+     "same_line": 0,
+     "unmapped": 31
+    }
+   },
+   "ngram:v3": {
+    "negative_images": 72,
+    "negative_with_any": 0,
+    "fwer": 0.0,
+    "fwer_ci95": [
+     0.0,
+     0.0507
+    ],
+    "false_per_negative_image": 0.0,
+    "oracle_quiet_negative_images": 65,
+    "oracle_quiet_with_any": 0,
+    "oracle_quiet_rate": 0.0,
+    "oracle_quiet_ci95": [
+     0.0,
+     0.0558
+    ],
+    "positive_images": 72,
+    "planted": 144,
+    "planted_found": 40,
+    "recall": 0.2778,
+    "false_per_positive_image": 0.0139,
+    "precision": 0.9756,
+    "false_total": 1,
+    "false_kinds": {
+     "unplanted": 0,
+     "same_line": 0,
+     "unmapped": 1
+    }
+   },
+   "lcs:baseline": {
+    "negative_images": 72,
+    "negative_with_any": 5,
+    "fwer": 0.0694,
+    "fwer_ci95": [
+     0.03,
+     0.1525
+    ],
+    "false_per_negative_image": 0.0694,
+    "oracle_quiet_negative_images": 65,
+    "oracle_quiet_with_any": 3,
+    "oracle_quiet_rate": 0.0462,
+    "oracle_quiet_ci95": [
+     0.0158,
+     0.1271
+    ],
+    "positive_images": 72,
+    "planted": 144,
+    "planted_found": 9,
+    "recall": 0.0625,
+    "false_per_positive_image": 0.2083,
+    "precision": 0.3103,
+    "false_total": 20,
+    "false_kinds": {
+     "unplanted": 15,
+     "same_line": 0,
+     "unmapped": 5
+    }
+   },
+   "lcs:v2": {
+    "negative_images": 72,
+    "negative_with_any": 64,
+    "fwer": 0.8889,
+    "fwer_ci95": [
+     0.7958,
+     0.9426
+    ],
+    "false_per_negative_image": 3.3472,
+    "oracle_quiet_negative_images": 65,
+    "oracle_quiet_with_any": 58,
+    "oracle_quiet_rate": 0.8923,
+    "oracle_quiet_ci95": [
+     0.794,
+     0.9468
+    ],
+    "positive_images": 72,
+    "planted": 144,
+    "planted_found": 73,
+    "recall": 0.5069,
+    "false_per_positive_image": 2.7778,
+    "precision": 0.142,
+    "false_total": 441,
+    "false_kinds": {
+     "unplanted": 173,
+     "same_line": 2,
+     "unmapped": 266
+    }
+   },
+   "lcs:v3": {
+    "negative_images": 72,
+    "negative_with_any": 5,
+    "fwer": 0.0694,
+    "fwer_ci95": [
+     0.03,
+     0.1525
+    ],
+    "false_per_negative_image": 0.0833,
+    "oracle_quiet_negative_images": 65,
+    "oracle_quiet_with_any": 1,
+    "oracle_quiet_rate": 0.0154,
+    "oracle_quiet_ci95": [
+     0.0027,
+     0.0821
+    ],
+    "positive_images": 72,
+    "planted": 144,
+    "planted_found": 79,
+    "recall": 0.5486,
+    "false_per_positive_image": 0.0972,
+    "precision": 0.8587,
+    "false_total": 13,
+    "false_kinds": {
+     "unplanted": 10,
+     "same_line": 0,
+     "unmapped": 3
+    }
+   },
+   "soft@0.2": {
+    "negative_images": 72,
+    "negative_with_any": 4,
+    "fwer": 0.0556,
+    "fwer_ci95": [
+     0.0218,
+     0.1343
+    ],
+    "false_per_negative_image": 0.0694,
+    "oracle_quiet_negative_images": 65,
+    "oracle_quiet_with_any": 0,
+    "oracle_quiet_rate": 0.0,
+    "oracle_quiet_ci95": [
+     0.0,
+     0.0558
+    ],
+    "positive_images": 72,
+    "planted": 144,
+    "planted_found": 78,
+    "recall": 0.5417,
+    "false_per_positive_image": 0.1111,
+    "precision": 0.8571,
+    "false_total": 13,
+    "false_kinds": {
+     "unplanted": 11,
+     "same_line": 0,
+     "unmapped": 2
+    }
+   },
+   "soft@0.3": {
+    "negative_images": 72,
+    "negative_with_any": 4,
+    "fwer": 0.0556,
+    "fwer_ci95": [
+     0.0218,
+     0.1343
+    ],
+    "false_per_negative_image": 0.0694,
+    "oracle_quiet_negative_images": 65,
+    "oracle_quiet_with_any": 0,
+    "oracle_quiet_rate": 0.0,
+    "oracle_quiet_ci95": [
+     0.0,
+     0.0558
+    ],
+    "positive_images": 72,
+    "planted": 144,
+    "planted_found": 80,
+    "recall": 0.5556,
+    "false_per_positive_image": 0.1111,
+    "precision": 0.8602,
+    "false_total": 13,
+    "false_kinds": {
+     "unplanted": 11,
+     "same_line": 0,
+     "unmapped": 2
+    }
+   },
+   "soft@0.45": {
+    "negative_images": 72,
+    "negative_with_any": 5,
+    "fwer": 0.0694,
+    "fwer_ci95": [
+     0.03,
+     0.1525
+    ],
+    "false_per_negative_image": 0.0833,
+    "oracle_quiet_negative_images": 65,
+    "oracle_quiet_with_any": 1,
+    "oracle_quiet_rate": 0.0154,
+    "oracle_quiet_ci95": [
+     0.0027,
+     0.0821
+    ],
+    "positive_images": 72,
+    "planted": 144,
+    "planted_found": 82,
+    "recall": 0.5694,
+    "false_per_positive_image": 0.0972,
+    "precision": 0.8632,
+    "false_total": 13,
+    "false_kinds": {
+     "unplanted": 11,
+     "same_line": 0,
+     "unmapped": 2
+    }
+   },
+   "vote>=2": {
+    "negative_images": 72,
+    "negative_with_any": 2,
+    "fwer": 0.0278,
+    "fwer_ci95": [
+     0.0077,
+     0.0957
+    ],
+    "false_per_negative_image": 0.0278,
+    "oracle_quiet_negative_images": 65,
+    "oracle_quiet_with_any": 0,
+    "oracle_quiet_rate": 0.0,
+    "oracle_quiet_ci95": [
+     0.0,
+     0.0558
+    ],
+    "positive_images": 72,
+    "planted": 144,
+    "planted_found": 55,
+    "recall": 0.3819,
+    "false_per_positive_image": 0.0694,
+    "precision": 0.8871,
+    "false_total": 7,
+    "false_kinds": {
+     "unplanted": 4,
+     "same_line": 0,
+     "unmapped": 3
+    }
+   },
+   "vote>=3": {
+    "negative_images": 72,
+    "negative_with_any": 0,
+    "fwer": 0.0,
+    "fwer_ci95": [
+     0.0,
+     0.0507
+    ],
+    "false_per_negative_image": 0.0,
+    "oracle_quiet_negative_images": 65,
+    "oracle_quiet_with_any": 0,
+    "oracle_quiet_rate": 0.0,
+    "oracle_quiet_ci95": [
+     0.0,
+     0.0558
+    ],
+    "positive_images": 72,
+    "planted": 144,
+    "planted_found": 8,
+    "recall": 0.0556,
+    "false_per_positive_image": 0.0,
+    "precision": 1.0,
+    "false_total": 0,
+    "false_kinds": {
+     "unplanted": 0,
+     "same_line": 0,
+     "unmapped": 0
+    }
+   }
+  },
+  "mixed": {
+   "oracle-ngram": {
+    "negative_images": 72,
+    "negative_with_any": 0,
+    "fwer": 0.0,
+    "fwer_ci95": [
+     0.0,
+     0.0507
+    ],
+    "false_per_negative_image": 0.0,
+    "oracle_quiet_negative_images": 69,
+    "oracle_quiet_with_any": 0,
+    "oracle_quiet_rate": 0.0,
+    "oracle_quiet_ci95": [
+     0.0,
+     0.0527
+    ],
+    "positive_images": 72,
+    "planted": 144,
+    "planted_found": 38,
+    "recall": 0.2639,
+    "false_per_positive_image": 0.0,
+    "precision": 1.0,
+    "false_total": 0,
+    "false_kinds": {
+     "unplanted": 0,
+     "same_line": 0,
+     "unmapped": 0
+    }
+   },
+   "oracle-lcs": {
+    "negative_images": 72,
+    "negative_with_any": 3,
+    "fwer": 0.0417,
+    "fwer_ci95": [
+     0.0143,
+     0.1155
+    ],
+    "false_per_negative_image": 0.0417,
+    "oracle_quiet_negative_images": 69,
+    "oracle_quiet_with_any": 0,
+    "oracle_quiet_rate": 0.0,
+    "oracle_quiet_ci95": [
+     0.0,
+     0.0527
+    ],
+    "positive_images": 72,
+    "planted": 144,
+    "planted_found": 104,
+    "recall": 0.7222,
+    "false_per_positive_image": 0.0556,
+    "precision": 0.9369,
+    "false_total": 7,
+    "false_kinds": {
+     "unplanted": 7,
+     "same_line": 0,
+     "unmapped": 0
+    }
+   },
+   "ngram:baseline": {
+    "negative_images": 72,
+    "negative_with_any": 2,
+    "fwer": 0.0278,
+    "fwer_ci95": [
+     0.0077,
+     0.0957
+    ],
+    "false_per_negative_image": 0.0556,
+    "oracle_quiet_negative_images": 69,
+    "oracle_quiet_with_any": 2,
+    "oracle_quiet_rate": 0.029,
+    "oracle_quiet_ci95": [
+     0.008,
+     0.0997
+    ],
+    "positive_images": 72,
+    "planted": 144,
+    "planted_found": 17,
+    "recall": 0.1181,
+    "false_per_positive_image": 0.0278,
+    "precision": 0.7391,
+    "false_total": 6,
+    "false_kinds": {
+     "unplanted": 3,
+     "same_line": 0,
+     "unmapped": 3
+    }
+   },
+   "ngram:v2": {
+    "negative_images": 72,
+    "negative_with_any": 5,
+    "fwer": 0.0694,
+    "fwer_ci95": [
+     0.03,
+     0.1525
+    ],
+    "false_per_negative_image": 0.1667,
+    "oracle_quiet_negative_images": 69,
+    "oracle_quiet_with_any": 5,
+    "oracle_quiet_rate": 0.0725,
+    "oracle_quiet_ci95": [
+     0.0313,
+     0.1587
+    ],
+    "positive_images": 72,
+    "planted": 144,
+    "planted_found": 22,
+    "recall": 0.1528,
+    "false_per_positive_image": 0.2083,
+    "precision": 0.449,
+    "false_total": 27,
+    "false_kinds": {
+     "unplanted": 13,
+     "same_line": 0,
+     "unmapped": 14
+    }
+   },
+   "ngram:v3": {
+    "negative_images": 72,
+    "negative_with_any": 0,
+    "fwer": 0.0,
+    "fwer_ci95": [
+     0.0,
+     0.0507
+    ],
+    "false_per_negative_image": 0.0,
+    "oracle_quiet_negative_images": 69,
+    "oracle_quiet_with_any": 0,
+    "oracle_quiet_rate": 0.0,
+    "oracle_quiet_ci95": [
+     0.0,
+     0.0527
+    ],
+    "positive_images": 72,
+    "planted": 144,
+    "planted_found": 34,
+    "recall": 0.2361,
+    "false_per_positive_image": 0.0,
+    "precision": 1.0,
+    "false_total": 0,
+    "false_kinds": {
+     "unplanted": 0,
+     "same_line": 0,
+     "unmapped": 0
+    }
+   },
+   "lcs:baseline": {
+    "negative_images": 72,
+    "negative_with_any": 5,
+    "fwer": 0.0694,
+    "fwer_ci95": [
+     0.03,
+     0.1525
+    ],
+    "false_per_negative_image": 0.0972,
+    "oracle_quiet_negative_images": 69,
+    "oracle_quiet_with_any": 5,
+    "oracle_quiet_rate": 0.0725,
+    "oracle_quiet_ci95": [
+     0.0313,
+     0.1587
+    ],
+    "positive_images": 72,
+    "planted": 144,
+    "planted_found": 26,
+    "recall": 0.1806,
+    "false_per_positive_image": 0.1111,
+    "precision": 0.6341,
+    "false_total": 15,
+    "false_kinds": {
+     "unplanted": 12,
+     "same_line": 0,
+     "unmapped": 3
+    }
+   },
+   "lcs:v2": {
+    "negative_images": 72,
+    "negative_with_any": 47,
+    "fwer": 0.6528,
+    "fwer_ci95": [
+     0.5376,
+     0.7525
+    ],
+    "false_per_negative_image": 2.5556,
+    "oracle_quiet_negative_images": 69,
+    "oracle_quiet_with_any": 45,
+    "oracle_quiet_rate": 0.6522,
+    "oracle_quiet_ci95": [
+     0.5345,
+     0.7538
+    ],
+    "positive_images": 72,
+    "planted": 144,
+    "planted_found": 72,
+    "recall": 0.5,
+    "false_per_positive_image": 2.4861,
+    "precision": 0.1655,
+    "false_total": 363,
+    "false_kinds": {
+     "unplanted": 259,
+     "same_line": 2,
+     "unmapped": 102
+    }
+   },
+   "lcs:v3": {
+    "negative_images": 72,
+    "negative_with_any": 2,
+    "fwer": 0.0278,
+    "fwer_ci95": [
+     0.0077,
+     0.0957
+    ],
+    "false_per_negative_image": 0.0278,
+    "oracle_quiet_negative_images": 69,
+    "oracle_quiet_with_any": 1,
+    "oracle_quiet_rate": 0.0145,
+    "oracle_quiet_ci95": [
+     0.0026,
+     0.0776
+    ],
+    "positive_images": 72,
+    "planted": 144,
+    "planted_found": 76,
+    "recall": 0.5278,
+    "false_per_positive_image": 0.0417,
+    "precision": 0.9383,
+    "false_total": 5,
+    "false_kinds": {
+     "unplanted": 4,
+     "same_line": 0,
+     "unmapped": 1
+    }
+   },
+   "soft@0.2": {
+    "negative_images": 72,
+    "negative_with_any": 5,
+    "fwer": 0.0694,
+    "fwer_ci95": [
+     0.03,
+     0.1525
+    ],
+    "false_per_negative_image": 0.0694,
+    "oracle_quiet_negative_images": 69,
+    "oracle_quiet_with_any": 4,
+    "oracle_quiet_rate": 0.058,
+    "oracle_quiet_ci95": [
+     0.0228,
+     0.1398
+    ],
+    "positive_images": 72,
+    "planted": 144,
+    "planted_found": 73,
+    "recall": 0.5069,
+    "false_per_positive_image": 0.0556,
+    "precision": 0.8902,
+    "false_total": 9,
+    "false_kinds": {
+     "unplanted": 8,
+     "same_line": 0,
+     "unmapped": 1
+    }
+   },
+   "soft@0.3": {
+    "negative_images": 72,
+    "negative_with_any": 4,
+    "fwer": 0.0556,
+    "fwer_ci95": [
+     0.0218,
+     0.1343
+    ],
+    "false_per_negative_image": 0.0556,
+    "oracle_quiet_negative_images": 69,
+    "oracle_quiet_with_any": 3,
+    "oracle_quiet_rate": 0.0435,
+    "oracle_quiet_ci95": [
+     0.0149,
+     0.1202
+    ],
+    "positive_images": 72,
+    "planted": 144,
+    "planted_found": 74,
+    "recall": 0.5139,
+    "false_per_positive_image": 0.0694,
+    "precision": 0.8916,
+    "false_total": 9,
+    "false_kinds": {
+     "unplanted": 8,
+     "same_line": 0,
+     "unmapped": 1
+    }
+   },
+   "soft@0.45": {
+    "negative_images": 72,
+    "negative_with_any": 4,
+    "fwer": 0.0556,
+    "fwer_ci95": [
+     0.0218,
+     0.1343
+    ],
+    "false_per_negative_image": 0.0556,
+    "oracle_quiet_negative_images": 69,
+    "oracle_quiet_with_any": 3,
+    "oracle_quiet_rate": 0.0435,
+    "oracle_quiet_ci95": [
+     0.0149,
+     0.1202
+    ],
+    "positive_images": 72,
+    "planted": 144,
+    "planted_found": 76,
+    "recall": 0.5278,
+    "false_per_positive_image": 0.0833,
+    "precision": 0.8837,
+    "false_total": 10,
+    "false_kinds": {
+     "unplanted": 9,
+     "same_line": 0,
+     "unmapped": 1
+    }
+   },
+   "vote>=2": {
+    "negative_images": 72,
+    "negative_with_any": 3,
+    "fwer": 0.0417,
+    "fwer_ci95": [
+     0.0143,
+     0.1155
+    ],
+    "false_per_negative_image": 0.0417,
+    "oracle_quiet_negative_images": 69,
+    "oracle_quiet_with_any": 3,
+    "oracle_quiet_rate": 0.0435,
+    "oracle_quiet_ci95": [
+     0.0149,
+     0.1202
+    ],
+    "positive_images": 72,
+    "planted": 144,
+    "planted_found": 65,
+    "recall": 0.4514,
+    "false_per_positive_image": 0.0139,
+    "precision": 0.942,
+    "false_total": 4,
+    "false_kinds": {
+     "unplanted": 4,
+     "same_line": 0,
+     "unmapped": 0
+    }
+   },
+   "vote>=3": {
+    "negative_images": 72,
+    "negative_with_any": 0,
+    "fwer": 0.0,
+    "fwer_ci95": [
+     0.0,
+     0.0507
+    ],
+    "false_per_negative_image": 0.0,
+    "oracle_quiet_negative_images": 69,
+    "oracle_quiet_with_any": 0,
+    "oracle_quiet_rate": 0.0,
+    "oracle_quiet_ci95": [
+     0.0,
+     0.0527
+    ],
+    "positive_images": 72,
+    "planted": 144,
+    "planted_found": 15,
+    "recall": 0.1042,
+    "false_per_positive_image": 0.0,
+    "precision": 1.0,
+    "false_total": 0,
+    "false_kinds": {
+     "unplanted": 0,
+     "same_line": 0,
+     "unmapped": 0
+    }
+   }
+  },
+  "plain": {
+   "oracle-ngram": {
+    "negative_images": 72,
+    "negative_with_any": 0,
+    "fwer": 0.0,
+    "fwer_ci95": [
+     0.0,
+     0.0507
+    ],
+    "false_per_negative_image": 0.0,
+    "oracle_quiet_negative_images": 70,
+    "oracle_quiet_with_any": 0,
+    "oracle_quiet_rate": 0.0,
+    "oracle_quiet_ci95": [
+     0.0,
+     0.052
+    ],
+    "positive_images": 72,
+    "planted": 144,
+    "planted_found": 43,
+    "recall": 0.2986,
+    "false_per_positive_image": 0.0,
+    "precision": 1.0,
+    "false_total": 0,
+    "false_kinds": {
+     "unplanted": 0,
+     "same_line": 0,
+     "unmapped": 0
+    }
+   },
+   "oracle-lcs": {
+    "negative_images": 72,
+    "negative_with_any": 2,
+    "fwer": 0.0278,
+    "fwer_ci95": [
+     0.0077,
+     0.0957
+    ],
+    "false_per_negative_image": 0.0278,
+    "oracle_quiet_negative_images": 70,
+    "oracle_quiet_with_any": 0,
+    "oracle_quiet_rate": 0.0,
+    "oracle_quiet_ci95": [
+     0.0,
+     0.052
+    ],
+    "positive_images": 72,
+    "planted": 144,
+    "planted_found": 106,
+    "recall": 0.7361,
+    "false_per_positive_image": 0.0139,
+    "precision": 0.9725,
+    "false_total": 3,
+    "false_kinds": {
+     "unplanted": 3,
+     "same_line": 0,
+     "unmapped": 0
+    }
+   },
+   "ngram:baseline": {
+    "negative_images": 72,
+    "negative_with_any": 1,
+    "fwer": 0.0139,
+    "fwer_ci95": [
+     0.0025,
+     0.0746
+    ],
+    "false_per_negative_image": 0.0139,
+    "oracle_quiet_negative_images": 70,
+    "oracle_quiet_with_any": 1,
+    "oracle_quiet_rate": 0.0143,
+    "oracle_quiet_ci95": [
+     0.0025,
+     0.0766
+    ],
+    "positive_images": 72,
+    "planted": 144,
+    "planted_found": 48,
+    "recall": 0.3333,
+    "false_per_positive_image": 0.0278,
+    "precision": 0.9412,
+    "false_total": 3,
+    "false_kinds": {
+     "unplanted": 2,
+     "same_line": 0,
+     "unmapped": 1
+    }
+   },
+   "ngram:v2": {
+    "negative_images": 72,
+    "negative_with_any": 0,
+    "fwer": 0.0,
+    "fwer_ci95": [
+     0.0,
+     0.0507
+    ],
+    "false_per_negative_image": 0.0,
+    "oracle_quiet_negative_images": 70,
+    "oracle_quiet_with_any": 0,
+    "oracle_quiet_rate": 0.0,
+    "oracle_quiet_ci95": [
+     0.0,
+     0.052
+    ],
+    "positive_images": 72,
+    "planted": 144,
+    "planted_found": 42,
+    "recall": 0.2917,
+    "false_per_positive_image": 0.0139,
+    "precision": 0.9767,
+    "false_total": 1,
+    "false_kinds": {
+     "unplanted": 1,
+     "same_line": 0,
+     "unmapped": 0
+    }
+   },
+   "ngram:v3": {
+    "negative_images": 72,
+    "negative_with_any": 0,
+    "fwer": 0.0,
+    "fwer_ci95": [
+     0.0,
+     0.0507
+    ],
+    "false_per_negative_image": 0.0,
+    "oracle_quiet_negative_images": 70,
+    "oracle_quiet_with_any": 0,
+    "oracle_quiet_rate": 0.0,
+    "oracle_quiet_ci95": [
+     0.0,
+     0.052
+    ],
+    "positive_images": 72,
+    "planted": 144,
+    "planted_found": 49,
+    "recall": 0.3403,
+    "false_per_positive_image": 0.0,
+    "precision": 1.0,
+    "false_total": 0,
+    "false_kinds": {
+     "unplanted": 0,
+     "same_line": 0,
+     "unmapped": 0
+    }
+   },
+   "lcs:baseline": {
+    "negative_images": 72,
+    "negative_with_any": 4,
+    "fwer": 0.0556,
+    "fwer_ci95": [
+     0.0218,
+     0.1343
+    ],
+    "false_per_negative_image": 0.0556,
+    "oracle_quiet_negative_images": 70,
+    "oracle_quiet_with_any": 2,
+    "oracle_quiet_rate": 0.0286,
+    "oracle_quiet_ci95": [
+     0.0079,
+     0.0983
+    ],
+    "positive_images": 72,
+    "planted": 144,
+    "planted_found": 95,
+    "recall": 0.6597,
+    "false_per_positive_image": 0.1667,
+    "precision": 0.8559,
+    "false_total": 16,
+    "false_kinds": {
+     "unplanted": 16,
+     "same_line": 0,
+     "unmapped": 0
+    }
+   },
+   "lcs:v2": {
+    "negative_images": 72,
+    "negative_with_any": 11,
+    "fwer": 0.1528,
+    "fwer_ci95": [
+     0.0875,
+     0.2532
+    ],
+    "false_per_negative_image": 0.2222,
+    "oracle_quiet_negative_images": 70,
+    "oracle_quiet_with_any": 9,
+    "oracle_quiet_rate": 0.1286,
+    "oracle_quiet_ci95": [
+     0.0691,
+     0.2266
+    ],
+    "positive_images": 72,
+    "planted": 144,
+    "planted_found": 100,
+    "recall": 0.6944,
+    "false_per_positive_image": 0.3056,
+    "precision": 0.7246,
+    "false_total": 38,
+    "false_kinds": {
+     "unplanted": 38,
+     "same_line": 0,
+     "unmapped": 0
+    }
+   },
+   "lcs:v3": {
+    "negative_images": 72,
+    "negative_with_any": 5,
+    "fwer": 0.0694,
+    "fwer_ci95": [
+     0.03,
+     0.1525
+    ],
+    "false_per_negative_image": 0.0694,
+    "oracle_quiet_negative_images": 70,
+    "oracle_quiet_with_any": 3,
+    "oracle_quiet_rate": 0.0429,
+    "oracle_quiet_ci95": [
+     0.0147,
+     0.1186
+    ],
+    "positive_images": 72,
+    "planted": 144,
+    "planted_found": 105,
+    "recall": 0.7292,
+    "false_per_positive_image": 0.0833,
+    "precision": 0.9052,
+    "false_total": 11,
+    "false_kinds": {
+     "unplanted": 11,
+     "same_line": 0,
+     "unmapped": 0
+    }
+   },
+   "soft@0.2": {
+    "negative_images": 72,
+    "negative_with_any": 3,
+    "fwer": 0.0417,
+    "fwer_ci95": [
+     0.0143,
+     0.1155
+    ],
+    "false_per_negative_image": 0.0417,
+    "oracle_quiet_negative_images": 70,
+    "oracle_quiet_with_any": 2,
+    "oracle_quiet_rate": 0.0286,
+    "oracle_quiet_ci95": [
+     0.0079,
+     0.0983
+    ],
+    "positive_images": 72,
+    "planted": 144,
+    "planted_found": 104,
+    "recall": 0.7222,
+    "false_per_positive_image": 0.0556,
+    "precision": 0.9369,
+    "false_total": 7,
+    "false_kinds": {
+     "unplanted": 7,
+     "same_line": 0,
+     "unmapped": 0
+    }
+   },
+   "soft@0.3": {
+    "negative_images": 72,
+    "negative_with_any": 3,
+    "fwer": 0.0417,
+    "fwer_ci95": [
+     0.0143,
+     0.1155
+    ],
+    "false_per_negative_image": 0.0417,
+    "oracle_quiet_negative_images": 70,
+    "oracle_quiet_with_any": 2,
+    "oracle_quiet_rate": 0.0286,
+    "oracle_quiet_ci95": [
+     0.0079,
+     0.0983
+    ],
+    "positive_images": 72,
+    "planted": 144,
+    "planted_found": 107,
+    "recall": 0.7431,
+    "false_per_positive_image": 0.0833,
+    "precision": 0.9224,
+    "false_total": 9,
+    "false_kinds": {
+     "unplanted": 9,
+     "same_line": 0,
+     "unmapped": 0
+    }
+   },
+   "soft@0.45": {
+    "negative_images": 72,
+    "negative_with_any": 4,
+    "fwer": 0.0556,
+    "fwer_ci95": [
+     0.0218,
+     0.1343
+    ],
+    "false_per_negative_image": 0.0556,
+    "oracle_quiet_negative_images": 70,
+    "oracle_quiet_with_any": 2,
+    "oracle_quiet_rate": 0.0286,
+    "oracle_quiet_ci95": [
+     0.0079,
+     0.0983
+    ],
+    "positive_images": 72,
+    "planted": 144,
+    "planted_found": 107,
+    "recall": 0.7431,
+    "false_per_positive_image": 0.0694,
+    "precision": 0.9224,
+    "false_total": 9,
+    "false_kinds": {
+     "unplanted": 9,
+     "same_line": 0,
+     "unmapped": 0
+    }
+   },
+   "vote>=2": {
+    "negative_images": 72,
+    "negative_with_any": 5,
+    "fwer": 0.0694,
+    "fwer_ci95": [
+     0.03,
+     0.1525
+    ],
+    "false_per_negative_image": 0.0694,
+    "oracle_quiet_negative_images": 70,
+    "oracle_quiet_with_any": 3,
+    "oracle_quiet_rate": 0.0429,
+    "oracle_quiet_ci95": [
+     0.0147,
+     0.1186
+    ],
+    "positive_images": 72,
+    "planted": 144,
+    "planted_found": 111,
+    "recall": 0.7708,
+    "false_per_positive_image": 0.0833,
+    "precision": 0.9098,
+    "false_total": 11,
+    "false_kinds": {
+     "unplanted": 11,
+     "same_line": 0,
+     "unmapped": 0
+    }
+   },
+   "vote>=3": {
+    "negative_images": 72,
+    "negative_with_any": 1,
+    "fwer": 0.0139,
+    "fwer_ci95": [
+     0.0025,
+     0.0746
+    ],
+    "false_per_negative_image": 0.0139,
+    "oracle_quiet_negative_images": 70,
+    "oracle_quiet_with_any": 0,
+    "oracle_quiet_rate": 0.0,
+    "oracle_quiet_ci95": [
+     0.0,
+     0.052
+    ],
+    "positive_images": 72,
+    "planted": 144,
+    "planted_found": 81,
+    "recall": 0.5625,
+    "false_per_positive_image": 0.0139,
+    "precision": 0.9759,
+    "false_total": 2,
+    "false_kinds": {
+     "unplanted": 2,
+     "same_line": 0,
+     "unmapped": 0
+    }
+   }
+  },
+  "tight": {
+   "oracle-ngram": {
+    "negative_images": 72,
+    "negative_with_any": 0,
+    "fwer": 0.0,
+    "fwer_ci95": [
+     0.0,
+     0.0507
+    ],
+    "false_per_negative_image": 0.0,
+    "oracle_quiet_negative_images": 70,
+    "oracle_quiet_with_any": 0,
+    "oracle_quiet_rate": 0.0,
+    "oracle_quiet_ci95": [
+     0.0,
+     0.052
+    ],
+    "positive_images": 72,
+    "planted": 144,
+    "planted_found": 57,
+    "recall": 0.3958,
+    "false_per_positive_image": 0.0,
+    "precision": 1.0,
+    "false_total": 0,
+    "false_kinds": {
+     "unplanted": 0,
+     "same_line": 0,
+     "unmapped": 0
+    }
+   },
+   "oracle-lcs": {
+    "negative_images": 72,
+    "negative_with_any": 2,
+    "fwer": 0.0278,
+    "fwer_ci95": [
+     0.0077,
+     0.0957
+    ],
+    "false_per_negative_image": 0.0278,
+    "oracle_quiet_negative_images": 70,
+    "oracle_quiet_with_any": 0,
+    "oracle_quiet_rate": 0.0,
+    "oracle_quiet_ci95": [
+     0.0,
+     0.052
+    ],
+    "positive_images": 72,
+    "planted": 144,
+    "planted_found": 108,
+    "recall": 0.75,
+    "false_per_positive_image": 0.0139,
+    "precision": 0.973,
+    "false_total": 3,
+    "false_kinds": {
+     "unplanted": 3,
+     "same_line": 0,
+     "unmapped": 0
+    }
+   },
+   "ngram:baseline": {
+    "negative_images": 72,
+    "negative_with_any": 0,
+    "fwer": 0.0,
+    "fwer_ci95": [
+     0.0,
+     0.0507
+    ],
+    "false_per_negative_image": 0.0,
+    "oracle_quiet_negative_images": 70,
+    "oracle_quiet_with_any": 0,
+    "oracle_quiet_rate": 0.0,
+    "oracle_quiet_ci95": [
+     0.0,
+     0.052
+    ],
+    "positive_images": 72,
+    "planted": 144,
+    "planted_found": 0,
+    "recall": 0.0,
+    "false_per_positive_image": 0.0,
+    "precision": null,
+    "false_total": 0,
+    "false_kinds": {
+     "unplanted": 0,
+     "same_line": 0,
+     "unmapped": 0
+    }
+   },
+   "ngram:v2": {
+    "negative_images": 72,
+    "negative_with_any": 2,
+    "fwer": 0.0278,
+    "fwer_ci95": [
+     0.0077,
+     0.0957
+    ],
+    "false_per_negative_image": 0.0278,
+    "oracle_quiet_negative_images": 70,
+    "oracle_quiet_with_any": 2,
+    "oracle_quiet_rate": 0.0286,
+    "oracle_quiet_ci95": [
+     0.0079,
+     0.0983
+    ],
+    "positive_images": 72,
+    "planted": 144,
+    "planted_found": 32,
+    "recall": 0.2222,
+    "false_per_positive_image": 0.0972,
+    "precision": 0.7805,
+    "false_total": 9,
+    "false_kinds": {
+     "unplanted": 5,
+     "same_line": 0,
+     "unmapped": 4
+    }
+   },
+   "ngram:v3": {
+    "negative_images": 72,
+    "negative_with_any": 1,
+    "fwer": 0.0139,
+    "fwer_ci95": [
+     0.0025,
+     0.0746
+    ],
+    "false_per_negative_image": 0.0139,
+    "oracle_quiet_negative_images": 70,
+    "oracle_quiet_with_any": 1,
+    "oracle_quiet_rate": 0.0143,
+    "oracle_quiet_ci95": [
+     0.0025,
+     0.0766
+    ],
+    "positive_images": 72,
+    "planted": 144,
+    "planted_found": 13,
+    "recall": 0.0903,
+    "false_per_positive_image": 0.0556,
+    "precision": 0.7222,
+    "false_total": 5,
+    "false_kinds": {
+     "unplanted": 2,
+     "same_line": 0,
+     "unmapped": 3
+    }
+   },
+   "lcs:baseline": {
+    "negative_images": 72,
+    "negative_with_any": 0,
+    "fwer": 0.0,
+    "fwer_ci95": [
+     0.0,
+     0.0507
+    ],
+    "false_per_negative_image": 0.0,
+    "oracle_quiet_negative_images": 70,
+    "oracle_quiet_with_any": 0,
+    "oracle_quiet_rate": 0.0,
+    "oracle_quiet_ci95": [
+     0.0,
+     0.052
+    ],
+    "positive_images": 72,
+    "planted": 144,
+    "planted_found": 0,
+    "recall": 0.0,
+    "false_per_positive_image": 0.0,
+    "precision": null,
+    "false_total": 0,
+    "false_kinds": {
+     "unplanted": 0,
+     "same_line": 0,
+     "unmapped": 0
+    }
+   },
+   "lcs:v2": {
+    "negative_images": 72,
+    "negative_with_any": 17,
+    "fwer": 0.2361,
+    "fwer_ci95": [
+     0.153,
+     0.346
+    ],
+    "false_per_negative_image": 0.4306,
+    "oracle_quiet_negative_images": 70,
+    "oracle_quiet_with_any": 16,
+    "oracle_quiet_rate": 0.2286,
+    "oracle_quiet_ci95": [
+     0.1459,
+     0.3395
+    ],
+    "positive_images": 72,
+    "planted": 144,
+    "planted_found": 82,
+    "recall": 0.5694,
+    "false_per_positive_image": 0.4861,
+    "precision": 0.5541,
+    "false_total": 66,
+    "false_kinds": {
+     "unplanted": 43,
+     "same_line": 1,
+     "unmapped": 22
+    }
+   },
+   "lcs:v3": {
+    "negative_images": 72,
+    "negative_with_any": 8,
+    "fwer": 0.1111,
+    "fwer_ci95": [
+     0.0574,
+     0.2042
+    ],
+    "false_per_negative_image": 0.1111,
+    "oracle_quiet_negative_images": 70,
+    "oracle_quiet_with_any": 7,
+    "oracle_quiet_rate": 0.1,
+    "oracle_quiet_ci95": [
+     0.0493,
+     0.1923
+    ],
+    "positive_images": 72,
+    "planted": 144,
+    "planted_found": 28,
+    "recall": 0.1944,
+    "false_per_positive_image": 0.0972,
+    "precision": 0.6512,
+    "false_total": 15,
+    "false_kinds": {
+     "unplanted": 9,
+     "same_line": 0,
+     "unmapped": 6
+    }
+   },
+   "soft@0.2": {
+    "negative_images": 72,
+    "negative_with_any": 4,
+    "fwer": 0.0556,
+    "fwer_ci95": [
+     0.0218,
+     0.1343
+    ],
+    "false_per_negative_image": 0.0694,
+    "oracle_quiet_negative_images": 70,
+    "oracle_quiet_with_any": 3,
+    "oracle_quiet_rate": 0.0429,
+    "oracle_quiet_ci95": [
+     0.0147,
+     0.1186
+    ],
+    "positive_images": 72,
+    "planted": 144,
+    "planted_found": 28,
+    "recall": 0.1944,
+    "false_per_positive_image": 0.0694,
+    "precision": 0.7368,
+    "false_total": 10,
+    "false_kinds": {
+     "unplanted": 4,
+     "same_line": 0,
+     "unmapped": 6
+    }
+   },
+   "soft@0.3": {
+    "negative_images": 72,
+    "negative_with_any": 4,
+    "fwer": 0.0556,
+    "fwer_ci95": [
+     0.0218,
+     0.1343
+    ],
+    "false_per_negative_image": 0.0694,
+    "oracle_quiet_negative_images": 70,
+    "oracle_quiet_with_any": 3,
+    "oracle_quiet_rate": 0.0429,
+    "oracle_quiet_ci95": [
+     0.0147,
+     0.1186
+    ],
+    "positive_images": 72,
+    "planted": 144,
+    "planted_found": 28,
+    "recall": 0.1944,
+    "false_per_positive_image": 0.0833,
+    "precision": 0.7179,
+    "false_total": 11,
+    "false_kinds": {
+     "unplanted": 5,
+     "same_line": 0,
+     "unmapped": 6
+    }
+   },
+   "soft@0.45": {
+    "negative_images": 72,
+    "negative_with_any": 4,
+    "fwer": 0.0556,
+    "fwer_ci95": [
+     0.0218,
+     0.1343
+    ],
+    "false_per_negative_image": 0.0694,
+    "oracle_quiet_negative_images": 70,
+    "oracle_quiet_with_any": 4,
+    "oracle_quiet_rate": 0.0571,
+    "oracle_quiet_ci95": [
+     0.0224,
+     0.1379
+    ],
+    "positive_images": 72,
+    "planted": 144,
+    "planted_found": 29,
+    "recall": 0.2014,
+    "false_per_positive_image": 0.0972,
+    "precision": 0.7073,
+    "false_total": 12,
+    "false_kinds": {
+     "unplanted": 6,
+     "same_line": 0,
+     "unmapped": 6
+    }
+   },
+   "vote>=2": {
+    "negative_images": 72,
+    "negative_with_any": 3,
+    "fwer": 0.0417,
+    "fwer_ci95": [
+     0.0143,
+     0.1155
+    ],
+    "false_per_negative_image": 0.0417,
+    "oracle_quiet_negative_images": 70,
+    "oracle_quiet_with_any": 2,
+    "oracle_quiet_rate": 0.0286,
+    "oracle_quiet_ci95": [
+     0.0079,
+     0.0983
+    ],
+    "positive_images": 72,
+    "planted": 144,
+    "planted_found": 27,
+    "recall": 0.1875,
+    "false_per_positive_image": 0.0972,
+    "precision": 0.7297,
+    "false_total": 10,
+    "false_kinds": {
+     "unplanted": 4,
+     "same_line": 0,
+     "unmapped": 6
+    }
+   },
+   "vote>=3": {
+    "negative_images": 72,
+    "negative_with_any": 0,
+    "fwer": 0.0,
+    "fwer_ci95": [
+     0.0,
+     0.0507
+    ],
+    "false_per_negative_image": 0.0,
+    "oracle_quiet_negative_images": 70,
+    "oracle_quiet_with_any": 0,
+    "oracle_quiet_rate": 0.0,
+    "oracle_quiet_ci95": [
+     0.0,
+     0.052
+    ],
+    "positive_images": 72,
+    "planted": 144,
+    "planted_found": 0,
+    "recall": 0.0,
+    "false_per_positive_image": 0.0,
+    "precision": null,
+    "false_total": 0,
+    "false_kinds": {
+     "unplanted": 0,
+     "same_line": 0,
+     "unmapped": 0
+    }
+   }
+  }
+ },
+ "by_vocab": {
+  "250": {
+   "oracle-ngram": {
+    "negative_images": 96,
+    "negative_with_any": 0,
+    "fwer": 0.0,
+    "fwer_ci95": [
+     0.0,
+     0.0385
+    ],
+    "false_per_negative_image": 0.0,
+    "oracle_quiet_negative_images": 90,
+    "oracle_quiet_with_any": 0,
+    "oracle_quiet_rate": 0.0,
+    "oracle_quiet_ci95": [
+     0.0,
+     0.0409
+    ],
+    "positive_images": 96,
+    "planted": 192,
+    "planted_found": 81,
+    "recall": 0.4219,
+    "false_per_positive_image": 0.0,
+    "precision": 1.0,
+    "false_total": 0,
+    "false_kinds": {
+     "unplanted": 0,
+     "same_line": 0,
+     "unmapped": 0
+    }
+   },
+   "oracle-lcs": {
+    "negative_images": 96,
+    "negative_with_any": 6,
+    "fwer": 0.0625,
+    "fwer_ci95": [
+     0.029,
+     0.1297
+    ],
+    "false_per_negative_image": 0.0625,
+    "oracle_quiet_negative_images": 90,
+    "oracle_quiet_with_any": 0,
+    "oracle_quiet_rate": 0.0,
+    "oracle_quiet_ci95": [
+     0.0,
+     0.0409
+    ],
+    "positive_images": 96,
+    "planted": 192,
+    "planted_found": 153,
+    "recall": 0.7969,
+    "false_per_positive_image": 0.0417,
+    "precision": 0.9387,
+    "false_total": 10,
+    "false_kinds": {
+     "unplanted": 10,
+     "same_line": 0,
+     "unmapped": 0
+    }
+   },
+   "ngram:baseline": {
+    "negative_images": 96,
+    "negative_with_any": 2,
+    "fwer": 0.0208,
+    "fwer_ci95": [
+     0.0057,
+     0.0728
+    ],
+    "false_per_negative_image": 0.0417,
+    "oracle_quiet_negative_images": 90,
+    "oracle_quiet_with_any": 2,
+    "oracle_quiet_rate": 0.0222,
+    "oracle_quiet_ci95": [
+     0.0061,
+     0.0774
+    ],
+    "positive_images": 96,
+    "planted": 192,
+    "planted_found": 35,
+    "recall": 0.1823,
+    "false_per_positive_image": 0.0,
+    "precision": 0.8974,
+    "false_total": 4,
+    "false_kinds": {
+     "unplanted": 2,
+     "same_line": 0,
+     "unmapped": 2
+    }
+   },
+   "ngram:v2": {
+    "negative_images": 96,
+    "negative_with_any": 7,
+    "fwer": 0.0729,
+    "fwer_ci95": [
+     0.0358,
+     0.1429
+    ],
+    "false_per_negative_image": 0.125,
+    "oracle_quiet_negative_images": 90,
+    "oracle_quiet_with_any": 7,
+    "oracle_quiet_rate": 0.0778,
+    "oracle_quiet_ci95": [
+     0.0382,
+     0.1519
+    ],
+    "positive_images": 96,
+    "planted": 192,
+    "planted_found": 56,
+    "recall": 0.2917,
+    "false_per_positive_image": 0.125,
+    "precision": 0.7,
+    "false_total": 24,
+    "false_kinds": {
+     "unplanted": 10,
+     "same_line": 0,
+     "unmapped": 14
+    }
+   },
+   "ngram:v3": {
+    "negative_images": 96,
+    "negative_with_any": 0,
+    "fwer": 0.0,
+    "fwer_ci95": [
+     0.0,
+     0.0385
+    ],
+    "false_per_negative_image": 0.0,
+    "oracle_quiet_negative_images": 90,
+    "oracle_quiet_with_any": 0,
+    "oracle_quiet_rate": 0.0,
+    "oracle_quiet_ci95": [
+     0.0,
+     0.0409
+    ],
+    "positive_images": 96,
+    "planted": 192,
+    "planted_found": 60,
+    "recall": 0.3125,
+    "false_per_positive_image": 0.0208,
+    "precision": 0.9677,
+    "false_total": 2,
+    "false_kinds": {
+     "unplanted": 0,
+     "same_line": 0,
+     "unmapped": 2
+    }
+   },
+   "lcs:baseline": {
+    "negative_images": 96,
+    "negative_with_any": 5,
+    "fwer": 0.0521,
+    "fwer_ci95": [
+     0.0224,
+     0.1162
+    ],
+    "false_per_negative_image": 0.0521,
+    "oracle_quiet_negative_images": 90,
+    "oracle_quiet_with_any": 2,
+    "oracle_quiet_rate": 0.0222,
+    "oracle_quiet_ci95": [
+     0.0061,
+     0.0774
+    ],
+    "positive_images": 96,
+    "planted": 192,
+    "planted_found": 47,
+    "recall": 0.2448,
+    "false_per_positive_image": 0.1146,
+    "precision": 0.746,
+    "false_total": 16,
+    "false_kinds": {
+     "unplanted": 13,
+     "same_line": 0,
+     "unmapped": 3
+    }
+   },
+   "lcs:v2": {
+    "negative_images": 96,
+    "negative_with_any": 41,
+    "fwer": 0.4271,
+    "fwer_ci95": [
+     0.3328,
+     0.527
+    ],
+    "false_per_negative_image": 1.3542,
+    "oracle_quiet_negative_images": 90,
+    "oracle_quiet_with_any": 36,
+    "oracle_quiet_rate": 0.4,
+    "oracle_quiet_ci95": [
+     0.3049,
+     0.5033
+    ],
+    "positive_images": 96,
+    "planted": 192,
+    "planted_found": 105,
+    "recall": 0.5469,
+    "false_per_positive_image": 1.4896,
+    "precision": 0.2778,
+    "false_total": 273,
+    "false_kinds": {
+     "unplanted": 125,
+     "same_line": 1,
+     "unmapped": 147
+    }
+   },
+   "lcs:v3": {
+    "negative_images": 96,
+    "negative_with_any": 7,
+    "fwer": 0.0729,
+    "fwer_ci95": [
+     0.0358,
+     0.1429
+    ],
+    "false_per_negative_image": 0.0833,
+    "oracle_quiet_negative_images": 90,
+    "oracle_quiet_with_any": 3,
+    "oracle_quiet_rate": 0.0333,
+    "oracle_quiet_ci95": [
+     0.0114,
+     0.0935
+    ],
+    "positive_images": 96,
+    "planted": 192,
+    "planted_found": 109,
+    "recall": 0.5677,
+    "false_per_positive_image": 0.1042,
+    "precision": 0.8583,
+    "false_total": 18,
+    "false_kinds": {
+     "unplanted": 12,
+     "same_line": 0,
+     "unmapped": 6
+    }
+   },
+   "soft@0.2": {
+    "negative_images": 96,
+    "negative_with_any": 3,
+    "fwer": 0.0312,
+    "fwer_ci95": [
+     0.0107,
+     0.0879
+    ],
+    "false_per_negative_image": 0.0417,
+    "oracle_quiet_negative_images": 90,
+    "oracle_quiet_with_any": 0,
+    "oracle_quiet_rate": 0.0,
+    "oracle_quiet_ci95": [
+     0.0,
+     0.0409
+    ],
+    "positive_images": 96,
+    "planted": 192,
+    "planted_found": 104,
+    "recall": 0.5417,
+    "false_per_positive_image": 0.0729,
+    "precision": 0.9043,
+    "false_total": 11,
+    "false_kinds": {
+     "unplanted": 6,
+     "same_line": 0,
+     "unmapped": 5
+    }
+   },
+   "soft@0.3": {
+    "negative_images": 96,
+    "negative_with_any": 3,
+    "fwer": 0.0312,
+    "fwer_ci95": [
+     0.0107,
+     0.0879
+    ],
+    "false_per_negative_image": 0.0417,
+    "oracle_quiet_negative_images": 90,
+    "oracle_quiet_with_any": 0,
+    "oracle_quiet_rate": 0.0,
+    "oracle_quiet_ci95": [
+     0.0,
+     0.0409
+    ],
+    "positive_images": 96,
+    "planted": 192,
+    "planted_found": 107,
+    "recall": 0.5573,
+    "false_per_positive_image": 0.0833,
+    "precision": 0.8992,
+    "false_total": 12,
+    "false_kinds": {
+     "unplanted": 7,
+     "same_line": 0,
+     "unmapped": 5
+    }
+   },
+   "soft@0.45": {
+    "negative_images": 96,
+    "negative_with_any": 6,
+    "fwer": 0.0625,
+    "fwer_ci95": [
+     0.029,
+     0.1297
+    ],
+    "false_per_negative_image": 0.0729,
+    "oracle_quiet_negative_images": 90,
+    "oracle_quiet_with_any": 2,
+    "oracle_quiet_rate": 0.0222,
+    "oracle_quiet_ci95": [
+     0.0061,
+     0.0774
+    ],
+    "positive_images": 96,
+    "planted": 192,
+    "planted_found": 110,
+    "recall": 0.5729,
+    "false_per_positive_image": 0.0833,
+    "precision": 0.88,
+    "false_total": 15,
+    "false_kinds": {
+     "unplanted": 10,
+     "same_line": 0,
+     "unmapped": 5
+    }
+   },
+   "vote>=2": {
+    "negative_images": 96,
+    "negative_with_any": 2,
+    "fwer": 0.0208,
+    "fwer_ci95": [
+     0.0057,
+     0.0728
+    ],
+    "false_per_negative_image": 0.0208,
+    "oracle_quiet_negative_images": 90,
+    "oracle_quiet_with_any": 0,
+    "oracle_quiet_rate": 0.0,
+    "oracle_quiet_ci95": [
+     0.0,
+     0.0409
+    ],
+    "positive_images": 96,
+    "planted": 192,
+    "planted_found": 90,
+    "recall": 0.4688,
+    "false_per_positive_image": 0.0833,
+    "precision": 0.9,
+    "false_total": 10,
+    "false_kinds": {
+     "unplanted": 5,
+     "same_line": 0,
+     "unmapped": 5
+    }
+   },
+   "vote>=3": {
+    "negative_images": 96,
+    "negative_with_any": 1,
+    "fwer": 0.0104,
+    "fwer_ci95": [
+     0.0018,
+     0.0567
+    ],
+    "false_per_negative_image": 0.0104,
+    "oracle_quiet_negative_images": 90,
+    "oracle_quiet_with_any": 0,
+    "oracle_quiet_rate": 0.0,
+    "oracle_quiet_ci95": [
+     0.0,
+     0.0409
+    ],
+    "positive_images": 96,
+    "planted": 192,
+    "planted_found": 40,
+    "recall": 0.2083,
+    "false_per_positive_image": 0.0,
+    "precision": 0.9756,
+    "false_total": 1,
+    "false_kinds": {
+     "unplanted": 1,
+     "same_line": 0,
+     "unmapped": 0
+    }
+   }
+  },
+  "30": {
+   "oracle-ngram": {
+    "negative_images": 96,
+    "negative_with_any": 0,
+    "fwer": 0.0,
+    "fwer_ci95": [
+     0.0,
+     0.0385
+    ],
+    "false_per_negative_image": 0.0,
+    "oracle_quiet_negative_images": 91,
+    "oracle_quiet_with_any": 0,
+    "oracle_quiet_rate": 0.0,
+    "oracle_quiet_ci95": [
+     0.0,
+     0.0405
+    ],
+    "positive_images": 96,
+    "planted": 192,
+    "planted_found": 37,
+    "recall": 0.1927,
+    "false_per_positive_image": 0.0,
+    "precision": 1.0,
+    "false_total": 0,
+    "false_kinds": {
+     "unplanted": 0,
+     "same_line": 0,
+     "unmapped": 0
+    }
+   },
+   "oracle-lcs": {
+    "negative_images": 96,
+    "negative_with_any": 5,
+    "fwer": 0.0521,
+    "fwer_ci95": [
+     0.0224,
+     0.1162
+    ],
+    "false_per_negative_image": 0.0521,
+    "oracle_quiet_negative_images": 91,
+    "oracle_quiet_with_any": 0,
+    "oracle_quiet_rate": 0.0,
+    "oracle_quiet_ci95": [
+     0.0,
+     0.0405
+    ],
+    "positive_images": 96,
+    "planted": 192,
+    "planted_found": 129,
+    "recall": 0.6719,
+    "false_per_positive_image": 0.0208,
+    "precision": 0.9485,
+    "false_total": 7,
+    "false_kinds": {
+     "unplanted": 7,
+     "same_line": 0,
+     "unmapped": 0
+    }
+   },
+   "ngram:baseline": {
+    "negative_images": 96,
+    "negative_with_any": 0,
+    "fwer": 0.0,
+    "fwer_ci95": [
+     0.0,
+     0.0385
+    ],
+    "false_per_negative_image": 0.0,
+    "oracle_quiet_negative_images": 91,
+    "oracle_quiet_with_any": 0,
+    "oracle_quiet_rate": 0.0,
+    "oracle_quiet_ci95": [
+     0.0,
+     0.0405
+    ],
+    "positive_images": 96,
+    "planted": 192,
+    "planted_found": 16,
+    "recall": 0.0833,
+    "false_per_positive_image": 0.0312,
+    "precision": 0.8421,
+    "false_total": 3,
+    "false_kinds": {
+     "unplanted": 1,
+     "same_line": 0,
+     "unmapped": 2
+    }
+   },
+   "ngram:v2": {
+    "negative_images": 96,
+    "negative_with_any": 10,
+    "fwer": 0.1042,
+    "fwer_ci95": [
+     0.0576,
+     0.1812
+    ],
+    "false_per_negative_image": 0.1354,
+    "oracle_quiet_negative_images": 91,
+    "oracle_quiet_with_any": 9,
+    "oracle_quiet_rate": 0.0989,
+    "oracle_quiet_ci95": [
+     0.0529,
+     0.1774
+    ],
+    "positive_images": 96,
+    "planted": 192,
+    "planted_found": 24,
+    "recall": 0.125,
+    "false_per_positive_image": 0.125,
+    "precision": 0.4898,
+    "false_total": 25,
+    "false_kinds": {
+     "unplanted": 12,
+     "same_line": 0,
+     "unmapped": 13
+    }
+   },
+   "ngram:v3": {
+    "negative_images": 96,
+    "negative_with_any": 1,
+    "fwer": 0.0104,
+    "fwer_ci95": [
+     0.0018,
+     0.0567
+    ],
+    "false_per_negative_image": 0.0104,
+    "oracle_quiet_negative_images": 91,
+    "oracle_quiet_with_any": 1,
+    "oracle_quiet_rate": 0.011,
+    "oracle_quiet_ci95": [
+     0.0019,
+     0.0597
+    ],
+    "positive_images": 96,
+    "planted": 192,
+    "planted_found": 34,
+    "recall": 0.1771,
+    "false_per_positive_image": 0.0208,
+    "precision": 0.9189,
+    "false_total": 3,
+    "false_kinds": {
+     "unplanted": 2,
+     "same_line": 0,
+     "unmapped": 1
+    }
+   },
+   "lcs:baseline": {
+    "negative_images": 96,
+    "negative_with_any": 2,
+    "fwer": 0.0208,
+    "fwer_ci95": [
+     0.0057,
+     0.0728
+    ],
+    "false_per_negative_image": 0.0312,
+    "oracle_quiet_negative_images": 91,
+    "oracle_quiet_with_any": 2,
+    "oracle_quiet_rate": 0.022,
+    "oracle_quiet_ci95": [
+     0.006,
+     0.0766
+    ],
+    "positive_images": 96,
+    "planted": 192,
+    "planted_found": 42,
+    "recall": 0.2188,
+    "false_per_positive_image": 0.1146,
+    "precision": 0.75,
+    "false_total": 14,
+    "false_kinds": {
+     "unplanted": 13,
+     "same_line": 0,
+     "unmapped": 1
+    }
+   },
+   "lcs:v2": {
+    "negative_images": 96,
+    "negative_with_any": 52,
+    "fwer": 0.5417,
+    "fwer_ci95": [
+     0.4423,
+     0.6378
+    ],
+    "false_per_negative_image": 2.0104,
+    "oracle_quiet_negative_images": 91,
+    "oracle_quiet_with_any": 48,
+    "oracle_quiet_rate": 0.5275,
+    "oracle_quiet_ci95": [
+     0.4259,
+     0.6268
+    ],
+    "positive_images": 96,
+    "planted": 192,
+    "planted_found": 114,
+    "recall": 0.5938,
+    "false_per_positive_image": 1.6979,
+    "precision": 0.2426,
+    "false_total": 356,
+    "false_kinds": {
+     "unplanted": 244,
+     "same_line": 4,
+     "unmapped": 108
+    }
+   },
+   "lcs:v3": {
+    "negative_images": 96,
+    "negative_with_any": 9,
+    "fwer": 0.0938,
+    "fwer_ci95": [
+     0.0501,
+     0.1687
+    ],
+    "false_per_negative_image": 0.0938,
+    "oracle_quiet_negative_images": 91,
+    "oracle_quiet_with_any": 7,
+    "oracle_quiet_rate": 0.0769,
+    "oracle_quiet_ci95": [
+     0.0378,
+     0.1504
+    ],
+    "positive_images": 96,
+    "planted": 192,
+    "planted_found": 88,
+    "recall": 0.4583,
+    "false_per_positive_image": 0.0833,
+    "precision": 0.8381,
+    "false_total": 17,
+    "false_kinds": {
+     "unplanted": 14,
+     "same_line": 0,
+     "unmapped": 3
+    }
+   },
+   "soft@0.2": {
+    "negative_images": 96,
+    "negative_with_any": 10,
+    "fwer": 0.1042,
+    "fwer_ci95": [
+     0.0576,
+     0.1812
+    ],
+    "false_per_negative_image": 0.1146,
+    "oracle_quiet_negative_images": 91,
+    "oracle_quiet_with_any": 8,
+    "oracle_quiet_rate": 0.0879,
+    "oracle_quiet_ci95": [
+     0.0452,
+     0.164
+    ],
+    "positive_images": 96,
+    "planted": 192,
+    "planted_found": 87,
+    "recall": 0.4531,
+    "false_per_positive_image": 0.0938,
+    "precision": 0.8131,
+    "false_total": 20,
+    "false_kinds": {
+     "unplanted": 16,
+     "same_line": 0,
+     "unmapped": 4
+    }
+   },
+   "soft@0.3": {
+    "negative_images": 96,
+    "negative_with_any": 9,
+    "fwer": 0.0938,
+    "fwer_ci95": [
+     0.0501,
+     0.1687
+    ],
+    "false_per_negative_image": 0.1042,
+    "oracle_quiet_negative_images": 91,
+    "oracle_quiet_with_any": 7,
+    "oracle_quiet_rate": 0.0769,
+    "oracle_quiet_ci95": [
+     0.0378,
+     0.1504
+    ],
+    "positive_images": 96,
+    "planted": 192,
+    "planted_found": 89,
+    "recall": 0.4635,
+    "false_per_positive_image": 0.1042,
+    "precision": 0.8165,
+    "false_total": 20,
+    "false_kinds": {
+     "unplanted": 16,
+     "same_line": 0,
+     "unmapped": 4
+    }
+   },
+   "soft@0.45": {
+    "negative_images": 96,
+    "negative_with_any": 8,
+    "fwer": 0.0833,
+    "fwer_ci95": [
+     0.0428,
+     0.1559
+    ],
+    "false_per_negative_image": 0.0938,
+    "oracle_quiet_negative_images": 91,
+    "oracle_quiet_with_any": 7,
+    "oracle_quiet_rate": 0.0769,
+    "oracle_quiet_ci95": [
+     0.0378,
+     0.1504
+    ],
+    "positive_images": 96,
+    "planted": 192,
+    "planted_found": 90,
+    "recall": 0.4688,
+    "false_per_positive_image": 0.1042,
+    "precision": 0.8257,
+    "false_total": 19,
+    "false_kinds": {
+     "unplanted": 15,
+     "same_line": 0,
+     "unmapped": 4
+    }
+   },
+   "vote>=2": {
+    "negative_images": 96,
+    "negative_with_any": 8,
+    "fwer": 0.0833,
+    "fwer_ci95": [
+     0.0428,
+     0.1559
+    ],
+    "false_per_negative_image": 0.0833,
+    "oracle_quiet_negative_images": 91,
+    "oracle_quiet_with_any": 6,
+    "oracle_quiet_rate": 0.0659,
+    "oracle_quiet_ci95": [
+     0.0306,
+     0.1365
+    ],
+    "positive_images": 96,
+    "planted": 192,
+    "planted_found": 85,
+    "recall": 0.4427,
+    "false_per_positive_image": 0.0625,
+    "precision": 0.8586,
+    "false_total": 14,
+    "false_kinds": {
+     "unplanted": 12,
+     "same_line": 0,
+     "unmapped": 2
+    }
+   },
+   "vote>=3": {
+    "negative_images": 96,
+    "negative_with_any": 0,
+    "fwer": 0.0,
+    "fwer_ci95": [
+     0.0,
+     0.0385
+    ],
+    "false_per_negative_image": 0.0,
+    "oracle_quiet_negative_images": 91,
+    "oracle_quiet_with_any": 0,
+    "oracle_quiet_rate": 0.0,
+    "oracle_quiet_ci95": [
+     0.0,
+     0.0405
+    ],
+    "positive_images": 96,
+    "planted": 192,
+    "planted_found": 33,
+    "recall": 0.1719,
+    "false_per_positive_image": 0.0,
+    "precision": 1.0,
+    "false_total": 0,
+    "false_kinds": {
+     "unplanted": 0,
+     "same_line": 0,
+     "unmapped": 0
+    }
+   }
+  },
+  "80": {
+   "oracle-ngram": {
+    "negative_images": 96,
+    "negative_with_any": 0,
+    "fwer": 0.0,
+    "fwer_ci95": [
+     0.0,
+     0.0385
+    ],
+    "false_per_negative_image": 0.0,
+    "oracle_quiet_negative_images": 93,
+    "oracle_quiet_with_any": 0,
+    "oracle_quiet_rate": 0.0,
+    "oracle_quiet_ci95": [
+     0.0,
+     0.0397
+    ],
+    "positive_images": 96,
+    "planted": 192,
+    "planted_found": 65,
+    "recall": 0.3385,
+    "false_per_positive_image": 0.0,
+    "precision": 1.0,
+    "false_total": 0,
+    "false_kinds": {
+     "unplanted": 0,
+     "same_line": 0,
+     "unmapped": 0
+    }
+   },
+   "oracle-lcs": {
+    "negative_images": 96,
+    "negative_with_any": 3,
+    "fwer": 0.0312,
+    "fwer_ci95": [
+     0.0107,
+     0.0879
+    ],
+    "false_per_negative_image": 0.0312,
+    "oracle_quiet_negative_images": 93,
+    "oracle_quiet_with_any": 0,
+    "oracle_quiet_rate": 0.0,
+    "oracle_quiet_ci95": [
+     0.0,
+     0.0397
+    ],
+    "positive_images": 96,
+    "planted": 192,
+    "planted_found": 142,
+    "recall": 0.7396,
+    "false_per_positive_image": 0.0521,
+    "precision": 0.9467,
+    "false_total": 8,
+    "false_kinds": {
+     "unplanted": 8,
+     "same_line": 0,
+     "unmapped": 0
+    }
+   },
+   "ngram:baseline": {
+    "negative_images": 96,
+    "negative_with_any": 1,
+    "fwer": 0.0104,
+    "fwer_ci95": [
+     0.0018,
+     0.0567
+    ],
+    "false_per_negative_image": 0.0104,
+    "oracle_quiet_negative_images": 93,
+    "oracle_quiet_with_any": 1,
+    "oracle_quiet_rate": 0.0108,
+    "oracle_quiet_ci95": [
+     0.0019,
+     0.0584
+    ],
+    "positive_images": 96,
+    "planted": 192,
+    "planted_found": 20,
+    "recall": 0.1042,
+    "false_per_positive_image": 0.0312,
+    "precision": 0.8333,
+    "false_total": 4,
+    "false_kinds": {
+     "unplanted": 3,
+     "same_line": 0,
+     "unmapped": 1
+    }
+   },
+   "ngram:v2": {
+    "negative_images": 96,
+    "negative_with_any": 8,
+    "fwer": 0.0833,
+    "fwer_ci95": [
+     0.0428,
+     0.1559
+    ],
+    "false_per_negative_image": 0.1771,
+    "oracle_quiet_negative_images": 93,
+    "oracle_quiet_with_any": 7,
+    "oracle_quiet_rate": 0.0753,
+    "oracle_quiet_ci95": [
+     0.0369,
+     0.1473
+    ],
+    "positive_images": 96,
+    "planted": 192,
+    "planted_found": 42,
+    "recall": 0.2188,
+    "false_per_positive_image": 0.1458,
+    "precision": 0.5753,
+    "false_total": 31,
+    "false_kinds": {
+     "unplanted": 9,
+     "same_line": 0,
+     "unmapped": 22
+    }
+   },
+   "ngram:v3": {
+    "negative_images": 96,
+    "negative_with_any": 0,
+    "fwer": 0.0,
+    "fwer_ci95": [
+     0.0,
+     0.0385
+    ],
+    "false_per_negative_image": 0.0,
+    "oracle_quiet_negative_images": 93,
+    "oracle_quiet_with_any": 0,
+    "oracle_quiet_rate": 0.0,
+    "oracle_quiet_ci95": [
+     0.0,
+     0.0397
+    ],
+    "positive_images": 96,
+    "planted": 192,
+    "planted_found": 42,
+    "recall": 0.2188,
+    "false_per_positive_image": 0.0104,
+    "precision": 0.9767,
+    "false_total": 1,
+    "false_kinds": {
+     "unplanted": 0,
+     "same_line": 0,
+     "unmapped": 1
+    }
+   },
+   "lcs:baseline": {
+    "negative_images": 96,
+    "negative_with_any": 7,
+    "fwer": 0.0729,
+    "fwer_ci95": [
+     0.0358,
+     0.1429
+    ],
+    "false_per_negative_image": 0.0833,
+    "oracle_quiet_negative_images": 93,
+    "oracle_quiet_with_any": 6,
+    "oracle_quiet_rate": 0.0645,
+    "oracle_quiet_ci95": [
+     0.0299,
+     0.1337
+    ],
+    "positive_images": 96,
+    "planted": 192,
+    "planted_found": 41,
+    "recall": 0.2135,
+    "false_per_positive_image": 0.1354,
+    "precision": 0.6613,
+    "false_total": 21,
+    "false_kinds": {
+     "unplanted": 17,
+     "same_line": 0,
+     "unmapped": 4
+    }
+   },
+   "lcs:v2": {
+    "negative_images": 96,
+    "negative_with_any": 46,
+    "fwer": 0.4792,
+    "fwer_ci95": [
+     0.382,
+     0.578
+    ],
+    "false_per_negative_image": 1.5521,
+    "oracle_quiet_negative_images": 93,
+    "oracle_quiet_with_any": 44,
+    "oracle_quiet_rate": 0.4731,
+    "oracle_quiet_ci95": [
+     0.3747,
+     0.5736
+    ],
+    "positive_images": 96,
+    "planted": 192,
+    "planted_found": 108,
+    "recall": 0.5625,
+    "false_per_positive_image": 1.3542,
+    "precision": 0.2791,
+    "false_total": 279,
+    "false_kinds": {
+     "unplanted": 144,
+     "same_line": 0,
+     "unmapped": 135
+    }
+   },
+   "lcs:v3": {
+    "negative_images": 96,
+    "negative_with_any": 4,
+    "fwer": 0.0417,
+    "fwer_ci95": [
+     0.0163,
+     0.1023
+    ],
+    "false_per_negative_image": 0.0417,
+    "oracle_quiet_negative_images": 93,
+    "oracle_quiet_with_any": 2,
+    "oracle_quiet_rate": 0.0215,
+    "oracle_quiet_ci95": [
+     0.0059,
+     0.0751
+    ],
+    "positive_images": 96,
+    "planted": 192,
+    "planted_found": 91,
+    "recall": 0.474,
+    "false_per_positive_image": 0.0521,
+    "precision": 0.91,
+    "false_total": 9,
+    "false_kinds": {
+     "unplanted": 8,
+     "same_line": 0,
+     "unmapped": 1
+    }
+   },
+   "soft@0.2": {
+    "negative_images": 96,
+    "negative_with_any": 3,
+    "fwer": 0.0312,
+    "fwer_ci95": [
+     0.0107,
+     0.0879
+    ],
+    "false_per_negative_image": 0.0312,
+    "oracle_quiet_negative_images": 93,
+    "oracle_quiet_with_any": 1,
+    "oracle_quiet_rate": 0.0108,
+    "oracle_quiet_ci95": [
+     0.0019,
+     0.0584
+    ],
+    "positive_images": 96,
+    "planted": 192,
+    "planted_found": 92,
+    "recall": 0.4792,
+    "false_per_positive_image": 0.0521,
+    "precision": 0.92,
+    "false_total": 8,
+    "false_kinds": {
+     "unplanted": 8,
+     "same_line": 0,
+     "unmapped": 0
+    }
+   },
+   "soft@0.3": {
+    "negative_images": 96,
+    "negative_with_any": 3,
+    "fwer": 0.0312,
+    "fwer_ci95": [
+     0.0107,
+     0.0879
+    ],
+    "false_per_negative_image": 0.0312,
+    "oracle_quiet_negative_images": 93,
+    "oracle_quiet_with_any": 1,
+    "oracle_quiet_rate": 0.0108,
+    "oracle_quiet_ci95": [
+     0.0019,
+     0.0584
+    ],
+    "positive_images": 96,
+    "planted": 192,
+    "planted_found": 93,
+    "recall": 0.4844,
+    "false_per_positive_image": 0.0729,
+    "precision": 0.9029,
+    "false_total": 10,
+    "false_kinds": {
+     "unplanted": 10,
+     "same_line": 0,
+     "unmapped": 0
+    }
+   },
+   "soft@0.45": {
+    "negative_images": 96,
+    "negative_with_any": 3,
+    "fwer": 0.0312,
+    "fwer_ci95": [
+     0.0107,
+     0.0879
+    ],
+    "false_per_negative_image": 0.0312,
+    "oracle_quiet_negative_images": 93,
+    "oracle_quiet_with_any": 1,
+    "oracle_quiet_rate": 0.0108,
+    "oracle_quiet_ci95": [
+     0.0019,
+     0.0584
+    ],
+    "positive_images": 96,
+    "planted": 192,
+    "planted_found": 94,
+    "recall": 0.4896,
+    "false_per_positive_image": 0.0729,
+    "precision": 0.9038,
+    "false_total": 10,
+    "false_kinds": {
+     "unplanted": 10,
+     "same_line": 0,
+     "unmapped": 0
+    }
+   },
+   "vote>=2": {
+    "negative_images": 96,
+    "negative_with_any": 3,
+    "fwer": 0.0312,
+    "fwer_ci95": [
+     0.0107,
+     0.0879
+    ],
+    "false_per_negative_image": 0.0312,
+    "oracle_quiet_negative_images": 93,
+    "oracle_quiet_with_any": 2,
+    "oracle_quiet_rate": 0.0215,
+    "oracle_quiet_ci95": [
+     0.0059,
+     0.0751
+    ],
+    "positive_images": 96,
+    "planted": 192,
+    "planted_found": 83,
+    "recall": 0.4323,
+    "false_per_positive_image": 0.0521,
+    "precision": 0.9121,
+    "false_total": 8,
+    "false_kinds": {
+     "unplanted": 6,
+     "same_line": 0,
+     "unmapped": 2
+    }
+   },
+   "vote>=3": {
+    "negative_images": 96,
+    "negative_with_any": 0,
+    "fwer": 0.0,
+    "fwer_ci95": [
+     0.0,
+     0.0385
+    ],
+    "false_per_negative_image": 0.0,
+    "oracle_quiet_negative_images": 93,
+    "oracle_quiet_with_any": 0,
+    "oracle_quiet_rate": 0.0,
+    "oracle_quiet_ci95": [
+     0.0,
+     0.0397
+    ],
+    "positive_images": 96,
+    "planted": 192,
+    "planted_found": 31,
+    "recall": 0.1615,
+    "false_per_positive_image": 0.0104,
+    "precision": 0.9688,
+    "false_total": 1,
+    "false_kinds": {
+     "unplanted": 1,
+     "same_line": 0,
+     "unmapped": 0
+    }
+   }
+  }
+ },
+ "vote_discrimination": {
+  "candidates": 1336,
+  "true": 354,
+  "false": 982,
+  "auc": 0.8522,
+  "by_votes": {
+   "1": {
+    "true": 96,
+    "false": 950,
+    "p_true": 0.0918,
+    "ci95": [
+     0.0757,
+     0.1108
+    ]
+   },
+   "2": {
+    "true": 154,
+    "false": 30,
+    "p_true": 0.837,
+    "ci95": [
+     0.7768,
+     0.8833
+    ]
+   },
+   "3": {
+    "true": 104,
+    "false": 2,
+    "p_true": 0.9811,
+    "ci95": [
+     0.9338,
+     0.9948
+    ]
+   }
+  }
+ },
+ "existing_stability": {
+  "by_tier": {
+   "?": {
+    "true": 0,
+    "false": 4
+   },
+   "B": {
+    "true": 55,
+    "false": 1
+   },
+   "C": {
+    "true": 81,
+    "false": 1
+   }
+  },
+  "auc_sampling_stability": 0.4962,
+  "auc_transcription_stability": 0.3346,
+  "true": 130,
+  "false": 2
+ },
+ "dependence_ngram": {
+  "pairs_in_both": 52,
+  "pairs_only_in_a": 86,
+  "pairs_only_in_b": 25,
+  "jaccard": 0.319,
+  "images_with_any": 136,
+  "images_with_different_sets": 101,
+  "p_true_if_both": 1.0,
+  "p_true_if_only_one": 0.9279
+ },
+ "dependence_lcs": {
+  "pairs_in_both": 125,
+  "pairs_only_in_a": 197,
+  "pairs_only_in_b": 48,
+  "jaccard": 0.3378,
+  "images_with_any": 234,
+  "images_with_different_sets": 173,
+  "p_true_if_both": 0.944,
+  "p_true_if_only_one": 0.7429
+ },
+ "vision": {
+  "v3": {
+   "detection_f1": 0.8391,
+   "ari": 0.8884,
+   "line_f1": 0.9333,
+   "class_ratio": 1.1772,
+   "hapax_ratio": 1.5295,
+   "row_ratio": 0.9709
+  },
+  "v3-fine": {
+   "detection_f1": 0.8391,
+   "ari": 0.8924,
+   "line_f1": 0.9333,
+   "class_ratio": 1.2189,
+   "hapax_ratio": 1.617,
+   "row_ratio": 0.9709
+  },
+  "v3-coarse": {
+   "detection_f1": 0.8391,
+   "ari": 0.8617,
+   "line_f1": 0.9333,
+   "class_ratio": 1.0921,
+   "hapax_ratio": 1.3527,
+   "row_ratio": 0.9709
+  },
+  "v3-shape": {
+   "detection_f1": 0.8391,
+   "ari": 0.8508,
+   "line_f1": 0.9333,
+   "class_ratio": 1.2432,
+   "hapax_ratio": 1.6699,
+   "row_ratio": 0.9709
+  },
+  "v3-iou": {
+   "detection_f1": 0.8391,
+   "ari": 0.884,
+   "line_f1": 0.9333,
+   "class_ratio": 1.1928,
+   "hapax_ratio": 1.5718,
+   "row_ratio": 0.9709
+  },
+  "v3-scaled": {
+   "detection_f1": 0.809,
+   "ari": 0.886,
+   "line_f1": 0.9181,
+   "class_ratio": 1.1843,
+   "hapax_ratio": 1.5856,
+   "row_ratio": 0.9541
+  },
+  "v2": {
+   "detection_f1": 0.6312,
+   "ari": 0.9241,
+   "line_f1": 0.6482,
+   "class_ratio": 1.1559,
+   "hapax_ratio": 1.1016,
+   "row_ratio": 2.2831
+  },
+  "baseline": {
+   "detection_f1": 0.4276,
+   "ari": 0.9654,
+   "line_f1": 0.459,
+   "class_ratio": 0.6409,
+   "hapax_ratio": 0.8855,
+   "row_ratio": 0.5226
+  }
+ },
+ "agreement_vs_truth": {
+  "images": 576,
+  "spearman": 0.333,
+  "mean_agreement": 0.9353,
+  "mean_true_ari": 0.8884
+ },
+ "config": {
+  "renderer": "layout",
+  "families": [
+   "font",
+   "stroke",
+   "stack"
+  ],
+  "conditions": [
+   "plain",
+   "diacritic",
+   "tight",
+   "mixed"
+  ],
+  "seeds": [
+   100,
+   101,
+   102,
+   103,
+   104,
+   105,
+   106,
+   107
+  ],
+  "vocabs": [
+   30,
+   80,
+   250
+  ],
+  "n_pairs": [
+   0,
+   2
+  ]
+ },
+ "opencv": "4.14.0"
+}

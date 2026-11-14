@@ -89,7 +89,10 @@ def build_corpus(family: str, seed: int, level: str = "A", n_docs: int = 130, pa
 
 
 def null_corpus(seed: int, kind: str = "random", n_docs: int = 130):
-    """対照コーパス。random: 文法のない独立同分布の語列。syllable: 無作為な音節列の語（形態のない対照）。shuffled: 実コーパスの語を全体でシャッフル（統語のみ破壊）。"""
+    """対照コーパス。random: 文法のない独立同分布の語列。shuffled: 実コーパスの語を全体でシャッフル（統語のみ破壊）。
+
+    syllable: 約20種の音節を無作為に並べた語（形態も統語もない対照、v1.3）。
+    """
     rng = random.Random(f"null-{kind}-{seed}")
     public, _ = build_corpus("KES", seed, "C", n_docs=n_docs, lacuna=0.0, var_rate=0.0)
     lens = [[len(s.split()) for s in d["sentences"]] for d in public["documents"]]

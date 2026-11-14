@@ -1,0 +1,12458 @@
+{
+ "classes": {
+  "groups": {
+   "S:mo": {
+    "coverage": 1.0,
+    "one_per_sentence": 0.0,
+    "stems": 20
+   },
+   "S:ta": {
+    "coverage": 1.0,
+    "one_per_sentence": 1.0,
+    "stems": 8
+   }
+  },
+  "labels": {
+   "S:mo": "N",
+   "S:ta": "V"
+  },
+  "verb_confidence": 0.99,
+  "verb_group": "S:ta"
+ },
+ "engine": {
+  "config": {
+   "abstain": true,
+   "align_method": "em",
+   "claim_threshold": 0.5,
+   "morph_method": "paradigm",
+   "pos_constraint": true,
+   "segmentation": "transductive",
+   "use_em": true,
+   "use_metadata": true,
+   "use_morph": true,
+   "use_numeral_solver": true,
+   "use_variants": true
+  },
+  "name": "babel-decipher",
+  "version": "1.2.0"
+ },
+ "frequency": {
+  "tokens": 900,
+  "top_chars": [
+   [
+    "i",
+    731
+   ],
+   [
+    "o",
+    622
+   ],
+   [
+    "a",
+    573
+   ],
+   [
+    "m",
+    491
+   ],
+   [
+    "k",
+    483
+   ],
+   [
+    "u",
+    394
+   ],
+   [
+    "r",
+    284
+   ],
+   [
+    "e",
+    276
+   ],
+   [
+    "t",
+    196
+   ],
+   [
+    "n",
+    166
+   ],
+   [
+    "l",
+    133
+   ],
+   [
+    "s",
+    127
+   ],
+   [
+    "p",
+    105
+   ],
+   [
+    "v",
+    101
+   ],
+   [
+    "d",
+    81
+   ]
+  ],
+  "top_words": [
+   [
+    "soruki",
+    24
+   ],
+   [
+    "rakumo",
+    23
+   ],
+   [
+    "pesiki",
+    21
+   ],
+   [
+    "vemi",
+    20
+   ],
+   [
+    "zanimo",
+    20
+   ],
+   [
+    "rakuki",
+    19
+   ],
+   [
+    "xaluta",
+    19
+   ],
+   [
+    "boremo",
+    19
+   ],
+   [
+    "giroki",
+    19
+   ],
+   [
+    "senaki",
+    18
+   ],
+   [
+    "moriki",
+    18
+   ],
+   [
+    "tokomo",
+    18
+   ],
+   [
+    "pilu",
+    18
+   ],
+   [
+    "kiramo",
+    17
+   ],
+   [
+    "boreki",
+    17
+   ]
+  ],
+  "types": 64,
+  "word_entropy_bits": 5.943
+ },
+ "hypotheses": [
+  {
+   "alternatives": {
+    "final": 0.0,
+    "initial": 1.0,
+    "medial": 0.0
+   },
+   "confidence": 0.99,
+   "evidence": "動詞クラスが1つだけ現れる文 300 文での位置",
+   "status": "採用",
+   "topic": "動詞の位置",
+   "value": "initial"
+  },
+  {
+   "alternatives": {
+    "prefix": 0,
+    "suffix": 796
+   },
+   "confidence": 1.0,
+   "evidence": "接頭辞・接尾辞として解析された語の延べ数",
+   "status": "採用",
+   "topic": "接辞の付く側",
+   "value": "suffix"
+  },
+  {
+   "alternatives": {},
+   "confidence": 0.0,
+   "evidence": "意味の手がかりがなく、主語と目的語を区別できない",
+   "status": "保留（判定不能）",
+   "topic": "主語と目的語の順序",
+   "value": null
+  },
+  {
+   "alternatives": {},
+   "confidence": 0.0,
+   "evidence": "意味の手がかりがなく、主語と目的語を区別できない",
+   "status": "保留（判定不能）",
+   "topic": "形容詞と名詞の順序",
+   "value": null
+  },
+  {
+   "alternatives": {},
+   "confidence": 0.0,
+   "evidence": "合計行 0 行",
+   "status": "保留（判定不能）",
+   "topic": "数詞と名詞の順序",
+   "value": null
+  },
+  {
+   "alternatives": {},
+   "confidence": 0.0,
+   "evidence": "合計の方程式 0 本（冗長 0、棄却 0）合計行を示す標識が見つからず、対訳にも数量の手がかりがない",
+   "status": "保留（判定不能）",
+   "topic": "数詞の基数",
+   "value": null
+  }
+ ],
+ "input_warnings": [],
+ "language_id": "gpt6-vso-suffix-blind-20261114",
+ "level": "C",
+ "lexicon": [
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 36,
+   "evidence": 0,
+   "forms": [
+    "boremo",
+    "boreki"
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "N",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": "bore"
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 32,
+   "evidence": 0,
+   "forms": [
+    "dazita",
+    "dazinu",
+    "dazi"
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "V",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": "dazi"
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 21,
+   "evidence": 0,
+   "forms": [
+    "dumamo",
+    "dumaki"
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "N",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": "duma"
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 33,
+   "evidence": 0,
+   "forms": [
+    "femimo",
+    "femiki"
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "N",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": "femi"
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 34,
+   "evidence": 0,
+   "forms": [
+    "furata",
+    "furanu",
+    "fura"
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "V",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": "fura"
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 33,
+   "evidence": 0,
+   "forms": [
+    "giroki",
+    "giromo"
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "N",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": "giro"
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 29,
+   "evidence": 0,
+   "forms": [
+    "hakumo",
+    "hakuki"
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "N",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": "haku"
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 30,
+   "evidence": 0,
+   "forms": [
+    "hetota",
+    "heto",
+    "hetonu"
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "V",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": "heto"
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 32,
+   "evidence": 0,
+   "forms": [
+    "javimo",
+    "javiki"
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "N",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": "javi"
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 31,
+   "evidence": 0,
+   "forms": [
+    "kiramo",
+    "kiraki"
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "N",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": "kira"
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 23,
+   "evidence": 0,
+   "forms": [
+    "lokuki",
+    "lokumo"
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "N",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": "loku"
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 23,
+   "evidence": 0,
+   "forms": [
+    "mekaki",
+    "mekamo"
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "N",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": "meka"
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 34,
+   "evidence": 0,
+   "forms": [
+    "moriki",
+    "morimo"
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "N",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": "mori"
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 22,
+   "evidence": 0,
+   "forms": [
+    "neloki",
+    "nelomo"
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "N",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": "nelo"
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 28,
+   "evidence": 0,
+   "forms": [
+    "padumo",
+    "paduki"
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "N",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": "padu"
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 33,
+   "evidence": 0,
+   "forms": [
+    "pesiki",
+    "pesimo"
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "N",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": "pesi"
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 44,
+   "evidence": 0,
+   "forms": [
+    "pilu",
+    "piluta",
+    "pilunu"
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "V",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": "pilu"
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 36,
+   "evidence": 0,
+   "forms": [
+    "qoranu",
+    "qora",
+    "qorata"
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "V",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": "qora"
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 42,
+   "evidence": 0,
+   "forms": [
+    "rakumo",
+    "rakuki"
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "N",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": "raku"
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 28,
+   "evidence": 0,
+   "forms": [
+    "senaki",
+    "senamo"
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "N",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": "sena"
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 38,
+   "evidence": 0,
+   "forms": [
+    "soruki",
+    "sorumo"
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "N",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": "soru"
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 26,
+   "evidence": 0,
+   "forms": [
+    "tavimo",
+    "taviki"
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "N",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": "tavi"
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 35,
+   "evidence": 0,
+   "forms": [
+    "tokomo",
+    "tokoki"
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "N",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": "toko"
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 43,
+   "evidence": 0,
+   "forms": [
+    "vemi",
+    "vemita",
+    "veminu"
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "V",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": "vemi"
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 28,
+   "evidence": 0,
+   "forms": [
+    "wesimo",
+    "wesiki"
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "N",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": "wesi"
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 44,
+   "evidence": 0,
+   "forms": [
+    "xaluta",
+    "xalu",
+    "xalunu"
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "V",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": "xalu"
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 37,
+   "evidence": 0,
+   "forms": [
+    "yami",
+    "yamita",
+    "yaminu"
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "V",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": "yami"
+  },
+  {
+   "alternatives": [],
+   "candidate": null,
+   "compound": [],
+   "confidence": 0.0,
+   "count": 25,
+   "evidence": 0,
+   "forms": [
+    "zanimo",
+    "zaniki"
+   ],
+   "meaning": null,
+   "polysemy_candidate": false,
+   "pos": "N",
+   "reason": "意味に結びつく証拠がない",
+   "status": "undetermined",
+   "stem": "zani"
+  }
+ ],
+ "morphology": {
+  "affixes": [
+   {
+    "affix": "S:ki",
+    "function": {},
+    "group": "S:mo",
+    "tokens": 300,
+    "types": 20
+   },
+   {
+    "affix": "S:mo",
+    "function": {},
+    "group": "S:mo",
+    "tokens": 300,
+    "types": 20
+   },
+   {
+    "affix": "S:ta",
+    "function": {},
+    "group": "S:ta",
+    "tokens": 105,
+    "types": 8
+   },
+   {
+    "affix": "S:nu",
+    "function": {},
+    "group": "S:ta",
+    "tokens": 91,
+    "types": 8
+   }
+  ],
+  "allomorph_candidates": [],
+  "compounds": 0
+ },
+ "numerals": {
+  "base": null,
+  "confidence": 0.0,
+  "equations": 0,
+  "list_documents": 0,
+  "reason": "合計行を示す標識が見つからず、対訳にも数量の手がかりがない",
+  "redundant": 0,
+  "rejected": 0,
+  "relative": null,
+  "status": "undetermined",
+  "sum_marker": null,
+  "values": {}
+ },
+ "relatedness": {
+  "bore": [
+   [
+    "wesi",
+    0.515
+   ],
+   [
+    "femi",
+    0.506
+   ],
+   [
+    "loku",
+    0.491
+   ]
+  ],
+  "dazi": [
+   [
+    "yami",
+    0.691
+   ],
+   [
+    "pilu",
+    0.626
+   ],
+   [
+    "xalu",
+    0.576
+   ]
+  ],
+  "duma": [
+   [
+    "raku",
+    0.523
+   ],
+   [
+    "kira",
+    0.504
+   ],
+   [
+    "javi",
+    0.475
+   ]
+  ],
+  "femi": [
+   [
+    "tavi",
+    0.55
+   ],
+   [
+    "loku",
+    0.544
+   ],
+   [
+    "mori",
+    0.538
+   ]
+  ],
+  "fura": [
+   [
+    "xalu",
+    0.615
+   ],
+   [
+    "qora",
+    0.611
+   ],
+   [
+    "vemi",
+    0.566
+   ]
+  ],
+  "giro": [
+   [
+    "haku",
+    0.568
+   ],
+   [
+    "pesi",
+    0.486
+   ],
+   [
+    "javi",
+    0.476
+   ]
+  ],
+  "haku": [
+   [
+    "giro",
+    0.568
+   ],
+   [
+    "wesi",
+    0.546
+   ],
+   [
+    "zani",
+    0.521
+   ]
+  ],
+  "heto": [
+   [
+    "pilu",
+    0.684
+   ],
+   [
+    "yami",
+    0.613
+   ],
+   [
+    "vemi",
+    0.573
+   ]
+  ],
+  "javi": [
+   [
+    "toko",
+    0.538
+   ],
+   [
+    "tavi",
+    0.534
+   ],
+   [
+    "soru",
+    0.523
+   ]
+  ],
+  "kira": [
+   [
+    "meka",
+    0.549
+   ],
+   [
+    "duma",
+    0.504
+   ],
+   [
+    "loku",
+    0.493
+   ]
+  ],
+  "loku": [
+   [
+    "femi",
+    0.544
+   ],
+   [
+    "raku",
+    0.498
+   ],
+   [
+    "kira",
+    0.493
+   ]
+  ],
+  "meka": [
+   [
+    "kira",
+    0.549
+   ],
+   [
+    "pesi",
+    0.506
+   ],
+   [
+    "soru",
+    0.502
+   ]
+  ],
+  "mori": [
+   [
+    "femi",
+    0.538
+   ],
+   [
+    "soru",
+    0.536
+   ],
+   [
+    "padu",
+    0.526
+   ]
+  ],
+  "nelo": [
+   [
+    "bore",
+    0.488
+   ],
+   [
+    "mori",
+    0.474
+   ],
+   [
+    "zani",
+    0.45
+   ]
+  ],
+  "padu": [
+   [
+    "toko",
+    0.537
+   ],
+   [
+    "mori",
+    0.526
+   ],
+   [
+    "haku",
+    0.496
+   ]
+  ],
+  "pesi": [
+   [
+    "soru",
+    0.513
+   ],
+   [
+    "meka",
+    0.506
+   ],
+   [
+    "mori",
+    0.499
+   ]
+  ],
+  "pilu": [
+   [
+    "yami",
+    0.738
+   ],
+   [
+    "heto",
+    0.684
+   ],
+   [
+    "vemi",
+    0.646
+   ]
+  ],
+  "qora": [
+   [
+    "pilu",
+    0.623
+   ],
+   [
+    "fura",
+    0.611
+   ],
+   [
+    "vemi",
+    0.607
+   ]
+  ],
+  "raku": [
+   [
+    "toko",
+    0.553
+   ],
+   [
+    "duma",
+    0.523
+   ],
+   [
+    "femi",
+    0.504
+   ]
+  ],
+  "sena": [
+   [
+    "haku",
+    0.516
+   ],
+   [
+    "wesi",
+    0.506
+   ],
+   [
+    "pesi",
+    0.452
+   ]
+  ],
+  "soru": [
+   [
+    "mori",
+    0.536
+   ],
+   [
+    "javi",
+    0.523
+   ],
+   [
+    "pesi",
+    0.513
+   ]
+  ],
+  "tavi": [
+   [
+    "femi",
+    0.55
+   ],
+   [
+    "javi",
+    0.534
+   ],
+   [
+    "meka",
+    0.485
+   ]
+  ],
+  "toko": [
+   [
+    "raku",
+    0.553
+   ],
+   [
+    "javi",
+    0.538
+   ],
+   [
+    "padu",
+    0.537
+   ]
+  ],
+  "vemi": [
+   [
+    "pilu",
+    0.646
+   ],
+   [
+    "yami",
+    0.632
+   ],
+   [
+    "qora",
+    0.607
+   ]
+  ],
+  "wesi": [
+   [
+    "haku",
+    0.546
+   ],
+   [
+    "zani",
+    0.525
+   ],
+   [
+    "bore",
+    0.515
+   ]
+  ],
+  "xalu": [
+   [
+    "fura",
+    0.615
+   ],
+   [
+    "yami",
+    0.592
+   ],
+   [
+    "pilu",
+    0.59
+   ]
+  ],
+  "yami": [
+   [
+    "pilu",
+    0.738
+   ],
+   [
+    "dazi",
+    0.691
+   ],
+   [
+    "vemi",
+    0.632
+   ]
+  ],
+  "zani": [
+   [
+    "wesi",
+    0.525
+   ],
+   [
+    "haku",
+    0.521
+   ],
+   [
+    "padu",
+    0.485
+   ]
+  ]
+ },
+ "segmentation_used": null,
+ "split_used": {
+  "heldout": [],
+  "status": "unspecified",
+  "train": 1
+ },
+ "structure": {
+  "adj_noun": {
+   "confidence": 0.0,
+   "n": 0,
+   "reason": "意味の手がかりがなく、主語と目的語を区別できない",
+   "value": null
+  },
+  "affix_position": {
+   "confidence": 1.0,
+   "support": {
+    "prefix": 0,
+    "suffix": 796
+   },
+   "value": "suffix"
+  },
+  "num_noun": {
+   "confidence": 0.0,
+   "n": 0,
+   "value": null
+  },
+  "numeral_base": {
+   "alternatives": {},
+   "confidence": 0.0,
+   "value": null
+  },
+  "so_order": {
+   "confidence": 0.0,
+   "n": 0,
+   "reason": "意味の手がかりがなく、主語と目的語を区別できない",
+   "value": null
+  },
+  "sum_marker": {
+   "note": "合計行を示す機能語（算術的に検証できる機能であり、実世界の意味の主張ではない）",
+   "value": null
+  },
+  "verb_position": {
+   "alternatives": {
+    "final": 0.0,
+    "initial": 1.0,
+    "medial": 0.0
+   },
+   "confidence": 0.99,
+   "n": 300,
+   "value": "initial"
+  }
+ },
+ "summary": {
+  "claim_threshold": 0.5,
+  "claimed": 0,
+  "stems": 28,
+  "undetermined": 28
+ },
+ "tokens": {
+  "d001": [
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "xalu",
+     "pos": "V",
+     "s": "xalu",
+     "stem": "xalu"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "dumaki",
+     "pos": "N",
+     "s": "dumaki",
+     "stem": "duma"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "kiramo",
+     "pos": "N",
+     "s": "kiramo",
+     "stem": "kira"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "piluta",
+     "pos": "V",
+     "s": "piluta",
+     "stem": "pilu"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "boreki",
+     "pos": "N",
+     "s": "boreki",
+     "stem": "bore"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "padumo",
+     "pos": "N",
+     "s": "padumo",
+     "stem": "padu"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "dazita",
+     "pos": "V",
+     "s": "dazita",
+     "stem": "dazi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "senaki",
+     "pos": "N",
+     "s": "senaki",
+     "stem": "sena"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "wesimo",
+     "pos": "N",
+     "s": "wesimo",
+     "stem": "wesi"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "qora",
+     "pos": "V",
+     "s": "qora",
+     "stem": "qora"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "neloki",
+     "pos": "N",
+     "s": "neloki",
+     "stem": "nelo"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "wesimo",
+     "pos": "N",
+     "s": "wesimo",
+     "stem": "wesi"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "dazinu",
+     "pos": "V",
+     "s": "dazinu",
+     "stem": "dazi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "pesiki",
+     "pos": "N",
+     "s": "pesiki",
+     "stem": "pesi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "morimo",
+     "pos": "N",
+     "s": "morimo",
+     "stem": "mori"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "veminu",
+     "pos": "V",
+     "s": "veminu",
+     "stem": "vemi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "moriki",
+     "pos": "N",
+     "s": "moriki",
+     "stem": "mori"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "tokomo",
+     "pos": "N",
+     "s": "tokomo",
+     "stem": "toko"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "fura",
+     "pos": "V",
+     "s": "fura",
+     "stem": "fura"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "pesiki",
+     "pos": "N",
+     "s": "pesiki",
+     "stem": "pesi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "rakumo",
+     "pos": "N",
+     "s": "rakumo",
+     "stem": "raku"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "vemi",
+     "pos": "V",
+     "s": "vemi",
+     "stem": "vemi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "hakuki",
+     "pos": "N",
+     "s": "hakuki",
+     "stem": "haku"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "kiramo",
+     "pos": "N",
+     "s": "kiramo",
+     "stem": "kira"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "dazinu",
+     "pos": "V",
+     "s": "dazinu",
+     "stem": "dazi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "rakuki",
+     "pos": "N",
+     "s": "rakuki",
+     "stem": "raku"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "sorumo",
+     "pos": "N",
+     "s": "sorumo",
+     "stem": "soru"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "piluta",
+     "pos": "V",
+     "s": "piluta",
+     "stem": "pilu"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "pesiki",
+     "pos": "N",
+     "s": "pesiki",
+     "stem": "pesi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "tokomo",
+     "pos": "N",
+     "s": "tokomo",
+     "stem": "toko"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "hetota",
+     "pos": "V",
+     "s": "hetota",
+     "stem": "heto"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "kiraki",
+     "pos": "N",
+     "s": "kiraki",
+     "stem": "kira"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "giromo",
+     "pos": "N",
+     "s": "giromo",
+     "stem": "giro"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "xaluta",
+     "pos": "V",
+     "s": "xaluta",
+     "stem": "xalu"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "lokuki",
+     "pos": "N",
+     "s": "lokuki",
+     "stem": "loku"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "tokomo",
+     "pos": "N",
+     "s": "tokomo",
+     "stem": "toko"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "xalu",
+     "pos": "V",
+     "s": "xalu",
+     "stem": "xalu"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "pesiki",
+     "pos": "N",
+     "s": "pesiki",
+     "stem": "pesi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "hakumo",
+     "pos": "N",
+     "s": "hakumo",
+     "stem": "haku"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "vemita",
+     "pos": "V",
+     "s": "vemita",
+     "stem": "vemi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "moriki",
+     "pos": "N",
+     "s": "moriki",
+     "stem": "mori"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "zanimo",
+     "pos": "N",
+     "s": "zanimo",
+     "stem": "zani"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "dazita",
+     "pos": "V",
+     "s": "dazita",
+     "stem": "dazi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "wesiki",
+     "pos": "N",
+     "s": "wesiki",
+     "stem": "wesi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "padumo",
+     "pos": "N",
+     "s": "padumo",
+     "stem": "padu"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "veminu",
+     "pos": "V",
+     "s": "veminu",
+     "stem": "vemi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "senaki",
+     "pos": "N",
+     "s": "senaki",
+     "stem": "sena"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "pesimo",
+     "pos": "N",
+     "s": "pesimo",
+     "stem": "pesi"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "furata",
+     "pos": "V",
+     "s": "furata",
+     "stem": "fura"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "tokoki",
+     "pos": "N",
+     "s": "tokoki",
+     "stem": "toko"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "rakumo",
+     "pos": "N",
+     "s": "rakumo",
+     "stem": "raku"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "vemi",
+     "pos": "V",
+     "s": "vemi",
+     "stem": "vemi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "dumaki",
+     "pos": "N",
+     "s": "dumaki",
+     "stem": "duma"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "boremo",
+     "pos": "N",
+     "s": "boremo",
+     "stem": "bore"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "qoranu",
+     "pos": "V",
+     "s": "qoranu",
+     "stem": "qora"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "javiki",
+     "pos": "N",
+     "s": "javiki",
+     "stem": "javi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "mekamo",
+     "pos": "N",
+     "s": "mekamo",
+     "stem": "meka"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "furata",
+     "pos": "V",
+     "s": "furata",
+     "stem": "fura"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "soruki",
+     "pos": "N",
+     "s": "soruki",
+     "stem": "soru"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "hakumo",
+     "pos": "N",
+     "s": "hakumo",
+     "stem": "haku"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "qora",
+     "pos": "V",
+     "s": "qora",
+     "stem": "qora"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "femiki",
+     "pos": "N",
+     "s": "femiki",
+     "stem": "femi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "sorumo",
+     "pos": "N",
+     "s": "sorumo",
+     "stem": "soru"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "dazi",
+     "pos": "V",
+     "s": "dazi",
+     "stem": "dazi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "neloki",
+     "pos": "N",
+     "s": "neloki",
+     "stem": "nelo"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "kiramo",
+     "pos": "N",
+     "s": "kiramo",
+     "stem": "kira"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "xaluta",
+     "pos": "V",
+     "s": "xaluta",
+     "stem": "xalu"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "hakuki",
+     "pos": "N",
+     "s": "hakuki",
+     "stem": "haku"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "rakumo",
+     "pos": "N",
+     "s": "rakumo",
+     "stem": "raku"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "pilu",
+     "pos": "V",
+     "s": "pilu",
+     "stem": "pilu"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "giroki",
+     "pos": "N",
+     "s": "giroki",
+     "stem": "giro"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "zanimo",
+     "pos": "N",
+     "s": "zanimo",
+     "stem": "zani"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "pilu",
+     "pos": "V",
+     "s": "pilu",
+     "stem": "pilu"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "rakuki",
+     "pos": "N",
+     "s": "rakuki",
+     "stem": "raku"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "morimo",
+     "pos": "N",
+     "s": "morimo",
+     "stem": "mori"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "veminu",
+     "pos": "V",
+     "s": "veminu",
+     "stem": "vemi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "senaki",
+     "pos": "N",
+     "s": "senaki",
+     "stem": "sena"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "javimo",
+     "pos": "N",
+     "s": "javimo",
+     "stem": "javi"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "veminu",
+     "pos": "V",
+     "s": "veminu",
+     "stem": "vemi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "hakuki",
+     "pos": "N",
+     "s": "hakuki",
+     "stem": "haku"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "rakumo",
+     "pos": "N",
+     "s": "rakumo",
+     "stem": "raku"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "piluta",
+     "pos": "V",
+     "s": "piluta",
+     "stem": "pilu"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "moriki",
+     "pos": "N",
+     "s": "moriki",
+     "stem": "mori"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "hakumo",
+     "pos": "N",
+     "s": "hakumo",
+     "stem": "haku"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "dazinu",
+     "pos": "V",
+     "s": "dazinu",
+     "stem": "dazi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "boreki",
+     "pos": "N",
+     "s": "boreki",
+     "stem": "bore"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "padumo",
+     "pos": "N",
+     "s": "padumo",
+     "stem": "padu"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "heto",
+     "pos": "V",
+     "s": "heto",
+     "stem": "heto"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "giroki",
+     "pos": "N",
+     "s": "giroki",
+     "stem": "giro"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "morimo",
+     "pos": "N",
+     "s": "morimo",
+     "stem": "mori"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "furata",
+     "pos": "V",
+     "s": "furata",
+     "stem": "fura"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "rakuki",
+     "pos": "N",
+     "s": "rakuki",
+     "stem": "raku"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "senamo",
+     "pos": "N",
+     "s": "senamo",
+     "stem": "sena"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "pilunu",
+     "pos": "V",
+     "s": "pilunu",
+     "stem": "pilu"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "zaniki",
+     "pos": "N",
+     "s": "zaniki",
+     "stem": "zani"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "kiramo",
+     "pos": "N",
+     "s": "kiramo",
+     "stem": "kira"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "pilu",
+     "pos": "V",
+     "s": "pilu",
+     "stem": "pilu"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "paduki",
+     "pos": "N",
+     "s": "paduki",
+     "stem": "padu"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "javimo",
+     "pos": "N",
+     "s": "javimo",
+     "stem": "javi"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "piluta",
+     "pos": "V",
+     "s": "piluta",
+     "stem": "pilu"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "taviki",
+     "pos": "N",
+     "s": "taviki",
+     "stem": "tavi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "giromo",
+     "pos": "N",
+     "s": "giromo",
+     "stem": "giro"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "furanu",
+     "pos": "V",
+     "s": "furanu",
+     "stem": "fura"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "boreki",
+     "pos": "N",
+     "s": "boreki",
+     "stem": "bore"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "pesimo",
+     "pos": "N",
+     "s": "pesimo",
+     "stem": "pesi"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "yami",
+     "pos": "V",
+     "s": "yami",
+     "stem": "yami"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "soruki",
+     "pos": "N",
+     "s": "soruki",
+     "stem": "soru"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "tavimo",
+     "pos": "N",
+     "s": "tavimo",
+     "stem": "tavi"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "xaluta",
+     "pos": "V",
+     "s": "xaluta",
+     "stem": "xalu"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "pesiki",
+     "pos": "N",
+     "s": "pesiki",
+     "stem": "pesi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "nelomo",
+     "pos": "N",
+     "s": "nelomo",
+     "stem": "nelo"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "xalu",
+     "pos": "V",
+     "s": "xalu",
+     "stem": "xalu"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "pesiki",
+     "pos": "N",
+     "s": "pesiki",
+     "stem": "pesi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "padumo",
+     "pos": "N",
+     "s": "padumo",
+     "stem": "padu"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "pilu",
+     "pos": "V",
+     "s": "pilu",
+     "stem": "pilu"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "lokuki",
+     "pos": "N",
+     "s": "lokuki",
+     "stem": "loku"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "padumo",
+     "pos": "N",
+     "s": "padumo",
+     "stem": "padu"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "xalunu",
+     "pos": "V",
+     "s": "xalunu",
+     "stem": "xalu"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "mekaki",
+     "pos": "N",
+     "s": "mekaki",
+     "stem": "meka"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "tavimo",
+     "pos": "N",
+     "s": "tavimo",
+     "stem": "tavi"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "vemi",
+     "pos": "V",
+     "s": "vemi",
+     "stem": "vemi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "pesiki",
+     "pos": "N",
+     "s": "pesiki",
+     "stem": "pesi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "tokomo",
+     "pos": "N",
+     "s": "tokomo",
+     "stem": "toko"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "vemi",
+     "pos": "V",
+     "s": "vemi",
+     "stem": "vemi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "tokoki",
+     "pos": "N",
+     "s": "tokoki",
+     "stem": "toko"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "morimo",
+     "pos": "N",
+     "s": "morimo",
+     "stem": "mori"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "hetonu",
+     "pos": "V",
+     "s": "hetonu",
+     "stem": "heto"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "senaki",
+     "pos": "N",
+     "s": "senaki",
+     "stem": "sena"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "zanimo",
+     "pos": "N",
+     "s": "zanimo",
+     "stem": "zani"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "hetonu",
+     "pos": "V",
+     "s": "hetonu",
+     "stem": "heto"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "wesiki",
+     "pos": "N",
+     "s": "wesiki",
+     "stem": "wesi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "boremo",
+     "pos": "N",
+     "s": "boremo",
+     "stem": "bore"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "fura",
+     "pos": "V",
+     "s": "fura",
+     "stem": "fura"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "giroki",
+     "pos": "N",
+     "s": "giroki",
+     "stem": "giro"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "tavimo",
+     "pos": "N",
+     "s": "tavimo",
+     "stem": "tavi"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "vemita",
+     "pos": "V",
+     "s": "vemita",
+     "stem": "vemi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "femiki",
+     "pos": "N",
+     "s": "femiki",
+     "stem": "femi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "mekamo",
+     "pos": "N",
+     "s": "mekamo",
+     "stem": "meka"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "heto",
+     "pos": "V",
+     "s": "heto",
+     "stem": "heto"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "taviki",
+     "pos": "N",
+     "s": "taviki",
+     "stem": "tavi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "tokomo",
+     "pos": "N",
+     "s": "tokomo",
+     "stem": "toko"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "qoranu",
+     "pos": "V",
+     "s": "qoranu",
+     "stem": "qora"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "boreki",
+     "pos": "N",
+     "s": "boreki",
+     "stem": "bore"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "senamo",
+     "pos": "N",
+     "s": "senamo",
+     "stem": "sena"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "xaluta",
+     "pos": "V",
+     "s": "xaluta",
+     "stem": "xalu"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "rakuki",
+     "pos": "N",
+     "s": "rakuki",
+     "stem": "raku"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "nelomo",
+     "pos": "N",
+     "s": "nelomo",
+     "stem": "nelo"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "furata",
+     "pos": "V",
+     "s": "furata",
+     "stem": "fura"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "senaki",
+     "pos": "N",
+     "s": "senaki",
+     "stem": "sena"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "javimo",
+     "pos": "N",
+     "s": "javimo",
+     "stem": "javi"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "pilunu",
+     "pos": "V",
+     "s": "pilunu",
+     "stem": "pilu"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "soruki",
+     "pos": "N",
+     "s": "soruki",
+     "stem": "soru"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "padumo",
+     "pos": "N",
+     "s": "padumo",
+     "stem": "padu"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "furanu",
+     "pos": "V",
+     "s": "furanu",
+     "stem": "fura"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "mekaki",
+     "pos": "N",
+     "s": "mekaki",
+     "stem": "meka"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "javimo",
+     "pos": "N",
+     "s": "javimo",
+     "stem": "javi"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "furanu",
+     "pos": "V",
+     "s": "furanu",
+     "stem": "fura"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "lokuki",
+     "pos": "N",
+     "s": "lokuki",
+     "stem": "loku"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "rakumo",
+     "pos": "N",
+     "s": "rakumo",
+     "stem": "raku"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "xaluta",
+     "pos": "V",
+     "s": "xaluta",
+     "stem": "xalu"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "tokoki",
+     "pos": "N",
+     "s": "tokoki",
+     "stem": "toko"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "sorumo",
+     "pos": "N",
+     "s": "sorumo",
+     "stem": "soru"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "yami",
+     "pos": "V",
+     "s": "yami",
+     "stem": "yami"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "moriki",
+     "pos": "N",
+     "s": "moriki",
+     "stem": "mori"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "tokomo",
+     "pos": "N",
+     "s": "tokomo",
+     "stem": "toko"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "vemita",
+     "pos": "V",
+     "s": "vemita",
+     "stem": "vemi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "giroki",
+     "pos": "N",
+     "s": "giroki",
+     "stem": "giro"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "javimo",
+     "pos": "N",
+     "s": "javimo",
+     "stem": "javi"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "xalu",
+     "pos": "V",
+     "s": "xalu",
+     "stem": "xalu"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "lokuki",
+     "pos": "N",
+     "s": "lokuki",
+     "stem": "loku"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "sorumo",
+     "pos": "N",
+     "s": "sorumo",
+     "stem": "soru"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "dazita",
+     "pos": "V",
+     "s": "dazita",
+     "stem": "dazi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "femiki",
+     "pos": "N",
+     "s": "femiki",
+     "stem": "femi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "morimo",
+     "pos": "N",
+     "s": "morimo",
+     "stem": "mori"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "veminu",
+     "pos": "V",
+     "s": "veminu",
+     "stem": "vemi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "wesiki",
+     "pos": "N",
+     "s": "wesiki",
+     "stem": "wesi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "lokumo",
+     "pos": "N",
+     "s": "lokumo",
+     "stem": "loku"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "xalunu",
+     "pos": "V",
+     "s": "xalunu",
+     "stem": "xalu"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "taviki",
+     "pos": "N",
+     "s": "taviki",
+     "stem": "tavi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "zanimo",
+     "pos": "N",
+     "s": "zanimo",
+     "stem": "zani"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "qoranu",
+     "pos": "V",
+     "s": "qoranu",
+     "stem": "qora"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "femiki",
+     "pos": "N",
+     "s": "femiki",
+     "stem": "femi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "javimo",
+     "pos": "N",
+     "s": "javimo",
+     "stem": "javi"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "qoranu",
+     "pos": "V",
+     "s": "qoranu",
+     "stem": "qora"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "rakuki",
+     "pos": "N",
+     "s": "rakuki",
+     "stem": "raku"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "sorumo",
+     "pos": "N",
+     "s": "sorumo",
+     "stem": "soru"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "qorata",
+     "pos": "V",
+     "s": "qorata",
+     "stem": "qora"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "tokoki",
+     "pos": "N",
+     "s": "tokoki",
+     "stem": "toko"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "mekamo",
+     "pos": "N",
+     "s": "mekamo",
+     "stem": "meka"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "hetota",
+     "pos": "V",
+     "s": "hetota",
+     "stem": "heto"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "rakuki",
+     "pos": "N",
+     "s": "rakuki",
+     "stem": "raku"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "giromo",
+     "pos": "N",
+     "s": "giromo",
+     "stem": "giro"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "vemi",
+     "pos": "V",
+     "s": "vemi",
+     "stem": "vemi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "moriki",
+     "pos": "N",
+     "s": "moriki",
+     "stem": "mori"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "boremo",
+     "pos": "N",
+     "s": "boremo",
+     "stem": "bore"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "hetota",
+     "pos": "V",
+     "s": "hetota",
+     "stem": "heto"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "dumaki",
+     "pos": "N",
+     "s": "dumaki",
+     "stem": "duma"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "femimo",
+     "pos": "N",
+     "s": "femimo",
+     "stem": "femi"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "yamita",
+     "pos": "V",
+     "s": "yamita",
+     "stem": "yami"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "kiraki",
+     "pos": "N",
+     "s": "kiraki",
+     "stem": "kira"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "wesimo",
+     "pos": "N",
+     "s": "wesimo",
+     "stem": "wesi"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "furata",
+     "pos": "V",
+     "s": "furata",
+     "stem": "fura"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "moriki",
+     "pos": "N",
+     "s": "moriki",
+     "stem": "mori"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "boremo",
+     "pos": "N",
+     "s": "boremo",
+     "stem": "bore"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "qora",
+     "pos": "V",
+     "s": "qora",
+     "stem": "qora"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "soruki",
+     "pos": "N",
+     "s": "soruki",
+     "stem": "soru"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "pesimo",
+     "pos": "N",
+     "s": "pesimo",
+     "stem": "pesi"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "yaminu",
+     "pos": "V",
+     "s": "yaminu",
+     "stem": "yami"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "boreki",
+     "pos": "N",
+     "s": "boreki",
+     "stem": "bore"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "senamo",
+     "pos": "N",
+     "s": "senamo",
+     "stem": "sena"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "xalu",
+     "pos": "V",
+     "s": "xalu",
+     "stem": "xalu"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "moriki",
+     "pos": "N",
+     "s": "moriki",
+     "stem": "mori"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "pesimo",
+     "pos": "N",
+     "s": "pesimo",
+     "stem": "pesi"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "pilu",
+     "pos": "V",
+     "s": "pilu",
+     "stem": "pilu"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "tokoki",
+     "pos": "N",
+     "s": "tokoki",
+     "stem": "toko"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "boremo",
+     "pos": "N",
+     "s": "boremo",
+     "stem": "bore"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "piluta",
+     "pos": "V",
+     "s": "piluta",
+     "stem": "pilu"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "moriki",
+     "pos": "N",
+     "s": "moriki",
+     "stem": "mori"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "padumo",
+     "pos": "N",
+     "s": "padumo",
+     "stem": "padu"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "vemita",
+     "pos": "V",
+     "s": "vemita",
+     "stem": "vemi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "taviki",
+     "pos": "N",
+     "s": "taviki",
+     "stem": "tavi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "femimo",
+     "pos": "N",
+     "s": "femimo",
+     "stem": "femi"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "hetonu",
+     "pos": "V",
+     "s": "hetonu",
+     "stem": "heto"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "boreki",
+     "pos": "N",
+     "s": "boreki",
+     "stem": "bore"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "hakumo",
+     "pos": "N",
+     "s": "hakumo",
+     "stem": "haku"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "xalu",
+     "pos": "V",
+     "s": "xalu",
+     "stem": "xalu"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "soruki",
+     "pos": "N",
+     "s": "soruki",
+     "stem": "soru"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "kiramo",
+     "pos": "N",
+     "s": "kiramo",
+     "stem": "kira"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "heto",
+     "pos": "V",
+     "s": "heto",
+     "stem": "heto"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "rakuki",
+     "pos": "N",
+     "s": "rakuki",
+     "stem": "raku"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "wesimo",
+     "pos": "N",
+     "s": "wesimo",
+     "stem": "wesi"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "fura",
+     "pos": "V",
+     "s": "fura",
+     "stem": "fura"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "femiki",
+     "pos": "N",
+     "s": "femiki",
+     "stem": "femi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "zanimo",
+     "pos": "N",
+     "s": "zanimo",
+     "stem": "zani"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "yamita",
+     "pos": "V",
+     "s": "yamita",
+     "stem": "yami"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "giroki",
+     "pos": "N",
+     "s": "giroki",
+     "stem": "giro"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "femimo",
+     "pos": "N",
+     "s": "femimo",
+     "stem": "femi"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "yaminu",
+     "pos": "V",
+     "s": "yaminu",
+     "stem": "yami"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "femiki",
+     "pos": "N",
+     "s": "femiki",
+     "stem": "femi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "padumo",
+     "pos": "N",
+     "s": "padumo",
+     "stem": "padu"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "yamita",
+     "pos": "V",
+     "s": "yamita",
+     "stem": "yami"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "neloki",
+     "pos": "N",
+     "s": "neloki",
+     "stem": "nelo"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "javimo",
+     "pos": "N",
+     "s": "javimo",
+     "stem": "javi"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "hetonu",
+     "pos": "V",
+     "s": "hetonu",
+     "stem": "heto"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "giroki",
+     "pos": "N",
+     "s": "giroki",
+     "stem": "giro"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "zanimo",
+     "pos": "N",
+     "s": "zanimo",
+     "stem": "zani"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "pilunu",
+     "pos": "V",
+     "s": "pilunu",
+     "stem": "pilu"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "rakuki",
+     "pos": "N",
+     "s": "rakuki",
+     "stem": "raku"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "giromo",
+     "pos": "N",
+     "s": "giromo",
+     "stem": "giro"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "furanu",
+     "pos": "V",
+     "s": "furanu",
+     "stem": "fura"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "moriki",
+     "pos": "N",
+     "s": "moriki",
+     "stem": "mori"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "mekamo",
+     "pos": "N",
+     "s": "mekamo",
+     "stem": "meka"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "furanu",
+     "pos": "V",
+     "s": "furanu",
+     "stem": "fura"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "rakuki",
+     "pos": "N",
+     "s": "rakuki",
+     "stem": "raku"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "kiramo",
+     "pos": "N",
+     "s": "kiramo",
+     "stem": "kira"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "yami",
+     "pos": "V",
+     "s": "yami",
+     "stem": "yami"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "kiraki",
+     "pos": "N",
+     "s": "kiraki",
+     "stem": "kira"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "boremo",
+     "pos": "N",
+     "s": "boremo",
+     "stem": "bore"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "furata",
+     "pos": "V",
+     "s": "furata",
+     "stem": "fura"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "boreki",
+     "pos": "N",
+     "s": "boreki",
+     "stem": "bore"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "morimo",
+     "pos": "N",
+     "s": "morimo",
+     "stem": "mori"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "qoranu",
+     "pos": "V",
+     "s": "qoranu",
+     "stem": "qora"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "femiki",
+     "pos": "N",
+     "s": "femiki",
+     "stem": "femi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "sorumo",
+     "pos": "N",
+     "s": "sorumo",
+     "stem": "soru"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "qoranu",
+     "pos": "V",
+     "s": "qoranu",
+     "stem": "qora"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "paduki",
+     "pos": "N",
+     "s": "paduki",
+     "stem": "padu"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "pesimo",
+     "pos": "N",
+     "s": "pesimo",
+     "stem": "pesi"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "hetonu",
+     "pos": "V",
+     "s": "hetonu",
+     "stem": "heto"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "dumaki",
+     "pos": "N",
+     "s": "dumaki",
+     "stem": "duma"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "morimo",
+     "pos": "N",
+     "s": "morimo",
+     "stem": "mori"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "yami",
+     "pos": "V",
+     "s": "yami",
+     "stem": "yami"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "neloki",
+     "pos": "N",
+     "s": "neloki",
+     "stem": "nelo"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "kiramo",
+     "pos": "N",
+     "s": "kiramo",
+     "stem": "kira"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "qorata",
+     "pos": "V",
+     "s": "qorata",
+     "stem": "qora"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "paduki",
+     "pos": "N",
+     "s": "paduki",
+     "stem": "padu"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "sorumo",
+     "pos": "N",
+     "s": "sorumo",
+     "stem": "soru"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "qora",
+     "pos": "V",
+     "s": "qora",
+     "stem": "qora"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "pesiki",
+     "pos": "N",
+     "s": "pesiki",
+     "stem": "pesi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "hakumo",
+     "pos": "N",
+     "s": "hakumo",
+     "stem": "haku"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "dazinu",
+     "pos": "V",
+     "s": "dazinu",
+     "stem": "dazi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "wesiki",
+     "pos": "N",
+     "s": "wesiki",
+     "stem": "wesi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "rakumo",
+     "pos": "N",
+     "s": "rakumo",
+     "stem": "raku"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "pilu",
+     "pos": "V",
+     "s": "pilu",
+     "stem": "pilu"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "soruki",
+     "pos": "N",
+     "s": "soruki",
+     "stem": "soru"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "hakumo",
+     "pos": "N",
+     "s": "hakumo",
+     "stem": "haku"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "vemita",
+     "pos": "V",
+     "s": "vemita",
+     "stem": "vemi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "tokoki",
+     "pos": "N",
+     "s": "tokoki",
+     "stem": "toko"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "tavimo",
+     "pos": "N",
+     "s": "tavimo",
+     "stem": "tavi"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "furanu",
+     "pos": "V",
+     "s": "furanu",
+     "stem": "fura"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "pesiki",
+     "pos": "N",
+     "s": "pesiki",
+     "stem": "pesi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "morimo",
+     "pos": "N",
+     "s": "morimo",
+     "stem": "mori"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "qoranu",
+     "pos": "V",
+     "s": "qoranu",
+     "stem": "qora"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "mekaki",
+     "pos": "N",
+     "s": "mekaki",
+     "stem": "meka"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "pesimo",
+     "pos": "N",
+     "s": "pesimo",
+     "stem": "pesi"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "dazinu",
+     "pos": "V",
+     "s": "dazinu",
+     "stem": "dazi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "soruki",
+     "pos": "N",
+     "s": "soruki",
+     "stem": "soru"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "wesimo",
+     "pos": "N",
+     "s": "wesimo",
+     "stem": "wesi"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "furata",
+     "pos": "V",
+     "s": "furata",
+     "stem": "fura"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "rakuki",
+     "pos": "N",
+     "s": "rakuki",
+     "stem": "raku"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "morimo",
+     "pos": "N",
+     "s": "morimo",
+     "stem": "mori"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "dazita",
+     "pos": "V",
+     "s": "dazita",
+     "stem": "dazi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "giroki",
+     "pos": "N",
+     "s": "giroki",
+     "stem": "giro"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "rakumo",
+     "pos": "N",
+     "s": "rakumo",
+     "stem": "raku"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "xaluta",
+     "pos": "V",
+     "s": "xaluta",
+     "stem": "xalu"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "zaniki",
+     "pos": "N",
+     "s": "zaniki",
+     "stem": "zani"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "femimo",
+     "pos": "N",
+     "s": "femimo",
+     "stem": "femi"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "vemi",
+     "pos": "V",
+     "s": "vemi",
+     "stem": "vemi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "dumaki",
+     "pos": "N",
+     "s": "dumaki",
+     "stem": "duma"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "lokumo",
+     "pos": "N",
+     "s": "lokumo",
+     "stem": "loku"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "dazinu",
+     "pos": "V",
+     "s": "dazinu",
+     "stem": "dazi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "tokoki",
+     "pos": "N",
+     "s": "tokoki",
+     "stem": "toko"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "tavimo",
+     "pos": "N",
+     "s": "tavimo",
+     "stem": "tavi"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "vemi",
+     "pos": "V",
+     "s": "vemi",
+     "stem": "vemi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "tokoki",
+     "pos": "N",
+     "s": "tokoki",
+     "stem": "toko"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "boremo",
+     "pos": "N",
+     "s": "boremo",
+     "stem": "bore"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "qora",
+     "pos": "V",
+     "s": "qora",
+     "stem": "qora"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "kiraki",
+     "pos": "N",
+     "s": "kiraki",
+     "stem": "kira"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "tavimo",
+     "pos": "N",
+     "s": "tavimo",
+     "stem": "tavi"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "yami",
+     "pos": "V",
+     "s": "yami",
+     "stem": "yami"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "tokoki",
+     "pos": "N",
+     "s": "tokoki",
+     "stem": "toko"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "sorumo",
+     "pos": "N",
+     "s": "sorumo",
+     "stem": "soru"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "veminu",
+     "pos": "V",
+     "s": "veminu",
+     "stem": "vemi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "femiki",
+     "pos": "N",
+     "s": "femiki",
+     "stem": "femi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "tokomo",
+     "pos": "N",
+     "s": "tokomo",
+     "stem": "toko"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "dazinu",
+     "pos": "V",
+     "s": "dazinu",
+     "stem": "dazi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "neloki",
+     "pos": "N",
+     "s": "neloki",
+     "stem": "nelo"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "mekamo",
+     "pos": "N",
+     "s": "mekamo",
+     "stem": "meka"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "vemi",
+     "pos": "V",
+     "s": "vemi",
+     "stem": "vemi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "soruki",
+     "pos": "N",
+     "s": "soruki",
+     "stem": "soru"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "javimo",
+     "pos": "N",
+     "s": "javimo",
+     "stem": "javi"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "vemi",
+     "pos": "V",
+     "s": "vemi",
+     "stem": "vemi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "javiki",
+     "pos": "N",
+     "s": "javiki",
+     "stem": "javi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "boremo",
+     "pos": "N",
+     "s": "boremo",
+     "stem": "bore"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "pilu",
+     "pos": "V",
+     "s": "pilu",
+     "stem": "pilu"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "neloki",
+     "pos": "N",
+     "s": "neloki",
+     "stem": "nelo"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "hakumo",
+     "pos": "N",
+     "s": "hakumo",
+     "stem": "haku"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "vemita",
+     "pos": "V",
+     "s": "vemita",
+     "stem": "vemi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "dumaki",
+     "pos": "N",
+     "s": "dumaki",
+     "stem": "duma"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "femimo",
+     "pos": "N",
+     "s": "femimo",
+     "stem": "femi"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "hetota",
+     "pos": "V",
+     "s": "hetota",
+     "stem": "heto"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "soruki",
+     "pos": "N",
+     "s": "soruki",
+     "stem": "soru"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "giromo",
+     "pos": "N",
+     "s": "giromo",
+     "stem": "giro"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "piluta",
+     "pos": "V",
+     "s": "piluta",
+     "stem": "pilu"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "paduki",
+     "pos": "N",
+     "s": "paduki",
+     "stem": "padu"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "kiramo",
+     "pos": "N",
+     "s": "kiramo",
+     "stem": "kira"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "yaminu",
+     "pos": "V",
+     "s": "yaminu",
+     "stem": "yami"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "neloki",
+     "pos": "N",
+     "s": "neloki",
+     "stem": "nelo"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "tavimo",
+     "pos": "N",
+     "s": "tavimo",
+     "stem": "tavi"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "dazi",
+     "pos": "V",
+     "s": "dazi",
+     "stem": "dazi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "rakuki",
+     "pos": "N",
+     "s": "rakuki",
+     "stem": "raku"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "javimo",
+     "pos": "N",
+     "s": "javimo",
+     "stem": "javi"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "hetota",
+     "pos": "V",
+     "s": "hetota",
+     "stem": "heto"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "javiki",
+     "pos": "N",
+     "s": "javiki",
+     "stem": "javi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "femimo",
+     "pos": "N",
+     "s": "femimo",
+     "stem": "femi"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "vemita",
+     "pos": "V",
+     "s": "vemita",
+     "stem": "vemi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "javiki",
+     "pos": "N",
+     "s": "javiki",
+     "stem": "javi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "zanimo",
+     "pos": "N",
+     "s": "zanimo",
+     "stem": "zani"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "yamita",
+     "pos": "V",
+     "s": "yamita",
+     "stem": "yami"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "pesiki",
+     "pos": "N",
+     "s": "pesiki",
+     "stem": "pesi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "morimo",
+     "pos": "N",
+     "s": "morimo",
+     "stem": "mori"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "xalunu",
+     "pos": "V",
+     "s": "xalunu",
+     "stem": "xalu"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "hakuki",
+     "pos": "N",
+     "s": "hakuki",
+     "stem": "haku"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "mekamo",
+     "pos": "N",
+     "s": "mekamo",
+     "stem": "meka"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "yaminu",
+     "pos": "V",
+     "s": "yaminu",
+     "stem": "yami"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "giroki",
+     "pos": "N",
+     "s": "giroki",
+     "stem": "giro"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "morimo",
+     "pos": "N",
+     "s": "morimo",
+     "stem": "mori"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "yamita",
+     "pos": "V",
+     "s": "yamita",
+     "stem": "yami"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "zaniki",
+     "pos": "N",
+     "s": "zaniki",
+     "stem": "zani"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "dumamo",
+     "pos": "N",
+     "s": "dumamo",
+     "stem": "duma"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "dazita",
+     "pos": "V",
+     "s": "dazita",
+     "stem": "dazi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "paduki",
+     "pos": "N",
+     "s": "paduki",
+     "stem": "padu"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "tokomo",
+     "pos": "N",
+     "s": "tokomo",
+     "stem": "toko"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "piluta",
+     "pos": "V",
+     "s": "piluta",
+     "stem": "pilu"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "zaniki",
+     "pos": "N",
+     "s": "zaniki",
+     "stem": "zani"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "rakumo",
+     "pos": "N",
+     "s": "rakumo",
+     "stem": "raku"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "piluta",
+     "pos": "V",
+     "s": "piluta",
+     "stem": "pilu"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "dumaki",
+     "pos": "N",
+     "s": "dumaki",
+     "stem": "duma"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "femimo",
+     "pos": "N",
+     "s": "femimo",
+     "stem": "femi"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "qorata",
+     "pos": "V",
+     "s": "qorata",
+     "stem": "qora"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "rakuki",
+     "pos": "N",
+     "s": "rakuki",
+     "stem": "raku"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "padumo",
+     "pos": "N",
+     "s": "padumo",
+     "stem": "padu"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "yamita",
+     "pos": "V",
+     "s": "yamita",
+     "stem": "yami"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "giroki",
+     "pos": "N",
+     "s": "giroki",
+     "stem": "giro"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "femimo",
+     "pos": "N",
+     "s": "femimo",
+     "stem": "femi"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "xaluta",
+     "pos": "V",
+     "s": "xaluta",
+     "stem": "xalu"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "giroki",
+     "pos": "N",
+     "s": "giroki",
+     "stem": "giro"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "rakumo",
+     "pos": "N",
+     "s": "rakumo",
+     "stem": "raku"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "xalunu",
+     "pos": "V",
+     "s": "xalunu",
+     "stem": "xalu"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "mekaki",
+     "pos": "N",
+     "s": "mekaki",
+     "stem": "meka"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "tavimo",
+     "pos": "N",
+     "s": "tavimo",
+     "stem": "tavi"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "pilu",
+     "pos": "V",
+     "s": "pilu",
+     "stem": "pilu"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "tokoki",
+     "pos": "N",
+     "s": "tokoki",
+     "stem": "toko"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "giromo",
+     "pos": "N",
+     "s": "giromo",
+     "stem": "giro"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "dazi",
+     "pos": "V",
+     "s": "dazi",
+     "stem": "dazi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "femiki",
+     "pos": "N",
+     "s": "femiki",
+     "stem": "femi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "nelomo",
+     "pos": "N",
+     "s": "nelomo",
+     "stem": "nelo"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "qora",
+     "pos": "V",
+     "s": "qora",
+     "stem": "qora"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "boreki",
+     "pos": "N",
+     "s": "boreki",
+     "stem": "bore"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "senamo",
+     "pos": "N",
+     "s": "senamo",
+     "stem": "sena"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "xaluta",
+     "pos": "V",
+     "s": "xaluta",
+     "stem": "xalu"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "javiki",
+     "pos": "N",
+     "s": "javiki",
+     "stem": "javi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "boremo",
+     "pos": "N",
+     "s": "boremo",
+     "stem": "bore"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "pilu",
+     "pos": "V",
+     "s": "pilu",
+     "stem": "pilu"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "javiki",
+     "pos": "N",
+     "s": "javiki",
+     "stem": "javi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "lokumo",
+     "pos": "N",
+     "s": "lokumo",
+     "stem": "loku"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "veminu",
+     "pos": "V",
+     "s": "veminu",
+     "stem": "vemi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "boreki",
+     "pos": "N",
+     "s": "boreki",
+     "stem": "bore"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "wesimo",
+     "pos": "N",
+     "s": "wesimo",
+     "stem": "wesi"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "pilunu",
+     "pos": "V",
+     "s": "pilunu",
+     "stem": "pilu"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "neloki",
+     "pos": "N",
+     "s": "neloki",
+     "stem": "nelo"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "kiramo",
+     "pos": "N",
+     "s": "kiramo",
+     "stem": "kira"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "piluta",
+     "pos": "V",
+     "s": "piluta",
+     "stem": "pilu"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "senaki",
+     "pos": "N",
+     "s": "senaki",
+     "stem": "sena"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "dumamo",
+     "pos": "N",
+     "s": "dumamo",
+     "stem": "duma"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "furata",
+     "pos": "V",
+     "s": "furata",
+     "stem": "fura"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "lokuki",
+     "pos": "N",
+     "s": "lokuki",
+     "stem": "loku"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "tokomo",
+     "pos": "N",
+     "s": "tokomo",
+     "stem": "toko"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "dazita",
+     "pos": "V",
+     "s": "dazita",
+     "stem": "dazi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "javiki",
+     "pos": "N",
+     "s": "javiki",
+     "stem": "javi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "nelomo",
+     "pos": "N",
+     "s": "nelomo",
+     "stem": "nelo"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "pilunu",
+     "pos": "V",
+     "s": "pilunu",
+     "stem": "pilu"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "wesiki",
+     "pos": "N",
+     "s": "wesiki",
+     "stem": "wesi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "lokumo",
+     "pos": "N",
+     "s": "lokumo",
+     "stem": "loku"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "yami",
+     "pos": "V",
+     "s": "yami",
+     "stem": "yami"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "moriki",
+     "pos": "N",
+     "s": "moriki",
+     "stem": "mori"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "nelomo",
+     "pos": "N",
+     "s": "nelomo",
+     "stem": "nelo"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "yami",
+     "pos": "V",
+     "s": "yami",
+     "stem": "yami"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "tokoki",
+     "pos": "N",
+     "s": "tokoki",
+     "stem": "toko"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "femimo",
+     "pos": "N",
+     "s": "femimo",
+     "stem": "femi"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "dazita",
+     "pos": "V",
+     "s": "dazita",
+     "stem": "dazi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "senaki",
+     "pos": "N",
+     "s": "senaki",
+     "stem": "sena"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "kiramo",
+     "pos": "N",
+     "s": "kiramo",
+     "stem": "kira"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "hetota",
+     "pos": "V",
+     "s": "hetota",
+     "stem": "heto"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "moriki",
+     "pos": "N",
+     "s": "moriki",
+     "stem": "mori"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "giromo",
+     "pos": "N",
+     "s": "giromo",
+     "stem": "giro"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "pilu",
+     "pos": "V",
+     "s": "pilu",
+     "stem": "pilu"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "javiki",
+     "pos": "N",
+     "s": "javiki",
+     "stem": "javi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "sorumo",
+     "pos": "N",
+     "s": "sorumo",
+     "stem": "soru"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "yamita",
+     "pos": "V",
+     "s": "yamita",
+     "stem": "yami"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "javiki",
+     "pos": "N",
+     "s": "javiki",
+     "stem": "javi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "boremo",
+     "pos": "N",
+     "s": "boremo",
+     "stem": "bore"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "vemi",
+     "pos": "V",
+     "s": "vemi",
+     "stem": "vemi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "hakuki",
+     "pos": "N",
+     "s": "hakuki",
+     "stem": "haku"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "dumamo",
+     "pos": "N",
+     "s": "dumamo",
+     "stem": "duma"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "hetonu",
+     "pos": "V",
+     "s": "hetonu",
+     "stem": "heto"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "tokoki",
+     "pos": "N",
+     "s": "tokoki",
+     "stem": "toko"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "wesimo",
+     "pos": "N",
+     "s": "wesimo",
+     "stem": "wesi"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "furanu",
+     "pos": "V",
+     "s": "furanu",
+     "stem": "fura"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "soruki",
+     "pos": "N",
+     "s": "soruki",
+     "stem": "soru"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "pesimo",
+     "pos": "N",
+     "s": "pesimo",
+     "stem": "pesi"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "qora",
+     "pos": "V",
+     "s": "qora",
+     "stem": "qora"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "zaniki",
+     "pos": "N",
+     "s": "zaniki",
+     "stem": "zani"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "lokumo",
+     "pos": "N",
+     "s": "lokumo",
+     "stem": "loku"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "heto",
+     "pos": "V",
+     "s": "heto",
+     "stem": "heto"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "soruki",
+     "pos": "N",
+     "s": "soruki",
+     "stem": "soru"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "nelomo",
+     "pos": "N",
+     "s": "nelomo",
+     "stem": "nelo"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "furanu",
+     "pos": "V",
+     "s": "furanu",
+     "stem": "fura"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "rakuki",
+     "pos": "N",
+     "s": "rakuki",
+     "stem": "raku"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "lokumo",
+     "pos": "N",
+     "s": "lokumo",
+     "stem": "loku"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "vemita",
+     "pos": "V",
+     "s": "vemita",
+     "stem": "vemi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "taviki",
+     "pos": "N",
+     "s": "taviki",
+     "stem": "tavi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "javimo",
+     "pos": "N",
+     "s": "javimo",
+     "stem": "javi"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "dazinu",
+     "pos": "V",
+     "s": "dazinu",
+     "stem": "dazi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "giroki",
+     "pos": "N",
+     "s": "giroki",
+     "stem": "giro"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "kiramo",
+     "pos": "N",
+     "s": "kiramo",
+     "stem": "kira"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "fura",
+     "pos": "V",
+     "s": "fura",
+     "stem": "fura"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "hakuki",
+     "pos": "N",
+     "s": "hakuki",
+     "stem": "haku"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "rakumo",
+     "pos": "N",
+     "s": "rakumo",
+     "stem": "raku"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "heto",
+     "pos": "V",
+     "s": "heto",
+     "stem": "heto"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "soruki",
+     "pos": "N",
+     "s": "soruki",
+     "stem": "soru"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "zanimo",
+     "pos": "N",
+     "s": "zanimo",
+     "stem": "zani"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "piluta",
+     "pos": "V",
+     "s": "piluta",
+     "stem": "pilu"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "dumaki",
+     "pos": "N",
+     "s": "dumaki",
+     "stem": "duma"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "mekamo",
+     "pos": "N",
+     "s": "mekamo",
+     "stem": "meka"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "fura",
+     "pos": "V",
+     "s": "fura",
+     "stem": "fura"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "moriki",
+     "pos": "N",
+     "s": "moriki",
+     "stem": "mori"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "boremo",
+     "pos": "N",
+     "s": "boremo",
+     "stem": "bore"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "furata",
+     "pos": "V",
+     "s": "furata",
+     "stem": "fura"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "neloki",
+     "pos": "N",
+     "s": "neloki",
+     "stem": "nelo"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "femimo",
+     "pos": "N",
+     "s": "femimo",
+     "stem": "femi"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "qora",
+     "pos": "V",
+     "s": "qora",
+     "stem": "qora"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "rakuki",
+     "pos": "N",
+     "s": "rakuki",
+     "stem": "raku"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "zanimo",
+     "pos": "N",
+     "s": "zanimo",
+     "stem": "zani"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "veminu",
+     "pos": "V",
+     "s": "veminu",
+     "stem": "vemi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "femiki",
+     "pos": "N",
+     "s": "femiki",
+     "stem": "femi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "tavimo",
+     "pos": "N",
+     "s": "tavimo",
+     "stem": "tavi"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "xalu",
+     "pos": "V",
+     "s": "xalu",
+     "stem": "xalu"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "wesiki",
+     "pos": "N",
+     "s": "wesiki",
+     "stem": "wesi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "dumamo",
+     "pos": "N",
+     "s": "dumamo",
+     "stem": "duma"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "piluta",
+     "pos": "V",
+     "s": "piluta",
+     "stem": "pilu"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "boreki",
+     "pos": "N",
+     "s": "boreki",
+     "stem": "bore"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "senamo",
+     "pos": "N",
+     "s": "senamo",
+     "stem": "sena"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "yaminu",
+     "pos": "V",
+     "s": "yaminu",
+     "stem": "yami"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "wesiki",
+     "pos": "N",
+     "s": "wesiki",
+     "stem": "wesi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "kiramo",
+     "pos": "N",
+     "s": "kiramo",
+     "stem": "kira"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "xalunu",
+     "pos": "V",
+     "s": "xalunu",
+     "stem": "xalu"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "pesiki",
+     "pos": "N",
+     "s": "pesiki",
+     "stem": "pesi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "javimo",
+     "pos": "N",
+     "s": "javimo",
+     "stem": "javi"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "vemi",
+     "pos": "V",
+     "s": "vemi",
+     "stem": "vemi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "femiki",
+     "pos": "N",
+     "s": "femiki",
+     "stem": "femi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "pesimo",
+     "pos": "N",
+     "s": "pesimo",
+     "stem": "pesi"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "xalu",
+     "pos": "V",
+     "s": "xalu",
+     "stem": "xalu"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "moriki",
+     "pos": "N",
+     "s": "moriki",
+     "stem": "mori"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "tokomo",
+     "pos": "N",
+     "s": "tokomo",
+     "stem": "toko"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "qorata",
+     "pos": "V",
+     "s": "qorata",
+     "stem": "qora"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "tokoki",
+     "pos": "N",
+     "s": "tokoki",
+     "stem": "toko"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "sorumo",
+     "pos": "N",
+     "s": "sorumo",
+     "stem": "soru"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "qorata",
+     "pos": "V",
+     "s": "qorata",
+     "stem": "qora"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "mekaki",
+     "pos": "N",
+     "s": "mekaki",
+     "stem": "meka"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "giromo",
+     "pos": "N",
+     "s": "giromo",
+     "stem": "giro"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "yaminu",
+     "pos": "V",
+     "s": "yaminu",
+     "stem": "yami"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "boreki",
+     "pos": "N",
+     "s": "boreki",
+     "stem": "bore"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "sorumo",
+     "pos": "N",
+     "s": "sorumo",
+     "stem": "soru"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "xalunu",
+     "pos": "V",
+     "s": "xalunu",
+     "stem": "xalu"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "lokuki",
+     "pos": "N",
+     "s": "lokuki",
+     "stem": "loku"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "rakumo",
+     "pos": "N",
+     "s": "rakumo",
+     "stem": "raku"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "xalunu",
+     "pos": "V",
+     "s": "xalunu",
+     "stem": "xalu"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "giroki",
+     "pos": "N",
+     "s": "giroki",
+     "stem": "giro"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "dumamo",
+     "pos": "N",
+     "s": "dumamo",
+     "stem": "duma"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "pilunu",
+     "pos": "V",
+     "s": "pilunu",
+     "stem": "pilu"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "wesiki",
+     "pos": "N",
+     "s": "wesiki",
+     "stem": "wesi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "pesimo",
+     "pos": "N",
+     "s": "pesimo",
+     "stem": "pesi"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "qoranu",
+     "pos": "V",
+     "s": "qoranu",
+     "stem": "qora"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "senaki",
+     "pos": "N",
+     "s": "senaki",
+     "stem": "sena"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "zanimo",
+     "pos": "N",
+     "s": "zanimo",
+     "stem": "zani"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "hetota",
+     "pos": "V",
+     "s": "hetota",
+     "stem": "heto"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "javiki",
+     "pos": "N",
+     "s": "javiki",
+     "stem": "javi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "zanimo",
+     "pos": "N",
+     "s": "zanimo",
+     "stem": "zani"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "heto",
+     "pos": "V",
+     "s": "heto",
+     "stem": "heto"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "soruki",
+     "pos": "N",
+     "s": "soruki",
+     "stem": "soru"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "boremo",
+     "pos": "N",
+     "s": "boremo",
+     "stem": "bore"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "piluta",
+     "pos": "V",
+     "s": "piluta",
+     "stem": "pilu"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "soruki",
+     "pos": "N",
+     "s": "soruki",
+     "stem": "soru"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "dumamo",
+     "pos": "N",
+     "s": "dumamo",
+     "stem": "duma"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "xaluta",
+     "pos": "V",
+     "s": "xaluta",
+     "stem": "xalu"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "mekaki",
+     "pos": "N",
+     "s": "mekaki",
+     "stem": "meka"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "rakumo",
+     "pos": "N",
+     "s": "rakumo",
+     "stem": "raku"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "vemita",
+     "pos": "V",
+     "s": "vemita",
+     "stem": "vemi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "soruki",
+     "pos": "N",
+     "s": "soruki",
+     "stem": "soru"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "dumamo",
+     "pos": "N",
+     "s": "dumamo",
+     "stem": "duma"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "xalu",
+     "pos": "V",
+     "s": "xalu",
+     "stem": "xalu"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "senaki",
+     "pos": "N",
+     "s": "senaki",
+     "stem": "sena"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "morimo",
+     "pos": "N",
+     "s": "morimo",
+     "stem": "mori"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "xalu",
+     "pos": "V",
+     "s": "xalu",
+     "stem": "xalu"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "pesiki",
+     "pos": "N",
+     "s": "pesiki",
+     "stem": "pesi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "zanimo",
+     "pos": "N",
+     "s": "zanimo",
+     "stem": "zani"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "fura",
+     "pos": "V",
+     "s": "fura",
+     "stem": "fura"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "rakuki",
+     "pos": "N",
+     "s": "rakuki",
+     "stem": "raku"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "mekamo",
+     "pos": "N",
+     "s": "mekamo",
+     "stem": "meka"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "xaluta",
+     "pos": "V",
+     "s": "xaluta",
+     "stem": "xalu"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "boreki",
+     "pos": "N",
+     "s": "boreki",
+     "stem": "bore"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "javimo",
+     "pos": "N",
+     "s": "javimo",
+     "stem": "javi"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "dazita",
+     "pos": "V",
+     "s": "dazita",
+     "stem": "dazi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "pesiki",
+     "pos": "N",
+     "s": "pesiki",
+     "stem": "pesi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "rakumo",
+     "pos": "N",
+     "s": "rakumo",
+     "stem": "raku"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "hetota",
+     "pos": "V",
+     "s": "hetota",
+     "stem": "heto"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "pesiki",
+     "pos": "N",
+     "s": "pesiki",
+     "stem": "pesi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "boremo",
+     "pos": "N",
+     "s": "boremo",
+     "stem": "bore"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "vemi",
+     "pos": "V",
+     "s": "vemi",
+     "stem": "vemi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "mekaki",
+     "pos": "N",
+     "s": "mekaki",
+     "stem": "meka"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "tokomo",
+     "pos": "N",
+     "s": "tokomo",
+     "stem": "toko"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "vemita",
+     "pos": "V",
+     "s": "vemita",
+     "stem": "vemi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "tokoki",
+     "pos": "N",
+     "s": "tokoki",
+     "stem": "toko"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "zanimo",
+     "pos": "N",
+     "s": "zanimo",
+     "stem": "zani"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "yamita",
+     "pos": "V",
+     "s": "yamita",
+     "stem": "yami"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "taviki",
+     "pos": "N",
+     "s": "taviki",
+     "stem": "tavi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "zanimo",
+     "pos": "N",
+     "s": "zanimo",
+     "stem": "zani"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "vemi",
+     "pos": "V",
+     "s": "vemi",
+     "stem": "vemi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "mekaki",
+     "pos": "N",
+     "s": "mekaki",
+     "stem": "meka"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "rakumo",
+     "pos": "N",
+     "s": "rakumo",
+     "stem": "raku"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "vemi",
+     "pos": "V",
+     "s": "vemi",
+     "stem": "vemi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "senaki",
+     "pos": "N",
+     "s": "senaki",
+     "stem": "sena"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "padumo",
+     "pos": "N",
+     "s": "padumo",
+     "stem": "padu"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "furata",
+     "pos": "V",
+     "s": "furata",
+     "stem": "fura"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "kiraki",
+     "pos": "N",
+     "s": "kiraki",
+     "stem": "kira"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "femimo",
+     "pos": "N",
+     "s": "femimo",
+     "stem": "femi"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "pilu",
+     "pos": "V",
+     "s": "pilu",
+     "stem": "pilu"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "moriki",
+     "pos": "N",
+     "s": "moriki",
+     "stem": "mori"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "zanimo",
+     "pos": "N",
+     "s": "zanimo",
+     "stem": "zani"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "dazinu",
+     "pos": "V",
+     "s": "dazinu",
+     "stem": "dazi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "kiraki",
+     "pos": "N",
+     "s": "kiraki",
+     "stem": "kira"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "hakumo",
+     "pos": "N",
+     "s": "hakumo",
+     "stem": "haku"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "vemita",
+     "pos": "V",
+     "s": "vemita",
+     "stem": "vemi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "kiraki",
+     "pos": "N",
+     "s": "kiraki",
+     "stem": "kira"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "boremo",
+     "pos": "N",
+     "s": "boremo",
+     "stem": "bore"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "qoranu",
+     "pos": "V",
+     "s": "qoranu",
+     "stem": "qora"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "hakuki",
+     "pos": "N",
+     "s": "hakuki",
+     "stem": "haku"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "lokumo",
+     "pos": "N",
+     "s": "lokumo",
+     "stem": "loku"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "pilu",
+     "pos": "V",
+     "s": "pilu",
+     "stem": "pilu"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "wesiki",
+     "pos": "N",
+     "s": "wesiki",
+     "stem": "wesi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "rakumo",
+     "pos": "N",
+     "s": "rakumo",
+     "stem": "raku"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "xalu",
+     "pos": "V",
+     "s": "xalu",
+     "stem": "xalu"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "boreki",
+     "pos": "N",
+     "s": "boreki",
+     "stem": "bore"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "tavimo",
+     "pos": "N",
+     "s": "tavimo",
+     "stem": "tavi"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "qora",
+     "pos": "V",
+     "s": "qora",
+     "stem": "qora"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "tokoki",
+     "pos": "N",
+     "s": "tokoki",
+     "stem": "toko"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "hakumo",
+     "pos": "N",
+     "s": "hakumo",
+     "stem": "haku"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "dazinu",
+     "pos": "V",
+     "s": "dazinu",
+     "stem": "dazi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "giroki",
+     "pos": "N",
+     "s": "giroki",
+     "stem": "giro"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "senamo",
+     "pos": "N",
+     "s": "senamo",
+     "stem": "sena"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "qoranu",
+     "pos": "V",
+     "s": "qoranu",
+     "stem": "qora"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "javiki",
+     "pos": "N",
+     "s": "javiki",
+     "stem": "javi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "femimo",
+     "pos": "N",
+     "s": "femimo",
+     "stem": "femi"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "fura",
+     "pos": "V",
+     "s": "fura",
+     "stem": "fura"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "rakuki",
+     "pos": "N",
+     "s": "rakuki",
+     "stem": "raku"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "dumamo",
+     "pos": "N",
+     "s": "dumamo",
+     "stem": "duma"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "pilunu",
+     "pos": "V",
+     "s": "pilunu",
+     "stem": "pilu"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "boreki",
+     "pos": "N",
+     "s": "boreki",
+     "stem": "bore"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "tokomo",
+     "pos": "N",
+     "s": "tokomo",
+     "stem": "toko"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "vemi",
+     "pos": "V",
+     "s": "vemi",
+     "stem": "vemi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "pesiki",
+     "pos": "N",
+     "s": "pesiki",
+     "stem": "pesi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "senamo",
+     "pos": "N",
+     "s": "senamo",
+     "stem": "sena"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "qora",
+     "pos": "V",
+     "s": "qora",
+     "stem": "qora"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "lokuki",
+     "pos": "N",
+     "s": "lokuki",
+     "stem": "loku"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "zanimo",
+     "pos": "N",
+     "s": "zanimo",
+     "stem": "zani"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "furanu",
+     "pos": "V",
+     "s": "furanu",
+     "stem": "fura"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "kiraki",
+     "pos": "N",
+     "s": "kiraki",
+     "stem": "kira"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "tavimo",
+     "pos": "N",
+     "s": "tavimo",
+     "stem": "tavi"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "xaluta",
+     "pos": "V",
+     "s": "xaluta",
+     "stem": "xalu"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "senaki",
+     "pos": "N",
+     "s": "senaki",
+     "stem": "sena"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "wesimo",
+     "pos": "N",
+     "s": "wesimo",
+     "stem": "wesi"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "fura",
+     "pos": "V",
+     "s": "fura",
+     "stem": "fura"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "soruki",
+     "pos": "N",
+     "s": "soruki",
+     "stem": "soru"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "femimo",
+     "pos": "N",
+     "s": "femimo",
+     "stem": "femi"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "vemi",
+     "pos": "V",
+     "s": "vemi",
+     "stem": "vemi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "paduki",
+     "pos": "N",
+     "s": "paduki",
+     "stem": "padu"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "hakumo",
+     "pos": "N",
+     "s": "hakumo",
+     "stem": "haku"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "qoranu",
+     "pos": "V",
+     "s": "qoranu",
+     "stem": "qora"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "pesiki",
+     "pos": "N",
+     "s": "pesiki",
+     "stem": "pesi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "zanimo",
+     "pos": "N",
+     "s": "zanimo",
+     "stem": "zani"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "xaluta",
+     "pos": "V",
+     "s": "xaluta",
+     "stem": "xalu"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "kiraki",
+     "pos": "N",
+     "s": "kiraki",
+     "stem": "kira"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "javimo",
+     "pos": "N",
+     "s": "javimo",
+     "stem": "javi"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "qora",
+     "pos": "V",
+     "s": "qora",
+     "stem": "qora"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "mekaki",
+     "pos": "N",
+     "s": "mekaki",
+     "stem": "meka"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "giromo",
+     "pos": "N",
+     "s": "giromo",
+     "stem": "giro"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "pilunu",
+     "pos": "V",
+     "s": "pilunu",
+     "stem": "pilu"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "giroki",
+     "pos": "N",
+     "s": "giroki",
+     "stem": "giro"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "dumamo",
+     "pos": "N",
+     "s": "dumamo",
+     "stem": "duma"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "piluta",
+     "pos": "V",
+     "s": "piluta",
+     "stem": "pilu"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "dumaki",
+     "pos": "N",
+     "s": "dumaki",
+     "stem": "duma"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "kiramo",
+     "pos": "N",
+     "s": "kiramo",
+     "stem": "kira"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "dazi",
+     "pos": "V",
+     "s": "dazi",
+     "stem": "dazi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "mekaki",
+     "pos": "N",
+     "s": "mekaki",
+     "stem": "meka"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "hakumo",
+     "pos": "N",
+     "s": "hakumo",
+     "stem": "haku"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "vemi",
+     "pos": "V",
+     "s": "vemi",
+     "stem": "vemi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "mekaki",
+     "pos": "N",
+     "s": "mekaki",
+     "stem": "meka"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "rakumo",
+     "pos": "N",
+     "s": "rakumo",
+     "stem": "raku"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "pilu",
+     "pos": "V",
+     "s": "pilu",
+     "stem": "pilu"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "paduki",
+     "pos": "N",
+     "s": "paduki",
+     "stem": "padu"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "giromo",
+     "pos": "N",
+     "s": "giromo",
+     "stem": "giro"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "yamita",
+     "pos": "V",
+     "s": "yamita",
+     "stem": "yami"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "femiki",
+     "pos": "N",
+     "s": "femiki",
+     "stem": "femi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "padumo",
+     "pos": "N",
+     "s": "padumo",
+     "stem": "padu"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "xalu",
+     "pos": "V",
+     "s": "xalu",
+     "stem": "xalu"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "moriki",
+     "pos": "N",
+     "s": "moriki",
+     "stem": "mori"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "kiramo",
+     "pos": "N",
+     "s": "kiramo",
+     "stem": "kira"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "vemi",
+     "pos": "V",
+     "s": "vemi",
+     "stem": "vemi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "neloki",
+     "pos": "N",
+     "s": "neloki",
+     "stem": "nelo"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "zanimo",
+     "pos": "N",
+     "s": "zanimo",
+     "stem": "zani"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "yami",
+     "pos": "V",
+     "s": "yami",
+     "stem": "yami"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "lokuki",
+     "pos": "N",
+     "s": "lokuki",
+     "stem": "loku"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "dumamo",
+     "pos": "N",
+     "s": "dumamo",
+     "stem": "duma"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "furanu",
+     "pos": "V",
+     "s": "furanu",
+     "stem": "fura"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "rakuki",
+     "pos": "N",
+     "s": "rakuki",
+     "stem": "raku"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "padumo",
+     "pos": "N",
+     "s": "padumo",
+     "stem": "padu"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "yaminu",
+     "pos": "V",
+     "s": "yaminu",
+     "stem": "yami"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "soruki",
+     "pos": "N",
+     "s": "soruki",
+     "stem": "soru"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "tavimo",
+     "pos": "N",
+     "s": "tavimo",
+     "stem": "tavi"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "yaminu",
+     "pos": "V",
+     "s": "yaminu",
+     "stem": "yami"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "mekaki",
+     "pos": "N",
+     "s": "mekaki",
+     "stem": "meka"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "morimo",
+     "pos": "N",
+     "s": "morimo",
+     "stem": "mori"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "yami",
+     "pos": "V",
+     "s": "yami",
+     "stem": "yami"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "lokuki",
+     "pos": "N",
+     "s": "lokuki",
+     "stem": "loku"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "wesimo",
+     "pos": "N",
+     "s": "wesimo",
+     "stem": "wesi"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "xaluta",
+     "pos": "V",
+     "s": "xaluta",
+     "stem": "xalu"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "kiraki",
+     "pos": "N",
+     "s": "kiraki",
+     "stem": "kira"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "boremo",
+     "pos": "N",
+     "s": "boremo",
+     "stem": "bore"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "yami",
+     "pos": "V",
+     "s": "yami",
+     "stem": "yami"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "wesiki",
+     "pos": "N",
+     "s": "wesiki",
+     "stem": "wesi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "boremo",
+     "pos": "N",
+     "s": "boremo",
+     "stem": "bore"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "xalunu",
+     "pos": "V",
+     "s": "xalunu",
+     "stem": "xalu"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "senaki",
+     "pos": "N",
+     "s": "senaki",
+     "stem": "sena"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "hakumo",
+     "pos": "N",
+     "s": "hakumo",
+     "stem": "haku"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "pilunu",
+     "pos": "V",
+     "s": "pilunu",
+     "stem": "pilu"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "boreki",
+     "pos": "N",
+     "s": "boreki",
+     "stem": "bore"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "femimo",
+     "pos": "N",
+     "s": "femimo",
+     "stem": "femi"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "xaluta",
+     "pos": "V",
+     "s": "xaluta",
+     "stem": "xalu"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "wesiki",
+     "pos": "N",
+     "s": "wesiki",
+     "stem": "wesi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "tokomo",
+     "pos": "N",
+     "s": "tokomo",
+     "stem": "toko"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "pilunu",
+     "pos": "V",
+     "s": "pilunu",
+     "stem": "pilu"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "taviki",
+     "pos": "N",
+     "s": "taviki",
+     "stem": "tavi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "hakumo",
+     "pos": "N",
+     "s": "hakumo",
+     "stem": "haku"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "xaluta",
+     "pos": "V",
+     "s": "xaluta",
+     "stem": "xalu"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "senaki",
+     "pos": "N",
+     "s": "senaki",
+     "stem": "sena"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "padumo",
+     "pos": "N",
+     "s": "padumo",
+     "stem": "padu"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "qoranu",
+     "pos": "V",
+     "s": "qoranu",
+     "stem": "qora"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "senaki",
+     "pos": "N",
+     "s": "senaki",
+     "stem": "sena"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "lokumo",
+     "pos": "N",
+     "s": "lokumo",
+     "stem": "loku"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "hetonu",
+     "pos": "V",
+     "s": "hetonu",
+     "stem": "heto"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "javiki",
+     "pos": "N",
+     "s": "javiki",
+     "stem": "javi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "wesimo",
+     "pos": "N",
+     "s": "wesimo",
+     "stem": "wesi"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "yami",
+     "pos": "V",
+     "s": "yami",
+     "stem": "yami"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "taviki",
+     "pos": "N",
+     "s": "taviki",
+     "stem": "tavi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "padumo",
+     "pos": "N",
+     "s": "padumo",
+     "stem": "padu"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "furanu",
+     "pos": "V",
+     "s": "furanu",
+     "stem": "fura"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "taviki",
+     "pos": "N",
+     "s": "taviki",
+     "stem": "tavi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "morimo",
+     "pos": "N",
+     "s": "morimo",
+     "stem": "mori"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "hetota",
+     "pos": "V",
+     "s": "hetota",
+     "stem": "heto"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "mekaki",
+     "pos": "N",
+     "s": "mekaki",
+     "stem": "meka"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "hakumo",
+     "pos": "N",
+     "s": "hakumo",
+     "stem": "haku"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "dazita",
+     "pos": "V",
+     "s": "dazita",
+     "stem": "dazi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "neloki",
+     "pos": "N",
+     "s": "neloki",
+     "stem": "nelo"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "senamo",
+     "pos": "N",
+     "s": "senamo",
+     "stem": "sena"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "yamita",
+     "pos": "V",
+     "s": "yamita",
+     "stem": "yami"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "senaki",
+     "pos": "N",
+     "s": "senaki",
+     "stem": "sena"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "padumo",
+     "pos": "N",
+     "s": "padumo",
+     "stem": "padu"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "pilunu",
+     "pos": "V",
+     "s": "pilunu",
+     "stem": "pilu"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "tokoki",
+     "pos": "N",
+     "s": "tokoki",
+     "stem": "toko"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "wesimo",
+     "pos": "N",
+     "s": "wesimo",
+     "stem": "wesi"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "yaminu",
+     "pos": "V",
+     "s": "yaminu",
+     "stem": "yami"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "femiki",
+     "pos": "N",
+     "s": "femiki",
+     "stem": "femi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "tokomo",
+     "pos": "N",
+     "s": "tokomo",
+     "stem": "toko"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "hetonu",
+     "pos": "V",
+     "s": "hetonu",
+     "stem": "heto"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "javiki",
+     "pos": "N",
+     "s": "javiki",
+     "stem": "javi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "nelomo",
+     "pos": "N",
+     "s": "nelomo",
+     "stem": "nelo"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "dazita",
+     "pos": "V",
+     "s": "dazita",
+     "stem": "dazi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "pesiki",
+     "pos": "N",
+     "s": "pesiki",
+     "stem": "pesi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "hakumo",
+     "pos": "N",
+     "s": "hakumo",
+     "stem": "haku"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "heto",
+     "pos": "V",
+     "s": "heto",
+     "stem": "heto"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "kiraki",
+     "pos": "N",
+     "s": "kiraki",
+     "stem": "kira"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "giromo",
+     "pos": "N",
+     "s": "giromo",
+     "stem": "giro"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "pilu",
+     "pos": "V",
+     "s": "pilu",
+     "stem": "pilu"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "femiki",
+     "pos": "N",
+     "s": "femiki",
+     "stem": "femi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "pesimo",
+     "pos": "N",
+     "s": "pesimo",
+     "stem": "pesi"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "pilunu",
+     "pos": "V",
+     "s": "pilunu",
+     "stem": "pilu"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "paduki",
+     "pos": "N",
+     "s": "paduki",
+     "stem": "padu"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "femimo",
+     "pos": "N",
+     "s": "femimo",
+     "stem": "femi"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "xaluta",
+     "pos": "V",
+     "s": "xaluta",
+     "stem": "xalu"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "moriki",
+     "pos": "N",
+     "s": "moriki",
+     "stem": "mori"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "kiramo",
+     "pos": "N",
+     "s": "kiramo",
+     "stem": "kira"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "xalu",
+     "pos": "V",
+     "s": "xalu",
+     "stem": "xalu"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "hakuki",
+     "pos": "N",
+     "s": "hakuki",
+     "stem": "haku"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "wesimo",
+     "pos": "N",
+     "s": "wesimo",
+     "stem": "wesi"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "furata",
+     "pos": "V",
+     "s": "furata",
+     "stem": "fura"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "soruki",
+     "pos": "N",
+     "s": "soruki",
+     "stem": "soru"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "mekamo",
+     "pos": "N",
+     "s": "mekamo",
+     "stem": "meka"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "qoranu",
+     "pos": "V",
+     "s": "qoranu",
+     "stem": "qora"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "paduki",
+     "pos": "N",
+     "s": "paduki",
+     "stem": "padu"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "tokomo",
+     "pos": "N",
+     "s": "tokomo",
+     "stem": "toko"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "pilu",
+     "pos": "V",
+     "s": "pilu",
+     "stem": "pilu"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "paduki",
+     "pos": "N",
+     "s": "paduki",
+     "stem": "padu"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "boremo",
+     "pos": "N",
+     "s": "boremo",
+     "stem": "bore"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "pilu",
+     "pos": "V",
+     "s": "pilu",
+     "stem": "pilu"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "pesiki",
+     "pos": "N",
+     "s": "pesiki",
+     "stem": "pesi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "tavimo",
+     "pos": "N",
+     "s": "tavimo",
+     "stem": "tavi"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "xaluta",
+     "pos": "V",
+     "s": "xaluta",
+     "stem": "xalu"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "giroki",
+     "pos": "N",
+     "s": "giroki",
+     "stem": "giro"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "lokumo",
+     "pos": "N",
+     "s": "lokumo",
+     "stem": "loku"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "dazita",
+     "pos": "V",
+     "s": "dazita",
+     "stem": "dazi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "moriki",
+     "pos": "N",
+     "s": "moriki",
+     "stem": "mori"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "senamo",
+     "pos": "N",
+     "s": "senamo",
+     "stem": "sena"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "hetonu",
+     "pos": "V",
+     "s": "hetonu",
+     "stem": "heto"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "giroki",
+     "pos": "N",
+     "s": "giroki",
+     "stem": "giro"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "boremo",
+     "pos": "N",
+     "s": "boremo",
+     "stem": "bore"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "furata",
+     "pos": "V",
+     "s": "furata",
+     "stem": "fura"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "hakuki",
+     "pos": "N",
+     "s": "hakuki",
+     "stem": "haku"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "tokomo",
+     "pos": "N",
+     "s": "tokomo",
+     "stem": "toko"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "dazi",
+     "pos": "V",
+     "s": "dazi",
+     "stem": "dazi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "moriki",
+     "pos": "N",
+     "s": "moriki",
+     "stem": "mori"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "nelomo",
+     "pos": "N",
+     "s": "nelomo",
+     "stem": "nelo"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "xaluta",
+     "pos": "V",
+     "s": "xaluta",
+     "stem": "xalu"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "wesiki",
+     "pos": "N",
+     "s": "wesiki",
+     "stem": "wesi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "hakumo",
+     "pos": "N",
+     "s": "hakumo",
+     "stem": "haku"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "yaminu",
+     "pos": "V",
+     "s": "yaminu",
+     "stem": "yami"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "paduki",
+     "pos": "N",
+     "s": "paduki",
+     "stem": "padu"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "rakumo",
+     "pos": "N",
+     "s": "rakumo",
+     "stem": "raku"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "vemi",
+     "pos": "V",
+     "s": "vemi",
+     "stem": "vemi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "soruki",
+     "pos": "N",
+     "s": "soruki",
+     "stem": "soru"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "rakumo",
+     "pos": "N",
+     "s": "rakumo",
+     "stem": "raku"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "piluta",
+     "pos": "V",
+     "s": "piluta",
+     "stem": "pilu"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "wesiki",
+     "pos": "N",
+     "s": "wesiki",
+     "stem": "wesi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "pesimo",
+     "pos": "N",
+     "s": "pesimo",
+     "stem": "pesi"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "furanu",
+     "pos": "V",
+     "s": "furanu",
+     "stem": "fura"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "femiki",
+     "pos": "N",
+     "s": "femiki",
+     "stem": "femi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "javimo",
+     "pos": "N",
+     "s": "javimo",
+     "stem": "javi"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "xalunu",
+     "pos": "V",
+     "s": "xalunu",
+     "stem": "xalu"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "soruki",
+     "pos": "N",
+     "s": "soruki",
+     "stem": "soru"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "wesimo",
+     "pos": "N",
+     "s": "wesimo",
+     "stem": "wesi"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "qora",
+     "pos": "V",
+     "s": "qora",
+     "stem": "qora"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "hakuki",
+     "pos": "N",
+     "s": "hakuki",
+     "stem": "haku"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "pesimo",
+     "pos": "N",
+     "s": "pesimo",
+     "stem": "pesi"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "yaminu",
+     "pos": "V",
+     "s": "yaminu",
+     "stem": "yami"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "boreki",
+     "pos": "N",
+     "s": "boreki",
+     "stem": "bore"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "rakumo",
+     "pos": "N",
+     "s": "rakumo",
+     "stem": "raku"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "yami",
+     "pos": "V",
+     "s": "yami",
+     "stem": "yami"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "giroki",
+     "pos": "N",
+     "s": "giroki",
+     "stem": "giro"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "javimo",
+     "pos": "N",
+     "s": "javimo",
+     "stem": "javi"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "pilu",
+     "pos": "V",
+     "s": "pilu",
+     "stem": "pilu"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "senaki",
+     "pos": "N",
+     "s": "senaki",
+     "stem": "sena"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "kiramo",
+     "pos": "N",
+     "s": "kiramo",
+     "stem": "kira"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "xalu",
+     "pos": "V",
+     "s": "xalu",
+     "stem": "xalu"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "hakuki",
+     "pos": "N",
+     "s": "hakuki",
+     "stem": "haku"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "giromo",
+     "pos": "N",
+     "s": "giromo",
+     "stem": "giro"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "veminu",
+     "pos": "V",
+     "s": "veminu",
+     "stem": "vemi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "giroki",
+     "pos": "N",
+     "s": "giroki",
+     "stem": "giro"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "rakumo",
+     "pos": "N",
+     "s": "rakumo",
+     "stem": "raku"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "yamita",
+     "pos": "V",
+     "s": "yamita",
+     "stem": "yami"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "hakuki",
+     "pos": "N",
+     "s": "hakuki",
+     "stem": "haku"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "kiramo",
+     "pos": "N",
+     "s": "kiramo",
+     "stem": "kira"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "dazi",
+     "pos": "V",
+     "s": "dazi",
+     "stem": "dazi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "lokuki",
+     "pos": "N",
+     "s": "lokuki",
+     "stem": "loku"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "femimo",
+     "pos": "N",
+     "s": "femimo",
+     "stem": "femi"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "furata",
+     "pos": "V",
+     "s": "furata",
+     "stem": "fura"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "javiki",
+     "pos": "N",
+     "s": "javiki",
+     "stem": "javi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "dumamo",
+     "pos": "N",
+     "s": "dumamo",
+     "stem": "duma"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "xalunu",
+     "pos": "V",
+     "s": "xalunu",
+     "stem": "xalu"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "senaki",
+     "pos": "N",
+     "s": "senaki",
+     "stem": "sena"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "sorumo",
+     "pos": "N",
+     "s": "sorumo",
+     "stem": "soru"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "qorata",
+     "pos": "V",
+     "s": "qorata",
+     "stem": "qora"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "rakuki",
+     "pos": "N",
+     "s": "rakuki",
+     "stem": "raku"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "morimo",
+     "pos": "N",
+     "s": "morimo",
+     "stem": "mori"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "heto",
+     "pos": "V",
+     "s": "heto",
+     "stem": "heto"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "soruki",
+     "pos": "N",
+     "s": "soruki",
+     "stem": "soru"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "nelomo",
+     "pos": "N",
+     "s": "nelomo",
+     "stem": "nelo"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "dazita",
+     "pos": "V",
+     "s": "dazita",
+     "stem": "dazi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "neloki",
+     "pos": "N",
+     "s": "neloki",
+     "stem": "nelo"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "giromo",
+     "pos": "N",
+     "s": "giromo",
+     "stem": "giro"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "dazita",
+     "pos": "V",
+     "s": "dazita",
+     "stem": "dazi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "pesiki",
+     "pos": "N",
+     "s": "pesiki",
+     "stem": "pesi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "zanimo",
+     "pos": "N",
+     "s": "zanimo",
+     "stem": "zani"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "qorata",
+     "pos": "V",
+     "s": "qorata",
+     "stem": "qora"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "dumaki",
+     "pos": "N",
+     "s": "dumaki",
+     "stem": "duma"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "tavimo",
+     "pos": "N",
+     "s": "tavimo",
+     "stem": "tavi"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "qoranu",
+     "pos": "V",
+     "s": "qoranu",
+     "stem": "qora"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "lokuki",
+     "pos": "N",
+     "s": "lokuki",
+     "stem": "loku"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "tokomo",
+     "pos": "N",
+     "s": "tokomo",
+     "stem": "toko"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "furata",
+     "pos": "V",
+     "s": "furata",
+     "stem": "fura"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "soruki",
+     "pos": "N",
+     "s": "soruki",
+     "stem": "soru"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "javimo",
+     "pos": "N",
+     "s": "javimo",
+     "stem": "javi"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "pilu",
+     "pos": "V",
+     "s": "pilu",
+     "stem": "pilu"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "lokuki",
+     "pos": "N",
+     "s": "lokuki",
+     "stem": "loku"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "tavimo",
+     "pos": "N",
+     "s": "tavimo",
+     "stem": "tavi"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "vemita",
+     "pos": "V",
+     "s": "vemita",
+     "stem": "vemi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "boreki",
+     "pos": "N",
+     "s": "boreki",
+     "stem": "bore"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "lokumo",
+     "pos": "N",
+     "s": "lokumo",
+     "stem": "loku"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "hetota",
+     "pos": "V",
+     "s": "hetota",
+     "stem": "heto"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "soruki",
+     "pos": "N",
+     "s": "soruki",
+     "stem": "soru"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "tavimo",
+     "pos": "N",
+     "s": "tavimo",
+     "stem": "tavi"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "hetota",
+     "pos": "V",
+     "s": "hetota",
+     "stem": "heto"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "taviki",
+     "pos": "N",
+     "s": "taviki",
+     "stem": "tavi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "sorumo",
+     "pos": "N",
+     "s": "sorumo",
+     "stem": "soru"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "xalunu",
+     "pos": "V",
+     "s": "xalunu",
+     "stem": "xalu"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "rakuki",
+     "pos": "N",
+     "s": "rakuki",
+     "stem": "raku"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "zanimo",
+     "pos": "N",
+     "s": "zanimo",
+     "stem": "zani"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "yamita",
+     "pos": "V",
+     "s": "yamita",
+     "stem": "yami"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "kiraki",
+     "pos": "N",
+     "s": "kiraki",
+     "stem": "kira"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "tokomo",
+     "pos": "N",
+     "s": "tokomo",
+     "stem": "toko"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "vemita",
+     "pos": "V",
+     "s": "vemita",
+     "stem": "vemi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "giroki",
+     "pos": "N",
+     "s": "giroki",
+     "stem": "giro"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "rakumo",
+     "pos": "N",
+     "s": "rakumo",
+     "stem": "raku"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "vemi",
+     "pos": "V",
+     "s": "vemi",
+     "stem": "vemi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "kiraki",
+     "pos": "N",
+     "s": "kiraki",
+     "stem": "kira"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "lokumo",
+     "pos": "N",
+     "s": "lokumo",
+     "stem": "loku"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "dazita",
+     "pos": "V",
+     "s": "dazita",
+     "stem": "dazi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "senaki",
+     "pos": "N",
+     "s": "senaki",
+     "stem": "sena"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "rakumo",
+     "pos": "N",
+     "s": "rakumo",
+     "stem": "raku"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "yami",
+     "pos": "V",
+     "s": "yami",
+     "stem": "yami"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "javiki",
+     "pos": "N",
+     "s": "javiki",
+     "stem": "javi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "wesimo",
+     "pos": "N",
+     "s": "wesimo",
+     "stem": "wesi"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "dazi",
+     "pos": "V",
+     "s": "dazi",
+     "stem": "dazi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "soruki",
+     "pos": "N",
+     "s": "soruki",
+     "stem": "soru"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "senamo",
+     "pos": "N",
+     "s": "senamo",
+     "stem": "sena"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "veminu",
+     "pos": "V",
+     "s": "veminu",
+     "stem": "vemi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "paduki",
+     "pos": "N",
+     "s": "paduki",
+     "stem": "padu"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "giromo",
+     "pos": "N",
+     "s": "giromo",
+     "stem": "giro"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "heto",
+     "pos": "V",
+     "s": "heto",
+     "stem": "heto"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "pesiki",
+     "pos": "N",
+     "s": "pesiki",
+     "stem": "pesi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "padumo",
+     "pos": "N",
+     "s": "padumo",
+     "stem": "padu"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "qoranu",
+     "pos": "V",
+     "s": "qoranu",
+     "stem": "qora"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "kiraki",
+     "pos": "N",
+     "s": "kiraki",
+     "stem": "kira"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "javimo",
+     "pos": "N",
+     "s": "javimo",
+     "stem": "javi"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "dazi",
+     "pos": "V",
+     "s": "dazi",
+     "stem": "dazi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "femiki",
+     "pos": "N",
+     "s": "femiki",
+     "stem": "femi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "rakumo",
+     "pos": "N",
+     "s": "rakumo",
+     "stem": "raku"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "qora",
+     "pos": "V",
+     "s": "qora",
+     "stem": "qora"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "wesiki",
+     "pos": "N",
+     "s": "wesiki",
+     "stem": "wesi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "sorumo",
+     "pos": "N",
+     "s": "sorumo",
+     "stem": "soru"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [],
+     "feats": [],
+     "norm": "yami",
+     "pos": "V",
+     "s": "yami",
+     "stem": "yami"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "pesiki",
+     "pos": "N",
+     "s": "pesiki",
+     "stem": "pesi"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "nelomo",
+     "pos": "N",
+     "s": "nelomo",
+     "stem": "nelo"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "xaluta",
+     "pos": "V",
+     "s": "xaluta",
+     "stem": "xalu"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "hakuki",
+     "pos": "N",
+     "s": "hakuki",
+     "stem": "haku"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "boremo",
+     "pos": "N",
+     "s": "boremo",
+     "stem": "bore"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "qoranu",
+     "pos": "V",
+     "s": "qoranu",
+     "stem": "qora"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "tokoki",
+     "pos": "N",
+     "s": "tokoki",
+     "stem": "toko"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "morimo",
+     "pos": "N",
+     "s": "morimo",
+     "stem": "mori"
+    }
+   ],
+   [
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "hetota",
+     "pos": "V",
+     "s": "hetota",
+     "stem": "heto"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "mekaki",
+     "pos": "N",
+     "s": "mekaki",
+     "stem": "meka"
+    },
+    {
+     "concept": null,
+     "conf": 0.0,
+     "cuts": [
+      4
+     ],
+     "feats": [],
+     "norm": "femimo",
+     "pos": "N",
+     "s": "femimo",
+     "stem": "femi"
+    }
+   ]
+  ]
+ },
+ "variants": {
+  "merged_types": 0,
+  "rules": []
+ },
+ "verdict": {
+  "decipherable_structure": true,
+  "morphology": {
+   "affixed_token_share": 0.8844,
+   "n_affixes": 4,
+   "present": true
+  },
+  "semantic_evidence": "none",
+  "syntax": {
+   "entropy": 3.6728,
+   "present": true,
+   "reduction": 0.0976,
+   "shuffled_mean": 4.0701,
+   "z": 23.81
+  },
+  "text": "内部構造（語形・語順・数詞）は推定できるが、実世界の意味に対応づける証拠がない。意味は判定不能。"
+ }
+}

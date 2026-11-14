@@ -1,0 +1,107 @@
+{
+ "affix_inventory": {
+  "f1": 0.597,
+  "precision": 0.7143,
+  "recall": 0.5128
+ },
+ "attempt": {
+  "answer_already_public": true,
+  "attempt": 4,
+  "commit": "40c9b373b9316638a6519717b82415b835ba2488",
+  "created_utc": "2026-11-14T08:10:24+00:00",
+  "engine_fingerprint": "ed3b72055dd2e820",
+  "first_attempt": false,
+  "name": "nax-holdout-levelC",
+  "sha256": "c73cb8418dcaecf19ae23c4e9db8c4d1dfd7ffa3fc68640f7760d9f242996f03"
+ },
+ "blind": false,
+ "errors": [],
+ "gloss_heldout": {
+  "abstain": 1.0,
+  "correct": 0.0,
+  "feature_jaccard": 0.0,
+  "numeral_correct": 0.0,
+  "tokens": 762,
+  "wrong": 0.0
+ },
+ "gloss_train": {
+  "abstain": 1.0,
+  "correct": 0.0,
+  "feature_jaccard": 0.0,
+  "numeral_correct": 0.0,
+  "tokens": 2972,
+  "wrong": 0.0
+ },
+ "independent": false,
+ "language_id": "NAX-7001",
+ "level": "C",
+ "lexicon": {
+  "abstain": 228,
+  "abstain_rate_without_evidence": 1.0,
+  "claimed": 0,
+  "correct": 0,
+  "coverage": 0.0,
+  "precision": null,
+  "wrong": 0
+ },
+ "lexicon_inferred": {
+  "abstain": 228,
+  "abstain_rate_without_evidence": 1.0,
+  "claimed": 0,
+  "correct": 0,
+  "coverage": 0.0,
+  "given_excluded": 0,
+  "note": "トークン単位の採点では、既知語は最初から lexicon の集計から除外している（lexicon と同じ値）",
+  "precision": null,
+  "wrong": 0
+ },
+ "null_verdict": null,
+ "numerals": {
+  "abstain": 17,
+  "accuracy": 0.0,
+  "correct": 0,
+  "false_numeral": 0,
+  "relative": true,
+  "wrong": 0
+ },
+ "oov": {
+  "claimed_anyway": 0,
+  "heldout_tokens_with_unseen_stem": 11
+ },
+ "overclaim": {
+  "meaning_claims": 0,
+  "overclaims": 0,
+  "semantic_evidence_available": false
+ },
+ "pos": {
+  "accuracy": 0.7095,
+  "accuracy_when_labelled": 0.8188,
+  "labelled": 0.8665
+ },
+ "provenance": "解読器と同じAIが、解読器の凍結後（コミット c34d6db）に設計した第4系統 NAX。準初見であり独立テストではない",
+ "relatedness": {
+  "chance": 0.0636,
+  "n": 150,
+  "p_at_1": 0.5067
+ },
+ "scoring_version": 2,
+ "segmentation": {
+  "f1": 0.8873,
+  "precision": 0.9874,
+  "recall": 0.8056
+ },
+ "structure": {
+  "adj_noun": "abstain",
+  "affix_position": "correct",
+  "num_noun": "abstain",
+  "numeral_base": "abstain",
+  "so_order": "abstain",
+  "verb_position": "correct"
+ },
+ "variants": {
+  "f1": 0.6618,
+  "gold_pairs": 368,
+  "precision": 0.7103,
+  "recall": 0.6196
+ }
+}

@@ -100,7 +100,7 @@ def _row_lines(rep, gt):
     line_index = {ln["id"]: k for k, ln in enumerate(gt["lines"])}
     out = []
     for row in rep["rows"]:
-        c = Counter()
+        lines = set()
         for j in row["glyph_indices"]:
             p = rep["glyphs"][j]["box"]
             best, best_a = None, 0
@@ -109,9 +109,14 @@ def _row_lines(rep, gt):
                 a = max(0, min(p[2], q[2]) - max(p[0], q[0])) * max(0, min(p[3], q[3]) - max(p[1], q[1]))
                 if a > best_a:
                     best, best_a = g, a
+                # 予測の記号が正解の記号の面積の半分以上を覆うなら、その記号の行にも属する（上下の行の字が1つの記号に
+                # 結合された場合。最大の重なりだけを見ると、結合された記号が一方の行にだけ対応して混合行の検査をすり抜ける。
+                # Codex レビュー、docs/ISSUES.md #84。babel/vision/evaluate.py の line_errors と同じ基準）
+                if 2 * a >= (q[2] - q[0]) * (q[3] - q[1]) and a > 0:
+                    lines.add(line_index[g["line"]])
             if best is not None:
-                c[line_index[best["line"]]] += 1
-        out.append(next(iter(c)) if len(c) == 1 else None)
+                lines.add(line_index[best["line"]])
+        out.append(next(iter(lines)) if len(lines) == 1 else None)
     return out
 
 
@@ -133,6 +138,24 @@ def _judge(pairs, row_line, planted):
             seen.add(key)
         out.append({"gt": list(key) if key else None, "kind": kind, "p_adj": p_adj})
     return out
+
+
+def judge_votes(votes, ref_line, planted):
+    """票の一覧（基準の行の組）を正解の行の組に戻して分類する。
+
+    同じ正解の組に戻る基準の行の組（行の破片など）は1件にまとめ、票の多い方を残す。正解に戻せない組は、基準の行の組ごとに1件。
+    正解の行の組と、正解に戻せない基準の行の組は、番号が同じでも別物なので、キーに印を付けて区別する
+    （印がないと、たとえば正解の組 (1, 2) と基準の行の組 (1, 2) が衝突して、戻せない方の報告が消える。Codex レビュー、docs/ISSUES.md #83）。
+    """
+    judged = {}
+    for v in votes:
+        j = _judge([(tuple(v["rows"]), None)], ref_line, planted)[0]
+        key = ("gt", *j["gt"]) if j["gt"] else ("rows", *v["rows"])
+        old = judged.get(key)
+        if old is None or v["votes"] > old["votes"]:
+            judged[key] = {"gt": j["gt"], "kind": j["kind"], "votes": v["votes"],
+                           "raw_votes": v["raw_votes"], "groups": v["groups"], "members": v["members"]}
+    return list(judged.values())
 
 
 def _ngram_pairs(analysis):
@@ -209,17 +232,7 @@ def run_case(case):
                                                    row_lines[ensemble.REFERENCE], planted)
         votes = ensemble.vote(reports, results)
         ref_line = row_lines[ensemble.REFERENCE]
-        judged_votes = {}
-        for v in votes:
-            j = _judge([(tuple(v["rows"]), None)], ref_line, planted)[0]
-            # Multiple reference fragments can map to the same gold pair.
-            # Count that claim once, taking its strongest independent support.
-            key = tuple(j["gt"]) if j["gt"] else tuple(v["rows"])
-            old = judged_votes.get(key)
-            if old is None or v["votes"] > old["votes"]:
-                judged_votes[key] = {"gt": j["gt"], "kind": j["kind"], "votes": v["votes"],
-                                     "raw_votes": v["raw_votes"], "groups": v["groups"], "members": v["members"]}
-        rec["votes"] = list(judged_votes.values())
+        rec["votes"] = judge_votes(votes, ref_line, planted)
         # 同じ切り出しを使う方式どうしの、分類の一致（正解を使わない）
         same_seg = [m["name"] for m in ensemble.MEMBERS if m["base"] == "improved-v3" and not m.get("scale")]
         agree = []
@@ -240,7 +253,7 @@ def run(split, out, jobs=4, limit=None):
     with ProcessPoolExecutor(jobs) as ex:
         runs = list(ex.map(run_case, cs, chunksize=4))
     import cv2
-    res = {"schema": "babel-robust-bench-v3", "split": split, "config": {k: (list(v) if not isinstance(v, str) else v) for k, v in SPLITS[split].items()},
+    res = {"schema": "babel-robust-bench-v4", "split": split, "config": {k: (list(v) if not isinstance(v, str) else v) for k, v in SPLITS[split].items()},
            "analyze_cfg": ANALYZE_CFG, "row_cfg": ROW_CFG, "opencv": cv2.__version__, "cases": len(runs), "seconds": round(time.time() - t0, 1),
            "runs": runs}
     Path(out).parent.mkdir(parents=True, exist_ok=True)

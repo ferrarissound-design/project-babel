@@ -66,7 +66,7 @@ def vote_table(S):
     return "\n".join(L)
 
 
-def check_predictions(S_all, k, preds=None, bench_schema="babel-robust-bench-v3"):
+def check_predictions(S_all, k, preds=None, bench_schema="babel-robust-bench-v4"):
     """holdout の結果を見る前に書いた予測（results/robust/predictions.json）を、結果と照らす。"""
     out = []
     if (not preds or preds.get("frozen", {}).get("vote_threshold") != k
@@ -106,7 +106,7 @@ def check_predictions(S_all, k, preds=None, bench_schema="babel-robust-bench-v3"
 
 def build():
     sel = _load("selected.json")
-    if not sel or sel.get("bench_schema") != "babel-robust-bench-v3":
+    if not sel or sel.get("bench_schema") != "babel-robust-bench-v4":
         raise ValueError("旧閾値は使用不可。v3 の dev 評価と選択を再実行する")
     k = sel["vote_threshold"]
     if k is None:

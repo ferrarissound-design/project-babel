@@ -15,7 +15,7 @@ LIMIT = 0.05
 
 
 def select(dev):
-    if dev.get("schema") != "babel-robust-bench-v3":
+    if dev.get("schema") != "babel-robust-bench-v4":
         raise ValueError("行の結合を誤採点した旧結果は閾値選択に使えない。v3 の dev を再実行する")
     runs = dev["runs"]
     votes = {k: summary.score(runs, f"vote>={k}") for k in range(1, summary.N_MEMBERS + 1)}

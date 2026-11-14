@@ -238,7 +238,7 @@ def test_vote_counts_segmentation_bases_once():
 def test_threshold_selection_uses_uncertainty_and_rejects_old_bench():
     from babel.robust_eval import select
     negatives = [{"n_pairs": 0, "planted": [], "methods": {"oracle-lcs": []}, "votes": []} for _ in range(20)]
-    dev = {"schema": "babel-robust-bench-v3", "runs": negatives}
+    dev = {"schema": "babel-robust-bench-v4", "runs": negatives}
     # Zero hits in only twenty images is insufficient evidence for a <=5% rate.
     assert select.select(dev)["vote_threshold"] is None
     with pytest.raises(ValueError):
@@ -382,3 +382,40 @@ def test_cli_refuses_too_few_permutations(tmp_path):
         main(["transcription-compare", str(ROOT / "results/vision/real-img4494/corpus-continuous.json"), str(REAL / "inputs/v3-continuous.json"),
               "--out", str(tmp_path / "x.json"), "--permutations", "199"])
     assert e.value.code == 2 and not (tmp_path / "x.json").exists()
+
+
+def test_a_glyph_merged_across_two_lines_makes_its_row_unmapped():
+    """上下の行の字が1つの記号に結合された行は、どちらの正解行にも戻さない（Codex レビュー、#84）。"""
+    from babel.robust_eval import bench
+    gt = {"items": [{"kind": "glyph", "box": [0, 0, 10, 10], "line": "L0"}, {"kind": "glyph", "box": [0, 20, 10, 30], "line": "L1"},
+                    {"kind": "glyph", "box": [20, 0, 30, 10], "line": "L0"}, {"kind": "glyph", "box": [0, 40, 10, 50], "line": "L2"}],
+          "lines": [{"id": "L0"}, {"id": "L1"}, {"id": "L2"}]}
+    rep = {"glyphs": [{"box": [0, 0, 10, 30]}, {"box": [20, 0, 30, 10]}, {"box": [0, 40, 10, 50]}, {"box": [2, 2, 6, 6]}],
+           "rows": [{"glyph_indices": [0, 1]}, {"glyph_indices": [2]}, {"glyph_indices": [3]}]}
+    line = bench._row_lines(rep, gt)
+    assert line == [None, 2, 0]                               # 結合された行は対応不能。字の破片だけの行は元の行に戻る
+    judged = bench._judge([((0, 1), None)], line, {(0, 2)})
+    assert judged[0]["kind"] == "unmapped"                    # 仕込んだ組 (0, 2) の発見とは数えない
+
+
+def test_image_markdown_counts_segmentation_groups(tmp_path):
+    """画像解析の表は、票を切り出し群の数（/3）で示し、方式の数（/8）と分ける（Codex レビュー、#85）。"""
+    res = {"image": "x.png", "reference": "v3", "members": ["v3", "v3-fine", "v2", "baseline"],
+           "transcriptions": {n: {"rows": [], "stats": {}} for n in ("v3", "v3-fine", "v2", "baseline")},
+           "tests": {n: {"pairs": []} for n in ("v3", "v3-fine", "v2", "baseline")},
+           "votes": [{"rows": [0, 1], "votes": 3, "raw_votes": 4, "groups": ["baseline", "improved-v2", "improved-v3"],
+                      "members": ["baseline", "v2", "v3", "v3-fine"]}]}
+    md = compare.image_markdown(res)
+    assert "切り出し群の数（/3）" in md and "| (0, 1) | 3 | baseline、improved-v2、improved-v3 | 4 |" in md
+
+
+def test_unmapped_vote_is_not_dropped_when_its_row_numbers_equal_a_ground_truth_pair():
+    """Codex レビューの例: ref_line = [1, None, 2] で、基準の行 (0, 2) が正解の組 (1, 2) に戻り、基準の行 (1, 2) は戻せない（#83）。"""
+    from babel.robust_eval import bench
+    votes = [{"rows": [0, 2], "votes": 3, "raw_votes": 6, "groups": ["a", "b", "c"], "members": []},
+             {"rows": [1, 2], "votes": 1, "raw_votes": 1, "groups": ["a"], "members": []}]
+    out = bench.judge_votes(votes, [1, None, 2], {(1, 2)})
+    assert sorted((v["kind"], v["votes"]) for v in out) == [("planted", 3), ("unmapped", 1)]
+    # 同じ正解の組に戻る2つの基準の行の組は1件（票の多い方）
+    dup = bench.judge_votes([{**votes[0], "votes": 2}, {**votes[0], "rows": [0, 2], "votes": 3}], [1, None, 2], {(1, 2)})
+    assert [(v["kind"], v["votes"]) for v in dup] == [("planted", 3)]

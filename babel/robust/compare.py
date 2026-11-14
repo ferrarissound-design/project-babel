@@ -199,16 +199,20 @@ def image_markdown(res):
         w(f"| {n} | {len(t['rows'])} | {sum(len(r['classes']) for r in t['rows'])} | {(t.get('stats') or {}).get('visual_classes')} "
           f"| {'、'.join('(%d, %d)' % tuple(p['rows']) for p in sig) or '—'} |")
     w("\n## 方式をまたいで再現する行の組\n")
-    w(f"| 行の組（基準の行） | 有意だった方式の数（/{len(res['members'])}） | 方式 | 分類を経ない検定 |\n|---|---:|---|---|")
+    groups = sorted({g for v in res["votes"] for g in v.get("groups", [])} | {"baseline", "improved-v2", "improved-v3"})
+    w(f"| 行の組（基準の行） | 有意だった切り出し群の数（/{len(groups)}） | 切り出し群 | 有意だった方式の数（/{len(res['members'])}） | 方式 "
+      "| 分類を経ない検定 |\n|---|---:|---|---:|---|---|")
     soft = {tuple(p["rows"]): p for p in res.get("soft", {}).get("pairs", [])}
     for v in res["votes"]:
         s = soft.get(tuple(v["rows"]))
-        w(f"| ({v['rows'][0]}, {v['rows'][1]}) | {v['votes']} | {'、'.join(v['members'])} | "
+        w(f"| ({v['rows'][0]}, {v['rows'][1]}) | {v['votes']} | {'、'.join(v.get('groups', []))} | {v.get('raw_votes', len(v['members']))} "
+          f"| {'、'.join(v['members'])} | "
           f"{'—' if s is None else ('有意' if s['significant'] else '有意でない') + '（補正後 p=%.4f）' % s['p_adj']} |")
     if not res["votes"]:
-        w("| — | 0 | — | — |")
-    w("\n読み方（docs/ROBUST_STRUCTURE.md）: 票の多い組ほど、特定の方式の誤りに依存していない。票が少ない組は"
-      "「その方式の転写でだけ見える」ので、規則として扱う前に画像で照合すること。票が多くても、意味・文法機能は分からない。")
+        w("| — | 0 | — | 0 | — | — |")
+    w("\n読み方（docs/ROBUST_STRUCTURE.md）: 票は**切り出し群**の数で数える。同じ切り出しを使い分類だけを変えた方式は、まとめて1群"
+      "（方式の数は参考）。全部の群で有意な組ほど、特定の切り出しの誤りに依存していない。一部の群でしか有意でない組は保留とし、"
+      "規則として扱う前に画像で照合すること。全部の群で有意でも、意味・文法機能は分からない。")
     return "\n".join(L) + "\n"
 
 

@@ -23,7 +23,7 @@ DEFAULT_CONFIG = {
     "align_method": "em",        # em / count / dice（後2つは比較用ベースライン）
     "pos_constraint": True,      # 推定した品詞で対応付けの候補を絞る（v1.1）
     "segmentation": "transductive",  # 単語境界のない文章の分割: transductive（全文書で学習）/ inductive（train のみ）
-    "segmenter": "unigram",      # 単語境界のない文章の分割方式: unigram（既定）/ transition（v1.3 の G4 の比較用）
+    "segmenter": "unigram",      # 単語境界のない文章の分割方式: unigram（既定）/ transition（比較用。v1.3 の G4 の測定で使った）
     "null_gates": True,          # v1.3: 帰無対照の関門（docs/PREREG_v1.3_NULL_GATES.md）。False で v1.2.0 と同じ
 }
 
@@ -211,11 +211,7 @@ class Decipherer:
             if not (self.morph_null["suffix"]["significant"] or self.morph_null["prefix"]["significant"]):
                 self.morph_test = dict(self.morph_test, present=False,
                                        null_control="解析された接辞が文脈と連動せず、接辞を入れ替えた対照と区別できない")
-        # G4: 単語境界のない文章では、別の分割方式でも同じ構造が出るかを確かめる
-        self.alt_structure = None
-        if gates and not self.boundaries and cfg["segmenter"] == "unigram":
-            alt = Decipherer(self.pub, dict(cfg, segmenter="transition")).fit()
-            self.alt_structure = alt._structure()
+
         sig = [[(self.infos[w][1], "|".join(self.infos[w][0]) + "_" + "|".join(self.infos[w][2])) for w in s]
                for s in self.sents]
         self.related = semantics.relatedness(sig)
@@ -577,13 +573,13 @@ class Decipherer:
                     if out[k].get("value") is not None:
                         out[k] = dict(out[k], value=None, confidence=0.0)
                         gate_notes[k] = "統語検定で語順の規則性が検出されない（G3）"
-            if self.alt_structure is not None:
-                # G4: 2つの分割方式で値が一致しなければ保留
+            if not self.boundaries:
+                # G4'（事前登録の副基準2で G4 が不合格だったため）: 単語境界のない文章では、
+                # 分割の誤りが動詞の位置・接辞の側の誤答を生む（開発シードで正解 69・誤答 125）ので常に保留
                 for k in ("verb_position", "affix_position"):
-                    v, a = out[k].get("value"), self.alt_structure[k].get("value")
-                    if v is not None and v != a:
-                        out[k] = dict(out[k], value=None, confidence=0.0, alt_segmentation_value=a)
-                        gate_notes[k] = f"別の分割方式では {a} になり、分割に依存する（G4）"
+                    if out[k].get("value") is not None:
+                        out[k] = dict(out[k], value=None, confidence=0.0)
+                        gate_notes[k] = "単語境界のない文章では、分割の誤りのため主張しない（G4'）"
             for k, why in gate_notes.items():
                 out[k]["null_gate"] = why
         return out

@@ -38,3 +38,11 @@ def test_syntax_perm_on_shuffled_words():
     public, _ = null_corpus(1, "shuffled")
     sents = [s.split() for d in public["documents"] for s in d["sentences"]]
     assert nulltest.syntax_test_perm(sents)["present"] is False
+
+
+def test_unspaced_abstains_on_verb_and_affix():
+    public, _ = build_corpus("UMB", 4, "C", boundaries=False)
+    st = decipher(public)["structure"]
+    assert st["verb_position"]["value"] is None and st["affix_position"]["value"] is None
+    assert "G4'" in st["affix_position"].get("null_gate", "") or decipher(public, {"null_gates": False})[
+        "structure"]["affix_position"]["value"] is None

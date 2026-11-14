@@ -104,6 +104,30 @@ def check_predictions(S_all, k, preds=None, bench_schema="babel-robust-bench-v4"
     return out
 
 
+def check_font_first_look(S_font, k, preds):
+    """holdout-font だけの照合。
+
+    predictions-v2.json は、票を切り出し群で数える設計（閾値 3/3）にしてから、holdout-font を一度も走らせる前に固定した。
+    その後の採点の修正（v3・v4）は holdout-synth の結果を見てから行ったが、holdout-font の結果は見ていない
+    （v4 のコードで初めて走らせた）。したがって holdout-font については、この予測は結果を見る前のもの。
+    holdout-synth は対象にしない（採点の修正の前に結果を見ている）。P5 は holdout-synth だけの予測なので含めない。
+    """
+    if not S_font or not preds or preds.get("frozen", {}).get("vote_threshold") != k or preds["frozen"].get("members") != summary.N_MEMBERS:
+        return []
+    vk = f"vote>={k}"
+    o = S_font["overall"]
+    d = S_font["vote_discrimination"]
+    hi_t = sum(x["true"] for kk, x in d["by_votes"].items() if int(kk) >= k)
+    hi_f = sum(x["false"] for kk, x in d["by_votes"].items() if int(kk) >= k)
+    one = d["by_votes"].get("1", {"true": 0, "false": 0})
+    hi, lo = hi_t / max(1, hi_t + hi_f), one["true"] / max(1, one["true"] + one["false"])
+    return [("P1", 0.02 <= o["oracle-lcs"]["fwer"] <= 0.10, _f(o["oracle-lcs"]["fwer"])),
+            ("P2", o[vk]["fwer"] <= 0.05, f"{_f(o[vk]['fwer'])}（95% 区間 {_f(o[vk]['fwer_ci95'][0], 2)}〜{_f(o[vk]['fwer_ci95'][1], 2)}）"),
+            ("P3", o[vk]["recall"] >= 0.10, _f(o[vk]["recall"])),
+            ("P4", d["auc"] is not None and d["auc"] >= 0.65 and hi >= 0.85 and lo <= 0.5, f"AUC {_f(d['auc'])}・票 {k} {_f(hi, 2)}・票 1 {_f(lo, 2)}"),
+            ("P6", o["lcs:v3"]["fwer"] > o[vk]["fwer"], f"{_f(o['lcs:v3']['fwer'])} 対 {_f(o[vk]['fwer'])}")]
+
+
 def build():
     sel = _load("selected.json")
     if not sel or sel.get("bench_schema") != "babel-robust-bench-v4":
@@ -133,8 +157,14 @@ def build():
     checks = check_predictions(S_all, k, preds, sel["bench_schema"])
     (R / "prediction-check.json").write_text(json.dumps([{"id": i, "held": ok, "observed": obs} for i, ok, obs in checks],
                                                         ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+    font_checks = check_font_first_look(S_all.get("holdout-font"), k, preds)
+    (R / "prediction-check-holdout-font.json").write_text(
+        json.dumps({"note": "holdout-font は v4 のコードで初めて走らせた（初見）。predictions-v2.json はその前に固定した",
+                    "checks": [{"id": i, "held": ok, "observed": obs} for i, ok, obs in font_checks]}, ensure_ascii=False, indent=1) + "\n",
+        encoding="utf-8")
     from . import prose
-    text = prose.render({"S": S_all, "sel": sel, "k": k, "vk": vk, "inv": inv, "cb": cb, "cmp": cmp_, "preds": preds, "checks": checks,
+    text = prose.render({"font_checks": font_checks,
+                         "S": S_all, "sel": sel, "k": k, "vk": vk, "inv": inv, "cb": cb, "cmp": cmp_, "preds": preds, "checks": checks,
                          "method_table": method_table, "group_table": group_table, "vote_table": vote_table, "f": _f, "label": _label,
                          "MAIN": MAIN})
     Path("docs/ROBUST_STRUCTURE.md").write_text(text, encoding="utf-8")

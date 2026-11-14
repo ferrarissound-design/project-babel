@@ -786,9 +786,27 @@
   "id": 88,
   "title": "IMG_4494 の「1回だけのクラス」58 個が本当に1回だけの記号かは、未確定のまま",
   "status": "未解決（画像と人の確認が必要）",
-  "found": "転写の突き合わせでは、improved-v3 で1回だけの記号のうち baseline と1対1に対応した 43 個中 35 個が baseline でも1回だけ。正解つきの画像では、improved-v3 単独の「1回だけ」の適合率は 0.42〜0.97、2方式とも「1回だけ」に絞ると 0.77〜1.00",
+  "found": "転写の突き合わせでは、improved-v3 で1回だけの記号のうち baseline と1対1に対応した 43 個中 35 個が baseline でも1回だけ。正解つきの画像では、improved-v3 が「1回だけ」とした候補全体のうち本当に1回だけの記号は 0.49（dev）・0.49（holdout-synth）・0.88（holdout-font）。正解の記号に対応できた候補だけなら 0.70・0.67・0.97、2方式とも「1回だけ」で対応できた記号だけなら 0.77〜1.00",
   "cause": "画像と正解転写がない。IMG_4494 が評価画像のどれに近い認識のされ方をしているかが分からない",
-  "fix": "未対応。#60 の続き。2方式とも1回だけの記号は多くが本物である見込みが高いが、確かめるには画像で人が見比べる必要がある",
+  "fix": "未対応。#60 の続き。2方式の一致は分類の分けすぎの可能性を下げるが、切り出しの誤り（字の破片・結合）については何も言わない。確かめるには画像で人が見比べる必要がある",
   "verified": "results/robust/inventory-*.json、results/robust/real-img4494/compare-baseline-v3.md、docs/ROBUST_STRUCTURE.md 第8節"
+ },
+ {
+  "id": 89,
+  "title": "補助実験（転写だけの比較の検証）: 同じ正解の行の組に戻る判定を重ねて数えていた（修正済み）",
+  "status": "修正済み（再評価）",
+  "found": "Codex レビュー（PR #13）。holdout-synth の curve・diacritic・シード 9107・語彙 250 で、正解の組 (2, 12) を「一方の転写だけで有意」として2回数えていた（再現した）",
+  "cause": "compare_bench が判定を1件ずつ採点し、画像の中で同じ正解の組に戻る判定をまとめていなかった",
+  "fix": "画像ごとに、同じ正解の組に戻る判定を1件にまとめる（判定の強い方を残す）。保存済みの判定から集計をやり直した。holdout-synth の「一方だけ」は真 18 → 17、発見率 0.25 → 0.24、報告のうち真 0.28 → 0.27。ほかの値は変わらない",
+  "verified": "tests/test_robust_structure.py の test_compare_bench_counts_a_ground_truth_pair_once、results/robust/compare-bench-*.json"
+ },
+ {
+  "id": 90,
+  "title": "補助実験（1回だけのクラス）: 適合率が、正解の記号に対応できた候補だけの値だった（候補全体の値を追加）",
+  "status": "修正済み（再評価）",
+  "found": "Codex レビュー（PR #13）。inventory は IoU 0.5 以上で正解に対応できた記号だけを分母にしていた。dev の improved-v3 では「1回だけ」の候補 7,159 個中 4,977 個だけが対象で、字の破片・結合された記号 2,182 個が分母から抜けていた（確認した）",
+  "cause": "切り出しの誤りを除いた条件つきの値を、認識器の出力全体の適合率のように書いていた",
+  "fix": "候補全体を分母にした適合率（対応できない候補は本物でないと数える）と、対応できた候補の割合を併記した。候補全体では dev 0.49・holdout-synth 0.49・holdout-font 0.88（対応できた候補だけでは 0.70・0.67・0.97）。報告書の第8節と問題3の答えを書き直した。2方式とも1回だけの記号の適合率は、対応できた記号だけの値であることを明記した",
+  "verified": "results/robust/inventory-*.json（hapax_precision_all_candidates・hapax_matched_share）、tests/test_robust_structure.py の test_inventory_reports_precision_over_all_candidates"
  }
 ]

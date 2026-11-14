@@ -50,12 +50,29 @@ def run_case(case):
     return rec
 
 
+def dedupe(verdicts):
+    """同じ正解の行の組に戻る判定は、画像ごとに1件にまとめる（判定の強い方を残す）。正解に戻せない判定はそのまま。
+
+    行の破片など、2つの予測の行の組が同じ正解の組に戻ることがある。別々に数えると、同じ仕込みの発見を重ねて数える
+    （Codex レビュー、docs/ISSUES.md #89）。
+    """
+    best, rest = {}, []
+    for v in verdicts:
+        if not v["gt"]:
+            rest.append(v)
+            continue
+        key = tuple(v["gt"])
+        if key not in best or CLASSES.index(v["class"]) < CLASSES.index(best[key]["class"]):
+            best[key] = v
+    return list(best.values()) + rest
+
+
 def _score(runs, classes):
     neg = [r for r in runs if r["n_pairs"] == 0]
     pos = [r for r in runs if r["n_pairs"] > 0]
 
     def found(r):
-        return [v for v in r["verdicts"] if v["class"] in classes]
+        return [v for v in dedupe(r["verdicts"]) if v["class"] in classes]
     neg_any = sum(1 for r in neg if found(r))
     hit = sum(sum(1 for v in found(r) if v["kind"] == "planted") for r in pos)
     false = sum(sum(1 for v in found(r) if v["kind"] != "planted") for r in runs)
@@ -76,11 +93,16 @@ def summarize(runs):
     return out
 
 
-def run(split, out, jobs=4):
+def run(split, out, jobs=4, reuse=False):
+    """reuse: 画像ごとの判定（runs）は保存済みのものを使い、集計だけをやり直す。"""
     cs = bench.cases(split)
     t0 = time.time()
-    with ProcessPoolExecutor(jobs) as ex:
-        runs = list(ex.map(run_case, cs, chunksize=8))
+    if reuse:
+        old = json.loads(Path(out).read_text(encoding="utf-8"))
+        runs, t0 = old["runs"], time.time() - old["seconds"]
+    else:
+        with ProcessPoolExecutor(jobs) as ex:
+            runs = list(ex.map(run_case, cs, chunksize=8))
     fams = sorted({r["family"] for r in runs})
     res = {"schema": "babel-robust-compare-bench-v2", "split": split, "cfg": CFG, "seconds": round(time.time() - t0, 1),
            "summary": {"overall": summarize(runs), "by_family": {f: summarize([r for r in runs if r["family"] == f]) for f in fams}}, "runs": runs}
@@ -94,5 +116,6 @@ if __name__ == "__main__":
     ap.add_argument("--split", required=True, choices=list(bench.SPLITS))
     ap.add_argument("--out", required=True)
     ap.add_argument("--jobs", type=int, default=4)
+    ap.add_argument("--resummarize", action="store_true", help="保存済みの判定から集計だけをやり直す")
     a = ap.parse_args()
-    print(json.dumps(run(a.split, a.out, a.jobs)["summary"]["overall"], ensure_ascii=False))
+    print(json.dumps(run(a.split, a.out, a.jobs, reuse=a.resummarize)["summary"]["overall"], ensure_ascii=False))

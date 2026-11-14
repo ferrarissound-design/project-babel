@@ -14,6 +14,8 @@
      "hapax_classes_per_image": 11.9,
      "class_ratio": 0.941,
      "hapax_precision": 0.9671,
+     "hapax_matched_share": 0.9105,
+     "hapax_precision_all_candidates": 0.8805,
      "hapax_recall": 0.8151,
      "repeated_called_hapax_rate": 0.0033
     },
@@ -22,6 +24,8 @@
      "hapax_classes_per_image": 12.6,
      "class_ratio": 0.969,
      "hapax_precision": 0.9544,
+     "hapax_matched_share": 0.9731,
+     "hapax_precision_all_candidates": 0.9287,
      "hapax_recall": 0.8892,
      "repeated_called_hapax_rate": 0.0052
     },
@@ -41,6 +45,8 @@
      "hapax_classes_per_image": 6.5,
      "class_ratio": 0.904,
      "hapax_precision": 0.9596,
+     "hapax_matched_share": 0.9489,
+     "hapax_precision_all_candidates": 0.9105,
      "hapax_recall": 0.7961,
      "repeated_called_hapax_rate": 0.0022
     },
@@ -49,6 +55,8 @@
      "hapax_classes_per_image": 6.3,
      "class_ratio": 0.916,
      "hapax_precision": 0.9735,
+     "hapax_matched_share": 1.0,
+     "hapax_precision_all_candidates": 0.9735,
      "hapax_recall": 0.8099,
      "repeated_called_hapax_rate": 0.0014
     },
@@ -66,6 +74,8 @@
      "hapax_classes_per_image": 4.0,
      "class_ratio": 0.752,
      "hapax_precision": 0.9892,
+     "hapax_matched_share": 0.9688,
+     "hapax_precision_all_candidates": 0.9583,
      "hapax_recall": 0.5542,
      "repeated_called_hapax_rate": 0.0004
     },
@@ -74,6 +84,8 @@
      "hapax_classes_per_image": 5.5,
      "class_ratio": 0.898,
      "hapax_precision": 0.9542,
+     "hapax_matched_share": 1.0,
+     "hapax_precision_all_candidates": 0.9542,
      "hapax_recall": 0.7508,
      "repeated_called_hapax_rate": 0.0021
     },
@@ -91,6 +103,8 @@
      "hapax_classes_per_image": 18.1,
      "class_ratio": 0.991,
      "hapax_precision": 0.9953,
+     "hapax_matched_share": 0.9747,
+     "hapax_precision_all_candidates": 0.9701,
      "hapax_recall": 0.9515,
      "repeated_called_hapax_rate": 0.0008
     },
@@ -99,6 +113,8 @@
      "hapax_classes_per_image": 18.8,
      "class_ratio": 1.012,
      "hapax_precision": 0.9623,
+     "hapax_matched_share": 0.969,
+     "hapax_precision_all_candidates": 0.9324,
      "hapax_recall": 0.9525,
      "repeated_called_hapax_rate": 0.0066
     },
@@ -116,6 +132,8 @@
      "hapax_classes_per_image": 12.3,
      "class_ratio": 0.969,
      "hapax_precision": 0.9714,
+     "hapax_matched_share": 0.8898,
+     "hapax_precision_all_candidates": 0.8644,
      "hapax_recall": 0.7103,
      "repeated_called_hapax_rate": 0.003
     },
@@ -124,6 +142,8 @@
      "hapax_classes_per_image": 14.4,
      "class_ratio": 1.002,
      "hapax_precision": 0.959,
+     "hapax_matched_share": 0.955,
+     "hapax_precision_all_candidates": 0.9158,
      "hapax_recall": 0.8788,
      "repeated_called_hapax_rate": 0.0054
     },
@@ -141,6 +161,8 @@
      "hapax_classes_per_image": 22.1,
      "class_ratio": 1.08,
      "hapax_precision": 0.9243,
+     "hapax_matched_share": 0.8349,
+     "hapax_precision_all_candidates": 0.7717,
      "hapax_recall": 0.9601,
      "repeated_called_hapax_rate": 0.0146
     },
@@ -149,6 +171,8 @@
      "hapax_classes_per_image": 20.2,
      "class_ratio": 1.018,
      "hapax_precision": 0.9608,
+     "hapax_matched_share": 0.9712,
+     "hapax_precision_all_candidates": 0.9331,
      "hapax_recall": 0.9837,
      "repeated_called_hapax_rate": 0.0075
     },
@@ -166,6 +190,8 @@
      "hapax_classes_per_image": 12.3,
      "class_ratio": 0.908,
      "hapax_precision": 0.9736,
+     "hapax_matched_share": 0.8953,
+     "hapax_precision_all_candidates": 0.8716,
      "hapax_recall": 0.7371,
      "repeated_called_hapax_rate": 0.0028
     },
@@ -174,6 +200,8 @@
      "hapax_classes_per_image": 15.1,
      "class_ratio": 1.007,
      "hapax_precision": 0.9225,
+     "hapax_matched_share": 0.9627,
+     "hapax_precision_all_candidates": 0.8881,
      "hapax_recall": 0.9031,
      "repeated_called_hapax_rate": 0.0107
     },
@@ -191,6 +219,8 @@
      "hapax_classes_per_image": 8.2,
      "class_ratio": 0.894,
      "hapax_precision": 0.9843,
+     "hapax_matched_share": 0.967,
+     "hapax_precision_all_candidates": 0.9518,
      "hapax_recall": 0.7716,
      "repeated_called_hapax_rate": 0.0011
     },
@@ -199,6 +229,8 @@
      "hapax_classes_per_image": 8.0,
      "class_ratio": 0.873,
      "hapax_precision": 0.9557,
+     "hapax_matched_share": 1.0,
+     "hapax_precision_all_candidates": 0.9557,
      "hapax_recall": 0.7459,
      "repeated_called_hapax_rate": 0.0032
     },
@@ -218,6 +250,8 @@
      "hapax_classes_per_image": 16.8,
      "class_ratio": 0.949,
      "hapax_precision": 0.9738,
+     "hapax_matched_share": 0.932,
+     "hapax_precision_all_candidates": 0.9075,
      "hapax_recall": 0.8377,
      "repeated_called_hapax_rate": 0.004
     },
@@ -226,6 +260,8 @@
      "hapax_classes_per_image": 17.9,
      "class_ratio": 0.974,
      "hapax_precision": 0.9567,
+     "hapax_matched_share": 0.9771,
+     "hapax_precision_all_candidates": 0.9348,
      "hapax_recall": 0.9064,
      "repeated_called_hapax_rate": 0.0073
     },
@@ -243,6 +279,8 @@
      "hapax_classes_per_image": 5.3,
      "class_ratio": 0.919,
      "hapax_precision": 0.9505,
+     "hapax_matched_share": 0.8853,
+     "hapax_precision_all_candidates": 0.8415,
      "hapax_recall": 0.7595,
      "repeated_called_hapax_rate": 0.002
     },
@@ -251,6 +289,8 @@
      "hapax_classes_per_image": 5.8,
      "class_ratio": 0.967,
      "hapax_precision": 0.9141,
+     "hapax_matched_share": 0.9722,
+     "hapax_precision_all_candidates": 0.8887,
      "hapax_recall": 0.8621,
      "repeated_called_hapax_rate": 0.0042
     },
@@ -268,6 +308,8 @@
      "hapax_classes_per_image": 13.7,
      "class_ratio": 0.949,
      "hapax_precision": 0.965,
+     "hapax_matched_share": 0.8938,
+     "hapax_precision_all_candidates": 0.8625,
      "hapax_recall": 0.8093,
      "repeated_called_hapax_rate": 0.0041
     },
@@ -276,6 +318,8 @@
      "hapax_classes_per_image": 14.1,
      "class_ratio": 0.965,
      "hapax_precision": 0.968,
+     "hapax_matched_share": 0.9684,
+     "hapax_precision_all_candidates": 0.9373,
      "hapax_recall": 0.8789,
      "repeated_called_hapax_rate": 0.0041
     },
@@ -295,6 +339,8 @@
      "hapax_classes_per_image": 12.0,
      "class_ratio": 0.937,
      "hapax_precision": 0.9793,
+     "hapax_matched_share": 0.9078,
+     "hapax_precision_all_candidates": 0.889,
      "hapax_recall": 0.8155,
      "repeated_called_hapax_rate": 0.0021
     },
@@ -303,6 +349,8 @@
      "hapax_classes_per_image": 12.3,
      "class_ratio": 0.951,
      "hapax_precision": 1.0,
+     "hapax_matched_share": 0.9716,
+     "hapax_precision_all_candidates": 0.9716,
      "hapax_recall": 0.8968,
      "repeated_called_hapax_rate": 0.0
     },
@@ -320,6 +368,8 @@
      "hapax_classes_per_image": 11.9,
      "class_ratio": 0.946,
      "hapax_precision": 0.9549,
+     "hapax_matched_share": 0.9132,
+     "hapax_precision_all_candidates": 0.872,
      "hapax_recall": 0.8147,
      "repeated_called_hapax_rate": 0.0045
     },
@@ -328,6 +378,8 @@
      "hapax_classes_per_image": 12.9,
      "class_ratio": 0.988,
      "hapax_precision": 0.9108,
+     "hapax_matched_share": 0.9746,
+     "hapax_precision_all_candidates": 0.8876,
      "hapax_recall": 0.8815,
      "repeated_called_hapax_rate": 0.0102
     },

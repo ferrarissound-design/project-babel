@@ -346,38 +346,45 @@ def render(c):
     w("## 8. 「1回だけのクラス」は本当に1回だけの記号か（問題3）\n")
     if any(c["inv"].values()):
         w("正解つきの画像で、認識器が「1回だけ」としたクラスの記号が、正解でも1回だけの記号である割合（適合率）を測った（babel/robust_eval/inventory.py）。\n")
-        w("| 分割 | 語彙 | 正解の種類 / 枚 | 正解の1回だけ / 枚 | v3 のクラス / 枚 | v3 の1回だけ / 枚 | v3 の1回だけの適合率 | 繰り返す記号を1回だけとした率（v3） | "
-          "両方式とも1回だけ / 枚 | その適合率 |\n|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|")
+        w("適合率は2通りに出す。**候補全体**: 認識器が出した「1回だけ」の候補すべてが分母。正解の記号に対応できない候補（字の破片、結合された記号。"
+          "IoU 0.5 未満）は「本当に1回だけ」でないと数える。**対応できた候補だけ**: 正解の記号に対応できた候補だけが分母（切り出しの誤りを除いた、分類だけの成績）。\n")
+        w("| 分割 | 語彙 | 正解の種類 / 枚 | 正解の1回だけ / 枚 | v3 のクラス / 枚 | v3 の1回だけ / 枚 | 正解に対応できた候補の割合 | **適合率（候補全体）** "
+          "| 適合率（対応できた候補だけ） | 両方式とも1回だけ / 枚 | その適合率（対応できた記号だけ） |\n|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|")
         for n in ("dev", "holdout-synth", "holdout-font"):
             iv = c["inv"].get(n)
             if not iv:
                 continue
             for vocab, o in iv["summary"]["by_vocab"].items():
                 w(f"| {n} | {vocab} | {o['true_types_per_image']} | {o['true_hapax_per_image']} | {o['v3']['classes_per_image']} | {o['v3']['hapax_classes_per_image']} "
-                  f"| {f(o['v3']['hapax_precision'], 2)} | {f(o['v3']['repeated_called_hapax_rate'], 2)} | {o['both']['hapax_in_both_per_image']} "
-                  f"| {f(o['both']['precision'], 2)} |")
+                  f"| {f(o['v3']['hapax_matched_share'], 2)} | **{f(o['v3']['hapax_precision_all_candidates'], 2)}** | {f(o['v3']['hapax_precision'], 2)} "
+                  f"| {o['both']['hapax_in_both_per_image']} | {f(o['both']['precision'], 2)} |")
         w("")
         w("字ごと（holdout-font、語彙をまとめた値）:\n")
         iv = c["inv"].get("holdout-font")
         if iv:
-            w("| 字 | 正解の種類 / 枚 | v3 のクラス / 枚 | v3 の1回だけの適合率 | 両方式とも1回だけの適合率 |\n|---|---:|---:|---:|---:|")
+            w("| 字 | 正解の種類 / 枚 | v3 のクラス / 枚 | v3 の1回だけの適合率（候補全体） | 同（対応できた候補だけ） | 両方式とも1回だけの適合率（対応できた記号だけ） |\n|---|---:|---:|---:|---:|---:|")
             for fam, o in iv["summary"]["by_family"].items():
-                w(f"| {fam} | {o['true_types_per_image']} | {o['v3']['classes_per_image']} | {f(o['v3']['hapax_precision'], 2)} | {f(o['both']['precision'], 2)} |")
+                w(f"| {fam} | {o['true_types_per_image']} | {o['v3']['classes_per_image']} | {f(o['v3']['hapax_precision_all_candidates'], 2)} "
+                  f"| {f(o['v3']['hapax_precision'], 2)} | {f(o['both']['precision'], 2)} |")
             w("")
         w("読み取り（数値は上の表）:\n")
-        w("- 認識器が「1回だけ」としたクラスには、正解では繰り返す記号が混ざる（分けすぎ）。混ざる割合は、字と語彙によって大きく変わる")
-        both = [o["both"]["precision"] for n in ("dev", "holdout-synth", "holdout-font") if c["inv"].get(n)
-                for o in c["inv"][n]["summary"]["by_vocab"].values() if o["both"]["precision"] is not None]
-        single = [o["v3"]["hapax_precision"] for n in ("dev", "holdout-synth", "holdout-font") if c["inv"].get(n)
-                  for o in c["inv"][n]["summary"]["by_vocab"].values() if o["v3"]["hapax_precision"] is not None]
-        w(f"- improved-v3 単独の「1回だけ」の適合率は、分割と語彙によって {f(min(single), 2)}〜{f(max(single), 2)}。"
-          f"2つの方式がどちらも「1回だけ」とした記号に絞ると {f(min(both), 2)}〜{f(max(both), 2)} に上がるが、1 にはならない条件がある。"
-          "**2つの方式の一致は分けすぎの可能性を下げるが、否定はしない**")
+        rows = [o for n in ("dev", "holdout-synth", "holdout-font") if c["inv"].get(n) for o in c["inv"][n]["summary"]["by_vocab"].values()]
+        allc = [o["v3"]["hapax_precision_all_candidates"] for o in rows]
+        single = [o["v3"]["hapax_precision"] for o in rows]
+        both = [o["both"]["precision"] for o in rows if o["both"]["precision"] is not None]
+        share = [o["v3"]["hapax_matched_share"] for o in rows]
+        w(f"- **候補全体**で見ると、improved-v3 が「1回だけ」としたクラスのうち本当に1回だけの記号は {f(min(allc), 2)}〜{f(max(allc), 2)}。"
+          "行の作りを変えた人工画像では半分前後しかない。残りは、繰り返す記号の分けすぎと、字の破片・結合された記号（切り出しの誤り）")
+        w(f"- 正解の記号に対応できた候補は全体の {f(min(share), 2)}〜{f(max(share), 2)}。対応できた候補だけの適合率（{f(min(single), 2)}〜{f(max(single), 2)}）は、"
+          "切り出しの誤りを分母から除いた値で、認識器の出力全体の成績ではない")
+        w(f"- 2つの方式がどちらも「1回だけ」とした記号の適合率（{f(min(both), 2)}〜{f(max(both), 2)}）も、**正解の記号に対応できた記号だけ**の値。"
+          "切り出しそのものが誤っている記号は含まない。2つの方式の一致は分類の分けすぎの可能性を下げるが、切り出しの誤りについては何も言わない")
         w(f"- IMG_4494: improved-v3 で1回だけの記号のうち、baseline と1対1に対応した {h['b_hapax_aligned']} 個中 {h['hapax_in_both']} 個は baseline でも1回だけ。"
-          "上の表の適合率を当てはめるには、IMG_4494 の字が表のどの行に近いかを知る必要があるが、画像がないので分からない")
-        w("- したがって問題3の答えは**未確定**。分かったのは、(a) 79 クラスという数は、記号の種類が多い資料でも、分けすぎでも出ること、"
-          f"(b) 両方の方式で1回だけの {h['hapax_in_both']} 個については、正解つきの画像での適合率（上の範囲）から見て、多くは本当に1回だけの記号である見込みが高いこと、"
-          "(c) ただしそれは IMG_4494 が評価画像と同じように認識されている場合の話で、確かめるには1回だけのクラスの記号の画像を人が見比べる必要があること\n")
+          f"一方、1記号と2記号が対応する箇所が {sum(1 for cs in cmp_['alignment']['columns'] for x, y in cs if x and y and len(x) != len(y))} あり（第2.4節）、"
+          "切り出しの食い違いが実際にある。上の表のどの行に近いかは、画像がないので分からない")
+        w("- したがって問題3の答えは**未確定**。分かったのは、(a) 79 クラス・58 個の「1回だけ」は、記号の種類が多い資料でも、分けすぎ・切り出しの誤りでも出ること、"
+          "(b) 評価画像では、切り出しが崩れる条件だと「1回だけ」の約半分が本物でないこと、"
+          "(c) 2方式の一致は分類の誤りしか減らさないこと。確かめるには、1回だけのクラスの記号の画像を人が見比べる必要がある\n")
     else:
         w("（inventory の結果がまだない）\n")
     w("### 分類方式どうしの一致は、正解との一致を予測するか（正解なしの指標の検討）\n")
@@ -433,7 +440,7 @@ def render(c):
     w("**問題2（認識方式によって構造仮説が変わる）** — 原因を特定した（第2.2節）。既存の検定が、記号1つの取り違えで切れるため。"
       "切れない検定では、行 0・1 と行 3・4 の2組が、どの転写でも有意。ただし「画像に本当にある」ことの確認には画像が要る\n")
     w("**問題3（視覚クラスの分類が不安定）** — 未確定（第8節）。認識器の「1回だけのクラス」には分けすぎが混ざること、"
-      "2方式がどちらも1回だけとした記号は多くが本当に1回だけだが、否定まではできないことを、正解つきの画像で示した\n")
+      "評価画像では候補全体の約半分〜9割しか本物でないこと、2方式の一致は分類の誤りしか減らさないことを、正解つきの画像で示した\n")
     gen = []
     if hs:
         gen.append(f"dev に出ない字の作りと劣化（holdout-synth）で発見率 {f(ov('holdout-synth', vk, 'recall'), 2)}・誤報告 {f(ov('holdout-synth', vk, 'fwer'), 2)}")

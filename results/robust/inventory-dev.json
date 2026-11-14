@@ -14,6 +14,8 @@
      "hapax_classes_per_image": 24.9,
      "class_ratio": 1.186,
      "hapax_precision": 0.6998,
+     "hapax_matched_share": 0.6952,
+     "hapax_precision_all_candidates": 0.4865,
      "hapax_recall": 0.9478,
      "repeated_called_hapax_rate": 0.0579
     },
@@ -22,6 +24,8 @@
      "hapax_classes_per_image": 14.7,
      "class_ratio": 0.65,
      "hapax_precision": 0.6724,
+     "hapax_matched_share": 0.6257,
+     "hapax_precision_all_candidates": 0.4207,
      "hapax_recall": 0.9536,
      "repeated_called_hapax_rate": 0.0729
     },
@@ -41,6 +45,8 @@
      "hapax_classes_per_image": 13.5,
      "class_ratio": 1.145,
      "hapax_precision": 0.621,
+     "hapax_matched_share": 0.6816,
+     "hapax_precision_all_candidates": 0.4233,
      "hapax_recall": 0.8605,
      "repeated_called_hapax_rate": 0.0336
     },
@@ -49,6 +55,8 @@
      "hapax_classes_per_image": 12.1,
      "class_ratio": 0.678,
      "hapax_precision": 0.3448,
+     "hapax_matched_share": 0.3986,
+     "hapax_precision_all_candidates": 0.1375,
      "hapax_recall": 0.8602,
      "repeated_called_hapax_rate": 0.097
     },
@@ -66,6 +74,8 @@
      "hapax_classes_per_image": 31.7,
      "class_ratio": 1.243,
      "hapax_precision": 0.7027,
+     "hapax_matched_share": 0.6661,
+     "hapax_precision_all_candidates": 0.4681,
      "hapax_recall": 0.9621,
      "repeated_called_hapax_rate": 0.0776
     },
@@ -74,6 +84,8 @@
      "hapax_classes_per_image": 14.7,
      "class_ratio": 0.589,
      "hapax_precision": 0.7326,
+     "hapax_matched_share": 0.7231,
+     "hapax_precision_all_candidates": 0.5297,
      "hapax_recall": 0.9577,
      "repeated_called_hapax_rate": 0.0658
     },
@@ -91,6 +103,8 @@
      "hapax_classes_per_image": 29.4,
      "class_ratio": 1.158,
      "hapax_precision": 0.7307,
+     "hapax_matched_share": 0.7328,
+     "hapax_precision_all_candidates": 0.5354,
      "hapax_recall": 0.9698,
      "repeated_called_hapax_rate": 0.0687
     },
@@ -99,6 +113,8 @@
      "hapax_classes_per_image": 17.4,
      "class_ratio": 0.692,
      "hapax_precision": 0.7498,
+     "hapax_matched_share": 0.7016,
+     "hapax_precision_all_candidates": 0.5261,
      "hapax_recall": 0.9691,
      "repeated_called_hapax_rate": 0.063
     },
@@ -118,6 +134,8 @@
      "hapax_classes_per_image": 33.1,
      "class_ratio": 1.095,
      "hapax_precision": 0.7799,
+     "hapax_matched_share": 0.7517,
+     "hapax_precision_all_candidates": 0.5862,
      "hapax_recall": 0.9534,
      "repeated_called_hapax_rate": 0.067
     },
@@ -126,6 +144,8 @@
      "hapax_classes_per_image": 18.7,
      "class_ratio": 0.587,
      "hapax_precision": 0.7545,
+     "hapax_matched_share": 0.711,
+     "hapax_precision_all_candidates": 0.5364,
      "hapax_recall": 0.9545,
      "repeated_called_hapax_rate": 0.0889
     },
@@ -143,6 +163,8 @@
      "hapax_classes_per_image": 16.4,
      "class_ratio": 1.353,
      "hapax_precision": 0.529,
+     "hapax_matched_share": 0.5812,
+     "hapax_precision_all_candidates": 0.3074,
      "hapax_recall": 0.9489,
      "repeated_called_hapax_rate": 0.0465
     },
@@ -151,6 +173,8 @@
      "hapax_classes_per_image": 11.3,
      "class_ratio": 0.794,
      "hapax_precision": 0.4691,
+     "hapax_matched_share": 0.4622,
+     "hapax_precision_all_candidates": 0.2168,
      "hapax_recall": 0.9363,
      "repeated_called_hapax_rate": 0.0597
     },
@@ -168,6 +192,8 @@
      "hapax_classes_per_image": 25.2,
      "class_ratio": 1.19,
      "hapax_precision": 0.679,
+     "hapax_matched_share": 0.6952,
+     "hapax_precision_all_candidates": 0.472,
      "hapax_recall": 0.9383,
      "repeated_called_hapax_rate": 0.0617
     },
@@ -176,6 +202,8 @@
      "hapax_classes_per_image": 14.2,
      "class_ratio": 0.632,
      "hapax_precision": 0.6689,
+     "hapax_matched_share": 0.6432,
+     "hapax_precision_all_candidates": 0.4302,
      "hapax_recall": 0.9591,
      "repeated_called_hapax_rate": 0.0736
     },
@@ -195,6 +223,8 @@
      "hapax_classes_per_image": 25.1,
      "class_ratio": 1.24,
      "hapax_precision": 0.6813,
+     "hapax_matched_share": 0.8912,
+     "hapax_precision_all_candidates": 0.6072,
      "hapax_recall": 0.9683,
      "repeated_called_hapax_rate": 0.071
     },
@@ -203,6 +233,8 @@
      "hapax_classes_per_image": 15.6,
      "class_ratio": 0.577,
      "hapax_precision": 0.4932,
+     "hapax_matched_share": 0.5227,
+     "hapax_precision_all_candidates": 0.2578,
      "hapax_recall": 0.9864,
      "repeated_called_hapax_rate": 0.1748
     },
@@ -220,6 +252,8 @@
      "hapax_classes_per_image": 23.5,
      "class_ratio": 1.212,
      "hapax_precision": 0.7226,
+     "hapax_matched_share": 0.7708,
+     "hapax_precision_all_candidates": 0.557,
      "hapax_recall": 0.9535,
      "repeated_called_hapax_rate": 0.051
     },
@@ -228,6 +262,8 @@
      "hapax_classes_per_image": 24.2,
      "class_ratio": 0.997,
      "hapax_precision": 0.547,
+     "hapax_matched_share": 0.5874,
+     "hapax_precision_all_candidates": 0.3213,
      "hapax_recall": 0.979,
      "repeated_called_hapax_rate": 0.1138
     },
@@ -245,6 +281,8 @@
      "hapax_classes_per_image": 15.6,
      "class_ratio": 0.996,
      "hapax_precision": 0.9402,
+     "hapax_matched_share": 0.936,
+     "hapax_precision_all_candidates": 0.88,
      "hapax_recall": 0.9175,
      "repeated_called_hapax_rate": 0.0084
     },
@@ -253,6 +291,8 @@
      "hapax_classes_per_image": 16.5,
      "class_ratio": 0.96,
      "hapax_precision": 0.9389,
+     "hapax_matched_share": 0.8273,
+     "hapax_precision_all_candidates": 0.7767,
      "hapax_recall": 0.9285,
      "repeated_called_hapax_rate": 0.0099
     },
@@ -270,6 +310,8 @@
      "hapax_classes_per_image": 35.2,
      "class_ratio": 1.293,
      "hapax_precision": 0.4483,
+     "hapax_matched_share": 0.3975,
+     "hapax_precision_all_candidates": 0.1782,
      "hapax_recall": 0.9555,
      "repeated_called_hapax_rate": 0.1409
     },
@@ -278,6 +320,8 @@
      "hapax_classes_per_image": 2.7,
      "class_ratio": 0.077,
      "hapax_precision": 0.2344,
+     "hapax_matched_share": 0.3316,
+     "hapax_precision_all_candidates": 0.0777,
      "hapax_recall": 1.0,
      "repeated_called_hapax_rate": 0.7101
     },

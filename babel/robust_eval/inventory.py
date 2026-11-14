@@ -69,7 +69,12 @@ def summarize(runs, by=None):
                 return sum(m[k] for m in ms)
             o[name] = {"classes_per_image": round(tot("classes") / len(rs), 1), "hapax_classes_per_image": round(tot("hapax_classes") / len(rs), 1),
                        "class_ratio": round(tot("classes") / sum(r["types"] for r in rs), 3),
+                       # hapax_precision は、正解の記号に対応できた（IoU 0.5 以上）記号だけの値。字の破片や結合された記号は
+                       # 対応できないので分母に入らない。候補全体での値（対応できない候補は「本当に1回だけ」でないと数える）と、
+                       # 対応できた候補の割合を併記する（Codex レビュー、docs/ISSUES.md #90）
                        "hapax_precision": round(tot("hapax_truly_hapax") / tot("hapax_matched"), 4) if tot("hapax_matched") else None,
+                       "hapax_matched_share": round(tot("hapax_matched") / tot("hapax_classes"), 4) if tot("hapax_classes") else None,
+                       "hapax_precision_all_candidates": round(tot("hapax_truly_hapax") / tot("hapax_classes"), 4) if tot("hapax_classes") else None,
                        "hapax_recall": round(tot("hapax_truly_hapax") / tot("true_hapax_matched"), 4) if tot("true_hapax_matched") else None,
                        "repeated_called_hapax_rate": round(tot("repeated_called_hapax") / tot("true_repeated_matched"), 4)
                        if tot("true_repeated_matched") else None}
@@ -80,11 +85,16 @@ def summarize(runs, by=None):
     return out
 
 
-def run(split, out, jobs=4):
+def run(split, out, jobs=4, reuse=False):
+    """reuse: 画像ごとの記録（runs）は保存済みのものを使い、集計だけをやり直す。"""
     cs = [c for c in bench.cases(split) if c["n_pairs"] == 2]
     t0 = time.time()
-    with ProcessPoolExecutor(jobs) as ex:
-        runs = list(ex.map(run_case, cs, chunksize=8))
+    if reuse:
+        old = json.loads(Path(out).read_text(encoding="utf-8"))
+        runs, t0 = old["runs"], time.time() - old["seconds"]
+    else:
+        with ProcessPoolExecutor(jobs) as ex:
+            runs = list(ex.map(run_case, cs, chunksize=8))
     res = {"schema": "babel-robust-inventory-v2", "split": split, "cases": len(runs), "seconds": round(time.time() - t0, 1),
            "summary": {"overall": summarize(runs), "by_family": summarize(runs, "family"), "by_vocab": summarize(runs, "vocab"),
                        "by_condition": summarize(runs, "condition")}, "runs": runs}
@@ -99,6 +109,7 @@ if __name__ == "__main__":
     ap.add_argument("--split", required=True, choices=list(bench.SPLITS))
     ap.add_argument("--out", required=True)
     ap.add_argument("--jobs", type=int, default=4)
+    ap.add_argument("--resummarize", action="store_true", help="保存済みの記録から集計だけをやり直す")
     a = ap.parse_args()
-    r = run(a.split, a.out, a.jobs)
+    r = run(a.split, a.out, a.jobs, reuse=a.resummarize)
     print(json.dumps(r["summary"]["overall"], ensure_ascii=False))

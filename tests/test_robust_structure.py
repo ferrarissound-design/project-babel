@@ -419,3 +419,26 @@ def test_unmapped_vote_is_not_dropped_when_its_row_numbers_equal_a_ground_truth_
     # 同じ正解の組に戻る2つの基準の行の組は1件（票の多い方）
     dup = bench.judge_votes([{**votes[0], "votes": 2}, {**votes[0], "rows": [0, 2], "votes": 3}], [1, None, 2], {(1, 2)})
     assert [(v["kind"], v["votes"]) for v in dup] == [("planted", 3)]
+
+
+def test_compare_bench_counts_a_ground_truth_pair_once():
+    """同じ正解の行の組に戻る判定は、画像ごとに1件（判定の強い方）にまとめる（Codex レビュー、#89）。"""
+    from babel.robust_eval import compare_bench as cb
+    one, four = cb.CLASSES[2], cb.CLASSES[0]
+    run = {"n_pairs": 2, "eligible": True,
+           "verdicts": [{"gt": [2, 12], "kind": "planted", "class": one}, {"gt": [2, 12], "kind": "planted", "class": one},
+                        {"gt": None, "kind": "unmapped", "class": one}, {"gt": None, "kind": "unmapped", "class": one}]}
+    s = cb._score([run], cb.CLASSES[2:])
+    assert (s["true"], s["false"], s["recall"]) == (1, 2, 0.5)        # 仕込んだ 2 組のうち 1 組
+    mixed = cb.dedupe([{"gt": [0, 1], "kind": "planted", "class": one}, {"gt": [0, 1], "kind": "planted", "class": four}])
+    assert [v["class"] for v in mixed] == [four]
+
+
+def test_inventory_reports_precision_over_all_candidates():
+    """「1回だけ」の適合率は、候補全体を分母にした値と、正解に対応できた候補だけの値を分けて出す（Codex レビュー、#90）。"""
+    from babel.robust_eval import inventory
+    m = {"glyphs": 20, "classes": 12, "hapax_classes": 10, "matched": 15, "hapax_matched": 6, "hapax_truly_hapax": 3,
+         "true_hapax_matched": 4, "repeated_called_hapax": 3, "true_repeated_matched": 11}
+    run = {"types": 10, "true_hapax": 4, "methods": {"v3": m, "baseline": m}, "both": {"hapax_in_both": 2, "truly_hapax": 2}}
+    o = inventory.summarize([run])["all"]["v3"]
+    assert o["hapax_precision"] == 0.5 and o["hapax_precision_all_candidates"] == 0.3 and o["hapax_matched_share"] == 0.6

@@ -10,7 +10,7 @@ from .align import Aligner, flatten
 from .morph import Morphology
 from .variants import LACUNA, Normalizer
 
-VERSION = "1.2.0"
+VERSION = "1.3.0"
 DEFAULT_CONFIG = {
     "use_variants": True,        # 表記揺れの正規化
     "use_morph": True,           # 形態素解析
@@ -23,6 +23,8 @@ DEFAULT_CONFIG = {
     "align_method": "em",        # em / count / dice（後2つは比較用ベースライン）
     "pos_constraint": True,      # 推定した品詞で対応付けの候補を絞る（v1.1）
     "segmentation": "transductive",  # 単語境界のない文章の分割: transductive（全文書で学習）/ inductive（train のみ）
+    "segmenter": "unigram",      # 単語境界のない文章の分割方式: unigram（既定）/ transition（v1.3 の G4 の比較用）
+    "null_gates": True,          # v1.3: 帰無対照の関門（docs/PREREG_v1.3_NULL_GATES.md）。False で v1.2.0 と同じ
 }
 
 
@@ -147,12 +149,14 @@ class Decipherer:
                 train = set(self.train_ids)
                 tr_lines = [x for x in lines if x[0] in train]
                 he_lines = [x for x in lines if x[0] not in train]
-                tr_seg, he_seg = segment.inductive_segment([s for _, s in tr_lines], [s for _, s in he_lines])
+                ind = segment.inductive_transition if self.cfg["segmenter"] == "transition" else segment.inductive_segment
+                tr_seg, he_seg = ind([s for _, s in tr_lines], [s for _, s in he_lines])
                 pairs = list(zip(tr_lines, tr_seg)) + list(zip(he_lines, he_seg))
                 order = {id(x): k for k, x in enumerate(lines)}
                 pairs.sort(key=lambda p: order[id(p[0])])
             else:
-                pairs = list(zip(lines, segment.unigram_segment([s for _, s in lines])))
+                seg = segment.transition_segment if self.cfg["segmenter"] == "transition" else segment.unigram_segment
+                pairs = list(zip(lines, seg([s for _, s in lines])))
             for (did, _), words in pairs:
                 self.tokens.setdefault(did, []).append(words)
         self.segmentation_used = None if self.boundaries else (
@@ -195,10 +199,23 @@ class Decipherer:
         if cfg["use_metadata"] and any(self.docs[d].get("meta", {}).get("site") for d in self.train_ids):
             self._fit_toponyms()
         self.num_noun = self._num_noun_order()
-        self.syntax = nulltest.syntax_test(self.sents)
+        gates = cfg["null_gates"]
+        self.syntax = nulltest.syntax_test_perm(self.sents) if gates else nulltest.syntax_test(self.sents)
         tok_total = max(1, sum(self.counts.values()))
         affixed = sum(c for w, c in self.counts.items() if self.infos[w][0] or self.infos[w][2])
         self.morph_test = nulltest.morphology_test(affixed / tok_total, len(self.morph.affixes))
+        self.morph_null = None
+        if gates and cfg["use_morph"] and cfg["morph_method"] == "paradigm":
+            # G1': 接辞が文脈（文中の位置・直前の語の接辞）と連動するかの帰無対照
+            self.morph_null = nulltest.affix_context_null(self.sents, self.infos)
+            if not (self.morph_null["suffix"]["significant"] or self.morph_null["prefix"]["significant"]):
+                self.morph_test = dict(self.morph_test, present=False,
+                                       null_control="解析された接辞が文脈と連動せず、接辞を入れ替えた対照と区別できない")
+        # G4: 単語境界のない文章では、別の分割方式でも同じ構造が出るかを確かめる
+        self.alt_structure = None
+        if gates and not self.boundaries and cfg["segmenter"] == "unigram":
+            alt = Decipherer(self.pub, dict(cfg, segmenter="transition")).fit()
+            self.alt_structure = alt._structure()
         sig = [[(self.infos[w][1], "|".join(self.infos[w][0]) + "_" + "|".join(self.infos[w][2])) for w in s]
                for s in self.sents]
         self.related = semantics.relatedness(sig)
@@ -528,7 +545,20 @@ class Decipherer:
         sup = getattr(self.morph, "support", {"suffix": 0, "prefix": 0})
         tot = sup["suffix"] + sup["prefix"]
         pos = self.morph.position
-        return {
+        gate_notes = {}
+        if self.morph_null is not None:
+            # G1': 対照と区別できない側は、接辞の付く側の根拠から外す
+            sig = {k for k in ("suffix", "prefix") if self.morph_null[k]["significant"]}
+            if pos != "none" and not sig:
+                pos = "none"
+                gate_notes["affix_position"] = "接辞が文脈と連動せず、帰無対照と区別できない（G1'）"
+            elif pos == "both" and len(sig) == 1:
+                pos = next(iter(sig))
+                gate_notes["affix_position"] = "片側だけが帰無対照と区別できた（G1'）"
+            elif pos in ("suffix", "prefix") and pos not in sig:
+                pos = "none"
+                gate_notes["affix_position"] = "多い側が帰無対照と区別できない（G1'）"
+        out = {
             "verb_position": vp,
             "so_order": from_counts(self.order_counts["so"]),
             "adj_noun": from_counts(self.order_counts["adj"]),
@@ -540,6 +570,23 @@ class Decipherer:
             "sum_marker": {"value": self.num.get("sum_marker"),
                            "note": "合計行を示す機能語（算術的に検証できる機能であり、実世界の意味の主張ではない）"},
         }
+        if self.cfg["null_gates"]:
+            if not self.syntax["present"]:
+                # G3: 語順に無作為な並べ替えより強い規則性がなければ、語順の主張はしない
+                for k in ("verb_position", "so_order", "adj_noun", "num_noun"):
+                    if out[k].get("value") is not None:
+                        out[k] = dict(out[k], value=None, confidence=0.0)
+                        gate_notes[k] = "統語検定で語順の規則性が検出されない（G3）"
+            if self.alt_structure is not None:
+                # G4: 2つの分割方式で値が一致しなければ保留
+                for k in ("verb_position", "affix_position"):
+                    v, a = out[k].get("value"), self.alt_structure[k].get("value")
+                    if v is not None and v != a:
+                        out[k] = dict(out[k], value=None, confidence=0.0, alt_segmentation_value=a)
+                        gate_notes[k] = f"別の分割方式では {a} になり、分割に依存する（G4）"
+            for k, why in gate_notes.items():
+                out[k]["null_gate"] = why
+        return out
 
     def _verdict(self):
         syn, mor = self.syntax["present"], self.morph_test["present"]
@@ -552,7 +599,8 @@ class Decipherer:
             text = "内部構造（語形・語順・数詞）は推定できるが、実世界の意味に対応づける証拠がない。意味は判定不能。"
         else:
             text = "構造を推定でき、証拠のある語に限って意味を主張できる。"
-        return {"syntax": self.syntax, "morphology": self.morph_test, "semantic_evidence": sem,
+        return {"syntax": self.syntax, "morphology": self.morph_test, "morphology_null": self.morph_null,
+                "semantic_evidence": sem,
                 "decipherable_structure": bool(syn or mor), "text": text}
 
     def _hypotheses(self, st):

@@ -224,6 +224,9 @@ def main(argv=None):
         print(json.dumps(res["meta"], ensure_ascii=False))
     elif a.cmd == "analyze":
         return _analyze(a, ap)
+    elif a.cmd in ("robust-structure", "transcription-compare") and a.permutations < 999:
+        # 置換が少ないと、標準化の作りのために誤って有意とする率が名目を超える（199 回で 0.07 前後。docs/ISSUES.md #81）
+        ap.exit(2, f"babel {a.cmd}: --permutations は 999 以上にしてください（少ないと誤報告が増える。docs/ISSUES.md #81）\n")
     elif a.cmd == "robust-structure":
         from babel.robust import compare as rc
         from babel.robust import ensemble

@@ -370,6 +370,15 @@ def test_cli_transcription_compare(tmp_path):
     from babel.__main__ import main
     out = tmp_path / "cmp.json"
     main(["transcription-compare", str(ROOT / "results/vision/real-img4494/corpus-continuous.json"), str(REAL / "inputs/v3-continuous.json"),
-          "--out", str(out), "--permutations", "199", "--name-a", "baseline", "--name-b", "improved-v3"])
+          "--out", str(out), "--permutations", "999", "--name-a", "baseline", "--name-b", "improved-v3"])
     res = json.loads(out.read_text(encoding="utf-8"))
     assert res["schema"] == "babel-transcription-compare-v1" and out.with_suffix(".md").exists()
+
+
+def test_cli_refuses_too_few_permutations(tmp_path):
+    """置換が少ないと誤報告が名目を超えるので、CLI は 999 回未満を受け付けない（#81）。"""
+    from babel.__main__ import main
+    with pytest.raises(SystemExit) as e:
+        main(["transcription-compare", str(ROOT / "results/vision/real-img4494/corpus-continuous.json"), str(REAL / "inputs/v3-continuous.json"),
+              "--out", str(tmp_path / "x.json"), "--permutations", "199"])
+    assert e.value.code == 2 and not (tmp_path / "x.json").exists()

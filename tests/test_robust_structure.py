@@ -211,6 +211,18 @@ def test_dev_and_holdout_cases_do_not_overlap():
     assert bench.text_seed(a) != bench.text_seed({**a, "n_pairs": 2})
 
 
+def test_merged_gold_lines_cannot_be_scored_as_a_planted_pair():
+    from babel.robust_eval import bench
+    gt = {"lines": [{"id": "a"}, {"id": "b"}, {"id": "c"}],
+          "items": [{"kind": "glyph", "box": [0, i * 20, 10, i * 20 + 10], "line": k}
+                    for i, k in enumerate("abc")]}
+    rep = {"glyphs": [{"box": g["box"]} for g in gt["items"]],
+           "rows": [{"glyph_indices": [0, 1]}, {"glyph_indices": [2]}]}
+    mapped = bench._row_lines(rep, gt)
+    assert mapped == [None, 2]
+    assert bench._judge([((0, 1), 0.01)], mapped, {(0, 2)})[0]["kind"] == "unmapped"
+
+
 def test_vote_counts_segmentation_bases_once():
     from babel.robust import ensemble
     def row(y):
@@ -226,7 +238,7 @@ def test_vote_counts_segmentation_bases_once():
 def test_threshold_selection_uses_uncertainty_and_rejects_old_bench():
     from babel.robust_eval import select
     negatives = [{"n_pairs": 0, "planted": [], "methods": {"oracle-lcs": []}, "votes": []} for _ in range(20)]
-    dev = {"schema": "babel-robust-bench-v2", "runs": negatives}
+    dev = {"schema": "babel-robust-bench-v3", "runs": negatives}
     # Zero hits in only twenty images is insufficient evidence for a <=5% rate.
     assert select.select(dev)["vote_threshold"] is None
     with pytest.raises(ValueError):

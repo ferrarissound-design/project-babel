@@ -248,16 +248,18 @@ def render(c):
 
     # ------------------------------------------------------------------ 6
     if hs or hf:
-        w("## 6. 結果: holdout（閾値を固定してから1回だけ）\n")
-        w("### 6.1 結果を見る前に書いた予測（results/robust/predictions-v2.json、holdout v2 の結果より前のコミット）\n")
+        w("## 6. 結果: holdout（評価設計の版を確認する）\n")
+        w("### 6.1 旧版の予測（results/robust/predictions-v2.json）\n")
         if not hs or not hf:
             w("予測の成否は実行済みの分割だけの暫定判定。未実行の分割を通過したとは扱わない。\n")
         if not c["checks"]:
-            w("旧設計（8方式の生票）の予測は、新設計（3切り出し群の票）の検証に転用しない。再設計後の予測を別途固定する必要がある。\n")
-        claims = {p["id"]: p for p in c["preds"]["predictions"]}
-        w("| 予測 | 内容 | 反証の条件 | 観測 | 結果 |\n|---|---|---|---|---|")
-        for i, ok, obs in c["checks"]:
-            w(f"| {i} | {claims[i]['claim']} | {claims[i]['refuted_if']} | {obs} | {HELD[ok]} |")
+            w("行の結合を誤採点した v2 の結果を見てから採点法を修正した。この holdout は v3 にとって初見ではなく、"
+              "v2 の予測6件を v3 の確認済み予測として転用しない。以下は事後の再分析である。\n")
+        else:
+            claims = {p["id"]: p for p in c["preds"]["predictions"]}
+            w("| 予測 | 内容 | 反証の条件 | 観測 | 結果 |\n|---|---|---|---|---|")
+            for i, ok, obs in c["checks"]:
+                w(f"| {i} | {claims[i]['claim']} | {claims[i]['refuted_if']} | {obs} | {HELD[ok]} |")
         w("")
         for n, S_ in (("holdout-synth", hs), ("holdout-font", hf)):
             if not S_:
@@ -280,7 +282,7 @@ def render(c):
     # ------------------------------------------------------------------ 7
     w("## 7. 仮説の真偽を分けるものは何か\n")
     w("### 7.1 票の数\n")
-    w("どれか1つの方式で有意になった行の組すべて（基準の行に戻せたもの）を、票の数で分けた。\n")
+    w("どれか1つの方式で有意になった行の組すべて（基準の行に戻せたもの）を、異なる切り出し群の票の数で分けた。\n")
     for n in ("dev", "holdout-synth", "holdout-font"):
         if not S.get(n):
             continue
@@ -288,8 +290,8 @@ def render(c):
         w(f"**{n}**（候補 {d['candidates']}、真 {d['true']}、偽 {d['false']}、AUC {d['auc']}）\n")
         w(c["vote_table"](S[n]))
         w("")
-    w("- 1つの方式でしか有意にならない組は、ほとんどが偽。6 つ以上の方式で有意な組は、ほとんどが真")
-    w("- 票が 2〜5 の組は真偽が半々に近い。「保留」として扱い、画像で照合する対象にするのが妥当\n")
+    w(f"- {k}/3 群で有意な組を採用候補とする。1〜{k - 1} 群は保留し、画像で照合する。"
+      "低票の組にも仕込んだ構造が含まれるため、誤認識とは断定しない\n")
     w("### 7.2 既存の安定性の指標（参考）\n")
     w("既存の `babel analyze` が付ける段階（A/B/C）と安定性（部分標本・転写の攪乱での再現率）が、improved-v3 の転写から出た linepair 仮説の真偽を分けるか。\n")
     w("| 分割 | 段階 B（真 / 偽） | 段階 C（真 / 偽） | 部分標本の安定性の AUC | 転写の安定性の AUC |\n|---|---|---|---:|---:|")
@@ -441,7 +443,8 @@ def render(c):
       "python -m babel.robust_eval.inventory --split dev --out results/robust/inventory-dev.json      # holdout-synth・holdout-font も同じ\n"
       "python -m babel.robust_eval.compare_bench --split dev --out results/robust/compare-bench-dev.json  # 転写だけの比較の検証\n"
       "python -m babel.robust_eval.report\n```\n")
-    w("- 画像の比較では、行の番号は基準の方式（improved-v3）の行。票が 5 以下の組は「保留」、1 の組は認識の誤りとして扱う")
+    w(f"- 画像の比較では、行の番号は基準の方式（improved-v3）の行。{k}/3 群で有意なら採用候補、"
+      f"{k - 1} 群以下は保留して画像で照合する。票だけで誤認識とは断定しない")
     w("- 結果の JSON には、画像ごとの各方式の発見・票・認識の指標が入っている（results/robust/bench-*.json）。集計は summary-*.json")
     w("- holdout-font は、フォント（DejaVu Sans・Loma・IPA ゴシック・WenQuanYi Zen Hei）と Pillow の版によって画素が変わる。記録した結果は、この PR の作業環境のもの")
     return "\n".join(L) + "\n"

@@ -91,7 +91,8 @@ def render_case(case):
 def _row_lines(rep, gt):
     """予測の行 → 正解の行の番号（なければ None）。
 
-    予測の記号ごとに、重なる面積が最大の正解の記号の行を取り、行の中の多数決で決める。IoU の閾値は使わない:
+    予測の記号ごとに、重なる面積が最大の正解の記号の行を取る。複数の正解行が混ざる予測行は対応不能とする。
+    多数決で一方に割り当てると、結合された行を仕込み組として誤採点してしまう。IoU の閾値は使わない:
     字の破片だけでできた行（行の過剰分割）も、元の正解の行に戻す。破片の行どうしの類似が仕込んだ組に当たれば真、
     同じ正解の行の破片どうしなら same_line（偽）と数える。
     """
@@ -110,7 +111,7 @@ def _row_lines(rep, gt):
                     best, best_a = g, a
             if best is not None:
                 c[line_index[best["line"]]] += 1
-        out.append(c.most_common(1)[0][0] if c else None)
+        out.append(next(iter(c)) if len(c) == 1 else None)
     return out
 
 
@@ -239,7 +240,7 @@ def run(split, out, jobs=4, limit=None):
     with ProcessPoolExecutor(jobs) as ex:
         runs = list(ex.map(run_case, cs, chunksize=4))
     import cv2
-    res = {"schema": "babel-robust-bench-v2", "split": split, "config": {k: (list(v) if not isinstance(v, str) else v) for k, v in SPLITS[split].items()},
+    res = {"schema": "babel-robust-bench-v3", "split": split, "config": {k: (list(v) if not isinstance(v, str) else v) for k, v in SPLITS[split].items()},
            "analyze_cfg": ANALYZE_CFG, "row_cfg": ROW_CFG, "opencv": cv2.__version__, "cases": len(runs), "seconds": round(time.time() - t0, 1),
            "runs": runs}
     Path(out).parent.mkdir(parents=True, exist_ok=True)

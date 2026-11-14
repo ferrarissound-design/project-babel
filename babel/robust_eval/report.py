@@ -66,10 +66,12 @@ def vote_table(S):
     return "\n".join(L)
 
 
-def check_predictions(S_all, k, preds=None):
+def check_predictions(S_all, k, preds=None, bench_schema="babel-robust-bench-v3"):
     """holdout の結果を見る前に書いた予測（results/robust/predictions.json）を、結果と照らす。"""
     out = []
-    if not preds or preds.get("frozen", {}).get("vote_threshold") != k or preds["frozen"].get("members") != summary.N_MEMBERS:
+    if (not preds or preds.get("frozen", {}).get("vote_threshold") != k
+            or preds["frozen"].get("members") != summary.N_MEMBERS
+            or preds["frozen"].get("bench_schema") != bench_schema):
         return out  # historical predictions for the 8-member design are not claims about the new 3-group design
     hs = {n: S_all[n] for n in ("holdout-synth", "holdout-font") if S_all.get(n)}
     if not hs:
@@ -104,8 +106,8 @@ def check_predictions(S_all, k, preds=None):
 
 def build():
     sel = _load("selected.json")
-    if not sel or sel.get("bench_schema") != "babel-robust-bench-v2":
-        raise ValueError("旧閾値は使用不可。v2 の dev 評価と選択を再実行する")
+    if not sel or sel.get("bench_schema") != "babel-robust-bench-v3":
+        raise ValueError("旧閾値は使用不可。v3 の dev 評価と選択を再実行する")
     k = sel["vote_threshold"]
     if k is None:
         raise ValueError("95% 上限 <= 0.05 を満たす票の閾値はない。採用判定の報告を生成できない")
@@ -115,7 +117,7 @@ def build():
         res = _load(f"bench-{name}.json")
         if res:
             if res.get("schema") != sel["bench_schema"]:
-                raise ValueError(f"{name} は旧評価設計の結果。v2 を再実行する")
+                raise ValueError(f"{name} は旧評価設計の結果。v3 を再実行する")
             S_all[name] = summary.summarize(res)
             S_all[name]["config"] = res["config"]
             S_all[name]["opencv"] = res.get("opencv")
@@ -128,7 +130,7 @@ def build():
     cb = {name: current(f"compare-bench-{name}.json", "babel-robust-compare-bench-v2") for name in SPLIT_NAMES}
     cmp_ = _load("real-img4494/compare-baseline-v3.json")
     preds = _load("predictions-v2.json")
-    checks = check_predictions(S_all, k, preds)
+    checks = check_predictions(S_all, k, preds, sel["bench_schema"])
     (R / "prediction-check.json").write_text(json.dumps([{"id": i, "held": ok, "observed": obs} for i, ok, obs in checks],
                                                         ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
     from . import prose

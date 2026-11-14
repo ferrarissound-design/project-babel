@@ -1,5 +1,5 @@
 {
- "bench_schema": "babel-robust-bench-v2",
+ "bench_schema": "babel-robust-bench-v3",
  "rule": {
   "limit": 0.05,
   "vote": "陰性画像の報告率の Wilson 95% 上限 <= limit となる最小の k",
@@ -15,9 +15,9 @@
     0.5915
    ],
    "oracle_quiet_rate": 0.5182,
-   "recall": 0.684,
-   "precision": 0.2951,
-   "false_per_positive_image": 1.6007
+   "recall": 0.625,
+   "precision": 0.2697,
+   "false_per_positive_image": 1.7188
   },
   "2": {
    "fwer": 0.0451,
@@ -26,9 +26,9 @@
     0.0757
    ],
    "oracle_quiet_rate": 0.0292,
-   "recall": 0.4635,
-   "precision": 0.9207,
-   "false_per_positive_image": 0.0347
+   "recall": 0.4514,
+   "precision": 0.8966,
+   "false_per_positive_image": 0.059
   },
   "3": {
    "fwer": 0.0035,
@@ -50,9 +50,9 @@
     0.0883
    ],
    "oracle_quiet_rate": 0.0328,
-   "recall": 0.5,
-   "precision": 0.8972,
-   "false_per_positive_image": 0.0556
+   "recall": 0.4913,
+   "precision": 0.8789,
+   "false_per_positive_image": 0.0729
   },
   "0.3": {
    "fwer": 0.0521,
@@ -61,9 +61,9 @@
     0.0841
    ],
    "oracle_quiet_rate": 0.0292,
-   "recall": 0.5104,
-   "precision": 0.8909,
-   "false_per_positive_image": 0.0694
+   "recall": 0.5017,
+   "precision": 0.8731,
+   "false_per_positive_image": 0.0868
   },
   "0.45": {
    "fwer": 0.059,
@@ -72,9 +72,9 @@
     0.0925
    ],
    "oracle_quiet_rate": 0.0365,
-   "recall": 0.5191,
-   "precision": 0.8872,
-   "false_per_positive_image": 0.0694
+   "recall": 0.5104,
+   "precision": 0.8698,
+   "false_per_positive_image": 0.0868
   }
  },
  "dev_cases": 576

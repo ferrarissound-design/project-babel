@@ -116,3 +116,14 @@ def test_permuted_is_derangement():
     perm = Decipherer._permuted(par, "x")
     assert all(p["translation"]["pred"] != str(i) for i, p in enumerate(perm))
     assert sorted(p["translation"]["pred"] for p in perm) == [str(i) for i in range(7)]
+
+
+def test_v17_verb_rel_counts_and_flag_off_keeps_v16():
+    """v1.7（R1）: 述語・主語・目的語の位置がそろう文を数える。v17_gates=False では主張が v1.6.0 と同じ。"""
+    from babel.decipher.engine import Decipherer
+    public, _ = build_corpus("UMB", 0, "A")
+    d = Decipherer(public).fit()
+    assert set(d.order_counts) == {"so", "adj", "verb", "verb_rel"}
+    assert d.align_null["verb_rel"]["pass"] in (True, False) and "real" in d.align_null["verb_rel"]
+    st_off = decipher(public, {"v17_gates": False})["structure"]
+    assert "alignment-relative" != st_off["verb_position"].get("source")

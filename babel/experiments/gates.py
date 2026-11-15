@@ -1,6 +1,7 @@
 """帰無対照の関門の測定。版ごとに構造の判定を数える。
 
 - dev / eval: v1.3 の事前登録（docs/PREREG_v1.3_NULL_GATES.md）。対照は実コーパスと同じシード 20 個
+- dev17 / eval17: v1.7 の事前登録（docs/PREREG_v1.7_VERB_RELATIVE.md）。dev17 は開発シード、eval17 はシード 400〜419
 - dev16 / eval16: v1.6 の事前登録（docs/PREREG_v1.6_ALIGNMENT_NULL.md）。LEVEL A、通常の対訳と入れ替えた対訳
 - dev15: v1.5 の事前登録（docs/PREREG_v1.5_VERB_EVIDENCE.md）の基準 C・D。水準 A・B・C 別の動詞の位置
 - dev14 / eval14: v1.4 の事前登録（docs/PREREG_v1.4_MULTIPLE_TESTING.md）。対照は 100 個
@@ -22,7 +23,8 @@ from babel.generator.languages import FAMILIES
 
 VARIANTS = {"v1.2": {"null_gates": False, "v15_gates": False, "v16_gates": False},
             "v1.3": {"affix_null_alpha": 0.05, "v15_gates": False, "v16_gates": False},
-            "v1.4": {"v15_gates": False, "v16_gates": False}, "v1.5": {"v16_gates": False}, "v1.6": {}}
+            "v1.4": {"v15_gates": False, "v16_gates": False}, "v1.5": {"v16_gates": False},
+            "v1.6": {"v17_gates": False}, "v1.7": {}}
 SPLITS = {   # (実コーパスのシード, 対照のシード, 比べる版, 実コーパスの水準)
     "dev": (DEV_SEEDS, DEV_SEEDS, ("v1.2", "v1.3"), "AC"),
     "eval": (TEST_SEEDS, TEST_SEEDS, ("v1.2", "v1.3"), "AC"),
@@ -122,27 +124,28 @@ ORDER_KEYS = ("verb_position", "so_order", "adj_noun")
 def _real16(task):
     """v1.6 の基準 A〜C: LEVEL A の合成言語を、通常の対訳と入れ替えた対訳で（docs/PREREG_v1.6_ALIGNMENT_NULL.md）。"""
     from babel.decipher.engine import Decipherer
-    fam, seed, mismatch = task
+    fam, seed, mismatch, names = task
     public, secret = build_corpus(fam, seed, "A", **DEFAULT_GEN)
     if mismatch:
         public = dict(public, parallel=Decipherer._permuted(public["parallel"], f"synthetic-mismatch-{fam}-{seed}"))
     out = {}
-    for name in ("v1.5", "v1.6"):
+    for name in names:
         st = score(decipher(public, VARIANTS[name]), secret, public)["structure"]
         out[name] = {k: st.get(k) for k in ORDER_KEYS}
     return {"family": fam, "seed": seed, "mismatch": mismatch, "structure": out}
 
 
 def main16(split="dev16", jobs=4):
-    seeds = DEV_SEEDS if split == "dev16" else list(range(300, 320))
+    seeds = DEV_SEEDS if split in ("dev16", "dev17") else list(range(300, 320)) if split == "eval16" else list(range(400, 420))
+    names = ("v1.6", "v1.7") if split.endswith("17") else ("v1.5", "v1.6")
     t0 = time.time()
-    tasks = [(f, s, m) for f in FAMILIES for s in seeds for m in (False, True)]
+    tasks = [(f, s, m, names) for f in FAMILIES for s in seeds for m in (False, True)]
     with mp.Pool(jobs) as pool:
         rows = pool.map(_real16, tasks)
     summary = {}
     for m in (False, True):
         rs = [r for r in rows if r["mismatch"] == m]
-        for name in ("v1.5", "v1.6"):
+        for name in names:
             c = Counter(v for r in rs for v in r["structure"][name].values() if v is not None)
             claimed = sum(1 for r in rs if any(v in ("correct", "wrong") for v in r["structure"][name].values()))
             summary[f"{name}:{'mismatch' if m else 'matched'}"] = {
@@ -156,7 +159,7 @@ def main16(split="dev16", jobs=4):
 
 
 if __name__ == "__main__":
-    if sys.argv[1:2] and sys.argv[1].endswith("16"):
+    if sys.argv[1:2] and sys.argv[1][-2:] in ("16", "17"):
         main16(sys.argv[1])
         sys.exit()
     main(*(sys.argv[1:2] or ["dev"]))

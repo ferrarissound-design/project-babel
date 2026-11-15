@@ -123,6 +123,27 @@ def target_sentences(parsed):
     return out
 
 
+def gold_verb_rel(parsed):
+    """v1.7 の正解: 品詞 VERB の語（nsubj と obj を子に持つ）が、主語・目的語の両方より前 / 後 / 間のどれか。
+    最多の割合が 0.5 以上ならその値、未満なら正解なし。受動（nsubj:pass）は除く。"""
+    c = Counter()
+    for s in parsed:
+        for v in s["tokens"]:
+            if v["upos"] != "VERB":
+                continue
+            subj = [t["id"] for t in s["tokens"] if t["head"] == v["id"] and t["deprel"] == "nsubj"]
+            obj = [t["id"] for t in s["tokens"] if t["head"] == v["id"] and t["deprel"] == "obj"]
+            if subj and obj:
+                lo, hi = min(subj[0], obj[0]), max(subj[0], obj[0])
+                c["initial" if v["id"] < lo else "final" if v["id"] > hi else "medial"] += 1
+    n = sum(c.values())
+    if not n:
+        return {"value": None, "n": 0, "shares": {}}
+    shares = {k: round(c[k] / n, 3) for k in ("initial", "medial", "final")}
+    best = max(shares, key=lambda k: shares[k])
+    return {"value": best if shares[best] >= 0.5 else None, "n": n, "shares": shares}
+
+
 def gold_so(tsents):
     c = Counter()
     for _, _, so in tsents:
@@ -216,6 +237,56 @@ def main(out="results/real_parallel/real-parallel.json"):
     print(json.dumps(res["summary"], ensure_ascii=False, indent=1))
 
 
+VERSIONS17 = {"v1.6": {"v17_gates": False}, "v1.7": {}}
+
+
+def run_language17(repo, code, en_tr, allow_extended=False):
+    """v1.7: 100% の対訳とずらした対訳。正解は主語・目的語との前後関係（gold_verb_rel）。"""
+    path, sha = fetch(repo, code)
+    parsed = parse(path)
+    tsents = target_sentences(parsed)
+    sent_ids = [s for s, _, _ in tsents]
+    words, n_chars = rl.cipher([ws for _, ws, _ in tsents], allow_extended=allow_extended)
+    gold = {"verb_position": gold_verb_rel(parsed), "so_order": gold_so(tsents)}
+    row = {"treebank": repo, "code": code, "sha256": sha, "sentences": len(tsents), "characters": n_chars, "gold": gold,
+           "versions": {}}
+    for label, frac, mis in SETTINGS16:
+        public, n_par = build_public(f"real-{code}", words, sent_ids, en_tr, frac, mis)
+        for name, cfg in VERSIONS17.items():
+            pred = decipher(public, cfg)
+            st = pred["structure"]
+            vp, so = st["verb_position"], st["so_order"]
+            row["versions"].setdefault(name, {})[label] = {
+                "translations": n_par,
+                "verb_position": {"pred": vp.get("value"), "confidence": vp.get("confidence"), "n": vp.get("n"),
+                                  "source": vp.get("source"), "judge": _judge(vp.get("value"), gold["verb_position"]["value"])},
+                "so_order": {"pred": so.get("value"), "confidence": so.get("confidence"), "n": so.get("n"),
+                             "judge": _judge(so.get("value"), gold["so_order"]["value"])},
+                "verb_rel_null": (pred["verdict"].get("alignment_null") or {}).get("verb_rel")}
+    return row
+
+
+def main17(codes, out, allow_extended=False):
+    src_path, src_sha = fetch(*SOURCE)
+    en_tr = {s["sent_id"]: t for s in parse(src_path) if (t := translation(s))}
+    rows, excluded = [], []
+    for repo, code in codes:
+        try:
+            rows.append(run_language17(repo, code, en_tr, allow_extended))
+            print(code, "ok", flush=True)
+        except Exception as e:
+            excluded.append({"treebank": repo, "error": f"{type(e).__name__}: {e}"})
+            print(code, "excluded", e, flush=True)
+    summary = {f"{name}:{label}:{key}": dict(Counter(r["versions"][name][label][key]["judge"] for r in rows))
+               for name in VERSIONS17 for label, _, _ in SETTINGS16 for key in ("verb_position", "so_order")}
+    res = {"engine_version": VERSION, "ud_tag": rl.UD_TAG, "preregistration": "docs/PREREG_v1.7_VERB_RELATIVE.md",
+           "source": {"treebank": SOURCE[0], "sha256": src_sha, "translations": len(en_tr)},
+           "summary": summary, "excluded": excluded, "rows": rows}
+    Path(out).parent.mkdir(parents=True, exist_ok=True)
+    Path(out).write_text(json.dumps(res, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+    print(json.dumps(summary, ensure_ascii=False, indent=1))
+
+
 def main16(out="results/real_parallel/real-parallel-v16.json"):
     """v1.6 の評価: 新しい 5 言語、100% とずらした対照、v1.5.0 と v1.6.0。"""
     src_path, src_sha = fetch(*SOURCE)
@@ -248,5 +319,10 @@ def main16(out="results/real_parallel/real-parallel-v16.json"):
 if __name__ == "__main__":
     if sys.argv[1:2] == ["v16"]:
         main16()
+    elif sys.argv[1:2] == ["v17-dev"]:
+        main17([t for t in TARGETS if t[1] not in ("hi_pud", "th_pud", "ja_pud", "ko_pud", "zh_pud")],
+               "results/real_parallel/real-parallel-v17-dev.json")
+    elif sys.argv[1:2] == ["v17"]:
+        main17(TARGETS16, "results/real_parallel/real-parallel-v17.json", allow_extended=True)
     else:
         main(*sys.argv[1:2])

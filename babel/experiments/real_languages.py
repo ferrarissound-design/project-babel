@@ -29,7 +29,14 @@ DROP_UPOS = {"PUNCT", "SYM", "X"}
 SYMBOLS = ("abcdefghijklmnopqrstuvwxyz" + "αβγδεζηθικλμνξοπρστυφχψω"
            + "абвгдежзийклмнопрстуфхцчшщъыьэюя")
 CACHE = Path(".cache/ud")
-VERSIONS = {"v1.4": {}, "v1.2": {"null_gates": False}}
+TREEBANKS_HELDOUT = [   # docs/PREREG_v1.5_VERB_EVIDENCE.md の評価用の言語
+    ("UD_German-GSD", "de_gsd"), ("UD_Swedish-Talbanken", "sv_talbanken"), ("UD_Polish-PDB", "pl_pdb"),
+    ("UD_Czech-CAC", "cs_cac"), ("UD_Italian-ISDT", "it_isdt"), ("UD_Persian-Seraji", "fa_seraji"),
+    ("UD_Hindi-HDTB", "hi_hdtb"), ("UD_Estonian-EDT", "et_edt"), ("UD_Arabic-PADT", "ar_padt"),
+    ("UD_Latvian-LVTB", "lv_lvtb"),
+]
+ALL_VERSIONS = {"v1.2": {"null_gates": False, "v15_gates": False}, "v1.4": {"v15_gates": False}, "v1.5": {}}
+VERSIONS = {k: ALL_VERSIONS[k] for k in ("v1.4", "v1.2")}      # 最初の 10 言語（PREREG_REAL_LANGUAGES）。v1.4.0 以前の版に固定
 
 
 def fetch(repo, code):
@@ -146,21 +153,41 @@ def _judge(pred_value, gold_value):
     return "correct" if str(pred_value) == str(gold_value) else "wrong"
 
 
-def run_one(repo, code):
+def _verb_class_share(decipherer, upos):
+    """動詞とみなしたクラスのトークンのうち、UD で VERB だった割合（換字を戻して数える診断。解読器には渡さない）。"""
+    vt = Counter(upos[w].most_common(1)[0][0] for s in decipherer.sents for w in s
+                 if decipherer.stem_pos.get(decipherer.infos[w][1]) == "V")
+    n = sum(vt.values())
+    return {"v_tokens": n, "verb_share": round(vt["VERB"] / n, 3) if n else None,
+            "upos_share": {k: round(c / n, 3) for k, c in vt.most_common(4)} if n else {}}
+
+
+def run_one(repo, code, versions=None):
+    from babel.decipher.engine import Decipherer
+    versions = versions or VERSIONS
     t0 = time.time()
     path, sha = fetch(repo, code)
     sents = read_sentences(path)
     gold = {"verb_position": gold_verb_position(sents), "affix_position": gold_affix_position(sents)}
     words, n_chars = cipher(sents)
+    upos = {}
+    for sent, ws in zip(sents, words):
+        for (_, u, _), c in zip(sent, ws):
+            upos.setdefault(c, Counter())[u] += 1
     public = to_public(f"real-{code}", words)
     control = to_public(f"real-{code}-shuffled", shuffled_control(words))
     row = {"treebank": repo, "code": code, "ud_tag": UD_TAG, "sha256": sha, "sentences": len(sents),
            "tokens": sum(map(len, sents)), "characters": n_chars, "gold": gold, "versions": {}}
-    for name, cfg in VERSIONS.items():
-        pred = decipher(public, cfg)
+    for name, cfg in versions.items():
+        dec = Decipherer(public, cfg).fit()
+        pred = dec.predict()
         st = pred["structure"]
-        ctrl = decipher(control, cfg)["structure"]
+        ctrl_pred = decipher(control, cfg)
+        ctrl = ctrl_pred["structure"]
         row["versions"][name] = {
+            "verb_class": _verb_class_share(dec, upos),
+            "verb_candidate_position": st.get("verb_candidate_position"),
+            "control_morphology_present": ctrl_pred["verdict"]["morphology"]["present"],
             "verb_position": {"pred": st["verb_position"].get("value"),
                               "confidence": st["verb_position"].get("confidence"),
                               "alternatives": st["verb_position"].get("alternatives", {}),
@@ -180,28 +207,30 @@ def run_one(repo, code):
     return row
 
 
-def summarize(rows):
+def summarize(rows, versions=None):
     s = {}
-    for name in VERSIONS:
+    for name in (versions or VERSIONS):
         for key in ("verb_position", "affix_position"):
             s[f"{name}:{key}"] = dict(Counter(r["versions"][name][key]["judge"] for r in rows))
         s[f"{name}:syntax_detected"] = sum(1 for r in rows if r["versions"][name]["syntax"]["present"])
         s[f"{name}:control_verb_claims"] = sum(1 for r in rows if r["versions"][name]["control_verb_position_claim"])
         s[f"{name}:languages"] = len(rows)
+        s[f"{name}:control_morphology_present"] = sum(1 for r in rows if r["versions"][name]["control_morphology_present"])
+        s[f"{name}:morphology_present"] = sum(1 for r in rows if r["versions"][name]["morphology"]["present"])
     return s
 
 
-def main(out="results/real_languages/real-languages.json"):
+def main(out="results/real_languages/real-languages.json", treebanks=None, versions=None, prereg="docs/PREREG_REAL_LANGUAGES.md"):
     rows, excluded = [], []
-    for repo, code in TREEBANKS:
+    for repo, code in (treebanks or TREEBANKS):
         try:
-            rows.append(run_one(repo, code))
+            rows.append(run_one(repo, code, versions))
             print(repo, "ok", flush=True)
         except Exception as e:          # 取得できない言語は除外して記録する（置き換えない）
             excluded.append({"treebank": repo, "error": f"{type(e).__name__}: {e}"})
             print(repo, "excluded", e, flush=True)
-    res = {"engine_version": VERSION, "ud_tag": UD_TAG, "preregistration": "docs/PREREG_REAL_LANGUAGES.md",
-           "summary": summarize(rows), "excluded": excluded, "rows": rows}
+    res = {"engine_version": VERSION, "ud_tag": UD_TAG, "preregistration": prereg,
+           "summary": summarize(rows, versions), "excluded": excluded, "rows": rows}
     Path(out).parent.mkdir(parents=True, exist_ok=True)
     Path(out).write_text(json.dumps(res, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
     print(json.dumps(res["summary"], ensure_ascii=False, indent=1))
@@ -222,7 +251,7 @@ def verb_class_diagnostic(out="results/real_languages/verb-class-diagnostic.json
         for s, ws in zip(sents, words):
             for (_, u, _), c in zip(s, ws):
                 upos.setdefault(c, Counter())[u] += 1
-        d = Decipherer(to_public(f"real-{code}", words)).fit()
+        d = Decipherer(to_public(f"real-{code}", words), ALL_VERSIONS["v1.4"]).fit()
         vt = Counter(upos[w].most_common(1)[0][0] for s in d.sents for w in s
                      if d.stem_pos.get(d.infos[w][1]) == "V")
         n = sum(vt.values())
@@ -236,5 +265,8 @@ def verb_class_diagnostic(out="results/real_languages/verb-class-diagnostic.json
 if __name__ == "__main__":
     if sys.argv[1:2] == ["verb-class"]:
         verb_class_diagnostic()
+    elif sys.argv[1:2] == ["heldout"]:
+        main("results/real_languages/real-languages-heldout.json", TREEBANKS_HELDOUT,
+             {k: ALL_VERSIONS[k] for k in ("v1.5", "v1.4")}, "docs/PREREG_v1.5_VERB_EVIDENCE.md")
     else:
         main(*sys.argv[1:2])

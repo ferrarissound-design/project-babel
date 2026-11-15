@@ -58,3 +58,36 @@ def test_affix_alpha_is_per_side_bonferroni():
         assert mn[side]["p"] == mn14[side]["p"]
         assert mn[side]["significant"] == (mn[side]["p"] <= 0.05)
         assert mn14[side]["significant"] == (mn14[side]["p"] <= 0.025)
+
+
+def test_v15_verb_position_needs_alignment_evidence():
+    """v1.5（V1）: 対訳のない LEVEL C では動詞の位置を主張せず、候補クラスの統計だけを出す。"""
+    public, _ = build_corpus("KES", 2, "C")
+    st15 = decipher(public)["structure"]
+    st14 = decipher(public, {"v15_gates": False})["structure"]
+    assert st14["verb_position"]["value"] is not None       # v1.4.0 は主張する
+    assert st15["verb_position"]["value"] is None
+    assert st15["verb_candidate_position"]["top"] == st14["verb_position"]["value"]
+    assert "value" not in st15["verb_candidate_position"]   # 主張として数えられない
+
+
+def test_v15_keeps_verb_position_with_alignment():
+    public, _ = build_corpus("KES", 2, "A")
+    assert decipher(public)["structure"]["verb_position"]["value"] == \
+        decipher(public, {"v15_gates": False})["structure"]["verb_position"]["value"]
+
+
+def test_v15_open_class_rejects_concentrated_class():
+    from collections import Counter
+
+    from babel.decipher import classes
+    # 語幹 a に偏った群（実効語幹数 ≈ 1.1）と、均等な群
+    infos, sents = {}, []
+    for i, st in enumerate(["a"] * 40 + ["b", "c", "d", "e"]):
+        w = f"{st}{i}"
+        infos[w] = ([], st, ["x"])
+        sents.append([w])
+    stem_group = {s: "G" for s in "abcde"}
+    pos, info = classes.label_classes(sents, infos, stem_group, open_class_min=8.0)
+    assert info["verb_group"] is None and info["groups"]["G"]["effective_stems"] < 2
+    assert isinstance(Counter(), Counter)

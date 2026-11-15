@@ -1,0 +1,1270 @@
+{
+ "engine_version": "1.5.0",
+ "ud_tag": "r2.15",
+ "preregistration": "docs/PREREG_v1.5_VERB_EVIDENCE.md",
+ "summary": {
+  "v1.5:verb_position": {
+   "abstain": 10
+  },
+  "v1.5:affix_position": {
+   "correct": 9,
+   "wrong": 1
+  },
+  "v1.5:syntax_detected": 10,
+  "v1.5:control_verb_claims": 0,
+  "v1.5:languages": 10,
+  "v1.5:control_morphology_present": 0,
+  "v1.5:morphology_present": 10,
+  "v1.4:verb_position": {
+   "correct": 2,
+   "abstain": 8
+  },
+  "v1.4:affix_position": {
+   "correct": 9,
+   "wrong": 1
+  },
+  "v1.4:syntax_detected": 10,
+  "v1.4:control_verb_claims": 0,
+  "v1.4:languages": 10,
+  "v1.4:control_morphology_present": 0,
+  "v1.4:morphology_present": 7
+ },
+ "excluded": [],
+ "rows": [
+  {
+   "treebank": "UD_German-GSD",
+   "code": "de_gsd",
+   "ud_tag": "r2.15",
+   "sha256": "cb1326edce0e4f61847416235611ae6a15d0fed9c8e403c355a1edd9a23b2c77",
+   "sentences": 1000,
+   "tokens": 10477,
+   "characters": 31,
+   "gold": {
+    "verb_position": {
+     "value": "medial",
+     "n": 448,
+     "shares": {
+      "initial": 0.031,
+      "medial": 0.525,
+      "final": 0.444
+     }
+    },
+    "affix_position": {
+     "value": "suffix",
+     "n": 1548,
+     "shares": {
+      "suffix": 0.934,
+      "prefix": 0.066
+     }
+    }
+   },
+   "versions": {
+    "v1.5": {
+     "verb_class": {
+      "v_tokens": 0,
+      "verb_share": null,
+      "upos_share": {}
+     },
+     "verb_candidate_position": {
+      "top": null,
+      "shares": {},
+      "n": 0,
+      "note": "動詞であることの根拠はない。対訳なしでは、このクラスが動詞かどうかを確かめられない"
+     },
+     "control_morphology_present": false,
+     "verb_position": {
+      "pred": null,
+      "confidence": 0.0,
+      "alternatives": {},
+      "null_gate": null,
+      "judge": "abstain"
+     },
+     "affix_position": {
+      "pred": "suffix",
+      "confidence": 0.767,
+      "support": {
+       "suffix": 1665,
+       "prefix": 505
+      },
+      "null_gate": null,
+      "judge": "correct"
+     },
+     "syntax": {
+      "entropy": 4.0078,
+      "shuffled_mean": 4.5534,
+      "z": 55.66,
+      "reduction": 0.1198,
+      "p": 0.005,
+      "n_shuffle": 199,
+      "present": true
+     },
+     "morphology": {
+      "affixed_token_share": 0.1967,
+      "n_affixes": 90,
+      "present": true,
+      "basis": "G1'（接辞と文脈の連動）、接辞 3 種以上"
+     },
+     "control_verb_position_claim": false,
+     "control_claims": []
+    },
+    "v1.4": {
+     "verb_class": {
+      "v_tokens": 447,
+      "verb_share": 0.0,
+      "upos_share": {
+       "CCONJ": 0.826,
+       "SCONJ": 0.136,
+       "ADV": 0.031,
+       "NOUN": 0.007
+      }
+     },
+     "verb_candidate_position": null,
+     "control_morphology_present": false,
+     "verb_position": {
+      "pred": "medial",
+      "confidence": 0.956,
+      "alternatives": {
+       "initial": 0.034,
+       "medial": 0.966,
+       "final": 0.0
+      },
+      "null_gate": null,
+      "judge": "correct"
+     },
+     "affix_position": {
+      "pred": "suffix",
+      "confidence": 0.767,
+      "support": {
+       "suffix": 1665,
+       "prefix": 505
+      },
+      "null_gate": null,
+      "judge": "correct"
+     },
+     "syntax": {
+      "entropy": 4.0078,
+      "shuffled_mean": 4.5534,
+      "z": 55.66,
+      "reduction": 0.1198,
+      "p": 0.005,
+      "n_shuffle": 199,
+      "present": true
+     },
+     "morphology": {
+      "affixed_token_share": 0.1967,
+      "n_affixes": 90,
+      "present": false
+     },
+     "control_verb_position_claim": false,
+     "control_claims": []
+    }
+   },
+   "seconds": 21.1
+  },
+  {
+   "treebank": "UD_Swedish-Talbanken",
+   "code": "sv_talbanken",
+   "ud_tag": "r2.15",
+   "sha256": "1c147eee30f67999d3f2bd085f43d26e06893a40a7fb926f9416fab7088dce87",
+   "sentences": 1000,
+   "tokens": 12070,
+   "characters": 28,
+   "gold": {
+    "verb_position": {
+     "value": "medial",
+     "n": 476,
+     "shares": {
+      "initial": 0.061,
+      "medial": 0.901,
+      "final": 0.038
+     }
+    },
+    "affix_position": {
+     "value": "suffix",
+     "n": 3152,
+     "shares": {
+      "suffix": 1.0,
+      "prefix": 0.0
+     }
+    }
+   },
+   "versions": {
+    "v1.5": {
+     "verb_class": {
+      "v_tokens": 0,
+      "verb_share": null,
+      "upos_share": {}
+     },
+     "verb_candidate_position": {
+      "top": null,
+      "shares": {},
+      "n": 0,
+      "note": "動詞であることの根拠はない。対訳なしでは、このクラスが動詞かどうかを確かめられない"
+     },
+     "control_morphology_present": false,
+     "verb_position": {
+      "pred": null,
+      "confidence": 0.0,
+      "alternatives": {},
+      "null_gate": null,
+      "judge": "abstain"
+     },
+     "affix_position": {
+      "pred": "suffix",
+      "confidence": 0.79,
+      "support": {
+       "suffix": 2398,
+       "prefix": 637
+      },
+      "null_gate": null,
+      "judge": "correct"
+     },
+     "syntax": {
+      "entropy": 3.9492,
+      "shuffled_mean": 4.4687,
+      "z": 52.22,
+      "reduction": 0.1163,
+      "p": 0.005,
+      "n_shuffle": 199,
+      "present": true
+     },
+     "morphology": {
+      "affixed_token_share": 0.2319,
+      "n_affixes": 108,
+      "present": true,
+      "basis": "G1'（接辞と文脈の連動）、接辞 3 種以上"
+     },
+     "control_verb_position_claim": false,
+     "control_claims": []
+    },
+    "v1.4": {
+     "verb_class": {
+      "v_tokens": 0,
+      "verb_share": null,
+      "upos_share": {}
+     },
+     "verb_candidate_position": null,
+     "control_morphology_present": false,
+     "verb_position": {
+      "pred": null,
+      "confidence": 0.0,
+      "alternatives": {},
+      "null_gate": null,
+      "judge": "abstain"
+     },
+     "affix_position": {
+      "pred": "suffix",
+      "confidence": 0.79,
+      "support": {
+       "suffix": 2398,
+       "prefix": 637
+      },
+      "null_gate": null,
+      "judge": "correct"
+     },
+     "syntax": {
+      "entropy": 3.9492,
+      "shuffled_mean": 4.4687,
+      "z": 52.22,
+      "reduction": 0.1163,
+      "p": 0.005,
+      "n_shuffle": 199,
+      "present": true
+     },
+     "morphology": {
+      "affixed_token_share": 0.2319,
+      "n_affixes": 108,
+      "present": true
+     },
+     "control_verb_position_claim": false,
+     "control_claims": []
+    }
+   },
+   "seconds": 27.6
+  },
+  {
+   "treebank": "UD_Polish-PDB",
+   "code": "pl_pdb",
+   "ud_tag": "r2.15",
+   "sha256": "92542e258b1c202b259c3841a57554d7b2c5a8bc51440fd418e8ce0af06d18a3",
+   "sentences": 1000,
+   "tokens": 11025,
+   "characters": 33,
+   "gold": {
+    "verb_position": {
+     "value": "medial",
+     "n": 700,
+     "shares": {
+      "initial": 0.0,
+      "medial": 0.997,
+      "final": 0.003
+     }
+    },
+    "affix_position": {
+     "value": "suffix",
+     "n": 6018,
+     "shares": {
+      "suffix": 1.0,
+      "prefix": 0.0
+     }
+    }
+   },
+   "versions": {
+    "v1.5": {
+     "verb_class": {
+      "v_tokens": 334,
+      "verb_share": 0.958,
+      "upos_share": {
+       "VERB": 0.958,
+       "NOUN": 0.024,
+       "ADJ": 0.018
+      }
+     },
+     "verb_candidate_position": {
+      "top": "medial",
+      "shares": {
+       "initial": 0.0,
+       "medial": 0.989,
+       "final": 0.011
+      },
+      "n": 284,
+      "note": "動詞であることの根拠はない。対訳なしでは、このクラスが動詞かどうかを確かめられない"
+     },
+     "control_morphology_present": false,
+     "verb_position": {
+      "pred": null,
+      "confidence": 0.0,
+      "alternatives": {},
+      "null_gate": null,
+      "judge": "abstain"
+     },
+     "affix_position": {
+      "pred": "suffix",
+      "confidence": 0.993,
+      "support": {
+       "suffix": 4959,
+       "prefix": 35
+      },
+      "null_gate": null,
+      "judge": "correct"
+     },
+     "syntax": {
+      "entropy": 3.6009,
+      "shuffled_mean": 4.7001,
+      "z": 107.81,
+      "reduction": 0.2339,
+      "p": 0.005,
+      "n_shuffle": 199,
+      "present": true
+     },
+     "morphology": {
+      "affixed_token_share": 0.4522,
+      "n_affixes": 45,
+      "present": true,
+      "basis": "G1'（接辞と文脈の連動）、接辞 3 種以上"
+     },
+     "control_verb_position_claim": false,
+     "control_claims": []
+    },
+    "v1.4": {
+     "verb_class": {
+      "v_tokens": 334,
+      "verb_share": 0.958,
+      "upos_share": {
+       "VERB": 0.958,
+       "NOUN": 0.024,
+       "ADJ": 0.018
+      }
+     },
+     "verb_candidate_position": null,
+     "control_morphology_present": false,
+     "verb_position": {
+      "pred": "medial",
+      "confidence": 0.979,
+      "alternatives": {
+       "initial": 0.0,
+       "medial": 0.989,
+       "final": 0.011
+      },
+      "null_gate": null,
+      "judge": "correct"
+     },
+     "affix_position": {
+      "pred": "suffix",
+      "confidence": 0.993,
+      "support": {
+       "suffix": 4959,
+       "prefix": 35
+      },
+      "null_gate": null,
+      "judge": "correct"
+     },
+     "syntax": {
+      "entropy": 3.6009,
+      "shuffled_mean": 4.7001,
+      "z": 107.81,
+      "reduction": 0.2339,
+      "p": 0.005,
+      "n_shuffle": 199,
+      "present": true
+     },
+     "morphology": {
+      "affixed_token_share": 0.4522,
+      "n_affixes": 45,
+      "present": true
+     },
+     "control_verb_position_claim": false,
+     "control_claims": []
+    }
+   },
+   "seconds": 22.8
+  },
+  {
+   "treebank": "UD_Czech-CAC",
+   "code": "cs_cac",
+   "ud_tag": "r2.15",
+   "sha256": "e563aa056f9caf89969e135538e197d2937fcd7d97c1322b4c1a105c84d24de0",
+   "sentences": 1000,
+   "tokens": 19434,
+   "characters": 40,
+   "gold": {
+    "verb_position": {
+     "value": "medial",
+     "n": 402,
+     "shares": {
+      "initial": 0.179,
+      "medial": 0.789,
+      "final": 0.032
+     }
+    },
+    "affix_position": {
+     "value": "suffix",
+     "n": 8281,
+     "shares": {
+      "suffix": 0.997,
+      "prefix": 0.003
+     }
+    }
+   },
+   "versions": {
+    "v1.5": {
+     "verb_class": {
+      "v_tokens": 0,
+      "verb_share": null,
+      "upos_share": {}
+     },
+     "verb_candidate_position": {
+      "top": null,
+      "shares": {},
+      "n": 0,
+      "note": "動詞であることの根拠はない。対訳なしでは、このクラスが動詞かどうかを確かめられない"
+     },
+     "control_morphology_present": false,
+     "verb_position": {
+      "pred": null,
+      "confidence": 0.0,
+      "alternatives": {},
+      "null_gate": null,
+      "judge": "abstain"
+     },
+     "affix_position": {
+      "pred": "suffix",
+      "confidence": 0.815,
+      "support": {
+       "suffix": 9206,
+       "prefix": 2096
+      },
+      "null_gate": null,
+      "judge": "correct"
+     },
+     "syntax": {
+      "entropy": 3.9342,
+      "shuffled_mean": 4.6556,
+      "z": 73.77,
+      "reduction": 0.1549,
+      "p": 0.005,
+      "n_shuffle": 199,
+      "present": true
+     },
+     "morphology": {
+      "affixed_token_share": 0.5052,
+      "n_affixes": 117,
+      "present": true,
+      "basis": "G1'（接辞と文脈の連動）、接辞 3 種以上"
+     },
+     "control_verb_position_claim": false,
+     "control_claims": []
+    },
+    "v1.4": {
+     "verb_class": {
+      "v_tokens": 0,
+      "verb_share": null,
+      "upos_share": {}
+     },
+     "verb_candidate_position": null,
+     "control_morphology_present": false,
+     "verb_position": {
+      "pred": null,
+      "confidence": 0.0,
+      "alternatives": {},
+      "null_gate": null,
+      "judge": "abstain"
+     },
+     "affix_position": {
+      "pred": "suffix",
+      "confidence": 0.815,
+      "support": {
+       "suffix": 9206,
+       "prefix": 2096
+      },
+      "null_gate": null,
+      "judge": "correct"
+     },
+     "syntax": {
+      "entropy": 3.9342,
+      "shuffled_mean": 4.6556,
+      "z": 73.77,
+      "reduction": 0.1549,
+      "p": 0.005,
+      "n_shuffle": 199,
+      "present": true
+     },
+     "morphology": {
+      "affixed_token_share": 0.5052,
+      "n_affixes": 117,
+      "present": true
+     },
+     "control_verb_position_claim": false,
+     "control_claims": []
+    }
+   },
+   "seconds": 66.6
+  },
+  {
+   "treebank": "UD_Italian-ISDT",
+   "code": "it_isdt",
+   "ud_tag": "r2.15",
+   "sha256": "2e9fa0a228fb99b38256dfeadf0ffabcc3f1c159255ca7b3850781e3f1e40186",
+   "sentences": 1000,
+   "tokens": 17845,
+   "characters": 32,
+   "gold": {
+    "verb_position": {
+     "value": "medial",
+     "n": 343,
+     "shares": {
+      "initial": 0.058,
+      "medial": 0.854,
+      "final": 0.087
+     }
+    },
+    "affix_position": {
+     "value": "suffix",
+     "n": 3258,
+     "shares": {
+      "suffix": 0.998,
+      "prefix": 0.002
+     }
+    }
+   },
+   "versions": {
+    "v1.5": {
+     "verb_class": {
+      "v_tokens": 0,
+      "verb_share": null,
+      "upos_share": {}
+     },
+     "verb_candidate_position": {
+      "top": null,
+      "shares": {},
+      "n": 0,
+      "note": "動詞であることの根拠はない。対訳なしでは、このクラスが動詞かどうかを確かめられない"
+     },
+     "control_morphology_present": false,
+     "verb_position": {
+      "pred": null,
+      "confidence": 0.0,
+      "alternatives": {},
+      "null_gate": null,
+      "judge": "abstain"
+     },
+     "affix_position": {
+      "pred": "suffix",
+      "confidence": 0.837,
+      "support": {
+       "suffix": 4483,
+       "prefix": 876
+      },
+      "null_gate": null,
+      "judge": "correct"
+     },
+     "syntax": {
+      "entropy": 3.8586,
+      "shuffled_mean": 4.4843,
+      "z": 89.98,
+      "reduction": 0.1395,
+      "p": 0.005,
+      "n_shuffle": 199,
+      "present": true
+     },
+     "morphology": {
+      "affixed_token_share": 0.2736,
+      "n_affixes": 168,
+      "present": true,
+      "basis": "G1'（接辞と文脈の連動）、接辞 3 種以上"
+     },
+     "control_verb_position_claim": false,
+     "control_claims": []
+    },
+    "v1.4": {
+     "verb_class": {
+      "v_tokens": 0,
+      "verb_share": null,
+      "upos_share": {}
+     },
+     "verb_candidate_position": null,
+     "control_morphology_present": false,
+     "verb_position": {
+      "pred": null,
+      "confidence": 0.0,
+      "alternatives": {},
+      "null_gate": null,
+      "judge": "abstain"
+     },
+     "affix_position": {
+      "pred": "suffix",
+      "confidence": 0.837,
+      "support": {
+       "suffix": 4483,
+       "prefix": 876
+      },
+      "null_gate": null,
+      "judge": "correct"
+     },
+     "syntax": {
+      "entropy": 3.8586,
+      "shuffled_mean": 4.4843,
+      "z": 89.98,
+      "reduction": 0.1395,
+      "p": 0.005,
+      "n_shuffle": 199,
+      "present": true
+     },
+     "morphology": {
+      "affixed_token_share": 0.2736,
+      "n_affixes": 168,
+      "present": true
+     },
+     "control_verb_position_claim": false,
+     "control_claims": []
+    }
+   },
+   "seconds": 51.1
+  },
+  {
+   "treebank": "UD_Persian-Seraji",
+   "code": "fa_seraji",
+   "ud_tag": "r2.15",
+   "sha256": "2b14c2b81f932c480df1dd9affc441d90231de5f5413c4425533b31597661b79",
+   "sentences": 1000,
+   "tokens": 15823,
+   "characters": 55,
+   "gold": {
+    "verb_position": {
+     "value": "final",
+     "n": 351,
+     "shares": {
+      "initial": 0.011,
+      "medial": 0.293,
+      "final": 0.695
+     }
+    },
+    "affix_position": {
+     "value": "both",
+     "n": 2167,
+     "shares": {
+      "suffix": 0.722,
+      "prefix": 0.278
+     }
+    }
+   },
+   "versions": {
+    "v1.5": {
+     "verb_class": {
+      "v_tokens": 0,
+      "verb_share": null,
+      "upos_share": {}
+     },
+     "verb_candidate_position": {
+      "top": null,
+      "shares": {},
+      "n": 0,
+      "note": "動詞であることの根拠はない。対訳なしでは、このクラスが動詞かどうかを確かめられない"
+     },
+     "control_morphology_present": false,
+     "verb_position": {
+      "pred": null,
+      "confidence": 0.0,
+      "alternatives": {},
+      "null_gate": null,
+      "judge": "abstain"
+     },
+     "affix_position": {
+      "pred": "suffix",
+      "confidence": 0.84,
+      "support": {
+       "suffix": 2380,
+       "prefix": 454
+      },
+      "null_gate": null,
+      "judge": "wrong"
+     },
+     "syntax": {
+      "entropy": 4.3581,
+      "shuffled_mean": 4.8972,
+      "z": 62.73,
+      "reduction": 0.1101,
+      "p": 0.005,
+      "n_shuffle": 199,
+      "present": true
+     },
+     "morphology": {
+      "affixed_token_share": 0.1695,
+      "n_affixes": 66,
+      "present": true,
+      "basis": "G1'（接辞と文脈の連動）、接辞 3 種以上"
+     },
+     "control_verb_position_claim": false,
+     "control_claims": []
+    },
+    "v1.4": {
+     "verb_class": {
+      "v_tokens": 0,
+      "verb_share": null,
+      "upos_share": {}
+     },
+     "verb_candidate_position": null,
+     "control_morphology_present": false,
+     "verb_position": {
+      "pred": null,
+      "confidence": 0.0,
+      "alternatives": {},
+      "null_gate": null,
+      "judge": "abstain"
+     },
+     "affix_position": {
+      "pred": "suffix",
+      "confidence": 0.84,
+      "support": {
+       "suffix": 2380,
+       "prefix": 454
+      },
+      "null_gate": null,
+      "judge": "wrong"
+     },
+     "syntax": {
+      "entropy": 4.3581,
+      "shuffled_mean": 4.8972,
+      "z": 62.73,
+      "reduction": 0.1101,
+      "p": 0.005,
+      "n_shuffle": 199,
+      "present": true
+     },
+     "morphology": {
+      "affixed_token_share": 0.1695,
+      "n_affixes": 66,
+      "present": false
+     },
+     "control_verb_position_claim": false,
+     "control_claims": []
+    }
+   },
+   "seconds": 47.6
+  },
+  {
+   "treebank": "UD_Hindi-HDTB",
+   "code": "hi_hdtb",
+   "ud_tag": "r2.15",
+   "sha256": "532b682d47cdeb460bb665f1c66b2405d659153ab2f298c429f06ed45c016386",
+   "sentences": 1000,
+   "tokens": 15997,
+   "characters": 62,
+   "gold": {
+    "verb_position": {
+     "value": "medial",
+     "n": 348,
+     "shares": {
+      "initial": 0.003,
+      "medial": 0.868,
+      "final": 0.129
+     }
+    },
+    "affix_position": {
+     "value": "suffix",
+     "n": 2383,
+     "shares": {
+      "suffix": 0.996,
+      "prefix": 0.004
+     }
+    }
+   },
+   "versions": {
+    "v1.5": {
+     "verb_class": {
+      "v_tokens": 0,
+      "verb_share": null,
+      "upos_share": {}
+     },
+     "verb_candidate_position": {
+      "top": null,
+      "shares": {},
+      "n": 0,
+      "note": "動詞であることの根拠はない。対訳なしでは、このクラスが動詞かどうかを確かめられない"
+     },
+     "control_morphology_present": false,
+     "verb_position": {
+      "pred": null,
+      "confidence": 0.0,
+      "alternatives": {},
+      "null_gate": null,
+      "judge": "abstain"
+     },
+     "affix_position": {
+      "pred": "suffix",
+      "confidence": 0.831,
+      "support": {
+       "suffix": 1079,
+       "prefix": 220
+      },
+      "null_gate": null,
+      "judge": "correct"
+     },
+     "syntax": {
+      "entropy": 3.9499,
+      "shuffled_mean": 4.7475,
+      "z": 93.11,
+      "reduction": 0.168,
+      "p": 0.005,
+      "n_shuffle": 199,
+      "present": true
+     },
+     "morphology": {
+      "affixed_token_share": 0.0798,
+      "n_affixes": 61,
+      "present": true,
+      "basis": "G1'（接辞と文脈の連動）、接辞 3 種以上"
+     },
+     "control_verb_position_claim": false,
+     "control_claims": []
+    },
+    "v1.4": {
+     "verb_class": {
+      "v_tokens": 0,
+      "verb_share": null,
+      "upos_share": {}
+     },
+     "verb_candidate_position": null,
+     "control_morphology_present": false,
+     "verb_position": {
+      "pred": null,
+      "confidence": 0.0,
+      "alternatives": {},
+      "null_gate": null,
+      "judge": "abstain"
+     },
+     "affix_position": {
+      "pred": "suffix",
+      "confidence": 0.831,
+      "support": {
+       "suffix": 1079,
+       "prefix": 220
+      },
+      "null_gate": null,
+      "judge": "correct"
+     },
+     "syntax": {
+      "entropy": 3.9499,
+      "shuffled_mean": 4.7475,
+      "z": 93.11,
+      "reduction": 0.168,
+      "p": 0.005,
+      "n_shuffle": 199,
+      "present": true
+     },
+     "morphology": {
+      "affixed_token_share": 0.0798,
+      "n_affixes": 61,
+      "present": false
+     },
+     "control_verb_position_claim": false,
+     "control_claims": []
+    }
+   },
+   "seconds": 41.6
+  },
+  {
+   "treebank": "UD_Estonian-EDT",
+   "code": "et_edt",
+   "ud_tag": "r2.15",
+   "sha256": "042e6739e144b9219bd4c29cb524a35b6f62bc034faadf40a91507e886e7fe32",
+   "sentences": 1000,
+   "tokens": 11473,
+   "characters": 32,
+   "gold": {
+    "verb_position": {
+     "value": "medial",
+     "n": 406,
+     "shares": {
+      "initial": 0.032,
+      "medial": 0.82,
+      "final": 0.148
+     }
+    },
+    "affix_position": {
+     "value": "suffix",
+     "n": 4353,
+     "shares": {
+      "suffix": 0.999,
+      "prefix": 0.001
+     }
+    }
+   },
+   "versions": {
+    "v1.5": {
+     "verb_class": {
+      "v_tokens": 0,
+      "verb_share": null,
+      "upos_share": {}
+     },
+     "verb_candidate_position": {
+      "top": null,
+      "shares": {},
+      "n": 0,
+      "note": "動詞であることの根拠はない。対訳なしでは、このクラスが動詞かどうかを確かめられない"
+     },
+     "control_morphology_present": false,
+     "verb_position": {
+      "pred": null,
+      "confidence": 0.0,
+      "alternatives": {},
+      "null_gate": null,
+      "judge": "abstain"
+     },
+     "affix_position": {
+      "pred": "suffix",
+      "confidence": 0.904,
+      "support": {
+       "suffix": 3809,
+       "prefix": 406
+      },
+      "null_gate": null,
+      "judge": "correct"
+     },
+     "syntax": {
+      "entropy": 3.1352,
+      "shuffled_mean": 3.3581,
+      "z": 21.83,
+      "reduction": 0.0664,
+      "p": 0.005,
+      "n_shuffle": 199,
+      "present": true
+     },
+     "morphology": {
+      "affixed_token_share": 0.3551,
+      "n_affixes": 173,
+      "present": true,
+      "basis": "G1'（接辞と文脈の連動）、接辞 3 種以上"
+     },
+     "control_verb_position_claim": false,
+     "control_claims": []
+    },
+    "v1.4": {
+     "verb_class": {
+      "v_tokens": 0,
+      "verb_share": null,
+      "upos_share": {}
+     },
+     "verb_candidate_position": null,
+     "control_morphology_present": false,
+     "verb_position": {
+      "pred": null,
+      "confidence": 0.0,
+      "alternatives": {},
+      "null_gate": null,
+      "judge": "abstain"
+     },
+     "affix_position": {
+      "pred": "suffix",
+      "confidence": 0.904,
+      "support": {
+       "suffix": 3809,
+       "prefix": 406
+      },
+      "null_gate": null,
+      "judge": "correct"
+     },
+     "syntax": {
+      "entropy": 3.1352,
+      "shuffled_mean": 3.3581,
+      "z": 21.83,
+      "reduction": 0.0664,
+      "p": 0.005,
+      "n_shuffle": 199,
+      "present": true
+     },
+     "morphology": {
+      "affixed_token_share": 0.3551,
+      "n_affixes": 173,
+      "present": true
+     },
+     "control_verb_position_claim": false,
+     "control_claims": []
+    }
+   },
+   "seconds": 33.2
+  },
+  {
+   "treebank": "UD_Arabic-PADT",
+   "code": "ar_padt",
+   "ud_tag": "r2.15",
+   "sha256": "f17d622ec46e34d0839551dbe1ec879eaa48d168f3c06e566674c34462d0fe61",
+   "sentences": 1000,
+   "tokens": 25777,
+   "characters": 37,
+   "gold": {
+    "verb_position": {
+     "value": "medial",
+     "n": 214,
+     "shares": {
+      "initial": 0.121,
+      "medial": 0.879,
+      "final": 0.0
+     }
+    },
+    "affix_position": {
+     "value": "prefix",
+     "n": 9915,
+     "shares": {
+      "suffix": 0.242,
+      "prefix": 0.758
+     }
+    }
+   },
+   "versions": {
+    "v1.5": {
+     "verb_class": {
+      "v_tokens": 0,
+      "verb_share": null,
+      "upos_share": {}
+     },
+     "verb_candidate_position": {
+      "top": null,
+      "shares": {},
+      "n": 0,
+      "note": "動詞であることの根拠はない。対訳なしでは、このクラスが動詞かどうかを確かめられない"
+     },
+     "control_morphology_present": false,
+     "verb_position": {
+      "pred": null,
+      "confidence": 0.0,
+      "alternatives": {},
+      "null_gate": null,
+      "judge": "abstain"
+     },
+     "affix_position": {
+      "pred": "prefix",
+      "confidence": 0.702,
+      "support": {
+       "suffix": 2788,
+       "prefix": 6559
+      },
+      "null_gate": null,
+      "judge": "correct"
+     },
+     "syntax": {
+      "entropy": 4.1139,
+      "shuffled_mean": 4.9487,
+      "z": 107.38,
+      "reduction": 0.1687,
+      "p": 0.005,
+      "n_shuffle": 199,
+      "present": true
+     },
+     "morphology": {
+      "affixed_token_share": 0.3244,
+      "n_affixes": 136,
+      "present": true,
+      "basis": "G1'（接辞と文脈の連動）、接辞 3 種以上"
+     },
+     "control_verb_position_claim": false,
+     "control_claims": []
+    },
+    "v1.4": {
+     "verb_class": {
+      "v_tokens": 0,
+      "verb_share": null,
+      "upos_share": {}
+     },
+     "verb_candidate_position": null,
+     "control_morphology_present": false,
+     "verb_position": {
+      "pred": null,
+      "confidence": 0.0,
+      "alternatives": {},
+      "null_gate": null,
+      "judge": "abstain"
+     },
+     "affix_position": {
+      "pred": "prefix",
+      "confidence": 0.702,
+      "support": {
+       "suffix": 2788,
+       "prefix": 6559
+      },
+      "null_gate": null,
+      "judge": "correct"
+     },
+     "syntax": {
+      "entropy": 4.1139,
+      "shuffled_mean": 4.9487,
+      "z": 107.38,
+      "reduction": 0.1687,
+      "p": 0.005,
+      "n_shuffle": 199,
+      "present": true
+     },
+     "morphology": {
+      "affixed_token_share": 0.3244,
+      "n_affixes": 136,
+      "present": true
+     },
+     "control_verb_position_claim": false,
+     "control_claims": []
+    }
+   },
+   "seconds": 129.8
+  },
+  {
+   "treebank": "UD_Latvian-LVTB",
+   "code": "lv_lvtb",
+   "ud_tag": "r2.15",
+   "sha256": "22c02c322a4a5b38b7b193aab27c4a77ca9d1eab6f488b74d73bafee97435ba3",
+   "sentences": 1000,
+   "tokens": 11357,
+   "characters": 33,
+   "gold": {
+    "verb_position": {
+     "value": "medial",
+     "n": 277,
+     "shares": {
+      "initial": 0.076,
+      "medial": 0.708,
+      "final": 0.217
+     }
+    },
+    "affix_position": {
+     "value": "suffix",
+     "n": 5201,
+     "shares": {
+      "suffix": 0.989,
+      "prefix": 0.011
+     }
+    }
+   },
+   "versions": {
+    "v1.5": {
+     "verb_class": {
+      "v_tokens": 0,
+      "verb_share": null,
+      "upos_share": {}
+     },
+     "verb_candidate_position": {
+      "top": null,
+      "shares": {},
+      "n": 0,
+      "note": "動詞であることの根拠はない。対訳なしでは、このクラスが動詞かどうかを確かめられない"
+     },
+     "control_morphology_present": false,
+     "verb_position": {
+      "pred": null,
+      "confidence": 0.0,
+      "alternatives": {},
+      "null_gate": null,
+      "judge": "abstain"
+     },
+     "affix_position": {
+      "pred": "suffix",
+      "confidence": 0.854,
+      "support": {
+       "suffix": 4666,
+       "prefix": 800
+      },
+      "null_gate": null,
+      "judge": "correct"
+     },
+     "syntax": {
+      "entropy": 3.1379,
+      "shuffled_mean": 3.3073,
+      "z": 20.84,
+      "reduction": 0.0512,
+      "p": 0.005,
+      "n_shuffle": 199,
+      "present": true
+     },
+     "morphology": {
+      "affixed_token_share": 0.4413,
+      "n_affixes": 160,
+      "present": true,
+      "basis": "G1'（接辞と文脈の連動）、接辞 3 種以上"
+     },
+     "control_verb_position_claim": false,
+     "control_claims": []
+    },
+    "v1.4": {
+     "verb_class": {
+      "v_tokens": 0,
+      "verb_share": null,
+      "upos_share": {}
+     },
+     "verb_candidate_position": null,
+     "control_morphology_present": false,
+     "verb_position": {
+      "pred": null,
+      "confidence": 0.0,
+      "alternatives": {},
+      "null_gate": null,
+      "judge": "abstain"
+     },
+     "affix_position": {
+      "pred": "suffix",
+      "confidence": 0.854,
+      "support": {
+       "suffix": 4666,
+       "prefix": 800
+      },
+      "null_gate": null,
+      "judge": "correct"
+     },
+     "syntax": {
+      "entropy": 3.1379,
+      "shuffled_mean": 3.3073,
+      "z": 20.84,
+      "reduction": 0.0512,
+      "p": 0.005,
+      "n_shuffle": 199,
+      "present": true
+     },
+     "morphology": {
+      "affixed_token_share": 0.4413,
+      "n_affixes": 160,
+      "present": true
+     },
+     "control_verb_position_claim": false,
+     "control_claims": []
+    }
+   },
+   "seconds": 27.6
+  }
+ ]
+}

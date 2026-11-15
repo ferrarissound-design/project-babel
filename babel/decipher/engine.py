@@ -10,7 +10,7 @@ from .align import Aligner, flatten
 from .morph import Morphology
 from .variants import LACUNA, Normalizer
 
-VERSION = "1.4.0"
+VERSION = "1.5.0"
 DEFAULT_CONFIG = {
     "use_variants": True,        # 表記揺れの正規化
     "use_morph": True,           # 形態素解析
@@ -25,6 +25,7 @@ DEFAULT_CONFIG = {
     "segmentation": "transductive",  # 単語境界のない文章の分割: transductive（全文書で学習）/ inductive（train のみ）
     "segmenter": "unigram",      # 単語境界のない文章の分割方式: unigram（既定）/ transition（比較用。v1.3 の G4 の測定で使った）
     "null_gates": True,          # v1.3: 帰無対照の関門（docs/PREREG_v1.3_NULL_GATES.md）。False で v1.2.0 と同じ
+    "v15_gates": True,           # v1.5: 動詞の位置に対訳の証拠を要求（V1）・開放クラス（V2）・形態の判定の統一（M1）。False で v1.4.0 と同じ
     "affix_null_alpha": 0.025,   # v1.4: 接辞の関門の片側ごとの水準（両側で Bonferroni、docs/PREREG_v1.4_MULTIPLE_TESTING.md）。0.05 で v1.3.0
 }
 
@@ -181,7 +182,8 @@ class Decipherer:
             self.morph = baselines.make_morphology(cfg["morph_method"], self.counts)
         self.infos = {w: self.morph.analyze(w) for w in self.counts}
         self.group_of, self.stem_group = classes.paradigm_groups(self.infos)
-        self.stem_pos, self.class_info = classes.label_classes(self.sents, self.infos, self.stem_group)
+        self.stem_pos, self.class_info = classes.label_classes(
+            self.sents, self.infos, self.stem_group, open_class_min=8.0 if cfg["v15_gates"] else 0.0)
         self._fit_numerals()
         self.func_words = classes.function_words(self.sents, self.infos, self.stem_pos, self.num_values)
         self.verb_pos = classes.verb_position(
@@ -209,7 +211,12 @@ class Decipherer:
         if gates and cfg["use_morph"] and cfg["morph_method"] == "paradigm":
             # G1': 接辞が文脈（文中の位置・直前の語の接辞）と連動するかの帰無対照
             self.morph_null = nulltest.affix_context_null(self.sents, self.infos, alpha=cfg["affix_null_alpha"])
-            if not (self.morph_null["suffix"]["significant"] or self.morph_null["prefix"]["significant"]):
+            sig_any = self.morph_null["suffix"]["significant"] or self.morph_null["prefix"]["significant"]
+            if cfg["v15_gates"]:
+                # M1: 形態の判定を、接辞の側の主張と同じ G1' の検定に揃える
+                self.morph_test = dict(self.morph_test, present=bool(sig_any and len(self.morph.affixes) >= 3),
+                                       basis="G1'（接辞と文脈の連動）、接辞 3 種以上")
+            elif not sig_any:
                 self.morph_test = dict(self.morph_test, present=False,
                                        null_control="解析された接辞が文脈と連動せず、接辞を入れ替えた対照と区別できない")
 
@@ -530,6 +537,15 @@ class Decipherer:
             vp = {"value": best, "confidence": round(c[best] / n * min(1, n / 20), 3),
                   "alternatives": {k: round(v / n, 3) for k, v in c.items()}, "n": n, "source": "alignment"}
 
+        candidate = None
+        if self.cfg["v15_gates"] and not (A and sum(self.order_counts["verb"].values()) >= 5):
+            # V1: 対訳による動詞の位置の証拠がなければ、動詞の位置を主張しない。
+            # 動詞とみなしたクラスの位置の統計は、主張とは別に参考として出す
+            candidate = {"top": vp.get("value"), "shares": vp.get("alternatives", {}), "n": vp.get("n", 0),
+                         "note": "動詞であることの根拠はない。対訳なしでは、このクラスが動詞かどうかを確かめられない"}
+            vp = {"value": None, "confidence": 0.0, "alternatives": {}, "n": vp.get("n", 0),
+                  "reason": "対訳による動詞の位置の証拠がない（V1）"}
+
         def from_counts(c, min_n=4):
             n = sum(c.values())
             if n < min_n:
@@ -567,6 +583,8 @@ class Decipherer:
             "sum_marker": {"value": self.num.get("sum_marker"),
                            "note": "合計行を示す機能語（算術的に検証できる機能であり、実世界の意味の主張ではない）"},
         }
+        if candidate is not None:
+            out["verb_candidate_position"] = candidate
         if self.cfg["null_gates"]:
             if not self.syntax["present"]:
                 # G3: 語順に無作為な並べ替えより強い規則性がなければ、語順の主張はしない

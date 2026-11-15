@@ -1,0 +1,6786 @@
+{
+ "split": "dev",
+ "seeds": [
+  0,
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10,
+  11,
+  12,
+  13,
+  14,
+  15,
+  16,
+  17,
+  18,
+  19
+ ],
+ "seconds": 640.7,
+ "summary": {
+  "v1.2:boundaries=True": {
+   "abstain": 274,
+   "adj_noun:abstain": 119,
+   "adj_noun:correct": 1,
+   "affix_position:correct": 120,
+   "correct": 439,
+   "num_noun:abstain": 28,
+   "num_noun:correct": 92,
+   "numeral_base:abstain": 43,
+   "numeral_base:correct": 77,
+   "so_order:abstain": 80,
+   "so_order:correct": 38,
+   "so_order:wrong": 2,
+   "verb_position:abstain": 4,
+   "verb_position:correct": 111,
+   "verb_position:wrong": 5,
+   "wrong": 7
+  },
+  "v1.2:boundaries=False": {
+   "abstain": 497,
+   "adj_noun:abstain": 119,
+   "adj_noun:correct": 1,
+   "affix_position:correct": 32,
+   "affix_position:wrong": 88,
+   "correct": 84,
+   "num_noun:abstain": 120,
+   "numeral_base:abstain": 120,
+   "so_order:abstain": 88,
+   "so_order:correct": 26,
+   "so_order:wrong": 6,
+   "verb_position:abstain": 50,
+   "verb_position:correct": 25,
+   "verb_position:wrong": 45,
+   "wrong": 139
+  },
+  "v1.2:null=random": {
+   "runs": 20,
+   "claims": 1,
+   "per_run": 0.05,
+   "by_key": {
+    "affix_position": 1
+   }
+  },
+  "v1.2:null=shuffled": {
+   "runs": 20,
+   "claims": 36,
+   "per_run": 1.8,
+   "by_key": {
+    "affix_position": 20,
+    "verb_position": 16
+   }
+  },
+  "v1.2:null=syllable": {
+   "runs": 20,
+   "claims": 20,
+   "per_run": 1.0,
+   "by_key": {
+    "affix_position": 20
+   }
+  },
+  "v1.3:boundaries=True": {
+   "abstain": 274,
+   "adj_noun:abstain": 119,
+   "adj_noun:correct": 1,
+   "affix_position:correct": 120,
+   "correct": 439,
+   "num_noun:abstain": 28,
+   "num_noun:correct": 92,
+   "numeral_base:abstain": 43,
+   "numeral_base:correct": 77,
+   "so_order:abstain": 80,
+   "so_order:correct": 38,
+   "so_order:wrong": 2,
+   "verb_position:abstain": 4,
+   "verb_position:correct": 111,
+   "verb_position:wrong": 5,
+   "wrong": 7
+  },
+  "v1.3:boundaries=False": {
+   "abstain": 526,
+   "adj_noun:abstain": 119,
+   "adj_noun:correct": 1,
+   "affix_position:abstain": 24,
+   "affix_position:correct": 20,
+   "affix_position:wrong": 76,
+   "correct": 69,
+   "num_noun:abstain": 120,
+   "numeral_base:abstain": 120,
+   "so_order:abstain": 88,
+   "so_order:correct": 26,
+   "so_order:wrong": 6,
+   "verb_position:abstain": 55,
+   "verb_position:correct": 22,
+   "verb_position:wrong": 43,
+   "wrong": 125
+  },
+  "v1.3:null=random": {
+   "runs": 20,
+   "claims": 0,
+   "per_run": 0.0,
+   "by_key": {}
+  },
+  "v1.3:null=shuffled": {
+   "runs": 20,
+   "claims": 0,
+   "per_run": 0.0,
+   "by_key": {}
+  },
+  "v1.3:null=syllable": {
+   "runs": 20,
+   "claims": 1,
+   "per_run": 0.05,
+   "by_key": {
+    "affix_position": 1
+   }
+  }
+ },
+ "rows": [
+  {
+   "kind": "real",
+   "family": "KES",
+   "seed": 0,
+   "level": "A",
+   "boundaries": true,
+   "structure": {
+    "v1.2": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    },
+    "v1.3": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "KES",
+   "seed": 0,
+   "level": "A",
+   "boundaries": false,
+   "structure": {
+    "v1.2": {
+     "verb_position": "wrong",
+     "so_order": "abstain",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "wrong",
+     "so_order": "abstain",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "KES",
+   "seed": 0,
+   "level": "C",
+   "boundaries": true,
+   "structure": {
+    "v1.2": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    },
+    "v1.3": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "KES",
+   "seed": 0,
+   "level": "C",
+   "boundaries": false,
+   "structure": {
+    "v1.2": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "KES",
+   "seed": 1,
+   "level": "A",
+   "boundaries": true,
+   "structure": {
+    "v1.2": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    },
+    "v1.3": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "KES",
+   "seed": 1,
+   "level": "A",
+   "boundaries": false,
+   "structure": {
+    "v1.2": {
+     "verb_position": "wrong",
+     "so_order": "abstain",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "wrong",
+     "so_order": "abstain",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "KES",
+   "seed": 1,
+   "level": "C",
+   "boundaries": true,
+   "structure": {
+    "v1.2": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    },
+    "v1.3": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "KES",
+   "seed": 1,
+   "level": "C",
+   "boundaries": false,
+   "structure": {
+    "v1.2": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "KES",
+   "seed": 2,
+   "level": "A",
+   "boundaries": true,
+   "structure": {
+    "v1.2": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    },
+    "v1.3": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "KES",
+   "seed": 2,
+   "level": "A",
+   "boundaries": false,
+   "structure": {
+    "v1.2": {
+     "verb_position": "wrong",
+     "so_order": "abstain",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "wrong",
+     "so_order": "abstain",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "KES",
+   "seed": 2,
+   "level": "C",
+   "boundaries": true,
+   "structure": {
+    "v1.2": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    },
+    "v1.3": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "KES",
+   "seed": 2,
+   "level": "C",
+   "boundaries": false,
+   "structure": {
+    "v1.2": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "KES",
+   "seed": 3,
+   "level": "A",
+   "boundaries": true,
+   "structure": {
+    "v1.2": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    },
+    "v1.3": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "KES",
+   "seed": 3,
+   "level": "A",
+   "boundaries": false,
+   "structure": {
+    "v1.2": {
+     "verb_position": "wrong",
+     "so_order": "correct",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "wrong",
+     "so_order": "correct",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "KES",
+   "seed": 3,
+   "level": "C",
+   "boundaries": true,
+   "structure": {
+    "v1.2": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    },
+    "v1.3": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "KES",
+   "seed": 3,
+   "level": "C",
+   "boundaries": false,
+   "structure": {
+    "v1.2": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "KES",
+   "seed": 4,
+   "level": "A",
+   "boundaries": true,
+   "structure": {
+    "v1.2": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    },
+    "v1.3": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "KES",
+   "seed": 4,
+   "level": "A",
+   "boundaries": false,
+   "structure": {
+    "v1.2": {
+     "verb_position": "wrong",
+     "so_order": "correct",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "wrong",
+     "so_order": "correct",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "KES",
+   "seed": 4,
+   "level": "C",
+   "boundaries": true,
+   "structure": {
+    "v1.2": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    },
+    "v1.3": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "KES",
+   "seed": 4,
+   "level": "C",
+   "boundaries": false,
+   "structure": {
+    "v1.2": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "KES",
+   "seed": 5,
+   "level": "A",
+   "boundaries": true,
+   "structure": {
+    "v1.2": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    },
+    "v1.3": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "KES",
+   "seed": 5,
+   "level": "A",
+   "boundaries": false,
+   "structure": {
+    "v1.2": {
+     "verb_position": "wrong",
+     "so_order": "abstain",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "wrong",
+     "so_order": "abstain",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "KES",
+   "seed": 5,
+   "level": "C",
+   "boundaries": true,
+   "structure": {
+    "v1.2": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    },
+    "v1.3": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "KES",
+   "seed": 5,
+   "level": "C",
+   "boundaries": false,
+   "structure": {
+    "v1.2": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "KES",
+   "seed": 6,
+   "level": "A",
+   "boundaries": true,
+   "structure": {
+    "v1.2": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    },
+    "v1.3": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "KES",
+   "seed": 6,
+   "level": "A",
+   "boundaries": false,
+   "structure": {
+    "v1.2": {
+     "verb_position": "wrong",
+     "so_order": "abstain",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "wrong",
+     "so_order": "abstain",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "KES",
+   "seed": 6,
+   "level": "C",
+   "boundaries": true,
+   "structure": {
+    "v1.2": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    },
+    "v1.3": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "KES",
+   "seed": 6,
+   "level": "C",
+   "boundaries": false,
+   "structure": {
+    "v1.2": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "KES",
+   "seed": 7,
+   "level": "A",
+   "boundaries": true,
+   "structure": {
+    "v1.2": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "affix_position": "correct",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    },
+    "v1.3": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "affix_position": "correct",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "KES",
+   "seed": 7,
+   "level": "A",
+   "boundaries": false,
+   "structure": {
+    "v1.2": {
+     "verb_position": "wrong",
+     "so_order": "correct",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "wrong",
+     "so_order": "correct",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "KES",
+   "seed": 7,
+   "level": "C",
+   "boundaries": true,
+   "structure": {
+    "v1.2": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    },
+    "v1.3": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "KES",
+   "seed": 7,
+   "level": "C",
+   "boundaries": false,
+   "structure": {
+    "v1.2": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "KES",
+   "seed": 8,
+   "level": "A",
+   "boundaries": true,
+   "structure": {
+    "v1.2": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    },
+    "v1.3": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "KES",
+   "seed": 8,
+   "level": "A",
+   "boundaries": false,
+   "structure": {
+    "v1.2": {
+     "verb_position": "wrong",
+     "so_order": "abstain",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "wrong",
+     "so_order": "abstain",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "KES",
+   "seed": 8,
+   "level": "C",
+   "boundaries": true,
+   "structure": {
+    "v1.2": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    },
+    "v1.3": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "KES",
+   "seed": 8,
+   "level": "C",
+   "boundaries": false,
+   "structure": {
+    "v1.2": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "KES",
+   "seed": 9,
+   "level": "A",
+   "boundaries": true,
+   "structure": {
+    "v1.2": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    },
+    "v1.3": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "KES",
+   "seed": 9,
+   "level": "A",
+   "boundaries": false,
+   "structure": {
+    "v1.2": {
+     "verb_position": "wrong",
+     "so_order": "wrong",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "wrong",
+     "so_order": "wrong",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "KES",
+   "seed": 9,
+   "level": "C",
+   "boundaries": true,
+   "structure": {
+    "v1.2": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    },
+    "v1.3": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "KES",
+   "seed": 9,
+   "level": "C",
+   "boundaries": false,
+   "structure": {
+    "v1.2": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "KES",
+   "seed": 10,
+   "level": "A",
+   "boundaries": true,
+   "structure": {
+    "v1.2": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    },
+    "v1.3": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "KES",
+   "seed": 10,
+   "level": "A",
+   "boundaries": false,
+   "structure": {
+    "v1.2": {
+     "verb_position": "wrong",
+     "so_order": "correct",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "wrong",
+     "so_order": "correct",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "KES",
+   "seed": 10,
+   "level": "C",
+   "boundaries": true,
+   "structure": {
+    "v1.2": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    },
+    "v1.3": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "KES",
+   "seed": 10,
+   "level": "C",
+   "boundaries": false,
+   "structure": {
+    "v1.2": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "KES",
+   "seed": 11,
+   "level": "A",
+   "boundaries": true,
+   "structure": {
+    "v1.2": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "affix_position": "correct",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "affix_position": "correct",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "KES",
+   "seed": 11,
+   "level": "A",
+   "boundaries": false,
+   "structure": {
+    "v1.2": {
+     "verb_position": "wrong",
+     "so_order": "abstain",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "wrong",
+     "so_order": "abstain",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "KES",
+   "seed": 11,
+   "level": "C",
+   "boundaries": true,
+   "structure": {
+    "v1.2": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "KES",
+   "seed": 11,
+   "level": "C",
+   "boundaries": false,
+   "structure": {
+    "v1.2": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "KES",
+   "seed": 12,
+   "level": "A",
+   "boundaries": true,
+   "structure": {
+    "v1.2": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    },
+    "v1.3": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "KES",
+   "seed": 12,
+   "level": "A",
+   "boundaries": false,
+   "structure": {
+    "v1.2": {
+     "verb_position": "wrong",
+     "so_order": "correct",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "wrong",
+     "so_order": "correct",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "KES",
+   "seed": 12,
+   "level": "C",
+   "boundaries": true,
+   "structure": {
+    "v1.2": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    },
+    "v1.3": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "KES",
+   "seed": 12,
+   "level": "C",
+   "boundaries": false,
+   "structure": {
+    "v1.2": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "KES",
+   "seed": 13,
+   "level": "A",
+   "boundaries": true,
+   "structure": {
+    "v1.2": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    },
+    "v1.3": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "KES",
+   "seed": 13,
+   "level": "A",
+   "boundaries": false,
+   "structure": {
+    "v1.2": {
+     "verb_position": "wrong",
+     "so_order": "abstain",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "wrong",
+     "so_order": "abstain",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "KES",
+   "seed": 13,
+   "level": "C",
+   "boundaries": true,
+   "structure": {
+    "v1.2": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    },
+    "v1.3": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "KES",
+   "seed": 13,
+   "level": "C",
+   "boundaries": false,
+   "structure": {
+    "v1.2": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "KES",
+   "seed": 14,
+   "level": "A",
+   "boundaries": true,
+   "structure": {
+    "v1.2": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    },
+    "v1.3": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "KES",
+   "seed": 14,
+   "level": "A",
+   "boundaries": false,
+   "structure": {
+    "v1.2": {
+     "verb_position": "wrong",
+     "so_order": "abstain",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "wrong",
+     "so_order": "abstain",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "KES",
+   "seed": 14,
+   "level": "C",
+   "boundaries": true,
+   "structure": {
+    "v1.2": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    },
+    "v1.3": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "KES",
+   "seed": 14,
+   "level": "C",
+   "boundaries": false,
+   "structure": {
+    "v1.2": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "KES",
+   "seed": 15,
+   "level": "A",
+   "boundaries": true,
+   "structure": {
+    "v1.2": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    },
+    "v1.3": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "KES",
+   "seed": 15,
+   "level": "A",
+   "boundaries": false,
+   "structure": {
+    "v1.2": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "KES",
+   "seed": 15,
+   "level": "C",
+   "boundaries": true,
+   "structure": {
+    "v1.2": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    },
+    "v1.3": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "KES",
+   "seed": 15,
+   "level": "C",
+   "boundaries": false,
+   "structure": {
+    "v1.2": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "KES",
+   "seed": 16,
+   "level": "A",
+   "boundaries": true,
+   "structure": {
+    "v1.2": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    },
+    "v1.3": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "KES",
+   "seed": 16,
+   "level": "A",
+   "boundaries": false,
+   "structure": {
+    "v1.2": {
+     "verb_position": "wrong",
+     "so_order": "correct",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "wrong",
+     "so_order": "correct",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "KES",
+   "seed": 16,
+   "level": "C",
+   "boundaries": true,
+   "structure": {
+    "v1.2": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    },
+    "v1.3": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "KES",
+   "seed": 16,
+   "level": "C",
+   "boundaries": false,
+   "structure": {
+    "v1.2": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "KES",
+   "seed": 17,
+   "level": "A",
+   "boundaries": true,
+   "structure": {
+    "v1.2": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    },
+    "v1.3": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "KES",
+   "seed": 17,
+   "level": "A",
+   "boundaries": false,
+   "structure": {
+    "v1.2": {
+     "verb_position": "wrong",
+     "so_order": "abstain",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "wrong",
+     "so_order": "abstain",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "KES",
+   "seed": 17,
+   "level": "C",
+   "boundaries": true,
+   "structure": {
+    "v1.2": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    },
+    "v1.3": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "KES",
+   "seed": 17,
+   "level": "C",
+   "boundaries": false,
+   "structure": {
+    "v1.2": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "KES",
+   "seed": 18,
+   "level": "A",
+   "boundaries": true,
+   "structure": {
+    "v1.2": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    },
+    "v1.3": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "KES",
+   "seed": 18,
+   "level": "A",
+   "boundaries": false,
+   "structure": {
+    "v1.2": {
+     "verb_position": "wrong",
+     "so_order": "abstain",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "wrong",
+     "so_order": "abstain",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "KES",
+   "seed": 18,
+   "level": "C",
+   "boundaries": true,
+   "structure": {
+    "v1.2": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    },
+    "v1.3": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "KES",
+   "seed": 18,
+   "level": "C",
+   "boundaries": false,
+   "structure": {
+    "v1.2": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "KES",
+   "seed": 19,
+   "level": "A",
+   "boundaries": true,
+   "structure": {
+    "v1.2": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    },
+    "v1.3": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "KES",
+   "seed": 19,
+   "level": "A",
+   "boundaries": false,
+   "structure": {
+    "v1.2": {
+     "verb_position": "wrong",
+     "so_order": "correct",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "wrong",
+     "so_order": "correct",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "KES",
+   "seed": 19,
+   "level": "C",
+   "boundaries": true,
+   "structure": {
+    "v1.2": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    },
+    "v1.3": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "KES",
+   "seed": 19,
+   "level": "C",
+   "boundaries": false,
+   "structure": {
+    "v1.2": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "UMB",
+   "seed": 0,
+   "level": "A",
+   "boundaries": true,
+   "structure": {
+    "v1.2": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    },
+    "v1.3": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "UMB",
+   "seed": 0,
+   "level": "A",
+   "boundaries": false,
+   "structure": {
+    "v1.2": {
+     "verb_position": "wrong",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "wrong",
+     "so_order": "abstain",
+     "affix_position": "abstain",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "UMB",
+   "seed": 0,
+   "level": "C",
+   "boundaries": true,
+   "structure": {
+    "v1.2": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    },
+    "v1.3": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "UMB",
+   "seed": 0,
+   "level": "C",
+   "boundaries": false,
+   "structure": {
+    "v1.2": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "affix_position": "abstain",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "UMB",
+   "seed": 1,
+   "level": "A",
+   "boundaries": true,
+   "structure": {
+    "v1.2": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "affix_position": "correct",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    },
+    "v1.3": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "affix_position": "correct",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "UMB",
+   "seed": 1,
+   "level": "A",
+   "boundaries": false,
+   "structure": {
+    "v1.2": {
+     "verb_position": "wrong",
+     "so_order": "correct",
+     "affix_position": "correct",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "wrong",
+     "so_order": "correct",
+     "affix_position": "abstain",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "UMB",
+   "seed": 1,
+   "level": "C",
+   "boundaries": true,
+   "structure": {
+    "v1.2": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    },
+    "v1.3": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "UMB",
+   "seed": 1,
+   "level": "C",
+   "boundaries": false,
+   "structure": {
+    "v1.2": {
+     "verb_position": "wrong",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "affix_position": "abstain",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "UMB",
+   "seed": 2,
+   "level": "A",
+   "boundaries": true,
+   "structure": {
+    "v1.2": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    },
+    "v1.3": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "UMB",
+   "seed": 2,
+   "level": "A",
+   "boundaries": false,
+   "structure": {
+    "v1.2": {
+     "verb_position": "wrong",
+     "so_order": "correct",
+     "affix_position": "correct",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "wrong",
+     "so_order": "correct",
+     "affix_position": "correct",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "UMB",
+   "seed": 2,
+   "level": "C",
+   "boundaries": true,
+   "structure": {
+    "v1.2": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    },
+    "v1.3": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "UMB",
+   "seed": 2,
+   "level": "C",
+   "boundaries": false,
+   "structure": {
+    "v1.2": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "UMB",
+   "seed": 3,
+   "level": "A",
+   "boundaries": true,
+   "structure": {
+    "v1.2": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "affix_position": "correct",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    },
+    "v1.3": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "affix_position": "correct",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "UMB",
+   "seed": 3,
+   "level": "A",
+   "boundaries": false,
+   "structure": {
+    "v1.2": {
+     "verb_position": "wrong",
+     "so_order": "wrong",
+     "affix_position": "correct",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "wrong",
+     "so_order": "wrong",
+     "affix_position": "correct",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "UMB",
+   "seed": 3,
+   "level": "C",
+   "boundaries": true,
+   "structure": {
+    "v1.2": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "UMB",
+   "seed": 3,
+   "level": "C",
+   "boundaries": false,
+   "structure": {
+    "v1.2": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "UMB",
+   "seed": 4,
+   "level": "A",
+   "boundaries": true,
+   "structure": {
+    "v1.2": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    },
+    "v1.3": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "UMB",
+   "seed": 4,
+   "level": "A",
+   "boundaries": false,
+   "structure": {
+    "v1.2": {
+     "verb_position": "wrong",
+     "so_order": "correct",
+     "affix_position": "correct",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "wrong",
+     "so_order": "correct",
+     "affix_position": "abstain",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "UMB",
+   "seed": 4,
+   "level": "C",
+   "boundaries": true,
+   "structure": {
+    "v1.2": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    },
+    "v1.3": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "UMB",
+   "seed": 4,
+   "level": "C",
+   "boundaries": false,
+   "structure": {
+    "v1.2": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "affix_position": "abstain",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "UMB",
+   "seed": 5,
+   "level": "A",
+   "boundaries": true,
+   "structure": {
+    "v1.2": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    },
+    "v1.3": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "UMB",
+   "seed": 5,
+   "level": "A",
+   "boundaries": false,
+   "structure": {
+    "v1.2": {
+     "verb_position": "wrong",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "wrong",
+     "so_order": "abstain",
+     "affix_position": "abstain",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "UMB",
+   "seed": 5,
+   "level": "C",
+   "boundaries": true,
+   "structure": {
+    "v1.2": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    },
+    "v1.3": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "UMB",
+   "seed": 5,
+   "level": "C",
+   "boundaries": false,
+   "structure": {
+    "v1.2": {
+     "verb_position": "wrong",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "wrong",
+     "so_order": "abstain",
+     "affix_position": "abstain",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "UMB",
+   "seed": 6,
+   "level": "A",
+   "boundaries": true,
+   "structure": {
+    "v1.2": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    },
+    "v1.3": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "UMB",
+   "seed": 6,
+   "level": "A",
+   "boundaries": false,
+   "structure": {
+    "v1.2": {
+     "verb_position": "wrong",
+     "so_order": "wrong",
+     "affix_position": "correct",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "wrong",
+     "so_order": "wrong",
+     "affix_position": "correct",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "UMB",
+   "seed": 6,
+   "level": "C",
+   "boundaries": true,
+   "structure": {
+    "v1.2": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    },
+    "v1.3": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "UMB",
+   "seed": 6,
+   "level": "C",
+   "boundaries": false,
+   "structure": {
+    "v1.2": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "UMB",
+   "seed": 7,
+   "level": "A",
+   "boundaries": true,
+   "structure": {
+    "v1.2": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    },
+    "v1.3": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "UMB",
+   "seed": 7,
+   "level": "A",
+   "boundaries": false,
+   "structure": {
+    "v1.2": {
+     "verb_position": "wrong",
+     "so_order": "correct",
+     "affix_position": "correct",
+     "numeral_base": "abstain",
+     "adj_noun": "correct",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "wrong",
+     "so_order": "correct",
+     "affix_position": "correct",
+     "numeral_base": "abstain",
+     "adj_noun": "correct",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "UMB",
+   "seed": 7,
+   "level": "C",
+   "boundaries": true,
+   "structure": {
+    "v1.2": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "UMB",
+   "seed": 7,
+   "level": "C",
+   "boundaries": false,
+   "structure": {
+    "v1.2": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "UMB",
+   "seed": 8,
+   "level": "A",
+   "boundaries": true,
+   "structure": {
+    "v1.2": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    },
+    "v1.3": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "UMB",
+   "seed": 8,
+   "level": "A",
+   "boundaries": false,
+   "structure": {
+    "v1.2": {
+     "verb_position": "wrong",
+     "so_order": "correct",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "wrong",
+     "so_order": "correct",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "UMB",
+   "seed": 8,
+   "level": "C",
+   "boundaries": true,
+   "structure": {
+    "v1.2": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "UMB",
+   "seed": 8,
+   "level": "C",
+   "boundaries": false,
+   "structure": {
+    "v1.2": {
+     "verb_position": "wrong",
+     "so_order": "abstain",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "UMB",
+   "seed": 9,
+   "level": "A",
+   "boundaries": true,
+   "structure": {
+    "v1.2": {
+     "verb_position": "wrong",
+     "so_order": "wrong",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    },
+    "v1.3": {
+     "verb_position": "wrong",
+     "so_order": "wrong",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "UMB",
+   "seed": 9,
+   "level": "A",
+   "boundaries": false,
+   "structure": {
+    "v1.2": {
+     "verb_position": "wrong",
+     "so_order": "correct",
+     "affix_position": "correct",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "wrong",
+     "so_order": "correct",
+     "affix_position": "correct",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "UMB",
+   "seed": 9,
+   "level": "C",
+   "boundaries": true,
+   "structure": {
+    "v1.2": {
+     "verb_position": "wrong",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "wrong",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "UMB",
+   "seed": 9,
+   "level": "C",
+   "boundaries": false,
+   "structure": {
+    "v1.2": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "UMB",
+   "seed": 10,
+   "level": "A",
+   "boundaries": true,
+   "structure": {
+    "v1.2": {
+     "verb_position": "wrong",
+     "so_order": "correct",
+     "affix_position": "correct",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "wrong",
+     "so_order": "correct",
+     "affix_position": "correct",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "UMB",
+   "seed": 10,
+   "level": "A",
+   "boundaries": false,
+   "structure": {
+    "v1.2": {
+     "verb_position": "wrong",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "wrong",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "UMB",
+   "seed": 10,
+   "level": "C",
+   "boundaries": true,
+   "structure": {
+    "v1.2": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "UMB",
+   "seed": 10,
+   "level": "C",
+   "boundaries": false,
+   "structure": {
+    "v1.2": {
+     "verb_position": "wrong",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "wrong",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "UMB",
+   "seed": 11,
+   "level": "A",
+   "boundaries": true,
+   "structure": {
+    "v1.2": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "affix_position": "correct",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "affix_position": "correct",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "UMB",
+   "seed": 11,
+   "level": "A",
+   "boundaries": false,
+   "structure": {
+    "v1.2": {
+     "verb_position": "wrong",
+     "so_order": "correct",
+     "affix_position": "correct",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "wrong",
+     "so_order": "correct",
+     "affix_position": "abstain",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "UMB",
+   "seed": 11,
+   "level": "C",
+   "boundaries": true,
+   "structure": {
+    "v1.2": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "UMB",
+   "seed": 11,
+   "level": "C",
+   "boundaries": false,
+   "structure": {
+    "v1.2": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "affix_position": "abstain",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "UMB",
+   "seed": 12,
+   "level": "A",
+   "boundaries": true,
+   "structure": {
+    "v1.2": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    },
+    "v1.3": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "UMB",
+   "seed": 12,
+   "level": "A",
+   "boundaries": false,
+   "structure": {
+    "v1.2": {
+     "verb_position": "wrong",
+     "so_order": "correct",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "wrong",
+     "so_order": "correct",
+     "affix_position": "abstain",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "UMB",
+   "seed": 12,
+   "level": "C",
+   "boundaries": true,
+   "structure": {
+    "v1.2": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    },
+    "v1.3": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "UMB",
+   "seed": 12,
+   "level": "C",
+   "boundaries": false,
+   "structure": {
+    "v1.2": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "affix_position": "abstain",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "UMB",
+   "seed": 13,
+   "level": "A",
+   "boundaries": true,
+   "structure": {
+    "v1.2": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    },
+    "v1.3": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "UMB",
+   "seed": 13,
+   "level": "A",
+   "boundaries": false,
+   "structure": {
+    "v1.2": {
+     "verb_position": "wrong",
+     "so_order": "wrong",
+     "affix_position": "correct",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "wrong",
+     "so_order": "wrong",
+     "affix_position": "correct",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "UMB",
+   "seed": 13,
+   "level": "C",
+   "boundaries": true,
+   "structure": {
+    "v1.2": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    },
+    "v1.3": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "UMB",
+   "seed": 13,
+   "level": "C",
+   "boundaries": false,
+   "structure": {
+    "v1.2": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "UMB",
+   "seed": 14,
+   "level": "A",
+   "boundaries": true,
+   "structure": {
+    "v1.2": {
+     "verb_position": "abstain",
+     "so_order": "correct",
+     "affix_position": "correct",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "abstain",
+     "so_order": "correct",
+     "affix_position": "correct",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "UMB",
+   "seed": 14,
+   "level": "A",
+   "boundaries": false,
+   "structure": {
+    "v1.2": {
+     "verb_position": "wrong",
+     "so_order": "wrong",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "wrong",
+     "so_order": "wrong",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "UMB",
+   "seed": 14,
+   "level": "C",
+   "boundaries": true,
+   "structure": {
+    "v1.2": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "UMB",
+   "seed": 14,
+   "level": "C",
+   "boundaries": false,
+   "structure": {
+    "v1.2": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "UMB",
+   "seed": 15,
+   "level": "A",
+   "boundaries": true,
+   "structure": {
+    "v1.2": {
+     "verb_position": "wrong",
+     "so_order": "correct",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    },
+    "v1.3": {
+     "verb_position": "wrong",
+     "so_order": "correct",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "UMB",
+   "seed": 15,
+   "level": "A",
+   "boundaries": false,
+   "structure": {
+    "v1.2": {
+     "verb_position": "wrong",
+     "so_order": "correct",
+     "affix_position": "correct",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "wrong",
+     "so_order": "correct",
+     "affix_position": "abstain",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "UMB",
+   "seed": 15,
+   "level": "C",
+   "boundaries": true,
+   "structure": {
+    "v1.2": {
+     "verb_position": "wrong",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    },
+    "v1.3": {
+     "verb_position": "wrong",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "UMB",
+   "seed": 15,
+   "level": "C",
+   "boundaries": false,
+   "structure": {
+    "v1.2": {
+     "verb_position": "wrong",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "wrong",
+     "so_order": "abstain",
+     "affix_position": "abstain",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "UMB",
+   "seed": 16,
+   "level": "A",
+   "boundaries": true,
+   "structure": {
+    "v1.2": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "affix_position": "correct",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "affix_position": "correct",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "UMB",
+   "seed": 16,
+   "level": "A",
+   "boundaries": false,
+   "structure": {
+    "v1.2": {
+     "verb_position": "wrong",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "wrong",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "UMB",
+   "seed": 16,
+   "level": "C",
+   "boundaries": true,
+   "structure": {
+    "v1.2": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "UMB",
+   "seed": 16,
+   "level": "C",
+   "boundaries": false,
+   "structure": {
+    "v1.2": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "UMB",
+   "seed": 17,
+   "level": "A",
+   "boundaries": true,
+   "structure": {
+    "v1.2": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    },
+    "v1.3": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "UMB",
+   "seed": 17,
+   "level": "A",
+   "boundaries": false,
+   "structure": {
+    "v1.2": {
+     "verb_position": "wrong",
+     "so_order": "abstain",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "wrong",
+     "so_order": "abstain",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "UMB",
+   "seed": 17,
+   "level": "C",
+   "boundaries": true,
+   "structure": {
+    "v1.2": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    },
+    "v1.3": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "UMB",
+   "seed": 17,
+   "level": "C",
+   "boundaries": false,
+   "structure": {
+    "v1.2": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "UMB",
+   "seed": 18,
+   "level": "A",
+   "boundaries": true,
+   "structure": {
+    "v1.2": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "affix_position": "correct",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    },
+    "v1.3": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "affix_position": "correct",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "UMB",
+   "seed": 18,
+   "level": "A",
+   "boundaries": false,
+   "structure": {
+    "v1.2": {
+     "verb_position": "wrong",
+     "so_order": "correct",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "wrong",
+     "so_order": "correct",
+     "affix_position": "abstain",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "UMB",
+   "seed": 18,
+   "level": "C",
+   "boundaries": true,
+   "structure": {
+    "v1.2": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "UMB",
+   "seed": 18,
+   "level": "C",
+   "boundaries": false,
+   "structure": {
+    "v1.2": {
+     "verb_position": "wrong",
+     "so_order": "abstain",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "wrong",
+     "so_order": "abstain",
+     "affix_position": "abstain",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "UMB",
+   "seed": 19,
+   "level": "A",
+   "boundaries": true,
+   "structure": {
+    "v1.2": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "affix_position": "correct",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    },
+    "v1.3": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "affix_position": "correct",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "UMB",
+   "seed": 19,
+   "level": "A",
+   "boundaries": false,
+   "structure": {
+    "v1.2": {
+     "verb_position": "wrong",
+     "so_order": "abstain",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "wrong",
+     "so_order": "abstain",
+     "affix_position": "abstain",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "UMB",
+   "seed": 19,
+   "level": "C",
+   "boundaries": true,
+   "structure": {
+    "v1.2": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "UMB",
+   "seed": 19,
+   "level": "C",
+   "boundaries": false,
+   "structure": {
+    "v1.2": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "affix_position": "abstain",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "SOT",
+   "seed": 0,
+   "level": "A",
+   "boundaries": true,
+   "structure": {
+    "v1.2": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    },
+    "v1.3": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "SOT",
+   "seed": 0,
+   "level": "A",
+   "boundaries": false,
+   "structure": {
+    "v1.2": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "affix_position": "abstain",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "SOT",
+   "seed": 0,
+   "level": "C",
+   "boundaries": true,
+   "structure": {
+    "v1.2": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    },
+    "v1.3": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "SOT",
+   "seed": 0,
+   "level": "C",
+   "boundaries": false,
+   "structure": {
+    "v1.2": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "affix_position": "abstain",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "SOT",
+   "seed": 1,
+   "level": "A",
+   "boundaries": true,
+   "structure": {
+    "v1.2": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "SOT",
+   "seed": 1,
+   "level": "A",
+   "boundaries": false,
+   "structure": {
+    "v1.2": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "SOT",
+   "seed": 1,
+   "level": "C",
+   "boundaries": true,
+   "structure": {
+    "v1.2": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "SOT",
+   "seed": 1,
+   "level": "C",
+   "boundaries": false,
+   "structure": {
+    "v1.2": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "SOT",
+   "seed": 2,
+   "level": "A",
+   "boundaries": true,
+   "structure": {
+    "v1.2": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    },
+    "v1.3": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "SOT",
+   "seed": 2,
+   "level": "A",
+   "boundaries": false,
+   "structure": {
+    "v1.2": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "SOT",
+   "seed": 2,
+   "level": "C",
+   "boundaries": true,
+   "structure": {
+    "v1.2": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    },
+    "v1.3": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "SOT",
+   "seed": 2,
+   "level": "C",
+   "boundaries": false,
+   "structure": {
+    "v1.2": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "SOT",
+   "seed": 3,
+   "level": "A",
+   "boundaries": true,
+   "structure": {
+    "v1.2": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    },
+    "v1.3": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "SOT",
+   "seed": 3,
+   "level": "A",
+   "boundaries": false,
+   "structure": {
+    "v1.2": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "SOT",
+   "seed": 3,
+   "level": "C",
+   "boundaries": true,
+   "structure": {
+    "v1.2": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    },
+    "v1.3": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "SOT",
+   "seed": 3,
+   "level": "C",
+   "boundaries": false,
+   "structure": {
+    "v1.2": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "SOT",
+   "seed": 4,
+   "level": "A",
+   "boundaries": true,
+   "structure": {
+    "v1.2": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    },
+    "v1.3": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "SOT",
+   "seed": 4,
+   "level": "A",
+   "boundaries": false,
+   "structure": {
+    "v1.2": {
+     "verb_position": "correct",
+     "so_order": "wrong",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "correct",
+     "so_order": "wrong",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "SOT",
+   "seed": 4,
+   "level": "C",
+   "boundaries": true,
+   "structure": {
+    "v1.2": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "SOT",
+   "seed": 4,
+   "level": "C",
+   "boundaries": false,
+   "structure": {
+    "v1.2": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "SOT",
+   "seed": 5,
+   "level": "A",
+   "boundaries": true,
+   "structure": {
+    "v1.2": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    },
+    "v1.3": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "SOT",
+   "seed": 5,
+   "level": "A",
+   "boundaries": false,
+   "structure": {
+    "v1.2": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "SOT",
+   "seed": 5,
+   "level": "C",
+   "boundaries": true,
+   "structure": {
+    "v1.2": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "SOT",
+   "seed": 5,
+   "level": "C",
+   "boundaries": false,
+   "structure": {
+    "v1.2": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "SOT",
+   "seed": 6,
+   "level": "A",
+   "boundaries": true,
+   "structure": {
+    "v1.2": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    },
+    "v1.3": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "SOT",
+   "seed": 6,
+   "level": "A",
+   "boundaries": false,
+   "structure": {
+    "v1.2": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "SOT",
+   "seed": 6,
+   "level": "C",
+   "boundaries": true,
+   "structure": {
+    "v1.2": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "SOT",
+   "seed": 6,
+   "level": "C",
+   "boundaries": false,
+   "structure": {
+    "v1.2": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "SOT",
+   "seed": 7,
+   "level": "A",
+   "boundaries": true,
+   "structure": {
+    "v1.2": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "affix_position": "correct",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "affix_position": "correct",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "SOT",
+   "seed": 7,
+   "level": "A",
+   "boundaries": false,
+   "structure": {
+    "v1.2": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "affix_position": "correct",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "affix_position": "correct",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "SOT",
+   "seed": 7,
+   "level": "C",
+   "boundaries": true,
+   "structure": {
+    "v1.2": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    },
+    "v1.3": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "SOT",
+   "seed": 7,
+   "level": "C",
+   "boundaries": false,
+   "structure": {
+    "v1.2": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "SOT",
+   "seed": 8,
+   "level": "A",
+   "boundaries": true,
+   "structure": {
+    "v1.2": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "correct",
+     "num_noun": "correct"
+    },
+    "v1.3": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "correct",
+     "num_noun": "correct"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "SOT",
+   "seed": 8,
+   "level": "A",
+   "boundaries": false,
+   "structure": {
+    "v1.2": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "SOT",
+   "seed": 8,
+   "level": "C",
+   "boundaries": true,
+   "structure": {
+    "v1.2": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "SOT",
+   "seed": 8,
+   "level": "C",
+   "boundaries": false,
+   "structure": {
+    "v1.2": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "SOT",
+   "seed": 9,
+   "level": "A",
+   "boundaries": true,
+   "structure": {
+    "v1.2": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    },
+    "v1.3": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "SOT",
+   "seed": 9,
+   "level": "A",
+   "boundaries": false,
+   "structure": {
+    "v1.2": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "affix_position": "correct",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "affix_position": "correct",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "SOT",
+   "seed": 9,
+   "level": "C",
+   "boundaries": true,
+   "structure": {
+    "v1.2": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    },
+    "v1.3": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "SOT",
+   "seed": 9,
+   "level": "C",
+   "boundaries": false,
+   "structure": {
+    "v1.2": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "SOT",
+   "seed": 10,
+   "level": "A",
+   "boundaries": true,
+   "structure": {
+    "v1.2": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    },
+    "v1.3": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "SOT",
+   "seed": 10,
+   "level": "A",
+   "boundaries": false,
+   "structure": {
+    "v1.2": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "SOT",
+   "seed": 10,
+   "level": "C",
+   "boundaries": true,
+   "structure": {
+    "v1.2": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    },
+    "v1.3": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "SOT",
+   "seed": 10,
+   "level": "C",
+   "boundaries": false,
+   "structure": {
+    "v1.2": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "SOT",
+   "seed": 11,
+   "level": "A",
+   "boundaries": true,
+   "structure": {
+    "v1.2": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "affix_position": "correct",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "affix_position": "correct",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "SOT",
+   "seed": 11,
+   "level": "A",
+   "boundaries": false,
+   "structure": {
+    "v1.2": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "abstain",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "SOT",
+   "seed": 11,
+   "level": "C",
+   "boundaries": true,
+   "structure": {
+    "v1.2": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "SOT",
+   "seed": 11,
+   "level": "C",
+   "boundaries": false,
+   "structure": {
+    "v1.2": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "affix_position": "abstain",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "SOT",
+   "seed": 12,
+   "level": "A",
+   "boundaries": true,
+   "structure": {
+    "v1.2": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    },
+    "v1.3": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "SOT",
+   "seed": 12,
+   "level": "A",
+   "boundaries": false,
+   "structure": {
+    "v1.2": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "affix_position": "abstain",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "SOT",
+   "seed": 12,
+   "level": "C",
+   "boundaries": true,
+   "structure": {
+    "v1.2": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "SOT",
+   "seed": 12,
+   "level": "C",
+   "boundaries": false,
+   "structure": {
+    "v1.2": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "affix_position": "abstain",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "SOT",
+   "seed": 13,
+   "level": "A",
+   "boundaries": true,
+   "structure": {
+    "v1.2": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    },
+    "v1.3": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "SOT",
+   "seed": 13,
+   "level": "A",
+   "boundaries": false,
+   "structure": {
+    "v1.2": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "SOT",
+   "seed": 13,
+   "level": "C",
+   "boundaries": true,
+   "structure": {
+    "v1.2": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    },
+    "v1.3": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "SOT",
+   "seed": 13,
+   "level": "C",
+   "boundaries": false,
+   "structure": {
+    "v1.2": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "SOT",
+   "seed": 14,
+   "level": "A",
+   "boundaries": true,
+   "structure": {
+    "v1.2": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    },
+    "v1.3": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "SOT",
+   "seed": 14,
+   "level": "A",
+   "boundaries": false,
+   "structure": {
+    "v1.2": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "SOT",
+   "seed": 14,
+   "level": "C",
+   "boundaries": true,
+   "structure": {
+    "v1.2": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    },
+    "v1.3": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "SOT",
+   "seed": 14,
+   "level": "C",
+   "boundaries": false,
+   "structure": {
+    "v1.2": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "SOT",
+   "seed": 15,
+   "level": "A",
+   "boundaries": true,
+   "structure": {
+    "v1.2": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    },
+    "v1.3": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "SOT",
+   "seed": 15,
+   "level": "A",
+   "boundaries": false,
+   "structure": {
+    "v1.2": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "SOT",
+   "seed": 15,
+   "level": "C",
+   "boundaries": true,
+   "structure": {
+    "v1.2": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "SOT",
+   "seed": 15,
+   "level": "C",
+   "boundaries": false,
+   "structure": {
+    "v1.2": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "SOT",
+   "seed": 16,
+   "level": "A",
+   "boundaries": true,
+   "structure": {
+    "v1.2": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "affix_position": "correct",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    },
+    "v1.3": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "affix_position": "correct",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "SOT",
+   "seed": 16,
+   "level": "A",
+   "boundaries": false,
+   "structure": {
+    "v1.2": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "SOT",
+   "seed": 16,
+   "level": "C",
+   "boundaries": true,
+   "structure": {
+    "v1.2": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "SOT",
+   "seed": 16,
+   "level": "C",
+   "boundaries": false,
+   "structure": {
+    "v1.2": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "SOT",
+   "seed": 17,
+   "level": "A",
+   "boundaries": true,
+   "structure": {
+    "v1.2": {
+     "verb_position": "correct",
+     "so_order": "wrong",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    },
+    "v1.3": {
+     "verb_position": "correct",
+     "so_order": "wrong",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "SOT",
+   "seed": 17,
+   "level": "A",
+   "boundaries": false,
+   "structure": {
+    "v1.2": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "SOT",
+   "seed": 17,
+   "level": "C",
+   "boundaries": true,
+   "structure": {
+    "v1.2": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    },
+    "v1.3": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "SOT",
+   "seed": 17,
+   "level": "C",
+   "boundaries": false,
+   "structure": {
+    "v1.2": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "SOT",
+   "seed": 18,
+   "level": "A",
+   "boundaries": true,
+   "structure": {
+    "v1.2": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "affix_position": "correct",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    },
+    "v1.3": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "affix_position": "correct",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "SOT",
+   "seed": 18,
+   "level": "A",
+   "boundaries": false,
+   "structure": {
+    "v1.2": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "SOT",
+   "seed": 18,
+   "level": "C",
+   "boundaries": true,
+   "structure": {
+    "v1.2": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    },
+    "v1.3": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "SOT",
+   "seed": 18,
+   "level": "C",
+   "boundaries": false,
+   "structure": {
+    "v1.2": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "SOT",
+   "seed": 19,
+   "level": "A",
+   "boundaries": true,
+   "structure": {
+    "v1.2": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    },
+    "v1.3": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "SOT",
+   "seed": 19,
+   "level": "A",
+   "boundaries": false,
+   "structure": {
+    "v1.2": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "SOT",
+   "seed": 19,
+   "level": "C",
+   "boundaries": true,
+   "structure": {
+    "v1.2": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    },
+    "v1.3": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "affix_position": "correct",
+     "numeral_base": "correct",
+     "adj_noun": "abstain",
+     "num_noun": "correct"
+    }
+   }
+  },
+  {
+   "kind": "real",
+   "family": "SOT",
+   "seed": 19,
+   "level": "C",
+   "boundaries": false,
+   "structure": {
+    "v1.2": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    },
+    "v1.3": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "affix_position": "wrong",
+     "numeral_base": "abstain",
+     "adj_noun": "abstain",
+     "num_noun": "abstain"
+    }
+   }
+  },
+  {
+   "kind": "null",
+   "null": "random",
+   "seed": 0,
+   "claims": {
+    "v1.2": [],
+    "v1.3": []
+   }
+  },
+  {
+   "kind": "null",
+   "null": "random",
+   "seed": 1,
+   "claims": {
+    "v1.2": [],
+    "v1.3": []
+   }
+  },
+  {
+   "kind": "null",
+   "null": "random",
+   "seed": 2,
+   "claims": {
+    "v1.2": [],
+    "v1.3": []
+   }
+  },
+  {
+   "kind": "null",
+   "null": "random",
+   "seed": 3,
+   "claims": {
+    "v1.2": [],
+    "v1.3": []
+   }
+  },
+  {
+   "kind": "null",
+   "null": "random",
+   "seed": 4,
+   "claims": {
+    "v1.2": [],
+    "v1.3": []
+   }
+  },
+  {
+   "kind": "null",
+   "null": "random",
+   "seed": 5,
+   "claims": {
+    "v1.2": [],
+    "v1.3": []
+   }
+  },
+  {
+   "kind": "null",
+   "null": "random",
+   "seed": 6,
+   "claims": {
+    "v1.2": [],
+    "v1.3": []
+   }
+  },
+  {
+   "kind": "null",
+   "null": "random",
+   "seed": 7,
+   "claims": {
+    "v1.2": [],
+    "v1.3": []
+   }
+  },
+  {
+   "kind": "null",
+   "null": "random",
+   "seed": 8,
+   "claims": {
+    "v1.2": [],
+    "v1.3": []
+   }
+  },
+  {
+   "kind": "null",
+   "null": "random",
+   "seed": 9,
+   "claims": {
+    "v1.2": [],
+    "v1.3": []
+   }
+  },
+  {
+   "kind": "null",
+   "null": "random",
+   "seed": 10,
+   "claims": {
+    "v1.2": [],
+    "v1.3": []
+   }
+  },
+  {
+   "kind": "null",
+   "null": "random",
+   "seed": 11,
+   "claims": {
+    "v1.2": [],
+    "v1.3": []
+   }
+  },
+  {
+   "kind": "null",
+   "null": "random",
+   "seed": 12,
+   "claims": {
+    "v1.2": [],
+    "v1.3": []
+   }
+  },
+  {
+   "kind": "null",
+   "null": "random",
+   "seed": 13,
+   "claims": {
+    "v1.2": [],
+    "v1.3": []
+   }
+  },
+  {
+   "kind": "null",
+   "null": "random",
+   "seed": 14,
+   "claims": {
+    "v1.2": [
+     "affix_position"
+    ],
+    "v1.3": []
+   }
+  },
+  {
+   "kind": "null",
+   "null": "random",
+   "seed": 15,
+   "claims": {
+    "v1.2": [],
+    "v1.3": []
+   }
+  },
+  {
+   "kind": "null",
+   "null": "random",
+   "seed": 16,
+   "claims": {
+    "v1.2": [],
+    "v1.3": []
+   }
+  },
+  {
+   "kind": "null",
+   "null": "random",
+   "seed": 17,
+   "claims": {
+    "v1.2": [],
+    "v1.3": []
+   }
+  },
+  {
+   "kind": "null",
+   "null": "random",
+   "seed": 18,
+   "claims": {
+    "v1.2": [],
+    "v1.3": []
+   }
+  },
+  {
+   "kind": "null",
+   "null": "random",
+   "seed": 19,
+   "claims": {
+    "v1.2": [],
+    "v1.3": []
+   }
+  },
+  {
+   "kind": "null",
+   "null": "shuffled",
+   "seed": 0,
+   "claims": {
+    "v1.2": [
+     "affix_position",
+     "verb_position"
+    ],
+    "v1.3": []
+   }
+  },
+  {
+   "kind": "null",
+   "null": "shuffled",
+   "seed": 1,
+   "claims": {
+    "v1.2": [
+     "affix_position",
+     "verb_position"
+    ],
+    "v1.3": []
+   }
+  },
+  {
+   "kind": "null",
+   "null": "shuffled",
+   "seed": 2,
+   "claims": {
+    "v1.2": [
+     "affix_position",
+     "verb_position"
+    ],
+    "v1.3": []
+   }
+  },
+  {
+   "kind": "null",
+   "null": "shuffled",
+   "seed": 3,
+   "claims": {
+    "v1.2": [
+     "affix_position",
+     "verb_position"
+    ],
+    "v1.3": []
+   }
+  },
+  {
+   "kind": "null",
+   "null": "shuffled",
+   "seed": 4,
+   "claims": {
+    "v1.2": [
+     "affix_position",
+     "verb_position"
+    ],
+    "v1.3": []
+   }
+  },
+  {
+   "kind": "null",
+   "null": "shuffled",
+   "seed": 5,
+   "claims": {
+    "v1.2": [
+     "affix_position",
+     "verb_position"
+    ],
+    "v1.3": []
+   }
+  },
+  {
+   "kind": "null",
+   "null": "shuffled",
+   "seed": 6,
+   "claims": {
+    "v1.2": [
+     "affix_position",
+     "verb_position"
+    ],
+    "v1.3": []
+   }
+  },
+  {
+   "kind": "null",
+   "null": "shuffled",
+   "seed": 7,
+   "claims": {
+    "v1.2": [
+     "affix_position",
+     "verb_position"
+    ],
+    "v1.3": []
+   }
+  },
+  {
+   "kind": "null",
+   "null": "shuffled",
+   "seed": 8,
+   "claims": {
+    "v1.2": [
+     "affix_position"
+    ],
+    "v1.3": []
+   }
+  },
+  {
+   "kind": "null",
+   "null": "shuffled",
+   "seed": 9,
+   "claims": {
+    "v1.2": [
+     "affix_position",
+     "verb_position"
+    ],
+    "v1.3": []
+   }
+  },
+  {
+   "kind": "null",
+   "null": "shuffled",
+   "seed": 10,
+   "claims": {
+    "v1.2": [
+     "affix_position",
+     "verb_position"
+    ],
+    "v1.3": []
+   }
+  },
+  {
+   "kind": "null",
+   "null": "shuffled",
+   "seed": 11,
+   "claims": {
+    "v1.2": [
+     "affix_position",
+     "verb_position"
+    ],
+    "v1.3": []
+   }
+  },
+  {
+   "kind": "null",
+   "null": "shuffled",
+   "seed": 12,
+   "claims": {
+    "v1.2": [
+     "affix_position",
+     "verb_position"
+    ],
+    "v1.3": []
+   }
+  },
+  {
+   "kind": "null",
+   "null": "shuffled",
+   "seed": 13,
+   "claims": {
+    "v1.2": [
+     "affix_position"
+    ],
+    "v1.3": []
+   }
+  },
+  {
+   "kind": "null",
+   "null": "shuffled",
+   "seed": 14,
+   "claims": {
+    "v1.2": [
+     "affix_position"
+    ],
+    "v1.3": []
+   }
+  },
+  {
+   "kind": "null",
+   "null": "shuffled",
+   "seed": 15,
+   "claims": {
+    "v1.2": [
+     "affix_position",
+     "verb_position"
+    ],
+    "v1.3": []
+   }
+  },
+  {
+   "kind": "null",
+   "null": "shuffled",
+   "seed": 16,
+   "claims": {
+    "v1.2": [
+     "affix_position",
+     "verb_position"
+    ],
+    "v1.3": []
+   }
+  },
+  {
+   "kind": "null",
+   "null": "shuffled",
+   "seed": 17,
+   "claims": {
+    "v1.2": [
+     "affix_position",
+     "verb_position"
+    ],
+    "v1.3": []
+   }
+  },
+  {
+   "kind": "null",
+   "null": "shuffled",
+   "seed": 18,
+   "claims": {
+    "v1.2": [
+     "affix_position"
+    ],
+    "v1.3": []
+   }
+  },
+  {
+   "kind": "null",
+   "null": "shuffled",
+   "seed": 19,
+   "claims": {
+    "v1.2": [
+     "affix_position",
+     "verb_position"
+    ],
+    "v1.3": []
+   }
+  },
+  {
+   "kind": "null",
+   "null": "syllable",
+   "seed": 0,
+   "claims": {
+    "v1.2": [
+     "affix_position"
+    ],
+    "v1.3": []
+   }
+  },
+  {
+   "kind": "null",
+   "null": "syllable",
+   "seed": 1,
+   "claims": {
+    "v1.2": [
+     "affix_position"
+    ],
+    "v1.3": []
+   }
+  },
+  {
+   "kind": "null",
+   "null": "syllable",
+   "seed": 2,
+   "claims": {
+    "v1.2": [
+     "affix_position"
+    ],
+    "v1.3": []
+   }
+  },
+  {
+   "kind": "null",
+   "null": "syllable",
+   "seed": 3,
+   "claims": {
+    "v1.2": [
+     "affix_position"
+    ],
+    "v1.3": []
+   }
+  },
+  {
+   "kind": "null",
+   "null": "syllable",
+   "seed": 4,
+   "claims": {
+    "v1.2": [
+     "affix_position"
+    ],
+    "v1.3": []
+   }
+  },
+  {
+   "kind": "null",
+   "null": "syllable",
+   "seed": 5,
+   "claims": {
+    "v1.2": [
+     "affix_position"
+    ],
+    "v1.3": []
+   }
+  },
+  {
+   "kind": "null",
+   "null": "syllable",
+   "seed": 6,
+   "claims": {
+    "v1.2": [
+     "affix_position"
+    ],
+    "v1.3": []
+   }
+  },
+  {
+   "kind": "null",
+   "null": "syllable",
+   "seed": 7,
+   "claims": {
+    "v1.2": [
+     "affix_position"
+    ],
+    "v1.3": []
+   }
+  },
+  {
+   "kind": "null",
+   "null": "syllable",
+   "seed": 8,
+   "claims": {
+    "v1.2": [
+     "affix_position"
+    ],
+    "v1.3": [
+     "affix_position"
+    ]
+   }
+  },
+  {
+   "kind": "null",
+   "null": "syllable",
+   "seed": 9,
+   "claims": {
+    "v1.2": [
+     "affix_position"
+    ],
+    "v1.3": []
+   }
+  },
+  {
+   "kind": "null",
+   "null": "syllable",
+   "seed": 10,
+   "claims": {
+    "v1.2": [
+     "affix_position"
+    ],
+    "v1.3": []
+   }
+  },
+  {
+   "kind": "null",
+   "null": "syllable",
+   "seed": 11,
+   "claims": {
+    "v1.2": [
+     "affix_position"
+    ],
+    "v1.3": []
+   }
+  },
+  {
+   "kind": "null",
+   "null": "syllable",
+   "seed": 12,
+   "claims": {
+    "v1.2": [
+     "affix_position"
+    ],
+    "v1.3": []
+   }
+  },
+  {
+   "kind": "null",
+   "null": "syllable",
+   "seed": 13,
+   "claims": {
+    "v1.2": [
+     "affix_position"
+    ],
+    "v1.3": []
+   }
+  },
+  {
+   "kind": "null",
+   "null": "syllable",
+   "seed": 14,
+   "claims": {
+    "v1.2": [
+     "affix_position"
+    ],
+    "v1.3": []
+   }
+  },
+  {
+   "kind": "null",
+   "null": "syllable",
+   "seed": 15,
+   "claims": {
+    "v1.2": [
+     "affix_position"
+    ],
+    "v1.3": []
+   }
+  },
+  {
+   "kind": "null",
+   "null": "syllable",
+   "seed": 16,
+   "claims": {
+    "v1.2": [
+     "affix_position"
+    ],
+    "v1.3": []
+   }
+  },
+  {
+   "kind": "null",
+   "null": "syllable",
+   "seed": 17,
+   "claims": {
+    "v1.2": [
+     "affix_position"
+    ],
+    "v1.3": []
+   }
+  },
+  {
+   "kind": "null",
+   "null": "syllable",
+   "seed": 18,
+   "claims": {
+    "v1.2": [
+     "affix_position"
+    ],
+    "v1.3": []
+   }
+  },
+  {
+   "kind": "null",
+   "null": "syllable",
+   "seed": 19,
+   "claims": {
+    "v1.2": [
+     "affix_position"
+    ],
+    "v1.3": []
+   }
+  }
+ ]
+}

@@ -89,11 +89,20 @@ def build_corpus(family: str, seed: int, level: str = "A", n_docs: int = 130, pa
 
 
 def null_corpus(seed: int, kind: str = "random", n_docs: int = 130):
-    """対照コーパス。random: 文法のない独立同分布の語列。shuffled: 実コーパスの語を全体でシャッフル（統語のみ破壊）。"""
+    """対照コーパス。random: 文法のない独立同分布の語列。shuffled: 実コーパスの語を全体でシャッフル（統語のみ破壊）。
+
+    syllable: 約20種の音節を無作為に並べた語（形態も統語もない対照、v1.3）。
+    """
     rng = random.Random(f"null-{kind}-{seed}")
     public, _ = build_corpus("KES", seed, "C", n_docs=n_docs, lacuna=0.0, var_rate=0.0)
     lens = [[len(s.split()) for s in d["sentences"]] for d in public["documents"]]
-    if kind == "random":
+    if kind == "syllable":
+        # v1.3: 外部の無作為対照（gpt6-random-control）に似せた、子音＋母音の音節を無作為に並べた語
+        cons, vows = "bdfghklmnprstvxz", "aeiou"
+        sylls = sorted({rng.choice(cons) + rng.choice(vows) for _ in range(40)})[:20]
+        vocab = sorted({"".join(rng.choice(sylls) for _ in range(rng.choice([2, 3, 3]))) for _ in range(900)})
+        pool = [rng.choice(vocab) for _ in range(sum(map(sum, lens)))]
+    elif kind == "random":
         lang = make_language("KES", seed + 7919)
         vocab = [lang.new_root(rng.choice([1, 2, 2, 3])) for _ in range(600)]
         weights = [1.0 / (i + 1) for i in range(len(vocab))]

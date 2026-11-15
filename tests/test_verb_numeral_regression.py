@@ -49,9 +49,15 @@ def test_previously_blind_outsider_is_now_a_regression_only():
     path = (Path(__file__).parents[1] / "external" / "inbox"
             / "outsider-vso-prefix-7-v1" / "corpus.json")
     pub = json.loads(path.read_text(encoding="utf-8"))
-    pred = decipher(pub)
+    # クラス経由の動詞の位置（v1.6.0 まで）では、クラスの信頼度が語順の信頼度に伝わる（数詞を動詞と誤認した過去の不具合）
+    pred = decipher(pub, {"v17_gates": False})
     assert pred["classes"]["verb_group"] == "P:shai"
     vp = pred["structure"]["verb_position"]
     assert vp["value"] == "initial"
     assert vp["confidence"] < 1.0
+    # v1.7.0 は、対訳で述語・主語・目的語の位置が分かる文から、動詞の位置を直接数える（クラスを経由しない）
+    pred = decipher(pub)
+    assert pred["classes"]["verb_group"] == "P:shai"
+    vp = pred["structure"]["verb_position"]
+    assert vp["value"] == "initial" and vp["source"] == "alignment-relative"
     assert pred["split_used"]["heldout"] == [f"d{i:03d}" for i in range(127, 161)]

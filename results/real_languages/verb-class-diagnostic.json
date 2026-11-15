@@ -1,0 +1,92 @@
+{
+ "tr_imst": {
+  "v_tokens": 399,
+  "verb_share": 0.003,
+  "upos_share": {
+   "DET": 0.855,
+   "ADV": 0.113,
+   "PRON": 0.015,
+   "ADJ": 0.008,
+   "NUM": 0.005
+  },
+  "class_verb_confidence": 0.854
+ },
+ "eu_bdt": {
+  "v_tokens": 0,
+  "verb_share": null,
+  "upos_share": {},
+  "class_verb_confidence": 0.0
+ },
+ "fi_tdt": {
+  "v_tokens": 569,
+  "verb_share": 0.051,
+  "upos_share": {
+   "ADV": 0.494,
+   "PRON": 0.202,
+   "AUX": 0.178,
+   "NOUN": 0.06,
+   "VERB": 0.051
+  },
+  "class_verb_confidence": 0.99
+ },
+ "hu_szeged": {
+  "v_tokens": 0,
+  "verb_share": null,
+  "upos_share": {},
+  "class_verb_confidence": 0.0
+ },
+ "ga_idt": {
+  "v_tokens": 434,
+  "verb_share": 0.007,
+  "upos_share": {
+   "DET": 0.763,
+   "ADV": 0.092,
+   "NOUN": 0.081,
+   "PRON": 0.035,
+   "ADJ": 0.018
+  },
+  "class_verb_confidence": 0.99
+ },
+ "cy_ccg": {
+  "v_tokens": 511,
+  "verb_share": 0.335,
+  "upos_share": {
+   "VERB": 0.335,
+   "NOUN": 0.321,
+   "PRON": 0.239,
+   "ADJ": 0.053,
+   "PROPN": 0.047
+  },
+  "class_verb_confidence": 0.749
+ },
+ "id_gsd": {
+  "v_tokens": 0,
+  "verb_share": null,
+  "upos_share": {},
+  "class_verb_confidence": 0.0
+ },
+ "es_ancora": {
+  "v_tokens": 390,
+  "verb_share": 0.005,
+  "upos_share": {
+   "NOUN": 0.428,
+   "PROPN": 0.279,
+   "ADJ": 0.197,
+   "DET": 0.062,
+   "PRON": 0.028
+  },
+  "class_verb_confidence": 0.99
+ },
+ "en_ewt": {
+  "v_tokens": 0,
+  "verb_share": null,
+  "upos_share": {},
+  "class_verb_confidence": 0.0
+ },
+ "wo_wtb": {
+  "v_tokens": 0,
+  "verb_share": null,
+  "upos_share": {},
+  "class_verb_confidence": 0.0
+ }
+}

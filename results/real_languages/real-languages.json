@@ -1,0 +1,1090 @@
+{
+ "engine_version": "1.4.0",
+ "ud_tag": "r2.15",
+ "preregistration": "docs/PREREG_REAL_LANGUAGES.md",
+ "summary": {
+  "v1.4:verb_position": {
+   "wrong": 1,
+   "abstain": 5,
+   "correct": 4
+  },
+  "v1.4:affix_position": {
+   "correct": 8,
+   "abstain": 2
+  },
+  "v1.4:syntax_detected": 10,
+  "v1.4:control_verb_claims": 0,
+  "v1.4:languages": 10,
+  "v1.2:verb_position": {
+   "wrong": 1,
+   "abstain": 5,
+   "correct": 4
+  },
+  "v1.2:affix_position": {
+   "correct": 8,
+   "wrong": 2
+  },
+  "v1.2:syntax_detected": 10,
+  "v1.2:control_verb_claims": 5,
+  "v1.2:languages": 10
+ },
+ "excluded": [],
+ "rows": [
+  {
+   "treebank": "UD_Turkish-IMST",
+   "code": "tr_imst",
+   "ud_tag": "r2.15",
+   "sha256": "8d8b8b581dab9362e6f2e4328aef77b9fabec1d189a199e320ba136710c7bd83",
+   "sentences": 1000,
+   "tokens": 10470,
+   "characters": 31,
+   "gold": {
+    "verb_position": {
+     "value": "final",
+     "n": 236,
+     "shares": {
+      "initial": 0.025,
+      "medial": 0.364,
+      "final": 0.61
+     }
+    },
+    "affix_position": {
+     "value": "suffix",
+     "n": 4265,
+     "shares": {
+      "suffix": 0.996,
+      "prefix": 0.004
+     }
+    }
+   },
+   "versions": {
+    "v1.4": {
+     "verb_position": {
+      "pred": "medial",
+      "confidence": 0.776,
+      "alternatives": {
+       "initial": 0.086,
+       "medial": 0.909,
+       "final": 0.004
+      },
+      "null_gate": null,
+      "judge": "wrong"
+     },
+     "affix_position": {
+      "pred": "suffix",
+      "confidence": 0.843,
+      "support": {
+       "suffix": 3295,
+       "prefix": 614
+      },
+      "null_gate": null,
+      "judge": "correct"
+     },
+     "syntax": {
+      "entropy": 3.005,
+      "shuffled_mean": 3.2023,
+      "z": 19.49,
+      "reduction": 0.0616,
+      "p": 0.005,
+      "n_shuffle": 199,
+      "present": true
+     },
+     "morphology": {
+      "affixed_token_share": 0.3556,
+      "n_affixes": 249,
+      "present": true
+     },
+     "control_verb_position_claim": false,
+     "control_claims": []
+    },
+    "v1.2": {
+     "verb_position": {
+      "pred": "medial",
+      "confidence": 0.776,
+      "alternatives": {
+       "initial": 0.086,
+       "medial": 0.909,
+       "final": 0.004
+      },
+      "null_gate": null,
+      "judge": "wrong"
+     },
+     "affix_position": {
+      "pred": "suffix",
+      "confidence": 0.843,
+      "support": {
+       "suffix": 3295,
+       "prefix": 614
+      },
+      "null_gate": null,
+      "judge": "correct"
+     },
+     "syntax": {
+      "entropy": 3.005,
+      "shuffled_mean": 3.2049,
+      "z": 19.42,
+      "reduction": 0.0624,
+      "present": true
+     },
+     "morphology": {
+      "affixed_token_share": 0.3556,
+      "n_affixes": 249,
+      "present": true
+     },
+     "control_verb_position_claim": true,
+     "control_claims": [
+      "affix_position",
+      "verb_position"
+     ]
+    }
+   },
+   "seconds": 19.4
+  },
+  {
+   "treebank": "UD_Basque-BDT",
+   "code": "eu_bdt",
+   "ud_tag": "r2.15",
+   "sha256": "9dc1673403d071d870d45c1054eb39b827d45507a47833a8979ffaa824928587",
+   "sentences": 1000,
+   "tokens": 9331,
+   "characters": 28,
+   "gold": {
+    "verb_position": {
+     "value": "medial",
+     "n": 329,
+     "shares": {
+      "initial": 0.033,
+      "medial": 0.824,
+      "final": 0.143
+     }
+    },
+    "affix_position": {
+     "value": "suffix",
+     "n": 3047,
+     "shares": {
+      "suffix": 0.97,
+      "prefix": 0.03
+     }
+    }
+   },
+   "versions": {
+    "v1.4": {
+     "verb_position": {
+      "pred": null,
+      "confidence": 0.0,
+      "alternatives": {},
+      "null_gate": null,
+      "judge": "abstain"
+     },
+     "affix_position": {
+      "pred": "suffix",
+      "confidence": 0.925,
+      "support": {
+       "suffix": 3283,
+       "prefix": 268
+      },
+      "null_gate": null,
+      "judge": "correct"
+     },
+     "syntax": {
+      "entropy": 2.9665,
+      "shuffled_mean": 3.1774,
+      "z": 21.13,
+      "reduction": 0.0664,
+      "p": 0.005,
+      "n_shuffle": 199,
+      "present": true
+     },
+     "morphology": {
+      "affixed_token_share": 0.3721,
+      "n_affixes": 133,
+      "present": true
+     },
+     "control_verb_position_claim": false,
+     "control_claims": []
+    },
+    "v1.2": {
+     "verb_position": {
+      "pred": null,
+      "confidence": 0.0,
+      "alternatives": {},
+      "null_gate": null,
+      "judge": "abstain"
+     },
+     "affix_position": {
+      "pred": "suffix",
+      "confidence": 0.925,
+      "support": {
+       "suffix": 3283,
+       "prefix": 268
+      },
+      "null_gate": null,
+      "judge": "correct"
+     },
+     "syntax": {
+      "entropy": 2.9665,
+      "shuffled_mean": 3.1689,
+      "z": 27.06,
+      "reduction": 0.0639,
+      "present": true
+     },
+     "morphology": {
+      "affixed_token_share": 0.3721,
+      "n_affixes": 133,
+      "present": true
+     },
+     "control_verb_position_claim": false,
+     "control_claims": [
+      "affix_position"
+     ]
+    }
+   },
+   "seconds": 14.4
+  },
+  {
+   "treebank": "UD_Finnish-TDT",
+   "code": "fi_tdt",
+   "ud_tag": "r2.15",
+   "sha256": "e97c2165d66a6371072661aa3735d814dd5100a2d96602312a91d0f65f998065",
+   "sentences": 1000,
+   "tokens": 10647,
+   "characters": 28,
+   "gold": {
+    "verb_position": {
+     "value": "medial",
+     "n": 295,
+     "shares": {
+      "initial": 0.129,
+      "medial": 0.766,
+      "final": 0.105
+     }
+    },
+    "affix_position": {
+     "value": "suffix",
+     "n": 4511,
+     "shares": {
+      "suffix": 0.999,
+      "prefix": 0.001
+     }
+    }
+   },
+   "versions": {
+    "v1.4": {
+     "verb_position": {
+      "pred": "medial",
+      "confidence": 0.809,
+      "alternatives": {
+       "initial": 0.141,
+       "medial": 0.817,
+       "final": 0.042
+      },
+      "null_gate": null,
+      "judge": "correct"
+     },
+     "affix_position": {
+      "pred": "suffix",
+      "confidence": 0.904,
+      "support": {
+       "suffix": 3493,
+       "prefix": 369
+      },
+      "null_gate": null,
+      "judge": "correct"
+     },
+     "syntax": {
+      "entropy": 3.011,
+      "shuffled_mean": 3.1873,
+      "z": 18.42,
+      "reduction": 0.0553,
+      "p": 0.005,
+      "n_shuffle": 199,
+      "present": true
+     },
+     "morphology": {
+      "affixed_token_share": 0.3526,
+      "n_affixes": 208,
+      "present": true
+     },
+     "control_verb_position_claim": false,
+     "control_claims": []
+    },
+    "v1.2": {
+     "verb_position": {
+      "pred": "medial",
+      "confidence": 0.809,
+      "alternatives": {
+       "initial": 0.141,
+       "medial": 0.817,
+       "final": 0.042
+      },
+      "null_gate": null,
+      "judge": "correct"
+     },
+     "affix_position": {
+      "pred": "suffix",
+      "confidence": 0.904,
+      "support": {
+       "suffix": 3493,
+       "prefix": 369
+      },
+      "null_gate": null,
+      "judge": "correct"
+     },
+     "syntax": {
+      "entropy": 3.011,
+      "shuffled_mean": 3.1819,
+      "z": 17.26,
+      "reduction": 0.0537,
+      "present": true
+     },
+     "morphology": {
+      "affixed_token_share": 0.3526,
+      "n_affixes": 208,
+      "present": true
+     },
+     "control_verb_position_claim": true,
+     "control_claims": [
+      "affix_position",
+      "verb_position"
+     ]
+    }
+   },
+   "seconds": 17.1
+  },
+  {
+   "treebank": "UD_Hungarian-Szeged",
+   "code": "hu_szeged",
+   "ud_tag": "r2.15",
+   "sha256": "b45d8b44c2df33b8ca7829473c8d2b02b3c0eaa59b06185b6841e784df7e3c99",
+   "sentences": 906,
+   "tokens": 17026,
+   "characters": 36,
+   "gold": {
+    "verb_position": {
+     "value": "medial",
+     "n": 328,
+     "shares": {
+      "initial": 0.024,
+      "medial": 0.735,
+      "final": 0.241
+     }
+    },
+    "affix_position": {
+     "value": "suffix",
+     "n": 4749,
+     "shares": {
+      "suffix": 1.0,
+      "prefix": 0.0
+     }
+    }
+   },
+   "versions": {
+    "v1.4": {
+     "verb_position": {
+      "pred": null,
+      "confidence": 0.0,
+      "alternatives": {},
+      "null_gate": null,
+      "judge": "abstain"
+     },
+     "affix_position": {
+      "pred": "suffix",
+      "confidence": 0.855,
+      "support": {
+       "suffix": 4429,
+       "prefix": 753
+      },
+      "null_gate": null,
+      "judge": "correct"
+     },
+     "syntax": {
+      "entropy": 3.2728,
+      "shuffled_mean": 3.5648,
+      "z": 35.24,
+      "reduction": 0.0819,
+      "p": 0.005,
+      "n_shuffle": 199,
+      "present": true
+     },
+     "morphology": {
+      "affixed_token_share": 0.2875,
+      "n_affixes": 257,
+      "present": true
+     },
+     "control_verb_position_claim": false,
+     "control_claims": []
+    },
+    "v1.2": {
+     "verb_position": {
+      "pred": null,
+      "confidence": 0.0,
+      "alternatives": {},
+      "null_gate": null,
+      "judge": "abstain"
+     },
+     "affix_position": {
+      "pred": "suffix",
+      "confidence": 0.855,
+      "support": {
+       "suffix": 4429,
+       "prefix": 753
+      },
+      "null_gate": null,
+      "judge": "correct"
+     },
+     "syntax": {
+      "entropy": 3.2728,
+      "shuffled_mean": 3.56,
+      "z": 31.83,
+      "reduction": 0.0807,
+      "present": true
+     },
+     "morphology": {
+      "affixed_token_share": 0.2875,
+      "n_affixes": 257,
+      "present": true
+     },
+     "control_verb_position_claim": false,
+     "control_claims": [
+      "affix_position"
+     ]
+    }
+   },
+   "seconds": 35.1
+  },
+  {
+   "treebank": "UD_Irish-IDT",
+   "code": "ga_idt",
+   "ud_tag": "r2.15",
+   "sha256": "105d5a054adea2371313ae3448f06381eb4ba250a2493a242918069384fb6a71",
+   "sentences": 1000,
+   "tokens": 20851,
+   "characters": 33,
+   "gold": {
+    "verb_position": {
+     "value": "medial",
+     "n": 354,
+     "shares": {
+      "initial": 0.427,
+      "medial": 0.562,
+      "final": 0.011
+     }
+    },
+    "affix_position": {
+     "value": "both",
+     "n": 3881,
+     "shares": {
+      "suffix": 0.465,
+      "prefix": 0.535
+     }
+    }
+   },
+   "versions": {
+    "v1.4": {
+     "verb_position": {
+      "pred": "medial",
+      "confidence": 0.805,
+      "alternatives": {
+       "initial": 0.058,
+       "medial": 0.813,
+       "final": 0.128
+      },
+      "null_gate": null,
+      "judge": "correct"
+     },
+     "affix_position": {
+      "pred": null,
+      "confidence": 0.723,
+      "support": {
+       "suffix": 3792,
+       "prefix": 1455
+      },
+      "null_gate": "接辞が文脈と連動せず、帰無対照と区別できない（G1'）",
+      "judge": "abstain"
+     },
+     "syntax": {
+      "entropy": 3.9804,
+      "shuffled_mean": 4.696,
+      "z": 104.31,
+      "reduction": 0.1524,
+      "p": 0.005,
+      "n_shuffle": 199,
+      "present": true
+     },
+     "morphology": {
+      "affixed_token_share": 0.2371,
+      "n_affixes": 277,
+      "present": false,
+      "null_control": "解析された接辞が文脈と連動せず、接辞を入れ替えた対照と区別できない"
+     },
+     "control_verb_position_claim": false,
+     "control_claims": []
+    },
+    "v1.2": {
+     "verb_position": {
+      "pred": "medial",
+      "confidence": 0.805,
+      "alternatives": {
+       "initial": 0.058,
+       "medial": 0.813,
+       "final": 0.128
+      },
+      "null_gate": null,
+      "judge": "correct"
+     },
+     "affix_position": {
+      "pred": "suffix",
+      "confidence": 0.723,
+      "support": {
+       "suffix": 3792,
+       "prefix": 1455
+      },
+      "null_gate": null,
+      "judge": "wrong"
+     },
+     "syntax": {
+      "entropy": 3.9804,
+      "shuffled_mean": 4.6953,
+      "z": 157.16,
+      "reduction": 0.1523,
+      "present": true
+     },
+     "morphology": {
+      "affixed_token_share": 0.2371,
+      "n_affixes": 277,
+      "present": true
+     },
+     "control_verb_position_claim": true,
+     "control_claims": [
+      "affix_position",
+      "verb_position"
+     ]
+    }
+   },
+   "seconds": 49.2
+  },
+  {
+   "treebank": "UD_Welsh-CCG",
+   "code": "cy_ccg",
+   "ud_tag": "r2.15",
+   "sha256": "3f37616e26bae3d9a4ee8df3e06adbe603ea6cccefc9c420552bb614da3cd538",
+   "sentences": 1000,
+   "tokens": 17617,
+   "characters": 37,
+   "gold": {
+    "verb_position": {
+     "value": "medial",
+     "n": 556,
+     "shares": {
+      "initial": 0.457,
+      "medial": 0.536,
+      "final": 0.007
+     }
+    },
+    "affix_position": {
+     "value": "both",
+     "n": 3237,
+     "shares": {
+      "suffix": 0.379,
+      "prefix": 0.621
+     }
+    }
+   },
+   "versions": {
+    "v1.4": {
+     "verb_position": {
+      "pred": "medial",
+      "confidence": 0.682,
+      "alternatives": {
+       "initial": 0.021,
+       "medial": 0.91,
+       "final": 0.069
+      },
+      "null_gate": null,
+      "judge": "correct"
+     },
+     "affix_position": {
+      "pred": null,
+      "confidence": 0.72,
+      "support": {
+       "suffix": 1275,
+       "prefix": 3277
+      },
+      "null_gate": "多い側が帰無対照と区別できない（G1'）",
+      "judge": "abstain"
+     },
+     "syntax": {
+      "entropy": 4.0188,
+      "shuffled_mean": 4.7858,
+      "z": 97.38,
+      "reduction": 0.1603,
+      "p": 0.005,
+      "n_shuffle": 199,
+      "present": true
+     },
+     "morphology": {
+      "affixed_token_share": 0.2395,
+      "n_affixes": 180,
+      "present": true
+     },
+     "control_verb_position_claim": false,
+     "control_claims": []
+    },
+    "v1.2": {
+     "verb_position": {
+      "pred": "medial",
+      "confidence": 0.682,
+      "alternatives": {
+       "initial": 0.021,
+       "medial": 0.91,
+       "final": 0.069
+      },
+      "null_gate": null,
+      "judge": "correct"
+     },
+     "affix_position": {
+      "pred": "prefix",
+      "confidence": 0.72,
+      "support": {
+       "suffix": 1275,
+       "prefix": 3277
+      },
+      "null_gate": null,
+      "judge": "wrong"
+     },
+     "syntax": {
+      "entropy": 4.0188,
+      "shuffled_mean": 4.7816,
+      "z": 140.18,
+      "reduction": 0.1595,
+      "present": true
+     },
+     "morphology": {
+      "affixed_token_share": 0.2395,
+      "n_affixes": 180,
+      "present": true
+     },
+     "control_verb_position_claim": true,
+     "control_claims": [
+      "affix_position",
+      "verb_position"
+     ]
+    }
+   },
+   "seconds": 35.1
+  },
+  {
+   "treebank": "UD_Indonesian-GSD",
+   "code": "id_gsd",
+   "ud_tag": "r2.15",
+   "sha256": "9dfb9103a24f9f64f5a2a49759032d2d944d78c3c1a6f0779536078d88a919e4",
+   "sentences": 1000,
+   "tokens": 17854,
+   "characters": 64,
+   "gold": {
+    "verb_position": {
+     "value": "medial",
+     "n": 293,
+     "shares": {
+      "initial": 0.02,
+      "medial": 0.949,
+      "final": 0.031
+     }
+    },
+    "affix_position": {
+     "value": "prefix",
+     "n": 1673,
+     "shares": {
+      "suffix": 0.24,
+      "prefix": 0.76
+     }
+    }
+   },
+   "versions": {
+    "v1.4": {
+     "verb_position": {
+      "pred": null,
+      "confidence": 0.0,
+      "alternatives": {},
+      "null_gate": null,
+      "judge": "abstain"
+     },
+     "affix_position": {
+      "pred": "prefix",
+      "confidence": 0.766,
+      "support": {
+       "suffix": 1421,
+       "prefix": 4655
+      },
+      "null_gate": null,
+      "judge": "correct"
+     },
+     "syntax": {
+      "entropy": 3.9163,
+      "shuffled_mean": 4.3458,
+      "z": 46.45,
+      "reduction": 0.0988,
+      "p": 0.005,
+      "n_shuffle": 199,
+      "present": true
+     },
+     "morphology": {
+      "affixed_token_share": 0.3217,
+      "n_affixes": 206,
+      "present": true
+     },
+     "control_verb_position_claim": false,
+     "control_claims": []
+    },
+    "v1.2": {
+     "verb_position": {
+      "pred": null,
+      "confidence": 0.0,
+      "alternatives": {},
+      "null_gate": null,
+      "judge": "abstain"
+     },
+     "affix_position": {
+      "pred": "prefix",
+      "confidence": 0.766,
+      "support": {
+       "suffix": 1421,
+       "prefix": 4655
+      },
+      "null_gate": null,
+      "judge": "correct"
+     },
+     "syntax": {
+      "entropy": 3.9163,
+      "shuffled_mean": 4.3484,
+      "z": 37.83,
+      "reduction": 0.0994,
+      "present": true
+     },
+     "morphology": {
+      "affixed_token_share": 0.3217,
+      "n_affixes": 206,
+      "present": true
+     },
+     "control_verb_position_claim": false,
+     "control_claims": [
+      "affix_position"
+     ]
+    }
+   },
+   "seconds": 49.8
+  },
+  {
+   "treebank": "UD_Spanish-AnCora",
+   "code": "es_ancora",
+   "ud_tag": "r2.15",
+   "sha256": "e0d6b9d48da565000f774ce013ddd93db59a615e96a281853248f009f111a01e",
+   "sentences": 1000,
+   "tokens": 29200,
+   "characters": 35,
+   "gold": {
+    "verb_position": {
+     "value": "medial",
+     "n": 198,
+     "shares": {
+      "initial": 0.066,
+      "medial": 0.823,
+      "final": 0.111
+     }
+    },
+    "affix_position": {
+     "value": "suffix",
+     "n": 5045,
+     "shares": {
+      "suffix": 1.0,
+      "prefix": 0.0
+     }
+    }
+   },
+   "versions": {
+    "v1.4": {
+     "verb_position": {
+      "pred": "medial",
+      "confidence": 0.884,
+      "alternatives": {
+       "initial": 0.009,
+       "medial": 0.893,
+       "final": 0.098
+      },
+      "null_gate": null,
+      "judge": "correct"
+     },
+     "affix_position": {
+      "pred": "suffix",
+      "confidence": 0.74,
+      "support": {
+       "suffix": 7161,
+       "prefix": 2511
+      },
+      "null_gate": null,
+      "judge": "correct"
+     },
+     "syntax": {
+      "entropy": 4.0596,
+      "shuffled_mean": 4.754,
+      "z": 108.19,
+      "reduction": 0.1461,
+      "p": 0.005,
+      "n_shuffle": 199,
+      "present": true
+     },
+     "morphology": {
+      "affixed_token_share": 0.2888,
+      "n_affixes": 255,
+      "present": true
+     },
+     "control_verb_position_claim": false,
+     "control_claims": []
+    },
+    "v1.2": {
+     "verb_position": {
+      "pred": "medial",
+      "confidence": 0.884,
+      "alternatives": {
+       "initial": 0.009,
+       "medial": 0.893,
+       "final": 0.098
+      },
+      "null_gate": null,
+      "judge": "correct"
+     },
+     "affix_position": {
+      "pred": "suffix",
+      "confidence": 0.74,
+      "support": {
+       "suffix": 7161,
+       "prefix": 2511
+      },
+      "null_gate": null,
+      "judge": "correct"
+     },
+     "syntax": {
+      "entropy": 4.0596,
+      "shuffled_mean": 4.7549,
+      "z": 112.12,
+      "reduction": 0.1462,
+      "present": true
+     },
+     "morphology": {
+      "affixed_token_share": 0.2888,
+      "n_affixes": 255,
+      "present": true
+     },
+     "control_verb_position_claim": true,
+     "control_claims": [
+      "affix_position",
+      "verb_position"
+     ]
+    }
+   },
+   "seconds": 81.2
+  },
+  {
+   "treebank": "UD_English-EWT",
+   "code": "en_ewt",
+   "ud_tag": "r2.15",
+   "sha256": "a049fc40822e21593ff89ccd0a4b081443f09fae71b61f813c624aa598f6c566",
+   "sentences": 1000,
+   "tokens": 19810,
+   "characters": 28,
+   "gold": {
+    "verb_position": {
+     "value": "medial",
+     "n": 278,
+     "shares": {
+      "initial": 0.022,
+      "medial": 0.906,
+      "final": 0.072
+     }
+    },
+    "affix_position": {
+     "value": "suffix",
+     "n": 2433,
+     "shares": {
+      "suffix": 0.986,
+      "prefix": 0.014
+     }
+    }
+   },
+   "versions": {
+    "v1.4": {
+     "verb_position": {
+      "pred": null,
+      "confidence": 0.0,
+      "alternatives": {},
+      "null_gate": null,
+      "judge": "abstain"
+     },
+     "affix_position": {
+      "pred": "suffix",
+      "confidence": 0.759,
+      "support": {
+       "suffix": 3061,
+       "prefix": 972
+      },
+      "null_gate": null,
+      "judge": "correct"
+     },
+     "syntax": {
+      "entropy": 4.2389,
+      "shuffled_mean": 4.8623,
+      "z": 74.65,
+      "reduction": 0.1282,
+      "p": 0.005,
+      "n_shuffle": 199,
+      "present": true
+     },
+     "morphology": {
+      "affixed_token_share": 0.1898,
+      "n_affixes": 121,
+      "present": false
+     },
+     "control_verb_position_claim": false,
+     "control_claims": []
+    },
+    "v1.2": {
+     "verb_position": {
+      "pred": null,
+      "confidence": 0.0,
+      "alternatives": {},
+      "null_gate": null,
+      "judge": "abstain"
+     },
+     "affix_position": {
+      "pred": "suffix",
+      "confidence": 0.759,
+      "support": {
+       "suffix": 3061,
+       "prefix": 972
+      },
+      "null_gate": null,
+      "judge": "correct"
+     },
+     "syntax": {
+      "entropy": 4.2389,
+      "shuffled_mean": 4.8588,
+      "z": 69.33,
+      "reduction": 0.1276,
+      "present": true
+     },
+     "morphology": {
+      "affixed_token_share": 0.1898,
+      "n_affixes": 121,
+      "present": false
+     },
+     "control_verb_position_claim": false,
+     "control_claims": [
+      "affix_position"
+     ]
+    }
+   },
+   "seconds": 50.1
+  },
+  {
+   "treebank": "UD_Wolof-WTB",
+   "code": "wo_wtb",
+   "ud_tag": "r2.15",
+   "sha256": "d6e7dca931935f46d34d60a0c05e7db7d25264516beec5db398c8cac7d8ed453",
+   "sentences": 1000,
+   "tokens": 16578,
+   "characters": 38,
+   "gold": {
+    "verb_position": {
+     "value": "medial",
+     "n": 170,
+     "shares": {
+      "initial": 0.076,
+      "medial": 0.794,
+      "final": 0.129
+     }
+    },
+    "affix_position": {
+     "value": "suffix",
+     "n": 1274,
+     "shares": {
+      "suffix": 0.996,
+      "prefix": 0.004
+     }
+    }
+   },
+   "versions": {
+    "v1.4": {
+     "verb_position": {
+      "pred": null,
+      "confidence": 0.0,
+      "alternatives": {},
+      "null_gate": null,
+      "judge": "abstain"
+     },
+     "affix_position": {
+      "pred": "suffix",
+      "confidence": 0.934,
+      "support": {
+       "suffix": 2596,
+       "prefix": 182
+      },
+      "null_gate": null,
+      "judge": "correct"
+     },
+     "syntax": {
+      "entropy": 4.3806,
+      "shuffled_mean": 5.0594,
+      "z": 84.15,
+      "reduction": 0.1342,
+      "p": 0.005,
+      "n_shuffle": 199,
+      "present": true
+     },
+     "morphology": {
+      "affixed_token_share": 0.165,
+      "n_affixes": 91,
+      "present": false
+     },
+     "control_verb_position_claim": false,
+     "control_claims": []
+    },
+    "v1.2": {
+     "verb_position": {
+      "pred": null,
+      "confidence": 0.0,
+      "alternatives": {},
+      "null_gate": null,
+      "judge": "abstain"
+     },
+     "affix_position": {
+      "pred": "suffix",
+      "confidence": 0.934,
+      "support": {
+       "suffix": 2596,
+       "prefix": 182
+      },
+      "null_gate": null,
+      "judge": "correct"
+     },
+     "syntax": {
+      "entropy": 4.3806,
+      "shuffled_mean": 5.058,
+      "z": 117.97,
+      "reduction": 0.1339,
+      "present": true
+     },
+     "morphology": {
+      "affixed_token_share": 0.165,
+      "n_affixes": 91,
+      "present": false
+     },
+     "control_verb_position_claim": false,
+     "control_claims": [
+      "affix_position"
+     ]
+    }
+   },
+   "seconds": 32.8
+  }
+ ]
+}

@@ -177,6 +177,9 @@ def report_markdown(results, card, ext_scores, limits, legacy_scores=()):
     main_rows = [("levelA", "LEVEL A"), ("levelB", "LEVEL B"), ("levelC", "LEVEL C"),
                  ("levelA:no_totals", "LEVEL A 合計行なし"), ("levelC:no_totals", "LEVEL C 合計行なし")]
     L += tab(main_rows, keys, names) + [""]
+    L += ["「動詞位置」「接辞側」「基数」は、正解の割合（保留は正解に数えない）。v1.5.0 は、対訳による証拠がなければ動詞の位置を"
+          "主張しないので、対訳のない水準（LEVEL B・C）では 0 になる。v1.4.0 以前の報告書の値（約 0.95）とは、主張の方針が違う"
+          "（問題記録 #94・#98、docs/PREREG_v1.5_VERB_EVIDENCE.md）。", ""]
     keys2 = ["lexicon_precision", "lexicon_claimed", "gloss_correct", "gloss_wrong", "gloss_abstain", "overclaims"]
     names2 = ["語彙主張の適合率", "主張語数", "語釈 正解", "語釈 誤答", "語釈 判定不能", "過剰主張(件)"]
     L += tab(main_rows, keys2, names2) + [""]

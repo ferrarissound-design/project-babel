@@ -1,6 +1,7 @@
 """パラダイムのクラス分け・品詞ラベル・語順（意味情報を使わない構造推定）。"""
 from __future__ import annotations
 
+import math
 from collections import Counter, defaultdict
 
 
@@ -39,7 +40,7 @@ def paradigm_groups(infos: dict):
     return group_of, stem_group
 
 
-def label_classes(sentences, infos, stem_group, numeral_types=()):
+def label_classes(sentences, infos, stem_group, numeral_types=(), open_class_min=0.0):
     """sentences: 正規化語形の列の列。語幹→品詞ラベル(N/V/X) と根拠を返す。"""
     stems_in = defaultdict(set)
     for s, g in stem_group.items():
@@ -54,7 +55,20 @@ def label_classes(sentences, infos, stem_group, numeral_types=()):
             exactly_one += k == 1
         stats[g] = {"stems": len(stems_in[g]), "coverage": covered / n_sent,
                     "one_per_sentence": exactly_one / max(1, covered)}
-    cands = [g for g in stats if stats[g]["stems"] >= 4 and stats[g]["coverage"] >= 0.3]
+    if open_class_min > 0:
+        # v1.5（V2）: グループのトークンが何種類の語幹に散らばっているか（2^エントロピー）。
+        # 限定詞のように1語幹に偏ったクラスは、語幹の種類数が4以上でも動詞の候補にしない
+        tok = defaultdict(Counter)
+        for sent in sentences:
+            for w in sent:
+                if w in infos and stem_group.get(infos[w][1]) in stems_in:
+                    tok[stem_group[infos[w][1]]][infos[w][1]] += 1
+        for g in stats:
+            n = sum(tok[g].values())
+            h = -sum(c / n * math.log2(c / n) for c in tok[g].values()) if n else 0.0
+            stats[g]["effective_stems"] = round(2 ** h, 2)
+    cands = [g for g in stats if stats[g]["stems"] >= 4 and stats[g]["coverage"] >= 0.3
+             and (open_class_min <= 0 or stats[g]["effective_stems"] >= open_class_min)]
     verb = None
     if cands:
         # 動詞と数詞の両方が「出るときは1回」になりやすい。従来は同率の場合に

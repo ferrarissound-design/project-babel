@@ -1,6 +1,7 @@
 """帰無対照の関門の測定。版ごとに構造の判定を数える。
 
 - dev / eval: v1.3 の事前登録（docs/PREREG_v1.3_NULL_GATES.md）。対照は実コーパスと同じシード 20 個
+- dev15: v1.5 の事前登録（docs/PREREG_v1.5_VERB_EVIDENCE.md）の基準 C・D。水準 A・B・C 別の動詞の位置
 - dev14 / eval14: v1.4 の事前登録（docs/PREREG_v1.4_MULTIPLE_TESTING.md）。対照は 100 個
 """
 from __future__ import annotations
@@ -18,12 +19,14 @@ from babel.experiments.run import DEFAULT_GEN, DEV_SEEDS, TEST_SEEDS
 from babel.generator.corpus import build_corpus, null_corpus
 from babel.generator.languages import FAMILIES
 
-VARIANTS = {"v1.2": {"null_gates": False}, "v1.3": {"affix_null_alpha": 0.05}, "v1.4": {}}
-SPLITS = {   # (実コーパスのシード, 対照のシード, 比べる版)
-    "dev": (DEV_SEEDS, DEV_SEEDS, ("v1.2", "v1.3")),
-    "eval": (TEST_SEEDS, TEST_SEEDS, ("v1.2", "v1.3")),
-    "dev14": (DEV_SEEDS, list(range(100)), ("v1.2", "v1.3", "v1.4")),
-    "eval14": (list(range(300, 320)), list(range(300, 400)), ("v1.2", "v1.3", "v1.4")),
+VARIANTS = {"v1.2": {"null_gates": False, "v15_gates": False}, "v1.3": {"affix_null_alpha": 0.05, "v15_gates": False},
+            "v1.4": {"v15_gates": False}, "v1.5": {}}
+SPLITS = {   # (実コーパスのシード, 対照のシード, 比べる版, 実コーパスの水準)
+    "dev": (DEV_SEEDS, DEV_SEEDS, ("v1.2", "v1.3"), "AC"),
+    "eval": (TEST_SEEDS, TEST_SEEDS, ("v1.2", "v1.3"), "AC"),
+    "dev14": (DEV_SEEDS, list(range(100)), ("v1.2", "v1.3", "v1.4"), "AC"),
+    "eval14": (list(range(300, 320)), list(range(300, 400)), ("v1.2", "v1.3", "v1.4"), "AC"),
+    "dev15": (DEV_SEEDS, DEV_SEEDS, ("v1.4", "v1.5"), "ABC"),     # v1.5 の基準 C・D（docs/PREREG_v1.5_VERB_EVIDENCE.md）
 }
 
 
@@ -80,6 +83,11 @@ def summarize(rows, names):
                         c[v] += 1
                         c[f"{k}:{v}"] += 1
             s[f"{name}:boundaries={bnd}"] = dict(sorted(c.items()))
+        for lv in sorted({r["level"] for r in rows if r["kind"] == "real"}):
+            c = Counter(r["structure"][name]["verb_position"] for r in rows
+                        if r["kind"] == "real" and r["boundaries"] and r["level"] == lv
+                        and "verb_position" in r["structure"][name])
+            s[f"{name}:level={lv}:verb_position"] = dict(sorted(c.items()))
         for kind in ("random", "shuffled", "syllable"):
             rs = [r for r in rows if r["kind"] == "null" and r["null"] == kind]
             n = sum(len(r["claims"][name]) for r in rs)
@@ -91,9 +99,9 @@ def summarize(rows, names):
 
 
 def main(split="dev", jobs=4):
-    seeds, null_seeds, names = SPLITS[split]
+    seeds, null_seeds, names, levels = SPLITS[split]
     t0 = time.time()
-    real = [(f, s, lv, b, names) for f in FAMILIES for s in seeds for lv in "AC" for b in (True, False)]
+    real = [(f, s, lv, b, names) for f in FAMILIES for s in seeds for lv in levels for b in (True, False)]
     nulls = [(k, s, names) for k in ("random", "shuffled", "syllable") for s in null_seeds]
     with mp.Pool(jobs) as pool:
         rows = pool.map(_real, real) + pool.map(_null, nulls)

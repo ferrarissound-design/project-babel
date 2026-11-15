@@ -1,7 +1,9 @@
 """解読エンジン本体。入力は public コーパス（dict）だけ。正解には一切触れない。"""
 from __future__ import annotations
 
+import copy
 import math
+import random
 import time
 from collections import Counter, defaultdict
 
@@ -10,7 +12,7 @@ from .align import Aligner, flatten
 from .morph import Morphology
 from .variants import LACUNA, Normalizer
 
-VERSION = "1.5.0"
+VERSION = "1.6.0"
 DEFAULT_CONFIG = {
     "use_variants": True,        # 表記揺れの正規化
     "use_morph": True,           # 形態素解析
@@ -26,6 +28,7 @@ DEFAULT_CONFIG = {
     "segmenter": "unigram",      # 単語境界のない文章の分割方式: unigram（既定）/ transition（比較用。v1.3 の G4 の測定で使った）
     "null_gates": True,          # v1.3: 帰無対照の関門（docs/PREREG_v1.3_NULL_GATES.md）。False で v1.2.0 と同じ
     "v15_gates": True,           # v1.5: 動詞の位置に対訳の証拠を要求（V1）・開放クラス（V2）・形態の判定の統一（M1）。False で v1.4.0 と同じ
+    "v16_gates": True,           # v1.6: 対訳の帰無対照（A1 動詞のクラスの支持・A2 語順の票）。False で v1.5.0 と同じ
     "affix_null_alpha": 0.025,   # v1.4: 接辞の関門の片側ごとの水準（両側で Bonferroni、docs/PREREG_v1.4_MULTIPLE_TESTING.md）。0.05 で v1.3.0
 }
 
@@ -201,6 +204,9 @@ class Decipherer:
         self.toponyms = {}
         if cfg["use_metadata"] and any(self.docs[d].get("meta", {}).get("site") for d in self.train_ids):
             self._fit_toponyms()
+        self.align_null = None
+        if cfg["v16_gates"] and self.aligner:
+            self.align_null = self._alignment_null()
         self.num_noun = self._num_noun_order()
         gates = cfg["null_gates"]
         self.syntax = nulltest.syntax_test_perm(self.sents) if gates else nulltest.syntax_test(self.sents)
@@ -368,6 +374,77 @@ class Decipherer:
                 slot = slot_votes[stem].most_common(1)[0][0]
                 self.slot_pos[stem] = {"pred": "V", "head": "N", "title": "N", "adj": "ADJ", "func": "FUNC"}.get(slot, "X")
         self._count_orders(aligned)
+
+    # ------------------------------------------------------------ v1.6: 対訳の帰無対照
+    _ALIGN_STATE = ("lexicon", "affix_fn", "slot_pos", "order_counts", "role_stats", "aligner")
+
+    @staticmethod
+    def _permuted(parallel, seed):
+        """対訳を文の間で入れ替える（どの文も元の対訳にならない入れ替え）。"""
+        trs = [p["translation"] for p in parallel]
+        if len(trs) < 2:
+            return list(parallel)
+        rng = random.Random(seed)
+        idx = list(range(len(trs)))
+        while True:
+            rng.shuffle(idx)
+            if all(i != j for i, j in enumerate(idx)):
+                break
+        return [dict(p, translation=trs[j]) for p, j in zip(parallel, idx)]
+
+    def _realign(self, parallel, pos_constraint=None):
+        """与えた対訳だけでアラインメントをやり直し、(語順の票, アラインメント) を返す。解読器の状態は元に戻す。"""
+        saved = {k: copy.copy(getattr(self, k)) for k in self._ALIGN_STATE}
+        pub, cfg = self.pub, self.cfg
+        self.pub = dict(pub, parallel=parallel)
+        if pos_constraint is not None:
+            self.cfg = dict(cfg, pos_constraint=pos_constraint)
+        self.lexicon, self.affix_fn, self.slot_pos = {}, {}, {}
+        self.order_counts = {"so": Counter(), "adj": Counter(), "verb": Counter()}
+        try:
+            self._fit_alignment()
+            return {k: Counter(v) for k, v in self.order_counts.items()}, self.aligner
+        finally:
+            self.pub, self.cfg = pub, cfg
+            for k, v in saved.items():
+                setattr(self, k, v)
+
+    def _verb_class_support(self, parallel):
+        """品詞の制約を外したアラインメントで、述語の概念に最も強く結び付く語幹が動詞のクラスに入る割合。"""
+        _, al = self._realign(parallel, pos_constraint=False)
+        hits = total = 0
+        for p, link in zip(parallel, al.links):
+            pred = p["translation"].get("pred")
+            cand = [(a, u) for (u, c), a in link.items() if pred and c == "C:" + pred and u.startswith("S:")]
+            if not cand:
+                continue
+            a, u = max(cand)
+            if a < 0.25:
+                continue
+            total += 1
+            hits += self.stem_pos.get(u[2:]) == "V"
+        return hits / total if total else None
+
+    def _alignment_null(self, k=19):
+        """A1・A2: 本物の対訳と、入れ替えた対訳 k 回を比べる（置換 p ≤ 0.05 には、k 回すべてを上回ること）。"""
+        par = self.pub["parallel"]
+        real_sup = self._verb_class_support(par)
+        real_n = {key: sum(self.order_counts[key].values()) for key in ("so", "adj")}
+        null_sup, null_n = [], {"so": [], "adj": []}
+        for i in range(k):
+            perm = self._permuted(par, f"align-null-{i}")
+            oc, _ = self._realign(perm)
+            for key in null_n:
+                null_n[key].append(sum(oc[key].values()))
+            null_sup.append(self._verb_class_support(perm))
+        mx = max((x or 0.0) for x in null_sup) if null_sup else 0.0
+        out = {"k": k, "verb_support": {"real": None if real_sup is None else round(real_sup, 3),
+                                        "null_max": round(mx, 3),
+                                        "pass": bool(real_sup is not None and real_sup > mx)}}
+        for key in ("so", "adj"):
+            out[key] = {"real": real_n[key], "null_max": max(null_n[key]) if null_n[key] else 0,
+                        "pass": bool(real_n[key] > (max(null_n[key]) if null_n[key] else 0))}
+        return out
 
     def _count_orders(self, aligned):
         """対訳で役割の分かった語の位置から、語順（主語と目的語・形容詞と名詞・動詞の位置）を数える。
@@ -546,6 +623,15 @@ class Decipherer:
             vp = {"value": None, "confidence": 0.0, "alternatives": {}, "n": vp.get("n", 0),
                   "reason": "対訳による動詞の位置の証拠がない（V1）"}
 
+        if self.cfg["v16_gates"] and self.align_null is not None and vp.get("value") is not None \
+                and not self.align_null["verb_support"]["pass"]:
+            # A1: 対訳で動詞のクラスが支持されなければ、動詞の位置を主張しない
+            if candidate is None:
+                candidate = {"top": vp.get("value"), "shares": vp.get("alternatives", {}), "n": vp.get("n", 0),
+                             "note": "対訳の帰無対照で、動詞のクラスの支持が対照と区別できない"}
+            vp = {"value": None, "confidence": 0.0, "alternatives": {}, "n": vp.get("n", 0),
+                  "reason": "対訳の帰無対照で、動詞のクラスの支持が対照と区別できない（A1）"}
+
         def from_counts(c, min_n=4):
             n = sum(c.values())
             if n < min_n:
@@ -585,6 +671,14 @@ class Decipherer:
         }
         if candidate is not None:
             out["verb_candidate_position"] = candidate
+        if self.cfg["v16_gates"] and self.align_null is not None:
+            # A2: 語順の票が、入れ替えた対訳の票を上回らなければ主張しない
+            for key, oc in (("so_order", "so"), ("adj_noun", "adj")):
+                if out[key].get("value") is not None and not self.align_null[oc]["pass"]:
+                    out[key] = dict(out[key], value=None, confidence=0.0)
+                    gate_notes[key] = "語順の票が、入れ替えた対訳の票と区別できない（A2）"
+            if vp.get("reason", "").endswith("（A1）"):
+                gate_notes["verb_position"] = vp["reason"]
         if self.cfg["null_gates"]:
             if not self.syntax["present"]:
                 # G3: 語順に無作為な並べ替えより強い規則性がなければ、語順の主張はしない
@@ -615,6 +709,7 @@ class Decipherer:
         else:
             text = "構造を推定でき、証拠のある語に限って意味を主張できる。"
         return {"syntax": self.syntax, "morphology": self.morph_test, "morphology_null": self.morph_null,
+                "alignment_null": self.align_null,
                 "semantic_evidence": sem,
                 "decipherable_structure": bool(syn or mor), "text": text}
 

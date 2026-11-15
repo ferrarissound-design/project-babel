@@ -207,5 +207,34 @@ def main(out="results/real_languages/real-languages.json"):
     print(json.dumps(res["summary"], ensure_ascii=False, indent=1))
 
 
+def verb_class_diagnostic(out="results/real_languages/verb-class-diagnostic.json"):
+    """補足の診断（事前登録にない）: 解読器が動詞とみなした語の、UD の品詞の内訳。
+
+    換字を戻して確かめる。解読器には UD の品詞を渡していない（診断のためだけに対応を取る）。
+    """
+    from babel.decipher.engine import Decipherer
+    res = {}
+    for repo, code in TREEBANKS:
+        path, _ = fetch(repo, code)
+        sents = read_sentences(path)
+        words, _ = cipher(sents)
+        upos = {}
+        for s, ws in zip(sents, words):
+            for (_, u, _), c in zip(s, ws):
+                upos.setdefault(c, Counter())[u] += 1
+        d = Decipherer(to_public(f"real-{code}", words)).fit()
+        vt = Counter(upos[w].most_common(1)[0][0] for s in d.sents for w in s
+                     if d.stem_pos.get(d.infos[w][1]) == "V")
+        n = sum(vt.values())
+        res[code] = {"v_tokens": n, "verb_share": round(vt["VERB"] / n, 3) if n else None,
+                     "upos_share": {k: round(c / n, 3) for k, c in vt.most_common(5)},
+                     "class_verb_confidence": d.class_info.get("verb_confidence")}
+        print(code, res[code], flush=True)
+    Path(out).write_text(json.dumps(res, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+
+
 if __name__ == "__main__":
-    main(*sys.argv[1:2])
+    if sys.argv[1:2] == ["verb-class"]:
+        verb_class_diagnostic()
+    else:
+        main(*sys.argv[1:2])

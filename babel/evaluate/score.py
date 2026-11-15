@@ -50,7 +50,10 @@ def score(pred: dict, gold: dict, public: dict | None = None) -> dict:
                                "morphology_detected": v.get("morphology", {}).get("present"),
                                "claims": pred.get("summary", {}).get("claimed", 0),
                                "structure_claims": sum(1 for k in ("verb_position", "numeral_base")
-                                                       if (st.get(k) or {}).get("value") is not None)}
+                                                       if (st.get(k) or {}).get("value") is not None),
+                               # v1.5: 全項目（接辞の側・語順を含む）。従来の数え方では、無作為な語列での接辞の主張が見えなかった
+                               "structure_claims_all": sum(1 for k in STRUCT_KEYS
+                                                           if (st.get(k) or {}).get("value") is not None)}
         return out
     gtoks, ptoks = gold.get("tokens"), pred.get("tokens", {})
     held = set((public or {}).get("split", {}).get("heldout", []))

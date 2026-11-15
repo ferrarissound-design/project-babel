@@ -121,6 +121,30 @@ def issues_markdown(issues):
     return "\n".join(lines)
 
 
+def _real_language_lines():
+    """実在言語（UD を換字）の評価の要約。results/real_languages/ の結果ファイルから機械的に作る。"""
+    items = [("results/real_languages/real-languages.json", "最初の 10 言語（開発用）"),
+             ("results/real_languages/real-languages-heldout.json", "評価用の 10 言語")]
+    rows = []
+    for path, label in items:
+        p = Path(path)
+        if not p.exists():
+            continue
+        s = json.loads(p.read_text(encoding="utf-8"))["summary"]
+        for name in sorted({k.split(":")[0] for k in s if ":" in k}, reverse=True):
+            vp, ap = s.get(f"{name}:verb_position", {}), s.get(f"{name}:affix_position", {})
+            rows.append(f"| {label} | {name} | {vp.get('correct', 0)} / {vp.get('wrong', 0)} / {vp.get('abstain', 0)} | "
+                        f"{ap.get('correct', 0)} / {ap.get('wrong', 0)} / {ap.get('abstain', 0)} | "
+                        f"{s.get(f'{name}:control_verb_claims', '–')} / {s.get(f'{name}:languages', '–')} |")
+    if not rows:
+        return []
+    return ["### 実在言語での評価（UD r2.15 を換字した未知言語）", "",
+            "同じAIが設計していない言語データ。正解は UD の注釈から機械的に作る。詳細は docs/REAL_LANGUAGES_RESULTS.md と "
+            "docs/PREREG_v1.5_VERB_EVIDENCE.md。動詞の位置の正解は、動詞ではないクラスの偶然の一致だったものを含む（問題記録 #94）。", "",
+            "| 言語のセット | 解読器 | 動詞の位置（正/誤/保留） | 接辞の側（正/誤/保留） | 語を入れ替えた対照で動詞の位置を主張 |",
+            "|---|---|---|---|---|"] + rows + [""]
+
+
 def report_markdown(results, card, ext_scores, limits, legacy_scores=()):
     """研究報告書（Markdown）。数値はすべて results から機械的に埋める（手書きの転記をしない）。"""
     conds = {c["label"]: c for c in results["conditions"]}
@@ -140,7 +164,8 @@ def report_markdown(results, card, ext_scores, limits, legacy_scores=()):
     L = ["# PROJECT BABEL 研究報告書", "",
          "この文書は `python -m babel report` が実験結果から自動生成する。数値は手で書き換えていない。", "",
          "## 1. 実行条件", "",
-         f"- 実行日時 (UTC): {m['started_utc']}", f"- Git コミット: `{m['commit']}`", f"- 実行環境: {m['environment']}",
+         f"- 実行日時 (UTC): {m['started_utc']}", f"- Git コミット: `{m['commit']}`", f"- 解読器のバージョン: v{m.get('engine_version', '–')}",
+         f"- 実行環境: {m['environment']}",
          f"- シード: {m['seeds'][0]}〜{m['seeds'][-1]}（{len(m['seeds'])} 個、役割: {'評価用' if m['seed_role'] == 'evaluation' else '開発用'}）",
          f"- 総実行数: {m['total_runs']}（失敗 {m['failed_runs']}）、所要 {m['seconds']} 秒",
          f"- 1言語あたり約 {m['sentences_per_language']} 文（3系統で約 {3 * (m['sentences_per_language'] or 0)} 文）",
@@ -201,7 +226,9 @@ def report_markdown(results, card, ext_scores, limits, legacy_scores=()):
         n = results.get("null", {}).get(kind)
         if n:
             L.append(f"- {name}（{n['runs']} 実行）: 「統語あり」と誤判定 {n['syntax_detected_rate']:.2f}、"
-                     f"意味の主張 {n['meaning_claims_total']} 件、構造の主張 平均 {n['structure_claims_mean']} 件")
+                     f"意味の主張 {n['meaning_claims_total']} 件、構造の主張（動詞の位置・基数）平均 {n['structure_claims_mean']} 件"
+                     + (f"、全項目（接辞の側・語順を含む）の構造の主張 平均 {n['structure_claims_all_mean']} 件"
+                        f"（主張が出た実行 {n['structure_claims_all_runs']} / {n['runs']}）" if "structure_claims_all_mean" in n else ""))
     ca = conds.get("levelA", {})
     L += [f"- LEVEL A の語彙主張の期待較正誤差 ECE = {ca.get('lexicon_ece')}",
           f"- 対訳に現れない語を保留した割合 = {v('levelA', 'abstain_without_evidence')}", "",
@@ -240,6 +267,7 @@ def report_markdown(results, card, ext_scores, limits, legacy_scores=()):
     if not any(s_.get("independent") for s_ in ext_scores):
         L += ["**独立した初見テストは未評価。** 上の表にあるのは、解読器と同じAIが解読器の凍結後に作った系統（準初見）だけで、"
               "独立テストの代わりにはならない。第三者が作ったコーパスを `external/inbox/` に投入すると評価される。", ""]
+    L += _real_language_lines()
     L += ["## 9. 採点（100点満点、算出式は事前登録）", "", "| 項目 | 得点 | 配点 | 状態 |", "|---|---|---|---|"]
     L += [f"| {i['name']} | {'未評価' if i['points'] is None else i['points']} | {i['max']} | {i['status']} |" for i in card["items"]]
     L += ["", f"**内部テスト: {card['internal_points']} / {card['evaluated_max']} 点**（未評価の配点 {card['unevaluated_max']} 点を除く）。"

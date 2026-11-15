@@ -1,0 +1,215 @@
+{
+ "note": "開発用",
+ "rows": [
+  {
+   "corpus": "es_ancora",
+   "sentences": 1000,
+   "tokens": 29200,
+   "current": {
+    "v_measure": 0.17,
+    "homogeneity": 0.139,
+    "completeness": 0.219,
+    "purity_grouped": 0.417,
+    "coverage": 0.444,
+    "groups": 117
+   },
+   "wdist_k32_noaffix": {
+    "v_measure": 0.396,
+    "homogeneity": 0.436,
+    "completeness": 0.363,
+    "purity_grouped": 0.612,
+    "coverage": 1.0,
+    "groups": 32
+   }
+  },
+  {
+   "corpus": "es_ancora",
+   "sentences": 4000,
+   "tokens": 114207,
+   "current": {
+    "v_measure": 0.18,
+    "homogeneity": 0.13,
+    "completeness": 0.289,
+    "purity_grouped": 0.377,
+    "coverage": 0.555,
+    "groups": 127
+   },
+   "wdist_k32_noaffix": {
+    "v_measure": 0.43,
+    "homogeneity": 0.475,
+    "completeness": 0.393,
+    "purity_grouped": 0.636,
+    "coverage": 1.0,
+    "groups": 32
+   }
+  },
+  {
+   "corpus": "cs_cac",
+   "sentences": 1000,
+   "tokens": 19434,
+   "current": {
+    "v_measure": 0.214,
+    "homogeneity": 0.156,
+    "completeness": 0.342,
+    "purity_grouped": 0.539,
+    "coverage": 0.611,
+    "groups": 23
+   },
+   "wdist_k32_noaffix": {
+    "v_measure": 0.174,
+    "homogeneity": 0.196,
+    "completeness": 0.156,
+    "purity_grouped": 0.457,
+    "coverage": 1.0,
+    "groups": 32
+   }
+  },
+  {
+   "corpus": "cs_cac",
+   "sentences": 4000,
+   "tokens": 64997,
+   "current": {
+    "v_measure": 0.206,
+    "homogeneity": 0.145,
+    "completeness": 0.356,
+    "purity_grouped": 0.477,
+    "coverage": 0.658,
+    "groups": 63
+   },
+   "wdist_k32_noaffix": {
+    "v_measure": 0.187,
+    "homogeneity": 0.209,
+    "completeness": 0.169,
+    "purity_grouped": 0.441,
+    "coverage": 1.0,
+    "groups": 32
+   }
+  },
+  {
+   "corpus": "tr_imst",
+   "sentences": 1000,
+   "tokens": 10470,
+   "current": {
+    "v_measure": 0.168,
+    "homogeneity": 0.174,
+    "completeness": 0.163,
+    "purity_grouped": 0.526,
+    "coverage": 0.575,
+    "groups": 126
+   },
+   "wdist_k32_noaffix": {
+    "v_measure": 0.197,
+    "homogeneity": 0.221,
+    "completeness": 0.178,
+    "purity_grouped": 0.435,
+    "coverage": 1.0,
+    "groups": 32
+   }
+  },
+  {
+   "corpus": "tr_imst",
+   "sentences": 3380,
+   "tokens": 30918,
+   "current": {
+    "v_measure": 0.122,
+    "homogeneity": 0.098,
+    "completeness": 0.163,
+    "purity_grouped": 0.41,
+    "coverage": 0.73,
+    "groups": 190
+   },
+   "wdist_k32_noaffix": {
+    "v_measure": 0.183,
+    "homogeneity": 0.213,
+    "completeness": 0.161,
+    "purity_grouped": 0.436,
+    "coverage": 1.0,
+    "groups": 32
+   }
+  },
+  {
+   "corpus": "en_ewt",
+   "sentences": 1000,
+   "tokens": 19810,
+   "current": {
+    "v_measure": 0.288,
+    "homogeneity": 0.241,
+    "completeness": 0.359,
+    "purity_grouped": 0.582,
+    "coverage": 0.445,
+    "groups": 77
+   },
+   "wdist_k32_noaffix": {
+    "v_measure": 0.323,
+    "homogeneity": 0.334,
+    "completeness": 0.312,
+    "purity_grouped": 0.479,
+    "coverage": 1.0,
+    "groups": 32
+   }
+  },
+  {
+   "corpus": "en_ewt",
+   "sentences": 4000,
+   "tokens": 62338,
+   "current": {
+    "v_measure": 0.255,
+    "homogeneity": 0.205,
+    "completeness": 0.335,
+    "purity_grouped": 0.465,
+    "coverage": 0.606,
+    "groups": 126
+   },
+   "wdist_k32_noaffix": {
+    "v_measure": 0.349,
+    "homogeneity": 0.376,
+    "completeness": 0.326,
+    "purity_grouped": 0.504,
+    "coverage": 1.0,
+    "groups": 32
+   }
+  },
+  {
+   "corpus": "et_edt",
+   "sentences": 1000,
+   "tokens": 11473,
+   "current": {
+    "v_measure": 0.126,
+    "homogeneity": 0.104,
+    "completeness": 0.162,
+    "purity_grouped": 0.39,
+    "coverage": 0.541,
+    "groups": 85
+   },
+   "wdist_k32_noaffix": {
+    "v_measure": 0.13,
+    "homogeneity": 0.139,
+    "completeness": 0.123,
+    "purity_grouped": 0.338,
+    "coverage": 1.0,
+    "groups": 32
+   }
+  },
+  {
+   "corpus": "et_edt",
+   "sentences": 4000,
+   "tokens": 43689,
+   "current": {
+    "v_measure": 0.09,
+    "homogeneity": 0.068,
+    "completeness": 0.129,
+    "purity_grouped": 0.363,
+    "coverage": 0.666,
+    "groups": 213
+   },
+   "wdist_k32_noaffix": {
+    "v_measure": 0.142,
+    "homogeneity": 0.161,
+    "completeness": 0.127,
+    "purity_grouped": 0.346,
+    "coverage": 1.0,
+    "groups": 32
+   }
+  }
+ ]
+}

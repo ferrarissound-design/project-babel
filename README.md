@@ -11,7 +11,7 @@
 - API不要の画像→記号候補・反復パターン解析: [docs/VISION.md](docs/VISION.md)
 - 画像認識の定量評価・正解転写の作り方: [docs/VISION_EVAL.md](docs/VISION_EVAL.md)（v1）、[docs/VISION_EVAL_V2.md](docs/VISION_EVAL_V2.md)（v2）、[docs/VISION_EVAL_V3.md](docs/VISION_EVAL_V3.md)（v3: 行の過剰分割の原因と improved-v3）、[docs/GROUND_TRUTH.md](docs/GROUND_TRUTH.md)
 - 実画像の評価手順（画像を受け取ったら）: [docs/REAL_IMAGE_STUDY.md](docs/REAL_IMAGE_STUDY.md)
-- 実在言語（UD を換字）での評価: [docs/REAL_LANGUAGES_RESULTS.md](docs/REAL_LANGUAGES_RESULTS.md)、動詞のクラスの探索: [docs/VERB_CLASS_STUDY.md](docs/VERB_CLASS_STUDY.md)
+- 実在言語（UD を換字）での評価: [docs/REAL_LANGUAGES_RESULTS.md](docs/REAL_LANGUAGES_RESULTS.md)、動詞のクラスの探索: [docs/VERB_CLASS_STUDY.md](docs/VERB_CLASS_STUDY.md)、対訳があるときの実在言語の評価: [docs/REAL_PARALLEL_RESULTS.md](docs/REAL_PARALLEL_RESULTS.md)
 - 本当にある構造と、認識の誤りが作った構造の区別（認識方式をまたぐ検証、転写の比較）: [docs/ROBUST_STRUCTURE.md](docs/ROBUST_STRUCTURE.md)
 - 意味を使わない構造発見（反復・境界・文法的な規則の仮説）: [docs/STRUCTURE.md](docs/STRUCTURE.md)、評価結果: [docs/STRUCTURE_RESULTS.md](docs/STRUCTURE_RESULTS.md)
 

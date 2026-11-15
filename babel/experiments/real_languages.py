@@ -119,12 +119,25 @@ def gold_affix_position(sents):
     return {"value": value, "n": n, "shares": shares}
 
 
-def cipher(sents, seed=0):
+# 文字の多い言語用（日本語・中国語など）。Unicode の私用領域（U+E000〜）。allow_extended=True のときだけ使う
+EXTENDED_SYMBOLS = SYMBOLS + "".join(chr(0xE000 + i) for i in range(6000))
+
+
+def cipher(sents, seed=0, allow_extended=False):
+    """文字を無作為な1対1の記号に置き換える。
+
+    allow_extended=False（従来）: 記号は SYMBOLS（82）。超えたら ValueError。
+    allow_extended=True: 文字の種類が SYMBOLS を超える言語にだけ、私用領域を足した記号を使う。
+    超えない言語では従来と同じ換字になる（過去の評価の再現性を保つ）。
+    """
     chars = sorted({ch for s in sents for w, _, _ in s for ch in w})
+    pool = SYMBOLS
     if len(chars) > len(SYMBOLS):
-        raise ValueError(f"文字の種類 {len(chars)} が記号の数 {len(SYMBOLS)} を超える")
+        if not allow_extended or len(chars) > len(EXTENDED_SYMBOLS):
+            raise ValueError(f"文字の種類 {len(chars)} が記号の数 {len(SYMBOLS)} を超える")
+        pool = EXTENDED_SYMBOLS
     rng = random.Random(f"cipher-{seed}")
-    syms = list(SYMBOLS)
+    syms = list(pool)
     rng.shuffle(syms)
     table = dict(zip(chars, syms))
     return [["".join(table[ch] for ch in w) for w, _, _ in s] for s in sents], len(chars)

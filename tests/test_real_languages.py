@@ -57,3 +57,16 @@ def test_cipher_is_bijective_and_keeps_shape(tmp_path):
     assert [len(w) for w in flat] == [len(w) for w in flat_src]
     pairs = {(a, b) for x, y in zip(flat_src, flat) for a, b in zip(x, y)}
     assert len({a for a, _ in pairs}) == len(pairs) == len({b for _, b in pairs}) == n
+
+
+def test_cipher_extended_only_when_needed():
+    small = [[("ab", "X", "ab"), ("ba", "X", "ba")]]
+    assert rl.cipher(small)[0] == rl.cipher(small, allow_extended=True)[0]      # 従来と同じ換字
+    big = [[(chr(0x4E00 + i), "X", "") for i in range(200)]]
+    try:
+        rl.cipher(big)
+        raise AssertionError("従来の記号数を超えたら ValueError")
+    except ValueError:
+        pass
+    words, n = rl.cipher(big, allow_extended=True)
+    assert n == 200 and len({w for s in words for w in s}) == 200

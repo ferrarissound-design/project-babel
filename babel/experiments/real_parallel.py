@@ -26,6 +26,12 @@ TARGETS = [("UD_Arabic-PUD", "ar_pud"), ("UD_Czech-PUD", "cs_pud"), ("UD_German-
            ("UD_Swedish-PUD", "sv_pud"), ("UD_Thai-PUD", "th_pud"), ("UD_Turkish-PUD", "tr_pud"),
            ("UD_Chinese-PUD", "zh_pud")]
 FRACTIONS = (0.1, 0.25, 1.0)
+# v1.6 の評価用（docs/PREREG_v1.6_ALIGNMENT_NULL.md）。先の評価で文字の種類のため除外し、出力を見ていない 5 言語
+TARGETS16 = [("UD_Hindi-PUD", "hi_pud"), ("UD_Thai-PUD", "th_pud"), ("UD_Japanese-PUD", "ja_pud"),
+             ("UD_Korean-PUD", "ko_pud"), ("UD_Chinese-PUD", "zh_pud")]
+SETTINGS = [("10%", 0.1, False), ("25%", 0.25, False), ("100%", 1.0, False), ("100%-mismatch", 1.0, True)]
+SETTINGS16 = [("100%", 1.0, False), ("100%-mismatch", 1.0, True)]
+VERSIONS16 = {"v1.5": {"v16_gates": False}, "v1.6": {}}
 CACHE = Path(".cache/ud")
 
 
@@ -157,17 +163,17 @@ def _judge(pred, gold):
     return "correct" if str(pred) == str(gold) else "wrong"
 
 
-def run_language(repo, code, en_tr, cfg=None):
+def run_language(repo, code, en_tr, cfg=None, settings=SETTINGS, allow_extended=False):
     t0 = time.time()
     path, sha = fetch(repo, code)
     tsents = target_sentences(parse(path))
     sent_ids = [s for s, _, _ in tsents]
     sents = [[w for w in ws] for _, ws, _ in tsents]
     gold = {"verb_position": rl.gold_verb_position(sents), "so_order": gold_so(tsents)}
-    words, n_chars = rl.cipher(sents)
+    words, n_chars = rl.cipher(sents, allow_extended=allow_extended)
     row = {"treebank": repo, "code": code, "sha256": sha, "sentences": len(sents), "characters": n_chars, "gold": gold,
            "settings": {}}
-    for label, frac, mis in [("10%", 0.1, False), ("25%", 0.25, False), ("100%", 1.0, False), ("100%-mismatch", 1.0, True)]:
+    for label, frac, mis in settings:
         public, n_par = build_public(f"real-{code}", words, sent_ids, en_tr, frac, mis)
         st = decipher(public, cfg)["structure"]
         vp, so = st["verb_position"], st["so_order"]
@@ -197,7 +203,7 @@ def main(out="results/real_parallel/real-parallel.json"):
     rows, excluded = [], []
     for repo, code in TARGETS:
         try:
-            rows.append(run_language(repo, code, en_tr))
+            rows.append(run_language(repo, code, en_tr, {"v16_gates": False}))    # PREREG_REAL_PARALLEL は v1.5.0 で実行した
             print(code, "ok", flush=True)
         except Exception as e:                     # 取得できない・文字の種類が多い言語は除外して記録する（置き換えない）
             excluded.append({"treebank": repo, "error": f"{type(e).__name__}: {e}"})
@@ -210,5 +216,37 @@ def main(out="results/real_parallel/real-parallel.json"):
     print(json.dumps(res["summary"], ensure_ascii=False, indent=1))
 
 
+def main16(out="results/real_parallel/real-parallel-v16.json"):
+    """v1.6 の評価: 新しい 5 言語、100% とずらした対照、v1.5.0 と v1.6.0。"""
+    src_path, src_sha = fetch(*SOURCE)
+    en_tr = {s["sent_id"]: t for s in parse(src_path) if (t := translation(s))}
+    rows, excluded = [], []
+    for repo, code in TARGETS16:
+        try:
+            row = None
+            for name, cfg in VERSIONS16.items():
+                r = run_language(repo, code, en_tr, cfg, SETTINGS16, allow_extended=True)
+                if row is None:
+                    row = {k: v for k, v in r.items() if k != "settings"}
+                    row["versions"] = {}
+                row["versions"][name] = r["settings"]
+            rows.append(row)
+            print(code, "ok", flush=True)
+        except Exception as e:
+            excluded.append({"treebank": repo, "error": f"{type(e).__name__}: {e}"})
+            print(code, "excluded", e, flush=True)
+    summary = {f"{name}:{label}:{key}": dict(Counter(r["versions"][name][label][key]["judge"] for r in rows))
+               for name in VERSIONS16 for label, _, _ in SETTINGS16 for key in ("verb_position", "so_order")}
+    res = {"engine_version": VERSION, "ud_tag": rl.UD_TAG, "preregistration": "docs/PREREG_v1.6_ALIGNMENT_NULL.md",
+           "source": {"treebank": SOURCE[0], "sha256": src_sha, "translations": len(en_tr)},
+           "summary": summary, "excluded": excluded, "rows": rows}
+    Path(out).parent.mkdir(parents=True, exist_ok=True)
+    Path(out).write_text(json.dumps(res, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+    print(json.dumps(summary, ensure_ascii=False, indent=1))
+
+
 if __name__ == "__main__":
-    main(*sys.argv[1:2])
+    if sys.argv[1:2] == ["v16"]:
+        main16()
+    else:
+        main(*sys.argv[1:2])

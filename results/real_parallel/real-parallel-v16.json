@@ -1,0 +1,506 @@
+{
+ "engine_version": "1.6.0",
+ "ud_tag": "r2.15",
+ "preregistration": "docs/PREREG_v1.6_ALIGNMENT_NULL.md",
+ "source": {
+  "treebank": "UD_English-PUD",
+  "sha256": "63eb7eca373bd45912c01f15f1e445d5cdd41245f20da1669474728e484e096d",
+  "translations": 652
+ },
+ "summary": {
+  "v1.5:100%:verb_position": {
+   "correct": 5
+  },
+  "v1.5:100%:so_order": {
+   "correct": 5
+  },
+  "v1.5:100%-mismatch:verb_position": {
+   "correct": 5
+  },
+  "v1.5:100%-mismatch:so_order": {
+   "abstain": 4,
+   "correct": 1
+  },
+  "v1.6:100%:verb_position": {
+   "abstain": 5
+  },
+  "v1.6:100%:so_order": {
+   "correct": 5
+  },
+  "v1.6:100%-mismatch:verb_position": {
+   "abstain": 5
+  },
+  "v1.6:100%-mismatch:so_order": {
+   "abstain": 4,
+   "correct": 1
+  }
+ },
+ "excluded": [],
+ "rows": [
+  {
+   "treebank": "UD_Hindi-PUD",
+   "code": "hi_pud",
+   "sha256": "cca405c5e008e1245fc4b4e89b5d8c0c04fc95e84341a7a9957bf277daae173d",
+   "sentences": 1000,
+   "characters": 83,
+   "gold": {
+    "verb_position": {
+     "value": "medial",
+     "n": 259,
+     "shares": {
+      "initial": 0.0,
+      "medial": 0.591,
+      "final": 0.409
+     }
+    },
+    "so_order": {
+     "value": "SO",
+     "n": 586,
+     "shares": {
+      "SO": 0.961,
+      "OS": 0.039
+     }
+    }
+   },
+   "seconds": 34.5,
+   "versions": {
+    "v1.5": {
+     "100%": {
+      "translations": 652,
+      "verb_position": {
+       "pred": "medial",
+       "confidence": 0.861,
+       "n": 180,
+       "judge": "correct"
+      },
+      "so_order": {
+       "pred": "SO",
+       "confidence": 0.812,
+       "n": 48,
+       "judge": "correct"
+      }
+     },
+     "100%-mismatch": {
+      "translations": 652,
+      "verb_position": {
+       "pred": "medial",
+       "confidence": 0.86,
+       "n": 121,
+       "judge": "correct"
+      },
+      "so_order": {
+       "pred": null,
+       "confidence": 0.0,
+       "n": 3,
+       "judge": "abstain"
+      }
+     }
+    },
+    "v1.6": {
+     "100%": {
+      "translations": 652,
+      "verb_position": {
+       "pred": null,
+       "confidence": 0.0,
+       "n": 180,
+       "judge": "abstain"
+      },
+      "so_order": {
+       "pred": "SO",
+       "confidence": 0.812,
+       "n": 48,
+       "judge": "correct"
+      }
+     },
+     "100%-mismatch": {
+      "translations": 652,
+      "verb_position": {
+       "pred": null,
+       "confidence": 0.0,
+       "n": 121,
+       "judge": "abstain"
+      },
+      "so_order": {
+       "pred": null,
+       "confidence": 0.0,
+       "n": 3,
+       "judge": "abstain"
+      }
+     }
+    }
+   }
+  },
+  {
+   "treebank": "UD_Thai-PUD",
+   "code": "th_pud",
+   "sha256": "548ae9e9acbcb55c685db499c9ed119352dd2e4d03e3ae8780d5f4b44a1ecf3a",
+   "sentences": 1000,
+   "characters": 88,
+   "gold": {
+    "verb_position": {
+     "value": "medial",
+     "n": 83,
+     "shares": {
+      "initial": 0.06,
+      "medial": 0.928,
+      "final": 0.012
+     }
+    },
+    "so_order": {
+     "value": "SO",
+     "n": 580,
+     "shares": {
+      "SO": 0.953,
+      "OS": 0.047
+     }
+    }
+   },
+   "seconds": 34.0,
+   "versions": {
+    "v1.5": {
+     "100%": {
+      "translations": 652,
+      "verb_position": {
+       "pred": "medial",
+       "confidence": 0.906,
+       "n": 224,
+       "judge": "correct"
+      },
+      "so_order": {
+       "pred": "SO",
+       "confidence": 0.87,
+       "n": 77,
+       "judge": "correct"
+      }
+     },
+     "100%-mismatch": {
+      "translations": 652,
+      "verb_position": {
+       "pred": "medial",
+       "confidence": 0.842,
+       "n": 177,
+       "judge": "correct"
+      },
+      "so_order": {
+       "pred": null,
+       "confidence": 0.0,
+       "n": 3,
+       "judge": "abstain"
+      }
+     }
+    },
+    "v1.6": {
+     "100%": {
+      "translations": 652,
+      "verb_position": {
+       "pred": null,
+       "confidence": 0.0,
+       "n": 224,
+       "judge": "abstain"
+      },
+      "so_order": {
+       "pred": "SO",
+       "confidence": 0.87,
+       "n": 77,
+       "judge": "correct"
+      }
+     },
+     "100%-mismatch": {
+      "translations": 652,
+      "verb_position": {
+       "pred": null,
+       "confidence": 0.0,
+       "n": 177,
+       "judge": "abstain"
+      },
+      "so_order": {
+       "pred": null,
+       "confidence": 0.0,
+       "n": 3,
+       "judge": "abstain"
+      }
+     }
+    }
+   }
+  },
+  {
+   "treebank": "UD_Japanese-PUD",
+   "code": "ja_pud",
+   "sha256": "a764cab064e087b7cbb4072a8fcf29a12a8dfc131a85858af67ef62078f3d5c4",
+   "sentences": 1000,
+   "characters": 1577,
+   "gold": {
+    "verb_position": {
+     "value": "medial",
+     "n": 157,
+     "shares": {
+      "initial": 0.0,
+      "medial": 0.822,
+      "final": 0.178
+     }
+    },
+    "so_order": {
+     "value": "SO",
+     "n": 369,
+     "shares": {
+      "SO": 0.967,
+      "OS": 0.033
+     }
+    }
+   },
+   "seconds": 18.1,
+   "versions": {
+    "v1.5": {
+     "100%": {
+      "translations": 652,
+      "verb_position": {
+       "pred": "medial",
+       "confidence": 0.912,
+       "n": 125,
+       "judge": "correct"
+      },
+      "so_order": {
+       "pred": "SO",
+       "confidence": 0.7,
+       "n": 20,
+       "judge": "correct"
+      }
+     },
+     "100%-mismatch": {
+      "translations": 652,
+      "verb_position": {
+       "pred": "medial",
+       "confidence": 0.845,
+       "n": 58,
+       "judge": "correct"
+      },
+      "so_order": {
+       "pred": null,
+       "confidence": 0.0,
+       "n": 0,
+       "judge": "abstain"
+      }
+     }
+    },
+    "v1.6": {
+     "100%": {
+      "translations": 652,
+      "verb_position": {
+       "pred": null,
+       "confidence": 0.0,
+       "n": 125,
+       "judge": "abstain"
+      },
+      "so_order": {
+       "pred": "SO",
+       "confidence": 0.7,
+       "n": 20,
+       "judge": "correct"
+      }
+     },
+     "100%-mismatch": {
+      "translations": 652,
+      "verb_position": {
+       "pred": null,
+       "confidence": 0.0,
+       "n": 58,
+       "judge": "abstain"
+      },
+      "so_order": {
+       "pred": null,
+       "confidence": 0.0,
+       "n": 0,
+       "judge": "abstain"
+      }
+     }
+    }
+   }
+  },
+  {
+   "treebank": "UD_Korean-PUD",
+   "code": "ko_pud",
+   "sha256": "662fcdaf236a223699b410c812ca66e3e69c380c078ae552a88f207ba240981c",
+   "sentences": 1000,
+   "characters": 1000,
+   "gold": {
+    "verb_position": {
+     "value": "medial",
+     "n": 335,
+     "shares": {
+      "initial": 0.0,
+      "medial": 0.725,
+      "final": 0.275
+     }
+    },
+    "so_order": {
+     "value": "SO",
+     "n": 192,
+     "shares": {
+      "SO": 0.995,
+      "OS": 0.005
+     }
+    }
+   },
+   "seconds": 14.8,
+   "versions": {
+    "v1.5": {
+     "100%": {
+      "translations": 652,
+      "verb_position": {
+       "pred": "medial",
+       "confidence": 0.707,
+       "n": 41,
+       "judge": "correct"
+      },
+      "so_order": {
+       "pred": "SO",
+       "confidence": 0.417,
+       "n": 5,
+       "judge": "correct"
+      }
+     },
+     "100%-mismatch": {
+      "translations": 652,
+      "verb_position": {
+       "pred": "medial",
+       "confidence": 0.81,
+       "n": 21,
+       "judge": "correct"
+      },
+      "so_order": {
+       "pred": null,
+       "confidence": 0.0,
+       "n": 0,
+       "judge": "abstain"
+      }
+     }
+    },
+    "v1.6": {
+     "100%": {
+      "translations": 652,
+      "verb_position": {
+       "pred": null,
+       "confidence": 0.0,
+       "n": 41,
+       "judge": "abstain"
+      },
+      "so_order": {
+       "pred": "SO",
+       "confidence": 0.417,
+       "n": 5,
+       "judge": "correct"
+      }
+     },
+     "100%-mismatch": {
+      "translations": 652,
+      "verb_position": {
+       "pred": null,
+       "confidence": 0.0,
+       "n": 21,
+       "judge": "abstain"
+      },
+      "so_order": {
+       "pred": null,
+       "confidence": 0.0,
+       "n": 0,
+       "judge": "abstain"
+      }
+     }
+    }
+   }
+  },
+  {
+   "treebank": "UD_Chinese-PUD",
+   "code": "zh_pud",
+   "sha256": "d3393dd44eb9ae71a6eaa626581c1f760db6148f0d2c6378c2200835e2ede37a",
+   "sentences": 1000,
+   "characters": 2040,
+   "gold": {
+    "verb_position": {
+     "value": "medial",
+     "n": 125,
+     "shares": {
+      "initial": 0.016,
+      "medial": 0.848,
+      "final": 0.136
+     }
+    },
+    "so_order": {
+     "value": "SO",
+     "n": 673,
+     "shares": {
+      "SO": 1.0,
+      "OS": 0.0
+     }
+    }
+   },
+   "seconds": 19.4,
+   "versions": {
+    "v1.5": {
+     "100%": {
+      "translations": 652,
+      "verb_position": {
+       "pred": "medial",
+       "confidence": 0.902,
+       "n": 133,
+       "judge": "correct"
+      },
+      "so_order": {
+       "pred": "SO",
+       "confidence": 0.857,
+       "n": 28,
+       "judge": "correct"
+      }
+     },
+     "100%-mismatch": {
+      "translations": 652,
+      "verb_position": {
+       "pred": "medial",
+       "confidence": 0.829,
+       "n": 70,
+       "judge": "correct"
+      },
+      "so_order": {
+       "pred": "SO",
+       "confidence": 0.25,
+       "n": 4,
+       "judge": "correct"
+      }
+     }
+    },
+    "v1.6": {
+     "100%": {
+      "translations": 652,
+      "verb_position": {
+       "pred": null,
+       "confidence": 0.0,
+       "n": 133,
+       "judge": "abstain"
+      },
+      "so_order": {
+       "pred": "SO",
+       "confidence": 0.857,
+       "n": 28,
+       "judge": "correct"
+      }
+     },
+     "100%-mismatch": {
+      "translations": 652,
+      "verb_position": {
+       "pred": null,
+       "confidence": 0.0,
+       "n": 70,
+       "judge": "abstain"
+      },
+      "so_order": {
+       "pred": "SO",
+       "confidence": 0.25,
+       "n": 4,
+       "judge": "correct"
+      }
+     }
+    }
+   }
+  }
+ ]
+}

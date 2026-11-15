@@ -91,3 +91,28 @@ def test_v15_open_class_rejects_concentrated_class():
     pos, info = classes.label_classes(sents, infos, stem_group, open_class_min=8.0)
     assert info["verb_group"] is None and info["groups"]["G"]["effective_stems"] < 2
     assert isinstance(Counter(), Counter)
+
+
+def test_v16_alignment_null_runs_on_level_a():
+    """v1.6（A1・A2）: 対訳があるときだけ帰無対照を作り、結果を verdict に残す。"""
+    public, _ = build_corpus("KES", 2, "A")
+    pred = decipher(public)
+    an = pred["verdict"]["alignment_null"]
+    assert an["k"] == 19 and set(an) >= {"verb_support", "so", "adj"}
+    assert decipher(build_corpus("KES", 2, "C")[0])["verdict"]["alignment_null"] is None
+
+
+def test_v16_mismatched_translations_block_order_claims():
+    from babel.decipher.engine import Decipherer
+    public, _ = build_corpus("UMB", 3, "A")
+    bad = dict(public, parallel=Decipherer._permuted(public["parallel"], "test"))
+    st = decipher(bad)["structure"]
+    assert st["so_order"]["value"] is None and st["adj_noun"]["value"] is None
+
+
+def test_permuted_is_derangement():
+    from babel.decipher.engine import Decipherer
+    par = [{"doc": "d", "sent": i, "translation": {"pred": str(i)}} for i in range(7)]
+    perm = Decipherer._permuted(par, "x")
+    assert all(p["translation"]["pred"] != str(i) for i, p in enumerate(perm))
+    assert sorted(p["translation"]["pred"] for p in perm) == [str(i) for i in range(7)]

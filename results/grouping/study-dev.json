@@ -1,0 +1,2885 @@
+{
+ "note": "開発用（結果を見たデータ）",
+ "summary": {
+  "synthetic": {
+   "current": {
+    "v_measure": 0.659,
+    "homogeneity": 0.705,
+    "completeness": 0.632,
+    "purity_grouped": 0.946,
+    "coverage": 0.858,
+    "groups": 5.4
+   },
+   "uf_3_0.3": {
+    "v_measure": 0.649,
+    "homogeneity": 0.712,
+    "completeness": 0.611,
+    "purity_grouped": 0.948,
+    "coverage": 0.858,
+    "groups": 5.6
+   },
+   "uf_5_0.5": {
+    "v_measure": 0.62,
+    "homogeneity": 0.725,
+    "completeness": 0.554,
+    "purity_grouped": 0.957,
+    "coverage": 0.858,
+    "groups": 7.267
+   },
+   "dist_k8": {
+    "v_measure": 0.439,
+    "homogeneity": 0.559,
+    "completeness": 0.362,
+    "purity_grouped": 0.807,
+    "coverage": 1.0,
+    "groups": 8.0
+   },
+   "dist_k16": {
+    "v_measure": 0.463,
+    "homogeneity": 0.702,
+    "completeness": 0.345,
+    "purity_grouped": 0.87,
+    "coverage": 1.0,
+    "groups": 16.0
+   },
+   "dist_k32": {
+    "v_measure": 0.477,
+    "homogeneity": 0.839,
+    "completeness": 0.333,
+    "purity_grouped": 0.936,
+    "coverage": 1.0,
+    "groups": 32.0
+   },
+   "wdist_k16": {
+    "v_measure": 0.396,
+    "homogeneity": 0.595,
+    "completeness": 0.297,
+    "purity_grouped": 0.821,
+    "coverage": 1.0,
+    "groups": 16.0
+   },
+   "wdist_k32": {
+    "v_measure": 0.426,
+    "homogeneity": 0.741,
+    "completeness": 0.299,
+    "purity_grouped": 0.887,
+    "coverage": 1.0,
+    "groups": 32.0
+   },
+   "wdist_k32_noaffix": {
+    "v_measure": 0.439,
+    "homogeneity": 0.774,
+    "completeness": 0.306,
+    "purity_grouped": 0.911,
+    "coverage": 1.0,
+    "groups": 32.0
+   }
+  },
+  "real": {
+   "current": {
+    "v_measure": 0.182,
+    "homogeneity": 0.151,
+    "completeness": 0.237,
+    "purity_grouped": 0.519,
+    "coverage": 0.458,
+    "groups": 79.1
+   },
+   "uf_3_0.3": {
+    "v_measure": 0.207,
+    "homogeneity": 0.193,
+    "completeness": 0.237,
+    "purity_grouped": 0.575,
+    "coverage": 0.458,
+    "groups": 91.15
+   },
+   "uf_5_0.5": {
+    "v_measure": 0.232,
+    "homogeneity": 0.243,
+    "completeness": 0.23,
+    "purity_grouped": 0.644,
+    "coverage": 0.458,
+    "groups": 122.35
+   },
+   "dist_k8": {
+    "v_measure": 0.142,
+    "homogeneity": 0.113,
+    "completeness": 0.201,
+    "purity_grouped": 0.347,
+    "coverage": 1.0,
+    "groups": 8.0
+   },
+   "dist_k16": {
+    "v_measure": 0.184,
+    "homogeneity": 0.165,
+    "completeness": 0.214,
+    "purity_grouped": 0.388,
+    "coverage": 1.0,
+    "groups": 16.0
+   },
+   "dist_k32": {
+    "v_measure": 0.23,
+    "homogeneity": 0.238,
+    "completeness": 0.226,
+    "purity_grouped": 0.44,
+    "coverage": 1.0,
+    "groups": 32.0
+   },
+   "wdist_k16": {
+    "v_measure": 0.192,
+    "homogeneity": 0.177,
+    "completeness": 0.213,
+    "purity_grouped": 0.388,
+    "coverage": 1.0,
+    "groups": 16.0
+   },
+   "wdist_k32": {
+    "v_measure": 0.229,
+    "homogeneity": 0.239,
+    "completeness": 0.225,
+    "purity_grouped": 0.437,
+    "coverage": 1.0,
+    "groups": 32.0
+   },
+   "wdist_k32_noaffix": {
+    "v_measure": 0.275,
+    "homogeneity": 0.309,
+    "completeness": 0.248,
+    "purity_grouped": 0.491,
+    "coverage": 1.0,
+    "groups": 32.0
+   }
+  }
+ },
+ "rows": [
+  {
+   "corpus": "KES-0-C",
+   "kind": "synthetic",
+   "methods": {
+    "current": {
+     "v_measure": 0.611,
+     "homogeneity": 0.762,
+     "completeness": 0.51,
+     "purity_grouped": 0.964,
+     "coverage": 0.874,
+     "groups": 7
+    },
+    "uf_3_0.3": {
+     "v_measure": 0.611,
+     "homogeneity": 0.762,
+     "completeness": 0.51,
+     "purity_grouped": 0.964,
+     "coverage": 0.874,
+     "groups": 7
+    },
+    "uf_5_0.5": {
+     "v_measure": 0.542,
+     "homogeneity": 0.771,
+     "completeness": 0.418,
+     "purity_grouped": 0.964,
+     "coverage": 0.874,
+     "groups": 10
+    },
+    "dist_k8": {
+     "v_measure": 0.488,
+     "homogeneity": 0.62,
+     "completeness": 0.403,
+     "purity_grouped": 0.857,
+     "coverage": 1.0,
+     "groups": 8
+    },
+    "dist_k16": {
+     "v_measure": 0.476,
+     "homogeneity": 0.727,
+     "completeness": 0.353,
+     "purity_grouped": 0.883,
+     "coverage": 1.0,
+     "groups": 16
+    },
+    "dist_k32": {
+     "v_measure": 0.471,
+     "homogeneity": 0.799,
+     "completeness": 0.334,
+     "purity_grouped": 0.93,
+     "coverage": 1.0,
+     "groups": 32
+    },
+    "wdist_k16": {
+     "v_measure": 0.37,
+     "homogeneity": 0.538,
+     "completeness": 0.282,
+     "purity_grouped": 0.78,
+     "coverage": 1.0,
+     "groups": 16
+    },
+    "wdist_k32": {
+     "v_measure": 0.375,
+     "homogeneity": 0.593,
+     "completeness": 0.274,
+     "purity_grouped": 0.812,
+     "coverage": 1.0,
+     "groups": 32
+    },
+    "wdist_k32_noaffix": {
+     "v_measure": 0.446,
+     "homogeneity": 0.822,
+     "completeness": 0.306,
+     "purity_grouped": 0.917,
+     "coverage": 1.0,
+     "groups": 32
+    }
+   }
+  },
+  {
+   "corpus": "KES-1-C",
+   "kind": "synthetic",
+   "methods": {
+    "current": {
+     "v_measure": 0.447,
+     "homogeneity": 0.543,
+     "completeness": 0.38,
+     "purity_grouped": 0.91,
+     "coverage": 0.792,
+     "groups": 8
+    },
+    "uf_3_0.3": {
+     "v_measure": 0.447,
+     "homogeneity": 0.543,
+     "completeness": 0.38,
+     "purity_grouped": 0.91,
+     "coverage": 0.792,
+     "groups": 8
+    },
+    "uf_5_0.5": {
+     "v_measure": 0.444,
+     "homogeneity": 0.543,
+     "completeness": 0.375,
+     "purity_grouped": 0.91,
+     "coverage": 0.792,
+     "groups": 10
+    },
+    "dist_k8": {
+     "v_measure": 0.357,
+     "homogeneity": 0.414,
+     "completeness": 0.314,
+     "purity_grouped": 0.743,
+     "coverage": 1.0,
+     "groups": 8
+    },
+    "dist_k16": {
+     "v_measure": 0.498,
+     "homogeneity": 0.723,
+     "completeness": 0.38,
+     "purity_grouped": 0.893,
+     "coverage": 1.0,
+     "groups": 16
+    },
+    "dist_k32": {
+     "v_measure": 0.473,
+     "homogeneity": 0.841,
+     "completeness": 0.329,
+     "purity_grouped": 0.941,
+     "coverage": 1.0,
+     "groups": 32
+    },
+    "wdist_k16": {
+     "v_measure": 0.305,
+     "homogeneity": 0.428,
+     "completeness": 0.236,
+     "purity_grouped": 0.744,
+     "coverage": 1.0,
+     "groups": 16
+    },
+    "wdist_k32": {
+     "v_measure": 0.451,
+     "homogeneity": 0.763,
+     "completeness": 0.32,
+     "purity_grouped": 0.906,
+     "coverage": 1.0,
+     "groups": 32
+    },
+    "wdist_k32_noaffix": {
+     "v_measure": 0.492,
+     "homogeneity": 0.884,
+     "completeness": 0.341,
+     "purity_grouped": 0.958,
+     "coverage": 1.0,
+     "groups": 32
+    }
+   }
+  },
+  {
+   "corpus": "KES-2-C",
+   "kind": "synthetic",
+   "methods": {
+    "current": {
+     "v_measure": 0.465,
+     "homogeneity": 0.591,
+     "completeness": 0.383,
+     "purity_grouped": 0.972,
+     "coverage": 0.741,
+     "groups": 9
+    },
+    "uf_3_0.3": {
+     "v_measure": 0.465,
+     "homogeneity": 0.591,
+     "completeness": 0.383,
+     "purity_grouped": 0.972,
+     "coverage": 0.741,
+     "groups": 9
+    },
+    "uf_5_0.5": {
+     "v_measure": 0.464,
+     "homogeneity": 0.597,
+     "completeness": 0.38,
+     "purity_grouped": 0.974,
+     "coverage": 0.741,
+     "groups": 11
+    },
+    "dist_k8": {
+     "v_measure": 0.28,
+     "homogeneity": 0.318,
+     "completeness": 0.25,
+     "purity_grouped": 0.708,
+     "coverage": 1.0,
+     "groups": 8
+    },
+    "dist_k16": {
+     "v_measure": 0.497,
+     "homogeneity": 0.756,
+     "completeness": 0.37,
+     "purity_grouped": 0.906,
+     "coverage": 1.0,
+     "groups": 16
+    },
+    "dist_k32": {
+     "v_measure": 0.468,
+     "homogeneity": 0.811,
+     "completeness": 0.328,
+     "purity_grouped": 0.933,
+     "coverage": 1.0,
+     "groups": 32
+    },
+    "wdist_k16": {
+     "v_measure": 0.368,
+     "homogeneity": 0.526,
+     "completeness": 0.283,
+     "purity_grouped": 0.772,
+     "coverage": 1.0,
+     "groups": 16
+    },
+    "wdist_k32": {
+     "v_measure": 0.417,
+     "homogeneity": 0.732,
+     "completeness": 0.291,
+     "purity_grouped": 0.887,
+     "coverage": 1.0,
+     "groups": 32
+    },
+    "wdist_k32_noaffix": {
+     "v_measure": 0.473,
+     "homogeneity": 0.842,
+     "completeness": 0.329,
+     "purity_grouped": 0.935,
+     "coverage": 1.0,
+     "groups": 32
+    }
+   }
+  },
+  {
+   "corpus": "KES-3-C",
+   "kind": "synthetic",
+   "methods": {
+    "current": {
+     "v_measure": 0.61,
+     "homogeneity": 0.749,
+     "completeness": 0.515,
+     "purity_grouped": 0.965,
+     "coverage": 0.861,
+     "groups": 8
+    },
+    "uf_3_0.3": {
+     "v_measure": 0.66,
+     "homogeneity": 0.84,
+     "completeness": 0.543,
+     "purity_grouped": 0.998,
+     "coverage": 0.861,
+     "groups": 9
+    },
+    "uf_5_0.5": {
+     "v_measure": 0.638,
+     "homogeneity": 0.84,
+     "completeness": 0.514,
+     "purity_grouped": 0.998,
+     "coverage": 0.861,
+     "groups": 12
+    },
+    "dist_k8": {
+     "v_measure": 0.374,
+     "homogeneity": 0.463,
+     "completeness": 0.314,
+     "purity_grouped": 0.785,
+     "coverage": 1.0,
+     "groups": 8
+    },
+    "dist_k16": {
+     "v_measure": 0.358,
+     "homogeneity": 0.527,
+     "completeness": 0.271,
+     "purity_grouped": 0.791,
+     "coverage": 1.0,
+     "groups": 16
+    },
+    "dist_k32": {
+     "v_measure": 0.499,
+     "homogeneity": 0.864,
+     "completeness": 0.351,
+     "purity_grouped": 0.946,
+     "coverage": 1.0,
+     "groups": 32
+    },
+    "wdist_k16": {
+     "v_measure": 0.361,
+     "homogeneity": 0.525,
+     "completeness": 0.275,
+     "purity_grouped": 0.768,
+     "coverage": 1.0,
+     "groups": 16
+    },
+    "wdist_k32": {
+     "v_measure": 0.359,
+     "homogeneity": 0.572,
+     "completeness": 0.261,
+     "purity_grouped": 0.792,
+     "coverage": 1.0,
+     "groups": 32
+    },
+    "wdist_k32_noaffix": {
+     "v_measure": 0.486,
+     "homogeneity": 0.83,
+     "completeness": 0.343,
+     "purity_grouped": 0.925,
+     "coverage": 1.0,
+     "groups": 32
+    }
+   }
+  },
+  {
+   "corpus": "KES-4-C",
+   "kind": "synthetic",
+   "methods": {
+    "current": {
+     "v_measure": 0.587,
+     "homogeneity": 0.785,
+     "completeness": 0.469,
+     "purity_grouped": 0.996,
+     "coverage": 0.836,
+     "groups": 9
+    },
+    "uf_3_0.3": {
+     "v_measure": 0.587,
+     "homogeneity": 0.785,
+     "completeness": 0.469,
+     "purity_grouped": 0.996,
+     "coverage": 0.836,
+     "groups": 9
+    },
+    "uf_5_0.5": {
+     "v_measure": 0.568,
+     "homogeneity": 0.786,
+     "completeness": 0.445,
+     "purity_grouped": 0.996,
+     "coverage": 0.836,
+     "groups": 13
+    },
+    "dist_k8": {
+     "v_measure": 0.443,
+     "homogeneity": 0.551,
+     "completeness": 0.371,
+     "purity_grouped": 0.804,
+     "coverage": 1.0,
+     "groups": 8
+    },
+    "dist_k16": {
+     "v_measure": 0.41,
+     "homogeneity": 0.589,
+     "completeness": 0.314,
+     "purity_grouped": 0.811,
+     "coverage": 1.0,
+     "groups": 16
+    },
+    "dist_k32": {
+     "v_measure": 0.467,
+     "homogeneity": 0.839,
+     "completeness": 0.323,
+     "purity_grouped": 0.942,
+     "coverage": 1.0,
+     "groups": 32
+    },
+    "wdist_k16": {
+     "v_measure": 0.341,
+     "homogeneity": 0.503,
+     "completeness": 0.257,
+     "purity_grouped": 0.786,
+     "coverage": 1.0,
+     "groups": 16
+    },
+    "wdist_k32": {
+     "v_measure": 0.413,
+     "homogeneity": 0.73,
+     "completeness": 0.288,
+     "purity_grouped": 0.898,
+     "coverage": 1.0,
+     "groups": 32
+    },
+    "wdist_k32_noaffix": {
+     "v_measure": 0.477,
+     "homogeneity": 0.877,
+     "completeness": 0.327,
+     "purity_grouped": 0.946,
+     "coverage": 1.0,
+     "groups": 32
+    }
+   }
+  },
+  {
+   "corpus": "UMB-0-C",
+   "kind": "synthetic",
+   "methods": {
+    "current": {
+     "v_measure": 0.765,
+     "homogeneity": 0.749,
+     "completeness": 0.781,
+     "purity_grouped": 0.954,
+     "coverage": 0.856,
+     "groups": 3
+    },
+    "uf_3_0.3": {
+     "v_measure": 0.765,
+     "homogeneity": 0.749,
+     "completeness": 0.781,
+     "purity_grouped": 0.954,
+     "coverage": 0.856,
+     "groups": 3
+    },
+    "uf_5_0.5": {
+     "v_measure": 0.765,
+     "homogeneity": 0.749,
+     "completeness": 0.781,
+     "purity_grouped": 0.954,
+     "coverage": 0.856,
+     "groups": 3
+    },
+    "dist_k8": {
+     "v_measure": 0.422,
+     "homogeneity": 0.523,
+     "completeness": 0.354,
+     "purity_grouped": 0.784,
+     "coverage": 1.0,
+     "groups": 8
+    },
+    "dist_k16": {
+     "v_measure": 0.41,
+     "homogeneity": 0.599,
+     "completeness": 0.312,
+     "purity_grouped": 0.789,
+     "coverage": 1.0,
+     "groups": 16
+    },
+    "dist_k32": {
+     "v_measure": 0.521,
+     "homogeneity": 0.928,
+     "completeness": 0.362,
+     "purity_grouped": 0.977,
+     "coverage": 1.0,
+     "groups": 32
+    },
+    "wdist_k16": {
+     "v_measure": 0.378,
+     "homogeneity": 0.558,
+     "completeness": 0.286,
+     "purity_grouped": 0.79,
+     "coverage": 1.0,
+     "groups": 16
+    },
+    "wdist_k32": {
+     "v_measure": 0.444,
+     "homogeneity": 0.767,
+     "completeness": 0.312,
+     "purity_grouped": 0.917,
+     "coverage": 1.0,
+     "groups": 32
+    },
+    "wdist_k32_noaffix": {
+     "v_measure": 0.402,
+     "homogeneity": 0.717,
+     "completeness": 0.279,
+     "purity_grouped": 0.897,
+     "coverage": 1.0,
+     "groups": 32
+    }
+   }
+  },
+  {
+   "corpus": "UMB-1-C",
+   "kind": "synthetic",
+   "methods": {
+    "current": {
+     "v_measure": 0.653,
+     "homogeneity": 0.593,
+     "completeness": 0.727,
+     "purity_grouped": 0.862,
+     "coverage": 0.887,
+     "groups": 3
+    },
+    "uf_3_0.3": {
+     "v_measure": 0.653,
+     "homogeneity": 0.593,
+     "completeness": 0.727,
+     "purity_grouped": 0.862,
+     "coverage": 0.887,
+     "groups": 3
+    },
+    "uf_5_0.5": {
+     "v_measure": 0.603,
+     "homogeneity": 0.723,
+     "completeness": 0.518,
+     "purity_grouped": 0.953,
+     "coverage": 0.887,
+     "groups": 6
+    },
+    "dist_k8": {
+     "v_measure": 0.411,
+     "homogeneity": 0.512,
+     "completeness": 0.344,
+     "purity_grouped": 0.808,
+     "coverage": 1.0,
+     "groups": 8
+    },
+    "dist_k16": {
+     "v_measure": 0.382,
+     "homogeneity": 0.523,
+     "completeness": 0.3,
+     "purity_grouped": 0.81,
+     "coverage": 1.0,
+     "groups": 16
+    },
+    "dist_k32": {
+     "v_measure": 0.466,
+     "homogeneity": 0.818,
+     "completeness": 0.326,
+     "purity_grouped": 0.931,
+     "coverage": 1.0,
+     "groups": 32
+    },
+    "wdist_k16": {
+     "v_measure": 0.38,
+     "homogeneity": 0.554,
+     "completeness": 0.29,
+     "purity_grouped": 0.819,
+     "coverage": 1.0,
+     "groups": 16
+    },
+    "wdist_k32": {
+     "v_measure": 0.436,
+     "homogeneity": 0.787,
+     "completeness": 0.302,
+     "purity_grouped": 0.907,
+     "coverage": 1.0,
+     "groups": 32
+    },
+    "wdist_k32_noaffix": {
+     "v_measure": 0.404,
+     "homogeneity": 0.704,
+     "completeness": 0.284,
+     "purity_grouped": 0.876,
+     "coverage": 1.0,
+     "groups": 32
+    }
+   }
+  },
+  {
+   "corpus": "UMB-2-C",
+   "kind": "synthetic",
+   "methods": {
+    "current": {
+     "v_measure": 0.73,
+     "homogeneity": 0.689,
+     "completeness": 0.777,
+     "purity_grouped": 0.936,
+     "coverage": 0.868,
+     "groups": 3
+    },
+    "uf_3_0.3": {
+     "v_measure": 0.73,
+     "homogeneity": 0.689,
+     "completeness": 0.777,
+     "purity_grouped": 0.936,
+     "coverage": 0.868,
+     "groups": 3
+    },
+    "uf_5_0.5": {
+     "v_measure": 0.73,
+     "homogeneity": 0.689,
+     "completeness": 0.777,
+     "purity_grouped": 0.936,
+     "coverage": 0.868,
+     "groups": 3
+    },
+    "dist_k8": {
+     "v_measure": 0.443,
+     "homogeneity": 0.561,
+     "completeness": 0.367,
+     "purity_grouped": 0.808,
+     "coverage": 1.0,
+     "groups": 8
+    },
+    "dist_k16": {
+     "v_measure": 0.471,
+     "homogeneity": 0.734,
+     "completeness": 0.347,
+     "purity_grouped": 0.854,
+     "coverage": 1.0,
+     "groups": 16
+    },
+    "dist_k32": {
+     "v_measure": 0.485,
+     "homogeneity": 0.891,
+     "completeness": 0.333,
+     "purity_grouped": 0.956,
+     "coverage": 1.0,
+     "groups": 32
+    },
+    "wdist_k16": {
+     "v_measure": 0.396,
+     "homogeneity": 0.582,
+     "completeness": 0.301,
+     "purity_grouped": 0.82,
+     "coverage": 1.0,
+     "groups": 16
+    },
+    "wdist_k32": {
+     "v_measure": 0.438,
+     "homogeneity": 0.766,
+     "completeness": 0.306,
+     "purity_grouped": 0.904,
+     "coverage": 1.0,
+     "groups": 32
+    },
+    "wdist_k32_noaffix": {
+     "v_measure": 0.405,
+     "homogeneity": 0.757,
+     "completeness": 0.277,
+     "purity_grouped": 0.897,
+     "coverage": 1.0,
+     "groups": 32
+    }
+   }
+  },
+  {
+   "corpus": "UMB-3-C",
+   "kind": "synthetic",
+   "methods": {
+    "current": {
+     "v_measure": 0.62,
+     "homogeneity": 0.666,
+     "completeness": 0.581,
+     "purity_grouped": 0.903,
+     "coverage": 0.901,
+     "groups": 7
+    },
+    "uf_3_0.3": {
+     "v_measure": 0.62,
+     "homogeneity": 0.666,
+     "completeness": 0.581,
+     "purity_grouped": 0.903,
+     "coverage": 0.901,
+     "groups": 7
+    },
+    "uf_5_0.5": {
+     "v_measure": 0.645,
+     "homogeneity": 0.683,
+     "completeness": 0.611,
+     "purity_grouped": 0.915,
+     "coverage": 0.901,
+     "groups": 7
+    },
+    "dist_k8": {
+     "v_measure": 0.398,
+     "homogeneity": 0.516,
+     "completeness": 0.324,
+     "purity_grouped": 0.796,
+     "coverage": 1.0,
+     "groups": 8
+    },
+    "dist_k16": {
+     "v_measure": 0.464,
+     "homogeneity": 0.72,
+     "completeness": 0.342,
+     "purity_grouped": 0.868,
+     "coverage": 1.0,
+     "groups": 16
+    },
+    "dist_k32": {
+     "v_measure": 0.457,
+     "homogeneity": 0.831,
+     "completeness": 0.316,
+     "purity_grouped": 0.928,
+     "coverage": 1.0,
+     "groups": 32
+    },
+    "wdist_k16": {
+     "v_measure": 0.364,
+     "homogeneity": 0.548,
+     "completeness": 0.272,
+     "purity_grouped": 0.8,
+     "coverage": 1.0,
+     "groups": 16
+    },
+    "wdist_k32": {
+     "v_measure": 0.441,
+     "homogeneity": 0.775,
+     "completeness": 0.308,
+     "purity_grouped": 0.914,
+     "coverage": 1.0,
+     "groups": 32
+    },
+    "wdist_k32_noaffix": {
+     "v_measure": 0.43,
+     "homogeneity": 0.771,
+     "completeness": 0.298,
+     "purity_grouped": 0.908,
+     "coverage": 1.0,
+     "groups": 32
+    }
+   }
+  },
+  {
+   "corpus": "UMB-4-C",
+   "kind": "synthetic",
+   "methods": {
+    "current": {
+     "v_measure": 0.657,
+     "homogeneity": 0.674,
+     "completeness": 0.64,
+     "purity_grouped": 0.932,
+     "coverage": 0.866,
+     "groups": 4
+    },
+    "uf_3_0.3": {
+     "v_measure": 0.657,
+     "homogeneity": 0.674,
+     "completeness": 0.64,
+     "purity_grouped": 0.932,
+     "coverage": 0.866,
+     "groups": 4
+    },
+    "uf_5_0.5": {
+     "v_measure": 0.579,
+     "homogeneity": 0.695,
+     "completeness": 0.495,
+     "purity_grouped": 0.946,
+     "coverage": 0.866,
+     "groups": 6
+    },
+    "dist_k8": {
+     "v_measure": 0.428,
+     "homogeneity": 0.55,
+     "completeness": 0.351,
+     "purity_grouped": 0.834,
+     "coverage": 1.0,
+     "groups": 8
+    },
+    "dist_k16": {
+     "v_measure": 0.375,
+     "homogeneity": 0.554,
+     "completeness": 0.284,
+     "purity_grouped": 0.834,
+     "coverage": 1.0,
+     "groups": 16
+    },
+    "dist_k32": {
+     "v_measure": 0.383,
+     "homogeneity": 0.648,
+     "completeness": 0.272,
+     "purity_grouped": 0.857,
+     "coverage": 1.0,
+     "groups": 32
+    },
+    "wdist_k16": {
+     "v_measure": 0.362,
+     "homogeneity": 0.536,
+     "completeness": 0.273,
+     "purity_grouped": 0.804,
+     "coverage": 1.0,
+     "groups": 16
+    },
+    "wdist_k32": {
+     "v_measure": 0.4,
+     "homogeneity": 0.705,
+     "completeness": 0.279,
+     "purity_grouped": 0.821,
+     "coverage": 1.0,
+     "groups": 32
+    },
+    "wdist_k32_noaffix": {
+     "v_measure": 0.44,
+     "homogeneity": 0.781,
+     "completeness": 0.307,
+     "purity_grouped": 0.917,
+     "coverage": 1.0,
+     "groups": 32
+    }
+   }
+  },
+  {
+   "corpus": "SOT-0-C",
+   "kind": "synthetic",
+   "methods": {
+    "current": {
+     "v_measure": 0.855,
+     "homogeneity": 0.824,
+     "completeness": 0.887,
+     "purity_grouped": 0.966,
+     "coverage": 0.929,
+     "groups": 3
+    },
+    "uf_3_0.3": {
+     "v_measure": 0.721,
+     "homogeneity": 0.828,
+     "completeness": 0.639,
+     "purity_grouped": 0.966,
+     "coverage": 0.929,
+     "groups": 4
+    },
+    "uf_5_0.5": {
+     "v_measure": 0.717,
+     "homogeneity": 0.828,
+     "completeness": 0.632,
+     "purity_grouped": 0.966,
+     "coverage": 0.929,
+     "groups": 5
+    },
+    "dist_k8": {
+     "v_measure": 0.607,
+     "homogeneity": 0.805,
+     "completeness": 0.487,
+     "purity_grouped": 0.928,
+     "coverage": 1.0,
+     "groups": 8
+    },
+    "dist_k16": {
+     "v_measure": 0.552,
+     "homogeneity": 0.873,
+     "completeness": 0.403,
+     "purity_grouped": 0.946,
+     "coverage": 1.0,
+     "groups": 16
+    },
+    "dist_k32": {
+     "v_measure": 0.518,
+     "homogeneity": 0.891,
+     "completeness": 0.365,
+     "purity_grouped": 0.951,
+     "coverage": 1.0,
+     "groups": 32
+    },
+    "wdist_k16": {
+     "v_measure": 0.538,
+     "homogeneity": 0.853,
+     "completeness": 0.393,
+     "purity_grouped": 0.954,
+     "coverage": 1.0,
+     "groups": 16
+    },
+    "wdist_k32": {
+     "v_measure": 0.464,
+     "homogeneity": 0.848,
+     "completeness": 0.32,
+     "purity_grouped": 0.941,
+     "coverage": 1.0,
+     "groups": 32
+    },
+    "wdist_k32_noaffix": {
+     "v_measure": 0.428,
+     "homogeneity": 0.723,
+     "completeness": 0.305,
+     "purity_grouped": 0.907,
+     "coverage": 1.0,
+     "groups": 32
+    }
+   }
+  },
+  {
+   "corpus": "SOT-1-C",
+   "kind": "synthetic",
+   "methods": {
+    "current": {
+     "v_measure": 0.659,
+     "homogeneity": 0.717,
+     "completeness": 0.61,
+     "purity_grouped": 0.958,
+     "coverage": 0.865,
+     "groups": 5
+    },
+    "uf_3_0.3": {
+     "v_measure": 0.659,
+     "homogeneity": 0.717,
+     "completeness": 0.61,
+     "purity_grouped": 0.958,
+     "coverage": 0.865,
+     "groups": 5
+    },
+    "uf_5_0.5": {
+     "v_measure": 0.583,
+     "homogeneity": 0.724,
+     "completeness": 0.488,
+     "purity_grouped": 0.96,
+     "coverage": 0.865,
+     "groups": 8
+    },
+    "dist_k8": {
+     "v_measure": 0.507,
+     "homogeneity": 0.652,
+     "completeness": 0.415,
+     "purity_grouped": 0.828,
+     "coverage": 1.0,
+     "groups": 8
+    },
+    "dist_k16": {
+     "v_measure": 0.509,
+     "homogeneity": 0.772,
+     "completeness": 0.38,
+     "purity_grouped": 0.909,
+     "coverage": 1.0,
+     "groups": 16
+    },
+    "dist_k32": {
+     "v_measure": 0.496,
+     "homogeneity": 0.84,
+     "completeness": 0.352,
+     "purity_grouped": 0.936,
+     "coverage": 1.0,
+     "groups": 32
+    },
+    "wdist_k16": {
+     "v_measure": 0.437,
+     "homogeneity": 0.685,
+     "completeness": 0.321,
+     "purity_grouped": 0.874,
+     "coverage": 1.0,
+     "groups": 16
+    },
+    "wdist_k32": {
+     "v_measure": 0.437,
+     "homogeneity": 0.772,
+     "completeness": 0.305,
+     "purity_grouped": 0.912,
+     "coverage": 1.0,
+     "groups": 32
+    },
+    "wdist_k32_noaffix": {
+     "v_measure": 0.402,
+     "homogeneity": 0.699,
+     "completeness": 0.282,
+     "purity_grouped": 0.879,
+     "coverage": 1.0,
+     "groups": 32
+    }
+   }
+  },
+  {
+   "corpus": "SOT-2-C",
+   "kind": "synthetic",
+   "methods": {
+    "current": {
+     "v_measure": 0.817,
+     "homogeneity": 0.8,
+     "completeness": 0.836,
+     "purity_grouped": 0.967,
+     "coverage": 0.917,
+     "groups": 3
+    },
+    "uf_3_0.3": {
+     "v_measure": 0.817,
+     "homogeneity": 0.8,
+     "completeness": 0.836,
+     "purity_grouped": 0.967,
+     "coverage": 0.917,
+     "groups": 3
+    },
+    "uf_5_0.5": {
+     "v_measure": 0.692,
+     "homogeneity": 0.805,
+     "completeness": 0.607,
+     "purity_grouped": 0.969,
+     "coverage": 0.917,
+     "groups": 4
+    },
+    "dist_k8": {
+     "v_measure": 0.457,
+     "homogeneity": 0.61,
+     "completeness": 0.366,
+     "purity_grouped": 0.805,
+     "coverage": 1.0,
+     "groups": 8
+    },
+    "dist_k16": {
+     "v_measure": 0.534,
+     "homogeneity": 0.856,
+     "completeness": 0.388,
+     "purity_grouped": 0.939,
+     "coverage": 1.0,
+     "groups": 16
+    },
+    "dist_k32": {
+     "v_measure": 0.493,
+     "homogeneity": 0.905,
+     "completeness": 0.339,
+     "purity_grouped": 0.967,
+     "coverage": 1.0,
+     "groups": 32
+    },
+    "wdist_k16": {
+     "v_measure": 0.472,
+     "homogeneity": 0.77,
+     "completeness": 0.341,
+     "purity_grouped": 0.908,
+     "coverage": 1.0,
+     "groups": 16
+    },
+    "wdist_k32": {
+     "v_measure": 0.462,
+     "homogeneity": 0.84,
+     "completeness": 0.318,
+     "purity_grouped": 0.945,
+     "coverage": 1.0,
+     "groups": 32
+    },
+    "wdist_k32_noaffix": {
+     "v_measure": 0.402,
+     "homogeneity": 0.708,
+     "completeness": 0.281,
+     "purity_grouped": 0.888,
+     "coverage": 1.0,
+     "groups": 32
+    }
+   }
+  },
+  {
+   "corpus": "SOT-3-C",
+   "kind": "synthetic",
+   "methods": {
+    "current": {
+     "v_measure": 0.775,
+     "homogeneity": 0.746,
+     "completeness": 0.806,
+     "purity_grouped": 0.943,
+     "coverage": 0.914,
+     "groups": 3
+    },
+    "uf_3_0.3": {
+     "v_measure": 0.775,
+     "homogeneity": 0.746,
+     "completeness": 0.806,
+     "purity_grouped": 0.943,
+     "coverage": 0.914,
+     "groups": 3
+    },
+    "uf_5_0.5": {
+     "v_measure": 0.775,
+     "homogeneity": 0.746,
+     "completeness": 0.806,
+     "purity_grouped": 0.943,
+     "coverage": 0.914,
+     "groups": 3
+    },
+    "dist_k8": {
+     "v_measure": 0.519,
+     "homogeneity": 0.7,
+     "completeness": 0.412,
+     "purity_grouped": 0.834,
+     "coverage": 1.0,
+     "groups": 8
+    },
+    "dist_k16": {
+     "v_measure": 0.546,
+     "homogeneity": 0.847,
+     "completeness": 0.403,
+     "purity_grouped": 0.941,
+     "coverage": 1.0,
+     "groups": 16
+    },
+    "dist_k32": {
+     "v_measure": 0.507,
+     "homogeneity": 0.886,
+     "completeness": 0.355,
+     "purity_grouped": 0.952,
+     "coverage": 1.0,
+     "groups": 32
+    },
+    "wdist_k16": {
+     "v_measure": 0.466,
+     "homogeneity": 0.707,
+     "completeness": 0.348,
+     "purity_grouped": 0.889,
+     "coverage": 1.0,
+     "groups": 16
+    },
+    "wdist_k32": {
+     "v_measure": 0.467,
+     "homogeneity": 0.819,
+     "completeness": 0.327,
+     "purity_grouped": 0.928,
+     "coverage": 1.0,
+     "groups": 32
+    },
+    "wdist_k32_noaffix": {
+     "v_measure": 0.444,
+     "homogeneity": 0.742,
+     "completeness": 0.317,
+     "purity_grouped": 0.906,
+     "coverage": 1.0,
+     "groups": 32
+    }
+   }
+  },
+  {
+   "corpus": "SOT-4-C",
+   "kind": "synthetic",
+   "methods": {
+    "current": {
+     "v_measure": 0.629,
+     "homogeneity": 0.692,
+     "completeness": 0.577,
+     "purity_grouped": 0.964,
+     "coverage": 0.762,
+     "groups": 6
+    },
+    "uf_3_0.3": {
+     "v_measure": 0.573,
+     "homogeneity": 0.692,
+     "completeness": 0.488,
+     "purity_grouped": 0.964,
+     "coverage": 0.762,
+     "groups": 7
+    },
+    "uf_5_0.5": {
+     "v_measure": 0.557,
+     "homogeneity": 0.694,
+     "completeness": 0.465,
+     "purity_grouped": 0.964,
+     "coverage": 0.762,
+     "groups": 8
+    },
+    "dist_k8": {
+     "v_measure": 0.449,
+     "homogeneity": 0.595,
+     "completeness": 0.36,
+     "purity_grouped": 0.78,
+     "coverage": 1.0,
+     "groups": 8
+    },
+    "dist_k16": {
+     "v_measure": 0.458,
+     "homogeneity": 0.73,
+     "completeness": 0.334,
+     "purity_grouped": 0.874,
+     "coverage": 1.0,
+     "groups": 16
+    },
+    "dist_k32": {
+     "v_measure": 0.448,
+     "homogeneity": 0.787,
+     "completeness": 0.313,
+     "purity_grouped": 0.895,
+     "coverage": 1.0,
+     "groups": 32
+    },
+    "wdist_k16": {
+     "v_measure": 0.4,
+     "homogeneity": 0.613,
+     "completeness": 0.296,
+     "purity_grouped": 0.812,
+     "coverage": 1.0,
+     "groups": 16
+    },
+    "wdist_k32": {
+     "v_measure": 0.387,
+     "homogeneity": 0.644,
+     "completeness": 0.277,
+     "purity_grouped": 0.822,
+     "coverage": 1.0,
+     "groups": 32
+    },
+    "wdist_k32_noaffix": {
+     "v_measure": 0.45,
+     "homogeneity": 0.753,
+     "completeness": 0.321,
+     "purity_grouped": 0.911,
+     "coverage": 1.0,
+     "groups": 32
+    }
+   }
+  },
+  {
+   "corpus": "tr_imst",
+   "kind": "real",
+   "methods": {
+    "current": {
+     "v_measure": 0.168,
+     "homogeneity": 0.174,
+     "completeness": 0.163,
+     "purity_grouped": 0.526,
+     "coverage": 0.575,
+     "groups": 126
+    },
+    "uf_3_0.3": {
+     "v_measure": 0.224,
+     "homogeneity": 0.276,
+     "completeness": 0.189,
+     "purity_grouped": 0.668,
+     "coverage": 0.575,
+     "groups": 152
+    },
+    "uf_5_0.5": {
+     "v_measure": 0.223,
+     "homogeneity": 0.299,
+     "completeness": 0.178,
+     "purity_grouped": 0.679,
+     "coverage": 0.575,
+     "groups": 217
+    },
+    "dist_k8": {
+     "v_measure": 0.102,
+     "homogeneity": 0.077,
+     "completeness": 0.152,
+     "purity_grouped": 0.388,
+     "coverage": 1.0,
+     "groups": 8
+    },
+    "dist_k16": {
+     "v_measure": 0.148,
+     "homogeneity": 0.135,
+     "completeness": 0.165,
+     "purity_grouped": 0.414,
+     "coverage": 1.0,
+     "groups": 16
+    },
+    "dist_k32": {
+     "v_measure": 0.164,
+     "homogeneity": 0.172,
+     "completeness": 0.157,
+     "purity_grouped": 0.411,
+     "coverage": 1.0,
+     "groups": 32
+    },
+    "wdist_k16": {
+     "v_measure": 0.121,
+     "homogeneity": 0.116,
+     "completeness": 0.125,
+     "purity_grouped": 0.394,
+     "coverage": 1.0,
+     "groups": 16
+    },
+    "wdist_k32": {
+     "v_measure": 0.131,
+     "homogeneity": 0.122,
+     "completeness": 0.142,
+     "purity_grouped": 0.399,
+     "coverage": 1.0,
+     "groups": 32
+    },
+    "wdist_k32_noaffix": {
+     "v_measure": 0.197,
+     "homogeneity": 0.221,
+     "completeness": 0.178,
+     "purity_grouped": 0.435,
+     "coverage": 1.0,
+     "groups": 32
+    }
+   }
+  },
+  {
+   "corpus": "eu_bdt",
+   "kind": "real",
+   "methods": {
+    "current": {
+     "v_measure": 0.124,
+     "homogeneity": 0.098,
+     "completeness": 0.167,
+     "purity_grouped": 0.333,
+     "coverage": 0.633,
+     "groups": 64
+    },
+    "uf_3_0.3": {
+     "v_measure": 0.19,
+     "homogeneity": 0.193,
+     "completeness": 0.188,
+     "purity_grouped": 0.468,
+     "coverage": 0.633,
+     "groups": 73
+    },
+    "uf_5_0.5": {
+     "v_measure": 0.252,
+     "homogeneity": 0.302,
+     "completeness": 0.216,
+     "purity_grouped": 0.604,
+     "coverage": 0.633,
+     "groups": 104
+    },
+    "dist_k8": {
+     "v_measure": 0.099,
+     "homogeneity": 0.075,
+     "completeness": 0.145,
+     "purity_grouped": 0.349,
+     "coverage": 1.0,
+     "groups": 8
+    },
+    "dist_k16": {
+     "v_measure": 0.149,
+     "homogeneity": 0.141,
+     "completeness": 0.159,
+     "purity_grouped": 0.382,
+     "coverage": 1.0,
+     "groups": 16
+    },
+    "dist_k32": {
+     "v_measure": 0.157,
+     "homogeneity": 0.165,
+     "completeness": 0.149,
+     "purity_grouped": 0.395,
+     "coverage": 1.0,
+     "groups": 32
+    },
+    "wdist_k16": {
+     "v_measure": 0.131,
+     "homogeneity": 0.124,
+     "completeness": 0.139,
+     "purity_grouped": 0.349,
+     "coverage": 1.0,
+     "groups": 16
+    },
+    "wdist_k32": {
+     "v_measure": 0.165,
+     "homogeneity": 0.177,
+     "completeness": 0.154,
+     "purity_grouped": 0.387,
+     "coverage": 1.0,
+     "groups": 32
+    },
+    "wdist_k32_noaffix": {
+     "v_measure": 0.211,
+     "homogeneity": 0.246,
+     "completeness": 0.185,
+     "purity_grouped": 0.461,
+     "coverage": 1.0,
+     "groups": 32
+    }
+   }
+  },
+  {
+   "corpus": "fi_tdt",
+   "kind": "real",
+   "methods": {
+    "current": {
+     "v_measure": 0.112,
+     "homogeneity": 0.101,
+     "completeness": 0.125,
+     "purity_grouped": 0.394,
+     "coverage": 0.511,
+     "groups": 102
+    },
+    "uf_3_0.3": {
+     "v_measure": 0.155,
+     "homogeneity": 0.161,
+     "completeness": 0.15,
+     "purity_grouped": 0.464,
+     "coverage": 0.511,
+     "groups": 114
+    },
+    "uf_5_0.5": {
+     "v_measure": 0.192,
+     "homogeneity": 0.222,
+     "completeness": 0.169,
+     "purity_grouped": 0.541,
+     "coverage": 0.511,
+     "groups": 159
+    },
+    "dist_k8": {
+     "v_measure": 0.05,
+     "homogeneity": 0.039,
+     "completeness": 0.072,
+     "purity_grouped": 0.289,
+     "coverage": 1.0,
+     "groups": 8
+    },
+    "dist_k16": {
+     "v_measure": 0.067,
+     "homogeneity": 0.057,
+     "completeness": 0.082,
+     "purity_grouped": 0.295,
+     "coverage": 1.0,
+     "groups": 16
+    },
+    "dist_k32": {
+     "v_measure": 0.113,
+     "homogeneity": 0.109,
+     "completeness": 0.118,
+     "purity_grouped": 0.313,
+     "coverage": 1.0,
+     "groups": 32
+    },
+    "wdist_k16": {
+     "v_measure": 0.084,
+     "homogeneity": 0.083,
+     "completeness": 0.086,
+     "purity_grouped": 0.289,
+     "coverage": 1.0,
+     "groups": 16
+    },
+    "wdist_k32": {
+     "v_measure": 0.101,
+     "homogeneity": 0.106,
+     "completeness": 0.096,
+     "purity_grouped": 0.305,
+     "coverage": 1.0,
+     "groups": 32
+    },
+    "wdist_k32_noaffix": {
+     "v_measure": 0.136,
+     "homogeneity": 0.15,
+     "completeness": 0.124,
+     "purity_grouped": 0.354,
+     "coverage": 1.0,
+     "groups": 32
+    }
+   }
+  },
+  {
+   "corpus": "hu_szeged",
+   "kind": "real",
+   "methods": {
+    "current": {
+     "v_measure": 0.189,
+     "homogeneity": 0.161,
+     "completeness": 0.228,
+     "purity_grouped": 0.491,
+     "coverage": 0.472,
+     "groups": 123
+    },
+    "uf_3_0.3": {
+     "v_measure": 0.218,
+     "homogeneity": 0.232,
+     "completeness": 0.206,
+     "purity_grouped": 0.548,
+     "coverage": 0.472,
+     "groups": 162
+    },
+    "uf_5_0.5": {
+     "v_measure": 0.233,
+     "homogeneity": 0.274,
+     "completeness": 0.203,
+     "purity_grouped": 0.602,
+     "coverage": 0.472,
+     "groups": 227
+    },
+    "dist_k8": {
+     "v_measure": 0.157,
+     "homogeneity": 0.129,
+     "completeness": 0.203,
+     "purity_grouped": 0.326,
+     "coverage": 1.0,
+     "groups": 8
+    },
+    "dist_k16": {
+     "v_measure": 0.204,
+     "homogeneity": 0.195,
+     "completeness": 0.214,
+     "purity_grouped": 0.399,
+     "coverage": 1.0,
+     "groups": 16
+    },
+    "dist_k32": {
+     "v_measure": 0.206,
+     "homogeneity": 0.215,
+     "completeness": 0.198,
+     "purity_grouped": 0.409,
+     "coverage": 1.0,
+     "groups": 32
+    },
+    "wdist_k16": {
+     "v_measure": 0.186,
+     "homogeneity": 0.172,
+     "completeness": 0.203,
+     "purity_grouped": 0.384,
+     "coverage": 1.0,
+     "groups": 16
+    },
+    "wdist_k32": {
+     "v_measure": 0.206,
+     "homogeneity": 0.212,
+     "completeness": 0.201,
+     "purity_grouped": 0.407,
+     "coverage": 1.0,
+     "groups": 32
+    },
+    "wdist_k32_noaffix": {
+     "v_measure": 0.256,
+     "homogeneity": 0.287,
+     "completeness": 0.232,
+     "purity_grouped": 0.479,
+     "coverage": 1.0,
+     "groups": 32
+    }
+   }
+  },
+  {
+   "corpus": "ga_idt",
+   "kind": "real",
+   "methods": {
+    "current": {
+     "v_measure": 0.17,
+     "homogeneity": 0.151,
+     "completeness": 0.196,
+     "purity_grouped": 0.572,
+     "coverage": 0.359,
+     "groups": 161
+    },
+    "uf_3_0.3": {
+     "v_measure": 0.193,
+     "homogeneity": 0.194,
+     "completeness": 0.193,
+     "purity_grouped": 0.626,
+     "coverage": 0.359,
+     "groups": 182
+    },
+    "uf_5_0.5": {
+     "v_measure": 0.201,
+     "homogeneity": 0.208,
+     "completeness": 0.194,
+     "purity_grouped": 0.664,
+     "coverage": 0.359,
+     "groups": 223
+    },
+    "dist_k8": {
+     "v_measure": 0.11,
+     "homogeneity": 0.077,
+     "completeness": 0.196,
+     "purity_grouped": 0.307,
+     "coverage": 1.0,
+     "groups": 8
+    },
+    "dist_k16": {
+     "v_measure": 0.116,
+     "homogeneity": 0.086,
+     "completeness": 0.181,
+     "purity_grouped": 0.311,
+     "coverage": 1.0,
+     "groups": 16
+    },
+    "dist_k32": {
+     "v_measure": 0.236,
+     "homogeneity": 0.232,
+     "completeness": 0.241,
+     "purity_grouped": 0.422,
+     "coverage": 1.0,
+     "groups": 32
+    },
+    "wdist_k16": {
+     "v_measure": 0.133,
+     "homogeneity": 0.102,
+     "completeness": 0.191,
+     "purity_grouped": 0.312,
+     "coverage": 1.0,
+     "groups": 16
+    },
+    "wdist_k32": {
+     "v_measure": 0.225,
+     "homogeneity": 0.208,
+     "completeness": 0.246,
+     "purity_grouped": 0.428,
+     "coverage": 1.0,
+     "groups": 32
+    },
+    "wdist_k32_noaffix": {
+     "v_measure": 0.332,
+     "homogeneity": 0.365,
+     "completeness": 0.304,
+     "purity_grouped": 0.52,
+     "coverage": 1.0,
+     "groups": 32
+    }
+   }
+  },
+  {
+   "corpus": "cy_ccg",
+   "kind": "real",
+   "methods": {
+    "current": {
+     "v_measure": 0.17,
+     "homogeneity": 0.158,
+     "completeness": 0.184,
+     "purity_grouped": 0.67,
+     "coverage": 0.356,
+     "groups": 111
+    },
+    "uf_3_0.3": {
+     "v_measure": 0.175,
+     "homogeneity": 0.172,
+     "completeness": 0.178,
+     "purity_grouped": 0.667,
+     "coverage": 0.356,
+     "groups": 120
+    },
+    "uf_5_0.5": {
+     "v_measure": 0.18,
+     "homogeneity": 0.179,
+     "completeness": 0.181,
+     "purity_grouped": 0.685,
+     "coverage": 0.356,
+     "groups": 137
+    },
+    "dist_k8": {
+     "v_measure": 0.104,
+     "homogeneity": 0.075,
+     "completeness": 0.172,
+     "purity_grouped": 0.353,
+     "coverage": 1.0,
+     "groups": 8
+    },
+    "dist_k16": {
+     "v_measure": 0.11,
+     "homogeneity": 0.083,
+     "completeness": 0.166,
+     "purity_grouped": 0.353,
+     "coverage": 1.0,
+     "groups": 16
+    },
+    "dist_k32": {
+     "v_measure": 0.199,
+     "homogeneity": 0.179,
+     "completeness": 0.224,
+     "purity_grouped": 0.429,
+     "coverage": 1.0,
+     "groups": 32
+    },
+    "wdist_k16": {
+     "v_measure": 0.23,
+     "homogeneity": 0.213,
+     "completeness": 0.251,
+     "purity_grouped": 0.451,
+     "coverage": 1.0,
+     "groups": 16
+    },
+    "wdist_k32": {
+     "v_measure": 0.229,
+     "homogeneity": 0.229,
+     "completeness": 0.23,
+     "purity_grouped": 0.456,
+     "coverage": 1.0,
+     "groups": 32
+    },
+    "wdist_k32_noaffix": {
+     "v_measure": 0.313,
+     "homogeneity": 0.363,
+     "completeness": 0.275,
+     "purity_grouped": 0.525,
+     "coverage": 1.0,
+     "groups": 32
+    }
+   }
+  },
+  {
+   "corpus": "id_gsd",
+   "kind": "real",
+   "methods": {
+    "current": {
+     "v_measure": 0.183,
+     "homogeneity": 0.166,
+     "completeness": 0.203,
+     "purity_grouped": 0.401,
+     "coverage": 0.525,
+     "groups": 137
+    },
+    "uf_3_0.3": {
+     "v_measure": 0.274,
+     "homogeneity": 0.304,
+     "completeness": 0.25,
+     "purity_grouped": 0.585,
+     "coverage": 0.525,
+     "groups": 158
+    },
+    "uf_5_0.5": {
+     "v_measure": 0.279,
+     "homogeneity": 0.323,
+     "completeness": 0.246,
+     "purity_grouped": 0.607,
+     "coverage": 0.525,
+     "groups": 173
+    },
+    "dist_k8": {
+     "v_measure": 0.077,
+     "homogeneity": 0.055,
+     "completeness": 0.129,
+     "purity_grouped": 0.285,
+     "coverage": 1.0,
+     "groups": 8
+    },
+    "dist_k16": {
+     "v_measure": 0.107,
+     "homogeneity": 0.083,
+     "completeness": 0.152,
+     "purity_grouped": 0.309,
+     "coverage": 1.0,
+     "groups": 16
+    },
+    "dist_k32": {
+     "v_measure": 0.15,
+     "homogeneity": 0.143,
+     "completeness": 0.158,
+     "purity_grouped": 0.337,
+     "coverage": 1.0,
+     "groups": 32
+    },
+    "wdist_k16": {
+     "v_measure": 0.135,
+     "homogeneity": 0.124,
+     "completeness": 0.147,
+     "purity_grouped": 0.332,
+     "coverage": 1.0,
+     "groups": 16
+    },
+    "wdist_k32": {
+     "v_measure": 0.161,
+     "homogeneity": 0.161,
+     "completeness": 0.162,
+     "purity_grouped": 0.357,
+     "coverage": 1.0,
+     "groups": 32
+    },
+    "wdist_k32_noaffix": {
+     "v_measure": 0.169,
+     "homogeneity": 0.183,
+     "completeness": 0.157,
+     "purity_grouped": 0.361,
+     "coverage": 1.0,
+     "groups": 32
+    }
+   }
+  },
+  {
+   "corpus": "es_ancora",
+   "kind": "real",
+   "methods": {
+    "current": {
+     "v_measure": 0.17,
+     "homogeneity": 0.139,
+     "completeness": 0.219,
+     "purity_grouped": 0.417,
+     "coverage": 0.444,
+     "groups": 117
+    },
+    "uf_3_0.3": {
+     "v_measure": 0.195,
+     "homogeneity": 0.183,
+     "completeness": 0.209,
+     "purity_grouped": 0.446,
+     "coverage": 0.444,
+     "groups": 138
+    },
+    "uf_5_0.5": {
+     "v_measure": 0.249,
+     "homogeneity": 0.269,
+     "completeness": 0.231,
+     "purity_grouped": 0.618,
+     "coverage": 0.444,
+     "groups": 188
+    },
+    "dist_k8": {
+     "v_measure": 0.125,
+     "homogeneity": 0.091,
+     "completeness": 0.201,
+     "purity_grouped": 0.287,
+     "coverage": 1.0,
+     "groups": 8
+    },
+    "dist_k16": {
+     "v_measure": 0.28,
+     "homogeneity": 0.247,
+     "completeness": 0.324,
+     "purity_grouped": 0.468,
+     "coverage": 1.0,
+     "groups": 16
+    },
+    "dist_k32": {
+     "v_measure": 0.3,
+     "homogeneity": 0.29,
+     "completeness": 0.311,
+     "purity_grouped": 0.516,
+     "coverage": 1.0,
+     "groups": 32
+    },
+    "wdist_k16": {
+     "v_measure": 0.165,
+     "homogeneity": 0.133,
+     "completeness": 0.219,
+     "purity_grouped": 0.326,
+     "coverage": 1.0,
+     "groups": 16
+    },
+    "wdist_k32": {
+     "v_measure": 0.167,
+     "homogeneity": 0.142,
+     "completeness": 0.204,
+     "purity_grouped": 0.328,
+     "coverage": 1.0,
+     "groups": 32
+    },
+    "wdist_k32_noaffix": {
+     "v_measure": 0.396,
+     "homogeneity": 0.436,
+     "completeness": 0.363,
+     "purity_grouped": 0.612,
+     "coverage": 1.0,
+     "groups": 32
+    }
+   }
+  },
+  {
+   "corpus": "en_ewt",
+   "kind": "real",
+   "methods": {
+    "current": {
+     "v_measure": 0.288,
+     "homogeneity": 0.241,
+     "completeness": 0.359,
+     "purity_grouped": 0.582,
+     "coverage": 0.445,
+     "groups": 77
+    },
+    "uf_3_0.3": {
+     "v_measure": 0.292,
+     "homogeneity": 0.248,
+     "completeness": 0.355,
+     "purity_grouped": 0.592,
+     "coverage": 0.445,
+     "groups": 79
+    },
+    "uf_5_0.5": {
+     "v_measure": 0.299,
+     "homogeneity": 0.277,
+     "completeness": 0.325,
+     "purity_grouped": 0.655,
+     "coverage": 0.445,
+     "groups": 101
+    },
+    "dist_k8": {
+     "v_measure": 0.111,
+     "homogeneity": 0.077,
+     "completeness": 0.203,
+     "purity_grouped": 0.22,
+     "coverage": 1.0,
+     "groups": 8
+    },
+    "dist_k16": {
+     "v_measure": 0.207,
+     "homogeneity": 0.177,
+     "completeness": 0.251,
+     "purity_grouped": 0.292,
+     "coverage": 1.0,
+     "groups": 16
+    },
+    "dist_k32": {
+     "v_measure": 0.329,
+     "homogeneity": 0.329,
+     "completeness": 0.328,
+     "purity_grouped": 0.466,
+     "coverage": 1.0,
+     "groups": 32
+    },
+    "wdist_k16": {
+     "v_measure": 0.198,
+     "homogeneity": 0.16,
+     "completeness": 0.258,
+     "purity_grouped": 0.303,
+     "coverage": 1.0,
+     "groups": 16
+    },
+    "wdist_k32": {
+     "v_measure": 0.295,
+     "homogeneity": 0.271,
+     "completeness": 0.323,
+     "purity_grouped": 0.42,
+     "coverage": 1.0,
+     "groups": 32
+    },
+    "wdist_k32_noaffix": {
+     "v_measure": 0.323,
+     "homogeneity": 0.334,
+     "completeness": 0.312,
+     "purity_grouped": 0.479,
+     "coverage": 1.0,
+     "groups": 32
+    }
+   }
+  },
+  {
+   "corpus": "wo_wtb",
+   "kind": "real",
+   "methods": {
+    "current": {
+     "v_measure": 0.172,
+     "homogeneity": 0.127,
+     "completeness": 0.263,
+     "purity_grouped": 0.532,
+     "coverage": 0.345,
+     "groups": 54
+    },
+    "uf_3_0.3": {
+     "v_measure": 0.182,
+     "homogeneity": 0.14,
+     "completeness": 0.258,
+     "purity_grouped": 0.565,
+     "coverage": 0.345,
+     "groups": 59
+    },
+    "uf_5_0.5": {
+     "v_measure": 0.213,
+     "homogeneity": 0.191,
+     "completeness": 0.242,
+     "purity_grouped": 0.674,
+     "coverage": 0.345,
+     "groups": 81
+    },
+    "dist_k8": {
+     "v_measure": 0.052,
+     "homogeneity": 0.032,
+     "completeness": 0.139,
+     "purity_grouped": 0.219,
+     "coverage": 1.0,
+     "groups": 8
+    },
+    "dist_k16": {
+     "v_measure": 0.132,
+     "homogeneity": 0.107,
+     "completeness": 0.173,
+     "purity_grouped": 0.281,
+     "coverage": 1.0,
+     "groups": 16
+    },
+    "dist_k32": {
+     "v_measure": 0.202,
+     "homogeneity": 0.186,
+     "completeness": 0.22,
+     "purity_grouped": 0.349,
+     "coverage": 1.0,
+     "groups": 32
+    },
+    "wdist_k16": {
+     "v_measure": 0.184,
+     "homogeneity": 0.151,
+     "completeness": 0.236,
+     "purity_grouped": 0.288,
+     "coverage": 1.0,
+     "groups": 16
+    },
+    "wdist_k32": {
+     "v_measure": 0.245,
+     "homogeneity": 0.238,
+     "completeness": 0.252,
+     "purity_grouped": 0.439,
+     "coverage": 1.0,
+     "groups": 32
+    },
+    "wdist_k32_noaffix": {
+     "v_measure": 0.33,
+     "homogeneity": 0.363,
+     "completeness": 0.302,
+     "purity_grouped": 0.513,
+     "coverage": 1.0,
+     "groups": 32
+    }
+   }
+  },
+  {
+   "corpus": "de_gsd",
+   "kind": "real",
+   "methods": {
+    "current": {
+     "v_measure": 0.254,
+     "homogeneity": 0.224,
+     "completeness": 0.294,
+     "purity_grouped": 0.504,
+     "coverage": 0.491,
+     "groups": 62
+    },
+    "uf_3_0.3": {
+     "v_measure": 0.286,
+     "homogeneity": 0.267,
+     "completeness": 0.307,
+     "purity_grouped": 0.59,
+     "coverage": 0.491,
+     "groups": 64
+    },
+    "uf_5_0.5": {
+     "v_measure": 0.295,
+     "homogeneity": 0.294,
+     "completeness": 0.296,
+     "purity_grouped": 0.651,
+     "coverage": 0.491,
+     "groups": 73
+    },
+    "dist_k8": {
+     "v_measure": 0.074,
+     "homogeneity": 0.049,
+     "completeness": 0.146,
+     "purity_grouped": 0.22,
+     "coverage": 1.0,
+     "groups": 8
+    },
+    "dist_k16": {
+     "v_measure": 0.138,
+     "homogeneity": 0.105,
+     "completeness": 0.201,
+     "purity_grouped": 0.241,
+     "coverage": 1.0,
+     "groups": 16
+    },
+    "dist_k32": {
+     "v_measure": 0.196,
+     "homogeneity": 0.173,
+     "completeness": 0.227,
+     "purity_grouped": 0.332,
+     "coverage": 1.0,
+     "groups": 32
+    },
+    "wdist_k16": {
+     "v_measure": 0.212,
+     "homogeneity": 0.185,
+     "completeness": 0.248,
+     "purity_grouped": 0.307,
+     "coverage": 1.0,
+     "groups": 16
+    },
+    "wdist_k32": {
+     "v_measure": 0.277,
+     "homogeneity": 0.271,
+     "completeness": 0.284,
+     "purity_grouped": 0.388,
+     "coverage": 1.0,
+     "groups": 32
+    },
+    "wdist_k32_noaffix": {
+     "v_measure": 0.348,
+     "homogeneity": 0.379,
+     "completeness": 0.322,
+     "purity_grouped": 0.485,
+     "coverage": 1.0,
+     "groups": 32
+    }
+   }
+  },
+  {
+   "corpus": "sv_talbanken",
+   "kind": "real",
+   "methods": {
+    "current": {
+     "v_measure": 0.197,
+     "homogeneity": 0.165,
+     "completeness": 0.243,
+     "purity_grouped": 0.62,
+     "coverage": 0.43,
+     "groups": 64
+    },
+    "uf_3_0.3": {
+     "v_measure": 0.207,
+     "homogeneity": 0.179,
+     "completeness": 0.244,
+     "purity_grouped": 0.629,
+     "coverage": 0.43,
+     "groups": 66
+    },
+    "uf_5_0.5": {
+     "v_measure": 0.246,
+     "homogeneity": 0.251,
+     "completeness": 0.242,
+     "purity_grouped": 0.747,
+     "coverage": 0.43,
+     "groups": 91
+    },
+    "dist_k8": {
+     "v_measure": 0.168,
+     "homogeneity": 0.128,
+     "completeness": 0.242,
+     "purity_grouped": 0.359,
+     "coverage": 1.0,
+     "groups": 8
+    },
+    "dist_k16": {
+     "v_measure": 0.248,
+     "homogeneity": 0.232,
+     "completeness": 0.265,
+     "purity_grouped": 0.445,
+     "coverage": 1.0,
+     "groups": 16
+    },
+    "dist_k32": {
+     "v_measure": 0.262,
+     "homogeneity": 0.263,
+     "completeness": 0.261,
+     "purity_grouped": 0.463,
+     "coverage": 1.0,
+     "groups": 32
+    },
+    "wdist_k16": {
+     "v_measure": 0.242,
+     "homogeneity": 0.226,
+     "completeness": 0.261,
+     "purity_grouped": 0.434,
+     "coverage": 1.0,
+     "groups": 16
+    },
+    "wdist_k32": {
+     "v_measure": 0.273,
+     "homogeneity": 0.284,
+     "completeness": 0.262,
+     "purity_grouped": 0.471,
+     "coverage": 1.0,
+     "groups": 32
+    },
+    "wdist_k32_noaffix": {
+     "v_measure": 0.281,
+     "homogeneity": 0.309,
+     "completeness": 0.257,
+     "purity_grouped": 0.49,
+     "coverage": 1.0,
+     "groups": 32
+    }
+   }
+  },
+  {
+   "corpus": "pl_pdb",
+   "kind": "real",
+   "methods": {
+    "current": {
+     "v_measure": 0.286,
+     "homogeneity": 0.229,
+     "completeness": 0.384,
+     "purity_grouped": 0.651,
+     "coverage": 0.505,
+     "groups": 14
+    },
+    "uf_3_0.3": {
+     "v_measure": 0.286,
+     "homogeneity": 0.229,
+     "completeness": 0.384,
+     "purity_grouped": 0.651,
+     "coverage": 0.505,
+     "groups": 14
+    },
+    "uf_5_0.5": {
+     "v_measure": 0.294,
+     "homogeneity": 0.308,
+     "completeness": 0.28,
+     "purity_grouped": 0.732,
+     "coverage": 0.505,
+     "groups": 28
+    },
+    "dist_k8": {
+     "v_measure": 0.281,
+     "homogeneity": 0.272,
+     "completeness": 0.291,
+     "purity_grouped": 0.579,
+     "coverage": 1.0,
+     "groups": 8
+    },
+    "dist_k16": {
+     "v_measure": 0.307,
+     "homogeneity": 0.338,
+     "completeness": 0.282,
+     "purity_grouped": 0.618,
+     "coverage": 1.0,
+     "groups": 16
+    },
+    "dist_k32": {
+     "v_measure": 0.309,
+     "homogeneity": 0.397,
+     "completeness": 0.253,
+     "purity_grouped": 0.635,
+     "coverage": 1.0,
+     "groups": 32
+    },
+    "wdist_k16": {
+     "v_measure": 0.268,
+     "homogeneity": 0.286,
+     "completeness": 0.252,
+     "purity_grouped": 0.591,
+     "coverage": 1.0,
+     "groups": 16
+    },
+    "wdist_k32": {
+     "v_measure": 0.367,
+     "homogeneity": 0.477,
+     "completeness": 0.298,
+     "purity_grouped": 0.707,
+     "coverage": 1.0,
+     "groups": 32
+    },
+    "wdist_k32_noaffix": {
+     "v_measure": 0.358,
+     "homogeneity": 0.478,
+     "completeness": 0.286,
+     "purity_grouped": 0.72,
+     "coverage": 1.0,
+     "groups": 32
+    }
+   }
+  },
+  {
+   "corpus": "cs_cac",
+   "kind": "real",
+   "methods": {
+    "current": {
+     "v_measure": 0.214,
+     "homogeneity": 0.156,
+     "completeness": 0.342,
+     "purity_grouped": 0.539,
+     "coverage": 0.611,
+     "groups": 23
+    },
+    "uf_3_0.3": {
+     "v_measure": 0.215,
+     "homogeneity": 0.173,
+     "completeness": 0.285,
+     "purity_grouped": 0.565,
+     "coverage": 0.611,
+     "groups": 31
+    },
+    "uf_5_0.5": {
+     "v_measure": 0.269,
+     "homogeneity": 0.293,
+     "completeness": 0.249,
+     "purity_grouped": 0.688,
+     "coverage": 0.611,
+     "groups": 70
+    },
+    "dist_k8": {
+     "v_measure": 0.181,
+     "homogeneity": 0.158,
+     "completeness": 0.212,
+     "purity_grouped": 0.442,
+     "coverage": 1.0,
+     "groups": 8
+    },
+    "dist_k16": {
+     "v_measure": 0.21,
+     "homogeneity": 0.202,
+     "completeness": 0.218,
+     "purity_grouped": 0.459,
+     "coverage": 1.0,
+     "groups": 16
+    },
+    "dist_k32": {
+     "v_measure": 0.224,
+     "homogeneity": 0.255,
+     "completeness": 0.2,
+     "purity_grouped": 0.522,
+     "coverage": 1.0,
+     "groups": 32
+    },
+    "wdist_k16": {
+     "v_measure": 0.225,
+     "homogeneity": 0.238,
+     "completeness": 0.212,
+     "purity_grouped": 0.502,
+     "coverage": 1.0,
+     "groups": 16
+    },
+    "wdist_k32": {
+     "v_measure": 0.237,
+     "homogeneity": 0.276,
+     "completeness": 0.208,
+     "purity_grouped": 0.537,
+     "coverage": 1.0,
+     "groups": 32
+    },
+    "wdist_k32_noaffix": {
+     "v_measure": 0.174,
+     "homogeneity": 0.196,
+     "completeness": 0.156,
+     "purity_grouped": 0.457,
+     "coverage": 1.0,
+     "groups": 32
+    }
+   }
+  },
+  {
+   "corpus": "it_isdt",
+   "kind": "real",
+   "methods": {
+    "current": {
+     "v_measure": 0.171,
+     "homogeneity": 0.13,
+     "completeness": 0.25,
+     "purity_grouped": 0.404,
+     "coverage": 0.373,
+     "groups": 77
+    },
+    "uf_3_0.3": {
+     "v_measure": 0.168,
+     "homogeneity": 0.14,
+     "completeness": 0.21,
+     "purity_grouped": 0.396,
+     "coverage": 0.373,
+     "groups": 87
+    },
+    "uf_5_0.5": {
+     "v_measure": 0.203,
+     "homogeneity": 0.192,
+     "completeness": 0.216,
+     "purity_grouped": 0.501,
+     "coverage": 0.373,
+     "groups": 130
+    },
+    "dist_k8": {
+     "v_measure": 0.255,
+     "homogeneity": 0.213,
+     "completeness": 0.317,
+     "purity_grouped": 0.423,
+     "coverage": 1.0,
+     "groups": 8
+    },
+    "dist_k16": {
+     "v_measure": 0.305,
+     "homogeneity": 0.288,
+     "completeness": 0.324,
+     "purity_grouped": 0.505,
+     "coverage": 1.0,
+     "groups": 16
+    },
+    "dist_k32": {
+     "v_measure": 0.316,
+     "homogeneity": 0.323,
+     "completeness": 0.309,
+     "purity_grouped": 0.527,
+     "coverage": 1.0,
+     "groups": 32
+    },
+    "wdist_k16": {
+     "v_measure": 0.21,
+     "homogeneity": 0.184,
+     "completeness": 0.243,
+     "purity_grouped": 0.364,
+     "coverage": 1.0,
+     "groups": 16
+    },
+    "wdist_k32": {
+     "v_measure": 0.223,
+     "homogeneity": 0.21,
+     "completeness": 0.237,
+     "purity_grouped": 0.371,
+     "coverage": 1.0,
+     "groups": 32
+    },
+    "wdist_k32_noaffix": {
+     "v_measure": 0.408,
+     "homogeneity": 0.446,
+     "completeness": 0.375,
+     "purity_grouped": 0.605,
+     "coverage": 1.0,
+     "groups": 32
+    }
+   }
+  },
+  {
+   "corpus": "fa_seraji",
+   "kind": "real",
+   "methods": {
+    "current": {
+     "v_measure": 0.26,
+     "homogeneity": 0.217,
+     "completeness": 0.325,
+     "purity_grouped": 0.737,
+     "coverage": 0.36,
+     "groups": 43
+    },
+    "uf_3_0.3": {
+     "v_measure": 0.26,
+     "homogeneity": 0.22,
+     "completeness": 0.319,
+     "purity_grouped": 0.737,
+     "coverage": 0.36,
+     "groups": 44
+    },
+    "uf_5_0.5": {
+     "v_measure": 0.263,
+     "homogeneity": 0.228,
+     "completeness": 0.311,
+     "purity_grouped": 0.741,
+     "coverage": 0.36,
+     "groups": 49
+    },
+    "dist_k8": {
+     "v_measure": 0.227,
+     "homogeneity": 0.171,
+     "completeness": 0.336,
+     "purity_grouped": 0.418,
+     "coverage": 1.0,
+     "groups": 8
+    },
+    "dist_k16": {
+     "v_measure": 0.24,
+     "homogeneity": 0.198,
+     "completeness": 0.304,
+     "purity_grouped": 0.426,
+     "coverage": 1.0,
+     "groups": 16
+    },
+    "dist_k32": {
+     "v_measure": 0.289,
+     "homogeneity": 0.304,
+     "completeness": 0.276,
+     "purity_grouped": 0.449,
+     "coverage": 1.0,
+     "groups": 32
+    },
+    "wdist_k16": {
+     "v_measure": 0.282,
+     "homogeneity": 0.279,
+     "completeness": 0.285,
+     "purity_grouped": 0.451,
+     "coverage": 1.0,
+     "groups": 16
+    },
+    "wdist_k32": {
+     "v_measure": 0.329,
+     "homogeneity": 0.368,
+     "completeness": 0.297,
+     "purity_grouped": 0.515,
+     "coverage": 1.0,
+     "groups": 32
+    },
+    "wdist_k32_noaffix": {
+     "v_measure": 0.297,
+     "homogeneity": 0.335,
+     "completeness": 0.268,
+     "purity_grouped": 0.495,
+     "coverage": 1.0,
+     "groups": 32
+    }
+   }
+  },
+  {
+   "corpus": "hi_hdtb",
+   "kind": "real",
+   "methods": {
+    "current": {
+     "v_measure": 0.101,
+     "homogeneity": 0.068,
+     "completeness": 0.2,
+     "purity_grouped": 0.603,
+     "coverage": 0.165,
+     "groups": 35
+    },
+    "uf_3_0.3": {
+     "v_measure": 0.131,
+     "homogeneity": 0.09,
+     "completeness": 0.237,
+     "purity_grouped": 0.732,
+     "coverage": 0.165,
+     "groups": 36
+    },
+    "uf_5_0.5": {
+     "v_measure": 0.133,
+     "homogeneity": 0.095,
+     "completeness": 0.222,
+     "purity_grouped": 0.737,
+     "coverage": 0.165,
+     "groups": 47
+    },
+    "dist_k8": {
+     "v_measure": 0.239,
+     "homogeneity": 0.196,
+     "completeness": 0.306,
+     "purity_grouped": 0.392,
+     "coverage": 1.0,
+     "groups": 8
+    },
+    "dist_k16": {
+     "v_measure": 0.239,
+     "homogeneity": 0.202,
+     "completeness": 0.292,
+     "purity_grouped": 0.437,
+     "coverage": 1.0,
+     "groups": 16
+    },
+    "dist_k32": {
+     "v_measure": 0.324,
+     "homogeneity": 0.347,
+     "completeness": 0.305,
+     "purity_grouped": 0.507,
+     "coverage": 1.0,
+     "groups": 32
+    },
+    "wdist_k16": {
+     "v_measure": 0.301,
+     "homogeneity": 0.264,
+     "completeness": 0.351,
+     "purity_grouped": 0.47,
+     "coverage": 1.0,
+     "groups": 16
+    },
+    "wdist_k32": {
+     "v_measure": 0.365,
+     "homogeneity": 0.399,
+     "completeness": 0.336,
+     "purity_grouped": 0.546,
+     "coverage": 1.0,
+     "groups": 32
+    },
+    "wdist_k32_noaffix": {
+     "v_measure": 0.341,
+     "homogeneity": 0.383,
+     "completeness": 0.307,
+     "purity_grouped": 0.539,
+     "coverage": 1.0,
+     "groups": 32
+    }
+   }
+  },
+  {
+   "corpus": "et_edt",
+   "kind": "real",
+   "methods": {
+    "current": {
+     "v_measure": 0.126,
+     "homogeneity": 0.104,
+     "completeness": 0.162,
+     "purity_grouped": 0.39,
+     "coverage": 0.541,
+     "groups": 85
+    },
+    "uf_3_0.3": {
+     "v_measure": 0.198,
+     "homogeneity": 0.209,
+     "completeness": 0.189,
+     "purity_grouped": 0.525,
+     "coverage": 0.541,
+     "groups": 106
+    },
+    "uf_5_0.5": {
+     "v_measure": 0.216,
+     "homogeneity": 0.253,
+     "completeness": 0.188,
+     "purity_grouped": 0.552,
+     "coverage": 0.541,
+     "groups": 144
+    },
+    "dist_k8": {
+     "v_measure": 0.106,
+     "homogeneity": 0.082,
+     "completeness": 0.151,
+     "purity_grouped": 0.339,
+     "coverage": 1.0,
+     "groups": 8
+    },
+    "dist_k16": {
+     "v_measure": 0.126,
+     "homogeneity": 0.11,
+     "completeness": 0.148,
+     "purity_grouped": 0.352,
+     "coverage": 1.0,
+     "groups": 16
+    },
+    "dist_k32": {
+     "v_measure": 0.139,
+     "homogeneity": 0.13,
+     "completeness": 0.15,
+     "purity_grouped": 0.359,
+     "coverage": 1.0,
+     "groups": 32
+    },
+    "wdist_k16": {
+     "v_measure": 0.122,
+     "homogeneity": 0.111,
+     "completeness": 0.135,
+     "purity_grouped": 0.33,
+     "coverage": 1.0,
+     "groups": 16
+    },
+    "wdist_k32": {
+     "v_measure": 0.143,
+     "homogeneity": 0.151,
+     "completeness": 0.135,
+     "purity_grouped": 0.362,
+     "coverage": 1.0,
+     "groups": 32
+    },
+    "wdist_k32_noaffix": {
+     "v_measure": 0.13,
+     "homogeneity": 0.139,
+     "completeness": 0.123,
+     "purity_grouped": 0.338,
+     "coverage": 1.0,
+     "groups": 32
+    }
+   }
+  },
+  {
+   "corpus": "ar_padt",
+   "kind": "real",
+   "methods": {
+    "current": {
+     "v_measure": 0.197,
+     "homogeneity": 0.148,
+     "completeness": 0.292,
+     "purity_grouped": 0.614,
+     "coverage": 0.492,
+     "groups": 59
+    },
+    "uf_3_0.3": {
+     "v_measure": 0.203,
+     "homogeneity": 0.169,
+     "completeness": 0.254,
+     "purity_grouped": 0.629,
+     "coverage": 0.492,
+     "groups": 86
+    },
+    "uf_5_0.5": {
+     "v_measure": 0.253,
+     "homogeneity": 0.258,
+     "completeness": 0.248,
+     "purity_grouped": 0.705,
+     "coverage": 0.492,
+     "groups": 105
+    },
+    "dist_k8": {
+     "v_measure": 0.196,
+     "homogeneity": 0.16,
+     "completeness": 0.255,
+     "purity_grouped": 0.433,
+     "coverage": 1.0,
+     "groups": 8
+    },
+    "dist_k16": {
+     "v_measure": 0.206,
+     "homogeneity": 0.187,
+     "completeness": 0.23,
+     "purity_grouped": 0.453,
+     "coverage": 1.0,
+     "groups": 16
+    },
+    "dist_k32": {
+     "v_measure": 0.305,
+     "homogeneity": 0.352,
+     "completeness": 0.269,
+     "purity_grouped": 0.588,
+     "coverage": 1.0,
+     "groups": 32
+    },
+    "wdist_k16": {
+     "v_measure": 0.291,
+     "homogeneity": 0.29,
+     "completeness": 0.292,
+     "purity_grouped": 0.565,
+     "coverage": 1.0,
+     "groups": 16
+    },
+    "wdist_k32": {
+     "v_measure": 0.308,
+     "homogeneity": 0.331,
+     "completeness": 0.288,
+     "purity_grouped": 0.585,
+     "coverage": 1.0,
+     "groups": 32
+    },
+    "wdist_k32_noaffix": {
+     "v_measure": 0.322,
+     "homogeneity": 0.377,
+     "completeness": 0.28,
+     "purity_grouped": 0.589,
+     "coverage": 1.0,
+     "groups": 32
+    }
+   }
+  },
+  {
+   "corpus": "lv_lvtb",
+   "kind": "real",
+   "methods": {
+    "current": {
+     "v_measure": 0.088,
+     "homogeneity": 0.066,
+     "completeness": 0.132,
+     "purity_grouped": 0.401,
+     "coverage": 0.536,
+     "groups": 48
+    },
+    "uf_3_0.3": {
+     "v_measure": 0.096,
+     "homogeneity": 0.074,
+     "completeness": 0.133,
+     "purity_grouped": 0.41,
+     "coverage": 0.536,
+     "groups": 52
+    },
+    "uf_5_0.5": {
+     "v_measure": 0.146,
+     "homogeneity": 0.137,
+     "completeness": 0.155,
+     "purity_grouped": 0.498,
+     "coverage": 0.536,
+     "groups": 100
+    },
+    "dist_k8": {
+     "v_measure": 0.123,
+     "homogeneity": 0.1,
+     "completeness": 0.16,
+     "purity_grouped": 0.314,
+     "coverage": 1.0,
+     "groups": 8
+    },
+    "dist_k16": {
+     "v_measure": 0.139,
+     "homogeneity": 0.135,
+     "completeness": 0.142,
+     "purity_grouped": 0.329,
+     "coverage": 1.0,
+     "groups": 16
+    },
+    "dist_k32": {
+     "v_measure": 0.179,
+     "homogeneity": 0.191,
+     "completeness": 0.169,
+     "purity_grouped": 0.367,
+     "coverage": 1.0,
+     "groups": 32
+    },
+    "wdist_k16": {
+     "v_measure": 0.113,
+     "homogeneity": 0.101,
+     "completeness": 0.127,
+     "purity_grouped": 0.319,
+     "coverage": 1.0,
+     "groups": 16
+    },
+    "wdist_k32": {
+     "v_measure": 0.14,
+     "homogeneity": 0.146,
+     "completeness": 0.135,
+     "purity_grouped": 0.338,
+     "coverage": 1.0,
+     "groups": 32
+    },
+    "wdist_k32_noaffix": {
+     "v_measure": 0.169,
+     "homogeneity": 0.181,
+     "completeness": 0.158,
+     "purity_grouped": 0.359,
+     "coverage": 1.0,
+     "groups": 32
+    }
+   }
+  }
+ ]
+}

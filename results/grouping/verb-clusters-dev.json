@@ -1,0 +1,250 @@
+{
+ "note": "開発用",
+ "rows": [
+  {
+   "corpus": "KES-0-C",
+   "kind": "synthetic",
+   "verb_majority_clusters": 5,
+   "verb_tokens_in_verb_majority_clusters": 1.0,
+   "selected_verb_share": 0.0
+  },
+  {
+   "corpus": "KES-1-C",
+   "kind": "synthetic",
+   "verb_majority_clusters": 3,
+   "verb_tokens_in_verb_majority_clusters": 1.0,
+   "selected_verb_share": 0.0
+  },
+  {
+   "corpus": "KES-2-C",
+   "kind": "synthetic",
+   "verb_majority_clusters": 3,
+   "verb_tokens_in_verb_majority_clusters": 1.0,
+   "selected_verb_share": 0.0
+  },
+  {
+   "corpus": "KES-3-C",
+   "kind": "synthetic",
+   "verb_majority_clusters": 2,
+   "verb_tokens_in_verb_majority_clusters": 1.0,
+   "selected_verb_share": 0.0
+  },
+  {
+   "corpus": "KES-4-C",
+   "kind": "synthetic",
+   "verb_majority_clusters": 3,
+   "verb_tokens_in_verb_majority_clusters": 1.0,
+   "selected_verb_share": 0.0
+  },
+  {
+   "corpus": "UMB-0-C",
+   "kind": "synthetic",
+   "verb_majority_clusters": 5,
+   "verb_tokens_in_verb_majority_clusters": 1.0,
+   "selected_verb_share": 0.863
+  },
+  {
+   "corpus": "UMB-1-C",
+   "kind": "synthetic",
+   "verb_majority_clusters": 1,
+   "verb_tokens_in_verb_majority_clusters": 0.885,
+   "selected_verb_share": 0.0
+  },
+  {
+   "corpus": "UMB-2-C",
+   "kind": "synthetic",
+   "verb_majority_clusters": 7,
+   "verb_tokens_in_verb_majority_clusters": 1.0,
+   "selected_verb_share": 0.654
+  },
+  {
+   "corpus": "UMB-3-C",
+   "kind": "synthetic",
+   "verb_majority_clusters": 4,
+   "verb_tokens_in_verb_majority_clusters": 0.996,
+   "selected_verb_share": 0.731
+  },
+  {
+   "corpus": "UMB-4-C",
+   "kind": "synthetic",
+   "verb_majority_clusters": 5,
+   "verb_tokens_in_verb_majority_clusters": 0.995,
+   "selected_verb_share": 0.0
+  },
+  {
+   "corpus": "SOT-0-C",
+   "kind": "synthetic",
+   "verb_majority_clusters": 11,
+   "verb_tokens_in_verb_majority_clusters": 0.889,
+   "selected_verb_share": 0.032
+  },
+  {
+   "corpus": "SOT-1-C",
+   "kind": "synthetic",
+   "verb_majority_clusters": 8,
+   "verb_tokens_in_verb_majority_clusters": 0.779,
+   "selected_verb_share": 0.0
+  },
+  {
+   "corpus": "SOT-2-C",
+   "kind": "synthetic",
+   "verb_majority_clusters": 9,
+   "verb_tokens_in_verb_majority_clusters": 0.74,
+   "selected_verb_share": 0.0
+  },
+  {
+   "corpus": "SOT-3-C",
+   "kind": "synthetic",
+   "verb_majority_clusters": 11,
+   "verb_tokens_in_verb_majority_clusters": 0.911,
+   "selected_verb_share": 0.0
+  },
+  {
+   "corpus": "SOT-4-C",
+   "kind": "synthetic",
+   "verb_majority_clusters": 9,
+   "verb_tokens_in_verb_majority_clusters": 0.879,
+   "selected_verb_share": 0.0
+  },
+  {
+   "corpus": "tr_imst",
+   "kind": "real",
+   "verb_majority_clusters": 5,
+   "verb_tokens_in_verb_majority_clusters": 0.278,
+   "selected_verb_share": 0.123
+  },
+  {
+   "corpus": "eu_bdt",
+   "kind": "real",
+   "verb_majority_clusters": 9,
+   "verb_tokens_in_verb_majority_clusters": 0.426,
+   "selected_verb_share": 0.369
+  },
+  {
+   "corpus": "fi_tdt",
+   "kind": "real",
+   "verb_majority_clusters": 1,
+   "verb_tokens_in_verb_majority_clusters": 0.004,
+   "selected_verb_share": 0.118
+  },
+  {
+   "corpus": "hu_szeged",
+   "kind": "real",
+   "verb_majority_clusters": 3,
+   "verb_tokens_in_verb_majority_clusters": 0.092,
+   "selected_verb_share": 0.071
+  },
+  {
+   "corpus": "ga_idt",
+   "kind": "real",
+   "verb_majority_clusters": 6,
+   "verb_tokens_in_verb_majority_clusters": 0.685,
+   "selected_verb_share": 0.018
+  },
+  {
+   "corpus": "cy_ccg",
+   "kind": "real",
+   "verb_majority_clusters": 3,
+   "verb_tokens_in_verb_majority_clusters": 0.51,
+   "selected_verb_share": 0.077
+  },
+  {
+   "corpus": "id_gsd",
+   "kind": "real",
+   "verb_majority_clusters": 8,
+   "verb_tokens_in_verb_majority_clusters": 0.37,
+   "selected_verb_share": 0.037
+  },
+  {
+   "corpus": "es_ancora",
+   "kind": "real",
+   "verb_majority_clusters": 7,
+   "verb_tokens_in_verb_majority_clusters": 0.47,
+   "selected_verb_share": 0.153
+  },
+  {
+   "corpus": "en_ewt",
+   "kind": "real",
+   "verb_majority_clusters": 5,
+   "verb_tokens_in_verb_majority_clusters": 0.419,
+   "selected_verb_share": 0.061
+  },
+  {
+   "corpus": "wo_wtb",
+   "kind": "real",
+   "verb_majority_clusters": 15,
+   "verb_tokens_in_verb_majority_clusters": 0.673,
+   "selected_verb_share": 0.983
+  },
+  {
+   "corpus": "de_gsd",
+   "kind": "real",
+   "verb_majority_clusters": 1,
+   "verb_tokens_in_verb_majority_clusters": 0.106,
+   "selected_verb_share": 0.245
+  },
+  {
+   "corpus": "sv_talbanken",
+   "kind": "real",
+   "verb_majority_clusters": 5,
+   "verb_tokens_in_verb_majority_clusters": 0.184,
+   "selected_verb_share": 0.069
+  },
+  {
+   "corpus": "pl_pdb",
+   "kind": "real",
+   "verb_majority_clusters": 5,
+   "verb_tokens_in_verb_majority_clusters": 0.673,
+   "selected_verb_share": 0.832
+  },
+  {
+   "corpus": "cs_cac",
+   "kind": "real",
+   "verb_majority_clusters": 2,
+   "verb_tokens_in_verb_majority_clusters": 0.102,
+   "selected_verb_share": 0.213
+  },
+  {
+   "corpus": "it_isdt",
+   "kind": "real",
+   "verb_majority_clusters": 7,
+   "verb_tokens_in_verb_majority_clusters": 0.286,
+   "selected_verb_share": 0.174
+  },
+  {
+   "corpus": "fa_seraji",
+   "kind": "real",
+   "verb_majority_clusters": 4,
+   "verb_tokens_in_verb_majority_clusters": 0.675,
+   "selected_verb_share": 0.827
+  },
+  {
+   "corpus": "hi_hdtb",
+   "kind": "real",
+   "verb_majority_clusters": 1,
+   "verb_tokens_in_verb_majority_clusters": 0.077,
+   "selected_verb_share": 0.313
+  },
+  {
+   "corpus": "et_edt",
+   "kind": "real",
+   "verb_majority_clusters": 3,
+   "verb_tokens_in_verb_majority_clusters": 0.089,
+   "selected_verb_share": 0.174
+  },
+  {
+   "corpus": "ar_padt",
+   "kind": "real",
+   "verb_majority_clusters": 4,
+   "verb_tokens_in_verb_majority_clusters": 0.442,
+   "selected_verb_share": 0.65
+  },
+  {
+   "corpus": "lv_lvtb",
+   "kind": "real",
+   "verb_majority_clusters": 4,
+   "verb_tokens_in_verb_majority_clusters": 0.076,
+   "selected_verb_share": 0.277
+  }
+ ]
+}

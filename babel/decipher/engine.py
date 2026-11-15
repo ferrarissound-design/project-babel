@@ -10,7 +10,7 @@ from .align import Aligner, flatten
 from .morph import Morphology
 from .variants import LACUNA, Normalizer
 
-VERSION = "1.3.0"
+VERSION = "1.4.0"
 DEFAULT_CONFIG = {
     "use_variants": True,        # 表記揺れの正規化
     "use_morph": True,           # 形態素解析
@@ -25,6 +25,7 @@ DEFAULT_CONFIG = {
     "segmentation": "transductive",  # 単語境界のない文章の分割: transductive（全文書で学習）/ inductive（train のみ）
     "segmenter": "unigram",      # 単語境界のない文章の分割方式: unigram（既定）/ transition（比較用。v1.3 の G4 の測定で使った）
     "null_gates": True,          # v1.3: 帰無対照の関門（docs/PREREG_v1.3_NULL_GATES.md）。False で v1.2.0 と同じ
+    "affix_null_alpha": 0.025,   # v1.4: 接辞の関門の片側ごとの水準（両側で Bonferroni、docs/PREREG_v1.4_MULTIPLE_TESTING.md）。0.05 で v1.3.0
 }
 
 
@@ -207,7 +208,7 @@ class Decipherer:
         self.morph_null = None
         if gates and cfg["use_morph"] and cfg["morph_method"] == "paradigm":
             # G1': 接辞が文脈（文中の位置・直前の語の接辞）と連動するかの帰無対照
-            self.morph_null = nulltest.affix_context_null(self.sents, self.infos)
+            self.morph_null = nulltest.affix_context_null(self.sents, self.infos, alpha=cfg["affix_null_alpha"])
             if not (self.morph_null["suffix"]["significant"] or self.morph_null["prefix"]["significant"]):
                 self.morph_test = dict(self.morph_test, present=False,
                                        null_control="解析された接辞が文脈と連動せず、接辞を入れ替えた対照と区別できない")

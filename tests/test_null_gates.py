@@ -46,3 +46,15 @@ def test_unspaced_abstains_on_verb_and_affix():
     assert st["verb_position"]["value"] is None and st["affix_position"]["value"] is None
     assert "G4'" in st["affix_position"].get("null_gate", "") or decipher(public, {"null_gates": False})[
         "structure"]["affix_position"]["value"] is None
+
+
+def test_affix_alpha_is_per_side_bonferroni():
+    """v1.4: 片側ごとの水準。p 値そのものは水準に依存しない。"""
+    pred = decipher(null_corpus(5, "syllable")[0], {"affix_null_alpha": 0.05})
+    mn = pred["verdict"]["morphology_null"]
+    pred14 = decipher(null_corpus(5, "syllable")[0])
+    mn14 = pred14["verdict"]["morphology_null"]
+    for side in ("suffix", "prefix"):
+        assert mn[side]["p"] == mn14[side]["p"]
+        assert mn[side]["significant"] == (mn[side]["p"] <= 0.05)
+        assert mn14[side]["significant"] == (mn14[side]["p"] <= 0.025)

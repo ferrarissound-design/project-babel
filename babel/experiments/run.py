@@ -263,7 +263,9 @@ def run_all(mode="quick", seeds=None, jobs=None, experiments=None):
                 "syntax_detected_rate": round(mean(float(bool(r["verdict"]["syntax_detected"])) for r in rs), 4),
                 "morphology_detected_rate": round(mean(float(bool(r["verdict"]["morphology_detected"])) for r in rs), 4),
                 "meaning_claims_total": sum(r["verdict"]["claims"] for r in rs),
-                "structure_claims_mean": round(mean(r["verdict"]["structure_claims"] for r in rs), 3)}
+                "structure_claims_mean": round(mean(r["verdict"]["structure_claims"] for r in rs), 3),
+                "structure_claims_all_mean": round(mean(r["verdict"]["structure_claims_all"] for r in rs), 3),
+                "structure_claims_all_runs": sum(1 for r in rs if r["verdict"]["structure_claims_all"] > 0)}
     null_out["failed"] = [r for r in nulls if not r["ok"]]
     all_runs = runs + nulls + bounds
     return {

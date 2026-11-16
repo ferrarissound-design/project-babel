@@ -145,6 +145,36 @@ def _real_language_lines():
             "|---|---|---|---|---|"] + rows + [""]
 
 
+def _parallel_lines():
+    """実在言語（PUD）の対訳つき評価の要約。results/real_parallel/ の結果ファイルから機械的に作る。"""
+    items = [("real-parallel.json", "PUD 14 言語（文の中の位置）"), ("real-parallel-v16.json", "PUD 新しい 5 言語（文の中の位置）"),
+             ("real-parallel-v17-dev.json", "PUD 14 言語（主語・目的語との前後関係）"),
+             ("real-parallel-v17.json", "PUD 新しい 5 言語（主語・目的語との前後関係）"),
+             ("real-parallel-v18.json", "PUD 19 言語（主語・目的語との前後関係、既知データ）")]
+    rows = []
+
+    def f(d):
+        return f"{d.get('correct', 0)} / {d.get('wrong', 0)} / {d.get('abstain', 0)}"
+    for name, label in items:
+        p = Path("results/real_parallel") / name
+        if not p.exists():
+            continue
+        res = json.loads(p.read_text(encoding="utf-8"))
+        s = res["summary"]
+        versions = sorted({k.split(":")[0] for k in s if k.count(":") == 2}) or [f"v{res.get('engine_version', '?')}"]
+        for v in versions:
+            pre = "" if not any(k.count(":") == 2 for k in s) else v + ":"
+            rows.append(f"| {label} | {v} | {f(s.get(pre + '100%:verb_position', {}))} | "
+                        f"{f(s.get(pre + '100%-mismatch:verb_position', {}))} | {f(s.get(pre + '100%:so_order', {}))} |")
+    if not rows:
+        return []
+    return ["### 実在言語での評価（対訳あり、Parallel UD を換字）", "",
+            "対訳は英語 PUD の注釈から機械的に作る。正解は対象の言語の注釈から作る。詳細は docs/REAL_PARALLEL_RESULTS.md と "
+            "docs/SYNTHESIS_v1.2-v1.8.md。主語と目的語の順序の正解は、すべての言語で SO（単純な方法と区別できない、#101）。", "",
+            "| 言語のセット | 解読器 | 動詞の位置（100%） | 動詞の位置（ずらした対訳） | 主語と目的語の順序（100%） |",
+            "|---|---|---|---|---|"] + rows + ["", "（正解 / 誤答 / 保留）", ""]
+
+
 def report_markdown(results, card, ext_scores, limits, legacy_scores=()):
     """研究報告書（Markdown）。数値はすべて results から機械的に埋める（手書きの転記をしない）。"""
     conds = {c["label"]: c for c in results["conditions"]}
@@ -177,9 +207,11 @@ def report_markdown(results, card, ext_scores, limits, legacy_scores=()):
     main_rows = [("levelA", "LEVEL A"), ("levelB", "LEVEL B"), ("levelC", "LEVEL C"),
                  ("levelA:no_totals", "LEVEL A 合計行なし"), ("levelC:no_totals", "LEVEL C 合計行なし")]
     L += tab(main_rows, keys, names) + [""]
-    L += ["「動詞位置」「接辞側」「基数」は、正解の割合（保留は正解に数えない）。v1.5.0 は、対訳による証拠がなければ動詞の位置を"
-          "主張しないので、対訳のない水準（LEVEL B・C）では 0 になる。v1.4.0 以前の報告書の値（約 0.95）とは、主張の方針が違う"
-          "（問題記録 #94・#98、docs/PREREG_v1.5_VERB_EVIDENCE.md）。", ""]
+    L += ["「動詞位置」「接辞側」「基数」は、正解の割合（保留は正解に数えない）。v1.5.0 以降は、対訳による証拠がなければ動詞の位置を"
+          "主張しないので、対訳のない水準（LEVEL B・C）では 0 になる（問題記録 #94・#98、docs/PREREG_v1.5_VERB_EVIDENCE.md）。"
+          "LEVEL A でも、v1.6.0 以降は、対訳を入れ替えた対照と区別できない動詞の位置を保留にする（#100、"
+          "docs/PREREG_v1.6_ALIGNMENT_NULL.md）。v1.4.0 以前の報告書の値（LEVEL A 約 0.97、LEVEL B・C 約 0.95）とは、主張の方針が違う。"
+          "版ごとの変更は docs/SYNTHESIS_v1.2-v1.8.md。", ""]
     keys2 = ["lexicon_precision", "lexicon_claimed", "gloss_correct", "gloss_wrong", "gloss_abstain", "overclaims"]
     names2 = ["語彙主張の適合率", "主張語数", "語釈 正解", "語釈 誤答", "語釈 判定不能", "過剰主張(件)"]
     L += tab(main_rows, keys2, names2) + [""]
@@ -271,6 +303,7 @@ def report_markdown(results, card, ext_scores, limits, legacy_scores=()):
         L += ["**独立した初見テストは未評価。** 上の表にあるのは、解読器と同じAIが解読器の凍結後に作った系統（準初見）だけで、"
               "独立テストの代わりにはならない。第三者が作ったコーパスを `external/inbox/` に投入すると評価される。", ""]
     L += _real_language_lines()
+    L += _parallel_lines()
     L += ["## 9. 採点（100点満点、算出式は事前登録）", "", "| 項目 | 得点 | 配点 | 状態 |", "|---|---|---|---|"]
     L += [f"| {i['name']} | {'未評価' if i['points'] is None else i['points']} | {i['max']} | {i['status']} |" for i in card["items"]]
     L += ["", f"**内部テスト: {card['internal_points']} / {card['evaluated_max']} 点**（未評価の配点 {card['unevaluated_max']} 点を除く）。"

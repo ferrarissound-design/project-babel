@@ -1,0 +1,2158 @@
+{
+ "split": "dev17",
+ "seeds": [
+  0,
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10,
+  11,
+  12,
+  13,
+  14,
+  15,
+  16,
+  17,
+  18,
+  19
+ ],
+ "seconds": 191.9,
+ "summary": {
+  "v1.6:matched": {
+   "runs": 60,
+   "runs_with_claim": 58,
+   "counts": {
+    "correct": 87,
+    "abstain": 92,
+    "wrong": 1
+   },
+   "by_key": {
+    "verb_position": {
+     "correct": 47,
+     "abstain": 13
+    },
+    "so_order": {
+     "correct": 39,
+     "abstain": 20,
+     "wrong": 1
+    },
+    "adj_noun": {
+     "abstain": 59,
+     "correct": 1
+    }
+   }
+  },
+  "v1.7:matched": {
+   "runs": 60,
+   "runs_with_claim": 58,
+   "counts": {
+    "correct": 89,
+    "abstain": 90,
+    "wrong": 1
+   },
+   "by_key": {
+    "verb_position": {
+     "correct": 49,
+     "abstain": 11
+    },
+    "so_order": {
+     "correct": 39,
+     "abstain": 20,
+     "wrong": 1
+    },
+    "adj_noun": {
+     "abstain": 59,
+     "correct": 1
+    }
+   }
+  },
+  "v1.6:mismatch": {
+   "runs": 60,
+   "runs_with_claim": 3,
+   "counts": {
+    "abstain": 177,
+    "correct": 3
+   },
+   "by_key": {
+    "verb_position": {
+     "abstain": 57,
+     "correct": 3
+    },
+    "so_order": {
+     "abstain": 60
+    },
+    "adj_noun": {
+     "abstain": 60
+    }
+   }
+  },
+  "v1.7:mismatch": {
+   "runs": 60,
+   "runs_with_claim": 3,
+   "counts": {
+    "abstain": 177,
+    "correct": 3
+   },
+   "by_key": {
+    "verb_position": {
+     "abstain": 57,
+     "correct": 3
+    },
+    "so_order": {
+     "abstain": 60
+    },
+    "adj_noun": {
+     "abstain": 60
+    }
+   }
+  }
+ },
+ "rows": [
+  {
+   "family": "KES",
+   "seed": 0,
+   "mismatch": false,
+   "structure": {
+    "v1.6": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "adj_noun": "abstain"
+    },
+    "v1.7": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "adj_noun": "abstain"
+    }
+   }
+  },
+  {
+   "family": "KES",
+   "seed": 0,
+   "mismatch": true,
+   "structure": {
+    "v1.6": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    },
+    "v1.7": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    }
+   }
+  },
+  {
+   "family": "KES",
+   "seed": 1,
+   "mismatch": false,
+   "structure": {
+    "v1.6": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    },
+    "v1.7": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    }
+   }
+  },
+  {
+   "family": "KES",
+   "seed": 1,
+   "mismatch": true,
+   "structure": {
+    "v1.6": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    },
+    "v1.7": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    }
+   }
+  },
+  {
+   "family": "KES",
+   "seed": 2,
+   "mismatch": false,
+   "structure": {
+    "v1.6": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    },
+    "v1.7": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    }
+   }
+  },
+  {
+   "family": "KES",
+   "seed": 2,
+   "mismatch": true,
+   "structure": {
+    "v1.6": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    },
+    "v1.7": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    }
+   }
+  },
+  {
+   "family": "KES",
+   "seed": 3,
+   "mismatch": false,
+   "structure": {
+    "v1.6": {
+     "verb_position": "abstain",
+     "so_order": "correct",
+     "adj_noun": "abstain"
+    },
+    "v1.7": {
+     "verb_position": "abstain",
+     "so_order": "correct",
+     "adj_noun": "abstain"
+    }
+   }
+  },
+  {
+   "family": "KES",
+   "seed": 3,
+   "mismatch": true,
+   "structure": {
+    "v1.6": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    },
+    "v1.7": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    }
+   }
+  },
+  {
+   "family": "KES",
+   "seed": 4,
+   "mismatch": false,
+   "structure": {
+    "v1.6": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "adj_noun": "abstain"
+    },
+    "v1.7": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "adj_noun": "abstain"
+    }
+   }
+  },
+  {
+   "family": "KES",
+   "seed": 4,
+   "mismatch": true,
+   "structure": {
+    "v1.6": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    },
+    "v1.7": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    }
+   }
+  },
+  {
+   "family": "KES",
+   "seed": 5,
+   "mismatch": false,
+   "structure": {
+    "v1.6": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    },
+    "v1.7": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    }
+   }
+  },
+  {
+   "family": "KES",
+   "seed": 5,
+   "mismatch": true,
+   "structure": {
+    "v1.6": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    },
+    "v1.7": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    }
+   }
+  },
+  {
+   "family": "KES",
+   "seed": 6,
+   "mismatch": false,
+   "structure": {
+    "v1.6": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "adj_noun": "abstain"
+    },
+    "v1.7": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "adj_noun": "abstain"
+    }
+   }
+  },
+  {
+   "family": "KES",
+   "seed": 6,
+   "mismatch": true,
+   "structure": {
+    "v1.6": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    },
+    "v1.7": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    }
+   }
+  },
+  {
+   "family": "KES",
+   "seed": 7,
+   "mismatch": false,
+   "structure": {
+    "v1.6": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "adj_noun": "abstain"
+    },
+    "v1.7": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "adj_noun": "abstain"
+    }
+   }
+  },
+  {
+   "family": "KES",
+   "seed": 7,
+   "mismatch": true,
+   "structure": {
+    "v1.6": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    },
+    "v1.7": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    }
+   }
+  },
+  {
+   "family": "KES",
+   "seed": 8,
+   "mismatch": false,
+   "structure": {
+    "v1.6": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "adj_noun": "abstain"
+    },
+    "v1.7": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "adj_noun": "abstain"
+    }
+   }
+  },
+  {
+   "family": "KES",
+   "seed": 8,
+   "mismatch": true,
+   "structure": {
+    "v1.6": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    },
+    "v1.7": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    }
+   }
+  },
+  {
+   "family": "KES",
+   "seed": 9,
+   "mismatch": false,
+   "structure": {
+    "v1.6": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "adj_noun": "abstain"
+    },
+    "v1.7": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "adj_noun": "abstain"
+    }
+   }
+  },
+  {
+   "family": "KES",
+   "seed": 9,
+   "mismatch": true,
+   "structure": {
+    "v1.6": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    },
+    "v1.7": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    }
+   }
+  },
+  {
+   "family": "KES",
+   "seed": 10,
+   "mismatch": false,
+   "structure": {
+    "v1.6": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    },
+    "v1.7": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    }
+   }
+  },
+  {
+   "family": "KES",
+   "seed": 10,
+   "mismatch": true,
+   "structure": {
+    "v1.6": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    },
+    "v1.7": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    }
+   }
+  },
+  {
+   "family": "KES",
+   "seed": 11,
+   "mismatch": false,
+   "structure": {
+    "v1.6": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "adj_noun": "abstain"
+    },
+    "v1.7": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "adj_noun": "abstain"
+    }
+   }
+  },
+  {
+   "family": "KES",
+   "seed": 11,
+   "mismatch": true,
+   "structure": {
+    "v1.6": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    },
+    "v1.7": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    }
+   }
+  },
+  {
+   "family": "KES",
+   "seed": 12,
+   "mismatch": false,
+   "structure": {
+    "v1.6": {
+     "verb_position": "abstain",
+     "so_order": "correct",
+     "adj_noun": "abstain"
+    },
+    "v1.7": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "adj_noun": "abstain"
+    }
+   }
+  },
+  {
+   "family": "KES",
+   "seed": 12,
+   "mismatch": true,
+   "structure": {
+    "v1.6": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    },
+    "v1.7": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    }
+   }
+  },
+  {
+   "family": "KES",
+   "seed": 13,
+   "mismatch": false,
+   "structure": {
+    "v1.6": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "adj_noun": "abstain"
+    },
+    "v1.7": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "adj_noun": "abstain"
+    }
+   }
+  },
+  {
+   "family": "KES",
+   "seed": 13,
+   "mismatch": true,
+   "structure": {
+    "v1.6": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    },
+    "v1.7": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    }
+   }
+  },
+  {
+   "family": "KES",
+   "seed": 14,
+   "mismatch": false,
+   "structure": {
+    "v1.6": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "adj_noun": "abstain"
+    },
+    "v1.7": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "adj_noun": "abstain"
+    }
+   }
+  },
+  {
+   "family": "KES",
+   "seed": 14,
+   "mismatch": true,
+   "structure": {
+    "v1.6": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    },
+    "v1.7": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    }
+   }
+  },
+  {
+   "family": "KES",
+   "seed": 15,
+   "mismatch": false,
+   "structure": {
+    "v1.6": {
+     "verb_position": "abstain",
+     "so_order": "correct",
+     "adj_noun": "abstain"
+    },
+    "v1.7": {
+     "verb_position": "abstain",
+     "so_order": "correct",
+     "adj_noun": "abstain"
+    }
+   }
+  },
+  {
+   "family": "KES",
+   "seed": 15,
+   "mismatch": true,
+   "structure": {
+    "v1.6": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    },
+    "v1.7": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    }
+   }
+  },
+  {
+   "family": "KES",
+   "seed": 16,
+   "mismatch": false,
+   "structure": {
+    "v1.6": {
+     "verb_position": "abstain",
+     "so_order": "correct",
+     "adj_noun": "abstain"
+    },
+    "v1.7": {
+     "verb_position": "abstain",
+     "so_order": "correct",
+     "adj_noun": "abstain"
+    }
+   }
+  },
+  {
+   "family": "KES",
+   "seed": 16,
+   "mismatch": true,
+   "structure": {
+    "v1.6": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    },
+    "v1.7": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    }
+   }
+  },
+  {
+   "family": "KES",
+   "seed": 17,
+   "mismatch": false,
+   "structure": {
+    "v1.6": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    },
+    "v1.7": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    }
+   }
+  },
+  {
+   "family": "KES",
+   "seed": 17,
+   "mismatch": true,
+   "structure": {
+    "v1.6": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    },
+    "v1.7": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    }
+   }
+  },
+  {
+   "family": "KES",
+   "seed": 18,
+   "mismatch": false,
+   "structure": {
+    "v1.6": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    },
+    "v1.7": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    }
+   }
+  },
+  {
+   "family": "KES",
+   "seed": 18,
+   "mismatch": true,
+   "structure": {
+    "v1.6": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    },
+    "v1.7": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    }
+   }
+  },
+  {
+   "family": "KES",
+   "seed": 19,
+   "mismatch": false,
+   "structure": {
+    "v1.6": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "adj_noun": "abstain"
+    },
+    "v1.7": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "adj_noun": "abstain"
+    }
+   }
+  },
+  {
+   "family": "KES",
+   "seed": 19,
+   "mismatch": true,
+   "structure": {
+    "v1.6": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    },
+    "v1.7": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    }
+   }
+  },
+  {
+   "family": "UMB",
+   "seed": 0,
+   "mismatch": false,
+   "structure": {
+    "v1.6": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "adj_noun": "abstain"
+    },
+    "v1.7": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "adj_noun": "abstain"
+    }
+   }
+  },
+  {
+   "family": "UMB",
+   "seed": 0,
+   "mismatch": true,
+   "structure": {
+    "v1.6": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    },
+    "v1.7": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    }
+   }
+  },
+  {
+   "family": "UMB",
+   "seed": 1,
+   "mismatch": false,
+   "structure": {
+    "v1.6": {
+     "verb_position": "abstain",
+     "so_order": "correct",
+     "adj_noun": "abstain"
+    },
+    "v1.7": {
+     "verb_position": "abstain",
+     "so_order": "correct",
+     "adj_noun": "abstain"
+    }
+   }
+  },
+  {
+   "family": "UMB",
+   "seed": 1,
+   "mismatch": true,
+   "structure": {
+    "v1.6": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    },
+    "v1.7": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    }
+   }
+  },
+  {
+   "family": "UMB",
+   "seed": 2,
+   "mismatch": false,
+   "structure": {
+    "v1.6": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    },
+    "v1.7": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    }
+   }
+  },
+  {
+   "family": "UMB",
+   "seed": 2,
+   "mismatch": true,
+   "structure": {
+    "v1.6": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    },
+    "v1.7": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    }
+   }
+  },
+  {
+   "family": "UMB",
+   "seed": 3,
+   "mismatch": false,
+   "structure": {
+    "v1.6": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "adj_noun": "abstain"
+    },
+    "v1.7": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "adj_noun": "abstain"
+    }
+   }
+  },
+  {
+   "family": "UMB",
+   "seed": 3,
+   "mismatch": true,
+   "structure": {
+    "v1.6": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    },
+    "v1.7": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    }
+   }
+  },
+  {
+   "family": "UMB",
+   "seed": 4,
+   "mismatch": false,
+   "structure": {
+    "v1.6": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "adj_noun": "abstain"
+    },
+    "v1.7": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "adj_noun": "abstain"
+    }
+   }
+  },
+  {
+   "family": "UMB",
+   "seed": 4,
+   "mismatch": true,
+   "structure": {
+    "v1.6": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    },
+    "v1.7": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    }
+   }
+  },
+  {
+   "family": "UMB",
+   "seed": 5,
+   "mismatch": false,
+   "structure": {
+    "v1.6": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    },
+    "v1.7": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    }
+   }
+  },
+  {
+   "family": "UMB",
+   "seed": 5,
+   "mismatch": true,
+   "structure": {
+    "v1.6": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    },
+    "v1.7": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    }
+   }
+  },
+  {
+   "family": "UMB",
+   "seed": 6,
+   "mismatch": false,
+   "structure": {
+    "v1.6": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "adj_noun": "abstain"
+    },
+    "v1.7": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "adj_noun": "abstain"
+    }
+   }
+  },
+  {
+   "family": "UMB",
+   "seed": 6,
+   "mismatch": true,
+   "structure": {
+    "v1.6": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    },
+    "v1.7": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    }
+   }
+  },
+  {
+   "family": "UMB",
+   "seed": 7,
+   "mismatch": false,
+   "structure": {
+    "v1.6": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "adj_noun": "abstain"
+    },
+    "v1.7": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "adj_noun": "abstain"
+    }
+   }
+  },
+  {
+   "family": "UMB",
+   "seed": 7,
+   "mismatch": true,
+   "structure": {
+    "v1.6": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    },
+    "v1.7": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    }
+   }
+  },
+  {
+   "family": "UMB",
+   "seed": 8,
+   "mismatch": false,
+   "structure": {
+    "v1.6": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    },
+    "v1.7": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    }
+   }
+  },
+  {
+   "family": "UMB",
+   "seed": 8,
+   "mismatch": true,
+   "structure": {
+    "v1.6": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    },
+    "v1.7": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    }
+   }
+  },
+  {
+   "family": "UMB",
+   "seed": 9,
+   "mismatch": false,
+   "structure": {
+    "v1.6": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "adj_noun": "abstain"
+    },
+    "v1.7": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "adj_noun": "abstain"
+    }
+   }
+  },
+  {
+   "family": "UMB",
+   "seed": 9,
+   "mismatch": true,
+   "structure": {
+    "v1.6": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    },
+    "v1.7": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    }
+   }
+  },
+  {
+   "family": "UMB",
+   "seed": 10,
+   "mismatch": false,
+   "structure": {
+    "v1.6": {
+     "verb_position": "abstain",
+     "so_order": "correct",
+     "adj_noun": "abstain"
+    },
+    "v1.7": {
+     "verb_position": "abstain",
+     "so_order": "correct",
+     "adj_noun": "abstain"
+    }
+   }
+  },
+  {
+   "family": "UMB",
+   "seed": 10,
+   "mismatch": true,
+   "structure": {
+    "v1.6": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    },
+    "v1.7": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    }
+   }
+  },
+  {
+   "family": "UMB",
+   "seed": 11,
+   "mismatch": false,
+   "structure": {
+    "v1.6": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "adj_noun": "abstain"
+    },
+    "v1.7": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "adj_noun": "abstain"
+    }
+   }
+  },
+  {
+   "family": "UMB",
+   "seed": 11,
+   "mismatch": true,
+   "structure": {
+    "v1.6": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    },
+    "v1.7": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    }
+   }
+  },
+  {
+   "family": "UMB",
+   "seed": 12,
+   "mismatch": false,
+   "structure": {
+    "v1.6": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "adj_noun": "abstain"
+    },
+    "v1.7": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "adj_noun": "abstain"
+    }
+   }
+  },
+  {
+   "family": "UMB",
+   "seed": 12,
+   "mismatch": true,
+   "structure": {
+    "v1.6": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    },
+    "v1.7": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    }
+   }
+  },
+  {
+   "family": "UMB",
+   "seed": 13,
+   "mismatch": false,
+   "structure": {
+    "v1.6": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    },
+    "v1.7": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    }
+   }
+  },
+  {
+   "family": "UMB",
+   "seed": 13,
+   "mismatch": true,
+   "structure": {
+    "v1.6": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    },
+    "v1.7": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    }
+   }
+  },
+  {
+   "family": "UMB",
+   "seed": 14,
+   "mismatch": false,
+   "structure": {
+    "v1.6": {
+     "verb_position": "abstain",
+     "so_order": "correct",
+     "adj_noun": "abstain"
+    },
+    "v1.7": {
+     "verb_position": "abstain",
+     "so_order": "correct",
+     "adj_noun": "abstain"
+    }
+   }
+  },
+  {
+   "family": "UMB",
+   "seed": 14,
+   "mismatch": true,
+   "structure": {
+    "v1.6": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    },
+    "v1.7": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    }
+   }
+  },
+  {
+   "family": "UMB",
+   "seed": 15,
+   "mismatch": false,
+   "structure": {
+    "v1.6": {
+     "verb_position": "abstain",
+     "so_order": "correct",
+     "adj_noun": "abstain"
+    },
+    "v1.7": {
+     "verb_position": "abstain",
+     "so_order": "correct",
+     "adj_noun": "abstain"
+    }
+   }
+  },
+  {
+   "family": "UMB",
+   "seed": 15,
+   "mismatch": true,
+   "structure": {
+    "v1.6": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    },
+    "v1.7": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    }
+   }
+  },
+  {
+   "family": "UMB",
+   "seed": 16,
+   "mismatch": false,
+   "structure": {
+    "v1.6": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "adj_noun": "abstain"
+    },
+    "v1.7": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "adj_noun": "abstain"
+    }
+   }
+  },
+  {
+   "family": "UMB",
+   "seed": 16,
+   "mismatch": true,
+   "structure": {
+    "v1.6": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    },
+    "v1.7": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    }
+   }
+  },
+  {
+   "family": "UMB",
+   "seed": 17,
+   "mismatch": false,
+   "structure": {
+    "v1.6": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    },
+    "v1.7": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    }
+   }
+  },
+  {
+   "family": "UMB",
+   "seed": 17,
+   "mismatch": true,
+   "structure": {
+    "v1.6": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    },
+    "v1.7": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    }
+   }
+  },
+  {
+   "family": "UMB",
+   "seed": 18,
+   "mismatch": false,
+   "structure": {
+    "v1.6": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "adj_noun": "abstain"
+    },
+    "v1.7": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "adj_noun": "abstain"
+    }
+   }
+  },
+  {
+   "family": "UMB",
+   "seed": 18,
+   "mismatch": true,
+   "structure": {
+    "v1.6": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    },
+    "v1.7": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    }
+   }
+  },
+  {
+   "family": "UMB",
+   "seed": 19,
+   "mismatch": false,
+   "structure": {
+    "v1.6": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "adj_noun": "abstain"
+    },
+    "v1.7": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "adj_noun": "abstain"
+    }
+   }
+  },
+  {
+   "family": "UMB",
+   "seed": 19,
+   "mismatch": true,
+   "structure": {
+    "v1.6": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    },
+    "v1.7": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    }
+   }
+  },
+  {
+   "family": "SOT",
+   "seed": 0,
+   "mismatch": false,
+   "structure": {
+    "v1.6": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    },
+    "v1.7": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    }
+   }
+  },
+  {
+   "family": "SOT",
+   "seed": 0,
+   "mismatch": true,
+   "structure": {
+    "v1.6": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    },
+    "v1.7": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    }
+   }
+  },
+  {
+   "family": "SOT",
+   "seed": 1,
+   "mismatch": false,
+   "structure": {
+    "v1.6": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    },
+    "v1.7": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    }
+   }
+  },
+  {
+   "family": "SOT",
+   "seed": 1,
+   "mismatch": true,
+   "structure": {
+    "v1.6": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    },
+    "v1.7": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    }
+   }
+  },
+  {
+   "family": "SOT",
+   "seed": 2,
+   "mismatch": false,
+   "structure": {
+    "v1.6": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    },
+    "v1.7": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    }
+   }
+  },
+  {
+   "family": "SOT",
+   "seed": 2,
+   "mismatch": true,
+   "structure": {
+    "v1.6": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    },
+    "v1.7": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    }
+   }
+  },
+  {
+   "family": "SOT",
+   "seed": 3,
+   "mismatch": false,
+   "structure": {
+    "v1.6": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "adj_noun": "abstain"
+    },
+    "v1.7": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "adj_noun": "abstain"
+    }
+   }
+  },
+  {
+   "family": "SOT",
+   "seed": 3,
+   "mismatch": true,
+   "structure": {
+    "v1.6": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    },
+    "v1.7": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    }
+   }
+  },
+  {
+   "family": "SOT",
+   "seed": 4,
+   "mismatch": false,
+   "structure": {
+    "v1.6": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    },
+    "v1.7": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    }
+   }
+  },
+  {
+   "family": "SOT",
+   "seed": 4,
+   "mismatch": true,
+   "structure": {
+    "v1.6": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    },
+    "v1.7": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    }
+   }
+  },
+  {
+   "family": "SOT",
+   "seed": 5,
+   "mismatch": false,
+   "structure": {
+    "v1.6": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "adj_noun": "abstain"
+    },
+    "v1.7": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "adj_noun": "abstain"
+    }
+   }
+  },
+  {
+   "family": "SOT",
+   "seed": 5,
+   "mismatch": true,
+   "structure": {
+    "v1.6": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    },
+    "v1.7": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    }
+   }
+  },
+  {
+   "family": "SOT",
+   "seed": 6,
+   "mismatch": false,
+   "structure": {
+    "v1.6": {
+     "verb_position": "abstain",
+     "so_order": "correct",
+     "adj_noun": "abstain"
+    },
+    "v1.7": {
+     "verb_position": "abstain",
+     "so_order": "correct",
+     "adj_noun": "abstain"
+    }
+   }
+  },
+  {
+   "family": "SOT",
+   "seed": 6,
+   "mismatch": true,
+   "structure": {
+    "v1.6": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    },
+    "v1.7": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    }
+   }
+  },
+  {
+   "family": "SOT",
+   "seed": 7,
+   "mismatch": false,
+   "structure": {
+    "v1.6": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "adj_noun": "abstain"
+    },
+    "v1.7": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "adj_noun": "abstain"
+    }
+   }
+  },
+  {
+   "family": "SOT",
+   "seed": 7,
+   "mismatch": true,
+   "structure": {
+    "v1.6": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    },
+    "v1.7": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    }
+   }
+  },
+  {
+   "family": "SOT",
+   "seed": 8,
+   "mismatch": false,
+   "structure": {
+    "v1.6": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "adj_noun": "correct"
+    },
+    "v1.7": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "adj_noun": "correct"
+    }
+   }
+  },
+  {
+   "family": "SOT",
+   "seed": 8,
+   "mismatch": true,
+   "structure": {
+    "v1.6": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    },
+    "v1.7": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    }
+   }
+  },
+  {
+   "family": "SOT",
+   "seed": 9,
+   "mismatch": false,
+   "structure": {
+    "v1.6": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    },
+    "v1.7": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    }
+   }
+  },
+  {
+   "family": "SOT",
+   "seed": 9,
+   "mismatch": true,
+   "structure": {
+    "v1.6": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    },
+    "v1.7": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    }
+   }
+  },
+  {
+   "family": "SOT",
+   "seed": 10,
+   "mismatch": false,
+   "structure": {
+    "v1.6": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    },
+    "v1.7": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    }
+   }
+  },
+  {
+   "family": "SOT",
+   "seed": 10,
+   "mismatch": true,
+   "structure": {
+    "v1.6": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    },
+    "v1.7": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    }
+   }
+  },
+  {
+   "family": "SOT",
+   "seed": 11,
+   "mismatch": false,
+   "structure": {
+    "v1.6": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "adj_noun": "abstain"
+    },
+    "v1.7": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "adj_noun": "abstain"
+    }
+   }
+  },
+  {
+   "family": "SOT",
+   "seed": 11,
+   "mismatch": true,
+   "structure": {
+    "v1.6": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    },
+    "v1.7": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    }
+   }
+  },
+  {
+   "family": "SOT",
+   "seed": 12,
+   "mismatch": false,
+   "structure": {
+    "v1.6": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "adj_noun": "abstain"
+    },
+    "v1.7": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "adj_noun": "abstain"
+    }
+   }
+  },
+  {
+   "family": "SOT",
+   "seed": 12,
+   "mismatch": true,
+   "structure": {
+    "v1.6": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    },
+    "v1.7": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    }
+   }
+  },
+  {
+   "family": "SOT",
+   "seed": 13,
+   "mismatch": false,
+   "structure": {
+    "v1.6": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    },
+    "v1.7": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    }
+   }
+  },
+  {
+   "family": "SOT",
+   "seed": 13,
+   "mismatch": true,
+   "structure": {
+    "v1.6": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    },
+    "v1.7": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    }
+   }
+  },
+  {
+   "family": "SOT",
+   "seed": 14,
+   "mismatch": false,
+   "structure": {
+    "v1.6": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    },
+    "v1.7": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    }
+   }
+  },
+  {
+   "family": "SOT",
+   "seed": 14,
+   "mismatch": true,
+   "structure": {
+    "v1.6": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    },
+    "v1.7": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    }
+   }
+  },
+  {
+   "family": "SOT",
+   "seed": 15,
+   "mismatch": false,
+   "structure": {
+    "v1.6": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    },
+    "v1.7": {
+     "verb_position": "correct",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    }
+   }
+  },
+  {
+   "family": "SOT",
+   "seed": 15,
+   "mismatch": true,
+   "structure": {
+    "v1.6": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    },
+    "v1.7": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    }
+   }
+  },
+  {
+   "family": "SOT",
+   "seed": 16,
+   "mismatch": false,
+   "structure": {
+    "v1.6": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "adj_noun": "abstain"
+    },
+    "v1.7": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "adj_noun": "abstain"
+    }
+   }
+  },
+  {
+   "family": "SOT",
+   "seed": 16,
+   "mismatch": true,
+   "structure": {
+    "v1.6": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    },
+    "v1.7": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    }
+   }
+  },
+  {
+   "family": "SOT",
+   "seed": 17,
+   "mismatch": false,
+   "structure": {
+    "v1.6": {
+     "verb_position": "correct",
+     "so_order": "wrong",
+     "adj_noun": "abstain"
+    },
+    "v1.7": {
+     "verb_position": "correct",
+     "so_order": "wrong",
+     "adj_noun": "abstain"
+    }
+   }
+  },
+  {
+   "family": "SOT",
+   "seed": 17,
+   "mismatch": true,
+   "structure": {
+    "v1.6": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    },
+    "v1.7": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    }
+   }
+  },
+  {
+   "family": "SOT",
+   "seed": 18,
+   "mismatch": false,
+   "structure": {
+    "v1.6": {
+     "verb_position": "abstain",
+     "so_order": "correct",
+     "adj_noun": "abstain"
+    },
+    "v1.7": {
+     "verb_position": "abstain",
+     "so_order": "correct",
+     "adj_noun": "abstain"
+    }
+   }
+  },
+  {
+   "family": "SOT",
+   "seed": 18,
+   "mismatch": true,
+   "structure": {
+    "v1.6": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    },
+    "v1.7": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    }
+   }
+  },
+  {
+   "family": "SOT",
+   "seed": 19,
+   "mismatch": false,
+   "structure": {
+    "v1.6": {
+     "verb_position": "abstain",
+     "so_order": "correct",
+     "adj_noun": "abstain"
+    },
+    "v1.7": {
+     "verb_position": "correct",
+     "so_order": "correct",
+     "adj_noun": "abstain"
+    }
+   }
+  },
+  {
+   "family": "SOT",
+   "seed": 19,
+   "mismatch": true,
+   "structure": {
+    "v1.6": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    },
+    "v1.7": {
+     "verb_position": "abstain",
+     "so_order": "abstain",
+     "adj_noun": "abstain"
+    }
+   }
+  }
+ ]
+}

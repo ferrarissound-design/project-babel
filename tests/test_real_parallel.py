@@ -65,3 +65,22 @@ def test_select_even_spacing_and_mismatch():
     assert n == 5 and [p["translation"]["pred"] for p in pub["parallel"]] == ["n00", "n04", "n08", "n12", "n16"]
     assert [p["translation"]["pred"] for p in pubm["parallel"]] == ["n04", "n08", "n12", "n16", "n00"]
     assert [p["doc"] for p in pub["parallel"]] == [p["doc"] for p in pubm["parallel"]]
+
+
+def test_gold_verb_rel(tmp_path):
+    ja = """# sent_id = a
+1\tkoku\tkoku\tNOUN\t_\t_\t3\tnsubj\t_\t_
+2\tmizu\tmizu\tNOUN\t_\t_\t3\tobj\t_\t_
+3\tnomu\tnomu\tVERB\t_\t_\t0\troot\t_\t_
+4\tta\tta\tAUX\t_\t_\t3\taux\t_\t_
+
+# sent_id = b
+1\tx\tx\tNOUN\t_\t_\t3\tnsubj\t_\t_
+2\ty\ty\tNOUN\t_\t_\t3\tobj\t_\t_
+3\tz\tz\tVERB\t_\t_\t0\troot\t_\t_
+"""
+    parsed = _write(tmp_path, "ja.conllu", ja)
+    g = rp.gold_verb_rel(parsed)
+    assert g["value"] == "final" and g["n"] == 2          # 動詞のあとに助動詞があっても、主語・目的語より後なら final
+    en = _write(tmp_path, "en.conllu", EN)
+    assert rp.gold_verb_rel(en)["value"] == "medial"       # SVO

@@ -114,7 +114,7 @@ def _fake_engine():
     d = Decipherer(pub)
     d.affix_fn = {}
     from collections import Counter
-    d.order_counts = {"so": Counter(), "adj": Counter(), "verb": Counter()}
+    d.order_counts = {"so": Counter(), "adj": Counter(), "verb": Counter(), "verb_rel": Counter()}
     return d
 
 

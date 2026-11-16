@@ -12,7 +12,7 @@ from .align import Aligner, flatten
 from .morph import Morphology
 from .variants import LACUNA, Normalizer
 
-VERSION = "1.6.0"
+VERSION = "1.7.0"
 DEFAULT_CONFIG = {
     "use_variants": True,        # 表記揺れの正規化
     "use_morph": True,           # 形態素解析
@@ -28,6 +28,7 @@ DEFAULT_CONFIG = {
     "segmenter": "unigram",      # 単語境界のない文章の分割方式: unigram（既定）/ transition（比較用。v1.3 の G4 の測定で使った）
     "null_gates": True,          # v1.3: 帰無対照の関門（docs/PREREG_v1.3_NULL_GATES.md）。False で v1.2.0 と同じ
     "v15_gates": True,           # v1.5: 動詞の位置に対訳の証拠を要求（V1）・開放クラス（V2）・形態の判定の統一（M1）。False で v1.4.0 と同じ
+    "v17_gates": True,           # v1.7: 動詞の位置を主語・目的語との前後関係で数える（R1・R2）。False で v1.6.0 と同じ
     "v16_gates": True,           # v1.6: 対訳の帰無対照（A1 動詞のクラスの支持・A2 語順の票）。False で v1.5.0 と同じ
     "affix_null_alpha": 0.025,   # v1.4: 接辞の関門の片側ごとの水準（両側で Bonferroni、docs/PREREG_v1.4_MULTIPLE_TESTING.md）。0.05 で v1.3.0
 }
@@ -195,7 +196,7 @@ class Decipherer:
         self.lexicon: dict[str, dict] = {}
         self.affix_fn: dict[str, dict] = {}
         self.slot_pos: dict[str, str] = {}
-        self.order_counts = {"so": Counter(), "adj": Counter(), "verb": Counter()}
+        self.order_counts = {"so": Counter(), "adj": Counter(), "verb": Counter(), "verb_rel": Counter()}
         self.role_stats = Counter()
         self.aligner = None
         if self.pub.get("parallel"):
@@ -400,7 +401,7 @@ class Decipherer:
         if pos_constraint is not None:
             self.cfg = dict(cfg, pos_constraint=pos_constraint)
         self.lexicon, self.affix_fn, self.slot_pos = {}, {}, {}
-        self.order_counts = {"so": Counter(), "adj": Counter(), "verb": Counter()}
+        self.order_counts = {"so": Counter(), "adj": Counter(), "verb": Counter(), "verb_rel": Counter()}
         try:
             self._fit_alignment()
             return {k: Counter(v) for k, v in self.order_counts.items()}, self.aligner
@@ -429,8 +430,8 @@ class Decipherer:
         """A1・A2: 本物の対訳と、入れ替えた対訳 k 回を比べる（置換 p ≤ 0.05 には、k 回すべてを上回ること）。"""
         par = self.pub["parallel"]
         real_sup = self._verb_class_support(par)
-        real_n = {key: sum(self.order_counts[key].values()) for key in ("so", "adj")}
-        null_sup, null_n = [], {"so": [], "adj": []}
+        real_n = {key: sum(self.order_counts[key].values()) for key in ("so", "adj", "verb_rel")}
+        null_sup, null_n = [], {"so": [], "adj": [], "verb_rel": []}
         for i in range(k):
             perm = self._permuted(par, f"align-null-{i}")
             oc, _ = self._realign(perm)
@@ -444,6 +445,10 @@ class Decipherer:
         for key in ("so", "adj"):
             out[key] = {"real": real_n[key], "null_max": max(null_n[key]) if null_n[key] else 0,
                         "pass": bool(real_n[key] > (max(null_n[key]) if null_n[key] else 0))}
+        if self.cfg["v17_gates"]:
+            mx_rel = max(null_n["verb_rel"]) if null_n["verb_rel"] else 0
+            out["verb_rel"] = {"real": real_n["verb_rel"], "null_max": mx_rel,
+                               "pass": bool(real_n["verb_rel"] >= 5 and real_n["verb_rel"] > mx_rel)}
         return out
 
     def _count_orders(self, aligned):
@@ -478,6 +483,10 @@ class Decipherer:
             for role in ("subject", "object", "recipient", "location"):
                 if "adj:" + role in pos_of and "head:" + role in pos_of:
                     self.order_counts["adj"]["AN" if pos_of["adj:" + role] < pos_of["head:" + role] else "NA"] += 1
+            if "pred" in pos_of and "head:subject" in pos_of and "head:object" in pos_of:
+                # v1.7（R1）: 述語が主語と目的語の両方より前か、後か、間か
+                p_, s_, o_ = pos_of["pred"], pos_of["head:subject"], pos_of["head:object"]
+                self.order_counts["verb_rel"]["initial" if p_ < min(s_, o_) else "final" if p_ > max(s_, o_) else "medial"] += 1
             if "pred" in pos_of and len(it["sent"]) >= 3:
                 i = pos_of["pred"]
                 self.order_counts["verb"]["initial" if i == 0 else "final" if i == len(it["sent"]) - 1 else "medial"] += 1
@@ -623,7 +632,19 @@ class Decipherer:
             vp = {"value": None, "confidence": 0.0, "alternatives": {}, "n": vp.get("n", 0),
                   "reason": "対訳による動詞の位置の証拠がない（V1）"}
 
-        if self.cfg["v16_gates"] and self.align_null is not None and vp.get("value") is not None \
+        rel_claim = None
+        if self.cfg["v17_gates"] and self.align_null is not None and self.align_null.get("verb_rel", {}).get("pass"):
+            # R1・R2: 述語・主語・目的語の位置が対訳で分かる文の票が、入れ替えた対訳の票を上回るとき、動詞の位置を主張する
+            c = self.order_counts["verb_rel"]
+            n = sum(c.values())
+            best = c.most_common(1)[0][0]
+            rel_claim = {"value": best, "confidence": round(c[best] / n * min(1, n / 20), 3),
+                         "alternatives": {k: round(c[k] / n, 3) for k in ("initial", "medial", "final")}, "n": n,
+                         "source": "alignment-relative"}
+        if rel_claim is not None:
+            vp = rel_claim
+            candidate = None
+        elif self.cfg["v16_gates"] and self.align_null is not None and vp.get("value") is not None \
                 and not self.align_null["verb_support"]["pass"]:
             # A1: 対訳で動詞のクラスが支持されなければ、動詞の位置を主張しない
             if candidate is None:

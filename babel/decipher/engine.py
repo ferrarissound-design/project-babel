@@ -12,7 +12,7 @@ from .align import Aligner, flatten
 from .morph import Morphology
 from .variants import LACUNA, Normalizer
 
-VERSION = "1.7.0"
+VERSION = "1.8.0"
 DEFAULT_CONFIG = {
     "use_variants": True,        # 表記揺れの正規化
     "use_morph": True,           # 形態素解析
@@ -28,6 +28,7 @@ DEFAULT_CONFIG = {
     "segmenter": "unigram",      # 単語境界のない文章の分割方式: unigram（既定）/ transition（比較用。v1.3 の G4 の測定で使った）
     "null_gates": True,          # v1.3: 帰無対照の関門（docs/PREREG_v1.3_NULL_GATES.md）。False で v1.2.0 と同じ
     "v15_gates": True,           # v1.5: 動詞の位置に対訳の証拠を要求（V1）・開放クラス（V2）・形態の判定の統一（M1）。False で v1.4.0 と同じ
+    "v18_gates": True,           # v1.8: 動詞の位置の最多の値に二項検定（B1）。False で v1.7.0 と同じ
     "v17_gates": True,           # v1.7: 動詞の位置を主語・目的語との前後関係で数える（R1・R2）。False で v1.6.0 と同じ
     "v16_gates": True,           # v1.6: 対訳の帰無対照（A1 動詞のクラスの支持・A2 語順の票）。False で v1.5.0 と同じ
     "affix_null_alpha": 0.025,   # v1.4: 接辞の関門の片側ごとの水準（両側で Bonferroni、docs/PREREG_v1.4_MULTIPLE_TESTING.md）。0.05 で v1.3.0
@@ -449,6 +450,13 @@ class Decipherer:
             mx_rel = max(null_n["verb_rel"]) if null_n["verb_rel"] else 0
             out["verb_rel"] = {"real": real_n["verb_rel"], "null_max": mx_rel,
                                "pass": bool(real_n["verb_rel"] >= 5 and real_n["verb_rel"] > mx_rel)}
+            if self.cfg["v18_gates"] and real_n["verb_rel"]:
+                # B1: 最多の値の票数が、3 つの値に一様に散らばる場合（確率 1/3）の二項分布で、上側確率 ≤ 0.05/3
+                c = self.order_counts["verb_rel"]
+                n, k = sum(c.values()), max(c.values())
+                p = sum(math.comb(n, i) * (1 / 3) ** i * (2 / 3) ** (n - i) for i in range(k, n + 1))
+                out["verb_rel"]["binomial_p"] = round(p, 5)
+                out["verb_rel"]["pass"] = bool(out["verb_rel"]["pass"] and p <= 0.05 / 3)
         return out
 
     def _count_orders(self, aligned):

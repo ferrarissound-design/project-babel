@@ -127,3 +127,12 @@ def test_v17_verb_rel_counts_and_flag_off_keeps_v16():
     assert d.align_null["verb_rel"]["pass"] in (True, False) and "real" in d.align_null["verb_rel"]
     st_off = decipher(public, {"v17_gates": False})["structure"]
     assert "alignment-relative" != st_off["verb_position"].get("source")
+
+
+def test_v18_binomial_gate_on_verb_rel():
+    """v1.8（B1）: 動詞の位置の最多の値に二項検定（確率 1/3、p ≤ 0.05/3）を要求する。"""
+    public, _ = build_corpus("UMB", 0, "A", parallel_frac=0.25)
+    vr = decipher(public)["verdict"]["alignment_null"]["verb_rel"]
+    assert "binomial_p" in vr
+    if vr["binomial_p"] > 0.05 / 3:
+        assert vr["pass"] is False

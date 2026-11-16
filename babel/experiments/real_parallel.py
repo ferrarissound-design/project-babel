@@ -237,10 +237,10 @@ def main(out="results/real_parallel/real-parallel.json"):
     print(json.dumps(res["summary"], ensure_ascii=False, indent=1))
 
 
-VERSIONS17 = {"v1.6": {"v17_gates": False}, "v1.7": {}}
+VERSIONS17 = {"v1.6": {"v17_gates": False}, "v1.7": {"v18_gates": False}}
 
 
-def run_language17(repo, code, en_tr, allow_extended=False):
+def run_language17(repo, code, en_tr, allow_extended=False, versions=None):
     """v1.7: 100% の対訳とずらした対訳。正解は主語・目的語との前後関係（gold_verb_rel）。"""
     path, sha = fetch(repo, code)
     parsed = parse(path)
@@ -252,7 +252,7 @@ def run_language17(repo, code, en_tr, allow_extended=False):
            "versions": {}}
     for label, frac, mis in SETTINGS16:
         public, n_par = build_public(f"real-{code}", words, sent_ids, en_tr, frac, mis)
-        for name, cfg in VERSIONS17.items():
+        for name, cfg in (versions or VERSIONS17).items():
             pred = decipher(public, cfg)
             st = pred["structure"]
             vp, so = st["verb_position"], st["so_order"]
@@ -266,20 +266,20 @@ def run_language17(repo, code, en_tr, allow_extended=False):
     return row
 
 
-def main17(codes, out, allow_extended=False):
+def main17(codes, out, allow_extended=False, versions=None, prereg="docs/PREREG_v1.7_VERB_RELATIVE.md"):
     src_path, src_sha = fetch(*SOURCE)
     en_tr = {s["sent_id"]: t for s in parse(src_path) if (t := translation(s))}
     rows, excluded = [], []
     for repo, code in codes:
         try:
-            rows.append(run_language17(repo, code, en_tr, allow_extended))
+            rows.append(run_language17(repo, code, en_tr, allow_extended, versions))
             print(code, "ok", flush=True)
         except Exception as e:
             excluded.append({"treebank": repo, "error": f"{type(e).__name__}: {e}"})
             print(code, "excluded", e, flush=True)
     summary = {f"{name}:{label}:{key}": dict(Counter(r["versions"][name][label][key]["judge"] for r in rows))
-               for name in VERSIONS17 for label, _, _ in SETTINGS16 for key in ("verb_position", "so_order")}
-    res = {"engine_version": VERSION, "ud_tag": rl.UD_TAG, "preregistration": "docs/PREREG_v1.7_VERB_RELATIVE.md",
+               for name in (versions or VERSIONS17) for label, _, _ in SETTINGS16 for key in ("verb_position", "so_order")}
+    res = {"engine_version": VERSION, "ud_tag": rl.UD_TAG, "preregistration": prereg,
            "source": {"treebank": SOURCE[0], "sha256": src_sha, "translations": len(en_tr)},
            "summary": summary, "excluded": excluded, "rows": rows}
     Path(out).parent.mkdir(parents=True, exist_ok=True)
@@ -322,6 +322,9 @@ if __name__ == "__main__":
     elif sys.argv[1:2] == ["v17-dev"]:
         main17([t for t in TARGETS if t[1] not in ("hi_pud", "th_pud", "ja_pud", "ko_pud", "zh_pud")],
                "results/real_parallel/real-parallel-v17-dev.json")
+    elif sys.argv[1:2] == ["v18"]:      # 既知データでの確認（PUD の 19 言語、docs/PREREG_v1.8_VERB_BINOMIAL.md）
+        main17(TARGETS, "results/real_parallel/real-parallel-v18.json", allow_extended=True,
+               versions={"v1.7": {"v18_gates": False}, "v1.8": {}}, prereg="docs/PREREG_v1.8_VERB_BINOMIAL.md")
     elif sys.argv[1:2] == ["v17"]:
         main17(TARGETS16, "results/real_parallel/real-parallel-v17.json", allow_extended=True)
     else:

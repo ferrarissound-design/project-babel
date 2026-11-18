@@ -158,9 +158,10 @@ def build(results: dict, issues: list, extras: dict | None = None) -> dict:
         status = "一部未評価"
     mx7 = 2 + (2 if cross else 0) + (1 if pages else 0)
     item("再現性・成果物の公開", 5, pts, det7 + [f"評価できた配点は {mx7}/5 点分"], status)
-    scored = [i for i in items if i["points"] is not None]
-    unev = 10 * (ext is None) + (5 - mx7)
+    external_item = next(i for i in items if i["name"] == "未知言語への一般化（独立初見テスト）")
+    scored = [i for i in items if i is not external_item and i["points"] is not None]
+    unev = 5 - mx7
     return {"items": items, "internal_points": round(sum(i["points"] for i in scored), 2),
-            "evaluated_max": 100 - unev, "unevaluated_max": unev,
+            "external_points": external_item["points"], "evaluated_max": 90 - unev, "unevaluated_max": unev,
             "note": "内部テストの点数。生成器と解読器を同じAIが作っているため、未知言語への一般化の証明にはならない。",
             "seed_role": results["meta"]["seed_role"], "commit": results["meta"]["commit"]}

@@ -106,13 +106,21 @@ def sanitize_public(public: dict):
     pub["_split_status"] = status
     n_sent = {d["id"]: len(d["sentences"]) for d in docs}
     par = []
+    seen_sentences = {}
     for p in pub.get("parallel") or []:
         try:
             ok = p["doc"] in n_sent and 0 <= int(p["sent"]) < n_sent[p["doc"]] and isinstance(p.get("translation"), dict)
         except (KeyError, TypeError, ValueError):
             ok = False
         if ok:
-            par.append(dict(p, sent=int(p["sent"])))
+            key = (p["doc"], int(p["sent"]))
+            if key in seen_sentences:
+                if seen_sentences[key] != p["translation"]:
+                    raise ValueError(f"同じ文 {key} に異なる対訳が指定されている")
+                warnings.append(f"同じ文 {key} の重複対訳を除いた")
+                continue
+            seen_sentences[key] = p["translation"]
+            par.append(dict(p, sent=key[1]))
         else:
             warnings.append(f"対訳 {str(p)[:60]} は文書・文番号・訳のどれかが不正なので無視した")
     pub["parallel"] = par
@@ -135,7 +143,9 @@ class Decipherer:
         self.level = public.get("level", "C")
         self.docs = {d["id"]: d for d in public["documents"]}
         split = public.get("split") or {}
-        self.train_ids = split.get("train") or [d["id"] for d in public["documents"]]
+        self.train_ids = split.get("train", list(self.docs))
+        if split and not self.train_ids:
+            raise ValueError("すべての文書が評価用で、学習用の文書がない")
         self.heldout_ids = split.get("heldout") or []
         self.boundaries = public.get("has_word_boundaries", True)
         self.tokens: dict[str, list[list[str]]] = {}
@@ -454,7 +464,11 @@ class Decipherer:
                 # B1: 最多の値の票数が、3 つの値に一様に散らばる場合（確率 1/3）の二項分布で、上側確率 ≤ 0.05/3
                 c = self.order_counts["verb_rel"]
                 n, k = sum(c.values()), max(c.values())
-                p = sum(math.comb(n, i) * (1 / 3) ** i * (2 / 3) ** (n - i) for i in range(k, n + 1))
+                log_factorial = math.lgamma(n + 1)
+                p = min(1.0, math.fsum(
+                    math.exp(log_factorial - math.lgamma(i + 1) - math.lgamma(n - i + 1)
+                             + i * math.log(1 / 3) + (n - i) * math.log(2 / 3))
+                    for i in range(k, n + 1)))
                 out["verb_rel"]["binomial_p"] = round(p, 5)
                 out["verb_rel"]["pass"] = bool(out["verb_rel"]["pass"] and p <= 0.05 / 3)
         return out

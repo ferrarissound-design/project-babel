@@ -19,13 +19,10 @@ from math import comb
 from babel.decipher.engine import decipher
 from babel.evaluate.score import STRUCT_KEYS, score
 from babel.experiments.run import DEFAULT_GEN, DEV_SEEDS, TEST_SEEDS
+from babel.experiments.versions import VARIANTS
 from babel.generator.corpus import build_corpus, null_corpus
 from babel.generator.languages import FAMILIES
 
-VARIANTS = {"v1.2": {"null_gates": False, "v15_gates": False, "v16_gates": False},
-            "v1.3": {"affix_null_alpha": 0.05, "v15_gates": False, "v16_gates": False},
-            "v1.4": {"v15_gates": False, "v16_gates": False}, "v1.5": {"v16_gates": False},
-            "v1.6": {"v17_gates": False}, "v1.7": {"v18_gates": False}, "v1.8": {}}
 SPLITS = {   # (実コーパスのシード, 対照のシード, 比べる版, 実コーパスの水準)
     "dev": (DEV_SEEDS, DEV_SEEDS, ("v1.2", "v1.3"), "AC"),
     "eval": (TEST_SEEDS, TEST_SEEDS, ("v1.2", "v1.3"), "AC"),

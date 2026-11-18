@@ -89,8 +89,9 @@
    ]
   }
  ],
- "internal_points": 72.3,
- "evaluated_max": 97,
+ "internal_points": 66.44,
+ "external_points": 5.86,
+ "evaluated_max": 87,
  "unevaluated_max": 3,
  "note": "内部テストの点数。生成器と解読器を同じAIが作っているため、未知言語への一般化の証明にはならない。",
  "seed_role": "evaluation",

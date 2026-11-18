@@ -33,8 +33,8 @@ const views = {
       esc(i.status), `<ul>${[].concat(i.detail).map((d) => `<li>${esc(d)}</li>`).join("")}</ul>`]);
     return `<h2>結論</h2>
 <div class="card"><div class="grid">
-<div class="stat"><b>${num(c.internal_points, 1)} <small>/ ${c.evaluated_max}</small></b><span>内部テストの得点（評価済みの配点に対して）</span></div>
-<div class="stat"><b class="hold">未評価</b><span>独立した初見テスト（${c.unevaluated_max} 点分が未評価）</span></div>
+<div class="stat"><b>${num(c.internal_points, 2)} <small>/ ${c.evaluated_max}</small></b><span>内部テストの得点（評価済みの配点に対して）</span></div>
+<div class="stat"><b>${c.external_points == null ? "未評価" : num(c.external_points, 2) + " / 10"}</b><span>独立初見テスト（初回予測時の版）</span></div>
 <div class="stat"><b>${pct(mm("levelA", "gloss_correct"))}</b><span>LEVEL A：対訳のない held-out 文の語釈正解率</span></div>
 <div class="stat"><b>${pct(mm("levelA", "gloss_wrong"))}</b><span>同 誤答率（残りは「判定不能」と報告）</span></div>
 <div class="stat"><b>${num(mm("levelC", "overclaims"), 0)}</b><span>LEVEL C：証拠のない意味の主張（件／実行）</span></div>

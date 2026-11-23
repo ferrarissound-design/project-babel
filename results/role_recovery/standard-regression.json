@@ -1,0 +1,7421 @@
+{
+ "all_predictions_equal": true,
+ "all_scores_equal": true,
+ "baseline_commit": "0180be30b6df159c564971a8d6bef707505fd511",
+ "cases": 27,
+ "excluded_prediction_fields": [
+  "timing"
+ ],
+ "n_docs": 33,
+ "rows": [
+  {
+   "baseline": {
+    "engine_sha256": "089495ad99f08e30f20f0f18f4ee0d9185041138bf085f97aeeb91e026cf9deb",
+    "family": "KES",
+    "input_sha256": "407729ed681bb7d813c1b5bb1aa0a8602295ecaeb9f9ef4baa113095139add27",
+    "level": "A",
+    "n_docs": 33,
+    "prediction_sha256": "132efc2278da075de0a86d6afd6a95e9dfb8bf242beb962eca5fd72b3aeee872",
+    "score": {
+     "affix_inventory": {
+      "f1": 0.8519,
+      "precision": 0.8519,
+      "recall": 0.8519
+     },
+     "calibration": [
+      [
+       1.0,
+       1,
+       "structure"
+      ],
+      [
+       0.588,
+       0,
+       "lexicon"
+      ],
+      [
+       0.588,
+       0,
+       "lexicon"
+      ],
+      [
+       0.5,
+       1,
+       "lexicon"
+      ],
+      [
+       0.5,
+       0,
+       "lexicon"
+      ]
+     ],
+     "errors": [
+      {
+       "cause": "証拠が1例のみ",
+       "confidence": 0.588,
+       "gold": "priest",
+       "predicted": "hear",
+       "stem": "fudugu"
+      },
+      {
+       "cause": "証拠が1例のみ",
+       "confidence": 0.588,
+       "gold": "judge",
+       "predicted": "judge_v",
+       "stem": "getimuy"
+      },
+      {
+       "cause": "地名と地元人名の混同（出土地の偏り）",
+       "confidence": 0.5,
+       "gold": "black",
+       "predicted": "place@S2",
+       "stem": "somo"
+      }
+     ],
+     "gloss_heldout": {
+      "abstain": 0.9375,
+      "correct": 0.0057,
+      "feature_jaccard": 0.1549,
+      "numeral_correct": 0.1622,
+      "tokens": 176,
+      "wrong": 0.0568
+     },
+     "gloss_train": {
+      "abstain": 0.9515,
+      "correct": 0.0202,
+      "feature_jaccard": 0.1236,
+      "numeral_correct": 0.1643,
+      "tokens": 743,
+      "wrong": 0.0283
+     },
+     "language_id": "KES-0",
+     "level": "A",
+     "lexicon": {
+      "abstain": 155,
+      "abstain_rate_without_evidence": 0.9922,
+      "claimed": 4,
+      "correct": 1,
+      "coverage": 0.0252,
+      "precision": 0.25,
+      "wrong": 3
+     },
+     "lexicon_inferred": {
+      "abstain": 155,
+      "abstain_rate_without_evidence": 0.9922,
+      "claimed": 4,
+      "correct": 1,
+      "coverage": 0.0252,
+      "given_excluded": 3,
+      "note": "トークン単位の採点では、既知語は最初から lexicon の集計から除外している（lexicon と同じ値）",
+      "precision": 0.25,
+      "wrong": 3
+     },
+     "null_verdict": null,
+     "numerals": {
+      "abstain": 21,
+      "accuracy": 0.0,
+      "correct": 0,
+      "false_numeral": 0,
+      "relative": false,
+      "wrong": 0
+     },
+     "oov": {
+      "claimed_anyway": 0,
+      "heldout_tokens_with_unseen_stem": 19
+     },
+     "overclaim": {
+      "meaning_claims": 7,
+      "overclaims": 0,
+      "semantic_evidence_available": true
+     },
+     "pos": {
+      "accuracy": 0.3786,
+      "accuracy_when_labelled": 0.491,
+      "labelled": 0.7711
+     },
+     "relatedness": {
+      "chance": 0.1055,
+      "n": 61,
+      "p_at_1": 0.459
+     },
+     "scoring_version": 2,
+     "segmentation": {
+      "f1": 0.8127,
+      "precision": 0.9951,
+      "recall": 0.6869
+     },
+     "structure": {
+      "adj_noun": "abstain",
+      "affix_position": "correct",
+      "num_noun": "abstain",
+      "numeral_base": "abstain",
+      "so_order": "abstain",
+      "verb_position": "abstain"
+     },
+     "variants": {
+      "f1": 0.8219,
+      "gold_pairs": 86,
+      "precision": 1.0,
+      "recall": 0.6977
+     }
+    },
+    "score_sha256": "776ed165bae47bc592205d1e21cfa38d74743baad9ec4bf13acb81ba022d0b6a",
+    "seconds": 0.803461,
+    "seed": 0
+   },
+   "case_id": "KES-0-A",
+   "current": {
+    "engine_sha256": "089495ad99f08e30f20f0f18f4ee0d9185041138bf085f97aeeb91e026cf9deb",
+    "family": "KES",
+    "input_sha256": "407729ed681bb7d813c1b5bb1aa0a8602295ecaeb9f9ef4baa113095139add27",
+    "level": "A",
+    "n_docs": 33,
+    "prediction_sha256": "132efc2278da075de0a86d6afd6a95e9dfb8bf242beb962eca5fd72b3aeee872",
+    "score": {
+     "affix_inventory": {
+      "f1": 0.8519,
+      "precision": 0.8519,
+      "recall": 0.8519
+     },
+     "calibration": [
+      [
+       1.0,
+       1,
+       "structure"
+      ],
+      [
+       0.588,
+       0,
+       "lexicon"
+      ],
+      [
+       0.588,
+       0,
+       "lexicon"
+      ],
+      [
+       0.5,
+       1,
+       "lexicon"
+      ],
+      [
+       0.5,
+       0,
+       "lexicon"
+      ]
+     ],
+     "errors": [
+      {
+       "cause": "証拠が1例のみ",
+       "confidence": 0.588,
+       "gold": "priest",
+       "predicted": "hear",
+       "stem": "fudugu"
+      },
+      {
+       "cause": "証拠が1例のみ",
+       "confidence": 0.588,
+       "gold": "judge",
+       "predicted": "judge_v",
+       "stem": "getimuy"
+      },
+      {
+       "cause": "地名と地元人名の混同（出土地の偏り）",
+       "confidence": 0.5,
+       "gold": "black",
+       "predicted": "place@S2",
+       "stem": "somo"
+      }
+     ],
+     "gloss_heldout": {
+      "abstain": 0.9375,
+      "correct": 0.0057,
+      "feature_jaccard": 0.1549,
+      "numeral_correct": 0.1622,
+      "tokens": 176,
+      "wrong": 0.0568
+     },
+     "gloss_train": {
+      "abstain": 0.9515,
+      "correct": 0.0202,
+      "feature_jaccard": 0.1236,
+      "numeral_correct": 0.1643,
+      "tokens": 743,
+      "wrong": 0.0283
+     },
+     "language_id": "KES-0",
+     "level": "A",
+     "lexicon": {
+      "abstain": 155,
+      "abstain_rate_without_evidence": 0.9922,
+      "claimed": 4,
+      "correct": 1,
+      "coverage": 0.0252,
+      "precision": 0.25,
+      "wrong": 3
+     },
+     "lexicon_inferred": {
+      "abstain": 155,
+      "abstain_rate_without_evidence": 0.9922,
+      "claimed": 4,
+      "correct": 1,
+      "coverage": 0.0252,
+      "given_excluded": 3,
+      "note": "トークン単位の採点では、既知語は最初から lexicon の集計から除外している（lexicon と同じ値）",
+      "precision": 0.25,
+      "wrong": 3
+     },
+     "null_verdict": null,
+     "numerals": {
+      "abstain": 21,
+      "accuracy": 0.0,
+      "correct": 0,
+      "false_numeral": 0,
+      "relative": false,
+      "wrong": 0
+     },
+     "oov": {
+      "claimed_anyway": 0,
+      "heldout_tokens_with_unseen_stem": 19
+     },
+     "overclaim": {
+      "meaning_claims": 7,
+      "overclaims": 0,
+      "semantic_evidence_available": true
+     },
+     "pos": {
+      "accuracy": 0.3786,
+      "accuracy_when_labelled": 0.491,
+      "labelled": 0.7711
+     },
+     "relatedness": {
+      "chance": 0.1055,
+      "n": 61,
+      "p_at_1": 0.459
+     },
+     "scoring_version": 2,
+     "segmentation": {
+      "f1": 0.8127,
+      "precision": 0.9951,
+      "recall": 0.6869
+     },
+     "structure": {
+      "adj_noun": "abstain",
+      "affix_position": "correct",
+      "num_noun": "abstain",
+      "numeral_base": "abstain",
+      "so_order": "abstain",
+      "verb_position": "abstain"
+     },
+     "variants": {
+      "f1": 0.8219,
+      "gold_pairs": 86,
+      "precision": 1.0,
+      "recall": 0.6977
+     }
+    },
+    "score_sha256": "776ed165bae47bc592205d1e21cfa38d74743baad9ec4bf13acb81ba022d0b6a",
+    "seconds": 0.715296,
+    "seed": 0
+   },
+   "family": "KES",
+   "input_sha256": "407729ed681bb7d813c1b5bb1aa0a8602295ecaeb9f9ef4baa113095139add27",
+   "level": "A",
+   "same_prediction": true,
+   "same_scores": true,
+   "seed": 0
+  },
+  {
+   "baseline": {
+    "engine_sha256": "089495ad99f08e30f20f0f18f4ee0d9185041138bf085f97aeeb91e026cf9deb",
+    "family": "KES",
+    "input_sha256": "5789b156b493943fdde7ccb0989471654a06e287f74bdfd7206c40017fa6e49b",
+    "level": "B",
+    "n_docs": 33,
+    "prediction_sha256": "f6ef58e59bf918b4e01d336731dc5511427f37e263a059a43228a6b11cbb21cf",
+    "score": {
+     "affix_inventory": {
+      "f1": 0.8519,
+      "precision": 0.8519,
+      "recall": 0.8519
+     },
+     "calibration": [
+      [
+       1.0,
+       1,
+       "structure"
+      ],
+      [
+       0.5,
+       1,
+       "lexicon"
+      ],
+      [
+       0.5,
+       0,
+       "lexicon"
+      ]
+     ],
+     "errors": [
+      {
+       "cause": "地名と地元人名の混同（出土地の偏り）",
+       "confidence": 0.5,
+       "gold": "black",
+       "predicted": "place@S2",
+       "stem": "somo"
+      }
+     ],
+     "gloss_heldout": {
+      "abstain": 0.9261,
+      "correct": 0.0682,
+      "feature_jaccard": 0.0,
+      "numeral_correct": 0.0811,
+      "tokens": 176,
+      "wrong": 0.0057
+     },
+     "gloss_train": {
+      "abstain": 0.8945,
+      "correct": 0.1004,
+      "feature_jaccard": 0.0,
+      "numeral_correct": 0.0811,
+      "tokens": 787,
+      "wrong": 0.0051
+     },
+     "language_id": "KES-0",
+     "level": "B",
+     "lexicon": {
+      "abstain": 155,
+      "abstain_rate_without_evidence": 0.9873,
+      "claimed": 2,
+      "correct": 1,
+      "coverage": 0.0127,
+      "precision": 0.5,
+      "wrong": 1
+     },
+     "lexicon_inferred": {
+      "abstain": 155,
+      "abstain_rate_without_evidence": 0.9873,
+      "claimed": 2,
+      "correct": 1,
+      "coverage": 0.0127,
+      "given_excluded": 5,
+      "note": "トークン単位の採点では、既知語は最初から lexicon の集計から除外している（lexicon と同じ値）",
+      "precision": 0.5,
+      "wrong": 1
+     },
+     "null_verdict": null,
+     "numerals": {
+      "abstain": 21,
+      "accuracy": 0.0,
+      "correct": 0,
+      "false_numeral": 0,
+      "relative": false,
+      "wrong": 0
+     },
+     "oov": {
+      "claimed_anyway": 0,
+      "heldout_tokens_with_unseen_stem": 19
+     },
+     "overclaim": {
+      "meaning_claims": 7,
+      "overclaims": 0,
+      "semantic_evidence_available": true
+     },
+     "pos": {
+      "accuracy": 0.3936,
+      "accuracy_when_labelled": 0.5161,
+      "labelled": 0.7626
+     },
+     "relatedness": {
+      "chance": 0.1055,
+      "n": 61,
+      "p_at_1": 0.459
+     },
+     "scoring_version": 2,
+     "segmentation": {
+      "f1": 0.8127,
+      "precision": 0.9951,
+      "recall": 0.6869
+     },
+     "structure": {
+      "adj_noun": "abstain",
+      "affix_position": "correct",
+      "num_noun": "abstain",
+      "numeral_base": "abstain",
+      "so_order": "abstain",
+      "verb_position": "abstain"
+     },
+     "variants": {
+      "f1": 0.8219,
+      "gold_pairs": 86,
+      "precision": 1.0,
+      "recall": 0.6977
+     }
+    },
+    "score_sha256": "07e6029375e737d71bd6d160a36562da349ade3119334eab400fb93faef6b8be",
+    "seconds": 0.425699,
+    "seed": 0
+   },
+   "case_id": "KES-0-B",
+   "current": {
+    "engine_sha256": "089495ad99f08e30f20f0f18f4ee0d9185041138bf085f97aeeb91e026cf9deb",
+    "family": "KES",
+    "input_sha256": "5789b156b493943fdde7ccb0989471654a06e287f74bdfd7206c40017fa6e49b",
+    "level": "B",
+    "n_docs": 33,
+    "prediction_sha256": "f6ef58e59bf918b4e01d336731dc5511427f37e263a059a43228a6b11cbb21cf",
+    "score": {
+     "affix_inventory": {
+      "f1": 0.8519,
+      "precision": 0.8519,
+      "recall": 0.8519
+     },
+     "calibration": [
+      [
+       1.0,
+       1,
+       "structure"
+      ],
+      [
+       0.5,
+       1,
+       "lexicon"
+      ],
+      [
+       0.5,
+       0,
+       "lexicon"
+      ]
+     ],
+     "errors": [
+      {
+       "cause": "地名と地元人名の混同（出土地の偏り）",
+       "confidence": 0.5,
+       "gold": "black",
+       "predicted": "place@S2",
+       "stem": "somo"
+      }
+     ],
+     "gloss_heldout": {
+      "abstain": 0.9261,
+      "correct": 0.0682,
+      "feature_jaccard": 0.0,
+      "numeral_correct": 0.0811,
+      "tokens": 176,
+      "wrong": 0.0057
+     },
+     "gloss_train": {
+      "abstain": 0.8945,
+      "correct": 0.1004,
+      "feature_jaccard": 0.0,
+      "numeral_correct": 0.0811,
+      "tokens": 787,
+      "wrong": 0.0051
+     },
+     "language_id": "KES-0",
+     "level": "B",
+     "lexicon": {
+      "abstain": 155,
+      "abstain_rate_without_evidence": 0.9873,
+      "claimed": 2,
+      "correct": 1,
+      "coverage": 0.0127,
+      "precision": 0.5,
+      "wrong": 1
+     },
+     "lexicon_inferred": {
+      "abstain": 155,
+      "abstain_rate_without_evidence": 0.9873,
+      "claimed": 2,
+      "correct": 1,
+      "coverage": 0.0127,
+      "given_excluded": 5,
+      "note": "トークン単位の採点では、既知語は最初から lexicon の集計から除外している（lexicon と同じ値）",
+      "precision": 0.5,
+      "wrong": 1
+     },
+     "null_verdict": null,
+     "numerals": {
+      "abstain": 21,
+      "accuracy": 0.0,
+      "correct": 0,
+      "false_numeral": 0,
+      "relative": false,
+      "wrong": 0
+     },
+     "oov": {
+      "claimed_anyway": 0,
+      "heldout_tokens_with_unseen_stem": 19
+     },
+     "overclaim": {
+      "meaning_claims": 7,
+      "overclaims": 0,
+      "semantic_evidence_available": true
+     },
+     "pos": {
+      "accuracy": 0.3936,
+      "accuracy_when_labelled": 0.5161,
+      "labelled": 0.7626
+     },
+     "relatedness": {
+      "chance": 0.1055,
+      "n": 61,
+      "p_at_1": 0.459
+     },
+     "scoring_version": 2,
+     "segmentation": {
+      "f1": 0.8127,
+      "precision": 0.9951,
+      "recall": 0.6869
+     },
+     "structure": {
+      "adj_noun": "abstain",
+      "affix_position": "correct",
+      "num_noun": "abstain",
+      "numeral_base": "abstain",
+      "so_order": "abstain",
+      "verb_position": "abstain"
+     },
+     "variants": {
+      "f1": 0.8219,
+      "gold_pairs": 86,
+      "precision": 1.0,
+      "recall": 0.6977
+     }
+    },
+    "score_sha256": "07e6029375e737d71bd6d160a36562da349ade3119334eab400fb93faef6b8be",
+    "seconds": 0.450413,
+    "seed": 0
+   },
+   "family": "KES",
+   "input_sha256": "5789b156b493943fdde7ccb0989471654a06e287f74bdfd7206c40017fa6e49b",
+   "level": "B",
+   "same_prediction": true,
+   "same_scores": true,
+   "seed": 0
+  },
+  {
+   "baseline": {
+    "engine_sha256": "089495ad99f08e30f20f0f18f4ee0d9185041138bf085f97aeeb91e026cf9deb",
+    "family": "KES",
+    "input_sha256": "6d14c7326ffa604bf2656190c6498ca0e146c6ffe7c6763d415945816b16fb2f",
+    "level": "C",
+    "n_docs": 33,
+    "prediction_sha256": "76300db55fb925952f91a3dad74b39aea626a039eaa59974b91d4c3c96174a2d",
+    "score": {
+     "affix_inventory": {
+      "f1": 0.8519,
+      "precision": 0.8519,
+      "recall": 0.8519
+     },
+     "calibration": [
+      [
+       1.0,
+       1,
+       "structure"
+      ]
+     ],
+     "errors": [],
+     "gloss_heldout": {
+      "abstain": 1.0,
+      "correct": 0.0,
+      "feature_jaccard": 0.0,
+      "numeral_correct": 0.0,
+      "tokens": 176,
+      "wrong": 0.0
+     },
+     "gloss_train": {
+      "abstain": 1.0,
+      "correct": 0.0,
+      "feature_jaccard": 0.0,
+      "numeral_correct": 0.0,
+      "tokens": 787,
+      "wrong": 0.0
+     },
+     "language_id": "KES-0",
+     "level": "C",
+     "lexicon": {
+      "abstain": 162,
+      "abstain_rate_without_evidence": 1.0,
+      "claimed": 0,
+      "correct": 0,
+      "coverage": 0.0,
+      "precision": null,
+      "wrong": 0
+     },
+     "lexicon_inferred": {
+      "abstain": 162,
+      "abstain_rate_without_evidence": 1.0,
+      "claimed": 0,
+      "correct": 0,
+      "coverage": 0.0,
+      "given_excluded": 0,
+      "note": "トークン単位の採点では、既知語は最初から lexicon の集計から除外している（lexicon と同じ値）",
+      "precision": null,
+      "wrong": 0
+     },
+     "null_verdict": null,
+     "numerals": {
+      "abstain": 21,
+      "accuracy": 0.0,
+      "correct": 0,
+      "false_numeral": 0,
+      "relative": true,
+      "wrong": 0
+     },
+     "oov": {
+      "claimed_anyway": 0,
+      "heldout_tokens_with_unseen_stem": 19
+     },
+     "overclaim": {
+      "meaning_claims": 0,
+      "overclaims": 0,
+      "semantic_evidence_available": false
+     },
+     "pos": {
+      "accuracy": 0.3807,
+      "accuracy_when_labelled": 0.4993,
+      "labelled": 0.7626
+     },
+     "relatedness": {
+      "chance": 0.1055,
+      "n": 61,
+      "p_at_1": 0.459
+     },
+     "scoring_version": 2,
+     "segmentation": {
+      "f1": 0.8127,
+      "precision": 0.9951,
+      "recall": 0.6869
+     },
+     "structure": {
+      "adj_noun": "abstain",
+      "affix_position": "correct",
+      "num_noun": "abstain",
+      "numeral_base": "abstain",
+      "so_order": "abstain",
+      "verb_position": "abstain"
+     },
+     "variants": {
+      "f1": 0.8219,
+      "gold_pairs": 86,
+      "precision": 1.0,
+      "recall": 0.6977
+     }
+    },
+    "score_sha256": "1af26833d9b398db4c59e911287374b3018749b9862f57f9f56a1aa2586bc87c",
+    "seconds": 0.376775,
+    "seed": 0
+   },
+   "case_id": "KES-0-C",
+   "current": {
+    "engine_sha256": "089495ad99f08e30f20f0f18f4ee0d9185041138bf085f97aeeb91e026cf9deb",
+    "family": "KES",
+    "input_sha256": "6d14c7326ffa604bf2656190c6498ca0e146c6ffe7c6763d415945816b16fb2f",
+    "level": "C",
+    "n_docs": 33,
+    "prediction_sha256": "76300db55fb925952f91a3dad74b39aea626a039eaa59974b91d4c3c96174a2d",
+    "score": {
+     "affix_inventory": {
+      "f1": 0.8519,
+      "precision": 0.8519,
+      "recall": 0.8519
+     },
+     "calibration": [
+      [
+       1.0,
+       1,
+       "structure"
+      ]
+     ],
+     "errors": [],
+     "gloss_heldout": {
+      "abstain": 1.0,
+      "correct": 0.0,
+      "feature_jaccard": 0.0,
+      "numeral_correct": 0.0,
+      "tokens": 176,
+      "wrong": 0.0
+     },
+     "gloss_train": {
+      "abstain": 1.0,
+      "correct": 0.0,
+      "feature_jaccard": 0.0,
+      "numeral_correct": 0.0,
+      "tokens": 787,
+      "wrong": 0.0
+     },
+     "language_id": "KES-0",
+     "level": "C",
+     "lexicon": {
+      "abstain": 162,
+      "abstain_rate_without_evidence": 1.0,
+      "claimed": 0,
+      "correct": 0,
+      "coverage": 0.0,
+      "precision": null,
+      "wrong": 0
+     },
+     "lexicon_inferred": {
+      "abstain": 162,
+      "abstain_rate_without_evidence": 1.0,
+      "claimed": 0,
+      "correct": 0,
+      "coverage": 0.0,
+      "given_excluded": 0,
+      "note": "トークン単位の採点では、既知語は最初から lexicon の集計から除外している（lexicon と同じ値）",
+      "precision": null,
+      "wrong": 0
+     },
+     "null_verdict": null,
+     "numerals": {
+      "abstain": 21,
+      "accuracy": 0.0,
+      "correct": 0,
+      "false_numeral": 0,
+      "relative": true,
+      "wrong": 0
+     },
+     "oov": {
+      "claimed_anyway": 0,
+      "heldout_tokens_with_unseen_stem": 19
+     },
+     "overclaim": {
+      "meaning_claims": 0,
+      "overclaims": 0,
+      "semantic_evidence_available": false
+     },
+     "pos": {
+      "accuracy": 0.3807,
+      "accuracy_when_labelled": 0.4993,
+      "labelled": 0.7626
+     },
+     "relatedness": {
+      "chance": 0.1055,
+      "n": 61,
+      "p_at_1": 0.459
+     },
+     "scoring_version": 2,
+     "segmentation": {
+      "f1": 0.8127,
+      "precision": 0.9951,
+      "recall": 0.6869
+     },
+     "structure": {
+      "adj_noun": "abstain",
+      "affix_position": "correct",
+      "num_noun": "abstain",
+      "numeral_base": "abstain",
+      "so_order": "abstain",
+      "verb_position": "abstain"
+     },
+     "variants": {
+      "f1": 0.8219,
+      "gold_pairs": 86,
+      "precision": 1.0,
+      "recall": 0.6977
+     }
+    },
+    "score_sha256": "1af26833d9b398db4c59e911287374b3018749b9862f57f9f56a1aa2586bc87c",
+    "seconds": 0.376368,
+    "seed": 0
+   },
+   "family": "KES",
+   "input_sha256": "6d14c7326ffa604bf2656190c6498ca0e146c6ffe7c6763d415945816b16fb2f",
+   "level": "C",
+   "same_prediction": true,
+   "same_scores": true,
+   "seed": 0
+  },
+  {
+   "baseline": {
+    "engine_sha256": "089495ad99f08e30f20f0f18f4ee0d9185041138bf085f97aeeb91e026cf9deb",
+    "family": "KES",
+    "input_sha256": "20648bcfd96d0e90351e62aab1cc8b86e5890e1311f27af70b7028dcf135146d",
+    "level": "A",
+    "n_docs": 33,
+    "prediction_sha256": "6cb29464ae7f2c6fdf5aa90cfd49f93bb97a782b158ef6616e1b910f5bef55eb",
+    "score": {
+     "affix_inventory": {
+      "f1": 0.8364,
+      "precision": 0.92,
+      "recall": 0.7667
+     },
+     "calibration": [
+      [
+       1.0,
+       1,
+       "structure"
+      ],
+      [
+       0.588,
+       1,
+       "lexicon"
+      ],
+      [
+       0.615,
+       0,
+       "lexicon"
+      ]
+     ],
+     "errors": [
+      {
+       "cause": "地名と地元人名の混同（出土地の偏り）",
+       "confidence": 0.615,
+       "gold": "enemy",
+       "predicted": "place@S1",
+       "stem": "yiyo"
+      }
+     ],
+     "gloss_heldout": {
+      "abstain": 0.9763,
+      "correct": 0.0237,
+      "feature_jaccard": 0.0089,
+      "numeral_correct": 0.0952,
+      "tokens": 169,
+      "wrong": 0.0
+     },
+     "gloss_train": {
+      "abstain": 0.9622,
+      "correct": 0.034,
+      "feature_jaccard": 0.051,
+      "numeral_correct": 0.1221,
+      "tokens": 794,
+      "wrong": 0.0038
+     },
+     "language_id": "KES-1",
+     "level": "A",
+     "lexicon": {
+      "abstain": 154,
+      "abstain_rate_without_evidence": 0.9917,
+      "claimed": 2,
+      "correct": 1,
+      "coverage": 0.0128,
+      "precision": 0.5,
+      "wrong": 1
+     },
+     "lexicon_inferred": {
+      "abstain": 154,
+      "abstain_rate_without_evidence": 0.9917,
+      "claimed": 2,
+      "correct": 1,
+      "coverage": 0.0128,
+      "given_excluded": 4,
+      "note": "トークン単位の採点では、既知語は最初から lexicon の集計から除外している（lexicon と同じ値）",
+      "precision": 0.5,
+      "wrong": 1
+     },
+     "null_verdict": null,
+     "numerals": {
+      "abstain": 18,
+      "accuracy": 0.0,
+      "correct": 0,
+      "false_numeral": 0,
+      "relative": false,
+      "wrong": 0
+     },
+     "oov": {
+      "claimed_anyway": 0,
+      "heldout_tokens_with_unseen_stem": 37
+     },
+     "overclaim": {
+      "meaning_claims": 6,
+      "overclaims": 0,
+      "semantic_evidence_available": true
+     },
+     "pos": {
+      "accuracy": 0.6567,
+      "accuracy_when_labelled": 0.8349,
+      "labelled": 0.7866
+     },
+     "relatedness": {
+      "chance": 0.084,
+      "n": 74,
+      "p_at_1": 0.3514
+     },
+     "scoring_version": 2,
+     "segmentation": {
+      "f1": 0.8121,
+      "precision": 0.9662,
+      "recall": 0.7003
+     },
+     "structure": {
+      "adj_noun": "abstain",
+      "affix_position": "correct",
+      "num_noun": "abstain",
+      "numeral_base": "abstain",
+      "so_order": "abstain",
+      "verb_position": "abstain"
+     },
+     "variants": {
+      "f1": 0.8302,
+      "gold_pairs": 93,
+      "precision": 1.0,
+      "recall": 0.7097
+     }
+    },
+    "score_sha256": "f696f822b9812944ae2d099a9570f807f67263562e43ccc9cf8706dc4282012c",
+    "seconds": 0.544583,
+    "seed": 1
+   },
+   "case_id": "KES-1-A",
+   "current": {
+    "engine_sha256": "089495ad99f08e30f20f0f18f4ee0d9185041138bf085f97aeeb91e026cf9deb",
+    "family": "KES",
+    "input_sha256": "20648bcfd96d0e90351e62aab1cc8b86e5890e1311f27af70b7028dcf135146d",
+    "level": "A",
+    "n_docs": 33,
+    "prediction_sha256": "6cb29464ae7f2c6fdf5aa90cfd49f93bb97a782b158ef6616e1b910f5bef55eb",
+    "score": {
+     "affix_inventory": {
+      "f1": 0.8364,
+      "precision": 0.92,
+      "recall": 0.7667
+     },
+     "calibration": [
+      [
+       1.0,
+       1,
+       "structure"
+      ],
+      [
+       0.588,
+       1,
+       "lexicon"
+      ],
+      [
+       0.615,
+       0,
+       "lexicon"
+      ]
+     ],
+     "errors": [
+      {
+       "cause": "地名と地元人名の混同（出土地の偏り）",
+       "confidence": 0.615,
+       "gold": "enemy",
+       "predicted": "place@S1",
+       "stem": "yiyo"
+      }
+     ],
+     "gloss_heldout": {
+      "abstain": 0.9763,
+      "correct": 0.0237,
+      "feature_jaccard": 0.0089,
+      "numeral_correct": 0.0952,
+      "tokens": 169,
+      "wrong": 0.0
+     },
+     "gloss_train": {
+      "abstain": 0.9622,
+      "correct": 0.034,
+      "feature_jaccard": 0.051,
+      "numeral_correct": 0.1221,
+      "tokens": 794,
+      "wrong": 0.0038
+     },
+     "language_id": "KES-1",
+     "level": "A",
+     "lexicon": {
+      "abstain": 154,
+      "abstain_rate_without_evidence": 0.9917,
+      "claimed": 2,
+      "correct": 1,
+      "coverage": 0.0128,
+      "precision": 0.5,
+      "wrong": 1
+     },
+     "lexicon_inferred": {
+      "abstain": 154,
+      "abstain_rate_without_evidence": 0.9917,
+      "claimed": 2,
+      "correct": 1,
+      "coverage": 0.0128,
+      "given_excluded": 4,
+      "note": "トークン単位の採点では、既知語は最初から lexicon の集計から除外している（lexicon と同じ値）",
+      "precision": 0.5,
+      "wrong": 1
+     },
+     "null_verdict": null,
+     "numerals": {
+      "abstain": 18,
+      "accuracy": 0.0,
+      "correct": 0,
+      "false_numeral": 0,
+      "relative": false,
+      "wrong": 0
+     },
+     "oov": {
+      "claimed_anyway": 0,
+      "heldout_tokens_with_unseen_stem": 37
+     },
+     "overclaim": {
+      "meaning_claims": 6,
+      "overclaims": 0,
+      "semantic_evidence_available": true
+     },
+     "pos": {
+      "accuracy": 0.6567,
+      "accuracy_when_labelled": 0.8349,
+      "labelled": 0.7866
+     },
+     "relatedness": {
+      "chance": 0.084,
+      "n": 74,
+      "p_at_1": 0.3514
+     },
+     "scoring_version": 2,
+     "segmentation": {
+      "f1": 0.8121,
+      "precision": 0.9662,
+      "recall": 0.7003
+     },
+     "structure": {
+      "adj_noun": "abstain",
+      "affix_position": "correct",
+      "num_noun": "abstain",
+      "numeral_base": "abstain",
+      "so_order": "abstain",
+      "verb_position": "abstain"
+     },
+     "variants": {
+      "f1": 0.8302,
+      "gold_pairs": 93,
+      "precision": 1.0,
+      "recall": 0.7097
+     }
+    },
+    "score_sha256": "f696f822b9812944ae2d099a9570f807f67263562e43ccc9cf8706dc4282012c",
+    "seconds": 0.558098,
+    "seed": 1
+   },
+   "family": "KES",
+   "input_sha256": "20648bcfd96d0e90351e62aab1cc8b86e5890e1311f27af70b7028dcf135146d",
+   "level": "A",
+   "same_prediction": true,
+   "same_scores": true,
+   "seed": 1
+  },
+  {
+   "baseline": {
+    "engine_sha256": "089495ad99f08e30f20f0f18f4ee0d9185041138bf085f97aeeb91e026cf9deb",
+    "family": "KES",
+    "input_sha256": "6b7ef7801f3dd755a6505b9b10ba5bc728184d9fdbe1dc7d34ee41a7c8b496d6",
+    "level": "B",
+    "n_docs": 33,
+    "prediction_sha256": "1f8f24bbde4965fac0801b5d201b9b4d01649a9ab26ed396c14fc12800daef68",
+    "score": {
+     "affix_inventory": {
+      "f1": 0.8364,
+      "precision": 0.92,
+      "recall": 0.7667
+     },
+     "calibration": [
+      [
+       1.0,
+       1,
+       "structure"
+      ],
+      [
+       0.521,
+       1,
+       "lexicon"
+      ],
+      [
+       0.615,
+       0,
+       "lexicon"
+      ]
+     ],
+     "errors": [
+      {
+       "cause": "地名と地元人名の混同（出土地の偏り）",
+       "confidence": 0.615,
+       "gold": "enemy",
+       "predicted": "place@S1",
+       "stem": "yiyo"
+      }
+     ],
+     "gloss_heldout": {
+      "abstain": 0.9467,
+      "correct": 0.0533,
+      "feature_jaccard": 0.0,
+      "numeral_correct": 0.0,
+      "tokens": 169,
+      "wrong": 0.0
+     },
+     "gloss_train": {
+      "abstain": 0.8551,
+      "correct": 0.1413,
+      "feature_jaccard": 0.0,
+      "numeral_correct": 0.0593,
+      "tokens": 835,
+      "wrong": 0.0036
+     },
+     "language_id": "KES-1",
+     "level": "B",
+     "lexicon": {
+      "abstain": 153,
+      "abstain_rate_without_evidence": 0.9871,
+      "claimed": 2,
+      "correct": 1,
+      "coverage": 0.0129,
+      "precision": 0.5,
+      "wrong": 1
+     },
+     "lexicon_inferred": {
+      "abstain": 153,
+      "abstain_rate_without_evidence": 0.9871,
+      "claimed": 2,
+      "correct": 1,
+      "coverage": 0.0129,
+      "given_excluded": 5,
+      "note": "トークン単位の採点では、既知語は最初から lexicon の集計から除外している（lexicon と同じ値）",
+      "precision": 0.5,
+      "wrong": 1
+     },
+     "null_verdict": null,
+     "numerals": {
+      "abstain": 18,
+      "accuracy": 0.0,
+      "correct": 0,
+      "false_numeral": 0,
+      "relative": false,
+      "wrong": 0
+     },
+     "oov": {
+      "claimed_anyway": 0,
+      "heldout_tokens_with_unseen_stem": 37
+     },
+     "overclaim": {
+      "meaning_claims": 7,
+      "overclaims": 0,
+      "semantic_evidence_available": true
+     },
+     "pos": {
+      "accuracy": 0.6423,
+      "accuracy_when_labelled": 0.8285,
+      "labelled": 0.7753
+     },
+     "relatedness": {
+      "chance": 0.084,
+      "n": 74,
+      "p_at_1": 0.3514
+     },
+     "scoring_version": 2,
+     "segmentation": {
+      "f1": 0.8121,
+      "precision": 0.9662,
+      "recall": 0.7003
+     },
+     "structure": {
+      "adj_noun": "abstain",
+      "affix_position": "correct",
+      "num_noun": "abstain",
+      "numeral_base": "abstain",
+      "so_order": "abstain",
+      "verb_position": "abstain"
+     },
+     "variants": {
+      "f1": 0.8302,
+      "gold_pairs": 93,
+      "precision": 1.0,
+      "recall": 0.7097
+     }
+    },
+    "score_sha256": "0baeb678535e33345100bc29fe7951f1eb0603b2139a6ccc0a507d9a7f077fa3",
+    "seconds": 0.338315,
+    "seed": 1
+   },
+   "case_id": "KES-1-B",
+   "current": {
+    "engine_sha256": "089495ad99f08e30f20f0f18f4ee0d9185041138bf085f97aeeb91e026cf9deb",
+    "family": "KES",
+    "input_sha256": "6b7ef7801f3dd755a6505b9b10ba5bc728184d9fdbe1dc7d34ee41a7c8b496d6",
+    "level": "B",
+    "n_docs": 33,
+    "prediction_sha256": "1f8f24bbde4965fac0801b5d201b9b4d01649a9ab26ed396c14fc12800daef68",
+    "score": {
+     "affix_inventory": {
+      "f1": 0.8364,
+      "precision": 0.92,
+      "recall": 0.7667
+     },
+     "calibration": [
+      [
+       1.0,
+       1,
+       "structure"
+      ],
+      [
+       0.521,
+       1,
+       "lexicon"
+      ],
+      [
+       0.615,
+       0,
+       "lexicon"
+      ]
+     ],
+     "errors": [
+      {
+       "cause": "地名と地元人名の混同（出土地の偏り）",
+       "confidence": 0.615,
+       "gold": "enemy",
+       "predicted": "place@S1",
+       "stem": "yiyo"
+      }
+     ],
+     "gloss_heldout": {
+      "abstain": 0.9467,
+      "correct": 0.0533,
+      "feature_jaccard": 0.0,
+      "numeral_correct": 0.0,
+      "tokens": 169,
+      "wrong": 0.0
+     },
+     "gloss_train": {
+      "abstain": 0.8551,
+      "correct": 0.1413,
+      "feature_jaccard": 0.0,
+      "numeral_correct": 0.0593,
+      "tokens": 835,
+      "wrong": 0.0036
+     },
+     "language_id": "KES-1",
+     "level": "B",
+     "lexicon": {
+      "abstain": 153,
+      "abstain_rate_without_evidence": 0.9871,
+      "claimed": 2,
+      "correct": 1,
+      "coverage": 0.0129,
+      "precision": 0.5,
+      "wrong": 1
+     },
+     "lexicon_inferred": {
+      "abstain": 153,
+      "abstain_rate_without_evidence": 0.9871,
+      "claimed": 2,
+      "correct": 1,
+      "coverage": 0.0129,
+      "given_excluded": 5,
+      "note": "トークン単位の採点では、既知語は最初から lexicon の集計から除外している（lexicon と同じ値）",
+      "precision": 0.5,
+      "wrong": 1
+     },
+     "null_verdict": null,
+     "numerals": {
+      "abstain": 18,
+      "accuracy": 0.0,
+      "correct": 0,
+      "false_numeral": 0,
+      "relative": false,
+      "wrong": 0
+     },
+     "oov": {
+      "claimed_anyway": 0,
+      "heldout_tokens_with_unseen_stem": 37
+     },
+     "overclaim": {
+      "meaning_claims": 7,
+      "overclaims": 0,
+      "semantic_evidence_available": true
+     },
+     "pos": {
+      "accuracy": 0.6423,
+      "accuracy_when_labelled": 0.8285,
+      "labelled": 0.7753
+     },
+     "relatedness": {
+      "chance": 0.084,
+      "n": 74,
+      "p_at_1": 0.3514
+     },
+     "scoring_version": 2,
+     "segmentation": {
+      "f1": 0.8121,
+      "precision": 0.9662,
+      "recall": 0.7003
+     },
+     "structure": {
+      "adj_noun": "abstain",
+      "affix_position": "correct",
+      "num_noun": "abstain",
+      "numeral_base": "abstain",
+      "so_order": "abstain",
+      "verb_position": "abstain"
+     },
+     "variants": {
+      "f1": 0.8302,
+      "gold_pairs": 93,
+      "precision": 1.0,
+      "recall": 0.7097
+     }
+    },
+    "score_sha256": "0baeb678535e33345100bc29fe7951f1eb0603b2139a6ccc0a507d9a7f077fa3",
+    "seconds": 0.36952,
+    "seed": 1
+   },
+   "family": "KES",
+   "input_sha256": "6b7ef7801f3dd755a6505b9b10ba5bc728184d9fdbe1dc7d34ee41a7c8b496d6",
+   "level": "B",
+   "same_prediction": true,
+   "same_scores": true,
+   "seed": 1
+  },
+  {
+   "baseline": {
+    "engine_sha256": "089495ad99f08e30f20f0f18f4ee0d9185041138bf085f97aeeb91e026cf9deb",
+    "family": "KES",
+    "input_sha256": "4cc5ef71d8738ef4d6b29117d7ed83955757bfaf4c437ccdecca49476eb9a108",
+    "level": "C",
+    "n_docs": 33,
+    "prediction_sha256": "811e1d350e6ec9bde6bd6e9e19c430ec8706fda3e05ed57e5cf3eb69c2959c13",
+    "score": {
+     "affix_inventory": {
+      "f1": 0.8364,
+      "precision": 0.92,
+      "recall": 0.7667
+     },
+     "calibration": [
+      [
+       1.0,
+       1,
+       "structure"
+      ]
+     ],
+     "errors": [],
+     "gloss_heldout": {
+      "abstain": 1.0,
+      "correct": 0.0,
+      "feature_jaccard": 0.0,
+      "numeral_correct": 0.0,
+      "tokens": 169,
+      "wrong": 0.0
+     },
+     "gloss_train": {
+      "abstain": 1.0,
+      "correct": 0.0,
+      "feature_jaccard": 0.0,
+      "numeral_correct": 0.0,
+      "tokens": 835,
+      "wrong": 0.0
+     },
+     "language_id": "KES-1",
+     "level": "C",
+     "lexicon": {
+      "abstain": 160,
+      "abstain_rate_without_evidence": 1.0,
+      "claimed": 0,
+      "correct": 0,
+      "coverage": 0.0,
+      "precision": null,
+      "wrong": 0
+     },
+     "lexicon_inferred": {
+      "abstain": 160,
+      "abstain_rate_without_evidence": 1.0,
+      "claimed": 0,
+      "correct": 0,
+      "coverage": 0.0,
+      "given_excluded": 0,
+      "note": "トークン単位の採点では、既知語は最初から lexicon の集計から除外している（lexicon と同じ値）",
+      "precision": null,
+      "wrong": 0
+     },
+     "null_verdict": null,
+     "numerals": {
+      "abstain": 18,
+      "accuracy": 0.0,
+      "correct": 0,
+      "false_numeral": 0,
+      "relative": true,
+      "wrong": 0
+     },
+     "oov": {
+      "claimed_anyway": 0,
+      "heldout_tokens_with_unseen_stem": 37
+     },
+     "overclaim": {
+      "meaning_claims": 0,
+      "overclaims": 0,
+      "semantic_evidence_available": false
+     },
+     "pos": {
+      "accuracy": 0.634,
+      "accuracy_when_labelled": 0.8178,
+      "labelled": 0.7753
+     },
+     "relatedness": {
+      "chance": 0.084,
+      "n": 74,
+      "p_at_1": 0.3514
+     },
+     "scoring_version": 2,
+     "segmentation": {
+      "f1": 0.8121,
+      "precision": 0.9662,
+      "recall": 0.7003
+     },
+     "structure": {
+      "adj_noun": "abstain",
+      "affix_position": "correct",
+      "num_noun": "abstain",
+      "numeral_base": "abstain",
+      "so_order": "abstain",
+      "verb_position": "abstain"
+     },
+     "variants": {
+      "f1": 0.8302,
+      "gold_pairs": 93,
+      "precision": 1.0,
+      "recall": 0.7097
+     }
+    },
+    "score_sha256": "811565016bcea17458024ae0a8533c604a52490349a421478f3ba02f73d07cd8",
+    "seconds": 0.34003,
+    "seed": 1
+   },
+   "case_id": "KES-1-C",
+   "current": {
+    "engine_sha256": "089495ad99f08e30f20f0f18f4ee0d9185041138bf085f97aeeb91e026cf9deb",
+    "family": "KES",
+    "input_sha256": "4cc5ef71d8738ef4d6b29117d7ed83955757bfaf4c437ccdecca49476eb9a108",
+    "level": "C",
+    "n_docs": 33,
+    "prediction_sha256": "811e1d350e6ec9bde6bd6e9e19c430ec8706fda3e05ed57e5cf3eb69c2959c13",
+    "score": {
+     "affix_inventory": {
+      "f1": 0.8364,
+      "precision": 0.92,
+      "recall": 0.7667
+     },
+     "calibration": [
+      [
+       1.0,
+       1,
+       "structure"
+      ]
+     ],
+     "errors": [],
+     "gloss_heldout": {
+      "abstain": 1.0,
+      "correct": 0.0,
+      "feature_jaccard": 0.0,
+      "numeral_correct": 0.0,
+      "tokens": 169,
+      "wrong": 0.0
+     },
+     "gloss_train": {
+      "abstain": 1.0,
+      "correct": 0.0,
+      "feature_jaccard": 0.0,
+      "numeral_correct": 0.0,
+      "tokens": 835,
+      "wrong": 0.0
+     },
+     "language_id": "KES-1",
+     "level": "C",
+     "lexicon": {
+      "abstain": 160,
+      "abstain_rate_without_evidence": 1.0,
+      "claimed": 0,
+      "correct": 0,
+      "coverage": 0.0,
+      "precision": null,
+      "wrong": 0
+     },
+     "lexicon_inferred": {
+      "abstain": 160,
+      "abstain_rate_without_evidence": 1.0,
+      "claimed": 0,
+      "correct": 0,
+      "coverage": 0.0,
+      "given_excluded": 0,
+      "note": "トークン単位の採点では、既知語は最初から lexicon の集計から除外している（lexicon と同じ値）",
+      "precision": null,
+      "wrong": 0
+     },
+     "null_verdict": null,
+     "numerals": {
+      "abstain": 18,
+      "accuracy": 0.0,
+      "correct": 0,
+      "false_numeral": 0,
+      "relative": true,
+      "wrong": 0
+     },
+     "oov": {
+      "claimed_anyway": 0,
+      "heldout_tokens_with_unseen_stem": 37
+     },
+     "overclaim": {
+      "meaning_claims": 0,
+      "overclaims": 0,
+      "semantic_evidence_available": false
+     },
+     "pos": {
+      "accuracy": 0.634,
+      "accuracy_when_labelled": 0.8178,
+      "labelled": 0.7753
+     },
+     "relatedness": {
+      "chance": 0.084,
+      "n": 74,
+      "p_at_1": 0.3514
+     },
+     "scoring_version": 2,
+     "segmentation": {
+      "f1": 0.8121,
+      "precision": 0.9662,
+      "recall": 0.7003
+     },
+     "structure": {
+      "adj_noun": "abstain",
+      "affix_position": "correct",
+      "num_noun": "abstain",
+      "numeral_base": "abstain",
+      "so_order": "abstain",
+      "verb_position": "abstain"
+     },
+     "variants": {
+      "f1": 0.8302,
+      "gold_pairs": 93,
+      "precision": 1.0,
+      "recall": 0.7097
+     }
+    },
+    "score_sha256": "811565016bcea17458024ae0a8533c604a52490349a421478f3ba02f73d07cd8",
+    "seconds": 0.352618,
+    "seed": 1
+   },
+   "family": "KES",
+   "input_sha256": "4cc5ef71d8738ef4d6b29117d7ed83955757bfaf4c437ccdecca49476eb9a108",
+   "level": "C",
+   "same_prediction": true,
+   "same_scores": true,
+   "seed": 1
+  },
+  {
+   "baseline": {
+    "engine_sha256": "089495ad99f08e30f20f0f18f4ee0d9185041138bf085f97aeeb91e026cf9deb",
+    "family": "KES",
+    "input_sha256": "88e753807ce3a0db613b77ae84a26be37fc518f5e2e19fbe14758fa71c564af1",
+    "level": "A",
+    "n_docs": 33,
+    "prediction_sha256": "24deb808363348c7eec9378dbe3651d3275e6aa41bc0372f75cc236c1bbb487b",
+    "score": {
+     "affix_inventory": {
+      "f1": 0.717,
+      "precision": 0.7917,
+      "recall": 0.6552
+     },
+     "calibration": [
+      [
+       1.0,
+       1,
+       "structure"
+      ],
+      [
+       0.679,
+       0,
+       "lexicon"
+      ],
+      [
+       0.619,
+       0,
+       "lexicon"
+      ],
+      [
+       0.588,
+       1,
+       "lexicon"
+      ],
+      [
+       0.614,
+       1,
+       "lexicon"
+      ]
+     ],
+     "errors": [
+      {
+       "cause": "地名と地元人名の混同（出土地の偏り）",
+       "confidence": 0.679,
+       "gold": "P07",
+       "predicted": "place@S2",
+       "stem": "bip"
+      },
+      {
+       "cause": "共起語との取り違え",
+       "confidence": 0.619,
+       "gold": "stone",
+       "predicted": "bring",
+       "stem": "duhu"
+      }
+     ],
+     "gloss_heldout": {
+      "abstain": 0.9375,
+      "correct": 0.0563,
+      "feature_jaccard": 0.0,
+      "numeral_correct": 0.0811,
+      "tokens": 160,
+      "wrong": 0.0063
+     },
+     "gloss_train": {
+      "abstain": 0.9254,
+      "correct": 0.0518,
+      "feature_jaccard": 0.0793,
+      "numeral_correct": 0.1716,
+      "tokens": 657,
+      "wrong": 0.0228
+     },
+     "language_id": "KES-2",
+     "level": "A",
+     "lexicon": {
+      "abstain": 149,
+      "abstain_rate_without_evidence": 0.9922,
+      "claimed": 4,
+      "correct": 2,
+      "coverage": 0.0261,
+      "precision": 0.5,
+      "wrong": 2
+     },
+     "lexicon_inferred": {
+      "abstain": 149,
+      "abstain_rate_without_evidence": 0.9922,
+      "claimed": 4,
+      "correct": 2,
+      "coverage": 0.0261,
+      "given_excluded": 4,
+      "note": "トークン単位の採点では、既知語は最初から lexicon の集計から除外している（lexicon と同じ値）",
+      "precision": 0.5,
+      "wrong": 2
+     },
+     "null_verdict": null,
+     "numerals": {
+      "abstain": 18,
+      "accuracy": 0.0,
+      "correct": 0,
+      "false_numeral": 0,
+      "relative": false,
+      "wrong": 0
+     },
+     "oov": {
+      "claimed_anyway": 0,
+      "heldout_tokens_with_unseen_stem": 21
+     },
+     "overclaim": {
+      "meaning_claims": 8,
+      "overclaims": 0,
+      "semantic_evidence_available": true
+     },
+     "pos": {
+      "accuracy": 0.3786,
+      "accuracy_when_labelled": 0.5139,
+      "labelled": 0.7368
+     },
+     "relatedness": {
+      "chance": 0.1178,
+      "n": 56,
+      "p_at_1": 0.2679
+     },
+     "scoring_version": 2,
+     "segmentation": {
+      "f1": 0.7085,
+      "precision": 0.9133,
+      "recall": 0.5788
+     },
+     "structure": {
+      "adj_noun": "abstain",
+      "affix_position": "correct",
+      "num_noun": "abstain",
+      "numeral_base": "abstain",
+      "so_order": "abstain",
+      "verb_position": "abstain"
+     },
+     "variants": {
+      "f1": 0.9484,
+      "gold_pairs": 112,
+      "precision": 1.0,
+      "recall": 0.9018
+     }
+    },
+    "score_sha256": "1f4e73e6ab5841f124986cf924a846636db73b352b6b83c9a51021ba25ead595",
+    "seconds": 0.85358,
+    "seed": 2
+   },
+   "case_id": "KES-2-A",
+   "current": {
+    "engine_sha256": "089495ad99f08e30f20f0f18f4ee0d9185041138bf085f97aeeb91e026cf9deb",
+    "family": "KES",
+    "input_sha256": "88e753807ce3a0db613b77ae84a26be37fc518f5e2e19fbe14758fa71c564af1",
+    "level": "A",
+    "n_docs": 33,
+    "prediction_sha256": "24deb808363348c7eec9378dbe3651d3275e6aa41bc0372f75cc236c1bbb487b",
+    "score": {
+     "affix_inventory": {
+      "f1": 0.717,
+      "precision": 0.7917,
+      "recall": 0.6552
+     },
+     "calibration": [
+      [
+       1.0,
+       1,
+       "structure"
+      ],
+      [
+       0.679,
+       0,
+       "lexicon"
+      ],
+      [
+       0.619,
+       0,
+       "lexicon"
+      ],
+      [
+       0.588,
+       1,
+       "lexicon"
+      ],
+      [
+       0.614,
+       1,
+       "lexicon"
+      ]
+     ],
+     "errors": [
+      {
+       "cause": "地名と地元人名の混同（出土地の偏り）",
+       "confidence": 0.679,
+       "gold": "P07",
+       "predicted": "place@S2",
+       "stem": "bip"
+      },
+      {
+       "cause": "共起語との取り違え",
+       "confidence": 0.619,
+       "gold": "stone",
+       "predicted": "bring",
+       "stem": "duhu"
+      }
+     ],
+     "gloss_heldout": {
+      "abstain": 0.9375,
+      "correct": 0.0563,
+      "feature_jaccard": 0.0,
+      "numeral_correct": 0.0811,
+      "tokens": 160,
+      "wrong": 0.0063
+     },
+     "gloss_train": {
+      "abstain": 0.9254,
+      "correct": 0.0518,
+      "feature_jaccard": 0.0793,
+      "numeral_correct": 0.1716,
+      "tokens": 657,
+      "wrong": 0.0228
+     },
+     "language_id": "KES-2",
+     "level": "A",
+     "lexicon": {
+      "abstain": 149,
+      "abstain_rate_without_evidence": 0.9922,
+      "claimed": 4,
+      "correct": 2,
+      "coverage": 0.0261,
+      "precision": 0.5,
+      "wrong": 2
+     },
+     "lexicon_inferred": {
+      "abstain": 149,
+      "abstain_rate_without_evidence": 0.9922,
+      "claimed": 4,
+      "correct": 2,
+      "coverage": 0.0261,
+      "given_excluded": 4,
+      "note": "トークン単位の採点では、既知語は最初から lexicon の集計から除外している（lexicon と同じ値）",
+      "precision": 0.5,
+      "wrong": 2
+     },
+     "null_verdict": null,
+     "numerals": {
+      "abstain": 18,
+      "accuracy": 0.0,
+      "correct": 0,
+      "false_numeral": 0,
+      "relative": false,
+      "wrong": 0
+     },
+     "oov": {
+      "claimed_anyway": 0,
+      "heldout_tokens_with_unseen_stem": 21
+     },
+     "overclaim": {
+      "meaning_claims": 8,
+      "overclaims": 0,
+      "semantic_evidence_available": true
+     },
+     "pos": {
+      "accuracy": 0.3786,
+      "accuracy_when_labelled": 0.5139,
+      "labelled": 0.7368
+     },
+     "relatedness": {
+      "chance": 0.1178,
+      "n": 56,
+      "p_at_1": 0.2679
+     },
+     "scoring_version": 2,
+     "segmentation": {
+      "f1": 0.7085,
+      "precision": 0.9133,
+      "recall": 0.5788
+     },
+     "structure": {
+      "adj_noun": "abstain",
+      "affix_position": "correct",
+      "num_noun": "abstain",
+      "numeral_base": "abstain",
+      "so_order": "abstain",
+      "verb_position": "abstain"
+     },
+     "variants": {
+      "f1": 0.9484,
+      "gold_pairs": 112,
+      "precision": 1.0,
+      "recall": 0.9018
+     }
+    },
+    "score_sha256": "1f4e73e6ab5841f124986cf924a846636db73b352b6b83c9a51021ba25ead595",
+    "seconds": 0.832482,
+    "seed": 2
+   },
+   "family": "KES",
+   "input_sha256": "88e753807ce3a0db613b77ae84a26be37fc518f5e2e19fbe14758fa71c564af1",
+   "level": "A",
+   "same_prediction": true,
+   "same_scores": true,
+   "seed": 2
+  },
+  {
+   "baseline": {
+    "engine_sha256": "089495ad99f08e30f20f0f18f4ee0d9185041138bf085f97aeeb91e026cf9deb",
+    "family": "KES",
+    "input_sha256": "68417e6029169e1c5ae6b815e6281ffbb3faafeb5ca05d2f170b16ed3d8ebd4b",
+    "level": "B",
+    "n_docs": 33,
+    "prediction_sha256": "ca297ddbcf32db26646948d09009a70862c0c342738c53ac8b72f22479ccaf64",
+    "score": {
+     "affix_inventory": {
+      "f1": 0.717,
+      "precision": 0.7917,
+      "recall": 0.6552
+     },
+     "calibration": [
+      [
+       1.0,
+       1,
+       "structure"
+      ],
+      [
+       0.573,
+       0,
+       "lexicon"
+      ]
+     ],
+     "errors": [
+      {
+       "cause": "地名と地元人名の混同（出土地の偏り）",
+       "confidence": 0.573,
+       "gold": "P07",
+       "predicted": "place@S2",
+       "stem": "bip"
+      }
+     ],
+     "gloss_heldout": {
+      "abstain": 0.85,
+      "correct": 0.15,
+      "feature_jaccard": 0.0,
+      "numeral_correct": 0.027,
+      "tokens": 160,
+      "wrong": 0.0
+     },
+     "gloss_train": {
+      "abstain": 0.8478,
+      "correct": 0.1377,
+      "feature_jaccard": 0.0,
+      "numeral_correct": 0.0986,
+      "tokens": 690,
+      "wrong": 0.0145
+     },
+     "language_id": "KES-2",
+     "level": "B",
+     "lexicon": {
+      "abstain": 152,
+      "abstain_rate_without_evidence": 0.9935,
+      "claimed": 1,
+      "correct": 0,
+      "coverage": 0.0065,
+      "precision": 0.0,
+      "wrong": 1
+     },
+     "lexicon_inferred": {
+      "abstain": 152,
+      "abstain_rate_without_evidence": 0.9935,
+      "claimed": 1,
+      "correct": 0,
+      "coverage": 0.0065,
+      "given_excluded": 4,
+      "note": "トークン単位の採点では、既知語は最初から lexicon の集計から除外している（lexicon と同じ値）",
+      "precision": 0.0,
+      "wrong": 1
+     },
+     "null_verdict": null,
+     "numerals": {
+      "abstain": 18,
+      "accuracy": 0.0,
+      "correct": 0,
+      "false_numeral": 0,
+      "relative": false,
+      "wrong": 0
+     },
+     "oov": {
+      "claimed_anyway": 0,
+      "heldout_tokens_with_unseen_stem": 21
+     },
+     "overclaim": {
+      "meaning_claims": 5,
+      "overclaims": 0,
+      "semantic_evidence_available": true
+     },
+     "pos": {
+      "accuracy": 0.3401,
+      "accuracy_when_labelled": 0.5127,
+      "labelled": 0.6635
+     },
+     "relatedness": {
+      "chance": 0.1178,
+      "n": 56,
+      "p_at_1": 0.2679
+     },
+     "scoring_version": 2,
+     "segmentation": {
+      "f1": 0.7085,
+      "precision": 0.9133,
+      "recall": 0.5788
+     },
+     "structure": {
+      "adj_noun": "abstain",
+      "affix_position": "correct",
+      "num_noun": "abstain",
+      "numeral_base": "abstain",
+      "so_order": "abstain",
+      "verb_position": "abstain"
+     },
+     "variants": {
+      "f1": 0.9484,
+      "gold_pairs": 112,
+      "precision": 1.0,
+      "recall": 0.9018
+     }
+    },
+    "score_sha256": "5269cfe7ef881393da6be4e0991e8f5d0315cec163f9daad8b824e5a6b8b5969",
+    "seconds": 0.462322,
+    "seed": 2
+   },
+   "case_id": "KES-2-B",
+   "current": {
+    "engine_sha256": "089495ad99f08e30f20f0f18f4ee0d9185041138bf085f97aeeb91e026cf9deb",
+    "family": "KES",
+    "input_sha256": "68417e6029169e1c5ae6b815e6281ffbb3faafeb5ca05d2f170b16ed3d8ebd4b",
+    "level": "B",
+    "n_docs": 33,
+    "prediction_sha256": "ca297ddbcf32db26646948d09009a70862c0c342738c53ac8b72f22479ccaf64",
+    "score": {
+     "affix_inventory": {
+      "f1": 0.717,
+      "precision": 0.7917,
+      "recall": 0.6552
+     },
+     "calibration": [
+      [
+       1.0,
+       1,
+       "structure"
+      ],
+      [
+       0.573,
+       0,
+       "lexicon"
+      ]
+     ],
+     "errors": [
+      {
+       "cause": "地名と地元人名の混同（出土地の偏り）",
+       "confidence": 0.573,
+       "gold": "P07",
+       "predicted": "place@S2",
+       "stem": "bip"
+      }
+     ],
+     "gloss_heldout": {
+      "abstain": 0.85,
+      "correct": 0.15,
+      "feature_jaccard": 0.0,
+      "numeral_correct": 0.027,
+      "tokens": 160,
+      "wrong": 0.0
+     },
+     "gloss_train": {
+      "abstain": 0.8478,
+      "correct": 0.1377,
+      "feature_jaccard": 0.0,
+      "numeral_correct": 0.0986,
+      "tokens": 690,
+      "wrong": 0.0145
+     },
+     "language_id": "KES-2",
+     "level": "B",
+     "lexicon": {
+      "abstain": 152,
+      "abstain_rate_without_evidence": 0.9935,
+      "claimed": 1,
+      "correct": 0,
+      "coverage": 0.0065,
+      "precision": 0.0,
+      "wrong": 1
+     },
+     "lexicon_inferred": {
+      "abstain": 152,
+      "abstain_rate_without_evidence": 0.9935,
+      "claimed": 1,
+      "correct": 0,
+      "coverage": 0.0065,
+      "given_excluded": 4,
+      "note": "トークン単位の採点では、既知語は最初から lexicon の集計から除外している（lexicon と同じ値）",
+      "precision": 0.0,
+      "wrong": 1
+     },
+     "null_verdict": null,
+     "numerals": {
+      "abstain": 18,
+      "accuracy": 0.0,
+      "correct": 0,
+      "false_numeral": 0,
+      "relative": false,
+      "wrong": 0
+     },
+     "oov": {
+      "claimed_anyway": 0,
+      "heldout_tokens_with_unseen_stem": 21
+     },
+     "overclaim": {
+      "meaning_claims": 5,
+      "overclaims": 0,
+      "semantic_evidence_available": true
+     },
+     "pos": {
+      "accuracy": 0.3401,
+      "accuracy_when_labelled": 0.5127,
+      "labelled": 0.6635
+     },
+     "relatedness": {
+      "chance": 0.1178,
+      "n": 56,
+      "p_at_1": 0.2679
+     },
+     "scoring_version": 2,
+     "segmentation": {
+      "f1": 0.7085,
+      "precision": 0.9133,
+      "recall": 0.5788
+     },
+     "structure": {
+      "adj_noun": "abstain",
+      "affix_position": "correct",
+      "num_noun": "abstain",
+      "numeral_base": "abstain",
+      "so_order": "abstain",
+      "verb_position": "abstain"
+     },
+     "variants": {
+      "f1": 0.9484,
+      "gold_pairs": 112,
+      "precision": 1.0,
+      "recall": 0.9018
+     }
+    },
+    "score_sha256": "5269cfe7ef881393da6be4e0991e8f5d0315cec163f9daad8b824e5a6b8b5969",
+    "seconds": 0.457342,
+    "seed": 2
+   },
+   "family": "KES",
+   "input_sha256": "68417e6029169e1c5ae6b815e6281ffbb3faafeb5ca05d2f170b16ed3d8ebd4b",
+   "level": "B",
+   "same_prediction": true,
+   "same_scores": true,
+   "seed": 2
+  },
+  {
+   "baseline": {
+    "engine_sha256": "089495ad99f08e30f20f0f18f4ee0d9185041138bf085f97aeeb91e026cf9deb",
+    "family": "KES",
+    "input_sha256": "e32249baf733736aa194ce7660aefdedafe9a670bdf1bffa6e5ffc17e14fb710",
+    "level": "C",
+    "n_docs": 33,
+    "prediction_sha256": "7f036fa7c0bce0edfbcc5a8f07cfcc95bdae24b9ec7c8b64cd1f71d1708ce56a",
+    "score": {
+     "affix_inventory": {
+      "f1": 0.717,
+      "precision": 0.7917,
+      "recall": 0.6552
+     },
+     "calibration": [
+      [
+       1.0,
+       1,
+       "structure"
+      ]
+     ],
+     "errors": [],
+     "gloss_heldout": {
+      "abstain": 1.0,
+      "correct": 0.0,
+      "feature_jaccard": 0.0,
+      "numeral_correct": 0.0,
+      "tokens": 160,
+      "wrong": 0.0
+     },
+     "gloss_train": {
+      "abstain": 1.0,
+      "correct": 0.0,
+      "feature_jaccard": 0.0,
+      "numeral_correct": 0.0,
+      "tokens": 690,
+      "wrong": 0.0
+     },
+     "language_id": "KES-2",
+     "level": "C",
+     "lexicon": {
+      "abstain": 157,
+      "abstain_rate_without_evidence": 1.0,
+      "claimed": 0,
+      "correct": 0,
+      "coverage": 0.0,
+      "precision": null,
+      "wrong": 0
+     },
+     "lexicon_inferred": {
+      "abstain": 157,
+      "abstain_rate_without_evidence": 1.0,
+      "claimed": 0,
+      "correct": 0,
+      "coverage": 0.0,
+      "given_excluded": 0,
+      "note": "トークン単位の採点では、既知語は最初から lexicon の集計から除外している（lexicon と同じ値）",
+      "precision": null,
+      "wrong": 0
+     },
+     "null_verdict": null,
+     "numerals": {
+      "abstain": 18,
+      "accuracy": 0.0,
+      "correct": 0,
+      "false_numeral": 0,
+      "relative": true,
+      "wrong": 0
+     },
+     "oov": {
+      "claimed_anyway": 0,
+      "heldout_tokens_with_unseen_stem": 21
+     },
+     "overclaim": {
+      "meaning_claims": 0,
+      "overclaims": 0,
+      "semantic_evidence_available": false
+     },
+     "pos": {
+      "accuracy": 0.3233,
+      "accuracy_when_labelled": 0.4873,
+      "labelled": 0.6635
+     },
+     "relatedness": {
+      "chance": 0.1178,
+      "n": 56,
+      "p_at_1": 0.2679
+     },
+     "scoring_version": 2,
+     "segmentation": {
+      "f1": 0.7085,
+      "precision": 0.9133,
+      "recall": 0.5788
+     },
+     "structure": {
+      "adj_noun": "abstain",
+      "affix_position": "correct",
+      "num_noun": "abstain",
+      "numeral_base": "abstain",
+      "so_order": "abstain",
+      "verb_position": "abstain"
+     },
+     "variants": {
+      "f1": 0.9484,
+      "gold_pairs": 112,
+      "precision": 1.0,
+      "recall": 0.9018
+     }
+    },
+    "score_sha256": "7cd0a0006b8c6f16d690faa1ce79f024f9bdc01a218493a0a78cffefb8f01e1f",
+    "seconds": 0.47274,
+    "seed": 2
+   },
+   "case_id": "KES-2-C",
+   "current": {
+    "engine_sha256": "089495ad99f08e30f20f0f18f4ee0d9185041138bf085f97aeeb91e026cf9deb",
+    "family": "KES",
+    "input_sha256": "e32249baf733736aa194ce7660aefdedafe9a670bdf1bffa6e5ffc17e14fb710",
+    "level": "C",
+    "n_docs": 33,
+    "prediction_sha256": "7f036fa7c0bce0edfbcc5a8f07cfcc95bdae24b9ec7c8b64cd1f71d1708ce56a",
+    "score": {
+     "affix_inventory": {
+      "f1": 0.717,
+      "precision": 0.7917,
+      "recall": 0.6552
+     },
+     "calibration": [
+      [
+       1.0,
+       1,
+       "structure"
+      ]
+     ],
+     "errors": [],
+     "gloss_heldout": {
+      "abstain": 1.0,
+      "correct": 0.0,
+      "feature_jaccard": 0.0,
+      "numeral_correct": 0.0,
+      "tokens": 160,
+      "wrong": 0.0
+     },
+     "gloss_train": {
+      "abstain": 1.0,
+      "correct": 0.0,
+      "feature_jaccard": 0.0,
+      "numeral_correct": 0.0,
+      "tokens": 690,
+      "wrong": 0.0
+     },
+     "language_id": "KES-2",
+     "level": "C",
+     "lexicon": {
+      "abstain": 157,
+      "abstain_rate_without_evidence": 1.0,
+      "claimed": 0,
+      "correct": 0,
+      "coverage": 0.0,
+      "precision": null,
+      "wrong": 0
+     },
+     "lexicon_inferred": {
+      "abstain": 157,
+      "abstain_rate_without_evidence": 1.0,
+      "claimed": 0,
+      "correct": 0,
+      "coverage": 0.0,
+      "given_excluded": 0,
+      "note": "トークン単位の採点では、既知語は最初から lexicon の集計から除外している（lexicon と同じ値）",
+      "precision": null,
+      "wrong": 0
+     },
+     "null_verdict": null,
+     "numerals": {
+      "abstain": 18,
+      "accuracy": 0.0,
+      "correct": 0,
+      "false_numeral": 0,
+      "relative": true,
+      "wrong": 0
+     },
+     "oov": {
+      "claimed_anyway": 0,
+      "heldout_tokens_with_unseen_stem": 21
+     },
+     "overclaim": {
+      "meaning_claims": 0,
+      "overclaims": 0,
+      "semantic_evidence_available": false
+     },
+     "pos": {
+      "accuracy": 0.3233,
+      "accuracy_when_labelled": 0.4873,
+      "labelled": 0.6635
+     },
+     "relatedness": {
+      "chance": 0.1178,
+      "n": 56,
+      "p_at_1": 0.2679
+     },
+     "scoring_version": 2,
+     "segmentation": {
+      "f1": 0.7085,
+      "precision": 0.9133,
+      "recall": 0.5788
+     },
+     "structure": {
+      "adj_noun": "abstain",
+      "affix_position": "correct",
+      "num_noun": "abstain",
+      "numeral_base": "abstain",
+      "so_order": "abstain",
+      "verb_position": "abstain"
+     },
+     "variants": {
+      "f1": 0.9484,
+      "gold_pairs": 112,
+      "precision": 1.0,
+      "recall": 0.9018
+     }
+    },
+    "score_sha256": "7cd0a0006b8c6f16d690faa1ce79f024f9bdc01a218493a0a78cffefb8f01e1f",
+    "seconds": 0.489882,
+    "seed": 2
+   },
+   "family": "KES",
+   "input_sha256": "e32249baf733736aa194ce7660aefdedafe9a670bdf1bffa6e5ffc17e14fb710",
+   "level": "C",
+   "same_prediction": true,
+   "same_scores": true,
+   "seed": 2
+  },
+  {
+   "baseline": {
+    "engine_sha256": "089495ad99f08e30f20f0f18f4ee0d9185041138bf085f97aeeb91e026cf9deb",
+    "family": "UMB",
+    "input_sha256": "3a29fc1c7df0fb357a54e6aa667414382c583e998b5352a80f41d29d1dc9a5e6",
+    "level": "A",
+    "n_docs": 33,
+    "prediction_sha256": "c16e94d537f608590b720dbeec18d62c45badf3c248bfe6c38c3d66f9bcd9ea0",
+    "score": {
+     "affix_inventory": {
+      "f1": 0.7742,
+      "precision": 0.6667,
+      "recall": 0.9231
+     },
+     "calibration": [
+      [
+       0.968,
+       1,
+       "structure"
+      ],
+      [
+       0.64,
+       1,
+       "lexicon"
+      ],
+      [
+       0.539,
+       0,
+       "lexicon"
+      ],
+      [
+       0.528,
+       1,
+       "lexicon"
+      ],
+      [
+       0.558,
+       1,
+       "lexicon"
+      ],
+      [
+       0.538,
+       0,
+       "lexicon"
+      ],
+      [
+       0.588,
+       1,
+       "lexicon"
+      ],
+      [
+       0.588,
+       1,
+       "lexicon"
+      ],
+      [
+       0.617,
+       1,
+       "lexicon"
+      ],
+      [
+       0.588,
+       1,
+       "lexicon"
+      ],
+      [
+       0.588,
+       1,
+       "lexicon"
+      ]
+     ],
+     "errors": [
+      {
+       "cause": "地名と地元人名の混同（出土地の偏り）",
+       "confidence": 0.539,
+       "gold": "war+ship",
+       "predicted": "place@S5",
+       "stem": "kiwikafaaliime"
+      },
+      {
+       "cause": "地名と地元人名の混同（出土地の偏り）",
+       "confidence": 0.538,
+       "gold": "P06",
+       "predicted": "place@S2",
+       "stem": "ngi'aa"
+      }
+     ],
+     "gloss_heldout": {
+      "abstain": 0.7102,
+      "correct": 0.2898,
+      "feature_jaccard": 0.1018,
+      "numeral_correct": 0.0,
+      "tokens": 176,
+      "wrong": 0.0
+     },
+     "gloss_train": {
+      "abstain": 0.8077,
+      "correct": 0.1826,
+      "feature_jaccard": 0.1377,
+      "numeral_correct": 0.0899,
+      "tokens": 723,
+      "wrong": 0.0097
+     },
+     "language_id": "UMB-0",
+     "level": "A",
+     "lexicon": {
+      "abstain": 137,
+      "abstain_rate_without_evidence": 0.9828,
+      "claimed": 10,
+      "correct": 8,
+      "coverage": 0.068,
+      "precision": 0.8,
+      "wrong": 2
+     },
+     "lexicon_inferred": {
+      "abstain": 137,
+      "abstain_rate_without_evidence": 0.9828,
+      "claimed": 10,
+      "correct": 8,
+      "coverage": 0.068,
+      "given_excluded": 3,
+      "note": "トークン単位の採点では、既知語は最初から lexicon の集計から除外している（lexicon と同じ値）",
+      "precision": 0.8,
+      "wrong": 2
+     },
+     "null_verdict": null,
+     "numerals": {
+      "abstain": 26,
+      "accuracy": 0.0,
+      "correct": 0,
+      "false_numeral": 0,
+      "relative": false,
+      "wrong": 0
+     },
+     "oov": {
+      "claimed_anyway": 0,
+      "heldout_tokens_with_unseen_stem": 17
+     },
+     "overclaim": {
+      "meaning_claims": 13,
+      "overclaims": 0,
+      "semantic_evidence_available": true
+     },
+     "pos": {
+      "accuracy": 0.7348,
+      "accuracy_when_labelled": 0.9196,
+      "labelled": 0.7991
+     },
+     "relatedness": {
+      "chance": 0.0898,
+      "n": 64,
+      "p_at_1": 0.4531
+     },
+     "scoring_version": 2,
+     "segmentation": {
+      "f1": 0.7943,
+      "precision": 0.9372,
+      "recall": 0.6892
+     },
+     "structure": {
+      "adj_noun": "abstain",
+      "affix_position": "correct",
+      "num_noun": "abstain",
+      "numeral_base": "abstain",
+      "so_order": "abstain",
+      "verb_position": "abstain"
+     },
+     "variants": {
+      "f1": 0.7439,
+      "gold_pairs": 103,
+      "precision": 1.0,
+      "recall": 0.5922
+     }
+    },
+    "score_sha256": "d244d21af9a578fc699ba5cf9e8cc7741a84ee78cb43e6479b5f5649d9ddabd1",
+    "seconds": 0.600393,
+    "seed": 0
+   },
+   "case_id": "UMB-0-A",
+   "current": {
+    "engine_sha256": "089495ad99f08e30f20f0f18f4ee0d9185041138bf085f97aeeb91e026cf9deb",
+    "family": "UMB",
+    "input_sha256": "3a29fc1c7df0fb357a54e6aa667414382c583e998b5352a80f41d29d1dc9a5e6",
+    "level": "A",
+    "n_docs": 33,
+    "prediction_sha256": "c16e94d537f608590b720dbeec18d62c45badf3c248bfe6c38c3d66f9bcd9ea0",
+    "score": {
+     "affix_inventory": {
+      "f1": 0.7742,
+      "precision": 0.6667,
+      "recall": 0.9231
+     },
+     "calibration": [
+      [
+       0.968,
+       1,
+       "structure"
+      ],
+      [
+       0.64,
+       1,
+       "lexicon"
+      ],
+      [
+       0.539,
+       0,
+       "lexicon"
+      ],
+      [
+       0.528,
+       1,
+       "lexicon"
+      ],
+      [
+       0.558,
+       1,
+       "lexicon"
+      ],
+      [
+       0.538,
+       0,
+       "lexicon"
+      ],
+      [
+       0.588,
+       1,
+       "lexicon"
+      ],
+      [
+       0.588,
+       1,
+       "lexicon"
+      ],
+      [
+       0.617,
+       1,
+       "lexicon"
+      ],
+      [
+       0.588,
+       1,
+       "lexicon"
+      ],
+      [
+       0.588,
+       1,
+       "lexicon"
+      ]
+     ],
+     "errors": [
+      {
+       "cause": "地名と地元人名の混同（出土地の偏り）",
+       "confidence": 0.539,
+       "gold": "war+ship",
+       "predicted": "place@S5",
+       "stem": "kiwikafaaliime"
+      },
+      {
+       "cause": "地名と地元人名の混同（出土地の偏り）",
+       "confidence": 0.538,
+       "gold": "P06",
+       "predicted": "place@S2",
+       "stem": "ngi'aa"
+      }
+     ],
+     "gloss_heldout": {
+      "abstain": 0.7102,
+      "correct": 0.2898,
+      "feature_jaccard": 0.1018,
+      "numeral_correct": 0.0,
+      "tokens": 176,
+      "wrong": 0.0
+     },
+     "gloss_train": {
+      "abstain": 0.8077,
+      "correct": 0.1826,
+      "feature_jaccard": 0.1377,
+      "numeral_correct": 0.0899,
+      "tokens": 723,
+      "wrong": 0.0097
+     },
+     "language_id": "UMB-0",
+     "level": "A",
+     "lexicon": {
+      "abstain": 137,
+      "abstain_rate_without_evidence": 0.9828,
+      "claimed": 10,
+      "correct": 8,
+      "coverage": 0.068,
+      "precision": 0.8,
+      "wrong": 2
+     },
+     "lexicon_inferred": {
+      "abstain": 137,
+      "abstain_rate_without_evidence": 0.9828,
+      "claimed": 10,
+      "correct": 8,
+      "coverage": 0.068,
+      "given_excluded": 3,
+      "note": "トークン単位の採点では、既知語は最初から lexicon の集計から除外している（lexicon と同じ値）",
+      "precision": 0.8,
+      "wrong": 2
+     },
+     "null_verdict": null,
+     "numerals": {
+      "abstain": 26,
+      "accuracy": 0.0,
+      "correct": 0,
+      "false_numeral": 0,
+      "relative": false,
+      "wrong": 0
+     },
+     "oov": {
+      "claimed_anyway": 0,
+      "heldout_tokens_with_unseen_stem": 17
+     },
+     "overclaim": {
+      "meaning_claims": 13,
+      "overclaims": 0,
+      "semantic_evidence_available": true
+     },
+     "pos": {
+      "accuracy": 0.7348,
+      "accuracy_when_labelled": 0.9196,
+      "labelled": 0.7991
+     },
+     "relatedness": {
+      "chance": 0.0898,
+      "n": 64,
+      "p_at_1": 0.4531
+     },
+     "scoring_version": 2,
+     "segmentation": {
+      "f1": 0.7943,
+      "precision": 0.9372,
+      "recall": 0.6892
+     },
+     "structure": {
+      "adj_noun": "abstain",
+      "affix_position": "correct",
+      "num_noun": "abstain",
+      "numeral_base": "abstain",
+      "so_order": "abstain",
+      "verb_position": "abstain"
+     },
+     "variants": {
+      "f1": 0.7439,
+      "gold_pairs": 103,
+      "precision": 1.0,
+      "recall": 0.5922
+     }
+    },
+    "score_sha256": "d244d21af9a578fc699ba5cf9e8cc7741a84ee78cb43e6479b5f5649d9ddabd1",
+    "seconds": 0.551575,
+    "seed": 0
+   },
+   "family": "UMB",
+   "input_sha256": "3a29fc1c7df0fb357a54e6aa667414382c583e998b5352a80f41d29d1dc9a5e6",
+   "level": "A",
+   "same_prediction": true,
+   "same_scores": true,
+   "seed": 0
+  },
+  {
+   "baseline": {
+    "engine_sha256": "089495ad99f08e30f20f0f18f4ee0d9185041138bf085f97aeeb91e026cf9deb",
+    "family": "UMB",
+    "input_sha256": "91bbf428f1b3f1a4383173bfe79477c2bb99c13e30ff0c11bb1a8e9cf0079efc",
+    "level": "B",
+    "n_docs": 33,
+    "prediction_sha256": "be492bbb8c6f35a705210e3e16bf1c592d072fd85902b5a7563827af4c3c4c77",
+    "score": {
+     "affix_inventory": {
+      "f1": 0.7742,
+      "precision": 0.6667,
+      "recall": 0.9231
+     },
+     "calibration": [
+      [
+       0.968,
+       1,
+       "structure"
+      ],
+      [
+       0.539,
+       0,
+       "lexicon"
+      ],
+      [
+       0.538,
+       0,
+       "lexicon"
+      ],
+      [
+       0.833,
+       1,
+       "lexicon"
+      ]
+     ],
+     "errors": [
+      {
+       "cause": "地名と地元人名の混同（出土地の偏り）",
+       "confidence": 0.539,
+       "gold": "war+ship",
+       "predicted": "place@S5",
+       "stem": "kiwikafaaliime"
+      },
+      {
+       "cause": "地名と地元人名の混同（出土地の偏り）",
+       "confidence": 0.538,
+       "gold": "P06",
+       "predicted": "place@S2",
+       "stem": "ngi'aa"
+      }
+     ],
+     "gloss_heldout": {
+      "abstain": 0.8409,
+      "correct": 0.1591,
+      "feature_jaccard": 0.0,
+      "numeral_correct": 0.0,
+      "tokens": 176,
+      "wrong": 0.0
+     },
+     "gloss_train": {
+      "abstain": 0.8427,
+      "correct": 0.1468,
+      "feature_jaccard": 0.0,
+      "numeral_correct": 0.0645,
+      "tokens": 763,
+      "wrong": 0.0105
+     },
+     "language_id": "UMB-0",
+     "level": "B",
+     "lexicon": {
+      "abstain": 144,
+      "abstain_rate_without_evidence": 0.9796,
+      "claimed": 3,
+      "correct": 1,
+      "coverage": 0.0204,
+      "precision": 0.3333,
+      "wrong": 2
+     },
+     "lexicon_inferred": {
+      "abstain": 144,
+      "abstain_rate_without_evidence": 0.9796,
+      "claimed": 3,
+      "correct": 1,
+      "coverage": 0.0204,
+      "given_excluded": 3,
+      "note": "トークン単位の採点では、既知語は最初から lexicon の集計から除外している（lexicon と同じ値）",
+      "precision": 0.3333,
+      "wrong": 2
+     },
+     "null_verdict": null,
+     "numerals": {
+      "abstain": 26,
+      "accuracy": 0.0,
+      "correct": 0,
+      "false_numeral": 0,
+      "relative": false,
+      "wrong": 0
+     },
+     "oov": {
+      "claimed_anyway": 0,
+      "heldout_tokens_with_unseen_stem": 17
+     },
+     "overclaim": {
+      "meaning_claims": 6,
+      "overclaims": 0,
+      "semantic_evidence_available": true
+     },
+     "pos": {
+      "accuracy": 0.7325,
+      "accuracy_when_labelled": 0.9234,
+      "labelled": 0.7932
+     },
+     "relatedness": {
+      "chance": 0.0898,
+      "n": 64,
+      "p_at_1": 0.4531
+     },
+     "scoring_version": 2,
+     "segmentation": {
+      "f1": 0.7943,
+      "precision": 0.9372,
+      "recall": 0.6892
+     },
+     "structure": {
+      "adj_noun": "abstain",
+      "affix_position": "correct",
+      "num_noun": "abstain",
+      "numeral_base": "abstain",
+      "so_order": "abstain",
+      "verb_position": "abstain"
+     },
+     "variants": {
+      "f1": 0.7439,
+      "gold_pairs": 103,
+      "precision": 1.0,
+      "recall": 0.5922
+     }
+    },
+    "score_sha256": "08a92ee671b997cfb94857be05dc6b9dfe7497b3d98e63d17202a116d0dad585",
+    "seconds": 0.419118,
+    "seed": 0
+   },
+   "case_id": "UMB-0-B",
+   "current": {
+    "engine_sha256": "089495ad99f08e30f20f0f18f4ee0d9185041138bf085f97aeeb91e026cf9deb",
+    "family": "UMB",
+    "input_sha256": "91bbf428f1b3f1a4383173bfe79477c2bb99c13e30ff0c11bb1a8e9cf0079efc",
+    "level": "B",
+    "n_docs": 33,
+    "prediction_sha256": "be492bbb8c6f35a705210e3e16bf1c592d072fd85902b5a7563827af4c3c4c77",
+    "score": {
+     "affix_inventory": {
+      "f1": 0.7742,
+      "precision": 0.6667,
+      "recall": 0.9231
+     },
+     "calibration": [
+      [
+       0.968,
+       1,
+       "structure"
+      ],
+      [
+       0.539,
+       0,
+       "lexicon"
+      ],
+      [
+       0.538,
+       0,
+       "lexicon"
+      ],
+      [
+       0.833,
+       1,
+       "lexicon"
+      ]
+     ],
+     "errors": [
+      {
+       "cause": "地名と地元人名の混同（出土地の偏り）",
+       "confidence": 0.539,
+       "gold": "war+ship",
+       "predicted": "place@S5",
+       "stem": "kiwikafaaliime"
+      },
+      {
+       "cause": "地名と地元人名の混同（出土地の偏り）",
+       "confidence": 0.538,
+       "gold": "P06",
+       "predicted": "place@S2",
+       "stem": "ngi'aa"
+      }
+     ],
+     "gloss_heldout": {
+      "abstain": 0.8409,
+      "correct": 0.1591,
+      "feature_jaccard": 0.0,
+      "numeral_correct": 0.0,
+      "tokens": 176,
+      "wrong": 0.0
+     },
+     "gloss_train": {
+      "abstain": 0.8427,
+      "correct": 0.1468,
+      "feature_jaccard": 0.0,
+      "numeral_correct": 0.0645,
+      "tokens": 763,
+      "wrong": 0.0105
+     },
+     "language_id": "UMB-0",
+     "level": "B",
+     "lexicon": {
+      "abstain": 144,
+      "abstain_rate_without_evidence": 0.9796,
+      "claimed": 3,
+      "correct": 1,
+      "coverage": 0.0204,
+      "precision": 0.3333,
+      "wrong": 2
+     },
+     "lexicon_inferred": {
+      "abstain": 144,
+      "abstain_rate_without_evidence": 0.9796,
+      "claimed": 3,
+      "correct": 1,
+      "coverage": 0.0204,
+      "given_excluded": 3,
+      "note": "トークン単位の採点では、既知語は最初から lexicon の集計から除外している（lexicon と同じ値）",
+      "precision": 0.3333,
+      "wrong": 2
+     },
+     "null_verdict": null,
+     "numerals": {
+      "abstain": 26,
+      "accuracy": 0.0,
+      "correct": 0,
+      "false_numeral": 0,
+      "relative": false,
+      "wrong": 0
+     },
+     "oov": {
+      "claimed_anyway": 0,
+      "heldout_tokens_with_unseen_stem": 17
+     },
+     "overclaim": {
+      "meaning_claims": 6,
+      "overclaims": 0,
+      "semantic_evidence_available": true
+     },
+     "pos": {
+      "accuracy": 0.7325,
+      "accuracy_when_labelled": 0.9234,
+      "labelled": 0.7932
+     },
+     "relatedness": {
+      "chance": 0.0898,
+      "n": 64,
+      "p_at_1": 0.4531
+     },
+     "scoring_version": 2,
+     "segmentation": {
+      "f1": 0.7943,
+      "precision": 0.9372,
+      "recall": 0.6892
+     },
+     "structure": {
+      "adj_noun": "abstain",
+      "affix_position": "correct",
+      "num_noun": "abstain",
+      "numeral_base": "abstain",
+      "so_order": "abstain",
+      "verb_position": "abstain"
+     },
+     "variants": {
+      "f1": 0.7439,
+      "gold_pairs": 103,
+      "precision": 1.0,
+      "recall": 0.5922
+     }
+    },
+    "score_sha256": "08a92ee671b997cfb94857be05dc6b9dfe7497b3d98e63d17202a116d0dad585",
+    "seconds": 0.415123,
+    "seed": 0
+   },
+   "family": "UMB",
+   "input_sha256": "91bbf428f1b3f1a4383173bfe79477c2bb99c13e30ff0c11bb1a8e9cf0079efc",
+   "level": "B",
+   "same_prediction": true,
+   "same_scores": true,
+   "seed": 0
+  },
+  {
+   "baseline": {
+    "engine_sha256": "089495ad99f08e30f20f0f18f4ee0d9185041138bf085f97aeeb91e026cf9deb",
+    "family": "UMB",
+    "input_sha256": "f5a0fb1b5c4fea6cb195d69c8c65a536c26dcd9a599184dc86c560b49ef6f258",
+    "level": "C",
+    "n_docs": 33,
+    "prediction_sha256": "c33247e058fb82b9a471d613c212505b6c986efeba485a1b7685dc1d924ad5e9",
+    "score": {
+     "affix_inventory": {
+      "f1": 0.7742,
+      "precision": 0.6667,
+      "recall": 0.9231
+     },
+     "calibration": [
+      [
+       0.968,
+       1,
+       "structure"
+      ]
+     ],
+     "errors": [],
+     "gloss_heldout": {
+      "abstain": 1.0,
+      "correct": 0.0,
+      "feature_jaccard": 0.0,
+      "numeral_correct": 0.0,
+      "tokens": 176,
+      "wrong": 0.0
+     },
+     "gloss_train": {
+      "abstain": 1.0,
+      "correct": 0.0,
+      "feature_jaccard": 0.0,
+      "numeral_correct": 0.0,
+      "tokens": 763,
+      "wrong": 0.0
+     },
+     "language_id": "UMB-0",
+     "level": "C",
+     "lexicon": {
+      "abstain": 150,
+      "abstain_rate_without_evidence": 1.0,
+      "claimed": 0,
+      "correct": 0,
+      "coverage": 0.0,
+      "precision": null,
+      "wrong": 0
+     },
+     "lexicon_inferred": {
+      "abstain": 150,
+      "abstain_rate_without_evidence": 1.0,
+      "claimed": 0,
+      "correct": 0,
+      "coverage": 0.0,
+      "given_excluded": 0,
+      "note": "トークン単位の採点では、既知語は最初から lexicon の集計から除外している（lexicon と同じ値）",
+      "precision": null,
+      "wrong": 0
+     },
+     "null_verdict": null,
+     "numerals": {
+      "abstain": 26,
+      "accuracy": 0.0,
+      "correct": 0,
+      "false_numeral": 0,
+      "relative": true,
+      "wrong": 0
+     },
+     "oov": {
+      "claimed_anyway": 0,
+      "heldout_tokens_with_unseen_stem": 17
+     },
+     "overclaim": {
+      "meaning_claims": 0,
+      "overclaims": 0,
+      "semantic_evidence_available": false
+     },
+     "pos": {
+      "accuracy": 0.7255,
+      "accuracy_when_labelled": 0.9227,
+      "labelled": 0.7862
+     },
+     "relatedness": {
+      "chance": 0.0898,
+      "n": 64,
+      "p_at_1": 0.4531
+     },
+     "scoring_version": 2,
+     "segmentation": {
+      "f1": 0.7943,
+      "precision": 0.9372,
+      "recall": 0.6892
+     },
+     "structure": {
+      "adj_noun": "abstain",
+      "affix_position": "correct",
+      "num_noun": "abstain",
+      "numeral_base": "abstain",
+      "so_order": "abstain",
+      "verb_position": "abstain"
+     },
+     "variants": {
+      "f1": 0.7439,
+      "gold_pairs": 103,
+      "precision": 1.0,
+      "recall": 0.5922
+     }
+    },
+    "score_sha256": "b94e381d253e8743305e00413d91787d9f00d79f7fe6736611cd9a66ad25a6a7",
+    "seconds": 0.37464,
+    "seed": 0
+   },
+   "case_id": "UMB-0-C",
+   "current": {
+    "engine_sha256": "089495ad99f08e30f20f0f18f4ee0d9185041138bf085f97aeeb91e026cf9deb",
+    "family": "UMB",
+    "input_sha256": "f5a0fb1b5c4fea6cb195d69c8c65a536c26dcd9a599184dc86c560b49ef6f258",
+    "level": "C",
+    "n_docs": 33,
+    "prediction_sha256": "c33247e058fb82b9a471d613c212505b6c986efeba485a1b7685dc1d924ad5e9",
+    "score": {
+     "affix_inventory": {
+      "f1": 0.7742,
+      "precision": 0.6667,
+      "recall": 0.9231
+     },
+     "calibration": [
+      [
+       0.968,
+       1,
+       "structure"
+      ]
+     ],
+     "errors": [],
+     "gloss_heldout": {
+      "abstain": 1.0,
+      "correct": 0.0,
+      "feature_jaccard": 0.0,
+      "numeral_correct": 0.0,
+      "tokens": 176,
+      "wrong": 0.0
+     },
+     "gloss_train": {
+      "abstain": 1.0,
+      "correct": 0.0,
+      "feature_jaccard": 0.0,
+      "numeral_correct": 0.0,
+      "tokens": 763,
+      "wrong": 0.0
+     },
+     "language_id": "UMB-0",
+     "level": "C",
+     "lexicon": {
+      "abstain": 150,
+      "abstain_rate_without_evidence": 1.0,
+      "claimed": 0,
+      "correct": 0,
+      "coverage": 0.0,
+      "precision": null,
+      "wrong": 0
+     },
+     "lexicon_inferred": {
+      "abstain": 150,
+      "abstain_rate_without_evidence": 1.0,
+      "claimed": 0,
+      "correct": 0,
+      "coverage": 0.0,
+      "given_excluded": 0,
+      "note": "トークン単位の採点では、既知語は最初から lexicon の集計から除外している（lexicon と同じ値）",
+      "precision": null,
+      "wrong": 0
+     },
+     "null_verdict": null,
+     "numerals": {
+      "abstain": 26,
+      "accuracy": 0.0,
+      "correct": 0,
+      "false_numeral": 0,
+      "relative": true,
+      "wrong": 0
+     },
+     "oov": {
+      "claimed_anyway": 0,
+      "heldout_tokens_with_unseen_stem": 17
+     },
+     "overclaim": {
+      "meaning_claims": 0,
+      "overclaims": 0,
+      "semantic_evidence_available": false
+     },
+     "pos": {
+      "accuracy": 0.7255,
+      "accuracy_when_labelled": 0.9227,
+      "labelled": 0.7862
+     },
+     "relatedness": {
+      "chance": 0.0898,
+      "n": 64,
+      "p_at_1": 0.4531
+     },
+     "scoring_version": 2,
+     "segmentation": {
+      "f1": 0.7943,
+      "precision": 0.9372,
+      "recall": 0.6892
+     },
+     "structure": {
+      "adj_noun": "abstain",
+      "affix_position": "correct",
+      "num_noun": "abstain",
+      "numeral_base": "abstain",
+      "so_order": "abstain",
+      "verb_position": "abstain"
+     },
+     "variants": {
+      "f1": 0.7439,
+      "gold_pairs": 103,
+      "precision": 1.0,
+      "recall": 0.5922
+     }
+    },
+    "score_sha256": "b94e381d253e8743305e00413d91787d9f00d79f7fe6736611cd9a66ad25a6a7",
+    "seconds": 0.383077,
+    "seed": 0
+   },
+   "family": "UMB",
+   "input_sha256": "f5a0fb1b5c4fea6cb195d69c8c65a536c26dcd9a599184dc86c560b49ef6f258",
+   "level": "C",
+   "same_prediction": true,
+   "same_scores": true,
+   "seed": 0
+  },
+  {
+   "baseline": {
+    "engine_sha256": "089495ad99f08e30f20f0f18f4ee0d9185041138bf085f97aeeb91e026cf9deb",
+    "family": "UMB",
+    "input_sha256": "4544a0eae118d6cf727bebb6323e4617267101b87b9f08e32a87e8800418a79a",
+    "level": "A",
+    "n_docs": 33,
+    "prediction_sha256": "1ceea187e13b8a43ad04c0361e0efcd0e094ae396ef30b43c87ccda539d45bc2",
+    "score": {
+     "affix_inventory": {
+      "f1": 0.5556,
+      "precision": 0.4762,
+      "recall": 0.6667
+     },
+     "calibration": [
+      [
+       0.964,
+       1,
+       "structure"
+      ],
+      [
+       0.501,
+       1,
+       "lexicon"
+      ],
+      [
+       0.592,
+       1,
+       "lexicon"
+      ],
+      [
+       0.571,
+       0,
+       "lexicon"
+      ],
+      [
+       0.567,
+       0,
+       "lexicon"
+      ],
+      [
+       0.5,
+       0,
+       "lexicon"
+      ]
+     ],
+     "errors": [
+      {
+       "cause": "地名と地元人名の混同（出土地の偏り）",
+       "confidence": 0.571,
+       "gold": "P04",
+       "predicted": "place@S1",
+       "stem": "kuu'uusa"
+      },
+      {
+       "cause": "地名と地元人名の混同（出土地の偏り）",
+       "confidence": 0.567,
+       "gold": "P13",
+       "predicted": "place@S5",
+       "stem": "shuuka"
+      },
+      {
+       "cause": "地名と地元人名の混同（出土地の偏り）",
+       "confidence": 0.5,
+       "gold": "P11",
+       "predicted": "place@S4",
+       "stem": "xani"
+      }
+     ],
+     "gloss_heldout": {
+      "abstain": 0.9577,
+      "correct": 0.007,
+      "feature_jaccard": 0.0612,
+      "numeral_correct": 0.1739,
+      "tokens": 142,
+      "wrong": 0.0352
+     },
+     "gloss_train": {
+      "abstain": 0.9507,
+      "correct": 0.0173,
+      "feature_jaccard": 0.125,
+      "numeral_correct": 0.0614,
+      "tokens": 751,
+      "wrong": 0.032
+     },
+     "language_id": "UMB-1",
+     "level": "A",
+     "lexicon": {
+      "abstain": 191,
+      "abstain_rate_without_evidence": 0.9756,
+      "claimed": 5,
+      "correct": 2,
+      "coverage": 0.0255,
+      "precision": 0.4,
+      "wrong": 3
+     },
+     "lexicon_inferred": {
+      "abstain": 191,
+      "abstain_rate_without_evidence": 0.9756,
+      "claimed": 5,
+      "correct": 2,
+      "coverage": 0.0255,
+      "given_excluded": 2,
+      "note": "トークン単位の採点では、既知語は最初から lexicon の集計から除外している（lexicon と同じ値）",
+      "precision": 0.4,
+      "wrong": 3
+     },
+     "null_verdict": null,
+     "numerals": {
+      "abstain": 30,
+      "accuracy": 0.0,
+      "correct": 0,
+      "false_numeral": 0,
+      "relative": false,
+      "wrong": 0
+     },
+     "oov": {
+      "claimed_anyway": 1,
+      "heldout_tokens_with_unseen_stem": 22
+     },
+     "overclaim": {
+      "meaning_claims": 7,
+      "overclaims": 0,
+      "semantic_evidence_available": true
+     },
+     "pos": {
+      "accuracy": 0.6948,
+      "accuracy_when_labelled": 0.838,
+      "labelled": 0.8291
+     },
+     "relatedness": {
+      "chance": 0.1029,
+      "n": 58,
+      "p_at_1": 0.4138
+     },
+     "scoring_version": 2,
+     "segmentation": {
+      "f1": 0.7423,
+      "precision": 0.9542,
+      "recall": 0.6074
+     },
+     "structure": {
+      "adj_noun": "abstain",
+      "affix_position": "correct",
+      "num_noun": "abstain",
+      "numeral_base": "abstain",
+      "so_order": "abstain",
+      "verb_position": "abstain"
+     },
+     "variants": {
+      "f1": 0.5276,
+      "gold_pairs": 120,
+      "precision": 1.0,
+      "recall": 0.3583
+     }
+    },
+    "score_sha256": "4b3be4e717542e7c4ae86f8243a24b1fbfe8157b14875b2624085e3cc2961016",
+    "seconds": 0.720263,
+    "seed": 1
+   },
+   "case_id": "UMB-1-A",
+   "current": {
+    "engine_sha256": "089495ad99f08e30f20f0f18f4ee0d9185041138bf085f97aeeb91e026cf9deb",
+    "family": "UMB",
+    "input_sha256": "4544a0eae118d6cf727bebb6323e4617267101b87b9f08e32a87e8800418a79a",
+    "level": "A",
+    "n_docs": 33,
+    "prediction_sha256": "1ceea187e13b8a43ad04c0361e0efcd0e094ae396ef30b43c87ccda539d45bc2",
+    "score": {
+     "affix_inventory": {
+      "f1": 0.5556,
+      "precision": 0.4762,
+      "recall": 0.6667
+     },
+     "calibration": [
+      [
+       0.964,
+       1,
+       "structure"
+      ],
+      [
+       0.501,
+       1,
+       "lexicon"
+      ],
+      [
+       0.592,
+       1,
+       "lexicon"
+      ],
+      [
+       0.571,
+       0,
+       "lexicon"
+      ],
+      [
+       0.567,
+       0,
+       "lexicon"
+      ],
+      [
+       0.5,
+       0,
+       "lexicon"
+      ]
+     ],
+     "errors": [
+      {
+       "cause": "地名と地元人名の混同（出土地の偏り）",
+       "confidence": 0.571,
+       "gold": "P04",
+       "predicted": "place@S1",
+       "stem": "kuu'uusa"
+      },
+      {
+       "cause": "地名と地元人名の混同（出土地の偏り）",
+       "confidence": 0.567,
+       "gold": "P13",
+       "predicted": "place@S5",
+       "stem": "shuuka"
+      },
+      {
+       "cause": "地名と地元人名の混同（出土地の偏り）",
+       "confidence": 0.5,
+       "gold": "P11",
+       "predicted": "place@S4",
+       "stem": "xani"
+      }
+     ],
+     "gloss_heldout": {
+      "abstain": 0.9577,
+      "correct": 0.007,
+      "feature_jaccard": 0.0612,
+      "numeral_correct": 0.1739,
+      "tokens": 142,
+      "wrong": 0.0352
+     },
+     "gloss_train": {
+      "abstain": 0.9507,
+      "correct": 0.0173,
+      "feature_jaccard": 0.125,
+      "numeral_correct": 0.0614,
+      "tokens": 751,
+      "wrong": 0.032
+     },
+     "language_id": "UMB-1",
+     "level": "A",
+     "lexicon": {
+      "abstain": 191,
+      "abstain_rate_without_evidence": 0.9756,
+      "claimed": 5,
+      "correct": 2,
+      "coverage": 0.0255,
+      "precision": 0.4,
+      "wrong": 3
+     },
+     "lexicon_inferred": {
+      "abstain": 191,
+      "abstain_rate_without_evidence": 0.9756,
+      "claimed": 5,
+      "correct": 2,
+      "coverage": 0.0255,
+      "given_excluded": 2,
+      "note": "トークン単位の採点では、既知語は最初から lexicon の集計から除外している（lexicon と同じ値）",
+      "precision": 0.4,
+      "wrong": 3
+     },
+     "null_verdict": null,
+     "numerals": {
+      "abstain": 30,
+      "accuracy": 0.0,
+      "correct": 0,
+      "false_numeral": 0,
+      "relative": false,
+      "wrong": 0
+     },
+     "oov": {
+      "claimed_anyway": 1,
+      "heldout_tokens_with_unseen_stem": 22
+     },
+     "overclaim": {
+      "meaning_claims": 7,
+      "overclaims": 0,
+      "semantic_evidence_available": true
+     },
+     "pos": {
+      "accuracy": 0.6948,
+      "accuracy_when_labelled": 0.838,
+      "labelled": 0.8291
+     },
+     "relatedness": {
+      "chance": 0.1029,
+      "n": 58,
+      "p_at_1": 0.4138
+     },
+     "scoring_version": 2,
+     "segmentation": {
+      "f1": 0.7423,
+      "precision": 0.9542,
+      "recall": 0.6074
+     },
+     "structure": {
+      "adj_noun": "abstain",
+      "affix_position": "correct",
+      "num_noun": "abstain",
+      "numeral_base": "abstain",
+      "so_order": "abstain",
+      "verb_position": "abstain"
+     },
+     "variants": {
+      "f1": 0.5276,
+      "gold_pairs": 120,
+      "precision": 1.0,
+      "recall": 0.3583
+     }
+    },
+    "score_sha256": "4b3be4e717542e7c4ae86f8243a24b1fbfe8157b14875b2624085e3cc2961016",
+    "seconds": 0.675101,
+    "seed": 1
+   },
+   "family": "UMB",
+   "input_sha256": "4544a0eae118d6cf727bebb6323e4617267101b87b9f08e32a87e8800418a79a",
+   "level": "A",
+   "same_prediction": true,
+   "same_scores": true,
+   "seed": 1
+  },
+  {
+   "baseline": {
+    "engine_sha256": "089495ad99f08e30f20f0f18f4ee0d9185041138bf085f97aeeb91e026cf9deb",
+    "family": "UMB",
+    "input_sha256": "cfc494e29c8742c7848af5ce9848527ab4f0920c685c240782e3a257b5486fbc",
+    "level": "B",
+    "n_docs": 33,
+    "prediction_sha256": "45f238655f1b38a37ea69c8fb2e761b50c280da073e3ccfc1b2cb88f3f84a8a7",
+    "score": {
+     "affix_inventory": {
+      "f1": 0.5556,
+      "precision": 0.4762,
+      "recall": 0.6667
+     },
+     "calibration": [
+      [
+       0.964,
+       1,
+       "structure"
+      ],
+      [
+       0.592,
+       1,
+       "lexicon"
+      ],
+      [
+       0.571,
+       0,
+       "lexicon"
+      ],
+      [
+       0.567,
+       0,
+       "lexicon"
+      ],
+      [
+       0.5,
+       0,
+       "lexicon"
+      ]
+     ],
+     "errors": [
+      {
+       "cause": "地名と地元人名の混同（出土地の偏り）",
+       "confidence": 0.571,
+       "gold": "P04",
+       "predicted": "place@S1",
+       "stem": "kuu'uusa"
+      },
+      {
+       "cause": "地名と地元人名の混同（出土地の偏り）",
+       "confidence": 0.567,
+       "gold": "P13",
+       "predicted": "place@S5",
+       "stem": "shuuka"
+      },
+      {
+       "cause": "地名と地元人名の混同（出土地の偏り）",
+       "confidence": 0.5,
+       "gold": "P11",
+       "predicted": "place@S4",
+       "stem": "xani"
+      }
+     ],
+     "gloss_heldout": {
+      "abstain": 0.8873,
+      "correct": 0.0775,
+      "feature_jaccard": 0.0,
+      "numeral_correct": 0.0435,
+      "tokens": 142,
+      "wrong": 0.0352
+     },
+     "gloss_train": {
+      "abstain": 0.8584,
+      "correct": 0.111,
+      "feature_jaccard": 0.0,
+      "numeral_correct": 0.0256,
+      "tokens": 784,
+      "wrong": 0.0306
+     },
+     "language_id": "UMB-1",
+     "level": "B",
+     "lexicon": {
+      "abstain": 189,
+      "abstain_rate_without_evidence": 0.9793,
+      "claimed": 4,
+      "correct": 1,
+      "coverage": 0.0207,
+      "precision": 0.25,
+      "wrong": 3
+     },
+     "lexicon_inferred": {
+      "abstain": 189,
+      "abstain_rate_without_evidence": 0.9793,
+      "claimed": 4,
+      "correct": 1,
+      "coverage": 0.0207,
+      "given_excluded": 5,
+      "note": "トークン単位の採点では、既知語は最初から lexicon の集計から除外している（lexicon と同じ値）",
+      "precision": 0.25,
+      "wrong": 3
+     },
+     "null_verdict": null,
+     "numerals": {
+      "abstain": 30,
+      "accuracy": 0.0,
+      "correct": 0,
+      "false_numeral": 0,
+      "relative": false,
+      "wrong": 0
+     },
+     "oov": {
+      "claimed_anyway": 0,
+      "heldout_tokens_with_unseen_stem": 22
+     },
+     "overclaim": {
+      "meaning_claims": 9,
+      "overclaims": 0,
+      "semantic_evidence_available": true
+     },
+     "pos": {
+      "accuracy": 0.6892,
+      "accuracy_when_labelled": 0.8426,
+      "labelled": 0.818
+     },
+     "relatedness": {
+      "chance": 0.1029,
+      "n": 58,
+      "p_at_1": 0.4138
+     },
+     "scoring_version": 2,
+     "segmentation": {
+      "f1": 0.7423,
+      "precision": 0.9542,
+      "recall": 0.6074
+     },
+     "structure": {
+      "adj_noun": "abstain",
+      "affix_position": "correct",
+      "num_noun": "abstain",
+      "numeral_base": "abstain",
+      "so_order": "abstain",
+      "verb_position": "abstain"
+     },
+     "variants": {
+      "f1": 0.5276,
+      "gold_pairs": 120,
+      "precision": 1.0,
+      "recall": 0.3583
+     }
+    },
+    "score_sha256": "82a27bc85746f5d1a6ca0231c164e5995998f983076bff6666ecb7574fb72302",
+    "seconds": 0.514645,
+    "seed": 1
+   },
+   "case_id": "UMB-1-B",
+   "current": {
+    "engine_sha256": "089495ad99f08e30f20f0f18f4ee0d9185041138bf085f97aeeb91e026cf9deb",
+    "family": "UMB",
+    "input_sha256": "cfc494e29c8742c7848af5ce9848527ab4f0920c685c240782e3a257b5486fbc",
+    "level": "B",
+    "n_docs": 33,
+    "prediction_sha256": "45f238655f1b38a37ea69c8fb2e761b50c280da073e3ccfc1b2cb88f3f84a8a7",
+    "score": {
+     "affix_inventory": {
+      "f1": 0.5556,
+      "precision": 0.4762,
+      "recall": 0.6667
+     },
+     "calibration": [
+      [
+       0.964,
+       1,
+       "structure"
+      ],
+      [
+       0.592,
+       1,
+       "lexicon"
+      ],
+      [
+       0.571,
+       0,
+       "lexicon"
+      ],
+      [
+       0.567,
+       0,
+       "lexicon"
+      ],
+      [
+       0.5,
+       0,
+       "lexicon"
+      ]
+     ],
+     "errors": [
+      {
+       "cause": "地名と地元人名の混同（出土地の偏り）",
+       "confidence": 0.571,
+       "gold": "P04",
+       "predicted": "place@S1",
+       "stem": "kuu'uusa"
+      },
+      {
+       "cause": "地名と地元人名の混同（出土地の偏り）",
+       "confidence": 0.567,
+       "gold": "P13",
+       "predicted": "place@S5",
+       "stem": "shuuka"
+      },
+      {
+       "cause": "地名と地元人名の混同（出土地の偏り）",
+       "confidence": 0.5,
+       "gold": "P11",
+       "predicted": "place@S4",
+       "stem": "xani"
+      }
+     ],
+     "gloss_heldout": {
+      "abstain": 0.8873,
+      "correct": 0.0775,
+      "feature_jaccard": 0.0,
+      "numeral_correct": 0.0435,
+      "tokens": 142,
+      "wrong": 0.0352
+     },
+     "gloss_train": {
+      "abstain": 0.8584,
+      "correct": 0.111,
+      "feature_jaccard": 0.0,
+      "numeral_correct": 0.0256,
+      "tokens": 784,
+      "wrong": 0.0306
+     },
+     "language_id": "UMB-1",
+     "level": "B",
+     "lexicon": {
+      "abstain": 189,
+      "abstain_rate_without_evidence": 0.9793,
+      "claimed": 4,
+      "correct": 1,
+      "coverage": 0.0207,
+      "precision": 0.25,
+      "wrong": 3
+     },
+     "lexicon_inferred": {
+      "abstain": 189,
+      "abstain_rate_without_evidence": 0.9793,
+      "claimed": 4,
+      "correct": 1,
+      "coverage": 0.0207,
+      "given_excluded": 5,
+      "note": "トークン単位の採点では、既知語は最初から lexicon の集計から除外している（lexicon と同じ値）",
+      "precision": 0.25,
+      "wrong": 3
+     },
+     "null_verdict": null,
+     "numerals": {
+      "abstain": 30,
+      "accuracy": 0.0,
+      "correct": 0,
+      "false_numeral": 0,
+      "relative": false,
+      "wrong": 0
+     },
+     "oov": {
+      "claimed_anyway": 0,
+      "heldout_tokens_with_unseen_stem": 22
+     },
+     "overclaim": {
+      "meaning_claims": 9,
+      "overclaims": 0,
+      "semantic_evidence_available": true
+     },
+     "pos": {
+      "accuracy": 0.6892,
+      "accuracy_when_labelled": 0.8426,
+      "labelled": 0.818
+     },
+     "relatedness": {
+      "chance": 0.1029,
+      "n": 58,
+      "p_at_1": 0.4138
+     },
+     "scoring_version": 2,
+     "segmentation": {
+      "f1": 0.7423,
+      "precision": 0.9542,
+      "recall": 0.6074
+     },
+     "structure": {
+      "adj_noun": "abstain",
+      "affix_position": "correct",
+      "num_noun": "abstain",
+      "numeral_base": "abstain",
+      "so_order": "abstain",
+      "verb_position": "abstain"
+     },
+     "variants": {
+      "f1": 0.5276,
+      "gold_pairs": 120,
+      "precision": 1.0,
+      "recall": 0.3583
+     }
+    },
+    "score_sha256": "82a27bc85746f5d1a6ca0231c164e5995998f983076bff6666ecb7574fb72302",
+    "seconds": 0.50547,
+    "seed": 1
+   },
+   "family": "UMB",
+   "input_sha256": "cfc494e29c8742c7848af5ce9848527ab4f0920c685c240782e3a257b5486fbc",
+   "level": "B",
+   "same_prediction": true,
+   "same_scores": true,
+   "seed": 1
+  },
+  {
+   "baseline": {
+    "engine_sha256": "089495ad99f08e30f20f0f18f4ee0d9185041138bf085f97aeeb91e026cf9deb",
+    "family": "UMB",
+    "input_sha256": "81569538cdd1f0ac28fc6921a49b2dc2f1b71b08ab725b40559845ca3ec9225a",
+    "level": "C",
+    "n_docs": 33,
+    "prediction_sha256": "074942ed96687b9509e48cb9992ef0e754a3ffdcaa55016e6832372601ee2fbc",
+    "score": {
+     "affix_inventory": {
+      "f1": 0.5556,
+      "precision": 0.4762,
+      "recall": 0.6667
+     },
+     "calibration": [
+      [
+       0.964,
+       1,
+       "structure"
+      ]
+     ],
+     "errors": [],
+     "gloss_heldout": {
+      "abstain": 1.0,
+      "correct": 0.0,
+      "feature_jaccard": 0.0,
+      "numeral_correct": 0.0,
+      "tokens": 142,
+      "wrong": 0.0
+     },
+     "gloss_train": {
+      "abstain": 1.0,
+      "correct": 0.0,
+      "feature_jaccard": 0.0,
+      "numeral_correct": 0.0,
+      "tokens": 784,
+      "wrong": 0.0
+     },
+     "language_id": "UMB-1",
+     "level": "C",
+     "lexicon": {
+      "abstain": 198,
+      "abstain_rate_without_evidence": 1.0,
+      "claimed": 0,
+      "correct": 0,
+      "coverage": 0.0,
+      "precision": null,
+      "wrong": 0
+     },
+     "lexicon_inferred": {
+      "abstain": 198,
+      "abstain_rate_without_evidence": 1.0,
+      "claimed": 0,
+      "correct": 0,
+      "coverage": 0.0,
+      "given_excluded": 0,
+      "note": "トークン単位の採点では、既知語は最初から lexicon の集計から除外している（lexicon と同じ値）",
+      "precision": null,
+      "wrong": 0
+     },
+     "null_verdict": null,
+     "numerals": {
+      "abstain": 30,
+      "accuracy": 0.0,
+      "correct": 0,
+      "false_numeral": 0,
+      "relative": true,
+      "wrong": 0
+     },
+     "oov": {
+      "claimed_anyway": 0,
+      "heldout_tokens_with_unseen_stem": 22
+     },
+     "overclaim": {
+      "meaning_claims": 0,
+      "overclaims": 0,
+      "semantic_evidence_available": false
+     },
+     "pos": {
+      "accuracy": 0.6859,
+      "accuracy_when_labelled": 0.8385,
+      "labelled": 0.818
+     },
+     "relatedness": {
+      "chance": 0.1029,
+      "n": 58,
+      "p_at_1": 0.4138
+     },
+     "scoring_version": 2,
+     "segmentation": {
+      "f1": 0.7423,
+      "precision": 0.9542,
+      "recall": 0.6074
+     },
+     "structure": {
+      "adj_noun": "abstain",
+      "affix_position": "correct",
+      "num_noun": "abstain",
+      "numeral_base": "abstain",
+      "so_order": "abstain",
+      "verb_position": "abstain"
+     },
+     "variants": {
+      "f1": 0.5276,
+      "gold_pairs": 120,
+      "precision": 1.0,
+      "recall": 0.3583
+     }
+    },
+    "score_sha256": "190df71496c7216616b68413af1aeafd4835ecef0d61ba029110d1bb941172c1",
+    "seconds": 0.52973,
+    "seed": 1
+   },
+   "case_id": "UMB-1-C",
+   "current": {
+    "engine_sha256": "089495ad99f08e30f20f0f18f4ee0d9185041138bf085f97aeeb91e026cf9deb",
+    "family": "UMB",
+    "input_sha256": "81569538cdd1f0ac28fc6921a49b2dc2f1b71b08ab725b40559845ca3ec9225a",
+    "level": "C",
+    "n_docs": 33,
+    "prediction_sha256": "074942ed96687b9509e48cb9992ef0e754a3ffdcaa55016e6832372601ee2fbc",
+    "score": {
+     "affix_inventory": {
+      "f1": 0.5556,
+      "precision": 0.4762,
+      "recall": 0.6667
+     },
+     "calibration": [
+      [
+       0.964,
+       1,
+       "structure"
+      ]
+     ],
+     "errors": [],
+     "gloss_heldout": {
+      "abstain": 1.0,
+      "correct": 0.0,
+      "feature_jaccard": 0.0,
+      "numeral_correct": 0.0,
+      "tokens": 142,
+      "wrong": 0.0
+     },
+     "gloss_train": {
+      "abstain": 1.0,
+      "correct": 0.0,
+      "feature_jaccard": 0.0,
+      "numeral_correct": 0.0,
+      "tokens": 784,
+      "wrong": 0.0
+     },
+     "language_id": "UMB-1",
+     "level": "C",
+     "lexicon": {
+      "abstain": 198,
+      "abstain_rate_without_evidence": 1.0,
+      "claimed": 0,
+      "correct": 0,
+      "coverage": 0.0,
+      "precision": null,
+      "wrong": 0
+     },
+     "lexicon_inferred": {
+      "abstain": 198,
+      "abstain_rate_without_evidence": 1.0,
+      "claimed": 0,
+      "correct": 0,
+      "coverage": 0.0,
+      "given_excluded": 0,
+      "note": "トークン単位の採点では、既知語は最初から lexicon の集計から除外している（lexicon と同じ値）",
+      "precision": null,
+      "wrong": 0
+     },
+     "null_verdict": null,
+     "numerals": {
+      "abstain": 30,
+      "accuracy": 0.0,
+      "correct": 0,
+      "false_numeral": 0,
+      "relative": true,
+      "wrong": 0
+     },
+     "oov": {
+      "claimed_anyway": 0,
+      "heldout_tokens_with_unseen_stem": 22
+     },
+     "overclaim": {
+      "meaning_claims": 0,
+      "overclaims": 0,
+      "semantic_evidence_available": false
+     },
+     "pos": {
+      "accuracy": 0.6859,
+      "accuracy_when_labelled": 0.8385,
+      "labelled": 0.818
+     },
+     "relatedness": {
+      "chance": 0.1029,
+      "n": 58,
+      "p_at_1": 0.4138
+     },
+     "scoring_version": 2,
+     "segmentation": {
+      "f1": 0.7423,
+      "precision": 0.9542,
+      "recall": 0.6074
+     },
+     "structure": {
+      "adj_noun": "abstain",
+      "affix_position": "correct",
+      "num_noun": "abstain",
+      "numeral_base": "abstain",
+      "so_order": "abstain",
+      "verb_position": "abstain"
+     },
+     "variants": {
+      "f1": 0.5276,
+      "gold_pairs": 120,
+      "precision": 1.0,
+      "recall": 0.3583
+     }
+    },
+    "score_sha256": "190df71496c7216616b68413af1aeafd4835ecef0d61ba029110d1bb941172c1",
+    "seconds": 0.4854,
+    "seed": 1
+   },
+   "family": "UMB",
+   "input_sha256": "81569538cdd1f0ac28fc6921a49b2dc2f1b71b08ab725b40559845ca3ec9225a",
+   "level": "C",
+   "same_prediction": true,
+   "same_scores": true,
+   "seed": 1
+  },
+  {
+   "baseline": {
+    "engine_sha256": "089495ad99f08e30f20f0f18f4ee0d9185041138bf085f97aeeb91e026cf9deb",
+    "family": "UMB",
+    "input_sha256": "5e297bc81ef9417f87a92845e7e0daaa1b23126502337761b3372becc6077b61",
+    "level": "A",
+    "n_docs": 33,
+    "prediction_sha256": "145e16b2fcdaac5a0296b363bdcedcddc34ef2ffbeee94f53fcba9458b6390bc",
+    "score": {
+     "affix_inventory": {
+      "f1": 0.7097,
+      "precision": 0.6471,
+      "recall": 0.7857
+     },
+     "calibration": [
+      [
+       0.953,
+       1,
+       "structure"
+      ],
+      [
+       0.625,
+       0,
+       "lexicon"
+      ],
+      [
+       0.567,
+       1,
+       "lexicon"
+      ],
+      [
+       0.7,
+       1,
+       "lexicon"
+      ]
+     ],
+     "errors": [
+      {
+       "cause": "地名と地元人名の混同（出土地の偏り）",
+       "confidence": 0.625,
+       "gold": "temple",
+       "predicted": "place@S1",
+       "stem": "cuukagii"
+      }
+     ],
+     "gloss_heldout": {
+      "abstain": 0.9735,
+      "correct": 0.0265,
+      "feature_jaccard": 0.0,
+      "numeral_correct": 0.0,
+      "tokens": 151,
+      "wrong": 0.0
+     },
+     "gloss_train": {
+      "abstain": 0.953,
+      "correct": 0.0276,
+      "feature_jaccard": 0.0,
+      "numeral_correct": 0.1111,
+      "tokens": 724,
+      "wrong": 0.0193
+     },
+     "language_id": "UMB-2",
+     "level": "A",
+     "lexicon": {
+      "abstain": 185,
+      "abstain_rate_without_evidence": 0.9936,
+      "claimed": 3,
+      "correct": 2,
+      "coverage": 0.016,
+      "precision": 0.6667,
+      "wrong": 1
+     },
+     "lexicon_inferred": {
+      "abstain": 185,
+      "abstain_rate_without_evidence": 0.9936,
+      "claimed": 3,
+      "correct": 2,
+      "coverage": 0.016,
+      "given_excluded": 3,
+      "note": "トークン単位の採点では、既知語は最初から lexicon の集計から除外している（lexicon と同じ値）",
+      "precision": 0.6667,
+      "wrong": 1
+     },
+     "null_verdict": null,
+     "numerals": {
+      "abstain": 26,
+      "accuracy": 0.0,
+      "correct": 0,
+      "false_numeral": 0,
+      "relative": false,
+      "wrong": 0
+     },
+     "oov": {
+      "claimed_anyway": 0,
+      "heldout_tokens_with_unseen_stem": 33
+     },
+     "overclaim": {
+      "meaning_claims": 6,
+      "overclaims": 0,
+      "semantic_evidence_available": true
+     },
+     "pos": {
+      "accuracy": 0.5731,
+      "accuracy_when_labelled": 0.8059,
+      "labelled": 0.7111
+     },
+     "relatedness": {
+      "chance": 0.0748,
+      "n": 54,
+      "p_at_1": 0.2037
+     },
+     "scoring_version": 2,
+     "segmentation": {
+      "f1": 0.6077,
+      "precision": 0.9186,
+      "recall": 0.454
+     },
+     "structure": {
+      "adj_noun": "abstain",
+      "affix_position": "correct",
+      "num_noun": "abstain",
+      "numeral_base": "abstain",
+      "so_order": "abstain",
+      "verb_position": "abstain"
+     },
+     "variants": {
+      "f1": 0.6243,
+      "gold_pairs": 119,
+      "precision": 1.0,
+      "recall": 0.4538
+     }
+    },
+    "score_sha256": "d4c5afd1cae714f19b8d18ed2a880246479a6bb90bb0fea1dcc7f1003112c608",
+    "seconds": 0.706992,
+    "seed": 2
+   },
+   "case_id": "UMB-2-A",
+   "current": {
+    "engine_sha256": "089495ad99f08e30f20f0f18f4ee0d9185041138bf085f97aeeb91e026cf9deb",
+    "family": "UMB",
+    "input_sha256": "5e297bc81ef9417f87a92845e7e0daaa1b23126502337761b3372becc6077b61",
+    "level": "A",
+    "n_docs": 33,
+    "prediction_sha256": "145e16b2fcdaac5a0296b363bdcedcddc34ef2ffbeee94f53fcba9458b6390bc",
+    "score": {
+     "affix_inventory": {
+      "f1": 0.7097,
+      "precision": 0.6471,
+      "recall": 0.7857
+     },
+     "calibration": [
+      [
+       0.953,
+       1,
+       "structure"
+      ],
+      [
+       0.625,
+       0,
+       "lexicon"
+      ],
+      [
+       0.567,
+       1,
+       "lexicon"
+      ],
+      [
+       0.7,
+       1,
+       "lexicon"
+      ]
+     ],
+     "errors": [
+      {
+       "cause": "地名と地元人名の混同（出土地の偏り）",
+       "confidence": 0.625,
+       "gold": "temple",
+       "predicted": "place@S1",
+       "stem": "cuukagii"
+      }
+     ],
+     "gloss_heldout": {
+      "abstain": 0.9735,
+      "correct": 0.0265,
+      "feature_jaccard": 0.0,
+      "numeral_correct": 0.0,
+      "tokens": 151,
+      "wrong": 0.0
+     },
+     "gloss_train": {
+      "abstain": 0.953,
+      "correct": 0.0276,
+      "feature_jaccard": 0.0,
+      "numeral_correct": 0.1111,
+      "tokens": 724,
+      "wrong": 0.0193
+     },
+     "language_id": "UMB-2",
+     "level": "A",
+     "lexicon": {
+      "abstain": 185,
+      "abstain_rate_without_evidence": 0.9936,
+      "claimed": 3,
+      "correct": 2,
+      "coverage": 0.016,
+      "precision": 0.6667,
+      "wrong": 1
+     },
+     "lexicon_inferred": {
+      "abstain": 185,
+      "abstain_rate_without_evidence": 0.9936,
+      "claimed": 3,
+      "correct": 2,
+      "coverage": 0.016,
+      "given_excluded": 3,
+      "note": "トークン単位の採点では、既知語は最初から lexicon の集計から除外している（lexicon と同じ値）",
+      "precision": 0.6667,
+      "wrong": 1
+     },
+     "null_verdict": null,
+     "numerals": {
+      "abstain": 26,
+      "accuracy": 0.0,
+      "correct": 0,
+      "false_numeral": 0,
+      "relative": false,
+      "wrong": 0
+     },
+     "oov": {
+      "claimed_anyway": 0,
+      "heldout_tokens_with_unseen_stem": 33
+     },
+     "overclaim": {
+      "meaning_claims": 6,
+      "overclaims": 0,
+      "semantic_evidence_available": true
+     },
+     "pos": {
+      "accuracy": 0.5731,
+      "accuracy_when_labelled": 0.8059,
+      "labelled": 0.7111
+     },
+     "relatedness": {
+      "chance": 0.0748,
+      "n": 54,
+      "p_at_1": 0.2037
+     },
+     "scoring_version": 2,
+     "segmentation": {
+      "f1": 0.6077,
+      "precision": 0.9186,
+      "recall": 0.454
+     },
+     "structure": {
+      "adj_noun": "abstain",
+      "affix_position": "correct",
+      "num_noun": "abstain",
+      "numeral_base": "abstain",
+      "so_order": "abstain",
+      "verb_position": "abstain"
+     },
+     "variants": {
+      "f1": 0.6243,
+      "gold_pairs": 119,
+      "precision": 1.0,
+      "recall": 0.4538
+     }
+    },
+    "score_sha256": "d4c5afd1cae714f19b8d18ed2a880246479a6bb90bb0fea1dcc7f1003112c608",
+    "seconds": 0.682451,
+    "seed": 2
+   },
+   "family": "UMB",
+   "input_sha256": "5e297bc81ef9417f87a92845e7e0daaa1b23126502337761b3372becc6077b61",
+   "level": "A",
+   "same_prediction": true,
+   "same_scores": true,
+   "seed": 2
+  },
+  {
+   "baseline": {
+    "engine_sha256": "089495ad99f08e30f20f0f18f4ee0d9185041138bf085f97aeeb91e026cf9deb",
+    "family": "UMB",
+    "input_sha256": "3f10eeecbb2bf07c69ef56e02a26e67372486f199e9c22137f074780f4597655",
+    "level": "B",
+    "n_docs": 33,
+    "prediction_sha256": "10e74fac5c40b8ba03802b4528199d17c1b476d349e999e075af6e8965f7437d",
+    "score": {
+     "affix_inventory": {
+      "f1": 0.7097,
+      "precision": 0.6471,
+      "recall": 0.7857
+     },
+     "calibration": [
+      [
+       0.953,
+       1,
+       "structure"
+      ],
+      [
+       0.625,
+       1,
+       "lexicon"
+      ],
+      [
+       0.613,
+       1,
+       "lexicon"
+      ],
+      [
+       0.7,
+       1,
+       "lexicon"
+      ]
+     ],
+     "errors": [],
+     "gloss_heldout": {
+      "abstain": 0.9272,
+      "correct": 0.0728,
+      "feature_jaccard": 0.0,
+      "numeral_correct": 0.0,
+      "tokens": 151,
+      "wrong": 0.0
+     },
+     "gloss_train": {
+      "abstain": 0.9298,
+      "correct": 0.0702,
+      "feature_jaccard": 0.0,
+      "numeral_correct": 0.0349,
+      "tokens": 769,
+      "wrong": 0.0
+     },
+     "language_id": "UMB-2",
+     "level": "B",
+     "lexicon": {
+      "abstain": 186,
+      "abstain_rate_without_evidence": 0.9841,
+      "claimed": 3,
+      "correct": 3,
+      "coverage": 0.0159,
+      "precision": 1.0,
+      "wrong": 0
+     },
+     "lexicon_inferred": {
+      "abstain": 186,
+      "abstain_rate_without_evidence": 0.9841,
+      "claimed": 3,
+      "correct": 3,
+      "coverage": 0.0159,
+      "given_excluded": 2,
+      "note": "トークン単位の採点では、既知語は最初から lexicon の集計から除外している（lexicon と同じ値）",
+      "precision": 1.0,
+      "wrong": 0
+     },
+     "null_verdict": null,
+     "numerals": {
+      "abstain": 26,
+      "accuracy": 0.0,
+      "correct": 0,
+      "false_numeral": 0,
+      "relative": false,
+      "wrong": 0
+     },
+     "oov": {
+      "claimed_anyway": 0,
+      "heldout_tokens_with_unseen_stem": 33
+     },
+     "overclaim": {
+      "meaning_claims": 5,
+      "overclaims": 0,
+      "semantic_evidence_available": true
+     },
+     "pos": {
+      "accuracy": 0.5415,
+      "accuracy_when_labelled": 0.7888,
+      "labelled": 0.6865
+     },
+     "relatedness": {
+      "chance": 0.0748,
+      "n": 54,
+      "p_at_1": 0.2037
+     },
+     "scoring_version": 2,
+     "segmentation": {
+      "f1": 0.6077,
+      "precision": 0.9186,
+      "recall": 0.454
+     },
+     "structure": {
+      "adj_noun": "abstain",
+      "affix_position": "correct",
+      "num_noun": "abstain",
+      "numeral_base": "abstain",
+      "so_order": "abstain",
+      "verb_position": "abstain"
+     },
+     "variants": {
+      "f1": 0.6243,
+      "gold_pairs": 119,
+      "precision": 1.0,
+      "recall": 0.4538
+     }
+    },
+    "score_sha256": "54b9fe3be09fe5b338593cd4fbcdf101d5979b3e36f319954e7e2ad27bf0c826",
+    "seconds": 0.503689,
+    "seed": 2
+   },
+   "case_id": "UMB-2-B",
+   "current": {
+    "engine_sha256": "089495ad99f08e30f20f0f18f4ee0d9185041138bf085f97aeeb91e026cf9deb",
+    "family": "UMB",
+    "input_sha256": "3f10eeecbb2bf07c69ef56e02a26e67372486f199e9c22137f074780f4597655",
+    "level": "B",
+    "n_docs": 33,
+    "prediction_sha256": "10e74fac5c40b8ba03802b4528199d17c1b476d349e999e075af6e8965f7437d",
+    "score": {
+     "affix_inventory": {
+      "f1": 0.7097,
+      "precision": 0.6471,
+      "recall": 0.7857
+     },
+     "calibration": [
+      [
+       0.953,
+       1,
+       "structure"
+      ],
+      [
+       0.625,
+       1,
+       "lexicon"
+      ],
+      [
+       0.613,
+       1,
+       "lexicon"
+      ],
+      [
+       0.7,
+       1,
+       "lexicon"
+      ]
+     ],
+     "errors": [],
+     "gloss_heldout": {
+      "abstain": 0.9272,
+      "correct": 0.0728,
+      "feature_jaccard": 0.0,
+      "numeral_correct": 0.0,
+      "tokens": 151,
+      "wrong": 0.0
+     },
+     "gloss_train": {
+      "abstain": 0.9298,
+      "correct": 0.0702,
+      "feature_jaccard": 0.0,
+      "numeral_correct": 0.0349,
+      "tokens": 769,
+      "wrong": 0.0
+     },
+     "language_id": "UMB-2",
+     "level": "B",
+     "lexicon": {
+      "abstain": 186,
+      "abstain_rate_without_evidence": 0.9841,
+      "claimed": 3,
+      "correct": 3,
+      "coverage": 0.0159,
+      "precision": 1.0,
+      "wrong": 0
+     },
+     "lexicon_inferred": {
+      "abstain": 186,
+      "abstain_rate_without_evidence": 0.9841,
+      "claimed": 3,
+      "correct": 3,
+      "coverage": 0.0159,
+      "given_excluded": 2,
+      "note": "トークン単位の採点では、既知語は最初から lexicon の集計から除外している（lexicon と同じ値）",
+      "precision": 1.0,
+      "wrong": 0
+     },
+     "null_verdict": null,
+     "numerals": {
+      "abstain": 26,
+      "accuracy": 0.0,
+      "correct": 0,
+      "false_numeral": 0,
+      "relative": false,
+      "wrong": 0
+     },
+     "oov": {
+      "claimed_anyway": 0,
+      "heldout_tokens_with_unseen_stem": 33
+     },
+     "overclaim": {
+      "meaning_claims": 5,
+      "overclaims": 0,
+      "semantic_evidence_available": true
+     },
+     "pos": {
+      "accuracy": 0.5415,
+      "accuracy_when_labelled": 0.7888,
+      "labelled": 0.6865
+     },
+     "relatedness": {
+      "chance": 0.0748,
+      "n": 54,
+      "p_at_1": 0.2037
+     },
+     "scoring_version": 2,
+     "segmentation": {
+      "f1": 0.6077,
+      "precision": 0.9186,
+      "recall": 0.454
+     },
+     "structure": {
+      "adj_noun": "abstain",
+      "affix_position": "correct",
+      "num_noun": "abstain",
+      "numeral_base": "abstain",
+      "so_order": "abstain",
+      "verb_position": "abstain"
+     },
+     "variants": {
+      "f1": 0.6243,
+      "gold_pairs": 119,
+      "precision": 1.0,
+      "recall": 0.4538
+     }
+    },
+    "score_sha256": "54b9fe3be09fe5b338593cd4fbcdf101d5979b3e36f319954e7e2ad27bf0c826",
+    "seconds": 0.50705,
+    "seed": 2
+   },
+   "family": "UMB",
+   "input_sha256": "3f10eeecbb2bf07c69ef56e02a26e67372486f199e9c22137f074780f4597655",
+   "level": "B",
+   "same_prediction": true,
+   "same_scores": true,
+   "seed": 2
+  },
+  {
+   "baseline": {
+    "engine_sha256": "089495ad99f08e30f20f0f18f4ee0d9185041138bf085f97aeeb91e026cf9deb",
+    "family": "UMB",
+    "input_sha256": "357939e8a53423a71be20ba3dac90475e9fee06b1047fba72c96c6e789d2512e",
+    "level": "C",
+    "n_docs": 33,
+    "prediction_sha256": "0e3c271e470dee3b33aa079d4dd901d4b8f1d42323d9a7a46d56692cdd6341aa",
+    "score": {
+     "affix_inventory": {
+      "f1": 0.7097,
+      "precision": 0.6471,
+      "recall": 0.7857
+     },
+     "calibration": [
+      [
+       0.953,
+       1,
+       "structure"
+      ]
+     ],
+     "errors": [],
+     "gloss_heldout": {
+      "abstain": 1.0,
+      "correct": 0.0,
+      "feature_jaccard": 0.0,
+      "numeral_correct": 0.0,
+      "tokens": 151,
+      "wrong": 0.0
+     },
+     "gloss_train": {
+      "abstain": 1.0,
+      "correct": 0.0,
+      "feature_jaccard": 0.0,
+      "numeral_correct": 0.0,
+      "tokens": 769,
+      "wrong": 0.0
+     },
+     "language_id": "UMB-2",
+     "level": "C",
+     "lexicon": {
+      "abstain": 191,
+      "abstain_rate_without_evidence": 1.0,
+      "claimed": 0,
+      "correct": 0,
+      "coverage": 0.0,
+      "precision": null,
+      "wrong": 0
+     },
+     "lexicon_inferred": {
+      "abstain": 191,
+      "abstain_rate_without_evidence": 1.0,
+      "claimed": 0,
+      "correct": 0,
+      "coverage": 0.0,
+      "given_excluded": 0,
+      "note": "トークン単位の採点では、既知語は最初から lexicon の集計から除外している（lexicon と同じ値）",
+      "precision": null,
+      "wrong": 0
+     },
+     "null_verdict": null,
+     "numerals": {
+      "abstain": 26,
+      "accuracy": 0.0,
+      "correct": 0,
+      "false_numeral": 0,
+      "relative": true,
+      "wrong": 0
+     },
+     "oov": {
+      "claimed_anyway": 0,
+      "heldout_tokens_with_unseen_stem": 33
+     },
+     "overclaim": {
+      "meaning_claims": 0,
+      "overclaims": 0,
+      "semantic_evidence_available": false
+     },
+     "pos": {
+      "accuracy": 0.538,
+      "accuracy_when_labelled": 0.7877,
+      "labelled": 0.683
+     },
+     "relatedness": {
+      "chance": 0.0748,
+      "n": 54,
+      "p_at_1": 0.2037
+     },
+     "scoring_version": 2,
+     "segmentation": {
+      "f1": 0.6077,
+      "precision": 0.9186,
+      "recall": 0.454
+     },
+     "structure": {
+      "adj_noun": "abstain",
+      "affix_position": "correct",
+      "num_noun": "abstain",
+      "numeral_base": "abstain",
+      "so_order": "abstain",
+      "verb_position": "abstain"
+     },
+     "variants": {
+      "f1": 0.6243,
+      "gold_pairs": 119,
+      "precision": 1.0,
+      "recall": 0.4538
+     }
+    },
+    "score_sha256": "34fb487804b026080b7a911a45982177ee3fd842cb3545e87952a4ac27a6ef55",
+    "seconds": 0.488786,
+    "seed": 2
+   },
+   "case_id": "UMB-2-C",
+   "current": {
+    "engine_sha256": "089495ad99f08e30f20f0f18f4ee0d9185041138bf085f97aeeb91e026cf9deb",
+    "family": "UMB",
+    "input_sha256": "357939e8a53423a71be20ba3dac90475e9fee06b1047fba72c96c6e789d2512e",
+    "level": "C",
+    "n_docs": 33,
+    "prediction_sha256": "0e3c271e470dee3b33aa079d4dd901d4b8f1d42323d9a7a46d56692cdd6341aa",
+    "score": {
+     "affix_inventory": {
+      "f1": 0.7097,
+      "precision": 0.6471,
+      "recall": 0.7857
+     },
+     "calibration": [
+      [
+       0.953,
+       1,
+       "structure"
+      ]
+     ],
+     "errors": [],
+     "gloss_heldout": {
+      "abstain": 1.0,
+      "correct": 0.0,
+      "feature_jaccard": 0.0,
+      "numeral_correct": 0.0,
+      "tokens": 151,
+      "wrong": 0.0
+     },
+     "gloss_train": {
+      "abstain": 1.0,
+      "correct": 0.0,
+      "feature_jaccard": 0.0,
+      "numeral_correct": 0.0,
+      "tokens": 769,
+      "wrong": 0.0
+     },
+     "language_id": "UMB-2",
+     "level": "C",
+     "lexicon": {
+      "abstain": 191,
+      "abstain_rate_without_evidence": 1.0,
+      "claimed": 0,
+      "correct": 0,
+      "coverage": 0.0,
+      "precision": null,
+      "wrong": 0
+     },
+     "lexicon_inferred": {
+      "abstain": 191,
+      "abstain_rate_without_evidence": 1.0,
+      "claimed": 0,
+      "correct": 0,
+      "coverage": 0.0,
+      "given_excluded": 0,
+      "note": "トークン単位の採点では、既知語は最初から lexicon の集計から除外している（lexicon と同じ値）",
+      "precision": null,
+      "wrong": 0
+     },
+     "null_verdict": null,
+     "numerals": {
+      "abstain": 26,
+      "accuracy": 0.0,
+      "correct": 0,
+      "false_numeral": 0,
+      "relative": true,
+      "wrong": 0
+     },
+     "oov": {
+      "claimed_anyway": 0,
+      "heldout_tokens_with_unseen_stem": 33
+     },
+     "overclaim": {
+      "meaning_claims": 0,
+      "overclaims": 0,
+      "semantic_evidence_available": false
+     },
+     "pos": {
+      "accuracy": 0.538,
+      "accuracy_when_labelled": 0.7877,
+      "labelled": 0.683
+     },
+     "relatedness": {
+      "chance": 0.0748,
+      "n": 54,
+      "p_at_1": 0.2037
+     },
+     "scoring_version": 2,
+     "segmentation": {
+      "f1": 0.6077,
+      "precision": 0.9186,
+      "recall": 0.454
+     },
+     "structure": {
+      "adj_noun": "abstain",
+      "affix_position": "correct",
+      "num_noun": "abstain",
+      "numeral_base": "abstain",
+      "so_order": "abstain",
+      "verb_position": "abstain"
+     },
+     "variants": {
+      "f1": 0.6243,
+      "gold_pairs": 119,
+      "precision": 1.0,
+      "recall": 0.4538
+     }
+    },
+    "score_sha256": "34fb487804b026080b7a911a45982177ee3fd842cb3545e87952a4ac27a6ef55",
+    "seconds": 0.508836,
+    "seed": 2
+   },
+   "family": "UMB",
+   "input_sha256": "357939e8a53423a71be20ba3dac90475e9fee06b1047fba72c96c6e789d2512e",
+   "level": "C",
+   "same_prediction": true,
+   "same_scores": true,
+   "seed": 2
+  },
+  {
+   "baseline": {
+    "engine_sha256": "089495ad99f08e30f20f0f18f4ee0d9185041138bf085f97aeeb91e026cf9deb",
+    "family": "SOT",
+    "input_sha256": "22caf3aea9e7e75189eaf306459e9922ff78ff913cca164c511f777e7a79971f",
+    "level": "A",
+    "n_docs": 33,
+    "prediction_sha256": "8fc5efb51b826035c8ab5c005382ef59ec8ec55782e01c101b7a8397b1ebe4d0",
+    "score": {
+     "affix_inventory": {
+      "f1": 0.9048,
+      "precision": 0.95,
+      "recall": 0.8636
+     },
+     "calibration": [
+      [
+       0.949,
+       1,
+       "structure"
+      ],
+      [
+       1.0,
+       1,
+       "structure"
+      ],
+      [
+       0.588,
+       1,
+       "lexicon"
+      ],
+      [
+       0.5,
+       0,
+       "lexicon"
+      ],
+      [
+       0.588,
+       1,
+       "lexicon"
+      ],
+      [
+       0.588,
+       1,
+       "lexicon"
+      ],
+      [
+       0.588,
+       1,
+       "lexicon"
+      ],
+      [
+       0.507,
+       1,
+       "lexicon"
+      ],
+      [
+       0.67,
+       0,
+       "lexicon"
+      ]
+     ],
+     "errors": [
+      {
+       "cause": "地名と地元人名の混同（出土地の偏り）",
+       "confidence": 0.67,
+       "gold": "people",
+       "predicted": "place@S1",
+       "stem": "viril"
+      },
+      {
+       "cause": "地名と地元人名の混同（出土地の偏り）",
+       "confidence": 0.5,
+       "gold": "scribe",
+       "predicted": "place@S3",
+       "stem": "fothuf"
+      }
+     ],
+     "gloss_heldout": {
+      "abstain": 0.9259,
+      "correct": 0.0556,
+      "feature_jaccard": 0.0116,
+      "numeral_correct": 0.1395,
+      "tokens": 162,
+      "wrong": 0.0185
+     },
+     "gloss_train": {
+      "abstain": 0.9076,
+      "correct": 0.0772,
+      "feature_jaccard": 0.0655,
+      "numeral_correct": 0.1538,
+      "tokens": 725,
+      "wrong": 0.0152
+     },
+     "language_id": "SOT-0",
+     "level": "A",
+     "lexicon": {
+      "abstain": 126,
+      "abstain_rate_without_evidence": 0.9811,
+      "claimed": 7,
+      "correct": 5,
+      "coverage": 0.0526,
+      "precision": 0.7143,
+      "wrong": 2
+     },
+     "lexicon_inferred": {
+      "abstain": 126,
+      "abstain_rate_without_evidence": 0.9811,
+      "claimed": 7,
+      "correct": 5,
+      "coverage": 0.0526,
+      "given_excluded": 4,
+      "note": "トークン単位の採点では、既知語は最初から lexicon の集計から除外している（lexicon と同じ値）",
+      "precision": 0.7143,
+      "wrong": 2
+     },
+     "null_verdict": null,
+     "numerals": {
+      "abstain": 22,
+      "accuracy": 0.0,
+      "correct": 0,
+      "false_numeral": 0,
+      "relative": false,
+      "wrong": 0
+     },
+     "oov": {
+      "claimed_anyway": 0,
+      "heldout_tokens_with_unseen_stem": 28
+     },
+     "overclaim": {
+      "meaning_claims": 11,
+      "overclaims": 0,
+      "semantic_evidence_available": true
+     },
+     "pos": {
+      "accuracy": 0.7448,
+      "accuracy_when_labelled": 0.8072,
+      "labelled": 0.9227
+     },
+     "relatedness": {
+      "chance": 0.0909,
+      "n": 65,
+      "p_at_1": 0.5231
+     },
+     "scoring_version": 2,
+     "segmentation": {
+      "f1": 0.9039,
+      "precision": 0.9961,
+      "recall": 0.8274
+     },
+     "structure": {
+      "adj_noun": "abstain",
+      "affix_position": "correct",
+      "num_noun": "abstain",
+      "numeral_base": "abstain",
+      "so_order": "abstain",
+      "verb_position": "correct"
+     },
+     "variants": {
+      "f1": 0.8889,
+      "gold_pairs": 55,
+      "precision": 1.0,
+      "recall": 0.8
+     }
+    },
+    "score_sha256": "75e4b0743a58b3e6d18d25832f77b394ce7031ecea481aff78972cace2699ed2",
+    "seconds": 0.796123,
+    "seed": 0
+   },
+   "case_id": "SOT-0-A",
+   "current": {
+    "engine_sha256": "089495ad99f08e30f20f0f18f4ee0d9185041138bf085f97aeeb91e026cf9deb",
+    "family": "SOT",
+    "input_sha256": "22caf3aea9e7e75189eaf306459e9922ff78ff913cca164c511f777e7a79971f",
+    "level": "A",
+    "n_docs": 33,
+    "prediction_sha256": "8fc5efb51b826035c8ab5c005382ef59ec8ec55782e01c101b7a8397b1ebe4d0",
+    "score": {
+     "affix_inventory": {
+      "f1": 0.9048,
+      "precision": 0.95,
+      "recall": 0.8636
+     },
+     "calibration": [
+      [
+       0.949,
+       1,
+       "structure"
+      ],
+      [
+       1.0,
+       1,
+       "structure"
+      ],
+      [
+       0.588,
+       1,
+       "lexicon"
+      ],
+      [
+       0.5,
+       0,
+       "lexicon"
+      ],
+      [
+       0.588,
+       1,
+       "lexicon"
+      ],
+      [
+       0.588,
+       1,
+       "lexicon"
+      ],
+      [
+       0.588,
+       1,
+       "lexicon"
+      ],
+      [
+       0.507,
+       1,
+       "lexicon"
+      ],
+      [
+       0.67,
+       0,
+       "lexicon"
+      ]
+     ],
+     "errors": [
+      {
+       "cause": "地名と地元人名の混同（出土地の偏り）",
+       "confidence": 0.67,
+       "gold": "people",
+       "predicted": "place@S1",
+       "stem": "viril"
+      },
+      {
+       "cause": "地名と地元人名の混同（出土地の偏り）",
+       "confidence": 0.5,
+       "gold": "scribe",
+       "predicted": "place@S3",
+       "stem": "fothuf"
+      }
+     ],
+     "gloss_heldout": {
+      "abstain": 0.9259,
+      "correct": 0.0556,
+      "feature_jaccard": 0.0116,
+      "numeral_correct": 0.1395,
+      "tokens": 162,
+      "wrong": 0.0185
+     },
+     "gloss_train": {
+      "abstain": 0.9076,
+      "correct": 0.0772,
+      "feature_jaccard": 0.0655,
+      "numeral_correct": 0.1538,
+      "tokens": 725,
+      "wrong": 0.0152
+     },
+     "language_id": "SOT-0",
+     "level": "A",
+     "lexicon": {
+      "abstain": 126,
+      "abstain_rate_without_evidence": 0.9811,
+      "claimed": 7,
+      "correct": 5,
+      "coverage": 0.0526,
+      "precision": 0.7143,
+      "wrong": 2
+     },
+     "lexicon_inferred": {
+      "abstain": 126,
+      "abstain_rate_without_evidence": 0.9811,
+      "claimed": 7,
+      "correct": 5,
+      "coverage": 0.0526,
+      "given_excluded": 4,
+      "note": "トークン単位の採点では、既知語は最初から lexicon の集計から除外している（lexicon と同じ値）",
+      "precision": 0.7143,
+      "wrong": 2
+     },
+     "null_verdict": null,
+     "numerals": {
+      "abstain": 22,
+      "accuracy": 0.0,
+      "correct": 0,
+      "false_numeral": 0,
+      "relative": false,
+      "wrong": 0
+     },
+     "oov": {
+      "claimed_anyway": 0,
+      "heldout_tokens_with_unseen_stem": 28
+     },
+     "overclaim": {
+      "meaning_claims": 11,
+      "overclaims": 0,
+      "semantic_evidence_available": true
+     },
+     "pos": {
+      "accuracy": 0.7448,
+      "accuracy_when_labelled": 0.8072,
+      "labelled": 0.9227
+     },
+     "relatedness": {
+      "chance": 0.0909,
+      "n": 65,
+      "p_at_1": 0.5231
+     },
+     "scoring_version": 2,
+     "segmentation": {
+      "f1": 0.9039,
+      "precision": 0.9961,
+      "recall": 0.8274
+     },
+     "structure": {
+      "adj_noun": "abstain",
+      "affix_position": "correct",
+      "num_noun": "abstain",
+      "numeral_base": "abstain",
+      "so_order": "abstain",
+      "verb_position": "correct"
+     },
+     "variants": {
+      "f1": 0.8889,
+      "gold_pairs": 55,
+      "precision": 1.0,
+      "recall": 0.8
+     }
+    },
+    "score_sha256": "75e4b0743a58b3e6d18d25832f77b394ce7031ecea481aff78972cace2699ed2",
+    "seconds": 0.913721,
+    "seed": 0
+   },
+   "family": "SOT",
+   "input_sha256": "22caf3aea9e7e75189eaf306459e9922ff78ff913cca164c511f777e7a79971f",
+   "level": "A",
+   "same_prediction": true,
+   "same_scores": true,
+   "seed": 0
+  },
+  {
+   "baseline": {
+    "engine_sha256": "089495ad99f08e30f20f0f18f4ee0d9185041138bf085f97aeeb91e026cf9deb",
+    "family": "SOT",
+    "input_sha256": "f248adf90d040a62f675f06a95ba1ef16d495561de53e0faff21d06ceb3aca49",
+    "level": "B",
+    "n_docs": 33,
+    "prediction_sha256": "2c8eefc27e0cfe701796b08e665ae5c9a41f16a1432961845607f4ae8bb37f7d",
+    "score": {
+     "affix_inventory": {
+      "f1": 0.9048,
+      "precision": 0.95,
+      "recall": 0.8636
+     },
+     "calibration": [
+      [
+       1.0,
+       1,
+       "structure"
+      ],
+      [
+       0.567,
+       1,
+       "lexicon"
+      ],
+      [
+       0.5,
+       0,
+       "lexicon"
+      ]
+     ],
+     "errors": [
+      {
+       "cause": "地名と地元人名の混同（出土地の偏り）",
+       "confidence": 0.5,
+       "gold": "scribe",
+       "predicted": "place@S3",
+       "stem": "fothuf"
+      }
+     ],
+     "gloss_heldout": {
+      "abstain": 0.7901,
+      "correct": 0.1975,
+      "feature_jaccard": 0.0,
+      "numeral_correct": 0.0233,
+      "tokens": 162,
+      "wrong": 0.0123
+     },
+     "gloss_train": {
+      "abstain": 0.8562,
+      "correct": 0.1359,
+      "feature_jaccard": 0.0,
+      "numeral_correct": 0.0571,
+      "tokens": 765,
+      "wrong": 0.0078
+     },
+     "language_id": "SOT-0",
+     "level": "B",
+     "lexicon": {
+      "abstain": 130,
+      "abstain_rate_without_evidence": 0.9848,
+      "claimed": 2,
+      "correct": 1,
+      "coverage": 0.0152,
+      "precision": 0.5,
+      "wrong": 1
+     },
+     "lexicon_inferred": {
+      "abstain": 130,
+      "abstain_rate_without_evidence": 0.9848,
+      "claimed": 2,
+      "correct": 1,
+      "coverage": 0.0152,
+      "given_excluded": 5,
+      "note": "トークン単位の採点では、既知語は最初から lexicon の集計から除外している（lexicon と同じ値）",
+      "precision": 0.5,
+      "wrong": 1
+     },
+     "null_verdict": null,
+     "numerals": {
+      "abstain": 22,
+      "accuracy": 0.0,
+      "correct": 0,
+      "false_numeral": 0,
+      "relative": false,
+      "wrong": 0
+     },
+     "oov": {
+      "claimed_anyway": 0,
+      "heldout_tokens_with_unseen_stem": 28
+     },
+     "overclaim": {
+      "meaning_claims": 7,
+      "overclaims": 0,
+      "semantic_evidence_available": true
+     },
+     "pos": {
+      "accuracy": 0.7149,
+      "accuracy_when_labelled": 0.7776,
+      "labelled": 0.9193
+     },
+     "relatedness": {
+      "chance": 0.0909,
+      "n": 65,
+      "p_at_1": 0.5231
+     },
+     "scoring_version": 2,
+     "segmentation": {
+      "f1": 0.9039,
+      "precision": 0.9961,
+      "recall": 0.8274
+     },
+     "structure": {
+      "adj_noun": "abstain",
+      "affix_position": "correct",
+      "num_noun": "abstain",
+      "numeral_base": "abstain",
+      "so_order": "abstain",
+      "verb_position": "abstain"
+     },
+     "variants": {
+      "f1": 0.8889,
+      "gold_pairs": 55,
+      "precision": 1.0,
+      "recall": 0.8
+     }
+    },
+    "score_sha256": "28f1fb00f23cb3bb30a52aa623fd338aced7ec9f5b7cd09086c9b4547d238bc7",
+    "seconds": 0.420294,
+    "seed": 0
+   },
+   "case_id": "SOT-0-B",
+   "current": {
+    "engine_sha256": "089495ad99f08e30f20f0f18f4ee0d9185041138bf085f97aeeb91e026cf9deb",
+    "family": "SOT",
+    "input_sha256": "f248adf90d040a62f675f06a95ba1ef16d495561de53e0faff21d06ceb3aca49",
+    "level": "B",
+    "n_docs": 33,
+    "prediction_sha256": "2c8eefc27e0cfe701796b08e665ae5c9a41f16a1432961845607f4ae8bb37f7d",
+    "score": {
+     "affix_inventory": {
+      "f1": 0.9048,
+      "precision": 0.95,
+      "recall": 0.8636
+     },
+     "calibration": [
+      [
+       1.0,
+       1,
+       "structure"
+      ],
+      [
+       0.567,
+       1,
+       "lexicon"
+      ],
+      [
+       0.5,
+       0,
+       "lexicon"
+      ]
+     ],
+     "errors": [
+      {
+       "cause": "地名と地元人名の混同（出土地の偏り）",
+       "confidence": 0.5,
+       "gold": "scribe",
+       "predicted": "place@S3",
+       "stem": "fothuf"
+      }
+     ],
+     "gloss_heldout": {
+      "abstain": 0.7901,
+      "correct": 0.1975,
+      "feature_jaccard": 0.0,
+      "numeral_correct": 0.0233,
+      "tokens": 162,
+      "wrong": 0.0123
+     },
+     "gloss_train": {
+      "abstain": 0.8562,
+      "correct": 0.1359,
+      "feature_jaccard": 0.0,
+      "numeral_correct": 0.0571,
+      "tokens": 765,
+      "wrong": 0.0078
+     },
+     "language_id": "SOT-0",
+     "level": "B",
+     "lexicon": {
+      "abstain": 130,
+      "abstain_rate_without_evidence": 0.9848,
+      "claimed": 2,
+      "correct": 1,
+      "coverage": 0.0152,
+      "precision": 0.5,
+      "wrong": 1
+     },
+     "lexicon_inferred": {
+      "abstain": 130,
+      "abstain_rate_without_evidence": 0.9848,
+      "claimed": 2,
+      "correct": 1,
+      "coverage": 0.0152,
+      "given_excluded": 5,
+      "note": "トークン単位の採点では、既知語は最初から lexicon の集計から除外している（lexicon と同じ値）",
+      "precision": 0.5,
+      "wrong": 1
+     },
+     "null_verdict": null,
+     "numerals": {
+      "abstain": 22,
+      "accuracy": 0.0,
+      "correct": 0,
+      "false_numeral": 0,
+      "relative": false,
+      "wrong": 0
+     },
+     "oov": {
+      "claimed_anyway": 0,
+      "heldout_tokens_with_unseen_stem": 28
+     },
+     "overclaim": {
+      "meaning_claims": 7,
+      "overclaims": 0,
+      "semantic_evidence_available": true
+     },
+     "pos": {
+      "accuracy": 0.7149,
+      "accuracy_when_labelled": 0.7776,
+      "labelled": 0.9193
+     },
+     "relatedness": {
+      "chance": 0.0909,
+      "n": 65,
+      "p_at_1": 0.5231
+     },
+     "scoring_version": 2,
+     "segmentation": {
+      "f1": 0.9039,
+      "precision": 0.9961,
+      "recall": 0.8274
+     },
+     "structure": {
+      "adj_noun": "abstain",
+      "affix_position": "correct",
+      "num_noun": "abstain",
+      "numeral_base": "abstain",
+      "so_order": "abstain",
+      "verb_position": "abstain"
+     },
+     "variants": {
+      "f1": 0.8889,
+      "gold_pairs": 55,
+      "precision": 1.0,
+      "recall": 0.8
+     }
+    },
+    "score_sha256": "28f1fb00f23cb3bb30a52aa623fd338aced7ec9f5b7cd09086c9b4547d238bc7",
+    "seconds": 0.559353,
+    "seed": 0
+   },
+   "family": "SOT",
+   "input_sha256": "f248adf90d040a62f675f06a95ba1ef16d495561de53e0faff21d06ceb3aca49",
+   "level": "B",
+   "same_prediction": true,
+   "same_scores": true,
+   "seed": 0
+  },
+  {
+   "baseline": {
+    "engine_sha256": "089495ad99f08e30f20f0f18f4ee0d9185041138bf085f97aeeb91e026cf9deb",
+    "family": "SOT",
+    "input_sha256": "0153c263fd62474b939220d9604512d4557139ad5e9fe82b19cd541d7b424023",
+    "level": "C",
+    "n_docs": 33,
+    "prediction_sha256": "1b0bb05881cab0869f3ddf00b528215d6d7dc3dc3c50a35109457a1ef4cd87e1",
+    "score": {
+     "affix_inventory": {
+      "f1": 0.9048,
+      "precision": 0.95,
+      "recall": 0.8636
+     },
+     "calibration": [
+      [
+       1.0,
+       1,
+       "structure"
+      ]
+     ],
+     "errors": [],
+     "gloss_heldout": {
+      "abstain": 1.0,
+      "correct": 0.0,
+      "feature_jaccard": 0.0,
+      "numeral_correct": 0.0,
+      "tokens": 162,
+      "wrong": 0.0
+     },
+     "gloss_train": {
+      "abstain": 1.0,
+      "correct": 0.0,
+      "feature_jaccard": 0.0,
+      "numeral_correct": 0.0,
+      "tokens": 765,
+      "wrong": 0.0
+     },
+     "language_id": "SOT-0",
+     "level": "C",
+     "lexicon": {
+      "abstain": 137,
+      "abstain_rate_without_evidence": 1.0,
+      "claimed": 0,
+      "correct": 0,
+      "coverage": 0.0,
+      "precision": null,
+      "wrong": 0
+     },
+     "lexicon_inferred": {
+      "abstain": 137,
+      "abstain_rate_without_evidence": 1.0,
+      "claimed": 0,
+      "correct": 0,
+      "coverage": 0.0,
+      "given_excluded": 0,
+      "note": "トークン単位の採点では、既知語は最初から lexicon の集計から除外している（lexicon と同じ値）",
+      "precision": null,
+      "wrong": 0
+     },
+     "null_verdict": null,
+     "numerals": {
+      "abstain": 22,
+      "accuracy": 0.0,
+      "correct": 0,
+      "false_numeral": 0,
+      "relative": true,
+      "wrong": 0
+     },
+     "oov": {
+      "claimed_anyway": 0,
+      "heldout_tokens_with_unseen_stem": 28
+     },
+     "overclaim": {
+      "meaning_claims": 0,
+      "overclaims": 0,
+      "semantic_evidence_available": false
+     },
+     "pos": {
+      "accuracy": 0.7061,
+      "accuracy_when_labelled": 0.768,
+      "labelled": 0.9193
+     },
+     "relatedness": {
+      "chance": 0.0909,
+      "n": 65,
+      "p_at_1": 0.5231
+     },
+     "scoring_version": 2,
+     "segmentation": {
+      "f1": 0.9039,
+      "precision": 0.9961,
+      "recall": 0.8274
+     },
+     "structure": {
+      "adj_noun": "abstain",
+      "affix_position": "correct",
+      "num_noun": "abstain",
+      "numeral_base": "abstain",
+      "so_order": "abstain",
+      "verb_position": "abstain"
+     },
+     "variants": {
+      "f1": 0.8889,
+      "gold_pairs": 55,
+      "precision": 1.0,
+      "recall": 0.8
+     }
+    },
+    "score_sha256": "a35a51ba888277a29fe58e8b718f16f6558a91beea698a948b885b5a3575ac72",
+    "seconds": 0.395081,
+    "seed": 0
+   },
+   "case_id": "SOT-0-C",
+   "current": {
+    "engine_sha256": "089495ad99f08e30f20f0f18f4ee0d9185041138bf085f97aeeb91e026cf9deb",
+    "family": "SOT",
+    "input_sha256": "0153c263fd62474b939220d9604512d4557139ad5e9fe82b19cd541d7b424023",
+    "level": "C",
+    "n_docs": 33,
+    "prediction_sha256": "1b0bb05881cab0869f3ddf00b528215d6d7dc3dc3c50a35109457a1ef4cd87e1",
+    "score": {
+     "affix_inventory": {
+      "f1": 0.9048,
+      "precision": 0.95,
+      "recall": 0.8636
+     },
+     "calibration": [
+      [
+       1.0,
+       1,
+       "structure"
+      ]
+     ],
+     "errors": [],
+     "gloss_heldout": {
+      "abstain": 1.0,
+      "correct": 0.0,
+      "feature_jaccard": 0.0,
+      "numeral_correct": 0.0,
+      "tokens": 162,
+      "wrong": 0.0
+     },
+     "gloss_train": {
+      "abstain": 1.0,
+      "correct": 0.0,
+      "feature_jaccard": 0.0,
+      "numeral_correct": 0.0,
+      "tokens": 765,
+      "wrong": 0.0
+     },
+     "language_id": "SOT-0",
+     "level": "C",
+     "lexicon": {
+      "abstain": 137,
+      "abstain_rate_without_evidence": 1.0,
+      "claimed": 0,
+      "correct": 0,
+      "coverage": 0.0,
+      "precision": null,
+      "wrong": 0
+     },
+     "lexicon_inferred": {
+      "abstain": 137,
+      "abstain_rate_without_evidence": 1.0,
+      "claimed": 0,
+      "correct": 0,
+      "coverage": 0.0,
+      "given_excluded": 0,
+      "note": "トークン単位の採点では、既知語は最初から lexicon の集計から除外している（lexicon と同じ値）",
+      "precision": null,
+      "wrong": 0
+     },
+     "null_verdict": null,
+     "numerals": {
+      "abstain": 22,
+      "accuracy": 0.0,
+      "correct": 0,
+      "false_numeral": 0,
+      "relative": true,
+      "wrong": 0
+     },
+     "oov": {
+      "claimed_anyway": 0,
+      "heldout_tokens_with_unseen_stem": 28
+     },
+     "overclaim": {
+      "meaning_claims": 0,
+      "overclaims": 0,
+      "semantic_evidence_available": false
+     },
+     "pos": {
+      "accuracy": 0.7061,
+      "accuracy_when_labelled": 0.768,
+      "labelled": 0.9193
+     },
+     "relatedness": {
+      "chance": 0.0909,
+      "n": 65,
+      "p_at_1": 0.5231
+     },
+     "scoring_version": 2,
+     "segmentation": {
+      "f1": 0.9039,
+      "precision": 0.9961,
+      "recall": 0.8274
+     },
+     "structure": {
+      "adj_noun": "abstain",
+      "affix_position": "correct",
+      "num_noun": "abstain",
+      "numeral_base": "abstain",
+      "so_order": "abstain",
+      "verb_position": "abstain"
+     },
+     "variants": {
+      "f1": 0.8889,
+      "gold_pairs": 55,
+      "precision": 1.0,
+      "recall": 0.8
+     }
+    },
+    "score_sha256": "a35a51ba888277a29fe58e8b718f16f6558a91beea698a948b885b5a3575ac72",
+    "seconds": 0.396046,
+    "seed": 0
+   },
+   "family": "SOT",
+   "input_sha256": "0153c263fd62474b939220d9604512d4557139ad5e9fe82b19cd541d7b424023",
+   "level": "C",
+   "same_prediction": true,
+   "same_scores": true,
+   "seed": 0
+  },
+  {
+   "baseline": {
+    "engine_sha256": "089495ad99f08e30f20f0f18f4ee0d9185041138bf085f97aeeb91e026cf9deb",
+    "family": "SOT",
+    "input_sha256": "935ba80de0a17a4b07f03fe37789c8048702d020744618a937879f757ab9647a",
+    "level": "A",
+    "n_docs": 33,
+    "prediction_sha256": "67e59a4b83ad20f75d6130c2fe161dfcabc9e441797cd2d7734f25e1cd6d3a62",
+    "score": {
+     "affix_inventory": {
+      "f1": 0.8293,
+      "precision": 0.8095,
+      "recall": 0.85
+     },
+     "calibration": [
+      [
+       1.0,
+       1,
+       "structure"
+      ],
+      [
+       0.615,
+       1,
+       "lexicon"
+      ],
+      [
+       0.586,
+       1,
+       "lexicon"
+      ],
+      [
+       0.54,
+       0,
+       "lexicon"
+      ],
+      [
+       0.565,
+       1,
+       "lexicon"
+      ],
+      [
+       0.541,
+       1,
+       "lexicon"
+      ],
+      [
+       0.575,
+       1,
+       "lexicon"
+      ],
+      [
+       0.585,
+       1,
+       "lexicon"
+      ],
+      [
+       0.587,
+       1,
+       "lexicon"
+      ]
+     ],
+     "errors": [
+      {
+       "cause": "地名と地元人名の混同（出土地の偏り）",
+       "confidence": 0.54,
+       "gold": "P09",
+       "predicted": "place@S3",
+       "stem": "gupusib"
+      }
+     ],
+     "gloss_heldout": {
+      "abstain": 0.9179,
+      "correct": 0.0597,
+      "feature_jaccard": 0.1395,
+      "numeral_correct": 0.087,
+      "tokens": 134,
+      "wrong": 0.0224
+     },
+     "gloss_train": {
+      "abstain": 0.925,
+      "correct": 0.0652,
+      "feature_jaccard": 0.0954,
+      "numeral_correct": 0.0859,
+      "tokens": 813,
+      "wrong": 0.0098
+     },
+     "language_id": "SOT-1",
+     "level": "A",
+     "lexicon": {
+      "abstain": 155,
+      "abstain_rate_without_evidence": 0.9841,
+      "claimed": 8,
+      "correct": 7,
+      "coverage": 0.0491,
+      "precision": 0.875,
+      "wrong": 1
+     },
+     "lexicon_inferred": {
+      "abstain": 155,
+      "abstain_rate_without_evidence": 0.9841,
+      "claimed": 8,
+      "correct": 7,
+      "coverage": 0.0491,
+      "given_excluded": 3,
+      "note": "トークン単位の採点では、既知語は最初から lexicon の集計から除外している（lexicon と同じ値）",
+      "precision": 0.875,
+      "wrong": 1
+     },
+     "null_verdict": null,
+     "numerals": {
+      "abstain": 21,
+      "accuracy": 0.0,
+      "correct": 0,
+      "false_numeral": 0,
+      "relative": false,
+      "wrong": 0
+     },
+     "oov": {
+      "claimed_anyway": 0,
+      "heldout_tokens_with_unseen_stem": 31
+     },
+     "overclaim": {
+      "meaning_claims": 11,
+      "overclaims": 0,
+      "semantic_evidence_available": true
+     },
+     "pos": {
+      "accuracy": 0.6784,
+      "accuracy_when_labelled": 0.8207,
+      "labelled": 0.8266
+     },
+     "relatedness": {
+      "chance": 0.0887,
+      "n": 73,
+      "p_at_1": 0.5068
+     },
+     "scoring_version": 2,
+     "segmentation": {
+      "f1": 0.8101,
+      "precision": 0.966,
+      "recall": 0.6975
+     },
+     "structure": {
+      "adj_noun": "abstain",
+      "affix_position": "correct",
+      "num_noun": "abstain",
+      "numeral_base": "abstain",
+      "so_order": "abstain",
+      "verb_position": "abstain"
+     },
+     "variants": {
+      "f1": 0.7886,
+      "gold_pairs": 192,
+      "precision": 1.0,
+      "recall": 0.651
+     }
+    },
+    "score_sha256": "ac94fce4c01baed7643c76868d20e51df04c99bb45686718d6b97695114baf77",
+    "seconds": 0.646019,
+    "seed": 1
+   },
+   "case_id": "SOT-1-A",
+   "current": {
+    "engine_sha256": "089495ad99f08e30f20f0f18f4ee0d9185041138bf085f97aeeb91e026cf9deb",
+    "family": "SOT",
+    "input_sha256": "935ba80de0a17a4b07f03fe37789c8048702d020744618a937879f757ab9647a",
+    "level": "A",
+    "n_docs": 33,
+    "prediction_sha256": "67e59a4b83ad20f75d6130c2fe161dfcabc9e441797cd2d7734f25e1cd6d3a62",
+    "score": {
+     "affix_inventory": {
+      "f1": 0.8293,
+      "precision": 0.8095,
+      "recall": 0.85
+     },
+     "calibration": [
+      [
+       1.0,
+       1,
+       "structure"
+      ],
+      [
+       0.615,
+       1,
+       "lexicon"
+      ],
+      [
+       0.586,
+       1,
+       "lexicon"
+      ],
+      [
+       0.54,
+       0,
+       "lexicon"
+      ],
+      [
+       0.565,
+       1,
+       "lexicon"
+      ],
+      [
+       0.541,
+       1,
+       "lexicon"
+      ],
+      [
+       0.575,
+       1,
+       "lexicon"
+      ],
+      [
+       0.585,
+       1,
+       "lexicon"
+      ],
+      [
+       0.587,
+       1,
+       "lexicon"
+      ]
+     ],
+     "errors": [
+      {
+       "cause": "地名と地元人名の混同（出土地の偏り）",
+       "confidence": 0.54,
+       "gold": "P09",
+       "predicted": "place@S3",
+       "stem": "gupusib"
+      }
+     ],
+     "gloss_heldout": {
+      "abstain": 0.9179,
+      "correct": 0.0597,
+      "feature_jaccard": 0.1395,
+      "numeral_correct": 0.087,
+      "tokens": 134,
+      "wrong": 0.0224
+     },
+     "gloss_train": {
+      "abstain": 0.925,
+      "correct": 0.0652,
+      "feature_jaccard": 0.0954,
+      "numeral_correct": 0.0859,
+      "tokens": 813,
+      "wrong": 0.0098
+     },
+     "language_id": "SOT-1",
+     "level": "A",
+     "lexicon": {
+      "abstain": 155,
+      "abstain_rate_without_evidence": 0.9841,
+      "claimed": 8,
+      "correct": 7,
+      "coverage": 0.0491,
+      "precision": 0.875,
+      "wrong": 1
+     },
+     "lexicon_inferred": {
+      "abstain": 155,
+      "abstain_rate_without_evidence": 0.9841,
+      "claimed": 8,
+      "correct": 7,
+      "coverage": 0.0491,
+      "given_excluded": 3,
+      "note": "トークン単位の採点では、既知語は最初から lexicon の集計から除外している（lexicon と同じ値）",
+      "precision": 0.875,
+      "wrong": 1
+     },
+     "null_verdict": null,
+     "numerals": {
+      "abstain": 21,
+      "accuracy": 0.0,
+      "correct": 0,
+      "false_numeral": 0,
+      "relative": false,
+      "wrong": 0
+     },
+     "oov": {
+      "claimed_anyway": 0,
+      "heldout_tokens_with_unseen_stem": 31
+     },
+     "overclaim": {
+      "meaning_claims": 11,
+      "overclaims": 0,
+      "semantic_evidence_available": true
+     },
+     "pos": {
+      "accuracy": 0.6784,
+      "accuracy_when_labelled": 0.8207,
+      "labelled": 0.8266
+     },
+     "relatedness": {
+      "chance": 0.0887,
+      "n": 73,
+      "p_at_1": 0.5068
+     },
+     "scoring_version": 2,
+     "segmentation": {
+      "f1": 0.8101,
+      "precision": 0.966,
+      "recall": 0.6975
+     },
+     "structure": {
+      "adj_noun": "abstain",
+      "affix_position": "correct",
+      "num_noun": "abstain",
+      "numeral_base": "abstain",
+      "so_order": "abstain",
+      "verb_position": "abstain"
+     },
+     "variants": {
+      "f1": 0.7886,
+      "gold_pairs": 192,
+      "precision": 1.0,
+      "recall": 0.651
+     }
+    },
+    "score_sha256": "ac94fce4c01baed7643c76868d20e51df04c99bb45686718d6b97695114baf77",
+    "seconds": 0.681331,
+    "seed": 1
+   },
+   "family": "SOT",
+   "input_sha256": "935ba80de0a17a4b07f03fe37789c8048702d020744618a937879f757ab9647a",
+   "level": "A",
+   "same_prediction": true,
+   "same_scores": true,
+   "seed": 1
+  },
+  {
+   "baseline": {
+    "engine_sha256": "089495ad99f08e30f20f0f18f4ee0d9185041138bf085f97aeeb91e026cf9deb",
+    "family": "SOT",
+    "input_sha256": "3b18e3ca7c0be4bcfc5fd9a96ed88c216b4492bbb01b1432c867b9515d58034d",
+    "level": "B",
+    "n_docs": 33,
+    "prediction_sha256": "d65748e862d0aef80bdbce0e16ee020cfc2cc2f8178f04483088ce6540ad13fb",
+    "score": {
+     "affix_inventory": {
+      "f1": 0.8293,
+      "precision": 0.8095,
+      "recall": 0.85
+     },
+     "calibration": [
+      [
+       1.0,
+       1,
+       "structure"
+      ],
+      [
+       0.615,
+       1,
+       "lexicon"
+      ],
+      [
+       0.54,
+       0,
+       "lexicon"
+      ],
+      [
+       0.728,
+       1,
+       "lexicon"
+      ]
+     ],
+     "errors": [
+      {
+       "cause": "地名と地元人名の混同（出土地の偏り）",
+       "confidence": 0.54,
+       "gold": "P09",
+       "predicted": "place@S3",
+       "stem": "gupusib"
+      }
+     ],
+     "gloss_heldout": {
+      "abstain": 0.8881,
+      "correct": 0.0896,
+      "feature_jaccard": 0.0,
+      "numeral_correct": 0.0,
+      "tokens": 134,
+      "wrong": 0.0224
+     },
+     "gloss_train": {
+      "abstain": 0.8605,
+      "correct": 0.1302,
+      "feature_jaccard": 0.0,
+      "numeral_correct": 0.0227,
+      "tokens": 860,
+      "wrong": 0.0093
+     },
+     "language_id": "SOT-1",
+     "level": "B",
+     "lexicon": {
+      "abstain": 159,
+      "abstain_rate_without_evidence": 0.9815,
+      "claimed": 3,
+      "correct": 2,
+      "coverage": 0.0185,
+      "precision": 0.6667,
+      "wrong": 1
+     },
+     "lexicon_inferred": {
+      "abstain": 159,
+      "abstain_rate_without_evidence": 0.9815,
+      "claimed": 3,
+      "correct": 2,
+      "coverage": 0.0185,
+      "given_excluded": 4,
+      "note": "トークン単位の採点では、既知語は最初から lexicon の集計から除外している（lexicon と同じ値）",
+      "precision": 0.6667,
+      "wrong": 1
+     },
+     "null_verdict": null,
+     "numerals": {
+      "abstain": 21,
+      "accuracy": 0.0,
+      "correct": 0,
+      "false_numeral": 0,
+      "relative": false,
+      "wrong": 0
+     },
+     "oov": {
+      "claimed_anyway": 0,
+      "heldout_tokens_with_unseen_stem": 31
+     },
+     "overclaim": {
+      "meaning_claims": 7,
+      "overclaims": 0,
+      "semantic_evidence_available": true
+     },
+     "pos": {
+      "accuracy": 0.6794,
+      "accuracy_when_labelled": 0.8414,
+      "labelled": 0.8075
+     },
+     "relatedness": {
+      "chance": 0.0887,
+      "n": 73,
+      "p_at_1": 0.5068
+     },
+     "scoring_version": 2,
+     "segmentation": {
+      "f1": 0.8101,
+      "precision": 0.966,
+      "recall": 0.6975
+     },
+     "structure": {
+      "adj_noun": "abstain",
+      "affix_position": "correct",
+      "num_noun": "abstain",
+      "numeral_base": "abstain",
+      "so_order": "abstain",
+      "verb_position": "abstain"
+     },
+     "variants": {
+      "f1": 0.7886,
+      "gold_pairs": 192,
+      "precision": 1.0,
+      "recall": 0.651
+     }
+    },
+    "score_sha256": "cbe1fe07220604429ccc73f7d4e6b1e6ba2cc941acc39c732a325839ffbd86ea",
+    "seconds": 0.379886,
+    "seed": 1
+   },
+   "case_id": "SOT-1-B",
+   "current": {
+    "engine_sha256": "089495ad99f08e30f20f0f18f4ee0d9185041138bf085f97aeeb91e026cf9deb",
+    "family": "SOT",
+    "input_sha256": "3b18e3ca7c0be4bcfc5fd9a96ed88c216b4492bbb01b1432c867b9515d58034d",
+    "level": "B",
+    "n_docs": 33,
+    "prediction_sha256": "d65748e862d0aef80bdbce0e16ee020cfc2cc2f8178f04483088ce6540ad13fb",
+    "score": {
+     "affix_inventory": {
+      "f1": 0.8293,
+      "precision": 0.8095,
+      "recall": 0.85
+     },
+     "calibration": [
+      [
+       1.0,
+       1,
+       "structure"
+      ],
+      [
+       0.615,
+       1,
+       "lexicon"
+      ],
+      [
+       0.54,
+       0,
+       "lexicon"
+      ],
+      [
+       0.728,
+       1,
+       "lexicon"
+      ]
+     ],
+     "errors": [
+      {
+       "cause": "地名と地元人名の混同（出土地の偏り）",
+       "confidence": 0.54,
+       "gold": "P09",
+       "predicted": "place@S3",
+       "stem": "gupusib"
+      }
+     ],
+     "gloss_heldout": {
+      "abstain": 0.8881,
+      "correct": 0.0896,
+      "feature_jaccard": 0.0,
+      "numeral_correct": 0.0,
+      "tokens": 134,
+      "wrong": 0.0224
+     },
+     "gloss_train": {
+      "abstain": 0.8605,
+      "correct": 0.1302,
+      "feature_jaccard": 0.0,
+      "numeral_correct": 0.0227,
+      "tokens": 860,
+      "wrong": 0.0093
+     },
+     "language_id": "SOT-1",
+     "level": "B",
+     "lexicon": {
+      "abstain": 159,
+      "abstain_rate_without_evidence": 0.9815,
+      "claimed": 3,
+      "correct": 2,
+      "coverage": 0.0185,
+      "precision": 0.6667,
+      "wrong": 1
+     },
+     "lexicon_inferred": {
+      "abstain": 159,
+      "abstain_rate_without_evidence": 0.9815,
+      "claimed": 3,
+      "correct": 2,
+      "coverage": 0.0185,
+      "given_excluded": 4,
+      "note": "トークン単位の採点では、既知語は最初から lexicon の集計から除外している（lexicon と同じ値）",
+      "precision": 0.6667,
+      "wrong": 1
+     },
+     "null_verdict": null,
+     "numerals": {
+      "abstain": 21,
+      "accuracy": 0.0,
+      "correct": 0,
+      "false_numeral": 0,
+      "relative": false,
+      "wrong": 0
+     },
+     "oov": {
+      "claimed_anyway": 0,
+      "heldout_tokens_with_unseen_stem": 31
+     },
+     "overclaim": {
+      "meaning_claims": 7,
+      "overclaims": 0,
+      "semantic_evidence_available": true
+     },
+     "pos": {
+      "accuracy": 0.6794,
+      "accuracy_when_labelled": 0.8414,
+      "labelled": 0.8075
+     },
+     "relatedness": {
+      "chance": 0.0887,
+      "n": 73,
+      "p_at_1": 0.5068
+     },
+     "scoring_version": 2,
+     "segmentation": {
+      "f1": 0.8101,
+      "precision": 0.966,
+      "recall": 0.6975
+     },
+     "structure": {
+      "adj_noun": "abstain",
+      "affix_position": "correct",
+      "num_noun": "abstain",
+      "numeral_base": "abstain",
+      "so_order": "abstain",
+      "verb_position": "abstain"
+     },
+     "variants": {
+      "f1": 0.7886,
+      "gold_pairs": 192,
+      "precision": 1.0,
+      "recall": 0.651
+     }
+    },
+    "score_sha256": "cbe1fe07220604429ccc73f7d4e6b1e6ba2cc941acc39c732a325839ffbd86ea",
+    "seconds": 0.390143,
+    "seed": 1
+   },
+   "family": "SOT",
+   "input_sha256": "3b18e3ca7c0be4bcfc5fd9a96ed88c216b4492bbb01b1432c867b9515d58034d",
+   "level": "B",
+   "same_prediction": true,
+   "same_scores": true,
+   "seed": 1
+  },
+  {
+   "baseline": {
+    "engine_sha256": "089495ad99f08e30f20f0f18f4ee0d9185041138bf085f97aeeb91e026cf9deb",
+    "family": "SOT",
+    "input_sha256": "d20a1e19cbea02971ec9f1aa00cf483f13c5cccaf317bc028221941fc1071bc1",
+    "level": "C",
+    "n_docs": 33,
+    "prediction_sha256": "24ecd25323bf1a7423cdd8825ddd6fc9704ee392bdd061031639ac8c78d6c519",
+    "score": {
+     "affix_inventory": {
+      "f1": 0.8293,
+      "precision": 0.8095,
+      "recall": 0.85
+     },
+     "calibration": [
+      [
+       1.0,
+       1,
+       "structure"
+      ]
+     ],
+     "errors": [],
+     "gloss_heldout": {
+      "abstain": 1.0,
+      "correct": 0.0,
+      "feature_jaccard": 0.0,
+      "numeral_correct": 0.0,
+      "tokens": 134,
+      "wrong": 0.0
+     },
+     "gloss_train": {
+      "abstain": 1.0,
+      "correct": 0.0,
+      "feature_jaccard": 0.0,
+      "numeral_correct": 0.0,
+      "tokens": 860,
+      "wrong": 0.0
+     },
+     "language_id": "SOT-1",
+     "level": "C",
+     "lexicon": {
+      "abstain": 166,
+      "abstain_rate_without_evidence": 1.0,
+      "claimed": 0,
+      "correct": 0,
+      "coverage": 0.0,
+      "precision": null,
+      "wrong": 0
+     },
+     "lexicon_inferred": {
+      "abstain": 166,
+      "abstain_rate_without_evidence": 1.0,
+      "claimed": 0,
+      "correct": 0,
+      "coverage": 0.0,
+      "given_excluded": 0,
+      "note": "トークン単位の採点では、既知語は最初から lexicon の集計から除外している（lexicon と同じ値）",
+      "precision": null,
+      "wrong": 0
+     },
+     "null_verdict": null,
+     "numerals": {
+      "abstain": 21,
+      "accuracy": 0.0,
+      "correct": 0,
+      "false_numeral": 0,
+      "relative": true,
+      "wrong": 0
+     },
+     "oov": {
+      "claimed_anyway": 0,
+      "heldout_tokens_with_unseen_stem": 31
+     },
+     "overclaim": {
+      "meaning_claims": 0,
+      "overclaims": 0,
+      "semantic_evidence_available": false
+     },
+     "pos": {
+      "accuracy": 0.6764,
+      "accuracy_when_labelled": 0.8409,
+      "labelled": 0.8044
+     },
+     "relatedness": {
+      "chance": 0.0887,
+      "n": 73,
+      "p_at_1": 0.5068
+     },
+     "scoring_version": 2,
+     "segmentation": {
+      "f1": 0.8101,
+      "precision": 0.966,
+      "recall": 0.6975
+     },
+     "structure": {
+      "adj_noun": "abstain",
+      "affix_position": "correct",
+      "num_noun": "abstain",
+      "numeral_base": "abstain",
+      "so_order": "abstain",
+      "verb_position": "abstain"
+     },
+     "variants": {
+      "f1": 0.7886,
+      "gold_pairs": 192,
+      "precision": 1.0,
+      "recall": 0.651
+     }
+    },
+    "score_sha256": "83a83d88357748f16a2720eb4491b8fa31e7bc7ab70bb35e25e85c259bd4f935",
+    "seconds": 0.360813,
+    "seed": 1
+   },
+   "case_id": "SOT-1-C",
+   "current": {
+    "engine_sha256": "089495ad99f08e30f20f0f18f4ee0d9185041138bf085f97aeeb91e026cf9deb",
+    "family": "SOT",
+    "input_sha256": "d20a1e19cbea02971ec9f1aa00cf483f13c5cccaf317bc028221941fc1071bc1",
+    "level": "C",
+    "n_docs": 33,
+    "prediction_sha256": "24ecd25323bf1a7423cdd8825ddd6fc9704ee392bdd061031639ac8c78d6c519",
+    "score": {
+     "affix_inventory": {
+      "f1": 0.8293,
+      "precision": 0.8095,
+      "recall": 0.85
+     },
+     "calibration": [
+      [
+       1.0,
+       1,
+       "structure"
+      ]
+     ],
+     "errors": [],
+     "gloss_heldout": {
+      "abstain": 1.0,
+      "correct": 0.0,
+      "feature_jaccard": 0.0,
+      "numeral_correct": 0.0,
+      "tokens": 134,
+      "wrong": 0.0
+     },
+     "gloss_train": {
+      "abstain": 1.0,
+      "correct": 0.0,
+      "feature_jaccard": 0.0,
+      "numeral_correct": 0.0,
+      "tokens": 860,
+      "wrong": 0.0
+     },
+     "language_id": "SOT-1",
+     "level": "C",
+     "lexicon": {
+      "abstain": 166,
+      "abstain_rate_without_evidence": 1.0,
+      "claimed": 0,
+      "correct": 0,
+      "coverage": 0.0,
+      "precision": null,
+      "wrong": 0
+     },
+     "lexicon_inferred": {
+      "abstain": 166,
+      "abstain_rate_without_evidence": 1.0,
+      "claimed": 0,
+      "correct": 0,
+      "coverage": 0.0,
+      "given_excluded": 0,
+      "note": "トークン単位の採点では、既知語は最初から lexicon の集計から除外している（lexicon と同じ値）",
+      "precision": null,
+      "wrong": 0
+     },
+     "null_verdict": null,
+     "numerals": {
+      "abstain": 21,
+      "accuracy": 0.0,
+      "correct": 0,
+      "false_numeral": 0,
+      "relative": true,
+      "wrong": 0
+     },
+     "oov": {
+      "claimed_anyway": 0,
+      "heldout_tokens_with_unseen_stem": 31
+     },
+     "overclaim": {
+      "meaning_claims": 0,
+      "overclaims": 0,
+      "semantic_evidence_available": false
+     },
+     "pos": {
+      "accuracy": 0.6764,
+      "accuracy_when_labelled": 0.8409,
+      "labelled": 0.8044
+     },
+     "relatedness": {
+      "chance": 0.0887,
+      "n": 73,
+      "p_at_1": 0.5068
+     },
+     "scoring_version": 2,
+     "segmentation": {
+      "f1": 0.8101,
+      "precision": 0.966,
+      "recall": 0.6975
+     },
+     "structure": {
+      "adj_noun": "abstain",
+      "affix_position": "correct",
+      "num_noun": "abstain",
+      "numeral_base": "abstain",
+      "so_order": "abstain",
+      "verb_position": "abstain"
+     },
+     "variants": {
+      "f1": 0.7886,
+      "gold_pairs": 192,
+      "precision": 1.0,
+      "recall": 0.651
+     }
+    },
+    "score_sha256": "83a83d88357748f16a2720eb4491b8fa31e7bc7ab70bb35e25e85c259bd4f935",
+    "seconds": 0.435666,
+    "seed": 1
+   },
+   "family": "SOT",
+   "input_sha256": "d20a1e19cbea02971ec9f1aa00cf483f13c5cccaf317bc028221941fc1071bc1",
+   "level": "C",
+   "same_prediction": true,
+   "same_scores": true,
+   "seed": 1
+  },
+  {
+   "baseline": {
+    "engine_sha256": "089495ad99f08e30f20f0f18f4ee0d9185041138bf085f97aeeb91e026cf9deb",
+    "family": "SOT",
+    "input_sha256": "e6b59beade89f65e3b1b2b75758b34ccfcf1aa9efbf1cd5a513e8fa3af73f26f",
+    "level": "A",
+    "n_docs": 33,
+    "prediction_sha256": "7208cd671803430597e0fe35cc0ce5a36bbdea3e74f1d125ecab3798e049fd24",
+    "score": {
+     "affix_inventory": {
+      "f1": 0.9362,
+      "precision": 0.9565,
+      "recall": 0.9167
+     },
+     "calibration": [
+      [
+       1.0,
+       1,
+       "structure"
+      ],
+      [
+       0.588,
+       1,
+       "lexicon"
+      ],
+      [
+       0.586,
+       1,
+       "lexicon"
+      ],
+      [
+       0.514,
+       1,
+       "lexicon"
+      ],
+      [
+       0.588,
+       1,
+       "lexicon"
+      ],
+      [
+       0.588,
+       1,
+       "lexicon"
+      ],
+      [
+       0.588,
+       1,
+       "lexicon"
+      ],
+      [
+       0.8,
+       0,
+       "lexicon"
+      ]
+     ],
+     "errors": [
+      {
+       "cause": "地名と地元人名の混同（出土地の偏り）",
+       "confidence": 0.8,
+       "gold": "P06",
+       "predicted": "place@S2",
+       "stem": "suvil"
+      }
+     ],
+     "gloss_heldout": {
+      "abstain": 0.8994,
+      "correct": 0.0943,
+      "feature_jaccard": 0.0449,
+      "numeral_correct": 0.1081,
+      "tokens": 159,
+      "wrong": 0.0063
+     },
+     "gloss_train": {
+      "abstain": 0.8774,
+      "correct": 0.1135,
+      "feature_jaccard": 0.051,
+      "numeral_correct": 0.1085,
+      "tokens": 775,
+      "wrong": 0.009
+     },
+     "language_id": "SOT-2",
+     "level": "A",
+     "lexicon": {
+      "abstain": 151,
+      "abstain_rate_without_evidence": 0.9921,
+      "claimed": 7,
+      "correct": 6,
+      "coverage": 0.0443,
+      "precision": 0.8571,
+      "wrong": 1
+     },
+     "lexicon_inferred": {
+      "abstain": 151,
+      "abstain_rate_without_evidence": 0.9921,
+      "claimed": 7,
+      "correct": 6,
+      "coverage": 0.0443,
+      "given_excluded": 4,
+      "note": "トークン単位の採点では、既知語は最初から lexicon の集計から除外している（lexicon と同じ値）",
+      "precision": 0.8571,
+      "wrong": 1
+     },
+     "null_verdict": null,
+     "numerals": {
+      "abstain": 23,
+      "accuracy": 0.0,
+      "correct": 0,
+      "false_numeral": 0,
+      "relative": false,
+      "wrong": 0
+     },
+     "oov": {
+      "claimed_anyway": 0,
+      "heldout_tokens_with_unseen_stem": 15
+     },
+     "overclaim": {
+      "meaning_claims": 11,
+      "overclaims": 0,
+      "semantic_evidence_available": true
+     },
+     "pos": {
+      "accuracy": 0.7553,
+      "accuracy_when_labelled": 0.8807,
+      "labelled": 0.8576
+     },
+     "relatedness": {
+      "chance": 0.0969,
+      "n": 70,
+      "p_at_1": 0.5286
+     },
+     "scoring_version": 2,
+     "segmentation": {
+      "f1": 0.9424,
+      "precision": 1.0,
+      "recall": 0.891
+     },
+     "structure": {
+      "adj_noun": "abstain",
+      "affix_position": "correct",
+      "num_noun": "abstain",
+      "numeral_base": "abstain",
+      "so_order": "abstain",
+      "verb_position": "abstain"
+     },
+     "variants": {
+      "f1": 0.5227,
+      "gold_pairs": 65,
+      "precision": 1.0,
+      "recall": 0.3538
+     }
+    },
+    "score_sha256": "a343d0d61a35ab593ca294f241dab5c6630e7a074ea5a65664f7c004e88af928",
+    "seconds": 0.585187,
+    "seed": 2
+   },
+   "case_id": "SOT-2-A",
+   "current": {
+    "engine_sha256": "089495ad99f08e30f20f0f18f4ee0d9185041138bf085f97aeeb91e026cf9deb",
+    "family": "SOT",
+    "input_sha256": "e6b59beade89f65e3b1b2b75758b34ccfcf1aa9efbf1cd5a513e8fa3af73f26f",
+    "level": "A",
+    "n_docs": 33,
+    "prediction_sha256": "7208cd671803430597e0fe35cc0ce5a36bbdea3e74f1d125ecab3798e049fd24",
+    "score": {
+     "affix_inventory": {
+      "f1": 0.9362,
+      "precision": 0.9565,
+      "recall": 0.9167
+     },
+     "calibration": [
+      [
+       1.0,
+       1,
+       "structure"
+      ],
+      [
+       0.588,
+       1,
+       "lexicon"
+      ],
+      [
+       0.586,
+       1,
+       "lexicon"
+      ],
+      [
+       0.514,
+       1,
+       "lexicon"
+      ],
+      [
+       0.588,
+       1,
+       "lexicon"
+      ],
+      [
+       0.588,
+       1,
+       "lexicon"
+      ],
+      [
+       0.588,
+       1,
+       "lexicon"
+      ],
+      [
+       0.8,
+       0,
+       "lexicon"
+      ]
+     ],
+     "errors": [
+      {
+       "cause": "地名と地元人名の混同（出土地の偏り）",
+       "confidence": 0.8,
+       "gold": "P06",
+       "predicted": "place@S2",
+       "stem": "suvil"
+      }
+     ],
+     "gloss_heldout": {
+      "abstain": 0.8994,
+      "correct": 0.0943,
+      "feature_jaccard": 0.0449,
+      "numeral_correct": 0.1081,
+      "tokens": 159,
+      "wrong": 0.0063
+     },
+     "gloss_train": {
+      "abstain": 0.8774,
+      "correct": 0.1135,
+      "feature_jaccard": 0.051,
+      "numeral_correct": 0.1085,
+      "tokens": 775,
+      "wrong": 0.009
+     },
+     "language_id": "SOT-2",
+     "level": "A",
+     "lexicon": {
+      "abstain": 151,
+      "abstain_rate_without_evidence": 0.9921,
+      "claimed": 7,
+      "correct": 6,
+      "coverage": 0.0443,
+      "precision": 0.8571,
+      "wrong": 1
+     },
+     "lexicon_inferred": {
+      "abstain": 151,
+      "abstain_rate_without_evidence": 0.9921,
+      "claimed": 7,
+      "correct": 6,
+      "coverage": 0.0443,
+      "given_excluded": 4,
+      "note": "トークン単位の採点では、既知語は最初から lexicon の集計から除外している（lexicon と同じ値）",
+      "precision": 0.8571,
+      "wrong": 1
+     },
+     "null_verdict": null,
+     "numerals": {
+      "abstain": 23,
+      "accuracy": 0.0,
+      "correct": 0,
+      "false_numeral": 0,
+      "relative": false,
+      "wrong": 0
+     },
+     "oov": {
+      "claimed_anyway": 0,
+      "heldout_tokens_with_unseen_stem": 15
+     },
+     "overclaim": {
+      "meaning_claims": 11,
+      "overclaims": 0,
+      "semantic_evidence_available": true
+     },
+     "pos": {
+      "accuracy": 0.7553,
+      "accuracy_when_labelled": 0.8807,
+      "labelled": 0.8576
+     },
+     "relatedness": {
+      "chance": 0.0969,
+      "n": 70,
+      "p_at_1": 0.5286
+     },
+     "scoring_version": 2,
+     "segmentation": {
+      "f1": 0.9424,
+      "precision": 1.0,
+      "recall": 0.891
+     },
+     "structure": {
+      "adj_noun": "abstain",
+      "affix_position": "correct",
+      "num_noun": "abstain",
+      "numeral_base": "abstain",
+      "so_order": "abstain",
+      "verb_position": "abstain"
+     },
+     "variants": {
+      "f1": 0.5227,
+      "gold_pairs": 65,
+      "precision": 1.0,
+      "recall": 0.3538
+     }
+    },
+    "score_sha256": "a343d0d61a35ab593ca294f241dab5c6630e7a074ea5a65664f7c004e88af928",
+    "seconds": 1.194971,
+    "seed": 2
+   },
+   "family": "SOT",
+   "input_sha256": "e6b59beade89f65e3b1b2b75758b34ccfcf1aa9efbf1cd5a513e8fa3af73f26f",
+   "level": "A",
+   "same_prediction": true,
+   "same_scores": true,
+   "seed": 2
+  },
+  {
+   "baseline": {
+    "engine_sha256": "089495ad99f08e30f20f0f18f4ee0d9185041138bf085f97aeeb91e026cf9deb",
+    "family": "SOT",
+    "input_sha256": "59f0db8c461b73922f5807a197b9d45b62ab96fc69ee79aab88068fba680fc7c",
+    "level": "B",
+    "n_docs": 33,
+    "prediction_sha256": "3f41d30904fb193c13cbb2abe73feacab02a0230044000190b3781fb6d04f304",
+    "score": {
+     "affix_inventory": {
+      "f1": 0.9362,
+      "precision": 0.9565,
+      "recall": 0.9167
+     },
+     "calibration": [
+      [
+       1.0,
+       1,
+       "structure"
+      ],
+      [
+       0.698,
+       1,
+       "lexicon"
+      ]
+     ],
+     "errors": [],
+     "gloss_heldout": {
+      "abstain": 0.8616,
+      "correct": 0.1384,
+      "feature_jaccard": 0.0,
+      "numeral_correct": 0.1081,
+      "tokens": 159,
+      "wrong": 0.0
+     },
+     "gloss_train": {
+      "abstain": 0.836,
+      "correct": 0.164,
+      "feature_jaccard": 0.0,
+      "numeral_correct": 0.0458,
+      "tokens": 817,
+      "wrong": 0.0
+     },
+     "language_id": "SOT-2",
+     "level": "B",
+     "lexicon": {
+      "abstain": 156,
+      "abstain_rate_without_evidence": 0.9936,
+      "claimed": 1,
+      "correct": 1,
+      "coverage": 0.0064,
+      "precision": 1.0,
+      "wrong": 0
+     },
+     "lexicon_inferred": {
+      "abstain": 156,
+      "abstain_rate_without_evidence": 0.9936,
+      "claimed": 1,
+      "correct": 1,
+      "coverage": 0.0064,
+      "given_excluded": 5,
+      "note": "トークン単位の採点では、既知語は最初から lexicon の集計から除外している（lexicon と同じ値）",
+      "precision": 1.0,
+      "wrong": 0
+     },
+     "null_verdict": null,
+     "numerals": {
+      "abstain": 23,
+      "accuracy": 0.0,
+      "correct": 0,
+      "false_numeral": 0,
+      "relative": false,
+      "wrong": 0
+     },
+     "oov": {
+      "claimed_anyway": 0,
+      "heldout_tokens_with_unseen_stem": 15
+     },
+     "overclaim": {
+      "meaning_claims": 6,
+      "overclaims": 0,
+      "semantic_evidence_available": true
+     },
+     "pos": {
+      "accuracy": 0.7859,
+      "accuracy_when_labelled": 0.9164,
+      "labelled": 0.8576
+     },
+     "relatedness": {
+      "chance": 0.0969,
+      "n": 70,
+      "p_at_1": 0.5286
+     },
+     "scoring_version": 2,
+     "segmentation": {
+      "f1": 0.9424,
+      "precision": 1.0,
+      "recall": 0.891
+     },
+     "structure": {
+      "adj_noun": "abstain",
+      "affix_position": "correct",
+      "num_noun": "abstain",
+      "numeral_base": "abstain",
+      "so_order": "abstain",
+      "verb_position": "abstain"
+     },
+     "variants": {
+      "f1": 0.5227,
+      "gold_pairs": 65,
+      "precision": 1.0,
+      "recall": 0.3538
+     }
+    },
+    "score_sha256": "9a1b44aad8a5441ff61940dfdc63f7d481238efe716c79f338a6bf0232bd01e2",
+    "seconds": 0.602951,
+    "seed": 2
+   },
+   "case_id": "SOT-2-B",
+   "current": {
+    "engine_sha256": "089495ad99f08e30f20f0f18f4ee0d9185041138bf085f97aeeb91e026cf9deb",
+    "family": "SOT",
+    "input_sha256": "59f0db8c461b73922f5807a197b9d45b62ab96fc69ee79aab88068fba680fc7c",
+    "level": "B",
+    "n_docs": 33,
+    "prediction_sha256": "3f41d30904fb193c13cbb2abe73feacab02a0230044000190b3781fb6d04f304",
+    "score": {
+     "affix_inventory": {
+      "f1": 0.9362,
+      "precision": 0.9565,
+      "recall": 0.9167
+     },
+     "calibration": [
+      [
+       1.0,
+       1,
+       "structure"
+      ],
+      [
+       0.698,
+       1,
+       "lexicon"
+      ]
+     ],
+     "errors": [],
+     "gloss_heldout": {
+      "abstain": 0.8616,
+      "correct": 0.1384,
+      "feature_jaccard": 0.0,
+      "numeral_correct": 0.1081,
+      "tokens": 159,
+      "wrong": 0.0
+     },
+     "gloss_train": {
+      "abstain": 0.836,
+      "correct": 0.164,
+      "feature_jaccard": 0.0,
+      "numeral_correct": 0.0458,
+      "tokens": 817,
+      "wrong": 0.0
+     },
+     "language_id": "SOT-2",
+     "level": "B",
+     "lexicon": {
+      "abstain": 156,
+      "abstain_rate_without_evidence": 0.9936,
+      "claimed": 1,
+      "correct": 1,
+      "coverage": 0.0064,
+      "precision": 1.0,
+      "wrong": 0
+     },
+     "lexicon_inferred": {
+      "abstain": 156,
+      "abstain_rate_without_evidence": 0.9936,
+      "claimed": 1,
+      "correct": 1,
+      "coverage": 0.0064,
+      "given_excluded": 5,
+      "note": "トークン単位の採点では、既知語は最初から lexicon の集計から除外している（lexicon と同じ値）",
+      "precision": 1.0,
+      "wrong": 0
+     },
+     "null_verdict": null,
+     "numerals": {
+      "abstain": 23,
+      "accuracy": 0.0,
+      "correct": 0,
+      "false_numeral": 0,
+      "relative": false,
+      "wrong": 0
+     },
+     "oov": {
+      "claimed_anyway": 0,
+      "heldout_tokens_with_unseen_stem": 15
+     },
+     "overclaim": {
+      "meaning_claims": 6,
+      "overclaims": 0,
+      "semantic_evidence_available": true
+     },
+     "pos": {
+      "accuracy": 0.7859,
+      "accuracy_when_labelled": 0.9164,
+      "labelled": 0.8576
+     },
+     "relatedness": {
+      "chance": 0.0969,
+      "n": 70,
+      "p_at_1": 0.5286
+     },
+     "scoring_version": 2,
+     "segmentation": {
+      "f1": 0.9424,
+      "precision": 1.0,
+      "recall": 0.891
+     },
+     "structure": {
+      "adj_noun": "abstain",
+      "affix_position": "correct",
+      "num_noun": "abstain",
+      "numeral_base": "abstain",
+      "so_order": "abstain",
+      "verb_position": "abstain"
+     },
+     "variants": {
+      "f1": 0.5227,
+      "gold_pairs": 65,
+      "precision": 1.0,
+      "recall": 0.3538
+     }
+    },
+    "score_sha256": "9a1b44aad8a5441ff61940dfdc63f7d481238efe716c79f338a6bf0232bd01e2",
+    "seconds": 0.663047,
+    "seed": 2
+   },
+   "family": "SOT",
+   "input_sha256": "59f0db8c461b73922f5807a197b9d45b62ab96fc69ee79aab88068fba680fc7c",
+   "level": "B",
+   "same_prediction": true,
+   "same_scores": true,
+   "seed": 2
+  },
+  {
+   "baseline": {
+    "engine_sha256": "089495ad99f08e30f20f0f18f4ee0d9185041138bf085f97aeeb91e026cf9deb",
+    "family": "SOT",
+    "input_sha256": "caf9536bcc0561176114236e646d170f29c6be4a73365763d77f369f14a98b0a",
+    "level": "C",
+    "n_docs": 33,
+    "prediction_sha256": "923a6d5bd551f6779f376b5b18941f27c23ddbf4be76a40bbbe82ac29009c7ed",
+    "score": {
+     "affix_inventory": {
+      "f1": 0.9362,
+      "precision": 0.9565,
+      "recall": 0.9167
+     },
+     "calibration": [
+      [
+       1.0,
+       1,
+       "structure"
+      ]
+     ],
+     "errors": [],
+     "gloss_heldout": {
+      "abstain": 1.0,
+      "correct": 0.0,
+      "feature_jaccard": 0.0,
+      "numeral_correct": 0.0,
+      "tokens": 159,
+      "wrong": 0.0
+     },
+     "gloss_train": {
+      "abstain": 1.0,
+      "correct": 0.0,
+      "feature_jaccard": 0.0,
+      "numeral_correct": 0.0,
+      "tokens": 817,
+      "wrong": 0.0
+     },
+     "language_id": "SOT-2",
+     "level": "C",
+     "lexicon": {
+      "abstain": 162,
+      "abstain_rate_without_evidence": 1.0,
+      "claimed": 0,
+      "correct": 0,
+      "coverage": 0.0,
+      "precision": null,
+      "wrong": 0
+     },
+     "lexicon_inferred": {
+      "abstain": 162,
+      "abstain_rate_without_evidence": 1.0,
+      "claimed": 0,
+      "correct": 0,
+      "coverage": 0.0,
+      "given_excluded": 0,
+      "note": "トークン単位の採点では、既知語は最初から lexicon の集計から除外している（lexicon と同じ値）",
+      "precision": null,
+      "wrong": 0
+     },
+     "null_verdict": null,
+     "numerals": {
+      "abstain": 23,
+      "accuracy": 0.0,
+      "correct": 0,
+      "false_numeral": 0,
+      "relative": true,
+      "wrong": 0
+     },
+     "oov": {
+      "claimed_anyway": 0,
+      "heldout_tokens_with_unseen_stem": 15
+     },
+     "overclaim": {
+      "meaning_claims": 0,
+      "overclaims": 0,
+      "semantic_evidence_available": false
+     },
+     "pos": {
+      "accuracy": 0.7795,
+      "accuracy_when_labelled": 0.9157,
+      "labelled": 0.8513
+     },
+     "relatedness": {
+      "chance": 0.0969,
+      "n": 70,
+      "p_at_1": 0.5286
+     },
+     "scoring_version": 2,
+     "segmentation": {
+      "f1": 0.9424,
+      "precision": 1.0,
+      "recall": 0.891
+     },
+     "structure": {
+      "adj_noun": "abstain",
+      "affix_position": "correct",
+      "num_noun": "abstain",
+      "numeral_base": "abstain",
+      "so_order": "abstain",
+      "verb_position": "abstain"
+     },
+     "variants": {
+      "f1": 0.5227,
+      "gold_pairs": 65,
+      "precision": 1.0,
+      "recall": 0.3538
+     }
+    },
+    "score_sha256": "67d9b7e217de2835e34e103553fc51ce6a36e3e10a7be970e1879a374bc89b3a",
+    "seconds": 0.59117,
+    "seed": 2
+   },
+   "case_id": "SOT-2-C",
+   "current": {
+    "engine_sha256": "089495ad99f08e30f20f0f18f4ee0d9185041138bf085f97aeeb91e026cf9deb",
+    "family": "SOT",
+    "input_sha256": "caf9536bcc0561176114236e646d170f29c6be4a73365763d77f369f14a98b0a",
+    "level": "C",
+    "n_docs": 33,
+    "prediction_sha256": "923a6d5bd551f6779f376b5b18941f27c23ddbf4be76a40bbbe82ac29009c7ed",
+    "score": {
+     "affix_inventory": {
+      "f1": 0.9362,
+      "precision": 0.9565,
+      "recall": 0.9167
+     },
+     "calibration": [
+      [
+       1.0,
+       1,
+       "structure"
+      ]
+     ],
+     "errors": [],
+     "gloss_heldout": {
+      "abstain": 1.0,
+      "correct": 0.0,
+      "feature_jaccard": 0.0,
+      "numeral_correct": 0.0,
+      "tokens": 159,
+      "wrong": 0.0
+     },
+     "gloss_train": {
+      "abstain": 1.0,
+      "correct": 0.0,
+      "feature_jaccard": 0.0,
+      "numeral_correct": 0.0,
+      "tokens": 817,
+      "wrong": 0.0
+     },
+     "language_id": "SOT-2",
+     "level": "C",
+     "lexicon": {
+      "abstain": 162,
+      "abstain_rate_without_evidence": 1.0,
+      "claimed": 0,
+      "correct": 0,
+      "coverage": 0.0,
+      "precision": null,
+      "wrong": 0
+     },
+     "lexicon_inferred": {
+      "abstain": 162,
+      "abstain_rate_without_evidence": 1.0,
+      "claimed": 0,
+      "correct": 0,
+      "coverage": 0.0,
+      "given_excluded": 0,
+      "note": "トークン単位の採点では、既知語は最初から lexicon の集計から除外している（lexicon と同じ値）",
+      "precision": null,
+      "wrong": 0
+     },
+     "null_verdict": null,
+     "numerals": {
+      "abstain": 23,
+      "accuracy": 0.0,
+      "correct": 0,
+      "false_numeral": 0,
+      "relative": true,
+      "wrong": 0
+     },
+     "oov": {
+      "claimed_anyway": 0,
+      "heldout_tokens_with_unseen_stem": 15
+     },
+     "overclaim": {
+      "meaning_claims": 0,
+      "overclaims": 0,
+      "semantic_evidence_available": false
+     },
+     "pos": {
+      "accuracy": 0.7795,
+      "accuracy_when_labelled": 0.9157,
+      "labelled": 0.8513
+     },
+     "relatedness": {
+      "chance": 0.0969,
+      "n": 70,
+      "p_at_1": 0.5286
+     },
+     "scoring_version": 2,
+     "segmentation": {
+      "f1": 0.9424,
+      "precision": 1.0,
+      "recall": 0.891
+     },
+     "structure": {
+      "adj_noun": "abstain",
+      "affix_position": "correct",
+      "num_noun": "abstain",
+      "numeral_base": "abstain",
+      "so_order": "abstain",
+      "verb_position": "abstain"
+     },
+     "variants": {
+      "f1": 0.5227,
+      "gold_pairs": 65,
+      "precision": 1.0,
+      "recall": 0.3538
+     }
+    },
+    "score_sha256": "67d9b7e217de2835e34e103553fc51ce6a36e3e10a7be970e1879a374bc89b3a",
+    "seconds": 0.39749,
+    "seed": 2
+   },
+   "family": "SOT",
+   "input_sha256": "caf9536bcc0561176114236e646d170f29c6be4a73365763d77f369f14a98b0a",
+   "level": "C",
+   "same_prediction": true,
+   "same_scores": true,
+   "seed": 2
+  }
+ ],
+ "seconds": 16.683856,
+ "study": "standard-decoder-regression"
+}

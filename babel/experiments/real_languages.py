@@ -15,7 +15,8 @@ import urllib.request
 from collections import Counter
 from pathlib import Path
 
-from babel.decipher.engine import VERSION, decipher
+from babel.decipher.engine import DEFAULT_CONFIG, VERSION, decipher
+from babel.experiments.versions import VARIANTS as ALL_VERSIONS
 
 UD_TAG = "r2.15"
 TREEBANKS = [
@@ -35,7 +36,6 @@ TREEBANKS_HELDOUT = [   # docs/PREREG_v1.5_VERB_EVIDENCE.md の評価用の言�
     ("UD_Hindi-HDTB", "hi_hdtb"), ("UD_Estonian-EDT", "et_edt"), ("UD_Arabic-PADT", "ar_padt"),
     ("UD_Latvian-LVTB", "lv_lvtb"),
 ]
-ALL_VERSIONS = {"v1.2": {"null_gates": False, "v15_gates": False}, "v1.4": {"v15_gates": False}, "v1.5": {}}
 VERSIONS = {k: ALL_VERSIONS[k] for k in ("v1.4", "v1.2")}      # 最初の 10 言語（PREREG_REAL_LANGUAGES）。v1.4.0 以前の版に固定
 
 
@@ -243,6 +243,7 @@ def main(out="results/real_languages/real-languages.json", treebanks=None, versi
             excluded.append({"treebank": repo, "error": f"{type(e).__name__}: {e}"})
             print(repo, "excluded", e, flush=True)
     res = {"engine_version": VERSION, "ud_tag": UD_TAG, "preregistration": prereg,
+           "configs": {name: dict(DEFAULT_CONFIG, **cfg) for name, cfg in (versions or VERSIONS).items()},
            "summary": summarize(rows, versions), "excluded": excluded, "rows": rows}
     Path(out).parent.mkdir(parents=True, exist_ok=True)
     Path(out).write_text(json.dumps(res, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")

@@ -306,8 +306,10 @@ def report_markdown(results, card, ext_scores, limits, legacy_scores=()):
     L += _parallel_lines()
     L += ["## 9. 採点（100点満点、算出式は事前登録）", "", "| 項目 | 得点 | 配点 | 状態 |", "|---|---|---|---|"]
     L += [f"| {i['name']} | {'未評価' if i['points'] is None else i['points']} | {i['max']} | {i['status']} |" for i in card["items"]]
+    ext_points = card["external_points"]
+    ext_status = "未評価" if ext_points is None else f"{ext_points:.2f} / 10 点（台帳の初回予測時の版）"
     L += ["", f"**内部テスト: {card['internal_points']} / {card['evaluated_max']} 点**（未評価の配点 {card['unevaluated_max']} 点を除く）。"
-          "独立初見テストの点数は別枠で、現時点では未評価。", ""]
+          f"独立初見テストは {ext_status}。", ""]
     for i in card["items"]:
         L += [f"### {i['name']}", ""] + [f"- {d}" for d in ([i["detail"]] if isinstance(i["detail"], str) else i["detail"])] + [""]
     L += ["## 10. 研究上の限界", ""] + [f"- {x}" for x in limits] + [""]

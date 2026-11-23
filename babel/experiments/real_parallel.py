@@ -14,8 +14,9 @@ import urllib.request
 from collections import Counter
 from pathlib import Path
 
-from babel.decipher.engine import VERSION, decipher
+from babel.decipher.engine import DEFAULT_CONFIG, VERSION, decipher
 from babel.experiments import real_languages as rl
+from babel.experiments.versions import VARIANTS
 
 SOURCE = ("UD_English-PUD", "en_pud")
 TARGETS = [("UD_Arabic-PUD", "ar_pud"), ("UD_Czech-PUD", "cs_pud"), ("UD_German-PUD", "de_pud"),
@@ -31,7 +32,7 @@ TARGETS16 = [("UD_Hindi-PUD", "hi_pud"), ("UD_Thai-PUD", "th_pud"), ("UD_Japanes
              ("UD_Korean-PUD", "ko_pud"), ("UD_Chinese-PUD", "zh_pud")]
 SETTINGS = [("10%", 0.1, False), ("25%", 0.25, False), ("100%", 1.0, False), ("100%-mismatch", 1.0, True)]
 SETTINGS16 = [("100%", 1.0, False), ("100%-mismatch", 1.0, True)]
-VERSIONS16 = {"v1.5": {"v16_gates": False}, "v1.6": {}}
+VERSIONS16 = {name: VARIANTS[name] for name in ("v1.5", "v1.6")}
 CACHE = Path(".cache/ud")
 
 
@@ -224,12 +225,13 @@ def main(out="results/real_parallel/real-parallel.json"):
     rows, excluded = [], []
     for repo, code in TARGETS:
         try:
-            rows.append(run_language(repo, code, en_tr, {"v16_gates": False}))    # PREREG_REAL_PARALLEL は v1.5.0 で実行した
+            rows.append(run_language(repo, code, en_tr, VARIANTS["v1.5"]))    # PREREG_REAL_PARALLEL は v1.5.0 で実行した
             print(code, "ok", flush=True)
         except Exception as e:                     # 取得できない・文字の種類が多い言語は除外して記録する（置き換えない）
             excluded.append({"treebank": repo, "error": f"{type(e).__name__}: {e}"})
             print(code, "excluded", e, flush=True)
     res = {"engine_version": VERSION, "ud_tag": rl.UD_TAG, "preregistration": "docs/PREREG_REAL_PARALLEL.md",
+           "configs": {"v1.5": dict(DEFAULT_CONFIG, **VARIANTS["v1.5"])},
            "source": {"treebank": SOURCE[0], "sha256": src_sha, "sentences": len(en), "translations": len(en_tr)},
            "summary": summarize(rows), "excluded": excluded, "rows": rows}
     Path(out).parent.mkdir(parents=True, exist_ok=True)
@@ -237,7 +239,7 @@ def main(out="results/real_parallel/real-parallel.json"):
     print(json.dumps(res["summary"], ensure_ascii=False, indent=1))
 
 
-VERSIONS17 = {"v1.6": {"v17_gates": False}, "v1.7": {"v18_gates": False}}
+VERSIONS17 = {name: VARIANTS[name] for name in ("v1.6", "v1.7")}
 
 
 def run_language17(repo, code, en_tr, allow_extended=False, versions=None):
@@ -280,6 +282,7 @@ def main17(codes, out, allow_extended=False, versions=None, prereg="docs/PREREG_
     summary = {f"{name}:{label}:{key}": dict(Counter(r["versions"][name][label][key]["judge"] for r in rows))
                for name in (versions or VERSIONS17) for label, _, _ in SETTINGS16 for key in ("verb_position", "so_order")}
     res = {"engine_version": VERSION, "ud_tag": rl.UD_TAG, "preregistration": prereg,
+           "configs": {name: dict(DEFAULT_CONFIG, **cfg) for name, cfg in (versions or VERSIONS17).items()},
            "source": {"treebank": SOURCE[0], "sha256": src_sha, "translations": len(en_tr)},
            "summary": summary, "excluded": excluded, "rows": rows}
     Path(out).parent.mkdir(parents=True, exist_ok=True)
@@ -309,6 +312,7 @@ def main16(out="results/real_parallel/real-parallel-v16.json"):
     summary = {f"{name}:{label}:{key}": dict(Counter(r["versions"][name][label][key]["judge"] for r in rows))
                for name in VERSIONS16 for label, _, _ in SETTINGS16 for key in ("verb_position", "so_order")}
     res = {"engine_version": VERSION, "ud_tag": rl.UD_TAG, "preregistration": "docs/PREREG_v1.6_ALIGNMENT_NULL.md",
+           "configs": {name: dict(DEFAULT_CONFIG, **cfg) for name, cfg in VERSIONS16.items()},
            "source": {"treebank": SOURCE[0], "sha256": src_sha, "translations": len(en_tr)},
            "summary": summary, "excluded": excluded, "rows": rows}
     Path(out).parent.mkdir(parents=True, exist_ok=True)
@@ -324,7 +328,7 @@ if __name__ == "__main__":
                "results/real_parallel/real-parallel-v17-dev.json")
     elif sys.argv[1:2] == ["v18"]:      # 既知データでの確認（PUD の 19 言語、docs/PREREG_v1.8_VERB_BINOMIAL.md）
         main17(TARGETS, "results/real_parallel/real-parallel-v18.json", allow_extended=True,
-               versions={"v1.7": {"v18_gates": False}, "v1.8": {}}, prereg="docs/PREREG_v1.8_VERB_BINOMIAL.md")
+               versions={name: VARIANTS[name] for name in ("v1.7", "v1.8")}, prereg="docs/PREREG_v1.8_VERB_BINOMIAL.md")
     elif sys.argv[1:2] == ["v17"]:
         main17(TARGETS16, "results/real_parallel/real-parallel-v17.json", allow_extended=True)
     else:

@@ -1,0 +1,1087 @@
+{
+ "rows": [
+  {
+   "code": "ar_pud",
+   "keep": "1/1",
+   "translations": 450,
+   "A": {
+    "eligible": 213,
+    "claimed": 5,
+    "correct": 0,
+    "wrong": 5,
+    "abstain": 208
+   },
+   "v2": {
+    "eligible": 213,
+    "claimed": 2,
+    "correct": 1,
+    "wrong": 1,
+    "abstain": 211
+   }
+  },
+  {
+   "code": "cs_pud",
+   "keep": "1/1",
+   "translations": 450,
+   "A": {
+    "eligible": 213,
+    "claimed": 5,
+    "correct": 0,
+    "wrong": 5,
+    "abstain": 208
+   },
+   "v2": {
+    "eligible": 213,
+    "claimed": 10,
+    "correct": 5,
+    "wrong": 5,
+    "abstain": 203
+   }
+  },
+  {
+   "code": "de_pud",
+   "keep": "1/1",
+   "translations": 450,
+   "A": {
+    "eligible": 213,
+    "claimed": 10,
+    "correct": 0,
+    "wrong": 10,
+    "abstain": 203
+   },
+   "v2": {
+    "eligible": 213,
+    "claimed": 19,
+    "correct": 9,
+    "wrong": 10,
+    "abstain": 194
+   }
+  },
+  {
+   "code": "es_pud",
+   "keep": "1/1",
+   "translations": 450,
+   "A": {
+    "eligible": 213,
+    "claimed": 10,
+    "correct": 1,
+    "wrong": 9,
+    "abstain": 203
+   },
+   "v2": {
+    "eligible": 213,
+    "claimed": 44,
+    "correct": 24,
+    "wrong": 20,
+    "abstain": 169
+   }
+  },
+  {
+   "code": "fi_pud",
+   "keep": "1/1",
+   "translations": 450,
+   "A": {
+    "eligible": 213,
+    "claimed": 7,
+    "correct": 0,
+    "wrong": 7,
+    "abstain": 206
+   },
+   "v2": {
+    "eligible": 213,
+    "claimed": 27,
+    "correct": 13,
+    "wrong": 14,
+    "abstain": 186
+   }
+  },
+  {
+   "code": "fr_pud",
+   "keep": "1/1",
+   "translations": 450,
+   "A": {
+    "eligible": 213,
+    "claimed": 22,
+    "correct": 0,
+    "wrong": 22,
+    "abstain": 191
+   },
+   "v2": {
+    "eligible": 213,
+    "claimed": 37,
+    "correct": 24,
+    "wrong": 13,
+    "abstain": 176
+   }
+  },
+  {
+   "code": "hi_pud",
+   "keep": "1/1",
+   "translations": 450,
+   "A": {
+    "eligible": 213,
+    "claimed": 9,
+    "correct": 1,
+    "wrong": 8,
+    "abstain": 204
+   },
+   "v2": {
+    "eligible": 213,
+    "claimed": 1,
+    "correct": 0,
+    "wrong": 1,
+    "abstain": 212
+   }
+  },
+  {
+   "code": "id_pud",
+   "keep": "1/1",
+   "translations": 450,
+   "A": {
+    "eligible": 213,
+    "claimed": 8,
+    "correct": 0,
+    "wrong": 8,
+    "abstain": 205
+   },
+   "v2": {
+    "eligible": 213,
+    "claimed": 49,
+    "correct": 39,
+    "wrong": 10,
+    "abstain": 164
+   }
+  },
+  {
+   "code": "is_pud",
+   "keep": "1/1",
+   "translations": 450,
+   "A": {
+    "eligible": 213,
+    "claimed": 6,
+    "correct": 0,
+    "wrong": 6,
+    "abstain": 207
+   },
+   "v2": {
+    "eligible": 213,
+    "claimed": 11,
+    "correct": 3,
+    "wrong": 8,
+    "abstain": 202
+   }
+  },
+  {
+   "code": "it_pud",
+   "keep": "1/1",
+   "translations": 450,
+   "A": {
+    "eligible": 213,
+    "claimed": 9,
+    "correct": 0,
+    "wrong": 9,
+    "abstain": 204
+   },
+   "v2": {
+    "eligible": 213,
+    "claimed": 41,
+    "correct": 27,
+    "wrong": 14,
+    "abstain": 172
+   }
+  },
+  {
+   "code": "ja_pud",
+   "keep": "1/1",
+   "translations": 450,
+   "A": {
+    "eligible": 213,
+    "claimed": 2,
+    "correct": 0,
+    "wrong": 2,
+    "abstain": 211
+   },
+   "v2": {
+    "eligible": 213,
+    "claimed": 1,
+    "correct": 0,
+    "wrong": 1,
+    "abstain": 212
+   }
+  },
+  {
+   "code": "ko_pud",
+   "keep": "1/1",
+   "translations": 450,
+   "A": {
+    "eligible": 213,
+    "claimed": 0,
+    "correct": 0,
+    "wrong": 0,
+    "abstain": 213
+   },
+   "v2": {
+    "eligible": 213,
+    "claimed": 1,
+    "correct": 0,
+    "wrong": 1,
+    "abstain": 212
+   }
+  },
+  {
+   "code": "pl_pud",
+   "keep": "1/1",
+   "translations": 450,
+   "A": {
+    "eligible": 213,
+    "claimed": 4,
+    "correct": 0,
+    "wrong": 4,
+    "abstain": 209
+   },
+   "v2": {
+    "eligible": 213,
+    "claimed": 20,
+    "correct": 8,
+    "wrong": 12,
+    "abstain": 193
+   }
+  },
+  {
+   "code": "pt_pud",
+   "keep": "1/1",
+   "translations": 450,
+   "A": {
+    "eligible": 213,
+    "claimed": 15,
+    "correct": 2,
+    "wrong": 13,
+    "abstain": 198
+   },
+   "v2": {
+    "eligible": 213,
+    "claimed": 69,
+    "correct": 54,
+    "wrong": 15,
+    "abstain": 144
+   }
+  },
+  {
+   "code": "ru_pud",
+   "keep": "1/1",
+   "translations": 450,
+   "A": {
+    "eligible": 213,
+    "claimed": 11,
+    "correct": 1,
+    "wrong": 10,
+    "abstain": 202
+   },
+   "v2": {
+    "eligible": 213,
+    "claimed": 8,
+    "correct": 5,
+    "wrong": 3,
+    "abstain": 205
+   }
+  },
+  {
+   "code": "sv_pud",
+   "keep": "1/1",
+   "translations": 450,
+   "A": {
+    "eligible": 213,
+    "claimed": 13,
+    "correct": 2,
+    "wrong": 11,
+    "abstain": 200
+   },
+   "v2": {
+    "eligible": 213,
+    "claimed": 35,
+    "correct": 23,
+    "wrong": 12,
+    "abstain": 178
+   }
+  },
+  {
+   "code": "th_pud",
+   "keep": "1/1",
+   "translations": 450,
+   "A": {
+    "eligible": 213,
+    "claimed": 18,
+    "correct": 0,
+    "wrong": 18,
+    "abstain": 195
+   },
+   "v2": {
+    "eligible": 213,
+    "claimed": 7,
+    "correct": 5,
+    "wrong": 2,
+    "abstain": 206
+   }
+  },
+  {
+   "code": "tr_pud",
+   "keep": "1/1",
+   "translations": 450,
+   "A": {
+    "eligible": 213,
+    "claimed": 4,
+    "correct": 0,
+    "wrong": 4,
+    "abstain": 209
+   },
+   "v2": {
+    "eligible": 213,
+    "claimed": 10,
+    "correct": 6,
+    "wrong": 4,
+    "abstain": 203
+   }
+  },
+  {
+   "code": "zh_pud",
+   "keep": "1/1",
+   "translations": 450,
+   "A": {
+    "eligible": 213,
+    "claimed": 4,
+    "correct": 1,
+    "wrong": 3,
+    "abstain": 209
+   },
+   "v2": {
+    "eligible": 213,
+    "claimed": 3,
+    "correct": 0,
+    "wrong": 3,
+    "abstain": 210
+   }
+  },
+  {
+   "code": "ar_pud",
+   "keep": "1/2",
+   "translations": 225,
+   "A": {
+    "eligible": 103,
+    "claimed": 3,
+    "correct": 0,
+    "wrong": 3,
+    "abstain": 100
+   },
+   "v2": {
+    "eligible": 103,
+    "claimed": 1,
+    "correct": 0,
+    "wrong": 1,
+    "abstain": 102
+   }
+  },
+  {
+   "code": "cs_pud",
+   "keep": "1/2",
+   "translations": 225,
+   "A": {
+    "eligible": 103,
+    "claimed": 3,
+    "correct": 0,
+    "wrong": 3,
+    "abstain": 100
+   },
+   "v2": {
+    "eligible": 103,
+    "claimed": 4,
+    "correct": 3,
+    "wrong": 1,
+    "abstain": 99
+   }
+  },
+  {
+   "code": "de_pud",
+   "keep": "1/2",
+   "translations": 225,
+   "A": {
+    "eligible": 103,
+    "claimed": 2,
+    "correct": 1,
+    "wrong": 1,
+    "abstain": 101
+   },
+   "v2": {
+    "eligible": 103,
+    "claimed": 9,
+    "correct": 1,
+    "wrong": 8,
+    "abstain": 94
+   }
+  },
+  {
+   "code": "es_pud",
+   "keep": "1/2",
+   "translations": 225,
+   "A": {
+    "eligible": 103,
+    "claimed": 3,
+    "correct": 0,
+    "wrong": 3,
+    "abstain": 100
+   },
+   "v2": {
+    "eligible": 103,
+    "claimed": 19,
+    "correct": 13,
+    "wrong": 6,
+    "abstain": 84
+   }
+  },
+  {
+   "code": "fi_pud",
+   "keep": "1/2",
+   "translations": 225,
+   "A": {
+    "eligible": 103,
+    "claimed": 1,
+    "correct": 0,
+    "wrong": 1,
+    "abstain": 102
+   },
+   "v2": {
+    "eligible": 103,
+    "claimed": 5,
+    "correct": 1,
+    "wrong": 4,
+    "abstain": 98
+   }
+  },
+  {
+   "code": "fr_pud",
+   "keep": "1/2",
+   "translations": 225,
+   "A": {
+    "eligible": 103,
+    "claimed": 4,
+    "correct": 0,
+    "wrong": 4,
+    "abstain": 99
+   },
+   "v2": {
+    "eligible": 103,
+    "claimed": 13,
+    "correct": 7,
+    "wrong": 6,
+    "abstain": 90
+   }
+  },
+  {
+   "code": "hi_pud",
+   "keep": "1/2",
+   "translations": 225,
+   "A": {
+    "eligible": 103,
+    "claimed": 2,
+    "correct": 0,
+    "wrong": 2,
+    "abstain": 101
+   },
+   "v2": {
+    "eligible": 103,
+    "claimed": 0,
+    "correct": 0,
+    "wrong": 0,
+    "abstain": 103
+   }
+  },
+  {
+   "code": "id_pud",
+   "keep": "1/2",
+   "translations": 225,
+   "A": {
+    "eligible": 103,
+    "claimed": 2,
+    "correct": 0,
+    "wrong": 2,
+    "abstain": 101
+   },
+   "v2": {
+    "eligible": 103,
+    "claimed": 19,
+    "correct": 14,
+    "wrong": 5,
+    "abstain": 84
+   }
+  },
+  {
+   "code": "is_pud",
+   "keep": "1/2",
+   "translations": 225,
+   "A": {
+    "eligible": 103,
+    "claimed": 2,
+    "correct": 0,
+    "wrong": 2,
+    "abstain": 101
+   },
+   "v2": {
+    "eligible": 103,
+    "claimed": 6,
+    "correct": 0,
+    "wrong": 6,
+    "abstain": 97
+   }
+  },
+  {
+   "code": "it_pud",
+   "keep": "1/2",
+   "translations": 225,
+   "A": {
+    "eligible": 103,
+    "claimed": 6,
+    "correct": 0,
+    "wrong": 6,
+    "abstain": 97
+   },
+   "v2": {
+    "eligible": 103,
+    "claimed": 24,
+    "correct": 15,
+    "wrong": 9,
+    "abstain": 79
+   }
+  },
+  {
+   "code": "ja_pud",
+   "keep": "1/2",
+   "translations": 225,
+   "A": {
+    "eligible": 103,
+    "claimed": 0,
+    "correct": 0,
+    "wrong": 0,
+    "abstain": 103
+   },
+   "v2": {
+    "eligible": 103,
+    "claimed": 0,
+    "correct": 0,
+    "wrong": 0,
+    "abstain": 103
+   }
+  },
+  {
+   "code": "ko_pud",
+   "keep": "1/2",
+   "translations": 225,
+   "A": {
+    "eligible": 103,
+    "claimed": 0,
+    "correct": 0,
+    "wrong": 0,
+    "abstain": 103
+   },
+   "v2": {
+    "eligible": 103,
+    "claimed": 0,
+    "correct": 0,
+    "wrong": 0,
+    "abstain": 103
+   }
+  },
+  {
+   "code": "pl_pud",
+   "keep": "1/2",
+   "translations": 225,
+   "A": {
+    "eligible": 103,
+    "claimed": 3,
+    "correct": 0,
+    "wrong": 3,
+    "abstain": 100
+   },
+   "v2": {
+    "eligible": 103,
+    "claimed": 9,
+    "correct": 3,
+    "wrong": 6,
+    "abstain": 94
+   }
+  },
+  {
+   "code": "pt_pud",
+   "keep": "1/2",
+   "translations": 225,
+   "A": {
+    "eligible": 103,
+    "claimed": 6,
+    "correct": 0,
+    "wrong": 6,
+    "abstain": 97
+   },
+   "v2": {
+    "eligible": 103,
+    "claimed": 19,
+    "correct": 14,
+    "wrong": 5,
+    "abstain": 84
+   }
+  },
+  {
+   "code": "ru_pud",
+   "keep": "1/2",
+   "translations": 225,
+   "A": {
+    "eligible": 103,
+    "claimed": 4,
+    "correct": 0,
+    "wrong": 4,
+    "abstain": 99
+   },
+   "v2": {
+    "eligible": 103,
+    "claimed": 2,
+    "correct": 0,
+    "wrong": 2,
+    "abstain": 101
+   }
+  },
+  {
+   "code": "sv_pud",
+   "keep": "1/2",
+   "translations": 225,
+   "A": {
+    "eligible": 103,
+    "claimed": 2,
+    "correct": 1,
+    "wrong": 1,
+    "abstain": 101
+   },
+   "v2": {
+    "eligible": 103,
+    "claimed": 13,
+    "correct": 10,
+    "wrong": 3,
+    "abstain": 90
+   }
+  },
+  {
+   "code": "th_pud",
+   "keep": "1/2",
+   "translations": 225,
+   "A": {
+    "eligible": 103,
+    "claimed": 2,
+    "correct": 0,
+    "wrong": 2,
+    "abstain": 101
+   },
+   "v2": {
+    "eligible": 103,
+    "claimed": 0,
+    "correct": 0,
+    "wrong": 0,
+    "abstain": 103
+   }
+  },
+  {
+   "code": "tr_pud",
+   "keep": "1/2",
+   "translations": 225,
+   "A": {
+    "eligible": 103,
+    "claimed": 2,
+    "correct": 1,
+    "wrong": 1,
+    "abstain": 101
+   },
+   "v2": {
+    "eligible": 103,
+    "claimed": 3,
+    "correct": 1,
+    "wrong": 2,
+    "abstain": 100
+   }
+  },
+  {
+   "code": "zh_pud",
+   "keep": "1/2",
+   "translations": 225,
+   "A": {
+    "eligible": 103,
+    "claimed": 0,
+    "correct": 0,
+    "wrong": 0,
+    "abstain": 103
+   },
+   "v2": {
+    "eligible": 103,
+    "claimed": 0,
+    "correct": 0,
+    "wrong": 0,
+    "abstain": 103
+   }
+  },
+  {
+   "code": "ar_pud",
+   "keep": "1/4",
+   "translations": 113,
+   "A": {
+    "eligible": 44,
+    "claimed": 0,
+    "correct": 0,
+    "wrong": 0,
+    "abstain": 44
+   },
+   "v2": {
+    "eligible": 44,
+    "claimed": 2,
+    "correct": 0,
+    "wrong": 2,
+    "abstain": 42
+   }
+  },
+  {
+   "code": "cs_pud",
+   "keep": "1/4",
+   "translations": 113,
+   "A": {
+    "eligible": 44,
+    "claimed": 1,
+    "correct": 0,
+    "wrong": 1,
+    "abstain": 43
+   },
+   "v2": {
+    "eligible": 44,
+    "claimed": 2,
+    "correct": 2,
+    "wrong": 0,
+    "abstain": 42
+   }
+  },
+  {
+   "code": "de_pud",
+   "keep": "1/4",
+   "translations": 113,
+   "A": {
+    "eligible": 44,
+    "claimed": 0,
+    "correct": 0,
+    "wrong": 0,
+    "abstain": 44
+   },
+   "v2": {
+    "eligible": 44,
+    "claimed": 0,
+    "correct": 0,
+    "wrong": 0,
+    "abstain": 44
+   }
+  },
+  {
+   "code": "es_pud",
+   "keep": "1/4",
+   "translations": 113,
+   "A": {
+    "eligible": 44,
+    "claimed": 0,
+    "correct": 0,
+    "wrong": 0,
+    "abstain": 44
+   },
+   "v2": {
+    "eligible": 44,
+    "claimed": 10,
+    "correct": 6,
+    "wrong": 4,
+    "abstain": 34
+   }
+  },
+  {
+   "code": "fi_pud",
+   "keep": "1/4",
+   "translations": 113,
+   "A": {
+    "eligible": 44,
+    "claimed": 0,
+    "correct": 0,
+    "wrong": 0,
+    "abstain": 44
+   },
+   "v2": {
+    "eligible": 44,
+    "claimed": 0,
+    "correct": 0,
+    "wrong": 0,
+    "abstain": 44
+   }
+  },
+  {
+   "code": "fr_pud",
+   "keep": "1/4",
+   "translations": 113,
+   "A": {
+    "eligible": 44,
+    "claimed": 0,
+    "correct": 0,
+    "wrong": 0,
+    "abstain": 44
+   },
+   "v2": {
+    "eligible": 44,
+    "claimed": 6,
+    "correct": 5,
+    "wrong": 1,
+    "abstain": 38
+   }
+  },
+  {
+   "code": "hi_pud",
+   "keep": "1/4",
+   "translations": 113,
+   "A": {
+    "eligible": 44,
+    "claimed": 0,
+    "correct": 0,
+    "wrong": 0,
+    "abstain": 44
+   },
+   "v2": {
+    "eligible": 44,
+    "claimed": 0,
+    "correct": 0,
+    "wrong": 0,
+    "abstain": 44
+   }
+  },
+  {
+   "code": "id_pud",
+   "keep": "1/4",
+   "translations": 113,
+   "A": {
+    "eligible": 44,
+    "claimed": 1,
+    "correct": 0,
+    "wrong": 1,
+    "abstain": 43
+   },
+   "v2": {
+    "eligible": 44,
+    "claimed": 5,
+    "correct": 1,
+    "wrong": 4,
+    "abstain": 39
+   }
+  },
+  {
+   "code": "is_pud",
+   "keep": "1/4",
+   "translations": 113,
+   "A": {
+    "eligible": 44,
+    "claimed": 1,
+    "correct": 0,
+    "wrong": 1,
+    "abstain": 43
+   },
+   "v2": {
+    "eligible": 44,
+    "claimed": 0,
+    "correct": 0,
+    "wrong": 0,
+    "abstain": 44
+   }
+  },
+  {
+   "code": "it_pud",
+   "keep": "1/4",
+   "translations": 113,
+   "A": {
+    "eligible": 44,
+    "claimed": 0,
+    "correct": 0,
+    "wrong": 0,
+    "abstain": 44
+   },
+   "v2": {
+    "eligible": 44,
+    "claimed": 7,
+    "correct": 5,
+    "wrong": 2,
+    "abstain": 37
+   }
+  },
+  {
+   "code": "ja_pud",
+   "keep": "1/4",
+   "translations": 113,
+   "A": {
+    "eligible": 44,
+    "claimed": 0,
+    "correct": 0,
+    "wrong": 0,
+    "abstain": 44
+   },
+   "v2": {
+    "eligible": 44,
+    "claimed": 0,
+    "correct": 0,
+    "wrong": 0,
+    "abstain": 44
+   }
+  },
+  {
+   "code": "ko_pud",
+   "keep": "1/4",
+   "translations": 113,
+   "A": {
+    "eligible": 44,
+    "claimed": 0,
+    "correct": 0,
+    "wrong": 0,
+    "abstain": 44
+   },
+   "v2": {
+    "eligible": 44,
+    "claimed": 0,
+    "correct": 0,
+    "wrong": 0,
+    "abstain": 44
+   }
+  },
+  {
+   "code": "pl_pud",
+   "keep": "1/4",
+   "translations": 113,
+   "A": {
+    "eligible": 44,
+    "claimed": 0,
+    "correct": 0,
+    "wrong": 0,
+    "abstain": 44
+   },
+   "v2": {
+    "eligible": 44,
+    "claimed": 2,
+    "correct": 0,
+    "wrong": 2,
+    "abstain": 42
+   }
+  },
+  {
+   "code": "pt_pud",
+   "keep": "1/4",
+   "translations": 113,
+   "A": {
+    "eligible": 44,
+    "claimed": 0,
+    "correct": 0,
+    "wrong": 0,
+    "abstain": 44
+   },
+   "v2": {
+    "eligible": 44,
+    "claimed": 5,
+    "correct": 5,
+    "wrong": 0,
+    "abstain": 39
+   }
+  },
+  {
+   "code": "ru_pud",
+   "keep": "1/4",
+   "translations": 113,
+   "A": {
+    "eligible": 44,
+    "claimed": 0,
+    "correct": 0,
+    "wrong": 0,
+    "abstain": 44
+   },
+   "v2": {
+    "eligible": 44,
+    "claimed": 0,
+    "correct": 0,
+    "wrong": 0,
+    "abstain": 44
+   }
+  },
+  {
+   "code": "sv_pud",
+   "keep": "1/4",
+   "translations": 113,
+   "A": {
+    "eligible": 44,
+    "claimed": 1,
+    "correct": 0,
+    "wrong": 1,
+    "abstain": 43
+   },
+   "v2": {
+    "eligible": 44,
+    "claimed": 0,
+    "correct": 0,
+    "wrong": 0,
+    "abstain": 44
+   }
+  },
+  {
+   "code": "th_pud",
+   "keep": "1/4",
+   "translations": 113,
+   "A": {
+    "eligible": 44,
+    "claimed": 1,
+    "correct": 0,
+    "wrong": 1,
+    "abstain": 43
+   },
+   "v2": {
+    "eligible": 44,
+    "claimed": 0,
+    "correct": 0,
+    "wrong": 0,
+    "abstain": 44
+   }
+  },
+  {
+   "code": "tr_pud",
+   "keep": "1/4",
+   "translations": 113,
+   "A": {
+    "eligible": 44,
+    "claimed": 0,
+    "correct": 0,
+    "wrong": 0,
+    "abstain": 44
+   },
+   "v2": {
+    "eligible": 44,
+    "claimed": 0,
+    "correct": 0,
+    "wrong": 0,
+    "abstain": 44
+   }
+  },
+  {
+   "code": "zh_pud",
+   "keep": "1/4",
+   "translations": 113,
+   "A": {
+    "eligible": 44,
+    "claimed": 0,
+    "correct": 0,
+    "wrong": 0,
+    "abstain": 44
+   },
+   "v2": {
+    "eligible": 44,
+    "claimed": 0,
+    "correct": 0,
+    "wrong": 0,
+    "abstain": 44
+   }
+  }
+ ]
+}

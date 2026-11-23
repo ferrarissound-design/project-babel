@@ -45,6 +45,26 @@ tests/              テスト
 
 コアの解読器は Python 標準ライブラリのみで動く（外部API・LLM不要）。オプションの画像解析のみ OpenCV/NumPy をローカルにインストールする。
 
+## 解読エンジン v2（`python -m babel decode`）
+
+未知言語のコーパス（任意で構造化対訳）から、語境界・接辞・役割ごとの手がかり・語彙・主語/述語/目的語・語順を推定し、
+根拠・確信度・判定不能の理由つきの JSON と Markdown を書く。設計と性能: [docs/DECODE_ENGINE.md](docs/DECODE_ENGINE.md)、
+旧方式との比較: [docs/DECODE_V2_RESULTS.md](docs/DECODE_V2_RESULTS.md)、事前登録: [docs/PREREG_DECODE_V2.md](docs/PREREG_DECODE_V2.md)。
+
+```bash
+export PYTHONHASHSEED=0
+python -m babel generate --family KES --seed 0 --level A --out data
+python -m babel decode data/KES-0-A/public/corpus.json --out out/kes.json      # out/kes.json と out/kes.md
+python -m babel decode corpus.json --out out/x.json --no-anchors --threshold 0.7  # アンカーなし・より厳しく
+# 実在言語（PUD を換字）での再現: 開発側の測定 → 比較表
+python -m babel.experiments.decode_eval --phase dev --seeds 0,1,2 --mismatch both --tag dev --out results/decode_v2/dev.json
+python -m babel.experiments.decode_compare --phase dev --new v2=results/decode_v2/dev.json
+```
+
+入力は既存の public 形式（`documents[].sentences` と任意の `parallel[]`）。対訳のない文には、対訳つきの文で学んだ構造の手がかりだけで
+**構造仮説**（`basis: "structure"`、意味は主張しない）を出し、対訳つきの文の結果（`basis: "translation"`）と区別する。
+対訳が 20 文未満なら役割は主張しない。
+
 ## 実行方法
 
 ```bash

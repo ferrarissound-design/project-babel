@@ -1,0 +1,4109 @@
+{
+ "schema": "babel-decode-v2",
+ "version": "2.0.0",
+ "language_id": "KES-0",
+ "config": {
+  "passes": 10,
+  "warmup_passes": 2,
+  "feature_weight": 0.5,
+  "feature_smoothing": 4.0,
+  "lexical_smoothing": 1.0,
+  "reverse_smoothing": 1.0,
+  "reverse_lexical": true,
+  "placement_smoothing": 1.0,
+  "agreement_weight": 0.5,
+  "cross_weight": 0.5,
+  "cross_templates": [
+   "w",
+   "s2",
+   "ms"
+  ],
+  "frequent_word": 3,
+  "teacher_power": 0.0,
+  "anchor_strength": 30.0,
+  "order_seed": 0,
+  "null_smoothing": 2.0,
+  "frequent_context": 8,
+  "wide_context": true,
+  "claim_threshold": 0.45,
+  "hypothesis_threshold": 0.45,
+  "min_translated": 20,
+  "use_anchors": true,
+  "restarts": [
+   1,
+   2,
+   3
+  ],
+  "calibration": "auto"
+ },
+ "input": {
+  "documents": 130,
+  "sentences": 1051,
+  "translated_sentences": 30,
+  "role_model_trained": true
+ },
+ "structure": {
+  "boundaries": {
+   "source": "given",
+   "tokens": 4647,
+   "types": 745
+  },
+  "morphology": {
+   "affix_position": "suffix",
+   "affixes": [
+    {
+     "affix": "S:mu",
+     "stem_types": 43,
+     "tokens": 185
+    },
+    {
+     "affix": "P:ts",
+     "stem_types": 42,
+     "tokens": 182
+    },
+    {
+     "affix": "S:mi",
+     "stem_types": 36,
+     "tokens": 245
+    },
+    {
+     "affix": "P:p",
+     "stem_types": 35,
+     "tokens": 240
+    },
+    {
+     "affix": "P:z",
+     "stem_types": 34,
+     "tokens": 95
+    },
+    {
+     "affix": "S:ga",
+     "stem_types": 34,
+     "tokens": 131
+    },
+    {
+     "affix": "S:sat",
+     "stem_types": 32,
+     "tokens": 282
+    },
+    {
+     "affix": "S:ug",
+     "stem_types": 31,
+     "tokens": 150
+    },
+    {
+     "affix": "P:f",
+     "stem_types": 28,
+     "tokens": 91
+    },
+    {
+     "affix": "P:j",
+     "stem_types": 28,
+     "tokens": 93
+    },
+    {
+     "affix": "S:kun",
+     "stem_types": 28,
+     "tokens": 101
+    },
+    {
+     "affix": "S:ge",
+     "stem_types": 27,
+     "tokens": 148
+    },
+    {
+     "affix": "P:y",
+     "stem_types": 25,
+     "tokens": 136
+    },
+    {
+     "affix": "S:du",
+     "stem_types": 23,
+     "tokens": 85
+    },
+    {
+     "affix": "S:sumu",
+     "stem_types": 21,
+     "tokens": 28
+    },
+    {
+     "affix": "S:yu",
+     "stem_types": 21,
+     "tokens": 133
+    },
+    {
+     "affix": "S:pus",
+     "stem_types": 20,
+     "tokens": 26
+    },
+    {
+     "affix": "S:simi",
+     "stem_types": 20,
+     "tokens": 31
+    },
+    {
+     "affix": "S:ju",
+     "stem_types": 19,
+     "tokens": 70
+    },
+    {
+     "affix": "S:pis",
+     "stem_types": 18,
+     "tokens": 24
+    }
+   ]
+  },
+  "role_profiles": {
+   "subject": [
+    {
+     "template": "s1",
+     "value": "a",
+     "ratio": 5.12,
+     "support": 3.1
+    },
+    {
+     "template": "f1",
+     "value": "l",
+     "ratio": 3.65,
+     "support": 3.0
+    },
+    {
+     "template": "fq",
+     "value": "3",
+     "ratio": 2.73,
+     "support": 3.6
+    },
+    {
+     "template": "len",
+     "value": "6",
+     "ratio": 1.93,
+     "support": 3.1
+    },
+    {
+     "template": "p2",
+     "value": "<s>",
+     "ratio": 1.72,
+     "support": 5.7
+    }
+   ],
+   "predicate": [
+    {
+     "template": "f2",
+     "value": "pe",
+     "ratio": 8.38,
+     "support": 4.0
+    },
+    {
+     "template": "s3",
+     "value": "set",
+     "ratio": 7.0,
+     "support": 7.0
+    },
+    {
+     "template": "s2",
+     "value": "et",
+     "ratio": 6.91,
+     "support": 7.0
+    },
+    {
+     "template": "ms",
+     "value": "set",
+     "ratio": 6.82,
+     "support": 4.0
+    },
+    {
+     "template": "ms",
+     "value": "ug",
+     "ratio": 5.87,
+     "support": 6.0
+    },
+    {
+     "template": "s2",
+     "value": "ug",
+     "ratio": 5.84,
+     "support": 7.0
+    },
+    {
+     "template": "ms",
+     "value": "sat",
+     "ratio": 5.56,
+     "support": 11.0
+    },
+    {
+     "template": "s3",
+     "value": "sat",
+     "ratio": 5.31,
+     "support": 11.0
+    }
+   ],
+   "object": [
+    {
+     "template": "s3",
+     "value": "emi",
+     "ratio": 12.22,
+     "support": 3.7
+    },
+    {
+     "template": "s2",
+     "value": "mi",
+     "ratio": 6.28,
+     "support": 5.1
+    },
+    {
+     "template": "ms",
+     "value": "mi",
+     "ratio": 5.48,
+     "support": 3.7
+    },
+    {
+     "template": "rp",
+     "value": "6",
+     "ratio": 2.78,
+     "support": 4.4
+    },
+    {
+     "template": "s1",
+     "value": "i",
+     "ratio": 2.45,
+     "support": 5.1
+    },
+    {
+     "template": "fq",
+     "value": "2",
+     "ratio": 2.23,
+     "support": 3.0
+    },
+    {
+     "template": "len",
+     "value": "8",
+     "ratio": 2.1,
+     "support": 3.6
+    },
+    {
+     "template": "n2",
+     "value": "</s>",
+     "ratio": 1.88,
+     "support": 9.5
+    }
+   ]
+  },
+  "argument_placement": {
+   "subject": {
+    "+1": 0.038,
+    "+2": 0.038,
+    "+3": 0.038,
+    "+4": 0.038,
+    "+6": 0.038,
+    "+9": 0.038,
+    "-1": 0.078,
+    "-2": 0.118,
+    "-3": 0.039,
+    "-4": 0.137,
+    "-6": 0.038,
+    "-9": 0.038,
+    "NULL": 0.32
+   },
+   "object": {
+    "+1": 0.038,
+    "+2": 0.038,
+    "+3": 0.038,
+    "+4": 0.038,
+    "+6": 0.038,
+    "+9": 0.038,
+    "-1": 0.402,
+    "-2": 0.038,
+    "-3": 0.038,
+    "-4": 0.039,
+    "-6": 0.038,
+    "-9": 0.038,
+    "NULL": 0.175
+   }
+  }
+ },
+ "lexicon": [
+  {
+   "concept": "bring",
+   "stem": "eto",
+   "mass": 4.0,
+   "share": 0.8,
+   "occurrences": 5.0,
+   "basis": "translation"
+  },
+  {
+   "concept": "give",
+   "stem": "goju",
+   "mass": 4.0,
+   "share": 0.8,
+   "occurrences": 5.0,
+   "basis": "translation"
+  },
+  {
+   "concept": "P13",
+   "stem": "lipaza",
+   "mass": 3.0,
+   "share": 1.0,
+   "occurrences": 3.0,
+   "basis": "translation"
+  },
+  {
+   "concept": "conquer",
+   "stem": "tusetsset",
+   "mass": 2.0,
+   "share": 1.0,
+   "occurrences": 2.0,
+   "basis": "translation"
+  },
+  {
+   "concept": "go",
+   "stem": "one",
+   "mass": 2.0,
+   "share": 1.0,
+   "occurrences": 2.0,
+   "basis": "translation"
+  },
+  {
+   "concept": "road",
+   "stem": "itape",
+   "mass": 2.0,
+   "share": 1.0,
+   "occurrences": 2.0,
+   "basis": "translation"
+  },
+  {
+   "concept": "servant",
+   "stem": "durakor",
+   "mass": 2.0,
+   "share": 1.0,
+   "occurrences": 2.0,
+   "basis": "translation"
+  },
+  {
+   "concept": "sheep",
+   "stem": "kutu",
+   "mass": 2.0,
+   "share": 1.0,
+   "occurrences": 2.0,
+   "basis": "translation"
+  },
+  {
+   "concept": "farmer",
+   "stem": "ili",
+   "mass": 1.56,
+   "share": 0.999,
+   "occurrences": 1.56,
+   "basis": "translation"
+  }
+ ],
+ "anchors": {
+  "symbols_mapped": 19,
+  "confident_pairs": 3,
+  "chance_threshold": 5.99,
+  "examples": [
+   {
+    "concept": "bring",
+    "token": "petosat",
+    "p": 0.982
+   },
+   {
+    "concept": "bring",
+    "token": "petosat",
+    "p": 0.978
+   },
+   {
+    "concept": "bring",
+    "token": "petosat",
+    "p": 0.973
+   }
+  ],
+  "basis": "letter/symbol correspondence learned from translations (names, loanwords)"
+ },
+ "word_order": {
+  "verb_position_votes": {
+   "initial": 0,
+   "medial": 0,
+   "final": 1
+  },
+  "subject_object_votes": {
+   "SO": 1
+  },
+  "n": 1,
+  "p_value_vs_uniform": 0.3333333333333333,
+  "verb_position": null,
+  "basis": "claimed triples of translated sentences",
+  "status": "undetermined"
+ },
+ "sentences": [
+  {
+   "doc": "d002",
+   "sent": 7,
+   "basis": "translation",
+   "tokens": [
+    "lifatsakun",
+    "sutsosu",
+    "yino",
+    "kutuga",
+    "danayufus"
+   ],
+   "concepts": {
+    "subject": null,
+    "predicate": "eat",
+    "object": "sheep"
+   },
+   "complete_source": false,
+   "corpus_translated": 30,
+   "roles": {
+    "subject": {
+     "absent_in_translation": true
+    },
+    "predicate": {
+     "candidates": [
+      {
+       "position": 4,
+       "token": "danayufus",
+       "p": 0.9993
+      },
+      {
+       "position": 1,
+       "token": "sutsosu",
+       "p": 0.0004
+      },
+      {
+       "position": 2,
+       "token": "yino",
+       "p": 0.0002
+      },
+      {
+       "position": 0,
+       "token": "lifatsakun",
+       "p": 0.0001
+      },
+      {
+       "position": 3,
+       "token": "kutuga",
+       "p": 0.0
+      }
+     ]
+    },
+    "object": {
+     "candidates": [
+      {
+       "position": 3,
+       "token": "kutuga",
+       "p": 0.9981
+      },
+      {
+       "position": 1,
+       "token": "sutsosu",
+       "p": 0.0
+      },
+      {
+       "position": 0,
+       "token": "lifatsakun",
+       "p": 0.0
+      },
+      {
+       "position": 2,
+       "token": "yino",
+       "p": 0.0
+      },
+      {
+       "position": 4,
+       "token": "danayufus",
+       "p": 0.0
+      }
+     ],
+     "p_not_expressed": 0.0019
+    }
+   },
+   "confidence": 0.0,
+   "restart_agreement": "0/3",
+   "alternatives": [],
+   "triple": null,
+   "status": "undetermined",
+   "reason_code": "incomplete_translation",
+   "reason": "translation lacks subject or object, so no complete triple is asked for"
+  },
+  {
+   "doc": "d014",
+   "sent": 0,
+   "basis": "translation",
+   "tokens": [
+    "juke",
+    "nezoj",
+    "zo",
+    "ludimi",
+    "tikonoug"
+   ],
+   "concepts": {
+    "subject": null,
+    "predicate": "drink",
+    "object": null
+   },
+   "complete_source": false,
+   "corpus_translated": 30,
+   "roles": {
+    "subject": {
+     "absent_in_translation": true
+    },
+    "predicate": {
+     "candidates": [
+      {
+       "position": 4,
+       "token": "tikonoug",
+       "p": 1.0
+      },
+      {
+       "position": 3,
+       "token": "ludimi",
+       "p": 0.0
+      },
+      {
+       "position": 1,
+       "token": "nezoj",
+       "p": 0.0
+      },
+      {
+       "position": 2,
+       "token": "zo",
+       "p": 0.0
+      },
+      {
+       "position": 0,
+       "token": "juke",
+       "p": 0.0
+      }
+     ]
+    },
+    "object": {
+     "absent_in_translation": true
+    }
+   },
+   "confidence": 0.0,
+   "restart_agreement": "0/3",
+   "alternatives": [],
+   "triple": null,
+   "status": "undetermined",
+   "reason_code": "incomplete_translation",
+   "reason": "translation lacks subject or object, so no complete triple is asked for"
+  },
+  {
+   "doc": "d019",
+   "sent": 2,
+   "basis": "translation",
+   "tokens": [
+    "lave",
+    "kizu",
+    "zo",
+    "suzomu",
+    "petosat"
+   ],
+   "concepts": {
+    "subject": null,
+    "predicate": "bring",
+    "object": "horse"
+   },
+   "complete_source": false,
+   "corpus_translated": 30,
+   "roles": {
+    "subject": {
+     "absent_in_translation": true
+    },
+    "predicate": {
+     "candidates": [
+      {
+       "position": 4,
+       "token": "petosat",
+       "p": 1.0
+      },
+      {
+       "position": 3,
+       "token": "suzomu",
+       "p": 0.0
+      },
+      {
+       "position": 0,
+       "token": "lave",
+       "p": 0.0
+      },
+      {
+       "position": 1,
+       "token": "kizu",
+       "p": 0.0
+      },
+      {
+       "position": 2,
+       "token": "zo",
+       "p": 0.0
+      }
+     ]
+    },
+    "object": {
+     "candidates": [
+      {
+       "position": 3,
+       "token": "suzomu",
+       "p": 0.703
+      },
+      {
+       "position": 1,
+       "token": "kizu",
+       "p": 0.0001
+      },
+      {
+       "position": 0,
+       "token": "lave",
+       "p": 0.0
+      },
+      {
+       "position": 2,
+       "token": "zo",
+       "p": 0.0
+      },
+      {
+       "position": 4,
+       "token": "petosat",
+       "p": 0.0
+      }
+     ],
+     "p_not_expressed": 0.2969
+    }
+   },
+   "confidence": 0.0,
+   "restart_agreement": "0/3",
+   "alternatives": [],
+   "triple": null,
+   "status": "undetermined",
+   "reason_code": "incomplete_translation",
+   "reason": "translation lacks subject or object, so no complete triple is asked for"
+  },
+  {
+   "doc": "d028",
+   "sent": 2,
+   "basis": "translation",
+   "tokens": [
+    "nid",
+    "ruliviz",
+    "durakor",
+    "rosamu",
+    "loturug"
+   ],
+   "concepts": {
+    "subject": null,
+    "predicate": "sell",
+    "object": null
+   },
+   "complete_source": false,
+   "corpus_translated": 30,
+   "roles": {
+    "subject": {
+     "absent_in_translation": true
+    },
+    "predicate": {
+     "candidates": [
+      {
+       "position": 4,
+       "token": "loturug",
+       "p": 1.0
+      },
+      {
+       "position": 3,
+       "token": "rosamu",
+       "p": 0.0
+      },
+      {
+       "position": 1,
+       "token": "ruliviz",
+       "p": 0.0
+      },
+      {
+       "position": 2,
+       "token": "durakor",
+       "p": 0.0
+      },
+      {
+       "position": 0,
+       "token": "nid",
+       "p": 0.0
+      }
+     ]
+    },
+    "object": {
+     "absent_in_translation": true
+    }
+   },
+   "confidence": 0.0,
+   "restart_agreement": "0/3",
+   "alternatives": [],
+   "triple": null,
+   "status": "undetermined",
+   "reason_code": "incomplete_translation",
+   "reason": "translation lacks subject or object, so no complete triple is asked for"
+  },
+  {
+   "doc": "d032",
+   "sent": 2,
+   "basis": "translation",
+   "tokens": [
+    "yenodip",
+    "zeximi",
+    "ruzigset"
+   ],
+   "concepts": {
+    "subject": null,
+    "predicate": "rule",
+    "object": "L07"
+   },
+   "complete_source": false,
+   "corpus_translated": 30,
+   "roles": {
+    "subject": {
+     "absent_in_translation": true
+    },
+    "predicate": {
+     "candidates": [
+      {
+       "position": 2,
+       "token": "ruzigset",
+       "p": 0.9999
+      },
+      {
+       "position": 0,
+       "token": "yenodip",
+       "p": 0.0001
+      },
+      {
+       "position": 1,
+       "token": "zeximi",
+       "p": 0.0
+      }
+     ]
+    },
+    "object": {
+     "candidates": [
+      {
+       "position": 1,
+       "token": "zeximi",
+       "p": 0.3422
+      },
+      {
+       "position": 0,
+       "token": "yenodip",
+       "p": 0.0001
+      },
+      {
+       "position": 2,
+       "token": "ruzigset",
+       "p": 0.0
+      }
+     ],
+     "p_not_expressed": 0.6576
+    }
+   },
+   "confidence": 0.0,
+   "restart_agreement": "0/3",
+   "alternatives": [],
+   "triple": null,
+   "status": "undetermined",
+   "reason_code": "incomplete_translation",
+   "reason": "translation lacks subject or object, so no complete triple is asked for"
+  },
+  {
+   "doc": "d034",
+   "sent": 4,
+   "basis": "translation",
+   "tokens": [
+    "lipaza",
+    "poneset"
+   ],
+   "concepts": {
+    "subject": "P13",
+    "predicate": "go",
+    "object": null
+   },
+   "complete_source": false,
+   "corpus_translated": 30,
+   "roles": {
+    "subject": {
+     "candidates": [
+      {
+       "position": 0,
+       "token": "lipaza",
+       "p": 1.0
+      },
+      {
+       "position": 1,
+       "token": "poneset",
+       "p": 0.0
+      }
+     ],
+     "p_not_expressed": 0.0
+    },
+    "predicate": {
+     "candidates": [
+      {
+       "position": 1,
+       "token": "poneset",
+       "p": 1.0
+      },
+      {
+       "position": 0,
+       "token": "lipaza",
+       "p": 0.0
+      }
+     ]
+    },
+    "object": {
+     "absent_in_translation": true
+    }
+   },
+   "confidence": 0.0,
+   "restart_agreement": "0/3",
+   "alternatives": [],
+   "triple": null,
+   "status": "undetermined",
+   "reason_code": "incomplete_translation",
+   "reason": "translation lacks subject or object, so no complete triple is asked for"
+  },
+  {
+   "doc": "d034",
+   "sent": 6,
+   "basis": "translation",
+   "tokens": [
+    "getimuy",
+    "kimela",
+    "poneset"
+   ],
+   "concepts": {
+    "subject": null,
+    "predicate": "go",
+    "object": null
+   },
+   "complete_source": false,
+   "corpus_translated": 30,
+   "roles": {
+    "subject": {
+     "absent_in_translation": true
+    },
+    "predicate": {
+     "candidates": [
+      {
+       "position": 2,
+       "token": "poneset",
+       "p": 1.0
+      },
+      {
+       "position": 0,
+       "token": "getimuy",
+       "p": 0.0
+      },
+      {
+       "position": 1,
+       "token": "kimela",
+       "p": 0.0
+      }
+     ]
+    },
+    "object": {
+     "absent_in_translation": true
+    }
+   },
+   "confidence": 0.0,
+   "restart_agreement": "0/3",
+   "alternatives": [],
+   "triple": null,
+   "status": "undetermined",
+   "reason_code": "incomplete_translation",
+   "reason": "translation lacks subject or object, so no complete triple is asked for"
+  },
+  {
+   "doc": "d038",
+   "sent": 5,
+   "basis": "translation",
+   "tokens": [
+    "sutobuskun",
+    "suremu",
+    "lubiszu",
+    "motu",
+    "dihegemi",
+    "gojusat"
+   ],
+   "concepts": {
+    "subject": null,
+    "predicate": "give",
+    "object": "fish"
+   },
+   "complete_source": false,
+   "corpus_translated": 30,
+   "roles": {
+    "subject": {
+     "absent_in_translation": true
+    },
+    "predicate": {
+     "candidates": [
+      {
+       "position": 5,
+       "token": "gojusat",
+       "p": 1.0
+      },
+      {
+       "position": 4,
+       "token": "dihegemi",
+       "p": 0.0
+      },
+      {
+       "position": 1,
+       "token": "suremu",
+       "p": 0.0
+      },
+      {
+       "position": 2,
+       "token": "lubiszu",
+       "p": 0.0
+      },
+      {
+       "position": 3,
+       "token": "motu",
+       "p": 0.0
+      }
+     ]
+    },
+    "object": {
+     "candidates": [
+      {
+       "position": 4,
+       "token": "dihegemi",
+       "p": 0.7623
+      },
+      {
+       "position": 1,
+       "token": "suremu",
+       "p": 0.0019
+      },
+      {
+       "position": 2,
+       "token": "lubiszu",
+       "p": 0.0004
+      },
+      {
+       "position": 3,
+       "token": "motu",
+       "p": 0.0
+      },
+      {
+       "position": 0,
+       "token": "sutobuskun",
+       "p": 0.0
+      }
+     ],
+     "p_not_expressed": 0.2353
+    }
+   },
+   "confidence": 0.0,
+   "restart_agreement": "0/3",
+   "alternatives": [],
+   "triple": null,
+   "status": "undetermined",
+   "reason_code": "incomplete_translation",
+   "reason": "translation lacks subject or object, so no complete triple is asked for"
+  },
+  {
+   "doc": "d038",
+   "sent": 6,
+   "basis": "translation",
+   "tokens": [
+    "sutobuskun",
+    "labe",
+    "kizu",
+    "lubis",
+    "dihegemi",
+    "gojusat"
+   ],
+   "concepts": {
+    "subject": null,
+    "predicate": "give",
+    "object": null
+   },
+   "complete_source": false,
+   "corpus_translated": 30,
+   "roles": {
+    "subject": {
+     "absent_in_translation": true
+    },
+    "predicate": {
+     "candidates": [
+      {
+       "position": 5,
+       "token": "gojusat",
+       "p": 1.0
+      },
+      {
+       "position": 4,
+       "token": "dihegemi",
+       "p": 0.0
+      },
+      {
+       "position": 3,
+       "token": "lubis",
+       "p": 0.0
+      },
+      {
+       "position": 1,
+       "token": "labe",
+       "p": 0.0
+      },
+      {
+       "position": 2,
+       "token": "kizu",
+       "p": 0.0
+      }
+     ]
+    },
+    "object": {
+     "absent_in_translation": true
+    }
+   },
+   "confidence": 0.0,
+   "restart_agreement": "0/3",
+   "alternatives": [],
+   "triple": null,
+   "status": "undetermined",
+   "reason_code": "incomplete_translation",
+   "reason": "translation lacks subject or object, so no complete triple is asked for"
+  },
+  {
+   "doc": "d050",
+   "sent": 9,
+   "basis": "translation",
+   "tokens": [
+    "viri",
+    "kimela",
+    "viri",
+    "soriradu",
+    "jafojoga",
+    "digetasat"
+   ],
+   "concepts": {
+    "subject": null,
+    "predicate": "send",
+    "object": null
+   },
+   "complete_source": false,
+   "corpus_translated": 30,
+   "roles": {
+    "subject": {
+     "absent_in_translation": true
+    },
+    "predicate": {
+     "candidates": [
+      {
+       "position": 5,
+       "token": "digetasat",
+       "p": 1.0
+      },
+      {
+       "position": 4,
+       "token": "jafojoga",
+       "p": 0.0
+      },
+      {
+       "position": 3,
+       "token": "soriradu",
+       "p": 0.0
+      },
+      {
+       "position": 2,
+       "token": "viri",
+       "p": 0.0
+      },
+      {
+       "position": 1,
+       "token": "kimela",
+       "p": 0.0
+      }
+     ]
+    },
+    "object": {
+     "absent_in_translation": true
+    }
+   },
+   "confidence": 0.0,
+   "restart_agreement": "0/3",
+   "alternatives": [],
+   "triple": null,
+   "status": "undetermined",
+   "reason_code": "incomplete_translation",
+   "reason": "translation lacks subject or object, so no complete triple is asked for"
+  },
+  {
+   "doc": "d051",
+   "sent": 4,
+   "basis": "translation",
+   "tokens": [
+    "fudugu",
+    "rumiha",
+    "[…]",
+    "tso",
+    "yokivge",
+    "fetosat"
+   ],
+   "concepts": {
+    "subject": null,
+    "predicate": "bring",
+    "object": "gold"
+   },
+   "complete_source": false,
+   "corpus_translated": 30,
+   "roles": {
+    "subject": {
+     "absent_in_translation": true
+    },
+    "predicate": {
+     "candidates": [
+      {
+       "position": 5,
+       "token": "fetosat",
+       "p": 1.0
+      },
+      {
+       "position": 4,
+       "token": "yokivge",
+       "p": 0.0
+      },
+      {
+       "position": 1,
+       "token": "rumiha",
+       "p": 0.0
+      },
+      {
+       "position": 3,
+       "token": "tso",
+       "p": 0.0
+      },
+      {
+       "position": 0,
+       "token": "fudugu",
+       "p": 0.0
+      }
+     ]
+    },
+    "object": {
+     "candidates": [
+      {
+       "position": 4,
+       "token": "yokivge",
+       "p": 0.0668
+      },
+      {
+       "position": 1,
+       "token": "rumiha",
+       "p": 0.0004
+      },
+      {
+       "position": 3,
+       "token": "tso",
+       "p": 0.0003
+      },
+      {
+       "position": 0,
+       "token": "fudugu",
+       "p": 0.0001
+      },
+      {
+       "position": 5,
+       "token": "fetosat",
+       "p": 0.0
+      }
+     ],
+     "p_not_expressed": 0.9325
+    }
+   },
+   "confidence": 0.0,
+   "restart_agreement": "0/3",
+   "alternatives": [],
+   "triple": null,
+   "status": "undetermined",
+   "reason_code": "incomplete_translation",
+   "reason": "translation lacks subject or object, so no complete triple is asked for"
+  },
+  {
+   "doc": "d052",
+   "sent": 0,
+   "basis": "translation",
+   "tokens": [
+    "nid",
+    "durakor",
+    "jilisimi",
+    "gutiig"
+   ],
+   "concepts": {
+    "subject": "servant",
+    "predicate": "strike",
+    "object": "farmer"
+   },
+   "complete_source": true,
+   "corpus_translated": 30,
+   "roles": {
+    "subject": {
+     "candidates": [
+      {
+       "position": 1,
+       "token": "durakor",
+       "p": 1.0
+      },
+      {
+       "position": 0,
+       "token": "nid",
+       "p": 0.0
+      },
+      {
+       "position": 2,
+       "token": "jilisimi",
+       "p": 0.0
+      },
+      {
+       "position": 3,
+       "token": "gutiig",
+       "p": 0.0
+      }
+     ],
+     "p_not_expressed": 0.0
+    },
+    "predicate": {
+     "candidates": [
+      {
+       "position": 3,
+       "token": "gutiig",
+       "p": 1.0
+      },
+      {
+       "position": 0,
+       "token": "nid",
+       "p": 0.0
+      },
+      {
+       "position": 2,
+       "token": "jilisimi",
+       "p": 0.0
+      },
+      {
+       "position": 1,
+       "token": "durakor",
+       "p": 0.0
+      }
+     ]
+    },
+    "object": {
+     "candidates": [
+      {
+       "position": 2,
+       "token": "jilisimi",
+       "p": 0.9989
+      },
+      {
+       "position": 0,
+       "token": "nid",
+       "p": 0.0
+      },
+      {
+       "position": 3,
+       "token": "gutiig",
+       "p": 0.0
+      },
+      {
+       "position": 1,
+       "token": "durakor",
+       "p": 0.0
+      }
+     ],
+     "p_not_expressed": 0.0011
+    }
+   },
+   "confidence": 0.9989,
+   "restart_agreement": "3/3",
+   "alternatives": [
+    {
+     "positions": [
+      1,
+      3,
+      2
+     ],
+     "p": 0.9989
+    }
+   ],
+   "evidence": {
+    "subject": {
+     "lexical_mass": 1.0,
+     "concept_mass": 1.0,
+     "lexical_ratio": 680.317,
+     "emission_ratio": 1142.623,
+     "anchor": 0.0
+    },
+    "predicate": {
+     "lexical_mass": 0.0,
+     "concept_mass": 0.0,
+     "lexical_ratio": 1.0,
+     "emission_ratio": 0.151,
+     "anchor": 0.0
+    },
+    "object": {
+     "lexical_mass": 0.56,
+     "concept_mass": 0.561,
+     "lexical_ratio": 355.602,
+     "emission_ratio": 1.782,
+     "anchor": 0.0
+    }
+   },
+   "calibrated_confidence": 0.5091,
+   "triple": {
+    "subject": 1,
+    "predicate": 3,
+    "object": 2
+   },
+   "triple_tokens": {
+    "subject": "durakor",
+    "predicate": "gutiig",
+    "object": "jilisimi"
+   },
+   "status": "claimed",
+   "reason_code": "claimed",
+   "reason": "confidence at or above threshold"
+  },
+  {
+   "doc": "d061",
+   "sent": 1,
+   "basis": "translation",
+   "tokens": [
+    "honugeits",
+    "sidida",
+    "tuteset"
+   ],
+   "concepts": {
+    "subject": "P11",
+    "predicate": "come",
+    "object": null
+   },
+   "complete_source": false,
+   "corpus_translated": 30,
+   "roles": {
+    "subject": {
+     "candidates": [
+      {
+       "position": 1,
+       "token": "sidida",
+       "p": 0.0277
+      },
+      {
+       "position": 0,
+       "token": "honugeits",
+       "p": 0.0005
+      },
+      {
+       "position": 2,
+       "token": "tuteset",
+       "p": 0.0
+      }
+     ],
+     "p_not_expressed": 0.9719
+    },
+    "predicate": {
+     "candidates": [
+      {
+       "position": 2,
+       "token": "tuteset",
+       "p": 1.0
+      },
+      {
+       "position": 1,
+       "token": "sidida",
+       "p": 0.0
+      },
+      {
+       "position": 0,
+       "token": "honugeits",
+       "p": 0.0
+      }
+     ]
+    },
+    "object": {
+     "absent_in_translation": true
+    }
+   },
+   "confidence": 0.0,
+   "restart_agreement": "0/3",
+   "alternatives": [],
+   "triple": null,
+   "status": "undetermined",
+   "reason_code": "incomplete_translation",
+   "reason": "translation lacks subject or object, so no complete triple is asked for"
+  },
+  {
+   "doc": "d062",
+   "sent": 3,
+   "basis": "translation",
+   "tokens": [
+    "netu",
+    "tsukumur",
+    "godotsu",
+    "ki",
+    "yafoyoga",
+    "goyusat"
+   ],
+   "concepts": {
+    "subject": null,
+    "predicate": "give",
+    "object": "oil"
+   },
+   "complete_source": false,
+   "corpus_translated": 30,
+   "roles": {
+    "subject": {
+     "absent_in_translation": true
+    },
+    "predicate": {
+     "candidates": [
+      {
+       "position": 5,
+       "token": "goyusat",
+       "p": 1.0
+      },
+      {
+       "position": 2,
+       "token": "godotsu",
+       "p": 0.0
+      },
+      {
+       "position": 4,
+       "token": "yafoyoga",
+       "p": 0.0
+      },
+      {
+       "position": 0,
+       "token": "netu",
+       "p": 0.0
+      },
+      {
+       "position": 3,
+       "token": "ki",
+       "p": 0.0
+      }
+     ]
+    },
+    "object": {
+     "candidates": [
+      {
+       "position": 4,
+       "token": "yafoyoga",
+       "p": 0.5431
+      },
+      {
+       "position": 1,
+       "token": "tsukumur",
+       "p": 0.0003
+      },
+      {
+       "position": 2,
+       "token": "godotsu",
+       "p": 0.0001
+      },
+      {
+       "position": 0,
+       "token": "netu",
+       "p": 0.0001
+      },
+      {
+       "position": 3,
+       "token": "ki",
+       "p": 0.0
+      }
+     ],
+     "p_not_expressed": 0.4564
+    }
+   },
+   "confidence": 0.0,
+   "restart_agreement": "0/3",
+   "alternatives": [],
+   "triple": null,
+   "status": "undetermined",
+   "reason_code": "incomplete_translation",
+   "reason": "translation lacks subject or object, so no complete triple is asked for"
+  },
+  {
+   "doc": "d066",
+   "sent": 5,
+   "basis": "translation",
+   "tokens": [
+    "rilohahsu",
+    "[…]",
+    "yepeyipis"
+   ],
+   "concepts": {
+    "subject": "carry",
+    "predicate": "hear",
+    "object": null
+   },
+   "complete_source": false,
+   "corpus_translated": 30,
+   "roles": {
+    "subject": {
+     "candidates": [
+      {
+       "position": 0,
+       "token": "rilohahsu",
+       "p": 0.0029
+      },
+      {
+       "position": 2,
+       "token": "yepeyipis",
+       "p": 0.0
+      }
+     ],
+     "p_not_expressed": 0.9971
+    },
+    "predicate": {
+     "candidates": [
+      {
+       "position": 2,
+       "token": "yepeyipis",
+       "p": 0.9979
+      },
+      {
+       "position": 0,
+       "token": "rilohahsu",
+       "p": 0.0021
+      }
+     ]
+    },
+    "object": {
+     "absent_in_translation": true
+    }
+   },
+   "confidence": 0.0,
+   "restart_agreement": "0/3",
+   "alternatives": [],
+   "triple": null,
+   "status": "undetermined",
+   "reason_code": "incomplete_translation",
+   "reason": "translation lacks subject or object, so no complete triple is asked for"
+  },
+  {
+   "doc": "d070",
+   "sent": 5,
+   "basis": "translation",
+   "tokens": [
+    "tine",
+    "ragege",
+    "nufiset"
+   ],
+   "concepts": {
+    "subject": null,
+    "predicate": "count",
+    "object": null
+   },
+   "complete_source": false,
+   "corpus_translated": 30,
+   "roles": {
+    "subject": {
+     "absent_in_translation": true
+    },
+    "predicate": {
+     "candidates": [
+      {
+       "position": 2,
+       "token": "nufiset",
+       "p": 1.0
+      },
+      {
+       "position": 0,
+       "token": "tine",
+       "p": 0.0
+      },
+      {
+       "position": 1,
+       "token": "ragege",
+       "p": 0.0
+      }
+     ]
+    },
+    "object": {
+     "absent_in_translation": true
+    }
+   },
+   "confidence": 0.0,
+   "restart_agreement": "0/3",
+   "alternatives": [],
+   "triple": null,
+   "status": "undetermined",
+   "reason_code": "incomplete_translation",
+   "reason": "translation lacks subject or object, so no complete triple is asked for"
+  },
+  {
+   "doc": "d072",
+   "sent": 0,
+   "basis": "translation",
+   "tokens": [
+    "vari",
+    "kehe",
+    "honugedi",
+    "godotsu",
+    "tso",
+    "luseyemi",
+    "hejussat"
+   ],
+   "concepts": {
+    "subject": null,
+    "predicate": "pay",
+    "object": "bread"
+   },
+   "complete_source": false,
+   "corpus_translated": 30,
+   "roles": {
+    "subject": {
+     "absent_in_translation": true
+    },
+    "predicate": {
+     "candidates": [
+      {
+       "position": 6,
+       "token": "hejussat",
+       "p": 1.0
+      },
+      {
+       "position": 3,
+       "token": "godotsu",
+       "p": 0.0
+      },
+      {
+       "position": 4,
+       "token": "tso",
+       "p": 0.0
+      },
+      {
+       "position": 5,
+       "token": "luseyemi",
+       "p": 0.0
+      },
+      {
+       "position": 0,
+       "token": "vari",
+       "p": 0.0
+      }
+     ]
+    },
+    "object": {
+     "candidates": [
+      {
+       "position": 5,
+       "token": "luseyemi",
+       "p": 0.9743
+      },
+      {
+       "position": 4,
+       "token": "tso",
+       "p": 0.0
+      },
+      {
+       "position": 0,
+       "token": "vari",
+       "p": 0.0
+      },
+      {
+       "position": 2,
+       "token": "honugedi",
+       "p": 0.0
+      },
+      {
+       "position": 3,
+       "token": "godotsu",
+       "p": 0.0
+      }
+     ],
+     "p_not_expressed": 0.0257
+    }
+   },
+   "confidence": 0.0,
+   "restart_agreement": "0/3",
+   "alternatives": [],
+   "triple": null,
+   "status": "undetermined",
+   "reason_code": "incomplete_translation",
+   "reason": "translation lacks subject or object, so no complete triple is asked for"
+  },
+  {
+   "doc": "d074",
+   "sent": 5,
+   "basis": "translation",
+   "tokens": [
+    "lipaza",
+    "hanigudu",
+    "sukan",
+    "henusumu",
+    "petokahug"
+   ],
+   "concepts": {
+    "subject": "P13",
+    "predicate": "bring",
+    "object": "goat"
+   },
+   "complete_source": true,
+   "corpus_translated": 30,
+   "roles": {
+    "subject": {
+     "candidates": [
+      {
+       "position": 0,
+       "token": "lipaza",
+       "p": 1.0
+      },
+      {
+       "position": 2,
+       "token": "sukan",
+       "p": 0.0
+      },
+      {
+       "position": 1,
+       "token": "hanigudu",
+       "p": 0.0
+      },
+      {
+       "position": 3,
+       "token": "henusumu",
+       "p": 0.0
+      },
+      {
+       "position": 4,
+       "token": "petokahug",
+       "p": 0.0
+      }
+     ],
+     "p_not_expressed": 0.0
+    },
+    "predicate": {
+     "candidates": [
+      {
+       "position": 4,
+       "token": "petokahug",
+       "p": 1.0
+      },
+      {
+       "position": 1,
+       "token": "hanigudu",
+       "p": 0.0
+      },
+      {
+       "position": 3,
+       "token": "henusumu",
+       "p": 0.0
+      },
+      {
+       "position": 2,
+       "token": "sukan",
+       "p": 0.0
+      },
+      {
+       "position": 0,
+       "token": "lipaza",
+       "p": 0.0
+      }
+     ]
+    },
+    "object": {
+     "candidates": [
+      {
+       "position": 3,
+       "token": "henusumu",
+       "p": 0.3659
+      },
+      {
+       "position": 1,
+       "token": "hanigudu",
+       "p": 0.0002
+      },
+      {
+       "position": 2,
+       "token": "sukan",
+       "p": 0.0002
+      },
+      {
+       "position": 4,
+       "token": "petokahug",
+       "p": 0.0
+      },
+      {
+       "position": 0,
+       "token": "lipaza",
+       "p": 0.0
+      }
+     ],
+     "p_not_expressed": 0.6337
+    }
+   },
+   "confidence": 0.3659,
+   "restart_agreement": "3/3",
+   "alternatives": [
+    {
+     "positions": [
+      0,
+      4,
+      3
+     ],
+     "p": 0.3659
+    },
+    {
+     "positions": [
+      0,
+      4,
+      1
+     ],
+     "p": 0.0002
+    },
+    {
+     "positions": [
+      0,
+      4,
+      2
+     ],
+     "p": 0.0002
+    }
+   ],
+   "evidence": {
+    "subject": {
+     "lexical_mass": 2.0,
+     "concept_mass": 2.0,
+     "lexical_ratio": 4857.005,
+     "emission_ratio": 34323.332,
+     "anchor": 0.0
+    },
+    "predicate": {
+     "lexical_mass": 0.0,
+     "concept_mass": 4.0,
+     "lexical_ratio": 0.2,
+     "emission_ratio": 1135.265,
+     "anchor": 0.0
+    },
+    "object": {
+     "lexical_mass": 0.0,
+     "concept_mass": 0.0,
+     "lexical_ratio": 1.0,
+     "emission_ratio": 0.335,
+     "anchor": 0.0
+    }
+   },
+   "calibrated_confidence": 0.2978,
+   "triple": null,
+   "best_guess": [
+    0,
+    4,
+    3
+   ],
+   "status": "undetermined",
+   "reason_code": "below_threshold",
+   "reason": "calibrated confidence 0.30 below threshold 0.45"
+  },
+  {
+   "doc": "d075",
+   "sent": 1,
+   "basis": "translation",
+   "tokens": [
+    "fudugu",
+    "[…]",
+    "yimoug"
+   ],
+   "concepts": {
+    "subject": "priest",
+    "predicate": "pray",
+    "object": null
+   },
+   "complete_source": false,
+   "corpus_translated": 30,
+   "roles": {
+    "subject": {
+     "candidates": [
+      {
+       "position": 0,
+       "token": "fudugu",
+       "p": 0.0129
+      },
+      {
+       "position": 2,
+       "token": "yimoug",
+       "p": 0.0
+      }
+     ],
+     "p_not_expressed": 0.9871
+    },
+    "predicate": {
+     "candidates": [
+      {
+       "position": 2,
+       "token": "yimoug",
+       "p": 1.0
+      },
+      {
+       "position": 0,
+       "token": "fudugu",
+       "p": 0.0
+      }
+     ]
+    },
+    "object": {
+     "absent_in_translation": true
+    }
+   },
+   "confidence": 0.0,
+   "restart_agreement": "0/3",
+   "alternatives": [],
+   "triple": null,
+   "status": "undetermined",
+   "reason_code": "incomplete_translation",
+   "reason": "translation lacks subject or object, so no complete triple is asked for"
+  },
+  {
+   "doc": "d086",
+   "sent": 1,
+   "basis": "translation",
+   "tokens": [
+    "pudugu",
+    "sorira",
+    "dihunimi",
+    "tusetsset"
+   ],
+   "concepts": {
+    "subject": "P15",
+    "predicate": "conquer",
+    "object": null
+   },
+   "complete_source": false,
+   "corpus_translated": 30,
+   "roles": {
+    "subject": {
+     "candidates": [
+      {
+       "position": 1,
+       "token": "sorira",
+       "p": 0.0367
+      },
+      {
+       "position": 2,
+       "token": "dihunimi",
+       "p": 0.0046
+      },
+      {
+       "position": 0,
+       "token": "pudugu",
+       "p": 0.0011
+      },
+      {
+       "position": 3,
+       "token": "tusetsset",
+       "p": 0.0
+      }
+     ],
+     "p_not_expressed": 0.9575
+    },
+    "predicate": {
+     "candidates": [
+      {
+       "position": 3,
+       "token": "tusetsset",
+       "p": 1.0
+      },
+      {
+       "position": 2,
+       "token": "dihunimi",
+       "p": 0.0
+      },
+      {
+       "position": 0,
+       "token": "pudugu",
+       "p": 0.0
+      },
+      {
+       "position": 1,
+       "token": "sorira",
+       "p": 0.0
+      }
+     ]
+    },
+    "object": {
+     "absent_in_translation": true
+    }
+   },
+   "confidence": 0.0,
+   "restart_agreement": "0/3",
+   "alternatives": [],
+   "triple": null,
+   "status": "undetermined",
+   "reason_code": "incomplete_translation",
+   "reason": "translation lacks subject or object, so no complete triple is asked for"
+  },
+  {
+   "doc": "d089",
+   "sent": 0,
+   "basis": "translation",
+   "tokens": [
+    "napoxkun",
+    "zanilom",
+    "xonugedi",
+    "zu",
+    "du",
+    "kutumu",
+    "petosat"
+   ],
+   "concepts": {
+    "subject": null,
+    "predicate": "bring",
+    "object": "sheep"
+   },
+   "complete_source": false,
+   "corpus_translated": 30,
+   "roles": {
+    "subject": {
+     "absent_in_translation": true
+    },
+    "predicate": {
+     "candidates": [
+      {
+       "position": 6,
+       "token": "petosat",
+       "p": 1.0
+      },
+      {
+       "position": 3,
+       "token": "zu",
+       "p": 0.0
+      },
+      {
+       "position": 1,
+       "token": "zanilom",
+       "p": 0.0
+      },
+      {
+       "position": 2,
+       "token": "xonugedi",
+       "p": 0.0
+      },
+      {
+       "position": 4,
+       "token": "du",
+       "p": 0.0
+      }
+     ]
+    },
+    "object": {
+     "candidates": [
+      {
+       "position": 5,
+       "token": "kutumu",
+       "p": 0.9999
+      },
+      {
+       "position": 2,
+       "token": "xonugedi",
+       "p": 0.0
+      },
+      {
+       "position": 1,
+       "token": "zanilom",
+       "p": 0.0
+      },
+      {
+       "position": 0,
+       "token": "napoxkun",
+       "p": 0.0
+      },
+      {
+       "position": 4,
+       "token": "du",
+       "p": 0.0
+      }
+     ],
+     "p_not_expressed": 0.0001
+    }
+   },
+   "confidence": 0.0,
+   "restart_agreement": "0/3",
+   "alternatives": [],
+   "triple": null,
+   "status": "undetermined",
+   "reason_code": "incomplete_translation",
+   "reason": "translation lacks subject or object, so no complete triple is asked for"
+  },
+  {
+   "doc": "d089",
+   "sent": 2,
+   "basis": "translation",
+   "tokens": [
+    "yulokonkun",
+    "lipaza",
+    "xonugedi",
+    "lubis",
+    "kutumu",
+    "petosat"
+   ],
+   "concepts": {
+    "subject": "P13",
+    "predicate": "bring",
+    "object": null
+   },
+   "complete_source": false,
+   "corpus_translated": 30,
+   "roles": {
+    "subject": {
+     "candidates": [
+      {
+       "position": 1,
+       "token": "lipaza",
+       "p": 1.0
+      },
+      {
+       "position": 3,
+       "token": "lubis",
+       "p": 0.0
+      },
+      {
+       "position": 4,
+       "token": "kutumu",
+       "p": 0.0
+      },
+      {
+       "position": 2,
+       "token": "xonugedi",
+       "p": 0.0
+      },
+      {
+       "position": 0,
+       "token": "yulokonkun",
+       "p": 0.0
+      }
+     ],
+     "p_not_expressed": 0.0
+    },
+    "predicate": {
+     "candidates": [
+      {
+       "position": 5,
+       "token": "petosat",
+       "p": 1.0
+      },
+      {
+       "position": 2,
+       "token": "xonugedi",
+       "p": 0.0
+      },
+      {
+       "position": 3,
+       "token": "lubis",
+       "p": 0.0
+      },
+      {
+       "position": 0,
+       "token": "yulokonkun",
+       "p": 0.0
+      },
+      {
+       "position": 4,
+       "token": "kutumu",
+       "p": 0.0
+      }
+     ]
+    },
+    "object": {
+     "absent_in_translation": true
+    }
+   },
+   "confidence": 0.0,
+   "restart_agreement": "0/3",
+   "alternatives": [],
+   "triple": null,
+   "status": "undetermined",
+   "reason_code": "incomplete_translation",
+   "reason": "translation lacks subject or object, so no complete triple is asked for"
+  },
+  {
+   "doc": "d098",
+   "sent": 5,
+   "basis": "translation",
+   "tokens": [
+    "getimuy",
+    "pugurismi",
+    "sipeyoyu"
+   ],
+   "concepts": {
+    "subject": null,
+    "predicate": "judge_v",
+    "object": null
+   },
+   "complete_source": false,
+   "corpus_translated": 30,
+   "roles": {
+    "subject": {
+     "absent_in_translation": true
+    },
+    "predicate": {
+     "candidates": [
+      {
+       "position": 2,
+       "token": "sipeyoyu",
+       "p": 0.9332
+      },
+      {
+       "position": 1,
+       "token": "pugurismi",
+       "p": 0.0584
+      },
+      {
+       "position": 0,
+       "token": "getimuy",
+       "p": 0.0083
+      }
+     ]
+    },
+    "object": {
+     "absent_in_translation": true
+    }
+   },
+   "confidence": 0.0,
+   "restart_agreement": "0/3",
+   "alternatives": [],
+   "triple": null,
+   "status": "undetermined",
+   "reason_code": "incomplete_translation",
+   "reason": "translation lacks subject or object, so no complete triple is asked for"
+  },
+  {
+   "doc": "d098",
+   "sent": 12,
+   "basis": "translation",
+   "tokens": [
+    "nid",
+    "durakor",
+    "rosamu",
+    "tozogug"
+   ],
+   "concepts": {
+    "subject": "servant",
+    "predicate": "buy",
+    "object": "sword"
+   },
+   "complete_source": true,
+   "corpus_translated": 30,
+   "roles": {
+    "subject": {
+     "candidates": [
+      {
+       "position": 1,
+       "token": "durakor",
+       "p": 1.0
+      },
+      {
+       "position": 0,
+       "token": "nid",
+       "p": 0.0
+      },
+      {
+       "position": 2,
+       "token": "rosamu",
+       "p": 0.0
+      },
+      {
+       "position": 3,
+       "token": "tozogug",
+       "p": 0.0
+      }
+     ],
+     "p_not_expressed": 0.0
+    },
+    "predicate": {
+     "candidates": [
+      {
+       "position": 3,
+       "token": "tozogug",
+       "p": 1.0
+      },
+      {
+       "position": 2,
+       "token": "rosamu",
+       "p": 0.0
+      },
+      {
+       "position": 0,
+       "token": "nid",
+       "p": 0.0
+      },
+      {
+       "position": 1,
+       "token": "durakor",
+       "p": 0.0
+      }
+     ]
+    },
+    "object": {
+     "candidates": [
+      {
+       "position": 2,
+       "token": "rosamu",
+       "p": 0.6967
+      },
+      {
+       "position": 0,
+       "token": "nid",
+       "p": 0.0
+      },
+      {
+       "position": 3,
+       "token": "tozogug",
+       "p": 0.0
+      },
+      {
+       "position": 1,
+       "token": "durakor",
+       "p": 0.0
+      }
+     ],
+     "p_not_expressed": 0.3033
+    }
+   },
+   "confidence": 0.6967,
+   "restart_agreement": "3/3",
+   "alternatives": [
+    {
+     "positions": [
+      1,
+      3,
+      2
+     ],
+     "p": 0.6967
+    }
+   ],
+   "evidence": {
+    "subject": {
+     "lexical_mass": 1.0,
+     "concept_mass": 1.0,
+     "lexical_ratio": 680.313,
+     "emission_ratio": 1098.677,
+     "anchor": 0.0
+    },
+    "predicate": {
+     "lexical_mass": 0.0,
+     "concept_mass": 0.0,
+     "lexical_ratio": 1.0,
+     "emission_ratio": 25.616,
+     "anchor": 0.0
+    },
+    "object": {
+     "lexical_mass": 0.0,
+     "concept_mass": 0.0,
+     "lexical_ratio": 1.0,
+     "emission_ratio": 2.483,
+     "anchor": 0.0
+    }
+   },
+   "calibrated_confidence": 0.4132,
+   "triple": null,
+   "best_guess": [
+    1,
+    3,
+    2
+   ],
+   "status": "undetermined",
+   "reason_code": "below_threshold",
+   "reason": "calibrated confidence 0.41 below threshold 0.45"
+  },
+  {
+   "doc": "d101",
+   "sent": 0,
+   "basis": "translation",
+   "tokens": [
+    "vari",
+    "time",
+    "lavedi",
+    "logaug"
+   ],
+   "concepts": {
+    "subject": "P04",
+    "predicate": "write",
+    "object": null
+   },
+   "complete_source": false,
+   "corpus_translated": 30,
+   "roles": {
+    "subject": {
+     "candidates": [
+      {
+       "position": 1,
+       "token": "time",
+       "p": 0.017
+      },
+      {
+       "position": 2,
+       "token": "lavedi",
+       "p": 0.0025
+      },
+      {
+       "position": 0,
+       "token": "vari",
+       "p": 0.002
+      },
+      {
+       "position": 3,
+       "token": "logaug",
+       "p": 0.0
+      }
+     ],
+     "p_not_expressed": 0.9784
+    },
+    "predicate": {
+     "candidates": [
+      {
+       "position": 3,
+       "token": "logaug",
+       "p": 1.0
+      },
+      {
+       "position": 2,
+       "token": "lavedi",
+       "p": 0.0
+      },
+      {
+       "position": 1,
+       "token": "time",
+       "p": 0.0
+      },
+      {
+       "position": 0,
+       "token": "vari",
+       "p": 0.0
+      }
+     ]
+    },
+    "object": {
+     "absent_in_translation": true
+    }
+   },
+   "confidence": 0.0,
+   "restart_agreement": "0/3",
+   "alternatives": [],
+   "triple": null,
+   "status": "undetermined",
+   "reason_code": "incomplete_translation",
+   "reason": "translation lacks subject or object, so no complete triple is asked for"
+  },
+  {
+   "doc": "d102",
+   "sent": 3,
+   "basis": "translation",
+   "tokens": [
+    "magesakun",
+    "kehe",
+    "luviszu",
+    "ki",
+    "kutuga",
+    "gojusat"
+   ],
+   "concepts": {
+    "subject": "P10",
+    "predicate": "give",
+    "object": null
+   },
+   "complete_source": false,
+   "corpus_translated": 30,
+   "roles": {
+    "subject": {
+     "candidates": [
+      {
+       "position": 4,
+       "token": "kutuga",
+       "p": 0.001
+      },
+      {
+       "position": 3,
+       "token": "ki",
+       "p": 0.0003
+      },
+      {
+       "position": 2,
+       "token": "luviszu",
+       "p": 0.0001
+      },
+      {
+       "position": 1,
+       "token": "kehe",
+       "p": 0.0001
+      },
+      {
+       "position": 0,
+       "token": "magesakun",
+       "p": 0.0
+      }
+     ],
+     "p_not_expressed": 0.9985
+    },
+    "predicate": {
+     "candidates": [
+      {
+       "position": 5,
+       "token": "gojusat",
+       "p": 1.0
+      },
+      {
+       "position": 2,
+       "token": "luviszu",
+       "p": 0.0
+      },
+      {
+       "position": 1,
+       "token": "kehe",
+       "p": 0.0
+      },
+      {
+       "position": 4,
+       "token": "kutuga",
+       "p": 0.0
+      },
+      {
+       "position": 3,
+       "token": "ki",
+       "p": 0.0
+      }
+     ]
+    },
+    "object": {
+     "absent_in_translation": true
+    }
+   },
+   "confidence": 0.0,
+   "restart_agreement": "0/3",
+   "alternatives": [],
+   "triple": null,
+   "status": "undetermined",
+   "reason_code": "incomplete_translation",
+   "reason": "translation lacks subject or object, so no complete triple is asked for"
+  },
+  {
+   "doc": "d110",
+   "sent": 5,
+   "basis": "translation",
+   "tokens": [
+    "puyilahuts",
+    "viri",
+    "tine",
+    "tsitapemi",
+    "vugusat"
+   ],
+   "concepts": {
+    "subject": null,
+    "predicate": "see",
+    "object": "road"
+   },
+   "complete_source": false,
+   "corpus_translated": 30,
+   "roles": {
+    "subject": {
+     "absent_in_translation": true
+    },
+    "predicate": {
+     "candidates": [
+      {
+       "position": 4,
+       "token": "vugusat",
+       "p": 1.0
+      },
+      {
+       "position": 0,
+       "token": "puyilahuts",
+       "p": 0.0
+      },
+      {
+       "position": 2,
+       "token": "tine",
+       "p": 0.0
+      },
+      {
+       "position": 1,
+       "token": "viri",
+       "p": 0.0
+      },
+      {
+       "position": 3,
+       "token": "tsitapemi",
+       "p": 0.0
+      }
+     ]
+    },
+    "object": {
+     "candidates": [
+      {
+       "position": 3,
+       "token": "tsitapemi",
+       "p": 1.0
+      },
+      {
+       "position": 2,
+       "token": "tine",
+       "p": 0.0
+      },
+      {
+       "position": 1,
+       "token": "viri",
+       "p": 0.0
+      },
+      {
+       "position": 0,
+       "token": "puyilahuts",
+       "p": 0.0
+      },
+      {
+       "position": 4,
+       "token": "vugusat",
+       "p": 0.0
+      }
+     ],
+     "p_not_expressed": 0.0
+    }
+   },
+   "confidence": 0.0,
+   "restart_agreement": "0/3",
+   "alternatives": [],
+   "triple": null,
+   "status": "undetermined",
+   "reason_code": "incomplete_translation",
+   "reason": "translation lacks subject or object, so no complete triple is asked for"
+  },
+  {
+   "doc": "d124",
+   "sent": 7,
+   "basis": "translation",
+   "tokens": [
+    "jili",
+    "zu",
+    "du",
+    "zasomu",
+    "gojuju"
+   ],
+   "concepts": {
+    "subject": "farmer",
+    "predicate": "give",
+    "object": null
+   },
+   "complete_source": false,
+   "corpus_translated": 30,
+   "roles": {
+    "subject": {
+     "candidates": [
+      {
+       "position": 0,
+       "token": "jili",
+       "p": 0.5595
+      },
+      {
+       "position": 2,
+       "token": "du",
+       "p": 0.001
+      },
+      {
+       "position": 1,
+       "token": "zu",
+       "p": 0.0004
+      },
+      {
+       "position": 3,
+       "token": "zasomu",
+       "p": 0.0002
+      },
+      {
+       "position": 4,
+       "token": "gojuju",
+       "p": 0.0
+      }
+     ],
+     "p_not_expressed": 0.4389
+    },
+    "predicate": {
+     "candidates": [
+      {
+       "position": 4,
+       "token": "gojuju",
+       "p": 1.0
+      },
+      {
+       "position": 3,
+       "token": "zasomu",
+       "p": 0.0
+      },
+      {
+       "position": 1,
+       "token": "zu",
+       "p": 0.0
+      },
+      {
+       "position": 2,
+       "token": "du",
+       "p": 0.0
+      },
+      {
+       "position": 0,
+       "token": "jili",
+       "p": 0.0
+      }
+     ]
+    },
+    "object": {
+     "absent_in_translation": true
+    }
+   },
+   "confidence": 0.0,
+   "restart_agreement": "0/3",
+   "alternatives": [],
+   "triple": null,
+   "status": "undetermined",
+   "reason_code": "incomplete_translation",
+   "reason": "translation lacks subject or object, so no complete triple is asked for"
+  },
+  {
+   "doc": "d129",
+   "sent": 8,
+   "basis": "translation",
+   "tokens": [
+    "hanigukun",
+    "mamieh",
+    "ludige",
+    "loturkahug"
+   ],
+   "concepts": {
+    "subject": null,
+    "predicate": "sell",
+    "object": null
+   },
+   "complete_source": false,
+   "corpus_translated": 30,
+   "roles": {
+    "subject": {
+     "absent_in_translation": true
+    },
+    "predicate": {
+     "candidates": [
+      {
+       "position": 3,
+       "token": "loturkahug",
+       "p": 1.0
+      },
+      {
+       "position": 2,
+       "token": "ludige",
+       "p": 0.0
+      },
+      {
+       "position": 1,
+       "token": "mamieh",
+       "p": 0.0
+      },
+      {
+       "position": 0,
+       "token": "hanigukun",
+       "p": 0.0
+      }
+     ]
+    },
+    "object": {
+     "absent_in_translation": true
+    }
+   },
+   "confidence": 0.0,
+   "restart_agreement": "0/3",
+   "alternatives": [],
+   "triple": null,
+   "status": "undetermined",
+   "reason_code": "incomplete_translation",
+   "reason": "translation lacks subject or object, so no complete triple is asked for"
+  },
+  {
+   "doc": "d130",
+   "sent": 6,
+   "basis": "translation",
+   "tokens": [
+    "biri",
+    "zanilom",
+    "tsitapemi",
+    "tusetsset"
+   ],
+   "concepts": {
+    "subject": "P01",
+    "predicate": "conquer",
+    "object": "road"
+   },
+   "complete_source": true,
+   "corpus_translated": 30,
+   "roles": {
+    "subject": {
+     "candidates": [
+      {
+       "position": 1,
+       "token": "zanilom",
+       "p": 0.0076
+      },
+      {
+       "position": 0,
+       "token": "biri",
+       "p": 0.0009
+      },
+      {
+       "position": 2,
+       "token": "tsitapemi",
+       "p": 0.0
+      },
+      {
+       "position": 3,
+       "token": "tusetsset",
+       "p": 0.0
+      }
+     ],
+     "p_not_expressed": 0.9914
+    },
+    "predicate": {
+     "candidates": [
+      {
+       "position": 3,
+       "token": "tusetsset",
+       "p": 1.0
+      },
+      {
+       "position": 1,
+       "token": "zanilom",
+       "p": 0.0
+      },
+      {
+       "position": 0,
+       "token": "biri",
+       "p": 0.0
+      },
+      {
+       "position": 2,
+       "token": "tsitapemi",
+       "p": 0.0
+      }
+     ]
+    },
+    "object": {
+     "candidates": [
+      {
+       "position": 2,
+       "token": "tsitapemi",
+       "p": 1.0
+      },
+      {
+       "position": 1,
+       "token": "zanilom",
+       "p": 0.0
+      },
+      {
+       "position": 0,
+       "token": "biri",
+       "p": 0.0
+      },
+      {
+       "position": 3,
+       "token": "tusetsset",
+       "p": 0.0
+      }
+     ],
+     "p_not_expressed": 0.0
+    }
+   },
+   "confidence": 0.0076,
+   "restart_agreement": "3/3",
+   "alternatives": [
+    {
+     "positions": [
+      1,
+      3,
+      2
+     ],
+     "p": 0.0076
+    },
+    {
+     "positions": [
+      0,
+      3,
+      2
+     ],
+     "p": 0.0009
+    }
+   ],
+   "evidence": {
+    "subject": {
+     "lexical_mass": 0.0,
+     "concept_mass": 0.0,
+     "lexical_ratio": 1.0,
+     "emission_ratio": 0.148,
+     "anchor": 0.0
+    },
+    "predicate": {
+     "lexical_mass": 1.0,
+     "concept_mass": 1.0,
+     "lexical_ratio": 1795.712,
+     "emission_ratio": 118.296,
+     "anchor": 0.0
+    },
+    "object": {
+     "lexical_mass": 1.0,
+     "concept_mass": 1.0,
+     "lexical_ratio": 4894.759,
+     "emission_ratio": 173.799,
+     "anchor": 0.0
+    }
+   },
+   "calibrated_confidence": 0.1096,
+   "triple": null,
+   "best_guess": [
+    1,
+    3,
+    2
+   ],
+   "status": "undetermined",
+   "reason_code": "below_threshold",
+   "reason": "calibrated confidence 0.11 below threshold 0.45"
+  }
+ ],
+ "structural_hypotheses": [
+  {
+   "doc": "d003",
+   "sent": 0,
+   "basis": "structure",
+   "tokens": [
+    "nid",
+    "durakor",
+    "sutsoga",
+    "totsogug"
+   ],
+   "complete_source": true,
+   "corpus_translated": 30,
+   "roles": {
+    "subject": {
+     "candidates": [
+      {
+       "position": 1,
+       "token": "durakor",
+       "p": 0.9985
+      },
+      {
+       "position": 0,
+       "token": "nid",
+       "p": 0.0
+      },
+      {
+       "position": 2,
+       "token": "sutsoga",
+       "p": 0.0
+      },
+      {
+       "position": 3,
+       "token": "totsogug",
+       "p": 0.0
+      }
+     ],
+     "p_not_expressed": 0.0015
+    },
+    "predicate": {
+     "candidates": [
+      {
+       "position": 3,
+       "token": "totsogug",
+       "p": 1.0
+      },
+      {
+       "position": 2,
+       "token": "sutsoga",
+       "p": 0.0
+      },
+      {
+       "position": 0,
+       "token": "nid",
+       "p": 0.0
+      },
+      {
+       "position": 1,
+       "token": "durakor",
+       "p": 0.0
+      }
+     ]
+    },
+    "object": {
+     "candidates": [
+      {
+       "position": 2,
+       "token": "sutsoga",
+       "p": 0.9927
+      },
+      {
+       "position": 0,
+       "token": "nid",
+       "p": 0.0
+      },
+      {
+       "position": 1,
+       "token": "durakor",
+       "p": 0.0
+      },
+      {
+       "position": 3,
+       "token": "totsogug",
+       "p": 0.0
+      }
+     ],
+     "p_not_expressed": 0.0073
+    }
+   },
+   "confidence": 0.9912,
+   "restart_agreement": "3/3",
+   "alternatives": [
+    {
+     "positions": [
+      1,
+      3,
+      2
+     ],
+     "p": 0.9912
+    }
+   ],
+   "calibrated_confidence": 0.4868,
+   "triple": {
+    "subject": 1,
+    "predicate": 3,
+    "object": 2
+   },
+   "triple_tokens": {
+    "subject": "durakor",
+    "predicate": "totsogug",
+    "object": "sutsoga"
+   },
+   "status": "claimed",
+   "reason_code": "claimed",
+   "reason": "confidence at or above threshold"
+  },
+  {
+   "doc": "d003",
+   "sent": 4,
+   "basis": "structure",
+   "tokens": [
+    "nid",
+    "jili",
+    "jafojoga",
+    "totsogug"
+   ],
+   "complete_source": true,
+   "corpus_translated": 30,
+   "roles": {
+    "subject": {
+     "candidates": [
+      {
+       "position": 1,
+       "token": "jili",
+       "p": 0.9866
+      },
+      {
+       "position": 0,
+       "token": "nid",
+       "p": 0.0
+      },
+      {
+       "position": 2,
+       "token": "jafojoga",
+       "p": 0.0
+      },
+      {
+       "position": 3,
+       "token": "totsogug",
+       "p": 0.0
+      }
+     ],
+     "p_not_expressed": 0.0134
+    },
+    "predicate": {
+     "candidates": [
+      {
+       "position": 3,
+       "token": "totsogug",
+       "p": 1.0
+      },
+      {
+       "position": 2,
+       "token": "jafojoga",
+       "p": 0.0
+      },
+      {
+       "position": 0,
+       "token": "nid",
+       "p": 0.0
+      },
+      {
+       "position": 1,
+       "token": "jili",
+       "p": 0.0
+      }
+     ]
+    },
+    "object": {
+     "candidates": [
+      {
+       "position": 2,
+       "token": "jafojoga",
+       "p": 0.9762
+      },
+      {
+       "position": 1,
+       "token": "jili",
+       "p": 0.0
+      },
+      {
+       "position": 0,
+       "token": "nid",
+       "p": 0.0
+      },
+      {
+       "position": 3,
+       "token": "totsogug",
+       "p": 0.0
+      }
+     ],
+     "p_not_expressed": 0.0238
+    }
+   },
+   "confidence": 0.9632,
+   "restart_agreement": "3/3",
+   "alternatives": [
+    {
+     "positions": [
+      1,
+      3,
+      2
+     ],
+     "p": 0.9632
+    }
+   ],
+   "calibrated_confidence": 0.4759,
+   "triple": {
+    "subject": 1,
+    "predicate": 3,
+    "object": 2
+   },
+   "triple_tokens": {
+    "subject": "jili",
+    "predicate": "totsogug",
+    "object": "jafojoga"
+   },
+   "status": "claimed",
+   "reason_code": "claimed",
+   "reason": "confidence at or above threshold"
+  },
+  {
+   "doc": "d010",
+   "sent": 4,
+   "basis": "structure",
+   "tokens": [
+    "nid",
+    "durakor",
+    "lusejemi",
+    "loturug"
+   ],
+   "complete_source": true,
+   "corpus_translated": 30,
+   "roles": {
+    "subject": {
+     "candidates": [
+      {
+       "position": 1,
+       "token": "durakor",
+       "p": 0.9994
+      },
+      {
+       "position": 0,
+       "token": "nid",
+       "p": 0.0
+      },
+      {
+       "position": 2,
+       "token": "lusejemi",
+       "p": 0.0
+      },
+      {
+       "position": 3,
+       "token": "loturug",
+       "p": 0.0
+      }
+     ],
+     "p_not_expressed": 0.0006
+    },
+    "predicate": {
+     "candidates": [
+      {
+       "position": 3,
+       "token": "loturug",
+       "p": 1.0
+      },
+      {
+       "position": 2,
+       "token": "lusejemi",
+       "p": 0.0
+      },
+      {
+       "position": 0,
+       "token": "nid",
+       "p": 0.0
+      },
+      {
+       "position": 1,
+       "token": "durakor",
+       "p": 0.0
+      }
+     ]
+    },
+    "object": {
+     "candidates": [
+      {
+       "position": 2,
+       "token": "lusejemi",
+       "p": 0.9988
+      },
+      {
+       "position": 0,
+       "token": "nid",
+       "p": 0.0
+      },
+      {
+       "position": 1,
+       "token": "durakor",
+       "p": 0.0
+      },
+      {
+       "position": 3,
+       "token": "loturug",
+       "p": 0.0
+      }
+     ],
+     "p_not_expressed": 0.0012
+    }
+   },
+   "confidence": 0.9982,
+   "restart_agreement": "3/3",
+   "alternatives": [
+    {
+     "positions": [
+      1,
+      3,
+      2
+     ],
+     "p": 0.9982
+    }
+   ],
+   "calibrated_confidence": 0.4894,
+   "triple": {
+    "subject": 1,
+    "predicate": 3,
+    "object": 2
+   },
+   "triple_tokens": {
+    "subject": "durakor",
+    "predicate": "loturug",
+    "object": "lusejemi"
+   },
+   "status": "claimed",
+   "reason_code": "claimed",
+   "reason": "confidence at or above threshold"
+  },
+  {
+   "doc": "d011",
+   "sent": 4,
+   "basis": "structure",
+   "tokens": [
+    "nid",
+    "durakor",
+    "ludisimi",
+    "huturug"
+   ],
+   "complete_source": true,
+   "corpus_translated": 30,
+   "roles": {
+    "subject": {
+     "candidates": [
+      {
+       "position": 1,
+       "token": "durakor",
+       "p": 0.9999
+      },
+      {
+       "position": 0,
+       "token": "nid",
+       "p": 0.0
+      },
+      {
+       "position": 2,
+       "token": "ludisimi",
+       "p": 0.0
+      },
+      {
+       "position": 3,
+       "token": "huturug",
+       "p": 0.0
+      }
+     ],
+     "p_not_expressed": 0.0001
+    },
+    "predicate": {
+     "candidates": [
+      {
+       "position": 3,
+       "token": "huturug",
+       "p": 1.0
+      },
+      {
+       "position": 0,
+       "token": "nid",
+       "p": 0.0
+      },
+      {
+       "position": 2,
+       "token": "ludisimi",
+       "p": 0.0
+      },
+      {
+       "position": 1,
+       "token": "durakor",
+       "p": 0.0
+      }
+     ]
+    },
+    "object": {
+     "candidates": [
+      {
+       "position": 2,
+       "token": "ludisimi",
+       "p": 0.9989
+      },
+      {
+       "position": 0,
+       "token": "nid",
+       "p": 0.0
+      },
+      {
+       "position": 1,
+       "token": "durakor",
+       "p": 0.0
+      },
+      {
+       "position": 3,
+       "token": "huturug",
+       "p": 0.0
+      }
+     ],
+     "p_not_expressed": 0.0011
+    }
+   },
+   "confidence": 0.9988,
+   "restart_agreement": "3/3",
+   "alternatives": [
+    {
+     "positions": [
+      1,
+      3,
+      2
+     ],
+     "p": 0.9988
+    }
+   ],
+   "calibrated_confidence": 0.4896,
+   "triple": {
+    "subject": 1,
+    "predicate": 3,
+    "object": 2
+   },
+   "triple_tokens": {
+    "subject": "durakor",
+    "predicate": "huturug",
+    "object": "ludisimi"
+   },
+   "status": "claimed",
+   "reason_code": "claimed",
+   "reason": "confidence at or above threshold"
+  },
+  {
+   "doc": "d011",
+   "sent": 10,
+   "basis": "structure",
+   "tokens": [
+    "nid",
+    "yili",
+    "rosamu",
+    "rilohug"
+   ],
+   "complete_source": true,
+   "corpus_translated": 30,
+   "roles": {
+    "subject": {
+     "candidates": [
+      {
+       "position": 1,
+       "token": "yili",
+       "p": 0.9824
+      },
+      {
+       "position": 0,
+       "token": "nid",
+       "p": 0.0006
+      },
+      {
+       "position": 2,
+       "token": "rosamu",
+       "p": 0.0
+      },
+      {
+       "position": 3,
+       "token": "rilohug",
+       "p": 0.0
+      }
+     ],
+     "p_not_expressed": 0.017
+    },
+    "predicate": {
+     "candidates": [
+      {
+       "position": 3,
+       "token": "rilohug",
+       "p": 1.0
+      },
+      {
+       "position": 1,
+       "token": "yili",
+       "p": 0.0
+      },
+      {
+       "position": 0,
+       "token": "nid",
+       "p": 0.0
+      },
+      {
+       "position": 2,
+       "token": "rosamu",
+       "p": 0.0
+      }
+     ]
+    },
+    "object": {
+     "candidates": [
+      {
+       "position": 2,
+       "token": "rosamu",
+       "p": 0.9995
+      },
+      {
+       "position": 0,
+       "token": "nid",
+       "p": 0.0
+      },
+      {
+       "position": 1,
+       "token": "yili",
+       "p": 0.0
+      },
+      {
+       "position": 3,
+       "token": "rilohug",
+       "p": 0.0
+      }
+     ],
+     "p_not_expressed": 0.0005
+    }
+   },
+   "confidence": 0.9819,
+   "restart_agreement": "3/3",
+   "alternatives": [
+    {
+     "positions": [
+      1,
+      3,
+      2
+     ],
+     "p": 0.9819
+    },
+    {
+     "positions": [
+      0,
+      3,
+      2
+     ],
+     "p": 0.0006
+    }
+   ],
+   "calibrated_confidence": 0.4821,
+   "triple": {
+    "subject": 1,
+    "predicate": 3,
+    "object": 2
+   },
+   "triple_tokens": {
+    "subject": "yili",
+    "predicate": "rilohug",
+    "object": "rosamu"
+   },
+   "status": "claimed",
+   "reason_code": "claimed",
+   "reason": "confidence at or above threshold"
+  },
+  {
+   "doc": "d028",
+   "sent": 0,
+   "basis": "structure",
+   "tokens": [
+    "nid",
+    "durakor",
+    "virituzilmi",
+    "kukuug"
+   ],
+   "complete_source": true,
+   "corpus_translated": 30,
+   "roles": {
+    "subject": {
+     "candidates": [
+      {
+       "position": 1,
+       "token": "durakor",
+       "p": 0.9998
+      },
+      {
+       "position": 0,
+       "token": "nid",
+       "p": 0.0
+      },
+      {
+       "position": 2,
+       "token": "virituzilmi",
+       "p": 0.0
+      },
+      {
+       "position": 3,
+       "token": "kukuug",
+       "p": 0.0
+      }
+     ],
+     "p_not_expressed": 0.0002
+    },
+    "predicate": {
+     "candidates": [
+      {
+       "position": 3,
+       "token": "kukuug",
+       "p": 1.0
+      },
+      {
+       "position": 2,
+       "token": "virituzilmi",
+       "p": 0.0
+      },
+      {
+       "position": 0,
+       "token": "nid",
+       "p": 0.0
+      },
+      {
+       "position": 1,
+       "token": "durakor",
+       "p": 0.0
+      }
+     ]
+    },
+    "object": {
+     "candidates": [
+      {
+       "position": 2,
+       "token": "virituzilmi",
+       "p": 0.9305
+      },
+      {
+       "position": 0,
+       "token": "nid",
+       "p": 0.0
+      },
+      {
+       "position": 3,
+       "token": "kukuug",
+       "p": 0.0
+      },
+      {
+       "position": 1,
+       "token": "durakor",
+       "p": 0.0
+      }
+     ],
+     "p_not_expressed": 0.0695
+    }
+   },
+   "confidence": 0.9303,
+   "restart_agreement": "3/3",
+   "alternatives": [
+    {
+     "positions": [
+      1,
+      3,
+      2
+     ],
+     "p": 0.9303
+    }
+   ],
+   "calibrated_confidence": 0.4652,
+   "triple": {
+    "subject": 1,
+    "predicate": 3,
+    "object": 2
+   },
+   "triple_tokens": {
+    "subject": "durakor",
+    "predicate": "kukuug",
+    "object": "virituzilmi"
+   },
+   "status": "claimed",
+   "reason_code": "claimed",
+   "reason": "confidence at or above threshold"
+  },
+  {
+   "doc": "d030",
+   "sent": 7,
+   "basis": "structure",
+   "tokens": [
+    "nid",
+    "jili",
+    "gusumu",
+    "huturug"
+   ],
+   "complete_source": true,
+   "corpus_translated": 30,
+   "roles": {
+    "subject": {
+     "candidates": [
+      {
+       "position": 1,
+       "token": "jili",
+       "p": 0.9982
+      },
+      {
+       "position": 0,
+       "token": "nid",
+       "p": 0.0
+      },
+      {
+       "position": 2,
+       "token": "gusumu",
+       "p": 0.0
+      },
+      {
+       "position": 3,
+       "token": "huturug",
+       "p": 0.0
+      }
+     ],
+     "p_not_expressed": 0.0018
+    },
+    "predicate": {
+     "candidates": [
+      {
+       "position": 3,
+       "token": "huturug",
+       "p": 1.0
+      },
+      {
+       "position": 2,
+       "token": "gusumu",
+       "p": 0.0
+      },
+      {
+       "position": 0,
+       "token": "nid",
+       "p": 0.0
+      },
+      {
+       "position": 1,
+       "token": "jili",
+       "p": 0.0
+      }
+     ]
+    },
+    "object": {
+     "candidates": [
+      {
+       "position": 2,
+       "token": "gusumu",
+       "p": 0.9156
+      },
+      {
+       "position": 0,
+       "token": "nid",
+       "p": 0.0
+      },
+      {
+       "position": 1,
+       "token": "jili",
+       "p": 0.0
+      },
+      {
+       "position": 3,
+       "token": "huturug",
+       "p": 0.0
+      }
+     ],
+     "p_not_expressed": 0.0844
+    }
+   },
+   "confidence": 0.9139,
+   "restart_agreement": "3/3",
+   "alternatives": [
+    {
+     "positions": [
+      1,
+      3,
+      2
+     ],
+     "p": 0.9139
+    }
+   ],
+   "calibrated_confidence": 0.4593,
+   "triple": {
+    "subject": 1,
+    "predicate": 3,
+    "object": 2
+   },
+   "triple_tokens": {
+    "subject": "jili",
+    "predicate": "huturug",
+    "object": "gusumu"
+   },
+   "status": "claimed",
+   "reason_code": "claimed",
+   "reason": "confidence at or above threshold"
+  },
+  {
+   "doc": "d030",
+   "sent": 9,
+   "basis": "structure",
+   "tokens": [
+    "nid",
+    "jili",
+    "zozemi",
+    "mipujaug"
+   ],
+   "complete_source": true,
+   "corpus_translated": 30,
+   "roles": {
+    "subject": {
+     "candidates": [
+      {
+       "position": 1,
+       "token": "jili",
+       "p": 0.9868
+      },
+      {
+       "position": 0,
+       "token": "nid",
+       "p": 0.0
+      },
+      {
+       "position": 2,
+       "token": "zozemi",
+       "p": 0.0
+      },
+      {
+       "position": 3,
+       "token": "mipujaug",
+       "p": 0.0
+      }
+     ],
+     "p_not_expressed": 0.0132
+    },
+    "predicate": {
+     "candidates": [
+      {
+       "position": 3,
+       "token": "mipujaug",
+       "p": 1.0
+      },
+      {
+       "position": 2,
+       "token": "zozemi",
+       "p": 0.0
+      },
+      {
+       "position": 0,
+       "token": "nid",
+       "p": 0.0
+      },
+      {
+       "position": 1,
+       "token": "jili",
+       "p": 0.0
+      }
+     ]
+    },
+    "object": {
+     "candidates": [
+      {
+       "position": 2,
+       "token": "zozemi",
+       "p": 0.9905
+      },
+      {
+       "position": 1,
+       "token": "jili",
+       "p": 0.0
+      },
+      {
+       "position": 0,
+       "token": "nid",
+       "p": 0.0
+      },
+      {
+       "position": 3,
+       "token": "mipujaug",
+       "p": 0.0
+      }
+     ],
+     "p_not_expressed": 0.0095
+    }
+   },
+   "confidence": 0.9774,
+   "restart_agreement": "3/3",
+   "alternatives": [
+    {
+     "positions": [
+      1,
+      3,
+      2
+     ],
+     "p": 0.9774
+    }
+   ],
+   "calibrated_confidence": 0.481,
+   "triple": {
+    "subject": 1,
+    "predicate": 3,
+    "object": 2
+   },
+   "triple_tokens": {
+    "subject": "jili",
+    "predicate": "mipujaug",
+    "object": "zozemi"
+   },
+   "status": "claimed",
+   "reason_code": "claimed",
+   "reason": "confidence at or above threshold"
+  },
+  {
+   "doc": "d033",
+   "sent": 8,
+   "basis": "structure",
+   "tokens": [
+    "suremu",
+    "rosamu",
+    "bugukahju"
+   ],
+   "complete_source": true,
+   "corpus_translated": 30,
+   "roles": {
+    "subject": {
+     "candidates": [
+      {
+       "position": 0,
+       "token": "suremu",
+       "p": 0.9565
+      },
+      {
+       "position": 1,
+       "token": "rosamu",
+       "p": 0.0
+      },
+      {
+       "position": 2,
+       "token": "bugukahju",
+       "p": 0.0
+      }
+     ],
+     "p_not_expressed": 0.0435
+    },
+    "predicate": {
+     "candidates": [
+      {
+       "position": 2,
+       "token": "bugukahju",
+       "p": 1.0
+      },
+      {
+       "position": 0,
+       "token": "suremu",
+       "p": 0.0
+      },
+      {
+       "position": 1,
+       "token": "rosamu",
+       "p": 0.0
+      }
+     ]
+    },
+    "object": {
+     "candidates": [
+      {
+       "position": 1,
+       "token": "rosamu",
+       "p": 0.9977
+      },
+      {
+       "position": 0,
+       "token": "suremu",
+       "p": 0.0
+      },
+      {
+       "position": 2,
+       "token": "bugukahju",
+       "p": 0.0
+      }
+     ],
+     "p_not_expressed": 0.0023
+    }
+   },
+   "confidence": 0.9543,
+   "restart_agreement": "3/3",
+   "alternatives": [
+    {
+     "positions": [
+      0,
+      2,
+      1
+     ],
+     "p": 0.9543
+    }
+   ],
+   "calibrated_confidence": 0.4799,
+   "triple": {
+    "subject": 0,
+    "predicate": 2,
+    "object": 1
+   },
+   "triple_tokens": {
+    "subject": "suremu",
+    "predicate": "bugukahju",
+    "object": "rosamu"
+   },
+   "status": "claimed",
+   "reason_code": "claimed",
+   "reason": "confidence at or above threshold"
+  },
+  {
+   "doc": "d034",
+   "sent": 2,
+   "basis": "structure",
+   "tokens": [
+    "lipaza",
+    "rosamu",
+    "yuzukosat"
+   ],
+   "complete_source": true,
+   "corpus_translated": 30,
+   "roles": {
+    "subject": {
+     "candidates": [
+      {
+       "position": 0,
+       "token": "lipaza",
+       "p": 1.0
+      },
+      {
+       "position": 1,
+       "token": "rosamu",
+       "p": 0.0
+      },
+      {
+       "position": 2,
+       "token": "yuzukosat",
+       "p": 0.0
+      }
+     ],
+     "p_not_expressed": 0.0
+    },
+    "predicate": {
+     "candidates": [
+      {
+       "position": 2,
+       "token": "yuzukosat",
+       "p": 1.0
+      },
+      {
+       "position": 1,
+       "token": "rosamu",
+       "p": 0.0
+      },
+      {
+       "position": 0,
+       "token": "lipaza",
+       "p": 0.0
+      }
+     ]
+    },
+    "object": {
+     "candidates": [
+      {
+       "position": 1,
+       "token": "rosamu",
+       "p": 0.9977
+      },
+      {
+       "position": 2,
+       "token": "yuzukosat",
+       "p": 0.0
+      },
+      {
+       "position": 0,
+       "token": "lipaza",
+       "p": 0.0
+      }
+     ],
+     "p_not_expressed": 0.0023
+    }
+   },
+   "confidence": 0.9977,
+   "restart_agreement": "3/3",
+   "alternatives": [
+    {
+     "positions": [
+      0,
+      2,
+      1
+     ],
+     "p": 0.9977
+    }
+   ],
+   "calibrated_confidence": 0.4986,
+   "triple": {
+    "subject": 0,
+    "predicate": 2,
+    "object": 1
+   },
+   "triple_tokens": {
+    "subject": "lipaza",
+    "predicate": "yuzukosat",
+    "object": "rosamu"
+   },
+   "status": "claimed",
+   "reason_code": "claimed",
+   "reason": "confidence at or above threshold"
+  }
+ ],
+ "summary": {
+  "translated": 30,
+  "claimed": 1,
+  "undetermined": 29,
+  "undetermined_reasons": {
+   "incomplete_translation": 26,
+   "below_threshold": 3
+  },
+  "structural_hypotheses_claimed": 23,
+  "structural_hypotheses_total": 984
+ },
+ "warnings": [],
+ "fit_seconds": 0.33,
+ "structural_hypotheses_note": "truncated for the repository: first 10 claimed of 984 hypotheses; run the command to get all"
+}

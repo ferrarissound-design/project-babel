@@ -1,0 +1,240 @@
+{
+ "rule": "(fixed before the final split is run, docs/PREREG_DECODE_V2.md):\n  tau = the smallest grid value whose LOLO precision over the 19 known languages (seeds 0-2 pooled)\n  is >= 0.60 with at least 30 claims; otherwise the tau with the most correct claims among those with\n  LOLO precision >= 0.50; otherwise 0.5 and the target is reported as not reached.",
+ "chosen": {
+  "tau": 0.45,
+  "claimed": 1146,
+  "correct": 693,
+  "precision": 0.6047
+ },
+ "why": "precision >= 0.60 reached",
+ "lolo_normal": [
+  {
+   "tau": 0.1,
+   "claimed": 5055,
+   "correct": 1551,
+   "precision": 0.3068
+  },
+  {
+   "tau": 0.15,
+   "claimed": 3912,
+   "correct": 1395,
+   "precision": 0.3566
+  },
+  {
+   "tau": 0.2,
+   "claimed": 3225,
+   "correct": 1284,
+   "precision": 0.3981
+  },
+  {
+   "tau": 0.25,
+   "claimed": 2646,
+   "correct": 1152,
+   "precision": 0.4354
+  },
+  {
+   "tau": 0.3,
+   "claimed": 2139,
+   "correct": 1032,
+   "precision": 0.4825
+  },
+  {
+   "tau": 0.35,
+   "claimed": 1734,
+   "correct": 915,
+   "precision": 0.5277
+  },
+  {
+   "tau": 0.4,
+   "claimed": 1464,
+   "correct": 819,
+   "precision": 0.5594
+  },
+  {
+   "tau": 0.45,
+   "claimed": 1146,
+   "correct": 693,
+   "precision": 0.6047
+  },
+  {
+   "tau": 0.5,
+   "claimed": 909,
+   "correct": 576,
+   "precision": 0.6337
+  },
+  {
+   "tau": 0.55,
+   "claimed": 666,
+   "correct": 456,
+   "precision": 0.6847
+  },
+  {
+   "tau": 0.6,
+   "claimed": 510,
+   "correct": 360,
+   "precision": 0.7059
+  },
+  {
+   "tau": 0.65,
+   "claimed": 369,
+   "correct": 273,
+   "precision": 0.7398
+  },
+  {
+   "tau": 0.7,
+   "claimed": 255,
+   "correct": 192,
+   "precision": 0.7529
+  },
+  {
+   "tau": 0.75,
+   "claimed": 174,
+   "correct": 141,
+   "precision": 0.8103
+  },
+  {
+   "tau": 0.8,
+   "claimed": 108,
+   "correct": 90,
+   "precision": 0.8333
+  },
+  {
+   "tau": 0.85,
+   "claimed": 54,
+   "correct": 45,
+   "precision": 0.8333
+  },
+  {
+   "tau": 0.9,
+   "claimed": 0,
+   "correct": 0,
+   "precision": null
+  },
+  {
+   "tau": 0.95,
+   "claimed": 0,
+   "correct": 0,
+   "precision": null
+  }
+ ],
+ "lolo_mismatch": [
+  {
+   "tau": 0.1,
+   "claimed": 819,
+   "correct": 0,
+   "precision": 0.0
+  },
+  {
+   "tau": 0.15,
+   "claimed": 438,
+   "correct": 0,
+   "precision": 0.0
+  },
+  {
+   "tau": 0.2,
+   "claimed": 249,
+   "correct": 0,
+   "precision": 0.0
+  },
+  {
+   "tau": 0.25,
+   "claimed": 162,
+   "correct": 0,
+   "precision": 0.0
+  },
+  {
+   "tau": 0.3,
+   "claimed": 120,
+   "correct": 0,
+   "precision": 0.0
+  },
+  {
+   "tau": 0.35,
+   "claimed": 81,
+   "correct": 0,
+   "precision": 0.0
+  },
+  {
+   "tau": 0.4,
+   "claimed": 45,
+   "correct": 0,
+   "precision": 0.0
+  },
+  {
+   "tau": 0.45,
+   "claimed": 21,
+   "correct": 0,
+   "precision": 0.0
+  },
+  {
+   "tau": 0.5,
+   "claimed": 6,
+   "correct": 0,
+   "precision": 0.0
+  },
+  {
+   "tau": 0.55,
+   "claimed": 6,
+   "correct": 0,
+   "precision": 0.0
+  },
+  {
+   "tau": 0.6,
+   "claimed": 3,
+   "correct": 0,
+   "precision": 0.0
+  },
+  {
+   "tau": 0.65,
+   "claimed": 0,
+   "correct": 0,
+   "precision": null
+  },
+  {
+   "tau": 0.7,
+   "claimed": 0,
+   "correct": 0,
+   "precision": null
+  },
+  {
+   "tau": 0.75,
+   "claimed": 0,
+   "correct": 0,
+   "precision": null
+  },
+  {
+   "tau": 0.8,
+   "claimed": 0,
+   "correct": 0,
+   "precision": null
+  },
+  {
+   "tau": 0.85,
+   "claimed": 0,
+   "correct": 0,
+   "precision": null
+  },
+  {
+   "tau": 0.9,
+   "claimed": 0,
+   "correct": 0,
+   "precision": null
+  },
+  {
+   "tau": 0.95,
+   "claimed": 0,
+   "correct": 0,
+   "precision": null
+  }
+ ],
+ "dev_source_files": {
+  "babel/decipher/morph.py": "81d25b4f9dddbca9a379f83081e59ae3202d12aca439d5d1034724a87daba49e",
+  "babel/decipher/segment.py": "4a7338c52310e6490db425cdc90949a61494ebb36ee71a627c703c4f5bc44c0a",
+  "babel/decode/__init__.py": "81fa68ab452c6288fc3379194204c8dace0ff15ed324d7523c0289cc677501ab",
+  "babel/decode/anchors.py": "2dfa0d9265b91e3f55e1a7df2e7aaa3b77e9c7cf7b36ac11a097f747bd97257e",
+  "babel/decode/calibration.py": "2417dcda5012c1c4ab7ebc4d8a51c73e750a4017d648e850e103c409fdceedec",
+  "babel/decode/engine.py": "69b1c7a3e1d22934461a80dfdb5ecb695a86d7056139e3ba669a4f01a45a3238",
+  "babel/decode/model.py": "33e03471b3d3098aa599cab2d331dea8673d3b4df01649fb8f7d04c0449faf48",
+  "babel/decode/report.py": "455abd08cdc49320674c2d9a134f0dbbe403a36f701b57e7743d510947f488c0"
+ }
+}

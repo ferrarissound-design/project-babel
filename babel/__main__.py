@@ -19,6 +19,14 @@ def main(argv=None):
     d = sub.add_parser("decipher", help="public コーパスだけを読んで予測 JSON を書く")
     d.add_argument("public")
     d.add_argument("--out", required=True)
+    dc = sub.add_parser("decode", help="解読エンジン v2: 語境界・形態・役割（主語/述語/目的語）・語彙を推定し JSON と Markdown を書く")
+    dc.add_argument("public", help="public コーパス JSON（documents[, parallel]）")
+    dc.add_argument("--out", required=True, help="出力 JSON（同名の .md も書く）")
+    dc.add_argument("--threshold", type=float, help="主張する確信度の下限（既定 0.5）")
+    dc.add_argument("--no-anchors", action="store_true", help="固有名詞・借用語のアンカーを使わない")
+    dc.add_argument("--no-calibration", action="store_true", help="較正器を使わず生の事後確率で判定する")
+    dc.add_argument("--no-hypotheses", action="store_true", help="対訳のない文に構造仮説を出さない")
+    dc.add_argument("--restarts", default="1,2,3", help="EM の再起動（処理順のシード、カンマ区切り）")
     e = sub.add_parser("evaluate", help="予測と正解を比較")
     e.add_argument("pred")
     e.add_argument("gold")
@@ -120,6 +128,22 @@ def main(argv=None):
         Path(a.out).parent.mkdir(parents=True, exist_ok=True)
         Path(a.out).write_text(json.dumps(pred, ensure_ascii=False), encoding="utf-8")
         print(json.dumps({"verdict": pred["verdict"]["text"], **pred["summary"]}, ensure_ascii=False))
+    elif a.cmd == "decode":
+        from babel.decode.engine import decode
+        from babel.decode.report import render
+        cfg = {"restarts": tuple(int(x) for x in a.restarts.split(","))}
+        if a.threshold is not None:
+            cfg["claim_threshold"] = cfg["hypothesis_threshold"] = a.threshold
+        if a.no_anchors:
+            cfg["use_anchors"] = False
+        if a.no_calibration:
+            cfg["calibration"] = "off"
+        res = decode(json.loads(Path(a.public).read_text(encoding="utf-8")), cfg, hypotheses=not a.no_hypotheses)
+        out = Path(a.out)
+        out.parent.mkdir(parents=True, exist_ok=True)
+        out.write_text(json.dumps(res, ensure_ascii=False, indent=1), encoding="utf-8")
+        out.with_suffix(".md").write_text(render(res), encoding="utf-8")
+        print(json.dumps(res["summary"], ensure_ascii=False))
     elif a.cmd == "evaluate":
         from babel.evaluate.score import score
         pub = json.loads(Path(a.public).read_text(encoding="utf-8")) if a.public else None

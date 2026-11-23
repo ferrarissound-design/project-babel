@@ -12,7 +12,8 @@ from babel.experiments.run import DEV_SEEDS
 def check_import_isolation():
     """解読器が生成器・採点器を import していないこと、正解ファイルを開く文字列を持たないこと。"""
     bad = []
-    for p in sorted((Path(__file__).parents[1] / "decipher").glob("*.py")):
+    root = Path(__file__).parents[1]
+    for p in sorted((root / "decipher").glob("*.py")) + sorted((root / "decode").glob("*.py")):
         tree = ast.parse(p.read_text(encoding="utf-8"))
         for node in ast.walk(tree):
             names = []

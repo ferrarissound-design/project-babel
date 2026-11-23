@@ -60,3 +60,5 @@ PYTHONHASHSEED=0 python -m babel.experiments.clause_probe --jobs 8 --mismatch
 ```
 
 [測定値](../results/real_parallel/clause-probe.jsonl) · [前回の述語追跡](PREDICATE_TRACE_v1.8.md)
+
+次の診断: [候補の脱落段階](CANDIDATE_AUDIT.md)（[測定前の計画](PLAN_CANDIDATE_AUDIT.md)）。

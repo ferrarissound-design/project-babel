@@ -13,6 +13,7 @@
 - 実画像の評価手順（画像を受け取ったら）: [docs/REAL_IMAGE_STUDY.md](docs/REAL_IMAGE_STUDY.md)
 - 実在言語（UD を換字）での評価: [docs/REAL_LANGUAGES_RESULTS.md](docs/REAL_LANGUAGES_RESULTS.md)、動詞のクラスの探索: [docs/VERB_CLASS_STUDY.md](docs/VERB_CLASS_STUDY.md)、対訳があるときの実在言語の評価: [docs/REAL_PARALLEL_RESULTS.md](docs/REAL_PARALLEL_RESULTS.md)
 - v1.2〜v1.8 のまとめ（自分を疑う関門の重ね方、外部データで分かったこと・分からないこと）: [docs/SYNTHESIS_v1.2-v1.8.md](docs/SYNTHESIS_v1.2-v1.8.md)
+- 対訳照合で正しい主語・述語・目的語が候補から落ちる段階の診断: [docs/CANDIDATE_AUDIT.md](docs/CANDIDATE_AUDIT.md)
 - 本当にある構造と、認識の誤りが作った構造の区別（認識方式をまたぐ検証、転写の比較）: [docs/ROBUST_STRUCTURE.md](docs/ROBUST_STRUCTURE.md)
 - 意味を使わない構造発見（反復・境界・文法的な規則の仮説）: [docs/STRUCTURE.md](docs/STRUCTURE.md)、評価結果: [docs/STRUCTURE_RESULTS.md](docs/STRUCTURE_RESULTS.md)
 
